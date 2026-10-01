@@ -16,3 +16,9 @@ _planejamento/
 /*.html
 /site_libs/
 /*_files/
+
+# HTML gerado ao lado dos .qmd (renders avulsos)
+dados/*.html
+deslocamento/*.html
+indicadores/*.html
+municipios/*.html
