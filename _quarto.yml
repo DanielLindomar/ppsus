@@ -1,4 +1,4 @@
-﻿project:
+project:
   type: website
   output-dir: _site
   render:
@@ -20,7 +20,7 @@ website:
   navbar:
     background: "#0E5A5E"
     foreground: "#ffffff"
-    logo: assets/logo-unemat-branco.png
+    logo: assets/logos/unemat-branco.png
     logo-alt: "UNEMAT — Universidade do Estado de Mato Grosso"
     left:
       - href: index.qmd
@@ -44,11 +44,18 @@ website:
         href: https://github.com/daniellindomar/ppsus
         aria-label: "Código-fonte no GitHub"
   page-footer:
-    left: |
-      Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT.<br>
-      <span class="rodape-versao">Versão 0.1 · atualizado em 01/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span>
-    right: |
-      ![PPSUS Mato Grosso](/assets/logo-ppsus-mt.png){height=46} ![UNEMAT — Universidade do Estado de Mato Grosso](/assets/logo-unemat.png){height=46} ![FAPEMAT · Governo de Mato Grosso · SES-MT · SECITECI · CNPq · SUS · Ministério da Saúde · Governo Federal](/assets/faixa-financiadores.png){height=46}
+    center: |
+      :::: {.rodape}
+      ::: {.rodape-logos}
+      [Realização]{.rodape-rotulo} ![UNEMAT — Universidade do Estado de Mato Grosso](/assets/logos/unemat.png){.rodape-logo}
+      :::
+      ::: {.rodape-logos}
+      [Financiamento]{.rodape-rotulo} ![PPSUS — Programa Pesquisa para o SUS: Mato Grosso](/assets/logos/ppsus-mt.png){.rodape-logo} ![FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso](/assets/logos/fapemat.png){.rodape-logo} ![SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso](/assets/logos/ses-mt.png){.rodape-logo} ![CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico](/assets/logos/cnpq.png){.rodape-logo} ![SUS · Ministério da Saúde · Governo do Brasil](/assets/logos/ministerio-saude-sus.png){.rodape-logo}
+      :::
+      [Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.]{.rodape-citacao}
+
+      [Versão 0.1 · atualizado em 01/10/2026 · Conteúdo sob licença CC BY 4.0 · [Código-fonte](https://github.com/daniellindomar/ppsus)]{.rodape-versao}
+      ::::
 
 format:
   html:

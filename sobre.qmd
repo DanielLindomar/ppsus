@@ -56,15 +56,23 @@ Os **142 municípios** de Mato Grosso (Boa Esperança do Norte foi instalado em 
 
 As etapas seguem o plano de trabalho aprovado; o site é atualizado a cada etapa concluída.
 
-## Financiamento
+## Realização e financiamento
 
-Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT.
+O projeto é executado pela UNEMAT — Universidade do Estado de Mato Grosso, Campus de Sinop, e financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT.
+
+**Realização**
 
 ::: {.logos-realizacao}
-![PPSUS Mato Grosso](assets/logo-ppsus-mt.png) ![PPSUS — Programa Pesquisa para o SUS](assets/logo-ppsus-nacional.png) ![UNEMAT — Universidade do Estado de Mato Grosso](assets/logo-unemat.png) ![SUS · Ministério da Saúde · Governo Federal](assets/logo-sus-ms-brasil.png)
+[ ]{.rodape-rotulo} ![UNEMAT — Universidade do Estado de Mato Grosso](assets/logos/unemat.png)
 :::
 
-![FAPEMAT · Governo de Mato Grosso · SES-MT · SECITECI · CNPq · SUS · Ministério da Saúde · Governo Federal](assets/faixa-financiadores.png){.faixa fig-alt="Faixa com as logomarcas dos financiadores: FAPEMAT, Governo de Mato Grosso, SES-MT, SECITECI, CNPq, SUS, Ministério da Saúde e Governo Federal"}
+**Financiamento**
+
+::: {.logos-realizacao}
+![PPSUS — Programa Pesquisa para o SUS: Mato Grosso](assets/logos/ppsus-mt.png) ![PPSUS — Programa Pesquisa para o SUS](assets/logos/ppsus-nacional.png) ![FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso](assets/logos/fapemat.png) ![SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso](assets/logos/ses-mt.png) ![CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico](assets/logos/cnpq.png) ![SUS · Ministério da Saúde · Governo do Brasil](assets/logos/ministerio-saude-sus.png)
+:::
+
+[As logomarcas são usadas em cumprimento à cláusula 7ª, §3º, do Termo de Concessão (referência obrigatória ao apoio da FAPEMAT, do CNPq e do Decit/SECTICS/MS em toda divulgação); a origem de cada arquivo está documentada em `assets/logos/FONTES.md` no código-fonte.]{.nota-fonte}
 
 ## Sobre este site
 

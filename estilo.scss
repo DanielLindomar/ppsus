@@ -142,14 +142,21 @@ abbr[title] { text-decoration: underline dotted #9ca3af; cursor: help; }
 
 /* Rodapé e logomarcas */
 .navbar-brand .navbar-logo { max-height: 30px; width: auto; }
-.nav-footer { font-size: .8rem; color: #4b5563; }
-.nav-footer-left { max-width: 720px; }
-.nav-footer-right img { margin-left: .6rem; vertical-align: middle; }
-.rodape-versao { color: #6b7280; }
-@media (max-width: 576px) { .nav-footer-right img { height: 32px !important; margin: .3rem .3rem 0 0; } }
-.logos-realizacao { display: flex; flex-wrap: wrap; gap: 1.6rem; align-items: center; margin: 1rem 0 1.5rem; }
-.logos-realizacao img { height: 64px; width: auto; }
-.logos-realizacao img.faixa { height: auto; max-width: 100%; }
+.nav-footer { display: block; font-size: .8rem; color: #4b5563; padding: 1.1rem 0 3.4rem; }
+.nav-footer .nav-footer-center { max-width: 1120px; margin: 0 auto; text-align: center; }
+.rodape p { margin: .3rem 0; }
+.rodape-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .6rem 1.4rem;
+  margin: .5rem auto; padding: .5rem 1rem; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; width: fit-content; max-width: 100%; }
+.rodape-logos p { display: contents; }
+.rodape-logos .rodape-logo { height: 40px; width: auto; margin: 0; }
+.rodape-rotulo { font-size: .7rem; letter-spacing: .09em; text-transform: uppercase; color: #6b7280; }
+.rodape-citacao { display: inline-block; max-width: 80ch; margin-top: .3rem; }
+.rodape-versao { color: #6b7280; font-size: .76rem; }
+@media (max-width: 576px) { .rodape-logos .rodape-logo { height: 34px; } .rodape-logos { gap: .4rem .9rem; } }
+.logos-realizacao { display: flex; flex-wrap: wrap; gap: 1.2rem 2.2rem; align-items: center; margin: .6rem 0 1.4rem; }
+.logos-realizacao p { display: contents; }
+.logos-realizacao img { height: 72px; width: auto; margin: 0; }
+@media (max-width: 576px) { .logos-realizacao img { height: 48px; } }
 
 /* Impressão */
 @media print {
