@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510337,Cotriguaçu,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),20238,20717,11011,10700,10398,10030
+510337,Cotriguaçu,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,655.5372,682.2693,1589.1463,1852.0254,2272.876,2365.4959
+510337,Cotriguaçu,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),309.6951,225.6962,588.8892,692.9196,764.8357,801.7267
+510337,Cotriguaçu,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),73.5958,191.4357,708.8863,820.5091,1014.2077,1152.5534
+510337,Cotriguaçu,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,52.5405,55.2812,69.2656,68.3027,69.0465,72.776
+510337,Cotriguaçu,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,8.0476,2.5224,1.8023,5.2205,6.2954,2.3355
+510337,Cotriguaçu,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.3721,0.3784,0.762,0.786,0.8463,0.99
+510337,Cotriguaçu,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.7041,0.851,1.2379,1.1523,1.156,1.3021
+510337,Cotriguaçu,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.1775,1.2801,2.1914,2.3692,2.4562,2.5932
+510337,Cotriguaçu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.2235,2.1157,3.4357,3.2944,3.366,3.3988
+510337,Cotriguaçu,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1813,0.1689,0.3633,0.3738,0.3847,0.3988
+510337,Cotriguaçu,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.6761,1.6412,3.0878,3.1776,3.2699,3.3898
+510337,Cotriguaçu,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510337,Cotriguaçu,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,48.4238,52.6138,104.2866,112.9252,121.8215,130.1097
+510337,Cotriguaçu,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,6,6,5,5,5
+510337,Cotriguaçu,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510337,Cotriguaçu,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510337,Cotriguaçu,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),14,15,15,14,14,14
+510337,Cotriguaçu,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.2631,2.4135,4.5409,4.6729,4.8086,4.985
+510337,Cotriguaçu,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,1,1,1,1
+510337,Cotriguaçu,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),4,4,4,4,4,4
+510337,Cotriguaçu,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.7615,0.9578,2.3117,2.8649,2.8333,2.7398
+510337,Cotriguaçu,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.3263,2.0042,3.4617,3.578,3.596,4.8029
+510337,Cotriguaçu,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.879,2.1746,4.3499,5.6771,5.4205,5.1687
+510337,Cotriguaçu,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0397,0.0931,0.2951,0.2992,0.3263,0.3223
+510337,Cotriguaçu,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.1519,5.4641,8.6316,13.6889,15.9014,
+510337,Cotriguaçu,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.4876,0.124,0.3706,0.5736,0.7153,0.7779
+510337,Cotriguaçu,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.0478,1.0882,2.9252,3.6186,3.5527,1.3495
+510337,Cotriguaçu,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0.0002,0.0228
+510337,Cotriguaçu,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,24.3601,18.5355,36.0549,51.215,54.4335,41.5753
+510337,Cotriguaçu,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,29.5978,26.2104,54.9451,74.2991,84.247,80.1595
+510337,Cotriguaçu,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.5943,100,95.9698,91.4234,99.2933,95.2038
+510337,Cotriguaçu,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.8114,3.9062,2.0151,1.0949,0.1767,1.4388
+510337,Cotriguaçu,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.2069,3.4609,3.1234,2.8029,2.9258,2.8153
+510337,Cotriguaçu,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510337,Cotriguaçu,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,8.9988,12.4189,13.2335,19.0032,21.6892,14.2393
+510337,Cotriguaçu,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,14.8927,41.6851,31.5224,52.07,68.7324,73.6051
+510337,Cotriguaçu,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,23.3723,35.5433,35.7025,32.0755,36.5297,49.6269
+510337,Cotriguaçu,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,7.3,13.1,10.6,16.7,20.9,24
+510337,Cotriguaçu,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",71.9,120.5,111.6,137.8,164.4,203.3
+510337,Cotriguaçu,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,12.6582,0,5.848,11.1111,0,
+510337,Cotriguaçu,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,2.6682,4.296,4.0868,4.486,3.6545,
+510337,Cotriguaçu,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,87.34,86.27,83.63,82.78,86.62,
+510337,Cotriguaçu,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,2.53,5.23,8.77,9.44,4.23,
+510337,Cotriguaçu,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,78.48,75.82,80.12,89.44,83.1,
+510337,Cotriguaçu,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,15.19,17.65,15.2,12.22,15.49,

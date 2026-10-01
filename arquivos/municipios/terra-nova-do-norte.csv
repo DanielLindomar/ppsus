@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510805,Terra Nova do Norte,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),9473,9284,10616,10628,10641,10591
+510805,Terra Nova do Norte,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1203.6284,1445.74,1527.829,1711.1886,2801.6302,3327.0331
+510805,Terra Nova do Norte,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),383.8637,492.7972,559.6955,621.0248,778.2757,925.5543
+510805,Terra Nova do Norte,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),581.6046,812.7097,821.7587,953.5381,1851.2952,2141.7416
+510805,Terra Nova do Norte,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,39.6486,61.5123,49.4022,46.5899,32.6339,47.4835
+510805,Terra Nova do Norte,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.7711,4.1329,3.8313,8.8228,18.7323,12.7175
+510805,Terra Nova do Norte,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8994,0.8175,0.7404,0.9974,1.2123,1.2803
+510805,Terra Nova do Norte,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8181,0.9242,0.7931,0.8506,0.9398,1.1104
+510805,Terra Nova do Norte,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.2545,3.0698,3.1104,3.2066,3.4734,3.5171
+510805,Terra Nova do Norte,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.7767,5.1971,4.7259,4.6735,4.5654,4.7918
+510805,Terra Nova do Norte,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3167,0.251,0.3297,0.3764,0.3834,0.3815
+510805,Terra Nova do Norte,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,4.0114,4.0931,3.5795,3.5755,3.5711,2.911
+510805,Terra Nova do Norte,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510805,Terra Nova do Norte,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,48.5591,58.3477,56.5185,57.4708,58.2652,57.5961
+510805,Terra Nova do Norte,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,5,4,4,4,4
+510805,Terra Nova do Norte,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,1,1,1,1
+510805,Terra Nova do Norte,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510805,Terra Nova do Norte,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),11,12,12,12,12,12
+510805,Terra Nova do Norte,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,4.2225,4.3085,3.7679,3.7636,3.759,3.7768
+510805,Terra Nova do Norte,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510805,Terra Nova do Norte,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,4,4,4,4
+510805,Terra Nova do Norte,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.4232,1.7358,2.3017,1.8856,1.8949,2.0778
+510805,Terra Nova do Norte,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.6982,2.7299,4.7104,4.1173,4.5267,4.7258
+510805,Terra Nova do Norte,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,5.793,6.6101,8.137,5.2931,4.729,5.1751
+510805,Terra Nova do Norte,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1104,0.1551,0.264,0.2717,0.2912,0.2626
+510805,Terra Nova do Norte,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.8089,13.9286,15.6,12.7816,15.3836,
+510805,Terra Nova do Norte,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,1.0232,0.6366,0.8044,0.5422,0.6644,0.5923
+510805,Terra Nova do Norte,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,6.1887,9.7779,6.5102,8.7258,14.3506,18.1655
+510805,Terra Nova do Norte,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0001,0,0,0.0011,0.0012,0.0076
+510805,Terra Nova do Norte,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,39.5862,38.9918,36.0776,45.8224,43.7929,51.742
+510805,Terra Nova do Norte,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,71.3607,76.5834,64.0543,80.6361,70.0122,94.4198
+510805,Terra Nova do Norte,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.7333,99.4475,85.3786,76.386,66.5236,82.2993
+510805,Terra Nova do Norte,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,6.9333,9.3923,4.4386,6.1602,3.0043,3.2847
+510805,Terra Nova do Norte,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,4.3733,5.4751,4.1828,3.4764,3.5923,4.135
+510805,Terra Nova do Norte,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510805,Terra Nova do Norte,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,17.6707,24.9744,15.5941,18.7354,18.9567,41.4354
+510805,Terra Nova do Norte,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,57.844,85.4363,58.0687,56.9696,62.974,90.3973
+510805,Terra Nova do Norte,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,49.5562,51.1955,45.5882,48.5414,42.953,48.2
+510805,Terra Nova do Norte,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,11.7,8,11.5,9.8,13.4,19.1
+510805,Terra Nova do Norte,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",57.8,40.2,46.1,51.1,59.4,84.6
+510805,Terra Nova do Norte,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,11.9048,5.8824,22.9885,6.8493,
+510805,Terra Nova do Norte,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,10.1341,12.9255,6.5938,9.5032,7.894,
+510805,Terra Nova do Norte,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,71.97,78.57,81.76,82.18,78.77,
+510805,Terra Nova do Norte,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.64,8.33,7.65,6.32,8.22,
+510805,Terra Nova do Norte,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,82.17,77.38,84.12,79.77,89.04,
+510805,Terra Nova do Norte,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.47,13.1,12.35,16.67,9.59,

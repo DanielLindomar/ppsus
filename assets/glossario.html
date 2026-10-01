@@ -1,0 +1,106 @@
+<script>
+// Siglas explicadas ao passar o cursor (ou tocar, no celular). Aplica-se a parágrafos, listas,
+// legendas e rótulos dos cartões. A primeira ocorrência de cada sigla em cada bloco recebe <abbr title>.
+(function () {
+  var G = {
+    "SUS": "Sistema Único de Saúde",
+    "SIOPS": "Sistema de Informações sobre Orçamentos Públicos em Saúde: despesas declaradas pelos municípios (Ministério da Saúde)",
+    "CNES": "Cadastro Nacional de Estabelecimentos de Saúde: estabelecimentos, leitos, equipamentos e profissionais",
+    "SIA": "Sistema de Informações Ambulatoriais do SUS: procedimentos ambulatoriais aprovados",
+    "SIH": "Sistema de Informações Hospitalares do SUS: internações pagas por AIH",
+    "AIH": "Autorização de Internação Hospitalar: registro de cada internação no SUS",
+    "SISAB": "Sistema de Informação em Saúde para a Atenção Básica: produção das equipes de atenção primária",
+    "SI-PNI": "Sistema de Informação do Programa Nacional de Imunizações: doses de vacina aplicadas",
+    "SIM": "Sistema de Informações sobre Mortalidade: óbitos por residência",
+    "SINASC": "Sistema de Informações sobre Nascidos Vivos",
+    "APS": "Atenção Primária à Saúde (atenção básica): unidades básicas e equipes de saúde da família",
+    "ESF": "Estratégia Saúde da Família",
+    "eSF": "Equipe de Saúde da Família (médico, enfermeiro, técnico e agentes comunitários)",
+    "eAP": "Equipe de Atenção Primária (formato reduzido, sem agentes comunitários)",
+    "eSB": "Equipe de Saúde Bucal",
+    "ACS": "Agente Comunitário de Saúde",
+    "FTE": "Equivalente em tempo integral: horas semanais contratadas divididas por 40",
+    "MC": "Média complexidade: procedimentos e internações de nível intermediário (SIA/SIH)",
+    "AC": "Alta complexidade: procedimentos e internações de alto custo ou tecnologia (SIA/SIH)",
+    "UTI": "Unidade de Terapia Intensiva",
+    "CIR": "Comissão Intergestores Regional: instância das 16 regiões de saúde de Mato Grosso",
+    "PDR": "Plano Diretor de Regionalização: define regiões e macrorregiões de saúde",
+    "DEA": "Análise Envoltória de Dados: técnica que compara unidades pelo que produzem com os recursos que usam",
+    "TMI": "Taxa de mortalidade infantil: óbitos de menores de 1 ano por mil nascidos vivos",
+    "PPSUS": "Programa Pesquisa para o SUS: gestão compartilhada em saúde",
+    "FAPEMAT": "Fundação de Amparo à Pesquisa do Estado de Mato Grosso",
+    "CNPq": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
+    "Decit": "Departamento de Ciência e Tecnologia do Ministério da Saúde",
+    "SES-MT": "Secretaria de Estado de Saúde de Mato Grosso",
+    "UNEMAT": "Universidade do Estado de Mato Grosso",
+    "IBGE": "Instituto Brasileiro de Geografia e Estatística",
+    "UBS": "Unidade Básica de Saúde",
+    "UPA": "Unidade de Pronto Atendimento",
+    "Malmquist": "Índice de Malmquist: mede a variação da produtividade entre dois anos (mudança de eficiência e de tecnologia)",
+    "RREO": "Relatório Resumido da Execução Orçamentária: demonstrativo bimestral que alimenta o SIOPS",
+    "OMS": "Organização Mundial da Saúde",
+    "BPA-C": "Boletim de Produção Ambulatorial consolidado: registro do SIA sem identificação do paciente",
+    "e-SUS APS": "Estratégia e-SUS Atenção Primária à Saúde: sistema de registro das equipes, que alimenta o SISAB",
+    "UFs": "Unidades da Federação (estados e Distrito Federal)",
+    "UF": "Unidade da Federação (estado ou Distrito Federal)",
+    "p.p.": "Pontos percentuais: diferença entre dois percentuais",
+    "WGS84": "Sistema de referência geodésico mundial usado nas malhas (latitude e longitude em graus)",
+    "EPSG:4326": "Código do sistema de coordenadas WGS84 (latitude e longitude em graus)",
+    "SECTICS": "Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (Ministério da Saúde)",
+    "SECITECI": "Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso"
+  };
+  var chaves = Object.keys(G).sort(function (a, b) { return b.length - a.length; });
+  var re = new RegExp("(^|[^\\wÀ-ú-])(" + chaves.map(function (k) { return k.replace(/[.*+?^${}()|[\]\\-]/g, "\\$&"); }).join("|") + ")(?![\\wÀ-ú-])");
+  function marcar(el) {
+    var usados = {};
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        var p = n.parentNode;
+        while (p && p !== el) { if (/^(A|ABBR|CODE|SCRIPT|STYLE|SVG|BUTTON|SELECT|OPTION|H1|H2|H3)$/i.test(p.nodeName)) return NodeFilter.FILTER_REJECT; p = p.parentNode; }
+        return re.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+      }
+    });
+    var nos = []; while (w.nextNode()) nos.push(w.currentNode);
+    nos.forEach(function (n) {
+      var m = n.nodeValue.match(re); if (!m || usados[m[2]]) return;
+      usados[m[2]] = true;
+      var i = m.index + m[1].length, depois = n.splitText(i); depois.splitText(m[2].length);
+      var ab = document.createElement("abbr"); ab.title = G[m[2]]; ab.tabIndex = 0; ab.textContent = m[2];
+      depois.parentNode.replaceChild(ab, depois);
+    });
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("main p, main li, main figcaption, main td, main th, main .kpi-rotulo, main .kpi-meta, main .kpi-comp, main .kpi-nota, main .ficha-ind > div, main .ressalva-ind, main .faixa-versao, main .definicao-ind, footer .nav-footer-left").forEach(marcar);
+  });
+})();
+</script>
+<div id="dica-grafico" role="tooltip" aria-hidden="true"></div>
+<script>
+// Dica imediata para elementos com data-tip (pontos, barras e linhas dos gráficos SVG).
+(function () {
+  var dica = document.getElementById("dica-grafico");
+  function mostrar(el, x, y) {
+    dica.textContent = el.getAttribute("data-tip");
+    dica.style.display = "block";
+    var w = dica.offsetWidth, h = dica.offsetHeight;
+    var left = Math.min(x + 12, window.innerWidth - w - 8), top = y - h - 12;
+    if (top < 4) top = y + 16;
+    dica.style.left = left + "px"; dica.style.top = top + "px";
+  }
+  function esconder() { dica.style.display = "none"; }
+  document.addEventListener("mouseover", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); if (el) mostrar(el, e.clientX, e.clientY);
+  });
+  document.addEventListener("mousemove", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); if (el && dica.style.display === "block") mostrar(el, e.clientX, e.clientY);
+  });
+  document.addEventListener("mouseout", function (e) {
+    if (e.target.closest && e.target.closest("[data-tip]")) esconder();
+  });
+  document.addEventListener("touchstart", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); var t = e.touches[0];
+    if (el) mostrar(el, t.clientX, t.clientY); else esconder();
+  }, { passive: true });
+  window.addEventListener("scroll", esconder, { passive: true });
+})();
+</script>

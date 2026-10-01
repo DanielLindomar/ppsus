@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510130,Arenápolis,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),9502,9399,10576,10661,10747,10769
+510130,Arenápolis,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,909.9571,1789.9463,2336.4381,1952.1117,2191.7466,2748.9192
+510130,Arenápolis,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),404.4202,492.7611,639.261,666.4336,735.7151,1002.2687
+510130,Arenápolis,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),383.9952,1075.876,1466.6871,1043.3448,1161.439,1381.7766
+510130,Arenápolis,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,36.2488,43.5127,26.5126,41.7248,44.5824,43.065
+510130,Arenápolis,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,3.0781,1.8034,16.5986,1.6361,0.6264,1.1544
+510130,Arenápolis,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6535,1.0948,1.0741,1.0168,1.0012,1.2285
+510130,Arenápolis,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.5965,2.3013,2.135,1.9454,1.7698,1.7885
+510130,Arenápolis,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.908,3.5195,3.2508,2.7277,2.6231,2.7161
+510130,Arenápolis,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.4024,3.3067,3.0021,2.9078,2.8845,2.8786
+510130,Arenápolis,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3157,0.3192,0.2837,0.2889,0.3415,0.3092
+510130,Arenápolis,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.4384,4.5569,3.8767,3.8458,3.815,3.8072
+510130,Arenápolis,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510130,Arenápolis,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,39.2865,55.5059,84.3135,85.9019,91.1882,88.1419
+510130,Arenápolis,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),4,4,4,4,4,4
+510130,Arenápolis,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,1,1,1,1,1
+510130,Arenápolis,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510130,Arenápolis,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),14,14,15,16,16,16
+510130,Arenápolis,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,4.2096,4.2558,3.7821,3.752,3.722,3.7144
+510130,Arenápolis,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510130,Arenápolis,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,3,3,3,3
+510130,Arenápolis,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,2.276,2.5894,2.6365,2.9199,2.8548,3.0901
+510130,Arenápolis,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,3.959,4.5971,4.7556,5.443,5.4164,5.8091
+510130,Arenápolis,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,4.379,3.9868,5.0975,4.003,4.5506,4.823
+510130,Arenápolis,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.2394,0.4675,0.4727,0.5069,0.5284,0.4122
+510130,Arenápolis,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,21.3846,10.9153,16.9167,16.2822,15.3193,
+510130,Arenápolis,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7432,0.6337,0.7075,0.7863,0.9058,0.9159
+510130,Arenápolis,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,6.7407,9.4111,9.8392,9.7054,12.2252,10.8393
+510130,Arenápolis,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0072,0.0116,0.0009,0.0009,0.0174,0.0082
+510130,Arenápolis,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,12.7342,174.8058,173.6006,126.3484,126.2678,115.7953
+510130,Arenápolis,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,33.7824,81.9236,69.4024,81.1369,94.3519,96.0163
+510130,Arenápolis,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,61.157,43.3354,49.4553,50.7053,65.07,31.4354
+510130,Arenápolis,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.6529,0.913,0.2723,0.6682,0.1474,1.3633
+510130,Arenápolis,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.3388,1.969,2.2625,2.6488,2.9211,3.2077
+510130,Arenápolis,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510130,Arenápolis,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,5.3507,79.7265,78.1832,57.0021,53.7909,47.8177
+510130,Arenápolis,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,36.688,84.0894,69.4497,71.0241,102.279,95.9807
+510130,Arenápolis,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,84.4237,26.7532,24.6594,26.8208,26.2327,29.4971
+510130,Arenápolis,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,44.5,24.4,23.7,25.7,25.8,28.8
+510130,Arenápolis,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",92,39.6,35.9,41.1,39.4,45.2
+510130,Arenápolis,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,5.291,17.8571,6.135,30.1205,
+510130,Arenápolis,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,9.8927,10.8522,8.6044,5.8156,6.6065,
+510130,Arenápolis,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,87.5,84.66,83.93,84.05,84.34,
+510130,Arenápolis,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,6.73,5.29,5.36,4.29,10.84,
+510130,Arenápolis,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,75,87.83,72.02,84.05,80.72,
+510130,Arenápolis,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.27,19.05,15.48,16.56,16.27,

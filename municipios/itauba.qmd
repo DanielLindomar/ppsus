@@ -1,0 +1,16 @@
+---
+title: "Itaúba"
+description: "Perfil de Itaúba (MT), região de saúde Norte Matogrossense: indicadores de saúde 2020–2025, deslocamento para internação e hospitais SUS — Observatório PPSUS-MT"
+toc: false
+page-layout: full
+---
+
+<!-- GERADO por scripts/03_gerar_paginas.py — não editar; altere o modelo _perfil.qmd / _indicador.qmd -->
+
+```{r}
+#| include: false
+MUN_ID <- 510455L
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+```
+
+{{< include _perfil.qmd >}}

@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510325,Colniza,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),39861,41117,25766,25927,26090,26026
+510325,Colniza,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,447.3884,406.7107,1106.6315,1301.9546,1126.3057,1533.1544
+510325,Colniza,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),136.4133,99.6334,415.7861,444.5119,387.0144,491.1256
+510325,Colniza,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),267.9353,241.4147,606.639,773.1145,653.1607,959.4634
+510325,Colniza,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,85.6331,82.1869,64.6212,67.4489,72.1324,65.7223
+510325,Colniza,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,0.8047,0.936,4.6762,4.6046,2.0211,4.1303
+510325,Colniza,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.2797,0.3072,0.4591,0.5003,0.6029,0.6709
+510325,Colniza,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.3236,0.4509,0.7599,0.7602,0.9494,0.9414
+510325,Colniza,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,0.7652,1.0317,1.7822,1.9574,2.2012,2.4176
+510325,Colniza,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.1304,1.8039,2.7168,2.5329,2.4691,2.4879
+510325,Colniza,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.0251,0.0243,0.0128,0.0258,0.0479,0.0384
+510325,Colniza,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.7024,0.681,1.0867,1.2535,1.3289,1.3832
+510325,Colniza,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510325,Colniza,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,3.0105,4.8228,8.1503,8.5818,15.7148,17.4172
+510325,Colniza,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),6,7,8,8,8,8
+510325,Colniza,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510325,Colniza,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510325,Colniza,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),12,13,14,14,15,16
+510325,Colniza,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,1.4224,1.4593,2.3287,2.4762,2.683,2.6896
+510325,Colniza,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510325,Colniza,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),0,1,0,0,1,1
+510325,Colniza,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.5596,0.7977,1.4797,1.3581,1.6606,1.8026
+510325,Colniza,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.0932,1.4331,2.224,2.7219,3.6031,3.9611
+510325,Colniza,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.751,0.6636,0.4213,1.3639,1.3197,1.916
+510325,Colniza,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.004,0.0028,0.0002,0.0184,0.0457,0.0428
+510325,Colniza,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.0318,13.3812,16.7559,18.0418,16.6937,
+510325,Colniza,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.5008,0.3981,0.9159,0.9816,0.8686,0.7643
+510325,Colniza,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,0.264,0.3541,0.4091,0.628,3.3289,5.7541
+510325,Colniza,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0.009,0.0188
+510325,Colniza,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,24.8865,29.5985,53.7918,51.6064,56.6884,69.9685
+510325,Colniza,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,31.7353,34.0492,66.0949,63.2545,69.9502,90.2943
+510325,Colniza,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.8992,99.9178,99.9278,100,99.9324,99.9451
+510325,Colniza,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.1089,4.1906,1.9481,1.5695,2.5017,1.9769
+510325,Colniza,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.0444,2.3541,2.684,2.6801,2.7539,2.6156
+510325,Colniza,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510325,Colniza,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,9.0114,16.6002,20.9982,19.322,23.0138,29.3697
+510325,Colniza,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,20.064,39.9813,49.5712,42.0914,52.247,76.5833
+510325,Colniza,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,24.7431,19.8571,23.3705,21.8902,22.4658,26.0426
+510325,Colniza,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,7.5,7.2,9.7,12.3,15.8,20
+510325,Colniza,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",94.1,81.7,102.6,113.3,133.5,164.1
+510325,Colniza,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,14.862,13.41,23.4742,14.742,15.7068,
+510325,Colniza,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,3.3115,4.4264,5.2007,3.9727,5.3277,
+510325,Colniza,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,78.98,78.54,73.71,86.24,84.03,
+510325,Colniza,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.94,5.56,7.75,3.93,8.38,
+510325,Colniza,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,70.49,77.01,72.3,69.53,81.15,
+510325,Colniza,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,22.72,21.46,24.18,18.92,17.8,

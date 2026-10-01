@@ -1,0 +1,82 @@
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_indicadores.R"))
+R_ <- info_ind(IND_ID)
+A_ <- ano_ult(IND_ID)
+A_TXT <- ifelse(is.na(A_), "último ano disponível", A_)
+```
+
+```{r}
+tagList(css_indicadores(), navegacao_indicador(IND_ID, prefixo = ""))
+```
+
+```{r}
+tagList(ficha_indicador(IND_ID), ressalva_indicador(IND_ID))
+```
+
+```{r}
+#| results: asis
+cat(sprintf("## Mato Grosso em %s\n\n", A_TXT))
+```
+
+```{r}
+kpis_indicador(IND_ID, ano = A_, prefixo_mun = "../municipios/")
+```
+
+O agregado de Mato Grosso é calculado com os totais do estado; a mediana descreve o município "típico" e é a referência usada nos perfis municipais (▲/▼). Maior e menor valor apontam os extremos entre os municípios com dado no ano.
+
+```{r}
+#| results: asis
+cat(sprintf("## Municípios em %s\n\n", A_TXT))
+```
+
+:::: {.perfil-topo}
+::: {.perfil-mapa}
+```{r}
+mapa_indicador(IND_ID, ano = A_, altura = 480, prefixo = "../municipios/")
+```
+
+[Cores por quintis dos municípios com dado (cinco faixas com o mesmo número de municípios); sem dado em cinza. Clique em um município para abrir o perfil. Boa Esperança do Norte (instalado em 2025) não consta na malha do IBGE e aparece apenas no ranking.]{.nota-fonte}
+:::
+::: {.perfil-texto}
+```{r}
+ranking_indicador(IND_ID, ano = A_, prefixo = "../municipios/", tamanho = 20)
+```
+
+[Posição 1º = maior valor, sem juízo: leia com o campo "Leitura" da ficha; municípios empatados recebem a mesma posição. Use a busca para localizar um município; "—" indica município sem dado no ano.]{.nota-fonte}
+:::
+::::
+
+```{r}
+#| results: asis
+cat(sprintf("## Evolução %d–%s\n\n", ANOS[1], A_TXT))
+```
+
+```{r}
+serie_indicador_regioes(IND_ID)
+```
+
+Linha cheia: mediana dos municípios em cada ano; linha pontilhada: agregado de Mato Grosso; linha tracejada: agregado da região escolhida. Passe o cursor (ou toque, no celular) sobre um ponto para ver o valor. Os anos de 2020 e 2021 foram afetados pela pandemia de COVID-19.
+
+```{r}
+#| results: asis
+cat(sprintf("## Regiões de saúde em %s\n\n", A_TXT))
+```
+
+```{r}
+tabela_regioes_indicador(IND_ID, ano = A_)
+```
+
+Valor da região = razão dos totais (ou soma) dos municípios da região; mediana = mediana dos municípios da região. Regiões ordenadas do maior para o menor valor.
+
+```{r}
+p(class = "nota-fonte",
+  a(class = "btn btn-sm btn-outline-primary", href = "../arquivos/dados/serie_longa.csv", download = NA, "Baixar a série de todos os indicadores (CSV)"),
+  " Ver também: ", a(href = "../arquivos/dados/indicadores_dicionario.csv", "dicionário dos indicadores"),
+  " · ", a(href = "../dados/index.html", "explorador de dados"))
+```
+
+```{r}
+fonte_rodape(prefixo = "../", extra = if (!is.na(R_$fonte) && nzchar(R_$fonte)) paste0("Este indicador: ", R_$fonte, ". ") else NULL)
+```

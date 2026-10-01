@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510160,Barão de Melgaço,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),8164,8165,7253,7228,7204,7137
+510160,Barão de Melgaço,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,880.6822,874.0657,1314.2324,1448.1405,1626.5227,1528.66
+510160,Barão de Melgaço,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),549.3948,466.762,797.6301,861.68,973.9137,802.6529
+510160,Barão de Melgaço,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),150.2499,170.8817,449.3918,450.534,603.6095,676.2052
+510160,Barão de Melgaço,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,62.9536,71.4841,41.9442,49.2555,35.8393,45.5835
+510160,Barão de Melgaço,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,8.3255,0.2463,5.5475,6.6785,3.5935,0.0952
+510160,Barão de Melgaço,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5341,0.6467,0.8824,0.6336,0.54,0.6375
+510160,Barão de Melgaço,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.7349,0.9749,1.0658,1.0957,1.0661,1.1055
+510160,Barão de Melgaço,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.3474,1.5101,1.7234,1.6865,1.7351,1.6464
+510160,Barão de Melgaço,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.3537,3.455,4.4354,4.4618,4.0255,3.6192
+510160,Barão de Melgaço,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3675,0.2854,0.4247,0.5645,0.4053,0.4203
+510160,Barão de Melgaço,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.4699,1.4697,1.6545,1.6602,1.6657,1.6814
+510160,Barão de Melgaço,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510160,Barão de Melgaço,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,54.7158,57.5628,64.8008,65.3708,68.7118,65.854
+510160,Barão de Melgaço,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,5,5,5,4,3
+510160,Barão de Melgaço,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,0,0,0,0
+510160,Barão de Melgaço,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,1,1,1,1
+510160,Barão de Melgaço,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),12,12,12,12,10,10
+510160,Barão de Melgaço,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.3684,3.6742,4.1362,4.1505,4.1644,4.2034
+510160,Barão de Melgaço,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510160,Barão de Melgaço,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,2,2,2
+510160,Barão de Melgaço,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.6725,0.6171,0.9651,1.5017,1.5262,1.2176
+510160,Barão de Melgaço,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.411,1.1295,1.8256,2.8298,2.5625,1.907
+510160,Barão de Melgaço,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.7322,4.671,5.5958,6.1884,5.2336,5.3445
+510160,Barão de Melgaço,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0269,0.0507,0.0753,0.1706,0.1445,0.2863
+510160,Barão de Melgaço,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,20.4643,18.1207,22.4565,20.2182,16.6875,
+510160,Barão de Melgaço,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.8934,0.6116,0.9214,1.0663,0.7683,0.7247
+510160,Barão de Melgaço,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,2.1356,2.9421,3.2235,3.4902,3.8577,3.9631
+510160,Barão de Melgaço,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0
+510160,Barão de Melgaço,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510160,Barão de Melgaço,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,18.9858,20.4532,27.299,32.2357,36.9239,40.6333
+510160,Barão de Melgaço,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510160,Barão de Melgaço,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510160,Barão de Melgaço,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510160,Barão de Melgaço,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510160,Barão de Melgaço,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510160,Barão de Melgaço,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,43.8586,47.2534,60.6556,47.8013,64.7868,90.5133
+510160,Barão de Melgaço,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510160,Barão de Melgaço,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,0,1.8,1,2.6,1.9,0.7
+510160,Barão de Melgaço,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",68.7,71.2,72.1,71.6,70.6,68.1
+510160,Barão de Melgaço,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,17.8571,0,0,0,15.625,
+510160,Barão de Melgaço,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.8996,8.2058,6.2043,5.9491,6.9406,
+510160,Barão de Melgaço,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,66.07,63.79,52.17,70.91,82.81,
+510160,Barão de Melgaço,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.14,10.34,2.17,0,12.5,
+510160,Barão de Melgaço,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,51.79,50,39.13,49.09,48.44,
+510160,Barão de Melgaço,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,17.86,24.14,19.57,16.36,17.19,

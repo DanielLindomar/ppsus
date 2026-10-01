@@ -1,0 +1,158 @@
+/*-- scss:defaults --*/
+$primary:        #0E5A5E;
+$link-color:     #0E5A5E;
+$body-color:     #1f2937;
+$font-size-root: 16px;
+$headings-font-weight: 600;
+
+/*-- scss:rules --*/
+// Paleta do Observatório PPSUS-MT (ver _planejamento/BRIEF_SITE.md, seção 5)
+:root {
+  --cor-primaria: #0E5A5E;
+  --cor-secundaria: #2E86AB;
+  --cor-mt: #9CA3AF;
+  --cor-bom: #1b7f4b;
+  --cor-ruim: #b42318;
+  --cor-neutro: #6b7280;
+  --cor-clara: #E2EFEE;
+}
+
+h1, h2, h3, h4 { color: #0E5A5E; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+.callout { border-radius: 8px; }
+
+/* Faixa de versão / aviso de construção */
+.faixa-versao {
+  background: #fff4d6; border-left: 4px solid #d4a017;
+  padding: .5rem .9rem; font-size: .9rem; margin-bottom: 1.2rem; border-radius: 4px;
+}
+.faixa-construcao {
+  background: #e6f1f2; border-left: 4px solid #0E5A5E;
+  padding: .6rem 1rem; font-size: .92rem; margin: 1rem 0 1.4rem; border-radius: 4px;
+}
+
+/* Cartões de indicador (KPI) */
+.kpi-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .8rem; margin: 1rem 0 1.5rem; }
+.kpi { border: 1px solid #d9e4e4; border-radius: 8px; padding: .8rem 1rem; background: #fff; }
+.kpi .kpi-rotulo { font-size: .82rem; color: #4b5563; line-height: 1.2; }
+.kpi .kpi-rotulo a { color: inherit; }
+.kpi .kpi-valor  { font-size: 1.55rem; font-weight: 700; color: #0E5A5E; line-height: 1.3; }
+.kpi .kpi-meta   { font-size: .78rem; color: #6b7280; }
+.kpi .kpi-comp   { font-size: .78rem; color: #374151; margin-top: .25rem; border-top: 1px dashed #e5e7eb; padding-top: .25rem; }
+.kpi .sit { margin-left: .35rem; }
+
+/* Cartões de navegação */
+.cartoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: .9rem; margin: 1rem 0; }
+.cartao {
+  display: block; border: 1px solid #d9e4e4; border-radius: 8px; padding: 1rem; background: #fff;
+  color: #1f2937 !important; text-decoration: none !important;
+}
+.cartao:hover { border-color: #0E5A5E; box-shadow: 0 2px 8px rgba(14,90,94,.14); }
+.cartao h4 { margin: 0 0 .35rem 0; font-size: 1.05rem; }
+.cartao p { margin: 0; font-size: .88rem; color: #4b5563; }
+.cartao.desativado { opacity: .7; border-style: dashed; }
+
+/* Grades de gráficos e blocos lado a lado */
+.grade-graficos { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 1rem; margin: .8rem 0 1.4rem; }
+.grade-graficos > div { border: 1px solid #e6eeee; border-radius: 6px; padding: .3rem .6rem; }
+.dois-blocos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; margin: .8rem 0 1.4rem; }
+.bloco { border: 1px solid #e6eeee; border-radius: 8px; padding: .8rem 1rem; background: #fff; }
+.bloco h4 { margin-top: 0; font-size: 1rem; }
+
+.nota-fonte { font-size: .8rem; color: #6b7280; }
+.nota-i { cursor: help; color: #6b7280; font-size: .85em; }
+/* Ressalva do indicador nas tabelas do perfil: visível ao clicar/tocar, sem depender de hover */
+details.nota-det { display: inline-block; font-size: .78rem; color: #6b7280; font-weight: 400; margin-left: .3rem; }
+details.nota-det summary { cursor: pointer; display: inline; list-style: none; color: #6b7280; }
+details.nota-det summary::-webkit-details-marker { display: none; }
+details.nota-det summary:focus-visible { outline: 2px solid #0E5A5E; border-radius: 3px; }
+details.nota-det[open] { display: block; margin: .2rem 0 0; line-height: 1.3; }
+.kpi .kpi-nota { font-size: .74rem; color: #6b7280; margin-top: .25rem; line-height: 1.25; }
+
+/* Páginas largas (perfil, indicador, deslocamento) */
+body.fullcontent main.content { max-width: 1180px; margin-left: auto; margin-right: auto; }
+
+/* Bloco texto + mapa: lado a lado no computador, empilhado no celular */
+.perfil-topo { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+@media (max-width: 860px) { .perfil-topo { grid-template-columns: minmax(0, 1fr); } }
+.perfil-topo > * { min-width: 0; }
+.perfil-topo h3 { margin-top: .2rem; }
+
+/* Navegação entre municípios / indicadores */
+.nav-mun { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin: 0 0 1rem 0; }
+.nav-mun select { max-width: 320px; flex: 1 1 200px; }
+@media (max-width: 576px) { .nav-mun .btn { flex: 1 1 45%; } .nav-mun select { order: -1; flex-basis: 100%; max-width: none; } }
+
+/* Mapas sem camada de fundo externa */
+.leaflet-container { background: #f6f9f9 !important; }
+.leaflet-interactive:hover { cursor: pointer; }
+.leaflet-container .info.legend { font-size: .8rem; line-height: 1.3; }
+
+/* Tabela por grupo (perfil municipal) e situação ▲/▼ */
+.tabela-grupo .sub, .sub { font-size: .76rem; color: #6b7280; font-weight: 400; line-height: 1.25; }
+.tabela-grupo a { font-weight: 600; }
+.sit { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: .76rem; font-weight: 600; white-space: nowrap; }
+.sit-boa { background: #dcf3e5; color: #166a3f; } /* 5,68:1 sobre o fundo (texto pequeno exige 4,5:1) */
+.sit-ruim { background: #fde4e1; color: #b42318; }
+.sit-neutra { background: #eef0f4; color: #4b5563; }
+.detalhe-ind { padding: .6rem 1rem 1rem; background: #f8fbfb; }
+svg.spark, svg.strip { display: block; margin: 0 auto; }
+
+/* Gráficos SVG */
+.grafico-svg { margin: .5rem 0 1rem; }
+.grafico-svg svg { max-width: 760px; }
+.legenda-svg { font-size: .8rem; color: #374151; display: flex; flex-wrap: wrap; gap: .9rem; }
+.leg-item { display: inline-flex; align-items: center; gap: .3rem; }
+svg [data-tip] { cursor: pointer; }
+g.serie:hover path.linha { stroke-width: 3; stroke: #0E5A5E; }
+g.serie:hover circle.pt { fill: #0E5A5E; }
+#dica-grafico { position: fixed; z-index: 2000; display: none; pointer-events: none; background: #1f2937; color: #fff;
+  font-size: .8rem; padding: .3rem .55rem; border-radius: 5px; max-width: 280px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+
+/* Abas */
+.panel-tabset .nav-tabs .nav-link { font-size: .9rem; padding: .4rem .7rem; }
+
+/* Lista de indicadores (catálogo) */
+.lista-ind { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .6rem; margin-bottom: 1.2rem; }
+.cartao-ind { padding: .7rem .8rem; }
+.cartao-ind h4 { font-size: .95rem; }
+
+/* Siglas com glossário */
+abbr[title] { text-decoration: underline dotted #9ca3af; cursor: help; }
+
+/* Seletores da página inicial */
+.atalhos { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: .5rem 0 1.2rem; }
+@media (max-width: 700px) { .atalhos { grid-template-columns: 1fr; } }
+.atalhos label { font-size: .82rem; color: #4b5563; font-weight: 600; }
+
+/* Matriz região × região (tabela-calor) */
+.matriz-calor { font-size: .74rem; border-collapse: collapse; width: 100%; }
+.matriz-calor th, .matriz-calor td { padding: 2px 4px; text-align: center; border: 1px solid #fff; white-space: nowrap; }
+.matriz-calor td.diagonal { font-weight: 700; outline: 2px solid #0E5A5E; outline-offset: -2px; }
+.matriz-calor th.linha { text-align: left; }
+.matriz-calor thead th { writing-mode: vertical-rl; transform: rotate(180deg); height: 120px; font-weight: 500; }
+.rolagem-x { overflow-x: auto; }
+
+/* Tabelas reactable: cabeçalho */
+.reactable .rt-th { font-size: .82rem; }
+
+/* Menu: itens em uma linha */
+.navbar .navbar-nav .nav-link { white-space: nowrap; }
+
+/* Rodapé e logomarcas */
+.navbar-brand .navbar-logo { max-height: 30px; width: auto; }
+.nav-footer { font-size: .8rem; color: #4b5563; }
+.nav-footer-left { max-width: 720px; }
+.nav-footer-right img { margin-left: .6rem; vertical-align: middle; }
+.rodape-versao { color: #6b7280; }
+@media (max-width: 576px) { .nav-footer-right img { height: 32px !important; margin: .3rem .3rem 0 0; } }
+.logos-realizacao { display: flex; flex-wrap: wrap; gap: 1.6rem; align-items: center; margin: 1rem 0 1.5rem; }
+.logos-realizacao img { height: 64px; width: auto; }
+.logos-realizacao img.faixa { height: auto; max-width: 100%; }
+
+/* Impressão */
+@media print {
+  .navbar, .nav-mun, #quarto-margin-sidebar, .quarto-secondary-nav, footer, .btn { display: none !important; }
+  .panel-tabset .tab-content > .tab-pane { display: block !important; opacity: 1 !important; }
+}

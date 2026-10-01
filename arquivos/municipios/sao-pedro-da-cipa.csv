@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510740,São Pedro da Cipa,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),4771,4823,4191,4219,4247,4250
+510740,São Pedro da Cipa,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,968.6512,897.5001,1640.7703,1497.2373,2074.9984,2545.3752
+510740,São Pedro da Cipa,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),698.9218,278.2378,1046.4573,780.6009,834.0061,1518.0286
+510740,São Pedro da Cipa,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),74.3444,155.189,217.688,321.0786,647.9999,119.7147
+510740,São Pedro da Cipa,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,45.4973,60.6784,46.2756,46.2222,53.126,51.8834
+510740,São Pedro da Cipa,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,17.5228,6.1426,18.4312,7.9592,9.2466,7.47
+510740,São Pedro da Cipa,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5764,0.5909,0.6991,0.6755,0.6711,0.7882
+510740,São Pedro da Cipa,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.524,0.5018,0.7158,0.73,0.6875,0.6471
+510740,São Pedro da Cipa,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.7292,1.6587,2.0878,2.074,2.2769,4.3129
+510740,São Pedro da Cipa,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.3012,3.3527,3.8177,3.6739,3.5719,1.6282
+510740,São Pedro da Cipa,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4192,0.4831,0.6705,0.6518,0.6475,0.6471
+510740,São Pedro da Cipa,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0,0,0,0,0,0
+510740,São Pedro da Cipa,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510740,São Pedro da Cipa,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,20.96,20.734,23.8607,23.7023,23.546,23.5294
+510740,São Pedro da Cipa,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),3,3,3,3,3,3
+510740,São Pedro da Cipa,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,0,0,0,0
+510740,São Pedro da Cipa,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510740,São Pedro da Cipa,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),5,6,7,7,7,7
+510740,São Pedro da Cipa,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,4.192,4.1468,4.7721,4.7405,4.7092,4.7059
+510740,São Pedro da Cipa,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510740,São Pedro da Cipa,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,2,2,2
+510740,São Pedro da Cipa,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.9889,1.8611,2.8638,3.3475,3.7737,2.1346
+510740,São Pedro da Cipa,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.7105,0.617,3.9482,6.0588,6.7897,4.0419
+510740,São Pedro da Cipa,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.5347,2.2708,3.4001,3.2396,3.0885,3.04
+510740,São Pedro da Cipa,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.2781,0.3253,0.5672,0.567,0.5277,0.2661
+510740,São Pedro da Cipa,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.4107,17.8929,20.3333,22.234,24.2941,
+510740,São Pedro da Cipa,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.4253,0.4678,0.7535,0.663,0.8234,0.8099
+510740,São Pedro da Cipa,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.812,1.7222,3.0048,4.4131,5.7718,4.0871
+510740,São Pedro da Cipa,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0241,0.0438,0.0622,0.0482
+510740,São Pedro da Cipa,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510740,São Pedro da Cipa,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,45.4831,56.1891,74.2066,73.7142,82.4111,92.7059
+510740,São Pedro da Cipa,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510740,São Pedro da Cipa,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510740,São Pedro da Cipa,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510740,São Pedro da Cipa,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510740,São Pedro da Cipa,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510740,São Pedro da Cipa,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,61.0804,168.436,94.0375,187.6681,149.0792,133.3895
+510740,São Pedro da Cipa,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510740,São Pedro da Cipa,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,2.3,0,3.5,3.5,4,5.8
+510740,São Pedro da Cipa,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",37.8,32,39.1,44.9,43.4,47
+510740,São Pedro da Cipa,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,35.7143,0,0,0,
+510740,São Pedro da Cipa,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.1264,8.5009,6.4424,5.6886,6.8283,
+510740,São Pedro da Cipa,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,66.07,69.64,64.71,85.11,91.18,
+510740,São Pedro da Cipa,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,10.71,10.71,1.96,21.28,5.88,
+510740,São Pedro da Cipa,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,76.79,75,64.71,65.96,76.47,
+510740,São Pedro da Cipa,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,16.07,16.07,15.69,21.28,20.59,

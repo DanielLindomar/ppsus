@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510779,Santo Antônio do Leste,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),5334,5459,4099,4155,4212,4244
+510779,Santo Antônio do Leste,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1621.7188,1629.3682,2826.1099,2938.2967,3416.7151,4161.2787
+510779,Santo Antônio do Leste,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),239.8399,237.1873,488.269,677.5313,557.4522,639.9955
+510779,Santo Antônio do Leste,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),922.4899,893.867,1724.596,1885.1967,2186.4044,2829.4163
+510779,Santo Antônio do Leste,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,69.8145,69.4129,76.3957,75.3354,81.9805,84.4869
+510779,Santo Antônio do Leste,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,8.6731,0,10.273,6.0537,10.1757,11.2512
+510779,Santo Antônio do Leste,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5624,0.5844,0.8636,0.8977,0.952,0.8742
+510779,Santo Antônio do Leste,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.6554,1.786,2.0737,1.7449,1.2274,1.3407
+510779,Santo Antônio do Leste,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.8748,1.9692,3.1715,3.1288,3.0864,3.2846
+510779,Santo Antônio do Leste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.4372,2.5957,3.252,3.1889,3.7393,3.8878
+510779,Santo Antônio do Leste,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.375,0.3664,0.4269,0.4813,0.4748,0.3935
+510779,Santo Antônio do Leste,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0,0,0,0,0,0
+510779,Santo Antônio do Leste,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510779,Santo Antônio do Leste,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,16.8729,16.4865,21.9566,21.6606,23.3381,25.1414
+510779,Santo Antônio do Leste,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),2,2,2,2,2,2
+510779,Santo Antônio do Leste,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,0,0,0,0
+510779,Santo Antônio do Leste,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510779,Santo Antônio do Leste,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),7,7,7,7,7,7
+510779,Santo Antônio do Leste,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,1.7248,1.8318,2.4396,2.4067,2.3742,2.3563
+510779,Santo Antônio do Leste,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510779,Santo Antônio do Leste,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),0,1,1,1,1,1
+510779,Santo Antônio do Leste,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.4889,0.3429,0.8012,1.1976,1.397,1.1876
+510779,Santo Antônio do Leste,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.7835,0.8042,1.7314,2.1413,2.1698,2.3692
+510779,Santo Antônio do Leste,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.778,2.0354,2.6853,1.8643,1.7652,2.6477
+510779,Santo Antônio do Leste,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0778,0.2953,0.3157,0.4939,0.4409,0.2905
+510779,Santo Antônio do Leste,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.0167,12.7143,16.1667,11.0921,12.5867,
+510779,Santo Antônio do Leste,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6541,0.6661,1.0615,0.9502,0.8174,0.8789
+510779,Santo Antônio do Leste,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,6.8339,7.4554,18.5577,15.8349,15.4333,16.8824
+510779,Santo Antônio do Leste,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0.0005,0.0605,0.051,0.0468,0.033
+510779,Santo Antônio do Leste,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510779,Santo Antônio do Leste,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,34.3082,39.7509,50.2562,47.1721,70.9877,87.1819
+510779,Santo Antônio do Leste,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510779,Santo Antônio do Leste,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510779,Santo Antônio do Leste,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510779,Santo Antônio do Leste,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510779,Santo Antônio do Leste,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510779,Santo Antônio do Leste,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,60.307,59.6947,74.3324,64.1173,79.3079,121.0269
+510779,Santo Antônio do Leste,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510779,Santo Antônio do Leste,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,6,1.8,6.3,6.6,8,13.8
+510779,Santo Antônio do Leste,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",142.4,143.7,145.6,146,147.4,148.3
+510779,Santo Antônio do Leste,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,23.8095,0,39.4737,26.6667,
+510779,Santo Antônio do Leste,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,3.3746,3.8469,2.6836,4.0915,4.2735,
+510779,Santo Antônio do Leste,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,54.24,61.73,44.44,64.86,66.67,
+510779,Santo Antônio do Leste,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,3.33,8.33,8.33,9.21,6.67,
+510779,Santo Antônio do Leste,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,56.67,47.62,45.83,52.63,57.33,
+510779,Santo Antônio do Leste,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,21.67,28.57,26.39,21.05,30.67,

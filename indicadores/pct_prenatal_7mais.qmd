@@ -1,0 +1,13 @@
+---
+title: "Nascidos vivos com 7 ou mais consultas de pré-natal"
+description: "Resultados em saúde · % dos nascidos vivos. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–2024 e valores por região de saúde."
+toc: false
+page-layout: full
+---
+
+```{r}
+#| include: false
+IND_ID <- "pct_prenatal_7mais"
+```
+
+{{< include _indicador.qmd >}}

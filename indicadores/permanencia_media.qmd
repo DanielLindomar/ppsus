@@ -1,0 +1,13 @@
+---
+title: "Permanência média das internações"
+description: "Média e alta complexidade · dias. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–2025 e valores por região de saúde."
+toc: false
+page-layout: full
+---
+
+```{r}
+#| include: false
+IND_ID <- "permanencia_media"
+```
+
+{{< include _indicador.qmd >}}

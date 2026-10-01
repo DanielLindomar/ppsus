@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510788,Serra Nova Dourada,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),1678,1705,1800,1850,1901,1941
+510788,Serra Nova Dourada,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,2528.8818,2943.5229,3392.2682,3415.0859,4098.1467,3992.3725
+510788,Serra Nova Dourada,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),1258.0253,1205.4296,1353.3637,1486.4159,2177.682,2419.2132
+510788,Serra Nova Dourada,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),68.7101,18.5689,24.5916,45.7651,15.7109,20.8409
+510788,Serra Nova Dourada,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,73.452,84.333,87.1423,84.7745,83.7891,76.1222
+510788,Serra Nova Dourada,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,1.4794,3.4178,4.2399,4.4081,10.38,6.423
+510788,Serra Nova Dourada,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.3409,1.3666,1.3111,1.6919,1.7517,1.8341
+510788,Serra Nova Dourada,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.7449,1.2199,1.1111,1.3081,1.1415,1.3756
+510788,Serra Nova Dourada,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.7247,4.0587,3.4722,3.6486,3.7717,2.746
+510788,Serra Nova Dourada,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,6.5554,7.8182,6.6667,5.9459,5.4813,5.4096
+510788,Serra Nova Dourada,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.6734,0.6628,0.6278,0.6108,0.5944,0.5822
+510788,Serra Nova Dourada,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0,0,0,0,0,0
+510788,Serra Nova Dourada,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510788,Serra Nova Dourada,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,35.7569,39.5894,33.3333,36.9189,42.9774,45.0799
+510788,Serra Nova Dourada,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),1,3,2,1,1,1
+510788,Serra Nova Dourada,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,0,0,0,0
+510788,Serra Nova Dourada,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510788,Serra Nova Dourada,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),5,7,6,6,6,6
+510788,Serra Nova Dourada,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,5.9595,5.8651,5.5556,5.4054,5.2604,5.152
+510788,Serra Nova Dourada,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510788,Serra Nova Dourada,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),1,1,1,1,1,1
+510788,Serra Nova Dourada,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.3397,3.1877,4.8822,4.9097,4.6055,4.508
+510788,Serra Nova Dourada,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,5.8647,6.3331,10.0639,10.5265,10.2025,9.6193
+510788,Serra Nova Dourada,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.556,4.7971,6.3406,6.9443,5.5823,4.5564
+510788,Serra Nova Dourada,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.2944,0.295,0.4394,0.5892,0.3446,0.408
+510788,Serra Nova Dourada,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,19.1667,17.5789,17.3214,14.4091,14.9259,
+510788,Serra Nova Dourada,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6484,0.3877,0.6411,0.5719,0.778,1.0675
+510788,Serra Nova Dourada,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,2.8987,2.3584,9.3706,7.9773,7.4077,6.881
+510788,Serra Nova Dourada,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0
+510788,Serra Nova Dourada,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510788,Serra Nova Dourada,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,42.3123,59.2375,70.5556,50.8108,68.9111,71.6126
+510788,Serra Nova Dourada,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510788,Serra Nova Dourada,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510788,Serra Nova Dourada,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510788,Serra Nova Dourada,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510788,Serra Nova Dourada,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510788,Serra Nova Dourada,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,49.7287,67.038,56.2357,48.6023,51.5618,74.3435
+510788,Serra Nova Dourada,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510788,Serra Nova Dourada,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,98.6,99,99.2,100,95.4,99.3
+510788,Serra Nova Dourada,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",269,232.4,248.1,248.7,248.5,262.1
+510788,Serra Nova Dourada,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,0,0,0,37.037,
+510788,Serra Nova Dourada,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.9595,7.0381,3.3333,3.7838,4.2083,
+510788,Serra Nova Dourada,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,77.78,63.16,92.86,95.45,88.89,
+510788,Serra Nova Dourada,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,0,10.53,14.29,18.18,7.41,
+510788,Serra Nova Dourada,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,72.22,78.95,85.71,90.91,81.48,
+510788,Serra Nova Dourada,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,22.22,21.05,10.71,13.64,29.63,

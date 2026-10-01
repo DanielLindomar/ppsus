@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510682,Porto Esperidião,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),12097,12176,10204,10185,10167,10088
+510682,Porto Esperidião,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1093.2197,1345.2433,1787.0318,1782.5563,2278.1782,2357.1119
+510682,Porto Esperidião,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),746.6179,1021.5822,1459.4385,1384.0536,1859.1749,1654.2062
+510682,Porto Esperidião,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),66.4286,62.3183,64.0617,94.5552,101.2554,320.9542
+510682,Porto Esperidião,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,71.1287,73.9362,59.6326,72.6673,59.7025,78.509
+510682,Porto Esperidião,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,5.346,2.6118,4.8668,1.2021,0.576,6.3188
+510682,Porto Esperidião,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7018,0.6332,0.5664,0.5744,0.7141,1.0161
+510682,Porto Esperidião,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0408,0.9527,1.2828,1.3913,1.3819,1.5117
+510682,Porto Esperidião,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.607,1.7814,2.1766,2.269,2.4393,2.6011
+510682,Porto Esperidião,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.4366,4.7224,5.6027,5.5798,5.3113,5.5839
+510682,Porto Esperidião,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.386,0.3852,0.6635,0.758,0.7426,0.7355
+510682,Porto Esperidião,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.1653,0.3285,0.392,0.3927,0.3934,0.3965
+510682,Porto Esperidião,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510682,Porto Esperidião,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,20.6663,21.6245,39.2003,39.2734,36.884,40.6423
+510682,Porto Esperidião,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),4,4,4,4,4,5
+510682,Porto Esperidião,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,0,0,0,0
+510682,Porto Esperidião,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,1,1,0,0
+510682,Porto Esperidião,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),14,15,15,15,14,14
+510682,Porto Esperidião,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,4.1333,4.3118,4.9,4.9092,4.9179,4.9564
+510682,Porto Esperidião,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510682,Porto Esperidião,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,4,5,5,5,5
+510682,Porto Esperidião,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,2.4714,2.8628,4.2346,4.6343,4.7473,5.2758
+510682,Porto Esperidião,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,3.404,4.6941,6.1208,5.9978,4.6644,6.3142
+510682,Porto Esperidião,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.9674,3.0274,4.5704,4.53,3.6866,7.5051
+510682,Porto Esperidião,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1705,0.2162,0.3739,0.45,0.3794,0.5792
+510682,Porto Esperidião,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,22.732,19,21.1834,19.4405,20.8618,
+510682,Porto Esperidião,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.9833,1.2204,1.6714,1.4686,1.1847,1.4256
+510682,Porto Esperidião,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,2.4881,2.4772,4.9744,3.8166,1.8561,0.5658
+510682,Porto Esperidião,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0
+510682,Porto Esperidião,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510682,Porto Esperidião,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,46.7058,45.7457,49.9804,65.9794,65.6044,68.1007
+510682,Porto Esperidião,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510682,Porto Esperidião,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510682,Porto Esperidião,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510682,Porto Esperidião,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510682,Porto Esperidião,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510682,Porto Esperidião,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,61.8246,67.3295,57.4489,88.023,78.1779,92.5573
+510682,Porto Esperidião,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510682,Porto Esperidião,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,7.8,12.9,10.4,13.7,11.7,15.7
+510682,Porto Esperidião,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",101.2,101.5,103.9,112,108.5,114
+510682,Porto Esperidião,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,13.0719,12.7389,11.8343,5.9524,6.5789,
+510682,Porto Esperidião,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.7705,7.5558,5.88,8.1492,6.885,
+510682,Porto Esperidião,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,50.98,59.24,53.85,55.09,61.84,
+510682,Porto Esperidião,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.19,4.46,5.33,6.55,5.92,
+510682,Porto Esperidião,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,73.2,61.78,64.5,67.26,80.26,
+510682,Porto Esperidião,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,17.65,14.65,19.53,17.26,14.47,

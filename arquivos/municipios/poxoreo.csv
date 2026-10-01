@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510700,Poxoréo,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),15916,15936,23283,23926,24587,25103
+510700,Poxoréo,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,965.129,1199.0677,1027.3792,1042.1457,1137.5359,1228.4501
+510700,Poxoréo,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),71.8915,111.3052,294.584,330.1201,333.9627,348.2963
+510700,Poxoréo,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),318.9191,340.8017,403.7815,340.0646,408.325,436.7415
+510700,Poxoréo,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,54.9949,62.8969,64.3301,68.8829,71.7528,77.7147
+510700,Poxoréo,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.4232,8.3655,2.1919,3.3269,4.0989,2.9657
+510700,Poxoréo,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.9211,0.9676,0.6941,0.6345,0.6569,0.7959
+510700,Poxoréo,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.1247,1.3981,0.9921,0.9337,1.0038,1.0071
+510700,Poxoréo,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.0043,2.3218,1.4418,1.4921,1.9327,2.0508
+510700,Poxoréo,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.7591,3.8906,2.8205,2.8245,2.6656,2.6284
+510700,Poxoréo,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1885,0.1883,0.1288,0.1254,0.1594,0.1625
+510700,Poxoréo,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,5.0264,5.0828,3.2642,2.5671,2.7116,2.6292
+510700,Poxoréo,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510700,Poxoréo,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,49.0073,49.5733,37.4737,40.6127,40.3994,38.2424
+510700,Poxoréo,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),6,7,7,7,7,7
+510700,Poxoréo,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510700,Poxoréo,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510700,Poxoréo,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),15,16,16,16,16,16
+510700,Poxoréo,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.1415,3.4011,2.577,2.5077,2.4403,2.3902
+510700,Poxoréo,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510700,Poxoréo,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,3,3,3,3
+510700,Poxoréo,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.8316,1.0948,1.1812,1.0266,1.0815,1.0625
+510700,Poxoréo,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.672,1.9498,2.2852,2.1115,2.1675,2.1328
+510700,Poxoréo,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.1184,2.2033,2.2312,3.4073,3.2091,3.2048
+510700,Poxoréo,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1137,0.1015,0.1073,0.1116,0.081,0.0845
+510700,Poxoréo,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,11.5465,15.128,17.3964,12.8867,14.2133,
+510700,Poxoréo,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.4388,0.5216,0.5729,0.419,0.5242,0.437
+510700,Poxoréo,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,4.4867,5.6729,5.3318,3.8974,3.9948,4.5171
+510700,Poxoréo,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0013,0.0016,0,0
+510700,Poxoréo,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,55.1646,70.0301,47.4595,56.7165,66.8646,59.4351
+510700,Poxoréo,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,81.993,102.6606,70.5236,86.7675,92.7726,88.5552
+510700,Poxoréo,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,97.1326,96.8326,100,86.4355,99.933
+510700,Poxoréo,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,5.467,3.0466,1.81,1.9897,3.528,2.0107
+510700,Poxoréo,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.0353,2.759,2.6733,2.9609,3.0493,3.1213
+510700,Poxoréo,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510700,Poxoréo,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,31.1799,49.4948,24.5917,30.0838,38.1421,31.9417
+510700,Poxoréo,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,89.2846,165.759,86.5614,103.2447,107.3097,98.1635
+510700,Poxoréo,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,36.6284,34.9633,36.1754,37.1387,37.0013,37.3369
+510700,Poxoréo,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,2,1.5,2.1,2.9,3.4,3
+510700,Poxoréo,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",25.7,23.8,27.2,28,29.2,27.5
+510700,Poxoréo,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,11.6279,0,13.5135,7.8125,13.3333,
+510700,Poxoréo,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,10.0528,10.2912,5.8841,7.2724,6.7109,
+510700,Poxoréo,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,57.75,68.57,73.3,66.54,74.55,
+510700,Poxoréo,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.14,7.11,8.11,8.98,9.78,
+510700,Poxoréo,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,73.64,72.04,69.82,59.38,60.89,
+510700,Poxoréo,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.99,16.59,18.47,20.7,15.56,

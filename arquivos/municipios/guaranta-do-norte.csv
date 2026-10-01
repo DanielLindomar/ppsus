@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510410,Guarantã do Norte,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),36130,36439,31024,31176,31328,31209
+510410,Guarantã do Norte,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,887.4045,1175.7866,1777.4195,2119.0004,2389.5853,2344.6553
+510410,Guarantã do Norte,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),395.4424,468.897,654.9075,729.9785,656.6967,689.465
+510410,Guarantã do Norte,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),439.6518,638.1571,1032.7375,1275.5864,1584.0505,1448.4949
+510410,Guarantã do Norte,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,54.2545,53.1684,49.0574,56.3189,53.6337,65.3443
+510410,Guarantã do Norte,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,4.4869,10.3341,5.2208,5.4465,3.5788,0.3231
+510410,Guarantã do Norte,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5887,0.727,1.0153,1.0386,1.8156,1.3631
+510410,Guarantã do Norte,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.5558,0.767,1.0756,1.3421,1.5931,1.6835
+510410,Guarantã do Norte,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.6192,2.0204,2.8059,3.1938,3.0484,3.4647
+510410,Guarantã do Norte,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.4196,2.303,2.5841,2.8333,3.0139,3.1392
+510410,Guarantã do Norte,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3922,0.4075,0.4841,0.543,0.5474,0.4954
+510410,Guarantã do Norte,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.9687,1.0771,1.1604,1.1547,1.1625,1.1856
+510410,Guarantã do Norte,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510410,Guarantã do Norte,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,56.1168,58.5444,77.7076,91.2561,94.4842,113.9896
+510410,Guarantã do Norte,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),9,10,10,10,10,10
+510410,Guarantã do Norte,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,2,2
+510410,Guarantã do Norte,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510410,Guarantã do Norte,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),22,23,25,26,28,31
+510410,Guarantã do Norte,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.491,2.4699,2.901,2.8868,2.8728,2.8838
+510410,Guarantã do Norte,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510410,Guarantã do Norte,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),9,9,9,9,9,9
+510410,Guarantã do Norte,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.0679,1.3877,1.8319,1.8033,1.9174,2.2195
+510410,Guarantã do Norte,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.8889,2.157,2.8964,3.4096,3.6441,4.1757
+510410,Guarantã do Norte,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.039,2.4733,3.6297,3.8124,4.8334,4.8818
+510410,Guarantã do Norte,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1486,0.1699,0.2459,0.3302,0.3738,0.3462
+510410,Guarantã do Norte,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,14.8891,9.1421,9.9714,14.4544,15.0236,
+510410,Guarantã do Norte,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7233,0.6065,0.602,0.7032,0.9416,1.113
+510410,Guarantã do Norte,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,5.4735,5.8044,8.7053,8.7408,11.3326,11.691
+510410,Guarantã do Norte,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0002,0.0001,0.0008,0.0016,0.0021,0.0074
+510410,Guarantã do Norte,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,32.1893,41.0549,67.0771,93.6618,87.1425,77.2534
+510410,Guarantã do Norte,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,39.8838,46.7631,70.8484,95.5543,91.356,81.6752
+510410,Guarantã do Norte,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,92.7773,85.4947,79.1927,77.1918,69.3407,75.9851
+510410,Guarantã do Norte,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,4.9871,6.0829,1.9702,1.0616,1.4652,2.6545
+510410,Guarantã do Norte,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.1195,3.4793,2.8198,2.6027,2.9667,3.2236
+510410,Guarantã do Norte,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510410,Guarantã do Norte,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,16.0116,26.3453,34.42,43.4671,46.5091,40.1084
+510410,Guarantã do Norte,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,34.7582,51.0482,61.227,68.4367,74.1451,62.2785
+510410,Guarantã do Norte,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,20.7495,13.9671,12.1929,10.7083,11.1461,12.1224
+510410,Guarantã do Norte,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,14,10.2,10.2,9.8,10.7,11.1
+510410,Guarantã do Norte,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",75.7,44.9,48.7,45.4,46.7,51.3
+510410,Guarantã do Norte,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,11.6732,10.3986,14.2857,14.3113,14.4928,
+510410,Guarantã do Norte,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.8436,7.6841,7.8004,6.768,6.9267,
+510410,Guarantã do Norte,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,83.85,84.06,81.43,84.97,86.78,
+510410,Guarantã do Norte,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.39,11.27,9.64,7.16,10.33,
+510410,Guarantã do Norte,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,71.01,67.76,70.18,75.13,86.59,
+510410,Guarantã do Norte,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,14.01,15.77,14.46,13.42,14.49,

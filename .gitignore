@@ -1,0 +1,18 @@
+_site/
+.quarto/
+_freeze/
+*_files/
+*.Rhistory
+.Rhistory
+.RData
+__pycache__/
+**/*.quarto_ipynb
+/.claude/
+_planejamento/
+
+/.quarto/
+
+# saidas de render fora de _site (acidentais)
+/*.html
+/site_libs/
+/*_files/

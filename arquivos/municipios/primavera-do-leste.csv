@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510704,Primavera do Leste,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),63092,63876,85146,88951,92927,96006
+510704,Primavera do Leste,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,880.3472,1751.5714,1531.1544,1729.5931,2041.8361,1998.3646
+510704,Primavera do Leste,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),318.042,425.7758,350.4005,506.5397,492.5819,549.4683
+510704,Primavera do Leste,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),562.3052,1240.7219,991.0576,996.9713,1269.4705,1169.2542
+510704,Primavera do Leste,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,100,53.4859,60.4108,64.4055,63.1777,69.1836
+510704,Primavera do Leste,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,0.9037,0.6691,3.7762,0.7627,1.7066,1.8439
+510704,Primavera do Leste,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.765,1.9535,1.6435,1.6193,1.7245,1.8244
+510704,Primavera do Leste,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.2428,1.6169,1.3222,1.4762,1.8419,1.8362
+510704,Primavera do Leste,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.9222,3.6493,2.9622,3.0676,3.3548,3.6229
+510704,Primavera do Leste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.4149,2.676,2.5095,2.499,2.3912,2.3136
+510704,Primavera do Leste,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3568,0.3386,0.281,0.2864,0.2932,0.3064
+510704,Primavera do Leste,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.7883,2.167,1.4113,1.0418,1.3954,1.4027
+510704,Primavera do Leste,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),10,30,10,8,8,8
+510704,Primavera do Leste,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,51.3409,108.5181,126.2631,115.7941,127.3849,130.721
+510704,Primavera do Leste,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),16,17,16,17,18,19
+510704,Primavera do Leste,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),2,2,2,2,2,2
+510704,Primavera do Leste,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510704,Primavera do Leste,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),44,46,46,50,56,62
+510704,Primavera do Leste,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.3379,2.5049,1.8791,1.9112,1.8294,1.7707
+510704,Primavera do Leste,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510704,Primavera do Leste,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),14,15,15,16,17,17
+510704,Primavera do Leste,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.1232,1.4867,1.2428,1.3331,1.4296,1.4771
+510704,Primavera do Leste,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.0833,2.9444,2.4803,2.6495,2.8155,2.96
+510704,Primavera do Leste,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.3742,1.9872,2.2221,2.5243,3.5886,3.4426
+510704,Primavera do Leste,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.2328,0.3591,0.2513,0.3237,0.3012,0.3064
+510704,Primavera do Leste,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.7331,13.5699,14.6982,15.2612,15.9547,
+510704,Primavera do Leste,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,1.0703,0.9847,0.809,0.7732,0.9231,1.149
+510704,Primavera do Leste,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,12.7484,13.8715,10.8328,11.8119,13.3803,16.2313
+510704,Primavera do Leste,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0269,0.0475,0.0911,0.1632,0.1588,0.1693
+510704,Primavera do Leste,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,73.5909,82.3627,52.7447,50.2749,57.8303,67.1416
+510704,Primavera do Leste,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,73.4324,80.6093,56.1741,55.6936,62.9419,67.2875
+510704,Primavera do Leste,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,85.8927,86.0483,81.2291,77.661,70.3945,72.7273
+510704,Primavera do Leste,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,3.4676,6.5577,3.0728,2.4821,1.4328,1.0084
+510704,Primavera do Leste,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.0864,2.1182,2.1254,2.0778,1.9168,1.9347
+510704,Primavera do Leste,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,44.4747,118.0099,40.6478,31.6804,31.7669,29.6231
+510704,Primavera do Leste,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,73.8869,209.7456,64.6561,51.6049,56.1442,69.2084
+510704,Primavera do Leste,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,91.9431,193.7068,83.2795,78.491,83.9969,92.8294
+510704,Primavera do Leste,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,14.1161,14.6436,20.4892,23.2338,19.6273,18.6842
+510704,Primavera do Leste,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,3.8,3.1,4.7,5.8,5.1,5.3
+510704,Primavera do Leste,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",18.8,19.2,27,31.4,26.5,25.3
+510704,Primavera do Leste,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,2.847,8.3102,11.2285,7.5901,6.7613,
+510704,Primavera do Leste,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.752,8.7513,4.5451,4.3395,4.5627,
+510704,Primavera do Leste,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,71.18,75.14,75.94,84.85,84.55,
+510704,Primavera do Leste,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,9.47,9.9,8.85,10.56,10.07,
+510704,Primavera do Leste,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,74.02,76.32,72.72,76.34,77.96,
+510704,Primavera do Leste,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,13.67,13.37,11.36,10.75,11.83,

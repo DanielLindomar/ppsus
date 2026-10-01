@@ -1,0 +1,60 @@
+---
+title: "Municípios de Mato Grosso"
+description: "Perfis dos 142 municípios de Mato Grosso: indicadores de saúde, comparação com a região e o estado, deslocamento para internação e hospitais SUS"
+toc: false
+page-layout: full
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_municipios.R"))
+n_sem_hosp <- sum(MUN$tem_hospital_sus_2025 == 0, na.rm = TRUE)
+n_reg <- nrow(REG)
+```
+
+```{r}
+faixa_versao()
+```
+
+Mato Grosso tem **`r nrow(MUN)` municípios**, organizados em `r n_reg` regiões de saúde (CIR) e `r length(unique(REG$macrorregiao))` macrorregiões. Cada perfil reúne os indicadores de financiamento, capacidade instalada, atenção básica, média e alta complexidade e resultados em saúde de 2020 a 2025, a posição do município entre os 142 e entre os da sua região, o deslocamento dos moradores para internação, os hospitais SUS e o download dos dados. Clique em um município do mapa ou da tabela.
+
+```{r}
+sem_zoom_rolagem(mapa_municipio(NULL, altura = 460, prefixo = ""))
+```
+
+::: {.nota-fonte}
+Malha municipal do IBGE simplificada. Boa Esperança do Norte (instalado em 2025) ainda não consta na malha e aparece apenas na tabela. Em 2025, `r n_sem_hosp` municípios não tinham hospital SUS registrado no CNES.
+:::
+
+## Os 142 municípios
+
+Valores de 2025: população estimada (IBGE), despesa liquidada em saúde por habitante (SIOPS, R$ correntes), médicos com atendimento SUS por mil habitantes (CNES, equivalente de 40 h) e parcela das internações de moradores realizadas em outro município (SIH). Use a busca para localizar um município e clique no cabeçalho para ordenar.
+
+```{r}
+tabela_municipios(prefixo = "")
+```
+
+## Regiões de saúde
+
+As 16 regiões de saúde (Comissões Intergestores Regionais) organizam a referência da média e alta complexidade. Clique na seta para listar os municípios de cada região.
+
+```{r}
+d <- REG |> arrange(regiao_saude) |>
+  transmute(co_regsaud, `Região de saúde` = regiao_saude, Macrorregião = macrorregiao,
+            Municípios = n_municipios, `População 2025` = populacao_2025)
+reactable(d, compact = TRUE, striped = TRUE, pagination = FALSE,
+          columns = list(co_regsaud = colDef(show = FALSE),
+                         `Região de saúde` = colDef(minWidth = 180),
+                         Municípios = colDef(align = "center", minWidth = 90),
+                         `População 2025` = colDef(align = "right", cell = function(v) fmt_valor(v, "int"))),
+          details = function(i) {
+            m <- MUN[!is.na(MUN$co_regsaud) & MUN$co_regsaud == d$co_regsaud[i], ]
+            div(class = "detalhe-ind", lapply(seq_len(nrow(m)), function(j)
+              tagList(a(href = paste0(m$slug[j], ".html"), m$municipio[j]), if (j < nrow(m)) " · ")))
+          })
+```
+
+```{r}
+fonte_rodape()
+```

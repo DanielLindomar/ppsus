@@ -1,0 +1,33 @@
+---
+title: "Eficiência"
+description: "Escores de eficiência (DEA) e índice de Malmquist — em construção"
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+```
+
+```{r}
+faixa_construcao("<b>Em construção.</b> Esta seção receberá os escores de eficiência (DEA) e de produtividade (Malmquist) dos municípios e das regiões de saúde assim que a especificação dos modelos for concluída. Enquanto isso, os dados e indicadores que alimentarão os modelos já estão publicados em <a href='indicadores/index.html'>Indicadores</a> e <a href='dados/index.html'>Dados</a>.")
+```
+
+## O que é a eficiência medida por DEA
+
+Dois municípios com o mesmo orçamento, o mesmo número de médicos e os mesmos leitos podem produzir quantidades muito diferentes de consultas, procedimentos e internações. A **Análise Envoltória de Dados (DEA)** compara cada município com os demais e identifica, para cada combinação de recursos, o melhor desempenho observado no estado. Esse conjunto de melhores práticas forma uma "fronteira"; a distância de cada município até ela é o seu escore de eficiência. Um escore de 100% indica que ninguém, com recursos semelhantes, produziu mais; um escore de 70% indica que o município produz 70% do que as melhores práticas obtêm com recursos semelhantes — mantidos os recursos, a produção poderia crescer cerca de 43% (1/0,70) até alcançá-las.
+
+A técnica não exige preços nem pesos fixos: cada município é avaliado com a combinação de pesos que lhe é mais favorável, o que torna o resultado difícil de contestar. Em contrapartida, ela é sensível a erros de registro e a valores extremos, razão pela qual a qualidade dos dados foi tratada antes (ver [Metodologia](metodologia.qmd)). O escore descreve a relação entre recursos e produção; **não avalia a qualidade do cuidado por si só**, e por isso os resultados em saúde (mortalidade infantil, pré-natal, baixo peso) entrarão como um segundo estágio da análise.
+
+## O que o índice de Malmquist acrescenta
+
+Um escore de eficiência é uma fotografia de um ano. O **índice de Malmquist** compara dois anos e mede quanto a produtividade de cada município mudou, separando dois movimentos: a aproximação (ou o afastamento) da fronteira — o município passou a aproveitar melhor os recursos — e o deslocamento da própria fronteira — o estado como um todo passou a produzir mais com o mesmo, por novas tecnologias, protocolos ou organização. Essa separação interessa à gestão porque indica se um avanço veio de esforço local ou de uma melhoria geral do sistema, e permite ler os anos de 2020–2021, marcados pela COVID-19, com o devido cuidado.
+
+## O que virá
+
+- **Atenção básica municipal** (141 municípios, 2020–2025; Boa Esperança do Norte a partir de 2025): recursos financeiros e de pessoal das equipes de saúde da família frente à produção registrada no SISAB e às vacinas aplicadas.
+- **Média complexidade municipal**: despesa, leitos, médicos e equipamentos frente aos procedimentos e internações de média complexidade.
+- **Alta complexidade por região de saúde** (16 regiões): recorte compatível com a regionalização do SUS, em que a alta complexidade é organizada por desenho.
+- **Hospitais SUS**: eficiência por estabelecimento, com a mortalidade hospitalar como produto indesejável.
+- **Índice de Malmquist** 2020–2025 para cada camada, com e sem os anos da pandemia.
+
+Os resultados serão publicados por município, com a posição na região e no estado, o "alvo" de produção que tornaria o município eficiente e os municípios de referência com os quais ele foi comparado.

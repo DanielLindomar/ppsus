@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510650,Poconé,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),33315,33386,31217,31243,31269,31203
+510650,Poconé,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,929.2707,1094.132,1391.5085,1463.4324,1605.3594,1934.5996
+510650,Poconé,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),332.8437,367.7366,487.3098,555.888,639.1861,662.2467
+510650,Poconé,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),494.9089,602.5748,731.8948,745.0468,808.9831,1063.5774
+510650,Poconé,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,63.3726,45.5289,45.8934,46.1521,42.6393,32.6942
+510650,Poconé,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,7.0111,2.4418,4.0294,1.9396,0.7429,0.9592
+510650,Poconé,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.4499,0.5182,0.5747,0.6222,0.6703,0.7797
+510650,Poconé,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8495,1.172,1.2413,1.2985,1.4305,1.3835
+510650,Poconé,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.1096,2.4579,2.6223,2.6121,2.7762,2.8917
+510650,Poconé,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.6916,2.6409,3.1207,3.4008,3.3685,3.3545
+510650,Poconé,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2978,0.3094,0.3364,0.3201,0.3198,0.3471
+510650,Poconé,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.801,1.7972,1.922,1.9204,1.5885,1.4101
+510650,Poconé,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510650,Poconé,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,31.5684,32.5975,44.7128,54.2778,62.5764,79.9346
+510650,Poconé,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),9,10,10,9,9,10
+510650,Poconé,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510650,Poconé,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,1,1,1,1,1
+510650,Poconé,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),23,24,24,23,24,26
+510650,Poconé,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.5514,2.6957,2.883,2.8806,2.8783,2.8843
+510650,Poconé,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510650,Poconé,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),8,9,9,9,9,9
+510650,Poconé,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.7258,0.8403,1.0919,1.3862,1.5016,1.9002
+510650,Poconé,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.5953,1.1603,1.8583,2.8541,3.0803,4.051
+510650,Poconé,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.6041,1.7381,2.4706,4.1742,4.379,5.4727
+510650,Poconé,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1621,0.4106,0.3271,0.3596,0.3279,0.4388
+510650,Poconé,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.3178,14.4354,17.407,16.391,17.0884,
+510650,Poconé,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6173,0.5218,0.6725,0.755,0.8338,0.7584
+510650,Poconé,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,3.1864,6.0125,7.3716,8.4384,9.6141,10.6627
+510650,Poconé,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0.0017,0.0118,0.0184,0.0417,0.0294
+510650,Poconé,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,41.753,47.2354,57.757,54.2522,58.7483,72.3007
+510650,Poconé,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,63.4549,68.1124,81.8144,81.8743,81.4545,88.5492
+510650,Poconé,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,99.941,83.1791,62.2784
+510650,Poconé,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,4.0978,3.4242,1.3311,2.7139,2.5585,1.5071
+510650,Poconé,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.7412,2.4756,2.472,3.3139,2.9075,2.7593
+510650,Poconé,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510650,Poconé,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,19.0136,21.7082,21.4907,22.5459,25.5328,31.9266
+510650,Poconé,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,51.2167,69.1608,69.6235,87.2735,83.5327,91.5499
+510650,Poconé,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,35.7616,31.9261,31.5192,38.1939,39.1441,40.1737
+510650,Poconé,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,0.4,0.3,0.2,0.6,0.4,0.3
+510650,Poconé,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",35,30.8,30,36.7,37.5,37.8
+510650,Poconé,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,4.0486,7.9523,12.3967,25.5403,19.3966,
+510650,Poconé,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,8.3146,9.1955,8.0725,8.77,8.7627,
+510650,Poconé,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,74.7,74.16,73.55,76.62,82.97,
+510650,Poconé,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,9.51,7.36,9.5,7.47,7.56,
+510650,Poconé,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,57.29,56.06,50.83,52.26,54.74,
+510650,Poconé,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,22.87,24.85,19.83,20.63,20.47,

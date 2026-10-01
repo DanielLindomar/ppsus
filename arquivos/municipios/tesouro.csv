@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510810,Tesouro,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),3824,3761,3025,3001,2977,2935
+510810,Tesouro,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1231.633,1535.1809,2579.0507,2357.2415,2555.0145,2780.0836
+510810,Tesouro,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),264.5972,430.8033,1195.0275,1054.5351,1204.2208,1379.4715
+510810,Tesouro,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),553.4453,620.1267,896.2646,839.1663,982.571,916.2364
+510810,Tesouro,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,84.6897,77.0577,65.521,70.7176,79.6136,62.0446
+510810,Tesouro,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,15.5779,1.1757,5.2197,4.3822,7.9269,1.6236
+510810,Tesouro,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6145,1.0529,1.3455,1.073,1.1354,1.1278
+510810,Tesouro,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.5936,1.2709,2.1653,2.1859,2.2338,2.1601
+510810,Tesouro,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.6595,2.9274,3.2331,3.0323,4.0511,5.1448
+510810,Tesouro,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.8305,2.5472,3.9107,3.4988,2.4924,2.7257
+510810,Tesouro,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2615,0.2446,0.3306,0.3332,0.3359,0.3407
+510810,Tesouro,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.9226,3.9883,4.9587,4.9983,5.0386,5.1107
+510810,Tesouro,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510810,Tesouro,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,41.841,42.5419,70.5124,65.2449,73.8999,73.833
+510810,Tesouro,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),2,3,2,2,2,2
+510810,Tesouro,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510810,Tesouro,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510810,Tesouro,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),6,7,6,6,6,6
+510810,Tesouro,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.6151,3.7756,6.6116,6.6644,6.7182,6.8143
+510810,Tesouro,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510810,Tesouro,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),1,1,1,1,1,1
+510810,Tesouro,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.1833,1.2069,2.4846,3.3585,3.1683,2.1782
+510810,Tesouro,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.8716,2.8931,5.398,6.3612,6.3732,5.3714
+510810,Tesouro,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.8583,1.3172,3.7474,4.5685,4.1797,6.7111
+510810,Tesouro,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1457,0.1306,0.3471,0.5312,0.4652,0.5203
+510810,Tesouro,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,25.2222,24.0435,14.62,27.4783,17.7273,
+510810,Tesouro,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.3946,0.4044,0.9025,0.9563,0.962,0.6893
+510810,Tesouro,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,2.631,2.766,4.8744,10.4992,12.1989,16.4998
+510810,Tesouro,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0274,0.064,0.0208,0.0443
+510810,Tesouro,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,15.9519,18.6121,31.0744,31.3229,22.8418,21.8058
+510810,Tesouro,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,41.0565,53.1773,71.7355,77.974,81.2899,86.5417
+510810,Tesouro,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,98.9362,100,100
+510810,Tesouro,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.6393,4.2857,5.3191,4.2553,5.8824,7.8125
+510810,Tesouro,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.8197,3.5857,3.0638,3.9894,3.7794,5.4531
+510810,Tesouro,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510810,Tesouro,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,6.743,7.1453,12.2651,12.2702,8.2997,7.3027
+510810,Tesouro,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,63.6803,117.409,82.6105,106.0281,124.1245,159.0276
+510810,Tesouro,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,61.7834,66,58.5253,63.2479,73.5537,80.315
+510810,Tesouro,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,0,2.5,1.4,3.4,2.1,4.3
+510810,Tesouro,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",75.1,84.1,74.5,82.1,91,101.4
+510810,Tesouro,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,0,20,0,0,
+510810,Tesouro,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.4916,9.8378,9.2562,7.9973,8.7336,
+510810,Tesouro,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,70.37,78.26,80,95.65,87.88,
+510810,Tesouro,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.41,4.35,4,4.35,9.09,
+510810,Tesouro,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,40.74,30.43,58,47.83,45.45,
+510810,Tesouro,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,14.81,21.74,16,13.04,27.27,

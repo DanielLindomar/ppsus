@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510792,Sorriso,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),92769,94941,110635,115694,120985,124665
+510792,Sorriso,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1109.5277,1228.5487,1151.6917,1433.5454,1539.6053,1724.5883
+510792,Sorriso,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),508.5291,490.0443,538.3705,659.5488,673.4049,664.6311
+510792,Sorriso,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),370.0656,465.5112,306.7982,482.3203,548.045,674.3932
+510792,Sorriso,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,71.3686,79.1941,79.1944,81.5087,78.2347,76.478
+510792,Sorriso,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,3.6024,4.0908,4.0766,6.1523,3.8337,2.9362
+510792,Sorriso,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.5925,1.711,1.5689,1.631,2.0071,2.3711
+510792,Sorriso,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.438,1.519,1.2533,1.2093,1.3476,1.296
+510792,Sorriso,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.2085,3.193,2.6079,2.649,2.6838,2.5526
+510792,Sorriso,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.482,2.2795,1.9652,2.1954,2.4824,2.3878
+510792,Sorriso,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4388,0.4287,0.3622,0.3731,0.4261,0.4239
+510792,Sorriso,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.4211,1.6818,1.4824,1.6459,2.0203,2.0809
+510792,Sorriso,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),17,16,16,16,16,16
+510792,Sorriso,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,110.8312,112.3508,105.0825,104.1826,136.0226,164.3669
+510792,Sorriso,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),29,29,29,29,30,30
+510792,Sorriso,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),3,3,4,4,4,4
+510792,Sorriso,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,1,1,1,1
+510792,Sorriso,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),99,100,102,108,123,136
+510792,Sorriso,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.7671,2.6859,2.275,2.2473,2.197,2.1995
+510792,Sorriso,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,2,3,3,3,3
+510792,Sorriso,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),25,27,28,29,30,30
+510792,Sorriso,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.6768,1.9854,2.0321,2.1566,2.1742,2.0706
+510792,Sorriso,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,3.3822,3.9317,3.3385,3.5414,3.6428,3.4887
+510792,Sorriso,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.751,3.2048,3.2776,4.0063,5.5542,5.1412
+510792,Sorriso,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.2081,0.3385,0.3488,0.3714,0.3766,0.363
+510792,Sorriso,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.39,12.6002,12.8928,13.8618,15.1516,
+510792,Sorriso,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.8973,0.8135,0.7649,0.7673,0.9776,1.0106
+510792,Sorriso,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,9.1305,12.8487,12.8209,11.8875,12.0712,10.8719
+510792,Sorriso,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0559,0.0925,0.0939,0.0613,0.0667,0.0398
+510792,Sorriso,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,68.3526,72.3291,61.0024,63.2617,74.7779,54.5141
+510792,Sorriso,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,44.2605,45.4809,41.8132,41.7913,55.2465,42.161
+510792,Sorriso,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,98.6595,99.8689,99.8222,92.1847,86.7138,88.6404
+510792,Sorriso,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,5.4566,5.1405,4.3858,3.894,3.5481,3.7816
+510792,Sorriso,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,4.8849,4.8229,4.8909,4.6247,4.1188,4.4834
+510792,Sorriso,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,36.4669,32.0199,28.0472,25.8873,36.3351,35.3187
+510792,Sorriso,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,68.7376,74.0134,63.7446,67.2723,93.0219,73.7766
+510792,Sorriso,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,58.2868,70.1442,50.9097,54.9854,76.9019,65.3423
+510792,Sorriso,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,12.981,12.39,17.2936,19.3588,18.073,22.6788
+510792,Sorriso,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,5.7,5.3,4.7,7.6,5.7,6.9
+510792,Sorriso,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",25.9,24.8,29.3,35.2,32.6,41.7
+510792,Sorriso,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,15.3139,11.4504,11.4833,10.9439,9.9197,
+510792,Sorriso,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.5838,5.3718,4.2844,4.3217,4.7527,
+510792,Sorriso,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,74.73,77.72,77.32,81.52,86.01,
+510792,Sorriso,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,6.99,8.02,8.33,7.75,8.64,
+510792,Sorriso,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,58.91,62.36,62.54,63.55,64.81,
+510792,Sorriso,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,14.29,13.36,12.54,11.4,10.16,

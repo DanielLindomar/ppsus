@@ -1,0 +1,74 @@
+---
+title: "Observatório PPSUS-MT"
+subtitle: "Dados, indicadores e eficiência do SUS nos 142 municípios de Mato Grosso"
+toc: false
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+# KPI do estado: valor agregado de MT (serie_mt.csv) com a mediana municipal como contexto
+kpi_mt <- function(id, ano, rotulo = NULL) {
+  r <- info_ind(id); v <- valor_mt(id, ano); md <- mediana_mt(id, ano)
+  kpi_simples(if (is.null(rotulo)) r$rotulo else rotulo, fmt_valor(v, r$fmt), paste0(r$unidade, " · ", ano),
+              if (is.finite(md)) paste0("Mediana dos municípios: ", fmt_valor(md, r$fmt)), href = url_ind(id, "indicadores/"))
+}
+n_ind <- nrow(IND[!is.na(IND$grupo), ])
+```
+
+```{r}
+faixa_versao()
+```
+
+Este site publica, em um só lugar, os dados e indicadores de saúde dos **142 municípios de Mato Grosso** organizados pelo projeto *Gestão integrada no SUS* (PPSUS 004/2025 FAPEMAT): quanto cada município gasta, que estrutura e profissionais tem, o que produz na atenção básica e na média e alta complexidade, quais resultados alcança e para onde os moradores se deslocam quando precisam de internação. Cada número traz a fonte e o ano; as ressalvas ficam à vista. Os escores de eficiência (DEA) e de produtividade (Malmquist), objetivo central do projeto, serão publicados nas próximas versões.
+
+```{r}
+div(class = "atalhos", seletor_municipios(), seletor_indicadores())
+```
+
+## Mato Grosso em números
+
+```{r}
+div(class = "kpi-grade",
+  kpi_mt("populacao", 2025L),
+  kpi_mt("desp_total_pc", 2025L),
+  kpi_mt("fte_medicos_p1000", 2025L),
+  kpi_mt("internacoes_res_p1000", 2025L),
+  kpi_mt("pct_internacoes_fora_mun", 2025L),
+  kpi_mt("taxa_mortalidade_infantil", 2024L))
+```
+
+Valores do estado (soma ou razão dos totais estaduais). Despesa liquidada declarada ao SIOPS, em R$ correntes; médicos em equivalente de 40 horas semanais (CNES); internações pelo SIH, pelo ano da alta; mortalidade infantil por mil nascidos vivos (SIM/SINASC, dados até 2024).
+
+## Municípios
+
+Clique em um município do mapa para abrir o perfil: indicadores por grupo, comparação com a região de saúde e com o estado, deslocamento para internação e hospitais SUS.
+
+```{r}
+mapa_municipio(NULL, altura = 420, prefixo = "municipios/")
+```
+
+::: {.nota-fonte}
+Malha municipal do IBGE simplificada. Boa Esperança do Norte (instalado em 2025) ainda não consta na malha e aparece apenas nas tabelas.
+:::
+
+## O que há no site
+
+```{r}
+cartoes(
+  cartao("municipios/index.html", "Municípios", "Perfil de cada um dos 142 municípios: indicadores de financiamento, capacidade, atenção básica, média e alta complexidade e resultados, com posição no estado e na região de saúde."),
+  cartao("indicadores/index.html", sprintf("Indicadores (%d)", n_ind), "Cada indicador com definição, fonte, mapa dos municípios, ranking, evolução 2020–2025 e valores por região de saúde."),
+  cartao("deslocamento/index.html", "Deslocamento", "Onde os moradores de cada município se internam: fluxos entre municípios e regiões, polos de atendimento, distância média e municípios mais dependentes."),
+  cartao("eficiencia.html", "Eficiência (em construção)", "O que são os escores DEA e o índice de Malmquist, como serão calculados e o que virá nas próximas versões.", desativado = TRUE),
+  cartao("dados/index.html", "Dados", "Explorador com filtros por município, região, grupo e ano; download dos painéis, fluxos, hospitais e malhas em CSV/GeoJSON."),
+  cartao("metodologia.html", "Metodologia", "Fontes e períodos, definições, janela 2020–2025, anomalias conhecidas e o caminho dos dados até o site."),
+  cartao("sobre.html", "Sobre", "O projeto, a equipe, os produtos previstos, o financiamento e como citar."))
+```
+
+## Novidades
+
+- **01/10/2026** — Versão 0.1: primeira publicação. Distâncias do deslocamento calculadas em linha reta entre as sedes municipais (IBGE, Localidades do Brasil 2022). Dados e indicadores 2020–2025 dos 142 municípios (`r n_ind` indicadores em sete grupos), perfis municipais, páginas por indicador com mapa e ranking, análise de deslocamento residência × atendimento nas internações, explorador e downloads. Escores DEA e Malmquist em preparação.
+
+```{r}
+fonte_rodape(prefixo = "")
+```

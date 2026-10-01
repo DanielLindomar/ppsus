@@ -1,0 +1,274 @@
+---
+title: "Deslocamento residência × atendimento"
+description: "Para onde os moradores de cada município de Mato Grosso se deslocam para internar: fluxos entre municípios e regiões de saúde, polos de atendimento, distâncias e municípios mais dependentes (SIH/SUS, 2020–2025)"
+page-layout: full
+toc: false
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_deslocamento.R"))
+A    <- ANO_DESL
+T25  <- resumo_desl(A, "total"); T20 <- resumo_desl(2020L, "total")
+MC25 <- resumo_desl(A, "MC");    AC25 <- resumo_desl(A, "AC")
+tot_per <- sum(RESDESL$internacoes[tolower(RESDESL$nivel) == "total"])
+uf_per  <- sum(RESDESL$n_outra_uf[tolower(RESDESL$nivel) == "total"])
+cresc   <- 100 * (T25$internacoes / T20$internacoes - 1)
+d25 <- desl_ano(A)
+dk  <- d25[is.finite(d25$km_medio_internacao), ]
+km_fora <- sum(dk$km_medio_internacao * dk$internacoes_res) / sum(dk$internacoes_res - dk$no_proprio_mun)
+PZ   <- polos_nivel("total", A); top5 <- head(PZ, 5)
+top5_share <- 100 * sum(top5$internacoes_recebidas) / T25$internacoes
+fac  <- fluxo_nivel("AC", A); cuiaba_ac <- 100 * sum(fac$internacoes[fac$cod_destino == 510340L]) / sum(fac$internacoes)
+sem_local <- d25[d25$internacoes_res > 0 & d25$no_proprio_mun == 0, ]
+n_sem <- nrow(sem_local); int_sem <- sum(sem_local$internacoes_res); pct_sem <- 100 * int_sem / T25$internacoes
+n_com_int <- sum(d25$internacoes_res > 0)
+N_FLUXOS <- 80L; COB <- cobertura_fluxos(A, N_FLUXOS)
+# Regiões: parcela em outra região e principal destino externo (total, 2025)
+FRG <- FLUXOREG[FLUXOREG$ano == A, ] |> group_by(co_reg_origem, co_reg_destino) |> summarise(n = sum(internacoes), .groups = "drop")
+FR <- FRG |> group_by(co_reg_origem) |>
+  summarise(fora = sum(n[co_reg_destino != co_reg_origem]),
+            dest = co_reg_destino[co_reg_destino != co_reg_origem][which.max(n[co_reg_destino != co_reg_origem])],
+            total = sum(n), .groups = "drop") |>
+  mutate(pct = 100 * fora / total, regiao = nome_regiao(co_reg_origem), destino = nome_regiao(dest)) |> arrange(desc(pct))
+top_fluxos <- fluxo_nivel("total", A) |> filter(cod_origem != cod_destino) |> arrange(desc(internacoes)) |> head(5)
+# Municípios com atendimento local e ≥ 500 internações de residentes, mais dependentes
+dep <- d25 |> filter(no_proprio_mun > 0, internacoes_res >= 500) |> arrange(desc(pct_internacoes_fora_mun)) |> head(5)
+rond <- d25[d25$municipio == "Rondolândia", ]
+lista_txt <- function(x) paste(x, collapse = "; ")
+lista_e <- function(x) if (length(x) <= 1) paste(x, collapse = "") else paste(paste(x[-length(x)], collapse = ", "), x[length(x)], sep = " e ")
+# Origem por UF dos residentes de outros estados (outras_uf_ano.csv) e residência ignorada no período
+UF3 <- OUTRASUF[OUTRASUF$ano == A, ] |> arrange(desc(internacoes)) |> head(3)
+lista_uf <- if (nrow(UF3)) lista_e(sprintf("%s (%s)", UF3$nome_uf, num(UF3$internacoes))) else "—"
+ign_per <- sum(RESDESL$n_res_ignorada[tolower(RESDESL$nivel) == "total"], na.rm = TRUE)
+frase_ign <- if (ign_per == 0) "Não houve AIH com município de residência ignorado no período." else
+  sprintf("Outras %s AIH tiveram município de residência ignorado no período e também ficam fora dos fluxos.", num(ign_per))
+```
+
+<style>
+/* Página de deslocamento: blocos largos (matriz, tabelas) rolam dentro do próprio quadro, sem alargar a página no celular */
+body.fullcontent main.content { min-width: 0; }
+.rolagem-x { max-width: 100%; overflow-x: auto; contain: inline-size; }
+.matriz-calor { width: auto; min-width: 100%; }
+.rolagem-x .reactable { max-width: 100%; }
+</style>
+
+```{r}
+faixa_versao()
+```
+
+```{r}
+SECOES <- c(panorama = "Panorama 2025", achados = "Principais achados", niveis = "Por nível de complexidade", mapa = "Mapa de fluxos",
+            dependentes = "Municípios mais dependentes", evolucao = "Evolução 2020–2025", ressalvas = "Ressalvas", arquivos = "Arquivos")
+tags$nav(class = "nav-mun", `aria-label` = "Seções desta página",
+         lapply(names(SECOES), function(id) a(class = "btn btn-sm btn-outline-primary", href = paste0("#", id), SECOES[[id]])))
+```
+
+Esta página mostra **onde os moradores de cada município de Mato Grosso se internam** e **quem atende quem**: a parcela das internações realizada no próprio município, em outro município da mesma região de saúde ou em outra região; os fluxos entre municípios e entre as 16 regiões de saúde (CIR); os polos que concentram o atendimento; a distância média percorrida; e os municípios mais dependentes de atendimento externo. A base são as internações pagas pelo SUS (AIH tipo 1, uma linha por internação, pelo ano da alta) de residentes de Mato Grosso em hospitais do estado, 2020–2025, separadas em média (MC) e alta (AC) complexidade. As ressalvas — em especial o fato de que a fuga para outros estados não é observada — estão ao final da página.
+
+## Panorama 2025 {#panorama}
+
+```{r}
+div(class = "kpi-grade",
+  kpi_simples("Internações de residentes de MT", num(T25$internacoes), paste0("AIH tipo 1 · hospitais de MT · ", A),
+              sprintf("%s em 2020 (%s%s)", num(T20$internacoes), if (cresc >= 0) "+" else "", pct_txt(cresc))),
+  kpi_simples("No próprio município de residência", pct_txt(T25$pct_proprio_mun), paste0("das internações · ", A),
+              sprintf("%s em 2020", pct_txt(T20$pct_proprio_mun))),
+  kpi_simples("Em outra região de saúde", pct_txt(T25$pct_outra_regiao), paste0("das internações · ", A),
+              sprintf("%s em 2020 · %s em outro município da mesma região", pct_txt(T20$pct_outra_regiao), pct_txt(T25$pct_mesma_regiao))),
+  kpi_simples("Distância média residência–hospital", km_txt(T25$km_medio), paste0("linha reta entre as sedes municipais (IBGE) · ", A),
+              sprintf("%s em 2020 · %s entre quem se internou fora do município", km_txt(T20$km_medio), km_txt(km_fora))),
+  kpi_simples("Residentes de outros estados atendidos em MT", num(T25$n_outra_uf), paste0("internações · ", A),
+              sprintf("%s em 2020–2025 · não entram nos fluxos", num(uf_per))))
+```
+
+Internações de residentes de Mato Grosso em hospitais do estado (SIH/SUS, AIH tipo 1, ano da alta). A distância é a média ponderada, em linha reta, entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (zero quando a internação ocorre no próprio município); não é distância rodoviária.
+
+## Principais achados {#achados}
+
+- **Volume.** Entre 2020 e 2025 foram registradas `r num(tot_per)` internações de residentes de Mato Grosso em hospitais do estado, passando de `r num(T20$internacoes)` em 2020 para `r num(T25$internacoes)` em 2025 (`r paste0(if (cresc >= 0) "+" else "", pct_txt(cresc))`). Em 2020 e 2021 o volume foi deprimido pela pandemia de COVID-19, o que afeta a comparação com os anos seguintes.
+- **Onde os moradores se internam.** Em `r A`, `r pct_txt(T25$pct_proprio_mun)` das internações ocorreram no próprio município de residência, `r pct_txt(T25$pct_mesma_regiao)` em outro município da mesma região de saúde e `r pct_txt(T25$pct_outra_regiao)` em outra região. A parcela fora do município subiu de `r pct_txt(100 - T20$pct_proprio_mun)` em 2020 para `r pct_txt(100 - T25$pct_proprio_mun)` em `r A`, e a parcela em outra região, de `r pct_txt(T20$pct_outra_regiao)` para `r pct_txt(T25$pct_outra_regiao)`.
+- **Distância.** A distância média entre o município de residência e o de internação foi de `r km_txt(T25$km_medio)` em `r A` (`r km_txt(T20$km_medio)` em 2020). Considerando apenas quem se internou fora do município, a distância média em `r A` foi de `r km_txt(km_fora)`.
+- **O deslocamento cresce com a complexidade.** Em `r A`, na média complexidade `r pct_txt(100 - MC25$pct_proprio_mun)` das internações ocorreram fora do município (`r pct_txt(MC25$pct_outra_regiao)` em outra região; `r km_txt(MC25$km_medio)` em média), enquanto na alta complexidade `r pct_txt(100 - AC25$pct_proprio_mun)` ocorreram fora do município (`r pct_txt(AC25$pct_outra_regiao)` em outra região; `r km_txt(AC25$km_medio)`). A alta complexidade somou `r num(AC25$internacoes)` internações em `r A` (`r pct_txt(100 * AC25$internacoes / T25$internacoes)` do total).
+- **Polos.** Os cinco maiores polos de atendimento em `r A` concentraram `r pct_txt(top5_share)` de todas as internações de residentes de MT: `r lista_txt(sprintf("%s (%s internações, %s de residentes de outros municípios)", nome_mun(top5$cod_mun6), num(top5$internacoes_recebidas), pct_txt(top5$pct_recebidas_de_fora)))`. Cuiabá recebeu pacientes de outros `r num(PZ$n_origens[PZ$cod_mun6 == 510340L])` municípios em `r A` e, na alta complexidade, respondeu por `r pct_txt(cuiaba_ac)` das internações de residentes do estado.
+- **Municípios sem internação local.** Em `r A`, `r n_sem` dos `r n_com_int` municípios com internações de residentes não registraram nenhuma internação em estabelecimentos do próprio território: dependeram integralmente de outros municípios para `r num(int_sem)` internações (`r pct_txt(pct_sem)` do total estadual).
+- **Dependência mesmo com hospital.** Entre os municípios que têm atendimento hospitalar SUS e ao menos 500 internações de residentes em `r A`, os mais dependentes foram `r lista_txt(sprintf("%s (%s fora do município, destino principal %s)", dep$municipio, pct_txt(dep$pct_internacoes_fora_mun), dep$destino_principal_nome))`.
+- **Regiões de saúde.** As maiores parcelas de residentes internados em outra região em `r A` foram `r lista_txt(sprintf("%s (%s, principalmente para %s)", head(FR$regiao, 4), pct_txt(head(FR$pct, 4)), head(FR$destino, 4)))`. As menores: `r lista_txt(sprintf("%s (%s)", tail(FR$regiao, 3), pct_txt(tail(FR$pct, 3))))`.
+- **Maiores fluxos.** Os maiores fluxos intermunicipais de internação em `r A` foram `r lista_txt(sprintf("%s → %s (%s)", nome_mun(top_fluxos$cod_origem), nome_mun(top_fluxos$cod_destino), num(top_fluxos$internacoes)))`.
+- **Internações programadas.** Em `r A`, `r pct_txt(T25$pct_eletivas_fora)` das internações realizadas fora do município de residência foram eletivas, contra `r pct_txt(T25$pct_eletivas_proprio)` das realizadas no próprio município: parte do deslocamento corresponde a procedimentos programados pela regulação, e não a urgências (SIH/SUS, caráter da internação — eletivo × urgência —, `r A`).
+- **Pacientes de outros estados.** Hospitais de Mato Grosso também atenderam `r num(T25$n_outra_uf)` internações de residentes de outras unidades da federação em `r A` (`r num(uf_per)` em 2020–2025), principalmente de `r lista_uf`. Esses registros ficam fora dos fluxos. `r frase_ign`
+
+## Por nível de complexidade {#niveis}
+
+Cada aba traz, para o nível escolhido, o resumo de `r A`, a evolução 2020–2025, a matriz de fluxos entre as 16 regiões de saúde e o ranking dos polos de atendimento. A média complexidade responde por `r pct_txt(100 * MC25$internacoes / T25$internacoes)` das internações; a alta complexidade, embora pequena em volume, é a mais regionalizada.
+
+::: {.panel-tabset}
+
+### Total
+
+```{r}
+kpis_nivel("total", A)
+```
+
+```{r}
+barra_partes("total", A)
+```
+
+```{r}
+serie_partes("total")
+```
+
+#### Fluxos entre regiões de saúde — total, `r A`
+
+```{r}
+matriz_regioes("total", A)
+```
+
+#### Polos de atendimento — total, `r A`
+
+Municípios com internações registradas em seus estabelecimentos, ordenados pelo total recebido. *De outros municípios* conta os pacientes que não residem no município do hospital; o *saldo* é a diferença entre as internações recebidas e as internações dos próprios residentes (onde quer que tenham ocorrido): positivo indica que o município atende mais do que "exporta".
+
+```{r}
+tabela_polos("total", A)
+```
+
+### Média complexidade
+
+```{r}
+kpis_nivel("MC", A)
+```
+
+```{r}
+barra_partes("MC", A)
+```
+
+```{r}
+serie_partes("MC")
+```
+
+#### Fluxos entre regiões de saúde — média complexidade, `r A`
+
+```{r}
+matriz_regioes("MC", A)
+```
+
+#### Polos de atendimento — média complexidade, `r A`
+
+```{r}
+tabela_polos("MC", A)
+```
+
+### Alta complexidade
+
+```{r}
+kpis_nivel("AC", A)
+```
+
+```{r}
+barra_partes("AC", A)
+```
+
+```{r}
+serie_partes("AC")
+```
+
+#### Fluxos entre regiões de saúde — alta complexidade, `r A`
+
+```{r}
+matriz_regioes("AC", A)
+```
+
+#### Polos de atendimento — alta complexidade, `r A`
+
+Somente `r nrow(polos_nivel("AC", A))` municípios registraram internações de alta complexidade em `r A`; o saldo aqui compara as internações de alta complexidade recebidas com as de alta complexidade dos próprios residentes.
+
+```{r}
+tabela_polos("AC", A)
+```
+
+:::
+
+## Mapa de fluxos {#mapa}
+
+As linhas ligam o município de residência ao município do hospital para os `r N_FLUXOS` maiores fluxos intermunicipais de `r A` (espessura proporcional ao número de internações); os círculos marcam os polos de atendimento, com tamanho proporcional às internações recebidas de outros municípios. Use o seletor no canto superior esquerdo para alternar entre total, média e alta complexidade. Os `r N_FLUXOS` fluxos mostrados cobrem `r pct_txt(COB[["total"]])` das internações fora do município no total, `r pct_txt(COB[["MC"]])` na média e `r pct_txt(COB[["AC"]])` na alta complexidade.
+
+```{r}
+mapa_fluxos_niveis(A, n_max = N_FLUXOS, altura = 680)
+```
+
+::: {.nota-fonte}
+Linhas retas entre as sedes municipais (IBGE, Localidades 2022), sem relação com a malha viária. Fluxos entre Cuiabá e Várzea Grande, nos dois sentidos, sobrepõem-se no mapa. Boa Esperança do Norte (instalado em 2025) não consta na malha do IBGE usada no mapa e não tem registros no SIH sob o novo código; seus residentes seguem codificados nos municípios de origem.
+:::
+
+## Municípios mais dependentes {#dependentes}
+
+Dois recortes de `r A`, ambos com a população de 2025 e o destino principal dos moradores. O primeiro lista os municípios que **têm atendimento hospitalar SUS local** (ao menos uma internação em estabelecimento próprio) e ao menos 500 internações de residentes, com a maior parcela internada fora; o segundo, os municípios com ao menos 100 internações de residentes e a **maior distância média** até o hospital.
+
+#### Maior parcela de internações fora do município — municípios com atendimento local e ao menos 500 internações de residentes
+
+```{r}
+tabela_dependentes("pct", A, n = 10, min_int = 500)
+```
+
+#### Maior distância média até o hospital — municípios com ao menos 100 internações de residentes
+
+```{r}
+tabela_dependentes("km", A, n = 10, min_int = 100)
+```
+
+::: {.nota-fonte}
+Distâncias em linha reta entre as sedes municipais (IBGE, Localidades 2022), ponderadas pelas internações; não são distâncias rodoviárias, e o trajeto real é maior.
+:::
+
+Os `r n_sem` municípios sem internação em estabelecimento próprio em `r A` dependem integralmente de outros municípios (`r num(int_sem)` internações; `r pct_txt(pct_sem)` do total). O caso extremo de distância é Rondolândia, no extremo oeste do estado: `r num(rond$internacoes_res)` internações registradas em Mato Grosso em `r A`, todas fora do município, a `r km_txt(rond$km_medio_internacao)` em média (destino principal `r rond$destino_principal_nome`); o número reduzido de registros sugere que a maior parte dos moradores é atendida fora do estado, o que o SIH de Mato Grosso não capta.
+
+```{r}
+lista_sem_local(A)
+```
+
+### Todos os municípios em `r A`
+
+A tabela reúne, para cada município, o lado da **residência** (onde os moradores se internam) e o lado do **atendimento** (quem o município recebe). Use a busca, ordene pelas colunas e baixe o recorte.
+
+```{r}
+tabela_todos_municipios(A)
+```
+
+## Evolução 2020–2025 {#evolucao}
+
+Três leituras da mesma série estadual, por nível de complexidade: a parcela das internações fora do município de residência, a parcela em outra região de saúde e a distância média. A alta complexidade está em outra escala e é a que mais se desloca.
+
+```{r}
+div(class = "grade-graficos",
+  div(serie_por_nivel("pct_proprio_mun", "Internações fora do município de residência (%)", "pct1", function(v) 100 - v)),
+  div(serie_por_nivel("pct_outra_regiao", "Internações em outra região de saúde (%)", "pct1")),
+  div(serie_por_nivel("km_medio", "Distância média residência–hospital (km)", "dec1")))
+```
+
+Valores de `resumo_deslocamento_ano.csv` (SIH/SUS, residentes de Mato Grosso, ano da alta). Passe o cursor sobre os pontos para ver os valores.
+
+## Ressalvas {#ressalvas}
+
+::: {.callout-warning title="Leia antes de interpretar"}
+- **A fuga para outros estados não é observada.** Só há SIH de Mato Grosso no repositório: residentes internados em Goiás, Rondônia, Pará ou em qualquer outro estado não aparecem, o que subestima o deslocamento sobretudo nas faixas de fronteira (Rondolândia é o exemplo mais visível). No sentido inverso, os `r num(uf_per)` residentes de outros estados atendidos em Mato Grosso em 2020–2025 são contados à parte e não entram nos fluxos.
+- **Residência ignorada.** Não houve, no período, AIH com município de residência ignorado (código 510000); a contagem é mantida no resumo anual e permanece zero.
+- **COVID-19.** Em 2020 e 2021 o volume de internações foi deprimido e a composição alterada pela pandemia; as comparações com 2020 devem ser lidas com essa cautela.
+- **Distância em linha reta.** As distâncias são calculadas entre as sedes municipais (IBGE, Localidades do Brasil 2022), em linha reta, e não pela malha viária; a distância rodoviária realmente percorrida é maior. Internações no próprio município contam distância zero, mesmo quando o hospital fica longe da residência.
+- **Somente internações SUS.** Internações pagas pela saúde suplementar ou particulares não entram, nem os atendimentos ambulatoriais: o deslocamento aqui é o das internações hospitalares do SUS.
+- **Ano da alta e AIH tipo 1.** Cada internação é contada uma vez, no ano em que o paciente recebeu alta; continuidades (AIH tipo 5) não são contadas.
+- **Boa Esperança do Norte** (510183, instalado em 2025) não tem registros no SIH sob o novo código nem polígono na malha do IBGE usada nos mapas: aparece nas tabelas com zero internações e sem distância (por ausência de internações; a coordenada da sede existe).
+- **Deslocar-se não é, por si, um problema.** A alta complexidade é organizada por regiões e macrorregiões; parte das internações fora do município corresponde a procedimentos programados pela regulação. O indicador descreve a dependência de atendimento externo, não a qualidade do cuidado.
+:::
+
+## Arquivos {#arquivos}
+
+- [Fluxos de internação entre municípios (CSV)](../arquivos/dados/fluxos_internacoes_municipios.csv) — ano, município de residência, município de internação, nível, internações, diárias, valor e óbitos.
+- [Fluxos de internação entre regiões de saúde (CSV)](../arquivos/dados/fluxos_internacoes_regioes.csv) — ano, região de origem, região de destino, nível e internações.
+- [Deslocamento por município e ano (CSV)](../arquivos/dados/deslocamento_municipios_2020_2025.csv) — para cada município de residência e ano, internações de residentes, parcelas no próprio município, na mesma região e em outra região, distância média, destino principal e, como município de atendimento, internações recebidas e origens.
+- [Sedes municipais (CSV)](../arquivos/dados/sedes_municipais.csv) — coordenadas das sedes dos 142 municípios (IBGE, Localidades do Brasil 2022), usadas no cálculo das distâncias em linha reta.
+- Os indicadores municipais de deslocamento (*% de internações fora do município*, *% em outra região* e *distância média*) estão no [explorador de dados](../dados/index.html) e nas páginas de [indicadores](../indicadores/index.html).
+
+```{r}
+fonte_rodape(prefixo = "../", extra = "Fluxos de internação: SIH/SUS (AIH tipo 1, residentes de Mato Grosso, ano da alta), com regiões de saúde da CIR e distâncias em linha reta entre as sedes municipais (IBGE, Localidades 2022). ")
+```

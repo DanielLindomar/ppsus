@@ -1,0 +1,43 @@
+---
+title: "Indicadores"
+description: "Catálogo dos indicadores do Observatório PPSUS-MT, por grupo, com definição curta e a página de cada um (mapa, ranking, evolução e regiões de saúde)"
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_indicadores.R"))
+grupos <- grupos_presentes()
+n_ind  <- sum(IND$grupo %in% grupos)
+n_res  <- sum(IND$grupo %in% "resultados")
+```
+
+O observatório publica **`r n_ind` indicadores em `r length(grupos)` grupos**, calculados para os 142 municípios de Mato Grosso, as 16 regiões de saúde e o estado, de 2020 a 2025 (resultados em saúde até 2024, limite do SIM/SINASC). A página de cada indicador traz definição, fórmula, fonte e ressalvas, o mapa dos municípios, o ranking dos 142, a evolução no tempo e os valores por região de saúde.
+
+```{r}
+tagList(css_indicadores(), div(style = "max-width: 520px; margin: .4rem 0 1.2rem;", seletor_indicadores("ir-ind", prefixo = "")))
+```
+
+```{r}
+#| results: asis
+for (g in grupos) {
+  x <- ind_grupo(g)
+  cat(sprintf("## %s {#grupo-%s}\n\n", GRUPOS[[g]], g))
+  desc <- if (g %in% names(DESC_GRUPOS)) DESC_GRUPOS[[g]] else ""
+  if (nzchar(desc)) cat(sprintf("%s (%d %s.)\n\n", desc, nrow(x), ifelse(nrow(x) == 1, "indicador", "indicadores")))
+  if (g == "deslocamento") cat("A análise completa dos fluxos entre municípios e regiões está em [Deslocamento](../deslocamento/index.html).\n\n")
+  cat("```{=html}\n", as.character(cartoes_indicadores(x, prefixo = "")), "\n```\n\n", sep = "")
+}
+```
+
+## Como ler os indicadores
+
+- **Valor municipal**: calculado a partir dos totais do município no ano (numerador ÷ denominador da fórmula). Per capita usa a população estimada pelo IBGE.
+- **Região de saúde e Mato Grosso**: razão dos totais (ou soma, para contagens), não a média dos municípios. A **mediana** é a mediana simples dos municípios com dado e serve de referência nos perfis municipais.
+- **Leitura (sentido)**: cada indicador declara se "maior é melhor", "menor é melhor" ou se é de contexto (sem juízo). Os sinais ▲/▼ dos perfis seguem essa leitura e vêm sempre acompanhados de texto.
+- **Ano de referência**: 2025 para a maior parte; os `r n_res` indicadores de resultados em saúde e as doses por nascido vivo vão até 2024.
+- **Ressalvas**: cada página mostra a nota do indicador (limitações da fonte, anomalias conhecidas). Detalhes em [Metodologia](../metodologia.html); arquivos completos e dicionário em [Dados](../dados/index.html).
+
+```{r}
+fonte_rodape(prefixo = "../")
+```

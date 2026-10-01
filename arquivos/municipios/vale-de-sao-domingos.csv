@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510835,Vale de São Domingos,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),3126,3124,2904,2905,2907,2892
+510835,Vale de São Domingos,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1584.8677,1765.567,2000.9869,2354.9063,2576.8179,3477.7179
+510835,Vale de São Domingos,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),1025.4244,1142.3483,1240.5458,1364.9846,1511.5071,1753.5883
+510835,Vale de São Domingos,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),163.1117,368.945,497.3262,716.1257,761.4324,1310.3985
+510835,Vale de São Domingos,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,52.4599,59.8561,61.7772,68.3719,64.4692,61.0107
+510835,Vale de São Domingos,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,6.4958,7.5703,8.1731,11.4437,3.6081,17.8851
+510835,Vale de São Domingos,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8093,0.8195,0.8884,0.9088,1.0836,2.0954
+510835,Vale de São Domingos,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9725,1.2004,1.4842,1.6351,1.4757,1.5422
+510835,Vale de São Domingos,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.4536,2.8937,3.0992,3.0981,3.354,3.1708
+510835,Vale de São Domingos,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.5841,6.6165,7.4036,7.7453,7.7675,7.2614
+510835,Vale de São Domingos,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,1.3852,0.8547,0.8609,1.0327,1.204,0.778
+510835,Vale de São Domingos,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.5995,1.6005,0.8609,0,0,0
+510835,Vale de São Domingos,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510835,Vale de São Domingos,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,22.3928,22.4072,24.1047,24.0964,24.0798,27.6625
+510835,Vale de São Domingos,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),3,3,3,3,3,4
+510835,Vale de São Domingos,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,0,0,0,0
+510835,Vale de São Domingos,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,1
+510835,Vale de São Domingos,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),12,12,12,12,12,12
+510835,Vale de São Domingos,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,6.398,6.402,6.8871,6.8847,6.8799,6.9156
+510835,Vale de São Domingos,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510835,Vale de São Domingos,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,2,2,2
+510835,Vale de São Domingos,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.325,1.3643,1.9745,2.6096,3.0227,4.2739
+510835,Vale de São Domingos,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.9514,3.0218,4.2483,5.6361,6.504,8.5093
+510835,Vale de São Domingos,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,6.7809,3.6815,5.3182,7.1491,8.7162,11.0156
+510835,Vale de São Domingos,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0809,0.3438,0.552,0.433,0.4671,1.1456
+510835,Vale de São Domingos,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,17,13.4286,15.6154,18.2941,18.6429,
+510835,Vale de São Domingos,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.5886,0.4078,0.457,0.5518,0.6488,0.6501
+510835,Vale de São Domingos,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.6823,2.4789,1.9236,1.432,5.7114,3.0508
+510835,Vale de São Domingos,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0.0145
+510835,Vale de São Domingos,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510835,Vale de São Domingos,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,55.3423,47.6953,47.865,65.7487,78.4314,93.7068
+510835,Vale de São Domingos,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510835,Vale de São Domingos,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510835,Vale de São Domingos,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510835,Vale de São Domingos,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510835,Vale de São Domingos,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510835,Vale de São Domingos,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,29.6456,26.9376,55.6041,90.5186,126.1487,93.4433
+510835,Vale de São Domingos,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510835,Vale de São Domingos,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,28.9,28.9,31.7,40.3,41.2,31
+510835,Vale de São Domingos,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",89.2,82.2,93.1,121.8,127.5,105.4
+510835,Vale de São Domingos,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,32.2581,28.5714,0,0,35.7143,
+510835,Vale de São Domingos,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.398,9.283,6.1983,7.2289,7.9119,
+510835,Vale de São Domingos,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,67.74,51.43,61.54,61.76,74.07,
+510835,Vale de São Domingos,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,6.45,17.14,7.69,5.88,7.14,
+510835,Vale de São Domingos,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,77.42,82.86,84.62,79.41,100,
+510835,Vale de São Domingos,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,12.9,20,25.64,11.76,14.29,

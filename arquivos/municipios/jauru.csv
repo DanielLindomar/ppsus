@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510500,Jauru,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),8582,8377,8367,8220,8076,7881
+510500,Jauru,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1090.1658,1178.5977,1162.3576,1278.7138,1551.279,1775.2539
+510500,Jauru,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),399.743,453.3348,480.3665,582.2623,650.3426,882.5613
+510500,Jauru,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),268.45,342.1701,389.9023,320.4516,436.2599,468.1656
+510500,Jauru,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,50.8041,57.142,59.6947,58.9133,63.8372,60.3081
+510500,Jauru,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.255,5.1374,5.8816,2.4215,1.2913,2.4392
+510500,Jauru,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8809,0.9466,0.9179,1.0195,1.0575,1.2118
+510500,Jauru,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9322,0.9944,1.041,1.2445,1.341,1.4262
+510500,Jauru,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.6427,2.6215,2.6174,2.7421,2.8207,2.8842
+510500,Jauru,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.0294,4.5159,4.1329,3.7105,3.7865,4.0604
+510500,Jauru,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3402,0.3581,0.2486,0.3041,0.2476,0.3705
+510500,Jauru,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.8453,3.9394,3.9441,4.0146,4.0862,4.1873
+510500,Jauru,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510500,Jauru,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,23.0133,23.8749,24.1066,26.764,38.5958,36.7974
+510500,Jauru,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,5,5,5,5,5
+510500,Jauru,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510500,Jauru,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,1,1
+510500,Jauru,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),11,11,11,11,12,12
+510500,Jauru,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.787,4.775,4.7807,4.0511,3.7147,3.8066
+510500,Jauru,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,1,1,1
+510500,Jauru,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,3,3,3,3
+510500,Jauru,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.8229,1.302,2.6232,2.9461,3.4804,3.7267
+510500,Jauru,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.4853,1.6107,2.8867,3.3041,4.3004,5.1655
+510500,Jauru,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.9454,5.6906,6.9906,5.901,4.9646,5.1795
+510500,Jauru,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0922,0.1294,0.1305,0.2557,0.1912,0.2561
+510500,Jauru,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,12.9504,13.8527,15.6789,15.1698,17.956,
+510500,Jauru,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7591,0.5353,0.5177,0.5324,0.7558,0.7894
+510500,Jauru,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.3576,1.7254,2.6373,3.1624,2.721,2.8123
+510500,Jauru,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0.0016,0.0125,0.0159
+510500,Jauru,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,21.5567,21.2487,17.2105,15.6934,9.0391,10.0241
+510500,Jauru,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,59.1937,55.6285,54.1413,72.9927,58.4448,66.7428
+510500,Jauru,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,99.3056,100,100,100
+510500,Jauru,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,5.4054,7.8652,3.4722,5.4264,8.2192,1.2658
+510500,Jauru,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.0216,3.1629,3.0139,3.2016,3.5205,3.1392
+510500,Jauru,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510500,Jauru,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,7.8342,8.5984,6.3634,6.3167,3.6525,3.5667
+510500,Jauru,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,55.9709,48.1296,52.5559,72.6754,57.8179,81.1097
+510500,Jauru,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,64.7638,62.6609,69.0949,78.6667,84.7458,84.981
+510500,Jauru,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,35,36.1,35.5,36.8,37.9,35.6
+510500,Jauru,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",83.6,74.9,82,98.6,101.8,99.8
+510500,Jauru,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,24.7934,15.5039,0,18.8679,10.989,
+510500,Jauru,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,8.8557,11.4599,8.2467,10.7056,8.9153,
+510500,Jauru,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,72.73,69.53,71.56,73.58,74.73,
+510500,Jauru,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,12.4,4.65,15.6,9.43,9.89,
+510500,Jauru,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,79.34,70.54,73.39,70.75,75.82,
+510500,Jauru,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,14.05,13.95,13.76,13.21,17.58,

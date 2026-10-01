@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510125,Araputanga,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),16951,17078,14786,14820,14854,14805
+510125,Araputanga,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,894.424,974.1482,1277.1381,1366.8014,1502.6668,1894.2695
+510125,Araputanga,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),314.9228,341.7478,490.0945,652.1544,720.42,688.0052
+510125,Araputanga,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),378.6445,400.5704,546.1782,485.0655,565.636,808.8878
+510125,Araputanga,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,66.9504,70.5347,68.0778,68.8258,66.6625,61.7379
+510125,Araputanga,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,0.2419,1.7655,7.7485,1.9449,4.9035,13.4492
+510125,Araputanga,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6578,0.6787,0.8576,1.0864,1.2024,1.1003
+510125,Araputanga,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.5115,0.5516,0.6716,0.8306,0.9297,1.0483
+510125,Araputanga,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.1368,1.2162,1.5555,1.8758,1.8608,2.5809
+510125,Araputanga,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.7432,2.4933,2.6714,2.5641,2.5582,1.8548
+510125,Araputanga,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2259,0.2342,0.3016,0.3036,0.3029,0.3404
+510125,Araputanga,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.9439,0.9369,1.0821,1.0796,1.0772,1.1874
+510125,Araputanga,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510125,Araputanga,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,33.3786,35.1329,39.0031,39.305,83.9841,102.0466
+510125,Araputanga,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),6,5,5,5,5,5
+510125,Araputanga,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510125,Araputanga,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510125,Araputanga,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),12,12,13,16,15,15
+510125,Araputanga,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.7019,2.9277,3.3816,3.3738,3.3661,3.3772
+510125,Araputanga,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510125,Araputanga,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),4,4,4,4,4,4
+510125,Araputanga,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.9284,0.9964,1.9273,2.3712,2.5056,2.3244
+510125,Araputanga,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.464,1.7345,3.1284,4.1375,4.5753,4.4933
+510125,Araputanga,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.9355,0.8799,1.7498,2.0377,3.2085,4.1339
+510125,Araputanga,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1203,0.1969,0.3963,0.5496,0.5677,0.5918
+510125,Araputanga,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,17.1412,17.8425,22.9034,16.2241,17.3195,
+510125,Araputanga,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.9768,0.9029,1.182,1.0144,0.9226,1.0556
+510125,Araputanga,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,0.964,2.0562,3.3782,4.2509,4.7743,4.7053
+510125,Araputanga,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0.0034,0.0669,0.0277
+510125,Araputanga,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,4.2475,5.6213,7.0337,10.3239,23.428,24.5863
+510125,Araputanga,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,32.1515,38.412,47.2744,52.5641,70.688,78.2168
+510125,Araputanga,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,98.6111,100,100,100,99.7126,99.7253
+510125,Araputanga,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0,1.0417,0.9615,0.6536,2.0115,4.6703
+510125,Araputanga,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,1.7361,1.375,2.1827,2.9542,2.7471,3.0412
+510125,Araputanga,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510125,Araputanga,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,1.4698,2.2217,2.5269,3.803,6.9388,7.1289
+510125,Araputanga,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,42.2211,65.2088,62.4881,60.4498,91.2161,98.0392
+510125,Araputanga,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,86.789,85.3659,85.1216,80.4878,67.5238,69.3437
+510125,Araputanga,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,11.9,16,16.5,14.9,15.3,17.4
+510125,Araputanga,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",102.1,106.3,109.1,103.9,89.2,94.6
+510125,Araputanga,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,3.9216,23.622,9.6618,34.4828,12.4481,
+510125,Araputanga,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.3094,8.549,7.5071,7.3549,8.2133,
+510125,Araputanga,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,82.35,78.35,89.37,85.34,86.31,
+510125,Araputanga,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.88,9.45,5.8,6.47,7.88,
+510125,Araputanga,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,91.76,94.49,87.44,90.95,89.63,
+510125,Araputanga,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,15.69,12.2,14.01,10.78,12.86,

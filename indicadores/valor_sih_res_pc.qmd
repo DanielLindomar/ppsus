@@ -1,0 +1,13 @@
+---
+title: "Valor das internações de residentes por habitante"
+description: "Média e alta complexidade · R$ por habitante. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–2025 e valores por região de saúde."
+toc: false
+page-layout: full
+---
+
+```{r}
+#| include: false
+IND_ID <- "valor_sih_res_pc"
+```
+
+{{< include _indicador.qmd >}}

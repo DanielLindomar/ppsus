@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510330,Comodoro,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),21008,21249,18238,18349,18461,18469
+510330,Comodoro,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1017.8796,1069.3326,1563.1993,1607.7462,1945.6,2324.2418
+510330,Comodoro,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),465.2336,423.0917,610.0223,641.0339,747.0389,875.2163
+510330,Comodoro,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),345.2236,405.5562,536.0146,517.6354,676.453,846.635
+510330,Comodoro,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,57.6245,63.5769,74.4068,74.4563,69.1226,75.0227
+510330,Comodoro,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,5.3772,5.2722,5.9086,1.6574,3.4299,7.9436
+510330,Comodoro,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.3718,0.3661,0.4458,0.5444,0.546,0.8512
+510330,Comodoro,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.4808,0.5676,0.8482,0.9276,0.9848,0.9762
+510330,Comodoro,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.6241,1.7342,2.5748,2.605,2.7572,4.3738
+510330,Comodoro,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.2726,3.3258,4.2587,5.0455,5.3177,3.8351
+510330,Comodoro,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1904,0.1449,0.21,0.266,0.2979,0.379
+510330,Comodoro,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.4756,1.4589,2.2481,2.1434,1.6792,1.6785
+510330,Comodoro,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510330,Comodoro,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,11.9002,11.7653,13.5706,13.761,15.1671,15.4313
+510330,Comodoro,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),12,15,16,14,12,12
+510330,Comodoro,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510330,Comodoro,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510330,Comodoro,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),22,27,30,31,31,33
+510330,Comodoro,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.1321,3.2143,3.2898,3.2699,3.2501,3.2487
+510330,Comodoro,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510330,Comodoro,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,4,4,4,4,4
+510330,Comodoro,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.5893,1.7363,2.4505,2.6421,3.0399,3.2845
+510330,Comodoro,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.7219,3.2579,4.486,4.6251,5.6066,6.0008
+510330,Comodoro,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.8251,4.1883,6.8572,7.0201,6.7154,8.7514
+510330,Comodoro,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0171,0.0686,0.1682,0.165,0.2594,0.2689
+510330,Comodoro,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,14.2452,14.7028,16.2047,16.8691,17.0397,
+510330,Comodoro,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7758,0.7509,1.0411,0.8321,0.8444,0.8919
+510330,Comodoro,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.7378,2.3836,5.529,9.3427,8.5621,9.7736
+510330,Comodoro,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0.0017,0.0351
+510330,Comodoro,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,57.5019,62.2618,70.5121,67.8511,57.96,57.9891
+510330,Comodoro,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,72.0202,81.698,97.6533,102.1309,95.1736,97.7313
+510330,Comodoro,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.9172,99.9244,100,100,100,100
+510330,Comodoro,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.0762,2.1164,2.0995,1.0442,1.5888,1.5873
+510330,Comodoro,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.4909,3.8632,3.9378,3.8755,3.9907,4.1391
+510330,Comodoro,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510330,Comodoro,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,28.5535,37.2555,36.6113,31.085,27.3321,28.102
+510330,Comodoro,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,46.2292,73.9654,69.5534,72.7884,83.2879,82.2647
+510330,Comodoro,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,20.6213,23.9631,28.1303,33.8847,39.2715,40.831
+510330,Comodoro,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,10.4,14.5,14.9,16.6,20.6,19.9
+510330,Comodoro,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",59.2,73.7,82.8,98.1,118.4,116
+510330,Comodoro,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,30.303,21.6718,20.7715,36.9128,21.6606,
+510330,Comodoro,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.3793,7.3415,6.799,5.7769,6.6085,
+510330,Comodoro,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,64.64,71.83,70.92,78.79,76.17,
+510330,Comodoro,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.16,6.83,10.98,8.39,6.14,
+510330,Comodoro,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,60.5,60.75,67.95,65.77,72.73,
+510330,Comodoro,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,26.72,26.32,25.22,24.5,22.02,

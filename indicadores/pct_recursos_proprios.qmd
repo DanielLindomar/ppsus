@@ -1,0 +1,13 @@
+---
+title: "Despesa com recursos próprios"
+description: "Financiamento · % da despesa total. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–2025 e valores por região de saúde."
+toc: false
+page-layout: full
+---
+
+```{r}
+#| include: false
+IND_ID <- "pct_recursos_proprios"
+```
+
+{{< include _indicador.qmd >}}

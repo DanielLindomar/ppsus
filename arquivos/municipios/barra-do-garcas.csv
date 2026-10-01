@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510180,Barra do Garças,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),61135,61702,69210,70931,72694,73878
+510180,Barra do Garças,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1537.6258,1592.7284,1649.8006,1875.6841,2048.8097,2155.9273
+510180,Barra do Garças,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),265.6682,233.465,282.0298,404.5869,401.0175,396.2211
+510180,Barra do Garças,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),1113.1389,1160.5595,1126.7396,1185.709,1319.7528,1389.0888
+510180,Barra do Garças,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,29.7281,47.8344,47.178,39.6466,39.2203,38.9849
+510180,Barra do Garças,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,1.4215,1.6454,1.5725,4.0709,2.7029,2.5448
+510180,Barra do Garças,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.8597,1.845,1.6498,1.6823,1.6924,1.5286
+510180,Barra do Garças,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.1385,2.5615,2.318,2.226,2.2383,2.2453
+510180,Barra do Garças,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.1742,4.1525,3.7596,3.8175,4.3543,4.2053
+510180,Barra do Garças,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.7772,3.5237,2.9487,2.9031,2.8487,3.0094
+510180,Barra do Garças,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5249,0.6779,0.629,0.604,0.5899,0.5598
+510180,Barra do Garças,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.5716,1.5802,1.3221,1.1008,1.1177,1.1279
+510180,Barra do Garças,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),14,18,12,10,10,10
+510180,Barra do Garças,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,36.3262,40.3553,41.3596,45.0085,49.2131,48.5598
+510180,Barra do Garças,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),26,26,25,26,26,25
+510180,Barra do Garças,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510180,Barra do Garças,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,1,1,1,1
+510180,Barra do Garças,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),85,87,89,90,92,94
+510180,Barra do Garças,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.0801,3.0793,2.7453,2.6787,2.6935,2.7072
+510180,Barra do Garças,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510180,Barra do Garças,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),17,19,19,19,19,20
+510180,Barra do Garças,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.1295,1.5494,1.825,1.9095,2.0882,2.2335
+510180,Barra do Garças,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.9656,2.6749,3.0706,3.3357,3.4833,3.6744
+510180,Barra do Garças,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.1925,1.8132,2.1106,2.9472,4.5947,5.2235
+510180,Barra do Garças,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.121,0.1422,0.3001,0.3251,0.3191,0.266
+510180,Barra do Garças,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,11.8657,12.0603,13.8869,15.2347,16.4284,
+510180,Barra do Garças,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6964,0.7616,0.7349,0.6861,0.8105,0.7986
+510180,Barra do Garças,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,8.9847,8.3598,10.0957,12.4465,8.8307,7.8122
+510180,Barra do Garças,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.3502,0.3537,0.3674,0.3961,0.4252,0.4179
+510180,Barra do Garças,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,59.8184,63.5312,51.4232,58.0705,63.4578,66.0684
+510180,Barra do Garças,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,49.1862,51.6029,41.2513,48.3991,52.9617,54.1569
+510180,Barra do Garças,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,88.9253,98.7755,96.2068,78.6356,82.4409,82.0938
+510180,Barra do Garças,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,7.6292,8.2398,3.3155,2.4278,3.0566,3.0117
+510180,Barra do Garças,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.0457,2.9416,3.1332,3.2136,3.1103,3.1266
+510180,Barra do Garças,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,57.9046,70.095,18.2344,12.0822,39.6732,43.1522
+510180,Barra do Garças,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,91.1283,111.6144,44.5183,47.4756,69.3486,81.9302
+510180,Barra do Garças,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,65.5072,99.2881,37.4549,45.7538,62.6967,68.6382
+510180,Barra do Garças,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,7.6821,5.2764,6.4098,10.3117,13.8961,12.3719
+510180,Barra do Garças,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,6.8,4.8,5.7,9.5,11,9.3
+510180,Barra do Garças,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",28,18.8,22.8,37.4,46.9,40.3
+510180,Barra do Garças,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,14.7194,21.8531,16.0226,25.5708,21.9466,
+510180,Barra do Garças,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,8.7021,11.3935,6.7476,7.2324,7.4834,
+510180,Barra do Garças,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,65.87,59.97,61.17,69.22,69.56,
+510180,Barra do Garças,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,6.99,6.29,7.82,6.21,6.3,
+510180,Barra do Garças,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,69.73,70.49,70.59,73.42,74.33,
+510180,Barra do Garças,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,14.17,16.17,15.65,15.07,14.41,

@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510020,Água Boa,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),26204,26679,29219,30248,31314,32099
+510020,Água Boa,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1036.2682,2242.0806,2899.0218,2983.3384,2198.0895,3138.5468
+510020,Água Boa,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),333.6297,554.2698,674.7781,785.4462,893.1337,966.6391
+510020,Água Boa,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),585.9919,1471.5517,2032.9873,2026.1221,1151.6293,1905.6762
+510020,Água Boa,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,68.6722,64.0642,56.8053,69.8053,41.2251,65.6084
+510020,Água Boa,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,5.2028,2.4467,3.6835,1.5457,5.8296,3.1376
+510020,Água Boa,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.1365,1.2549,1.4128,1.8421,1.9777,1.8907
+510020,Água Boa,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8697,1.0375,1.2324,1.3512,1.4118,1.4574
+510020,Água Boa,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.5962,3.454,4.149,4.3332,4.2259,4.2877
+510020,Água Boa,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.945,2.7988,2.7407,2.7714,2.7758,2.7789
+510020,Água Boa,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5885,0.5866,0.539,0.529,0.5416,0.5495
+510020,Água Boa,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.2897,2.7051,2.4101,2.5622,2.459,2.3054
+510020,Água Boa,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),1,7,8,10,10,10
+510020,Água Boa,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,77.3432,93.6767,95.5714,93.8905,110.3085,116.0223
+510020,Água Boa,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),11,11,12,13,14,14
+510020,Água Boa,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510020,Água Boa,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510020,Água Boa,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),29,29,30,32,34,35
+510020,Água Boa,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.2743,3.3734,3.5354,3.554,3.8322,3.8412
+510020,Água Boa,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,1,1,1,1,1
+510020,Água Boa,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),6,8,9,10,10,11
+510020,Água Boa,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,2.1503,2.7061,2.7718,3.0846,3.9036,4.1033
+510020,Água Boa,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,4.2651,5.3173,5.6987,6.3227,7.6913,8.3432
+510020,Água Boa,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.3176,3.1327,4.1802,3.8075,4.0435,7.5804
+510020,Água Boa,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.2016,0.2676,0.3251,0.3859,0.4545,0.548
+510020,Água Boa,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.4272,14.5978,17.5585,19.6614,24.7759,
+510020,Água Boa,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7202,0.572,0.7257,1.0082,1.34,1.2931
+510020,Água Boa,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,5.1417,6.9445,10.6161,9.8935,9.1669,9.0067
+510020,Água Boa,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.023,0.0212,0.0106,0.0364,0.1436,0.2751
+510020,Água Boa,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,94.3749,183.74,194.8048,179.1523,185.8913,183.8375
+510020,Água Boa,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,46.9776,72.4165,74.7801,65.2605,70.4158,74.021
+510020,Água Boa,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.5552,96.6952,93.728,78.4831,71.431,70.8185
+510020,Água Boa,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,3.0732,4.6308,2.4069,2.8049,3.4874,3.6096
+510020,Água Boa,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.8815,2.9457,2.5685,2.9002,2.9084,2.7865
+510020,Água Boa,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,5.19,66.0819,92.5425,107.941,104.1068,102.8381
+510020,Água Boa,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,65.0617,222.7768,149.1542,170.3118,180.8079,191.7758
+510020,Água Boa,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,45.0783,119.3684,56.4054,67.6656,81.6802,93.618
+510020,Água Boa,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,11.0479,6.47,6.1785,9.0172,9.7959,13.8889
+510020,Água Boa,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,9.3,5.5,5.6,8.8,9.4,13.6
+510020,Água Boa,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",36.6,23.9,22.3,33,32.4,52.2
+510020,Água Boa,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,18.7793,6.6667,26.4901,23.622,16.9133,
+510020,Água Boa,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.1823,8.2462,5.3048,5.0251,4.6625,
+510020,Água Boa,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,82.35,88.89,81.33,76.57,83.3,
+510020,Água Boa,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,4.23,6,9.49,8.66,9.73,
+510020,Água Boa,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,80.05,80,75.72,77.95,81.61,
+510020,Água Boa,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,21.6,16.89,18.54,16.14,16.91,

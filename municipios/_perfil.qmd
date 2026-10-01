@@ -1,0 +1,117 @@
+```{r}
+#| include: false
+# Modelo das páginas municipais. Cada municipios/<slug>.qmd (gerado por
+# scripts/03_gerar_paginas.py) define MUN_ID, carrega R/funcoes.R e inclui este arquivo.
+if (!exists("MUN")) source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_municipios.R"))
+M     <- info_mun(MUN_ID)
+NOME  <- M$municipio
+N_REG <- n_mun_regiao(MUN_ID)
+txt_contexto <- texto_contexto_mun(MUN_ID)
+```
+
+```{r}
+navegacao_municipio(MUN_ID)
+```
+
+```{r}
+faixa_versao()
+```
+
+:::: {.perfil-topo}
+::: {.perfil-texto}
+**`r NOME`** integra a região de saúde **`r M$regiao_saude`** (`r N_REG` municípios) e a macrorregião **`r M$macrorregiao`**. Código IBGE: `r ifelse(is.na(M$cod_ibge7), "—", as.character(M$cod_ibge7))`.
+
+`r txt_contexto`
+
+As comparações usam a **mediana dos 142 municípios de Mato Grosso** e a **mediana dos municípios da região de saúde**, no último ano disponível de cada indicador. ▲/▼ indicam valor acima ou abaixo da mediana de MT; verde marca situação mais favorável e vermelho, menos favorável, segundo o sentido de cada indicador; cinza indica indicador de contexto, sem juízo de melhor ou pior.
+
+```{r}
+botoes_download_mun(M)
+```
+:::
+::: {.perfil-mapa}
+```{r}
+sem_zoom_rolagem(mapa_municipio(MUN_ID, altura = 320, prefixo = ""))
+```
+```{r}
+nota_malha(MUN_ID)
+```
+:::
+::::
+
+## Indicadores-chave
+
+```{r}
+grade_kpis(MUN_ID)
+```
+
+## Indicadores por grupo
+
+Clique na seta de uma linha para ver a série 2020–2025 do indicador comparada às medianas. Na coluna "Posição", os pontos claros são os demais municípios de Mato Grosso, o ponto escuro é `r NOME` e o traço pontilhado é a mediana estadual. Clique (ou toque) em "ⓘ ressalva" para ler a ressalva do indicador.
+
+::: {.panel-tabset}
+
+### Financiamento
+
+```{r}
+tabela_grupo("financiamento", MUN_ID)
+```
+
+### Capacidade instalada
+
+```{r}
+tabela_grupo("capacidade", MUN_ID)
+```
+
+### Atenção básica
+
+```{r}
+tabela_grupo("atencao_basica", MUN_ID)
+```
+
+### Média e alta complexidade
+
+```{r}
+tabela_grupo("media_alta", MUN_ID)
+```
+
+### Resultados em saúde
+
+```{r}
+tabela_grupo("resultados", MUN_ID)
+```
+
+:::
+
+## Deslocamento para internação
+
+Internações SUS (AIH tipo 1, pelo ano da alta) de residentes de Mato Grosso, cruzando o município de residência com o município do hospital. Só há SIH de Mato Grosso: internações de moradores em outros estados não são observadas. A análise completa está em [Deslocamento](../deslocamento/index.html).
+
+```{r}
+kpis_deslocamento(MUN_ID)
+```
+
+```{r}
+div(class = "dois-blocos", bloco_moradores(MUN_ID), bloco_atende(MUN_ID))
+```
+
+```{r}
+tabela_grupo("deslocamento", MUN_ID)
+```
+
+## Hospitais SUS do município
+
+`r texto_hospitais(MUN_ID)`
+
+```{r}
+if (resumo_hospitais(MUN_ID)$n > 0) tabela_hospitais(MUN_ID)
+```
+
+```{r}
+fonte_rodape(extra = "Deslocamento: AIH tipo 1 do SIH, residentes de Mato Grosso; distâncias em linha reta entre as sedes municipais (IBGE, Localidades 2022), não rodoviárias. ")
+```
+
+```{r}
+navegacao_municipio(MUN_ID)
+```

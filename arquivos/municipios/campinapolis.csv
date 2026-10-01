@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510260,Campinápolis,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),16919,16223,15347,15529,15713,15808
+510260,Campinápolis,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,853.1588,1143.2226,1199.1358,1368.4167,1848.1916,2024.9782
+510260,Campinápolis,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),206.8334,238.2097,493.3407,418.7425,587.5359,553.6432
+510260,Campinápolis,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),402.3537,714.5131,574.2197,740.951,1047.5945,1229.0642
+510260,Campinápolis,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,60.5328,97.3324,76.0633,65.9926,69.2063,73.3842
+510260,Campinápolis,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,9.3524,12.3028,2.4235,2.2814,4.3715,3.3558
+510260,Campinápolis,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.4793,0.7557,0.7539,0.7586,1.0724,1.1285
+510260,Campinápolis,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6194,1.6273,1.5462,1.7483,1.9264,1.882
+510260,Campinápolis,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.4433,3.2029,3.5017,3.8689,4.0031,3.979
+510260,Campinápolis,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.6006,5.9225,9.7739,9.6645,11.6464,11.9825
+510260,Campinápolis,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2276,0.4007,0.4822,0.5313,0.5518,0.5434
+510260,Campinápolis,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.2708,1.4794,1.6075,1.6311,1.591,1.4233
+510260,Campinápolis,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510260,Campinápolis,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,9.2086,13.2528,15.4232,16.4209,17.7687,16.7637
+510260,Campinápolis,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),3,3,3,3,3,3
+510260,Campinápolis,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510260,Campinápolis,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510260,Campinápolis,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),9,15,16,16,18,19
+510260,Campinápolis,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,1.8736,2.4656,2.4956,1.9319,1.9092,1.8978
+510260,Campinápolis,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510260,Campinápolis,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,3,3,3,3
+510260,Campinápolis,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.4526,0.4527,1.014,1.0106,0.9432,1.5657
+510260,Campinápolis,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.855,0.7592,1.511,1.7295,1.766,2.5612
+510260,Campinápolis,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.1697,1.3936,1.1177,1.3051,1.7025,2.9951
+510260,Campinápolis,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0563,0.0255,0.101,0.1275,0.0896,0.1181
+510260,Campinápolis,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,5.2207,7.8918,11.3857,12.9213,14.4279,
+510260,Campinápolis,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.5546,0.5589,0.85,1.2924,1.5125,1.6142
+510260,Campinápolis,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.7253,4.2618,9.2927,18.6467,6.5076,6.1409
+510260,Campinápolis,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0068,0.0129,0,0.0316
+510260,Campinápolis,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,22.0462,37.1078,42.3536,39.0238,36.9121,46.6852
+510260,Campinápolis,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,41.4327,70.4555,77.7351,81.2673,81.0157,91.1564
+510260,Campinápolis,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,100,100,100
+510260,Campinápolis,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.8043,0.9967,1.6923,0.8251,0.5172,1.2195
+510260,Campinápolis,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.3298,2.6262,3.2077,3.5726,3.0379,2.8862
+510260,Campinápolis,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510260,Campinápolis,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,11.8167,19.2026,18.3081,17.367,16.231,19.4084
+510260,Campinápolis,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,43.9797,81.8039,62.4068,64.2568,72.0796,91.2096
+510260,Campinápolis,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,46.933,47.5066,45.5993,51.981,54.4383,48.855
+510260,Campinápolis,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,43.8,45.6,44,49.4,48.9,44.7
+510260,Campinápolis,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",65.3,57.6,55,60.8,63.9,67.6
+510260,Campinápolis,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,34.4828,48.9796,64.6651,41.4079,31.0421,
+510260,Campinápolis,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.5607,7.5818,8.3404,7.3411,7.1915,
+510260,Campinápolis,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,21.86,15.5,34.37,18.54,40.09,
+510260,Campinápolis,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.98,4.69,4.62,5.38,4.21,
+510260,Campinápolis,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,29.43,27.96,31.48,30.08,29.49,
+510260,Campinápolis,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,35.86,34.29,29.1,29.67,27.72,

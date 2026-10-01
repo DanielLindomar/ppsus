@@ -1,0 +1,70 @@
+﻿project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "!dados_site/"
+  resources:
+    - arquivos/
+
+website:
+  title: "Observatório PPSUS-MT"
+  description: "Dados, indicadores e eficiência do SUS nos municípios de Mato Grosso — Projeto Gestão Integrada no SUS (PPSUS 004/2025)"
+  site-url: https://daniellindomar.github.io/ppsus/
+  repo-url: https://github.com/daniellindomar/ppsus
+  repo-actions: [issue]
+  favicon: assets/favicon.png
+  search: true
+  page-navigation: true
+  back-to-top-navigation: true
+  navbar:
+    background: "#0E5A5E"
+    foreground: "#ffffff"
+    logo: assets/logo-unemat-branco.png
+    logo-alt: "UNEMAT — Universidade do Estado de Mato Grosso"
+    left:
+      - href: index.qmd
+        text: Início
+      - href: municipios/index.qmd
+        text: Municípios
+      - href: indicadores/index.qmd
+        text: Indicadores
+      - href: deslocamento/index.qmd
+        text: Deslocamento
+      - href: eficiencia.qmd
+        text: "Eficiência (em construção)"
+      - href: dados/index.qmd
+        text: Dados
+      - href: metodologia.qmd
+        text: Metodologia
+      - href: sobre.qmd
+        text: Sobre
+    right:
+      - icon: github
+        href: https://github.com/daniellindomar/ppsus
+        aria-label: "Código-fonte no GitHub"
+  page-footer:
+    left: |
+      Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT.<br>
+      <span class="rodape-versao">Versão 0.1 · atualizado em 01/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span>
+    right: |
+      ![PPSUS Mato Grosso](/assets/logo-ppsus-mt.png){height=46} ![UNEMAT — Universidade do Estado de Mato Grosso](/assets/logo-unemat.png){height=46} ![FAPEMAT · Governo de Mato Grosso · SES-MT · SECITECI · CNPq · SUS · Ministério da Saúde · Governo Federal](/assets/faixa-financiadores.png){height=46}
+
+format:
+  html:
+    theme: [cosmo, estilo.scss]
+    lang: pt-BR
+    toc: true
+    toc-depth: 2
+    toc-title: "Nesta página"
+    smooth-scroll: true
+    link-external-newwindow: true
+    lightbox: auto
+    include-after-body: assets/glossario.html
+
+execute:
+  echo: false
+  warning: false
+  message: false
+
+engine: knitr

@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510777,Santa Terezinha,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),8460,8547,7596,7658,7720,7737
+510777,Santa Terezinha,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,672.7093,1023.2136,1421.012,1541.3662,1863.218,1818.9347
+510777,Santa Terezinha,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),268.6088,323.3561,495.8682,537.8801,513.4525,570.1521
+510777,Santa Terezinha,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),339.2342,528.4868,783.6873,793.7157,1156.1039,1087.8781
+510777,Santa Terezinha,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,51.642,63.2748,53.9098,61.4875,56.0883,42.599
+510777,Santa Terezinha,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,3.4984,6.2198,4.8016,2.4971,10.8537,15.3549
+510777,Santa Terezinha,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.4941,0.6809,0.6859,0.6372,0.7085,0.654
+510777,Santa Terezinha,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8664,0.8869,1.0308,0.6425,0.75,1.1581
+510777,Santa Terezinha,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.3641,2.8373,3.3189,3.591,4.2422,3.9447
+510777,Santa Terezinha,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,5.7825,5.2451,6.352,6.2575,6.2824,6.2466
+510777,Santa Terezinha,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3546,0.351,0.3949,0.3695,0.3342,0.3231
+510777,Santa Terezinha,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.6005,3.0619,3.1701,2.8728,2.7953,1.8521
+510777,Santa Terezinha,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510777,Santa Terezinha,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,10.6383,11.5011,12.4013,13.1627,33.7824,38.9944
+510777,Santa Terezinha,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),2,2,2,2,2,2
+510777,Santa Terezinha,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510777,Santa Terezinha,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510777,Santa Terezinha,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),8,9,8,8,9,9
+510777,Santa Terezinha,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.156,3.51,3.9494,3.9175,3.886,3.8775
+510777,Santa Terezinha,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510777,Santa Terezinha,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,2,2,2
+510777,Santa Terezinha,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.2109,0.4116,1.1211,1.4597,1.799,1.6011
+510777,Santa Terezinha,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.4596,0.9488,2.3753,2.7587,3.1008,3.0609
+510777,Santa Terezinha,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.2164,3.0936,7.794,6.4476,4.8785,7.739
+510777,Santa Terezinha,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0246,0.071,0.2151,0.1776,0.2803,0.2549
+510777,Santa Terezinha,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,12.2417,12.4911,16.5,14.75,17.3229,
+510777,Santa Terezinha,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7247,0.5284,0.5596,0.5505,0.8784,0.7432
+510777,Santa Terezinha,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,0.7982,1.9241,2.1082,2.0362,3.7845,5.4619
+510777,Santa Terezinha,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0.0104,0.0003
+510777,Santa Terezinha,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,20.8038,48.672,62.7962,61.5043,72.9275,77.1617
+510777,Santa Terezinha,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,47.0449,77.4541,93.8652,99.8955,119.9482,121.8819
+510777,Santa Terezinha,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,99.7877,99.4671,99.8325
+510777,Santa Terezinha,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.5682,1.9231,1.0482,1.9108,1.2433,0.67
+510777,Santa Terezinha,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.1761,2.75,2.5744,2.1762,2.0782,2.8241
+510777,Santa Terezinha,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510777,Santa Terezinha,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,6.8574,21.4997,25.7026,19.4737,24.0513,25.4533
+510777,Santa Terezinha,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,23.296,54.1907,49.1073,72.1996,69.6573,108.4175
+510777,Santa Terezinha,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,60.5528,39.577,36.7461,43.5294,43.0886,42.2057
+510777,Santa Terezinha,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,8.8,4.8,3.6,7.3,7.7,11.3
+510777,Santa Terezinha,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",129.4,77.8,64.4,101.1,96,118.1
+510777,Santa Terezinha,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,8.3333,26.7857,29.4118,19.2308,20.8333,
+510777,Santa Terezinha,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.0189,5.382,5.3976,7.0514,5.6995,
+510777,Santa Terezinha,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,41.67,42.86,59.8,66.35,72.92,
+510777,Santa Terezinha,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,10.83,7.14,2.94,8.65,5.21,
+510777,Santa Terezinha,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,56.67,63.39,68.63,54.81,72.92,
+510777,Santa Terezinha,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,30,27.68,25.49,15.38,16.67,

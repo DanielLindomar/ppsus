@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510760,Rondonópolis,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),236042,239613,244911,251938,259167,263708
+510760,Rondonópolis,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1359.5944,1446.435,1585.4134,1757.0874,1759.2233,1836.2916
+510760,Rondonópolis,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),233.3524,233.6878,245.1129,311.4408,350.4266,389.4597
+510760,Rondonópolis,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),869.9164,916.7843,1022.9084,1088.0325,1028.7508,1028.2868
+510760,Rondonópolis,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,49.1884,53.6596,57.4941,59.4825,56.4261,53.2655
+510760,Rondonópolis,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,6.4158,1.8953,5.1317,2.3331,2.4886,1.0032
+510760,Rondonópolis,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.4594,1.5817,1.8189,1.7712,1.96,2.0596
+510760,Rondonópolis,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.4175,1.5866,1.776,1.9026,2.0155,1.9601
+510760,Rondonópolis,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.1031,4.4351,4.8842,5.2972,5.5944,5.4712
+510760,Rondonópolis,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.1651,2.6636,2.5837,2.5234,2.4659,2.3968
+510760,Rondonópolis,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2453,0.2542,0.2731,0.2911,0.3064,0.3749
+510760,Rondonópolis,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.2973,2.3736,2.291,2.1004,1.9492,1.9096
+510760,Rondonópolis,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),71,91,66,66,66,66
+510760,Rondonópolis,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,53.3134,61.1578,68.4604,71.1219,74.6978,77.1622
+510760,Rondonópolis,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),57,61,64,65,66,67
+510760,Rondonópolis,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),6,6,7,5,5,6
+510760,Rondonópolis,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,1,1,1,1
+510760,Rondonópolis,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),122,123,127,127,134,149
+510760,Rondonópolis,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,1.6628,2.2119,2.3682,2.3549,2.3278,2.3511
+510760,Rondonópolis,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,1,2
+510760,Rondonópolis,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),29,38,44,47,55,56
+510760,Rondonópolis,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.5233,0.878,1.3954,1.3983,1.5974,1.4605
+510760,Rondonópolis,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.6285,1.3369,2.1413,2.2728,2.7437,2.6451
+510760,Rondonópolis,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.1222,1.8798,2.3746,2.9011,2.9262,2.7612
+510760,Rondonópolis,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0448,0.2615,0.2917,0.3044,0.371,0.3294
+510760,Rondonópolis,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,8.5104,9.5055,11.5692,15.2371,14.8848,
+510760,Rondonópolis,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.4126,0.4352,0.5264,0.7557,0.8275,0.7844
+510760,Rondonópolis,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,6.5763,7.7564,8.8626,8.4876,8.2908,8.0468
+510760,Rondonópolis,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.2483,0.2639,0.2865,0.2964,0.2924,0.3129
+510760,Rondonópolis,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,82.3455,94.1894,101.445,108.8839,107.2976,110.8613
+510760,Rondonópolis,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,59.8453,68.1223,73.1449,78.0113,73.2385,78.3101
+510760,Rondonópolis,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,86.855,81.7139,74.1558,76.141,77.2871,80.3523
+510760,Rondonópolis,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,6.2201,6.0393,3.5943,3.7474,3.5493,3.8413
+510760,Rondonópolis,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,4.8503,4.6167,4.4009,4.3237,4.2373,4.1514
+510760,Rondonópolis,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,87.8869,107.9073,89.4733,90.4905,88.1941,87.3618
+510760,Rondonópolis,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,154.5279,206.7988,173.2423,187.2429,191.1187,193.1431
+510760,Rondonópolis,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,101.2366,125.6984,106.5313,111.2434,111.2442,116.5623
+510760,Rondonópolis,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,1.7556,1.8563,2.1827,2.773,2.276,2.7456
+510760,Rondonópolis,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,1.6,1.7,2,2.6,2.1,2.5
+510760,Rondonópolis,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",3.7,3.9,4.3,5.5,4.5,5.6
+510760,Rondonópolis,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,10.9718,9.1907,8.7813,11.0999,11.413,
+510760,Rondonópolis,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.9732,7.5079,6.1655,6.1126,5.9151,
+510760,Rondonópolis,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,70.53,72.19,77.97,79.21,83.34,
+510760,Rondonópolis,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.18,7.58,7.5,7.54,7.96,
+510760,Rondonópolis,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,53.42,54.53,54.31,55.73,53.53,
+510760,Rondonópolis,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,13.24,12.48,11.76,11.43,10.68,

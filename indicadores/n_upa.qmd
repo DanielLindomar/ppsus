@@ -1,0 +1,13 @@
+---
+title: "Unidades de pronto atendimento"
+description: "Capacidade instalada · unidades. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–2025 e valores por região de saúde."
+toc: false
+page-layout: full
+---
+
+```{r}
+#| include: false
+IND_ID <- "n_upa"
+```
+
+{{< include _indicador.qmd >}}

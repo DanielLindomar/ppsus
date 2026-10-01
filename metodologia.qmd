@@ -1,0 +1,121 @@
+---
+title: "Metodologia"
+description: "Fontes, definições, janela 2020–2025, anomalias conhecidas e pipeline dos dados do Observatório PPSUS-MT"
+toc-depth: 3
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+```
+
+```{r}
+faixa_versao()
+```
+
+Esta página explica de onde vêm os números do site, o que cada um significa, por que a janela é 2020–2025 e quais problemas conhecidos dos dados exigem cautela na leitura. É a referência para todas as demais páginas; o dicionário completo dos indicadores está em [Dados](dados/index.html).
+
+## Fontes de dados
+
+Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DATASUS/Ministério da Saúde), do SIOPS e do IBGE. Os arquivos brutos foram carregados em um repositório único do projeto (Data Lake do SUS-MT), validados e reorganizados em painéis por município e ano.
+
+| Fonte | O que é | Período usado | O que se extrai |
+|---|---|---|---|
+| **SIOPS** | Declarações orçamentárias dos municípios em saúde (RREO) | 2020–2025 | Despesa liquidada total e por subfunção (atenção básica, média e alta complexidade, outras), despesa corrente e de capital, parcela com recursos próprios |
+| **CNES** | Cadastro de estabelecimentos, leitos, equipamentos e profissionais | 2020–2025 (média das competências mensais) | Profissionais SUS em equivalente de 40 h (médicos, enfermeiros, técnicos, dentistas, agentes comunitários), leitos SUS e de UTI, equipamentos em uso, unidades básicas, hospitais, UPA, equipes de saúde da família, de atenção primária e de saúde bucal |
+| **SIA** | Produção ambulatorial aprovada | 2020–2025 (competência de realização) | Quantidade e valor de procedimentos de média e alta complexidade, pelo município do estabelecimento e pelo de residência |
+| **SIH** | Internações pagas por AIH | 2020–2025 (ano da alta) | Internações por complexidade, diárias, diárias de UTI, óbitos, urgência, valor; pelo município do hospital e pelo de residência; fluxos entre municípios |
+| **SISAB** | Produção das equipes de atenção básica | 2020–2025 | Atendimentos individuais, odontológicos, procedimentos, visitas domiciliares; atendimentos por médico e por enfermeiro |
+| **SI-PNI** | Doses de vacina aplicadas | 2020–2025 (sem COVID-19) | Doses aplicadas no município, doses em menores de 1 ano |
+| **SIM** | Óbitos por residência | 2020–2024 | Óbitos totais e de menores de 1 ano; taxas de mortalidade geral e infantil |
+| **SINASC** | Nascidos vivos por residência da mãe | 2020–2024 | Nascidos vivos, pré-natal com 7+ consultas, baixo peso, cesáreas, mães adolescentes |
+| **IBGE** | População, malha e sedes municipais | 2020–2025 | Estimativas anuais (Censo em 2022; 2023 interpolada entre o Censo e 2024), malha municipal (mapas) e coordenadas das sedes municipais (Localidades do Brasil 2022), usadas nas distâncias em linha reta do deslocamento |
+
+## Definições que valem em todo o site
+
+- **Local × residência.** Indicadores com sufixo *local* (ou "realizados no município") contam o que foi feito nos estabelecimentos do município, inclusive para pacientes de fora. Indicadores por *residência* contam o que aconteceu com os moradores do município, onde quer que tenham sido atendidos em Mato Grosso. A diferença entre os dois é a base da análise de [deslocamento](deslocamento/index.html).
+- **Despesa liquidada.** Valor do SIOPS na fase de liquidação (serviço prestado e reconhecido), acumulado no ano, em reais correntes — sem correção pela inflação. Comparações entre anos devem considerar a inflação do período; o DEA será calculado com valores deflacionados.
+- **FTE (equivalente de 40 horas).** Profissionais contados pela carga horária semanal contratada dividida por 40, somente vínculos com atendimento SUS, na média das competências do ano. Um médico com 20 horas conta como 0,5.
+- **Complexidade.** Média complexidade (MC) e alta complexidade (AC) seguem a classificação dos procedimentos no SIA e no SIH. A atenção básica é medida pelo SISAB, não pelo SIA.
+- **Ano da alta.** As internações são atribuídas ao ano em que o paciente recebeu alta, e cada AIH de tipo 1 conta uma internação, sem duplicar as continuidades.
+- **Distância residência–hospital.** Linha reta (haversine) entre as sedes municipais do IBGE (Localidades do Brasil 2022) do município de residência e do município do hospital, ponderada pelas internações; zero no próprio município. Não é distância rodoviária: o trajeto real é maior.
+- **Per capita.** Razão entre o total do ano e a população estimada do mesmo ano. Para regiões e para o estado, a razão é recalculada com os totais agregados, e não pela média dos municípios.
+- **Mediana dos municípios.** Valor que divide os 142 municípios ao meio; usada como referência nos perfis porque é menos sensível a valores extremos que a média.
+- **Sentido do indicador.** Nos perfis, ▲/▼ e as cores indicam se o município está acima ou abaixo da mediana e se isso é favorável (verde), desfavorável (vermelho) ou apenas contexto (cinza). A cor nunca é o único sinal.
+
+## Por que 2020–2025
+
+A janela começa em 2020 porque é o primeiro ano com SIOPS, SISAB e SIH completos e comparáveis no repositório do projeto (2019 tem SISAB e qualidade, mas não tem SIOPS nem SIH processados). Termina em 2025 porque 2026 está em curso e é parcial em todas as fontes. Dentro da janela, SIM e SINASC vão até 2024 (o processamento nacional dos óbitos e nascimentos fecha com um ano de atraso), por isso os indicadores de resultado mostram 2024 como último ano. Em 2020–2025, 141 municípios têm série completa; Boa Esperança do Norte existe a partir de 2025.
+
+## Anomalias e limitações conhecidas
+
+Os problemas abaixo foram identificados na validação dos painéis e estão em ordem de importância para a leitura dos indicadores e para os modelos de eficiência. Nenhum deles foi "corrigido" silenciosamente: o site mostra o dado como declarado e avisa.
+
+1. **A divisão da despesa por subfunção não é confiável em alguns municípios.** Várzea Grande lança cerca de 83% da despesa em "outras subfunções" (menos de 1% em atenção básica); Cuiabá, cerca de 40%; Rondolândia, Alto Boa Vista e Planalto da Serra, mais da metade. Nesses casos, a despesa em atenção básica e em média e alta complexidade por habitante está subestimada. **Use a despesa total em saúde como referência**; a quebra por subfunção serve para os demais municípios e será tratada com análise de sensibilidade no DEA.
+2. **A atenção básica migrou do SIA para o SISAB.** A parcela da atenção básica na produção do SIA caiu de 40% para 20% entre 2019 e 2025, porque o registro passou a ser feito no SISAB. Por isso a produção da atenção básica é medida pelo SISAB; o SIA fica restrito à média e alta complexidade.
+3. **A residência do paciente no SIA melhorou ao longo do tempo.** A parcela de procedimentos ambulatoriais com residência ignorada caiu de 79% (2019) para 49% (2025) com a mudança do registro consolidado para o individualizado. Os indicadores ambulatoriais por residência não são comparáveis entre anos e por isso não são publicados; a análise de deslocamento usa somente as internações (SIH), em que a residência é bem preenchida.
+4. **A saída para outros estados não é observada.** O repositório contém apenas a produção realizada em Mato Grosso. Moradores internados em Goiás, Rondônia, Mato Grosso do Sul, Pará ou no Distrito Federal não aparecem; os indicadores por residência subestimam a demanda, sobretudo na alta complexidade e nos municípios de fronteira. Uma correção com o SIH dos estados vizinhos está prevista.
+5. **COVID-19 em 2020 e 2021.** A mortalidade hospitalar chegou a 5,8% em 2021, os leitos de UTI foram ampliados temporariamente, a mortalidade geral subiu e a produção da atenção básica caiu em 2020. Comparações que envolvem esses anos devem ser lidas com essa lente; o índice de Malmquist será calculado com e sem 2020–2021.
+6. **Leitos de UTI SUS sub-registrados no CNES.** O cadastro informa cerca de 490 leitos de UTI SUS para um parque de mais de 1.300 leitos existentes, e há hospitais com UTI em funcionamento e zero leitos SUS declarados. O número de leitos de UTI aparece como contexto; as diárias de UTI do SIH são a medida mais confiável do uso.
+7. **Municípios pequenos oscilam muito.** Em 2019–2024, em 308 dos 846 município-anos (141 municípios × 6 anos) houve menos de 100 nascidos vivos, o que torna a taxa de mortalidade infantil instável (um óbito a mais muda a taxa em vários pontos). Há também valores per capita extremos (Araguainha, R$ 7.748 por habitante em despesa; Nova Nazaré, 113 procedimentos por habitante por registro consolidado). Nos perfis esses valores aparecem como estão, com nota; nos modelos serão suavizados ou limitados.
+8. **O crescimento dos registros do CNES pode ser melhoria de cadastro, não só expansão real.** Os médicos SUS em equivalente de 40 horas cresceram 96% entre 2019 e 2025 e os equipamentos em uso dobraram. Parte desse crescimento é atualização do cadastro; a leitura de tendências de capacidade e do Malmquist deve considerar isso.
+9. **Muitos municípios não têm hospital SUS.** Em 2025, 53 municípios não tinham hospital SUS e 61 não tiveram internação local (60 com internações de residentes, mais Boa Esperança do Norte, ainda sem registros no SIH). Para eles, os indicadores "locais" de internação ficam vazios ou zerados, e a leitura relevante é a de acesso: quantas internações os moradores tiveram, onde e a que distância.
+10. **Cobertura das bordas da janela.** Boa Esperança do Norte só existe a partir de 2025 e não entra na malha do IBGE usada nos mapas (tem, porém, a coordenada da sede nas Localidades 2022, usada nas distâncias); 2026 é parcial em todas as fontes e não é publicado; SIM e SINASC param em 2024.
+
+## Pipeline: do dado bruto ao site
+
+1. **Data Lake (camada bruta):** arquivos originais do DATASUS (FTP), do SIOPS e do IBGE, carregados sem alteração em PostgreSQL, com registro de origem e data.
+2. **Camada tratada (`trusted`):** tipos corrigidos, datas validadas (fora de 1900–2027 anuladas), duplicidades removidas, chaves de município padronizadas; perdas inferiores a 0,001% dos registros.
+3. **Painéis analíticos (`mart`):** uma linha por município e ano (e por hospital e ano) com insumos, produção e resultados, per capita e sinalizadores de completude. É a base do DEA e deste site.
+4. **Site:** scripts em Python extraem dos painéis os arquivos públicos (CSV e GeoJSON) e geram as páginas; o Quarto renderiza tudo em HTML estático, publicado no GitHub Pages. Nenhum microdado sai do repositório.
+
+Os dados são somente de leitura em todas as etapas posteriores à carga; a reprodução do site depende apenas dos arquivos publicados em [Dados](dados/index.html).
+
+## Glossário de siglas
+
+As siglas também são explicadas ao passar o cursor sobre elas em qualquer página.
+
+| Sigla | Significado |
+|---|---|
+| SUS | Sistema Único de Saúde |
+| SIOPS | Sistema de Informações sobre Orçamentos Públicos em Saúde |
+| RREO | Relatório Resumido da Execução Orçamentária (demonstrativo bimestral que alimenta o SIOPS) |
+| BPA-C | Boletim de Produção Ambulatorial consolidado (registro do SIA sem identificação do paciente) |
+| e-SUS APS | Estratégia e-SUS Atenção Primária à Saúde (sistema de registro das equipes, que alimenta o SISAB) |
+| OMS | Organização Mundial da Saúde |
+| UF / UFs | Unidade(s) da Federação (estados e Distrito Federal) |
+| p.p. | Ponto(s) percentual(is): diferença entre dois percentuais |
+| WGS84 / EPSG:4326 | Sistema de referência geodésico mundial usado nas malhas (latitude e longitude em graus) |
+| CNES | Cadastro Nacional de Estabelecimentos de Saúde |
+| SIA | Sistema de Informações Ambulatoriais do SUS |
+| SIH | Sistema de Informações Hospitalares do SUS |
+| AIH | Autorização de Internação Hospitalar |
+| SISAB | Sistema de Informação em Saúde para a Atenção Básica |
+| SI-PNI | Sistema de Informação do Programa Nacional de Imunizações |
+| SIM | Sistema de Informações sobre Mortalidade |
+| SINASC | Sistema de Informações sobre Nascidos Vivos |
+| APS | Atenção Primária à Saúde (atenção básica) |
+| ESF / eSF | Estratégia Saúde da Família / equipe de Saúde da Família |
+| eAP | Equipe de Atenção Primária |
+| eSB | Equipe de Saúde Bucal |
+| ACS | Agente Comunitário de Saúde |
+| FTE | Equivalente em tempo integral (40 horas semanais) |
+| MC / AC | Média complexidade / alta complexidade |
+| UTI | Unidade de Terapia Intensiva |
+| CIR | Comissão Intergestores Regional (região de saúde) |
+| PDR | Plano Diretor de Regionalização |
+| DEA | Análise Envoltória de Dados |
+| TMI | Taxa de mortalidade infantil (óbitos de menores de 1 ano por mil nascidos vivos) |
+| PPSUS | Programa Pesquisa para o SUS: gestão compartilhada em saúde |
+| FAPEMAT | Fundação de Amparo à Pesquisa do Estado de Mato Grosso |
+| CNPq | Conselho Nacional de Desenvolvimento Científico e Tecnológico |
+| Decit | Departamento de Ciência e Tecnologia do Ministério da Saúde |
+| SECTICS | Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (Ministério da Saúde) |
+| SECITECI | Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso |
+| SES-MT | Secretaria de Estado de Saúde de Mato Grosso |
+| UNEMAT | Universidade do Estado de Mato Grosso |
+| IBGE | Instituto Brasileiro de Geografia e Estatística |
+
+```{r}
+fonte_rodape(prefixo = "")
+```

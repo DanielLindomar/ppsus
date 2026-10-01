@@ -1,0 +1,13 @@
+---
+title: "Doses de vacina em menores de 1 ano por nascido vivo"
+description: "Atenção básica · doses por nascido vivo. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–2024 e valores por região de saúde."
+toc: false
+page-layout: full
+---
+
+```{r}
+#| include: false
+IND_ID <- "doses_menor1_por_nv"
+```
+
+{{< include _indicador.qmd >}}

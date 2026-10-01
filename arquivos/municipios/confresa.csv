@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510335,Confresa,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),31510,32076,35075,36287,37541,38460
+510335,Confresa,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1022.1451,1337.4155,1146.0875,1359.0519,1594.5893,1663.4056
+510335,Confresa,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),335.3615,509.3965,295.927,381.6616,514.5869,596.8077
+510335,Confresa,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),587.6695,701.8352,620.7998,743.5135,872.2831,853.728
+510335,Confresa,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,34.0635,52.0172,47.8713,44.5655,44.4085,59.1838
+510335,Confresa,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,10.2836,9.8493,6.1968,6.3337,4.1561,3.6498
+510335,Confresa,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5417,0.7036,0.8838,0.8367,0.9627,1.0335
+510335,Confresa,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8861,1.0594,1.0811,1.0081,1.0532,1.1433
+510335,Confresa,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.5497,2.0317,2.447,2.2757,2.6028,2.8773
+510335,Confresa,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.5094,3.4138,2.8844,2.3876,3.3457,3.8162
+510335,Confresa,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2301,0.2494,0.2115,0.2268,0.2211,0.1841
+510335,Confresa,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.6715,1.8185,1.4161,1.7453,1.8913,1.8461
+510335,Confresa,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510335,Confresa,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,22.7452,24.4201,28.5816,31.4851,35.2068,34.5606
+510335,Confresa,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),8,8,8,8,8,8
+510335,Confresa,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510335,Confresa,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510335,Confresa,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),24,24,28,31,31,31
+510335,Confresa,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.6436,2.8058,2.5659,2.4802,2.3974,2.3401
+510335,Confresa,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,1,2,2
+510335,Confresa,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),6,6,6,6,6,6
+510335,Confresa,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.9743,1.2646,1.536,1.7758,1.8333,1.783
+510335,Confresa,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.7731,1.3881,3.3252,2.2504,2.5689,2.9257
+510335,Confresa,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.8953,1.8047,4.053,2.8771,4.2837,5.6724
+510335,Confresa,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.021,0.066,0.1295,0.1052,0.1233,0.1385
+510335,Confresa,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,8.3591,10.4209,12.2167,13.8381,14.5783,
+510335,Confresa,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.4444,0.5387,0.6181,0.6556,0.8147,0.8837
+510335,Confresa,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,6.5623,6.7453,5.867,7.2891,7.3821,8.1902
+510335,Confresa,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0.0099,0.0309,0.0307,0.0296,0.1774
+510335,Confresa,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,100.6665,110.7058,114.583,118.858,120.4017,122.8809
+510335,Confresa,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,63.0276,73.9805,74.8681,77.576,82.5764,82.4753
+510335,Confresa,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,93.4426,91.439,99.3282,98.5393,79.0487,70.1862
+510335,Confresa,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.9861,1.6333,1.5676,1.5998,1.9912,2.2852
+510335,Confresa,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.7112,2.6939,2.8074,3.0647,3.3336,3.2823
+510335,Confresa,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510335,Confresa,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,49.0988,54.6681,59.5186,63.8823,65.4357,66.1683
+510335,Confresa,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,48.5224,72.2843,57.7441,59.071,74.445,75.3073
+510335,Confresa,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,7.9557,7.7539,5.4455,7.3535,11.871,11.7276
+510335,Confresa,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,7.3,7.4,5.4,7.3,11.8,11.6
+510335,Confresa,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",47.8,47.3,33.5,50.2,82.5,80.2
+510335,Confresa,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,12.8824,14.5138,12.3457,15.0892,16.9252,
+510335,Confresa,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.173,7.3263,4.7042,3.7755,5.4873,
+510335,Confresa,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,58.13,64.68,67.86,73.8,73.77,
+510335,Confresa,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.37,6.1,8.09,8.92,7.19,
+510335,Confresa,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,75.04,75.47,75.65,71.33,75.71,
+510335,Confresa,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,19.48,21.63,17.01,19.48,16.36,

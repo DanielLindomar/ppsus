@@ -1,0 +1,13 @@
+---
+title: "Equipes de Saúde da Família por 10 mil habitantes"
+description: "Capacidade instalada · equipes por 10 mil hab.. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–2025 e valores por região de saúde."
+toc: false
+page-layout: full
+---
+
+```{r}
+#| include: false
+IND_ID <- "equipes_esf_p10000"
+```
+
+{{< include _indicador.qmd >}}

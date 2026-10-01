@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510340,Cuiabá,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),618124,623614,650877,666712,682932,691875
+510340,Cuiabá,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1624.435,1854.2236,1825.4712,1874.1081,1770.7101,1971.1917
+510340,Cuiabá,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),101.2433,110.5644,88.5819,94.9516,73.5145,86.0843
+510340,Cuiabá,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),889.3697,1048.2998,1040.0104,1027.6535,898.4491,992.7265
+510340,Cuiabá,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,45.8512,45.1834,45.3881,42.9347,41.7977,43.7606
+510340,Cuiabá,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,1.7625,0.3726,0.5927,0.4323,0.2647,0.2139
+510340,Cuiabá,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.914,2.1015,2.1361,2.2751,2.5772,2.8423
+510340,Cuiabá,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.0903,2.5254,2.5721,2.6219,2.6432,2.6079
+510340,Cuiabá,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.7667,5.3407,5.528,5.7521,5.5055,5.4762
+510340,Cuiabá,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.4616,1.4614,1.4706,1.327,1.2844,1.5315
+510340,Cuiabá,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.363,0.3485,0.341,0.3378,0.3493,0.3677
+510340,Cuiabá,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.4572,2.4337,2.2961,2.2642,2.3369,2.4285
+510340,Cuiabá,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),218,316,232,238,248,248
+510340,Cuiabá,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,108.3508,111.7986,115.6913,120.4406,128.1948,137.797
+510340,Cuiabá,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),90,90,91,91,90,92
+510340,Cuiabá,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),17,16,17,18,18,18
+510340,Cuiabá,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),4,4,4,4,4,4
+510340,Cuiabá,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),231,242,253,261,266,279
+510340,Cuiabá,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,1.4884,1.6945,1.6593,1.6412,1.8791,2.0499
+510340,Cuiabá,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),4,8,3,2,1,0
+510340,Cuiabá,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),43,48,51,58,65,68
+510340,Cuiabá,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.4775,0.7169,0.7837,0.811,0.9907,1.2203
+510340,Cuiabá,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.9245,1.345,1.5542,1.6551,1.9965,2.4501
+510340,Cuiabá,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.5821,0.7042,1.3236,1.3201,1.1803,1.308
+510340,Cuiabá,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0243,0.0511,0.1055,0.1142,0.1322,0.1292
+510340,Cuiabá,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.0175,12.4726,12.7643,13.4713,14.1447,
+510340,Cuiabá,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6862,0.6452,0.709,0.695,0.7405,0.8027
+510340,Cuiabá,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,11.7155,13.6822,12.9495,12.1017,15.1544,16.8297
+510340,Cuiabá,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,12.2646,13.1082,12.8365,15.3619,18.8407,21.5353
+510340,Cuiabá,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,60.0284,61.2158,66.498,75.5199,80.1324,85.0876
+510340,Cuiabá,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,35.5754,38.8125,40.5622,46.6408,48.6432,51.5238
+510340,Cuiabá,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,81.8838,79.3006,80.0032,69.0785,74.9986,76.387
+510340,Cuiabá,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,4.8053,7.0255,4.0433,3.7299,4.4422,4.3588
+510340,Cuiabá,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,5.0978,5.3879,5.6286,5.124,5.3712,5.3416
+510340,Cuiabá,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,63.7801,81.2394,73.2227,78.1972,100.3892,100.206
+510340,Cuiabá,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,115.8288,155.9506,131.4918,148.0702,184.9259,193.9745
+510340,Cuiabá,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,64.7473,98.239,70.4746,80.4885,95.6232,103.643
+510340,Cuiabá,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,5.9982,7.6723,3.7233,4.0777,4.696,5.1027
+510340,Cuiabá,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,0.5,0.7,0.6,0.7,0.8,0.8
+510340,Cuiabá,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",2.2,2.8,1.9,2.2,2.6,2.7
+510340,Cuiabá,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,12.9223,11.3672,13.634,11.689,15.4594,
+510340,Cuiabá,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.8932,9.2413,6.0841,6.0281,6.1221,
+510340,Cuiabá,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,69.53,71.69,70.31,72.83,78.67,
+510340,Cuiabá,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.44,8.78,8.8,8.61,8.94,
+510340,Cuiabá,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,56.21,55.97,53.56,53.09,55.98,
+510340,Cuiabá,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,11.16,11.8,10.93,10.72,10.79,

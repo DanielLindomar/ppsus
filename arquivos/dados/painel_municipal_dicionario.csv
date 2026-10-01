@@ -1,0 +1,115 @@
+posicao,coluna,descricao,unidade,fonte,bloco,indicador_site
+1,cod_mun6,Código IBGE do município com 6 dígitos (chave),código,IBGE,identificação,
+2,municipio,Nome do município,texto,IBGE,identificação,
+3,co_regsaud,Código da região de saúde (CIR),código,SES-MT (PDR),identificação,
+4,regiao_saude,Nome da região de saúde,texto,SES-MT (PDR),identificação,
+5,co_macsaud,Código da macrorregião de saúde,código,SES-MT (PDR),identificação,
+6,macrorregiao,Nome da macrorregião de saúde,texto,SES-MT (PDR),identificação,
+7,ano,Ano de referência,ano,—,identificação,
+8,populacao,Número de habitantes residentes no município.,habitantes,IBGE,indicador do site (contexto),populacao
+9,fonte_populacao,"Origem da estimativa populacional (Censo 2022, estimativa ou interpolação)",texto,IBGE,cobertura,
+10,n_bimestres_disponiveis,Bimestres com declaração no SIOPS no ano (6 = ano completo),bimestres,SIOPS,cobertura,
+11,n_meses_cnes,Competências mensais do CNES disponíveis no ano (12 = completo),meses,CNES,cobertura,
+12,n_meses_sisab,Competências mensais do SISAB disponíveis no ano (12 = completo),meses,SISAB,cobertura,
+13,ano_parcial,Ano com cobertura incompleta de alguma fonte (True/False),lógico,—,cobertura,
+14,dmu_completa,Município-ano com todas as variáveis necessárias ao modelo DEA (True/False),lógico,—,cobertura,
+15,desp_total_saude,"Despesa liquidada na função Saúde, todas as fontes de recursos, acumulada no ano",R$ correntes,SIOPS (RREO),financiamento,
+16,desp_301_atencao_basica,Despesa liquidada na subfunção 301 (Atenção Básica),R$ correntes,SIOPS (RREO),financiamento,
+17,desp_302_mac,Despesa liquidada na subfunção 302 (Assistência Hospitalar e Ambulatorial),R$ correntes,SIOPS (RREO),financiamento,
+18,desp_outras,"Despesa liquidada nas demais subfunções da Saúde (vigilância, suporte profilático, alimentação, outras)",R$ correntes,SIOPS (RREO),financiamento,
+19,desp_corrente,Despesa corrente liquidada em saúde,R$ correntes,SIOPS (RREO),financiamento,
+20,desp_capital,Despesa de capital (investimentos) liquidada em saúde,R$ correntes,SIOPS (RREO),financiamento,
+21,desp_recursos_proprios,Despesa em saúde financiada com receitas próprias do município (impostos e transferências constitucionais),R$ correntes,SIOPS (RREO),financiamento,
+22,fte_medicos_sus,"Médicos com atendimento SUS, em equivalentes de 40 h semanais (média das competências do ano)",FTE,CNES,capacidade,
+23,fte_enfermeiros_sus,"Enfermeiros com atendimento SUS, em equivalentes de 40 h semanais (média anual)",FTE,CNES,capacidade,
+24,fte_tec_enfermagem_sus,"Técnicos e auxiliares de enfermagem com atendimento SUS (FTE 40 h, média anual)",FTE,CNES,capacidade,
+25,fte_dentistas_sus,"Cirurgiões-dentistas com atendimento SUS (FTE 40 h, média anual)",FTE,CNES,capacidade,
+26,fte_acs,"Agentes comunitários de saúde (FTE 40 h, média anual)",FTE,CNES,capacidade,
+27,fte_total_sus,"Total de profissionais com atendimento SUS (FTE 40 h, média anual)",FTE,CNES,capacidade,
+28,leitos_sus,Leitos de internação disponíveis ao SUS (média das competências do ano),leitos,CNES,capacidade,
+29,leitos_uti_sus,Leitos de UTI disponíveis ao SUS (média anual).,leitos,CNES,indicador do site (capacidade),leitos_uti_sus
+30,equip_sus_uso,Equipamentos declarados em uso e disponíveis ao SUS (média anual),equipamentos,CNES,capacidade,
+31,n_estab_sus,Número de estabelecimentos de saúde com atendimento SUS (média anual).,estabelecimentos,CNES,indicador do site (capacidade),n_estab_sus
+32,n_ubs,Número de unidades básicas de saúde (média anual).,unidades,CNES,indicador do site (capacidade),n_ubs
+33,n_hospitais_sus,Número de hospitais com atendimento SUS (média anual).,hospitais,CNES,indicador do site (capacidade),n_hospitais_sus
+34,n_upa,Número de UPA/pronto atendimento com atendimento SUS (média anual).,unidades,CNES,indicador do site (capacidade),n_upa
+35,n_equipes_esf,Equipes de Saúde da Família (média anual),equipes,CNES,capacidade,
+36,n_equipes_eap,"Equipes de atenção primária (modalidade eAP), média anual.",equipes,CNES,indicador do site (capacidade),n_equipes_eap
+37,n_equipes_esb,"Equipes de saúde bucal (eSB), média anual.",equipes,CNES,indicador do site (capacidade),n_equipes_esb
+38,sisab_atend_individual,Atendimentos individuais registrados pelas equipes de atenção básica no ano,atendimentos,SISAB,atenção básica,
+39,sisab_atend_odonto,Atendimentos odontológicos individuais registrados no ano,atendimentos,SISAB,atenção básica,
+40,sisab_procedimentos,Procedimentos registrados pelas equipes de atenção básica no ano,procedimentos,SISAB,atenção básica,
+41,sisab_visitas_domiciliares,Visitas domiciliares registradas no ano,visitas,SISAB,atenção básica,
+42,sisab_atend_medico,Atendimentos individuais realizados por médicos,atendimentos,SISAB,atenção básica,
+43,sisab_atend_enfermeiro,Atendimentos individuais realizados por enfermeiros,atendimentos,SISAB,atenção básica,
+44,sipni_doses_local,"Doses de vacina de rotina aplicadas em estabelecimentos do município, sem COVID-19",doses,SI-PNI,vacinação,
+45,sipni_doses_menor1_local,"Doses aplicadas em menores de 1 ano em estabelecimentos do município, sem COVID-19",doses,SI-PNI,vacinação,
+46,sipni_doses_res,"Doses aplicadas em residentes do município, em qualquer local, sem COVID-19",doses,SI-PNI,vacinação,
+47,sia_qtd_ab_local,Procedimentos ambulatoriais de atenção básica aprovados em estabelecimentos do município,procedimentos,SIA/SUS,ambulatorial,
+48,qtd_mc_local,Procedimentos ambulatoriais de média complexidade aprovados em estabelecimentos do município,procedimentos,SIA/SUS,ambulatorial,
+49,valor_mc_local,Valor aprovado dos procedimentos de média complexidade realizados no município,R$ correntes,SIA/SUS,ambulatorial,
+50,qtd_mc_res,Procedimentos ambulatoriais de média complexidade realizados em residentes do município (qualquer local de MT),procedimentos,SIA/SUS,ambulatorial,
+51,valor_mc_res,Valor aprovado dos procedimentos de média complexidade de residentes do município,R$ correntes,SIA/SUS,ambulatorial,
+52,internacoes_mc_local,"Internações de média complexidade em hospitais do município (AIH tipo 1, ano da alta)",internações,SIH/SUS,hospitalar,
+53,internacoes_mc_res,"Internações de média complexidade de residentes do município, em qualquer hospital de MT",internações,SIH/SUS,hospitalar,
+54,qtd_ac_local,Procedimentos ambulatoriais de alta complexidade aprovados em estabelecimentos do município,procedimentos,SIA/SUS,ambulatorial,
+55,valor_ac_local,Valor aprovado dos procedimentos de alta complexidade realizados no município,R$ correntes,SIA/SUS,ambulatorial,
+56,qtd_ac_res,Procedimentos ambulatoriais de alta complexidade realizados em residentes do município (qualquer local de MT),procedimentos,SIA/SUS,ambulatorial,
+57,valor_ac_res,Valor aprovado dos procedimentos de alta complexidade de residentes do município,R$ correntes,SIA/SUS,ambulatorial,
+58,internacoes_ac_local,Internações de alta complexidade em hospitais do município,internações,SIH/SUS,hospitalar,
+59,internacoes_ac_res,"Internações de alta complexidade de residentes do município, em qualquer hospital de MT",internações,SIH/SUS,hospitalar,
+60,internacoes_local,Internações (todas as complexidades) em hospitais do município,internações,SIH/SUS,hospitalar,
+61,internacoes_res,Internações de residentes do município em qualquer hospital de MT,internações,SIH/SUS,hospitalar,
+62,internacoes_res_fora,Internações de residentes realizadas em hospitais de outro município de MT,internações,SIH/SUS,hospitalar,
+63,diarias_local,Diárias pagas nas internações realizadas no município,diárias,SIH/SUS,hospitalar,
+64,diarias_uti_local,Diárias de UTI pagas nas internações realizadas no município,diárias,SIH/SUS,hospitalar,
+65,valor_sih_local,Valor aprovado das AIH realizadas em hospitais do município,R$ correntes,SIH/SUS,hospitalar,
+66,valor_sih_res,"Valor aprovado das AIH de residentes do município, em qualquer hospital de MT",R$ correntes,SIH/SUS,hospitalar,
+67,obitos_hosp_local,Óbitos ocorridos nas internações realizadas no município,óbitos,SIH/SUS,hospitalar,
+68,internacoes_urgencia_local,Internações de caráter não eletivo (urgência) realizadas no município,internações,SIH/SUS,hospitalar,
+69,sia_qtd_total_local,Total de procedimentos ambulatoriais aprovados em estabelecimentos do município (todas as complexidades),procedimentos,SIA/SUS,ambulatorial,
+70,sia_valor_total_local,Valor total aprovado dos procedimentos ambulatoriais realizados no município,R$ correntes,SIA/SUS,ambulatorial,
+71,nascidos_vivos,Nascidos vivos de mães residentes no município (dados até 2024),nascidos vivos,SINASC,resultados,
+72,obitos_residentes,Óbitos de residentes no município (dados até 2024),óbitos,SIM,resultados,
+73,obitos_menor1,Óbitos de residentes com menos de 1 ano (dados até 2024),óbitos,SIM,resultados,
+74,taxa_mortalidade_infantil,Óbitos de menores de 1 ano por mil nascidos vivos.,óbitos por mil nascidos vivos,SIM / SINASC,indicador do site (resultados),taxa_mortalidade_infantil
+75,taxa_mortalidade_geral,Óbitos de residentes por mil habitantes (taxa bruta).,óbitos por mil habitantes,SIM,indicador do site (resultados),taxa_mortalidade_geral
+76,pct_prenatal_7mais,Parcela dos nascidos vivos cujas mães fizeram 7 ou mais consultas de pré-natal.,% dos nascidos vivos,SINASC,indicador do site (resultados),pct_prenatal_7mais
+77,pct_baixo_peso,Parcela dos nascidos vivos com peso inferior a 2.500 g.,% dos nascidos vivos,SINASC,indicador do site (resultados),pct_baixo_peso
+78,pct_cesarea,Parcela dos nascimentos por cesariana.,% dos nascidos vivos,SINASC,indicador do site (resultados),pct_cesarea
+79,pct_mae_adolescente,Parcela dos nascidos vivos de mães com menos de 20 anos.,% dos nascidos vivos,SINASC,indicador do site (resultados),pct_mae_adolescente
+80,desp_total_pc,"Quanto o município liquidou em saúde no ano, por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_total_pc
+81,desp_301_pc,Despesa liquidada na subfunção 301 (Atenção Básica) por habitante — igual a desp_ab_pc,R$ por habitante,SIOPS (RREO),indicador derivado,
+82,desp_302_pc,Despesa liquidada na subfunção 302 (Assistência Hospitalar e Ambulatorial) por habitante — igual a desp_mac_pc,R$ por habitante,SIOPS (RREO),indicador derivado,
+83,fte_medicos_p1000,"Médicos com atendimento SUS, em equivalentes de 40 h semanais, por mil habitantes.",FTE por mil hab.,CNES,indicador do site (capacidade),fte_medicos_p1000
+84,fte_enfermeiros_p1000,Enfermeiros com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_enfermeiros_p1000
+85,fte_acs_p1000,Agentes comunitários de saúde (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_acs_p1000
+86,leitos_sus_p1000,Leitos de internação disponíveis ao SUS por mil habitantes.,leitos por mil hab.,CNES,indicador do site (capacidade),leitos_sus_p1000
+87,equipes_esf_p1000,Equipes de Saúde da Família por mil habitantes (o site publica a versão por 10 mil: equipes_esf_p10000),equipes por mil hab.,CNES,indicador derivado,
+88,atend_individual_pc,Atendimentos individuais da atenção básica por habitante no ano.,atendimentos por hab.,SISAB,indicador do site (atencao_basica),atend_individual_pc
+89,procedimentos_ab_pc,Procedimentos da atenção básica por habitante no ano.,procedimentos por hab.,SISAB,indicador do site (atencao_basica),procedimentos_ab_pc
+90,visitas_pc,Visitas domiciliares da atenção básica por habitante no ano.,visitas por hab.,SISAB,indicador do site (atencao_basica),visitas_pc
+91,qtd_mc_local_pc,Procedimentos ambulatoriais de média complexidade realizados no município por habitante.,procedimentos por hab.,SIA/SUS,indicador do site (media_alta),qtd_mc_local_pc
+92,qtd_ac_local_pc,Procedimentos ambulatoriais de alta complexidade realizados no município por habitante.,procedimentos por hab.,SIA/SUS,indicador do site (media_alta),qtd_ac_local_pc
+93,internacoes_local_p1000,Internações SUS realizadas em hospitais do município por mil habitantes.,internações por mil hab.,SIH/SUS,indicador do site (media_alta),internacoes_local_p1000
+94,internacoes_res_p1000,Internações SUS de moradores do município por mil habitantes.,internações por mil hab.,SIH/SUS,indicador do site (media_alta),internacoes_res_p1000
+95,desp_ab_pc,"Despesa liquidada na subfunção Atenção Básica (301), por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_ab_pc
+96,desp_mac_pc,"Despesa liquidada na subfunção Assistência Hospitalar e Ambulatorial (302), por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_mac_pc
+97,pct_recursos_proprios,Parcela da despesa em saúde paga com receitas próprias do município.,% da despesa total,SIOPS (RREO),indicador do site (financiamento),pct_recursos_proprios
+98,pct_capital,Parcela da despesa em saúde destinada a investimentos.,% da despesa total,SIOPS (RREO),indicador do site (financiamento),pct_capital
+99,fte_tec_enfermagem_p1000,Técnicos de enfermagem com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_tec_enfermagem_p1000
+100,fte_dentistas_p1000,Cirurgiões-dentistas com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_dentistas_p1000
+101,equip_sus_p10000,Equipamentos em uso disponíveis ao SUS por 10 mil habitantes.,equipamentos por 10 mil hab.,CNES,indicador do site (capacidade),equip_sus_p10000
+102,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes.,equipes por 10 mil hab.,CNES,indicador do site (capacidade),equipes_esf_p10000
+103,atend_odonto_pc,Atendimentos odontológicos individuais na atenção básica por habitante.,atendimentos por hab.,SISAB,indicador do site (atencao_basica),atend_odonto_pc
+104,doses_menor1_por_nv,Doses aplicadas em menores de 1 ano por nascido vivo residente.,doses por nascido vivo,SI-PNI / SINASC,indicador do site (atencao_basica),doses_menor1_por_nv
+105,doses_pc,Doses de vacina de rotina aplicadas no município por habitante.,doses por hab.,SI-PNI,indicador do site (atencao_basica),doses_pc
+106,pct_urgencia,Parcela das internações realizadas no município com caráter de urgência.,% das internações locais,SIH/SUS,indicador do site (media_alta),pct_urgencia
+107,mortalidade_hosp_pct,Parcela das internações realizadas no município que terminaram em óbito.,% das internações locais,SIH/SUS,indicador do site (media_alta),mortalidade_hosp_pct
+108,permanencia_media,Média de dias por internação nos hospitais do município.,dias,SIH/SUS,indicador do site (media_alta),permanencia_media
+109,diarias_uti_p1000,Diárias de UTI pagas em hospitais do município por mil habitantes.,diárias por mil hab.,SIH/SUS,indicador do site (media_alta),diarias_uti_p1000
+110,valor_sih_local_pc,"Valor pago pelo SUS às internações realizadas no município, por habitante.",R$ por habitante,SIH/SUS,indicador do site (media_alta),valor_sih_local_pc
+111,valor_sih_res_pc,"Valor pago pelo SUS às internações de moradores do município, por habitante.",R$ por habitante,SIH/SUS,indicador do site (media_alta),valor_sih_res_pc
+112,pct_internacoes_fora_mun,Parcela das internações de moradores realizadas em outro município.,% das internações de residentes,SIH/SUS,indicador do site (deslocamento),pct_internacoes_fora_mun
+113,pct_internacoes_fora_regiao,Parcela das internações de moradores realizadas fora da própria região de saúde.,% das internações de residentes,SIH/SUS (AIH reduzida),indicador do site (deslocamento),pct_internacoes_fora_regiao
+114,km_medio_internacao,"Distância média, em linha reta, percorrida pelos moradores para se internar.",km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),indicador do site (deslocamento),km_medio_internacao

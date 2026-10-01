@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510140,Aripuanã,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),22714,23067,24626,25309,26010,26558
+510140,Aripuanã,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,879.4922,954.94,1338.6559,1537.3288,1711.056,2049.7066
+510140,Aripuanã,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),218.7084,217.7589,384.2024,468.5427,494.2336,686.1408
+510140,Aripuanã,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),461.1889,489.4241,805.0321,846.0705,989.1827,1202.5465
+510140,Aripuanã,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,77.2332,80.2646,80.3363,74.9263,67.8172,62.9571
+510140,Aripuanã,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,6.071,0.819,4.7025,6.0129,10.2758,6.0066
+510140,Aripuanã,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.464,0.5428,0.5636,0.6464,0.8481,0.9775
+510140,Aripuanã,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8347,0.9611,0.802,0.8175,0.8835,0.9884
+510140,Aripuanã,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.8947,2.9913,2.5855,2.6406,2.922,3.0469
+510140,Aripuanã,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.8157,3.9051,3.4955,3.398,3.4379,3.6305
+510140,Aripuanã,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1651,0.2241,0.1896,0.1549,0.1811,0.1853
+510140,Aripuanã,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.4528,1.3439,1.2385,1.3039,1.2687,1.2896
+510140,Aripuanã,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510140,Aripuanã,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,31.8834,38.4749,41.0136,54.8224,86.3437,84.4077
+510140,Aripuanã,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),4,4,4,5,6,6
+510140,Aripuanã,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510140,Aripuanã,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510140,Aripuanã,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),22,22,22,22,28,32
+510140,Aripuanã,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,1.761,1.7341,1.6243,1.9756,2.3068,2.2592
+510140,Aripuanã,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510140,Aripuanã,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,2,2,3
+510140,Aripuanã,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.715,0.7428,0.84,1.4526,1.9899,2.0722
+510140,Aripuanã,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.4237,1.411,1.6972,3.0915,4.3335,4.5272
+510140,Aripuanã,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.8445,1.5832,1.2265,1.7242,2.7366,5.1347
+510140,Aripuanã,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0394,0.0168,0.0488,0.1147,0.124,0.1631
+510140,Aripuanã,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.2108,12.9975,13.7322,14.0168,14.9581,
+510140,Aripuanã,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.8791,0.8319,0.7271,0.7064,0.8926,0.8427
+510140,Aripuanã,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.4391,1.7504,2.0006,2.9995,6.4027,11.2844
+510140,Aripuanã,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0.0001,0.0003,0.0145
+510140,Aripuanã,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,30.5979,28.3522,47.6732,42.5935,52.0569,71.5792
+510140,Aripuanã,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,42.1326,39.4936,63.3883,60.3343,70.5113,90.2176
+510140,Aripuanã,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,99.5362,97.7105,98.1589
+510140,Aripuanã,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.5755,3.0581,0.937,1.0204,1.3294,0.7365
+510140,Aripuanã,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.9353,3.8777,3.7802,3.5983,4.4535,3.9442
+510140,Aripuanã,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510140,Aripuanã,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,12.1955,13.193,18.5514,15.1995,19.882,29.0506
+510140,Aripuanã,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,26.4788,35.4394,47.9871,47.3217,54.5232,77.5629
+510140,Aripuanã,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,28.9446,29.528,24.984,29.4695,27.0447,21.4107
+510140,Aripuanã,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,12.5,6.5,10.1,20.4,20.4,16.5
+510140,Aripuanã,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",111.7,80.1,93.9,156.7,152.8,123.3
+510140,Aripuanã,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,5.1414,14.8883,9.828,0,17.2414,
+510140,Aripuanã,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.7674,5.8525,5.685,4.8204,5.1519,
+510140,Aripuanã,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,66.84,72.21,64.53,70.26,85.96,
+510140,Aripuanã,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,6.94,6.2,5.9,5.76,7.39,
+510140,Aripuanã,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,55.27,58.56,63.88,70.26,72.17,
+510140,Aripuanã,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,19.28,20.35,18.67,22.3,17,

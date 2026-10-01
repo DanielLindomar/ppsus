@@ -1,0 +1,110 @@
+---
+title: "Dados"
+description: "Explorador de indicadores, arquivos para download (CSV e GeoJSON), dicionários, licença e como citar — Observatório PPSUS-MT"
+page-layout: full
+toc: false
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(RAIZ, "R", "pag_dados.R"))
+cat_b <- catalogo_downloads()
+n_ind <- sum(!is.na(IND$grupo))
+n_arq <- if (is.null(cat_b)) 0L else sum(cat_b$existe)
+tam_total <- if (is.null(cat_b)) NA_real_ else sum(cat_b$bytes, na.rm = TRUE)
+```
+
+<style>
+.explorador-barra { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; align-items: flex-end; margin: .4rem 0 .8rem; }
+.explorador-barra label { font-size: .82rem; color: #4b5563; font-weight: 600; display: block; }
+.explorador-barra select { min-width: 170px; }
+.explorador-barra .nota-fonte { flex-basis: 100%; }
+#explorador .rt-td { font-size: .86rem; }
+.trecho { background: #f6f9f9; border: 1px solid #e6eeee; border-radius: 6px; padding: .5rem .8rem; font-size: .84rem; margin: .3rem 0 .6rem; overflow-x: auto; }
+</style>
+
+```{r}
+faixa_versao()
+```
+
+Esta página reúne tudo o que o Observatório publica em forma de arquivo: um [explorador](#explorador) para consultar e baixar recortes dos `r n_ind` indicadores por município, os [arquivos completos para download](#downloads) (painéis, séries, fluxos de internação, hospitais, malhas), o [dicionário dos indicadores](#dicionario) e as condições de [uso e citação](#licenca). Só são publicados agregados por município, região de saúde ou estabelecimento; nenhum microdado é divulgado.
+
+## Explorador de indicadores {#explorador}
+
+A tabela traz os `r n_ind` indicadores do site para os `r nrow(MUN)` municípios de Mato Grosso, com os valores de 2020 a 2025 lado a lado (uma linha por município e indicador). As listas nos cabeçalhos filtram por município, região de saúde, grupo ou indicador; a caixa de busca procura qualquer texto; o seletor **Ano** mostra apenas a coluna escolhida. O botão baixa exatamente o recorte visível, em CSV (UTF-8, separador vírgula, decimal ponto). Os indicadores de resultados (SIM/SINASC) e as doses por nascido vivo vão até 2024; o traço (—) indica valor indisponível.
+
+```{r}
+explorador_dados()
+```
+
+::: {.nota-fonte}
+Valores arredondados às casas de exibição de cada indicador; a série com todas as casas, e com os códigos das regiões, está em `serie_longa.csv` (abaixo). Definição, fórmula, fonte e ressalvas de cada indicador no [dicionário](#dicionario) e na página [Indicadores](../indicadores/index.html). Boa Esperança do Norte (instalado em 2025) só tem valores em 2025.
+:::
+
+## Arquivos para download {#downloads}
+
+São `r n_arq` arquivos (`r fmt_bytes(tam_total)` no total), todos derivados dos painéis do Data Lake do projeto e atualizados junto com o site. Os CSV estão em UTF-8, com separador vírgula, decimal ponto e célula vazia quando o dado é indisponível; as malhas GeoJSON estão em WGS84 (EPSG:4326). As chaves de junção são `cod_mun6` (código IBGE do município com 6 dígitos), `co_regsaud` (região de saúde), `cnes` (estabelecimento, 7 dígitos com zeros à esquerda: leia como texto) e `ano`. Clique no nome do arquivo para baixar.
+
+```{r}
+tabela_downloads(cat_b = cat_b)
+```
+
+::: {.callout-note collapse="true"}
+## Como ler os arquivos em R e Python
+
+Os códigos de município e de estabelecimento devem ser lidos como texto ou inteiro, nunca como número decimal, para preservar os zeros à esquerda do CNES e permitir a junção entre arquivos.
+
+**R** (o pacote `data.table` lê UTF-8 diretamente):
+
+```{=html}
+<pre class="trecho">library(data.table)
+painel  <- fread("painel_municipal_2020_2025.csv", encoding = "UTF-8")
+hosp    <- fread("hospitais_sus_mt.csv", encoding = "UTF-8", colClasses = list(character = "cnes"))
+malha   <- sf::st_read("mt_municipios_regioes_saude.geojson")
+mapa    <- merge(malha, painel[ano == 2025], by = "cod_mun6")</pre>
+```
+
+**Python** (pandas + geopandas):
+
+```{=html}
+<pre class="trecho">import pandas as pd, geopandas as gpd
+painel = pd.read_csv("painel_municipal_2020_2025.csv")
+hosp   = pd.read_csv("hospitais_sus_mt.csv", dtype={"cnes": str})
+malha  = gpd.read_file("mt_municipios_regioes_saude.geojson")
+mapa   = malha.merge(painel[painel.ano == 2025], on="cod_mun6")</pre>
+```
+:::
+
+::: {.callout-warning collapse="true"}
+## Ressalvas que acompanham os arquivos
+
+- **Despesas** (SIOPS) são valores liquidados em R$ correntes, sem deflação; a classificação por subfunção é pouco confiável em alguns municípios (Várzea Grande, Cuiabá, Rondolândia, Alto Boa Vista e Planalto da Serra lançam grande parte da despesa em "outras subfunções"). Dois lançamentos negativos de recursos próprios (Novo Santo Antônio em 2020 e Peixoto de Azevedo em 2021) foram anulados no indicador `pct_recursos_proprios`, mas permanecem como estão na coluna bruta `desp_recursos_proprios` do painel.
+- **Profissionais** (CNES) estão em equivalentes de 40 horas semanais (FTE), média das competências do ano; o crescimento ao longo da série pode refletir melhoria do registro. Leitos de UTI têm sub-registro conhecido.
+- **Internações** (SIH) contam AIH do tipo 1 pelo ano da alta. Só há SIH de Mato Grosso: internações de residentes em outros estados não são observadas, e residentes de outras UFs atendidos em MT aparecem apenas no resumo estadual do deslocamento. Nos arquivos de fluxos, os nomes das regiões de saúde trazem o sufixo ` - MT`.
+- **Distâncias** do deslocamento são em linha reta entre as sedes municipais (IBGE, Localidades do Brasil 2022), não pela malha viária: a distância rodoviária é maior. Boa Esperança do Norte (510183) tem a coordenada da sede, mas não tem polígono na malha do IBGE usada nos mapas e, no SIH, ainda não aparece como residência nem como sede de estabelecimento (distância vazia por ausência de internações).
+- **Resultados em saúde** (SIM/SINASC) vão até 2024 e são instáveis em municípios com menos de 100 nascidos vivos por ano. Os anos de 2020 e 2021 foram afetados pela COVID-19 em todas as fontes.
+- A lista completa de anomalias conhecidas está em [Metodologia](../metodologia.html).
+:::
+
+## Dicionário dos indicadores {#dicionario}
+
+Os `r n_ind` indicadores do site, por grupo: identificador usado nos arquivos, descrição, unidade, fonte, sentido de leitura (▲ maior é melhor, ▼ menor é melhor, ou contexto) e último ano disponível. Clique em ▶ para ver a fórmula e a nota de cada um, e no nome para abrir a página do indicador. O mesmo conteúdo está em [`indicadores_dicionario.csv`](../arquivos/dados/indicadores_dicionario.csv); as 114 colunas do painel largo estão descritas em [`painel_municipal_dicionario.csv`](../arquivos/dados/painel_municipal_dicionario.csv).
+
+```{r}
+tabela_dicionario()
+```
+
+## Licença e como citar {#licenca}
+
+Os indicadores, os textos e os arquivos derivados publicados neste site estão sob a licença [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.pt-br): podem ser copiados, redistribuídos, transformados e usados para qualquer fim, inclusive comercial, desde que o projeto seja citado e as alterações sejam indicadas. Os dados de origem são públicos (DATASUS/Ministério da Saúde, SIOPS e IBGE) e devem ser citados como fontes primárias ao lado do Observatório.
+
+**Como citar o site:** DANIEL, L. P. et al. *Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso*. Versão `r VERSAO_SITE`. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.
+
+**Como citar um arquivo:** acrescente o nome do arquivo e a data de acesso, por exemplo: *painel_municipal_2020_2025.csv*, Observatório PPSUS-MT, versão `r VERSAO_SITE` (`r DATA_VERSAO`), acesso em dd/mm/aaaa.
+
+Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT. Erros ou sugestões: abra uma *issue* no [repositório do site](https://github.com/daniellindomar/ppsus) ou escreva para lindomar.pegorini@unemat.br.
+
+```{r}
+fonte_rodape()
+```

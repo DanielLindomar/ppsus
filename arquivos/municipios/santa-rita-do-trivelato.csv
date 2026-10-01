@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510776,Santa Rita do Trivelato,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),3506,3602,3276,3368,3463,3536
+510776,Santa Rita do Trivelato,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1921.7992,2225.5594,2976.7929,2992.218,3632.1682,4349.2034
+510776,Santa Rita do Trivelato,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),474.0385,498.7504,653.6235,701.8238,1160.8268,1491.8313
+510776,Santa Rita do Trivelato,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),1028.5933,1368.5879,1710.0069,1617.3847,1621.5367,1499.4932
+510776,Santa Rita do Trivelato,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,79.7263,92.2965,84.7002,88.007,85.2191,79.4116
+510776,Santa Rita do Trivelato,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,6.4351,8.8972,8.9534,3.0537,9.3568,18.6954
+510776,Santa Rita do Trivelato,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.9298,1.0189,1.3858,1.6508,1.6344,1.7364
+510776,Santa Rita do Trivelato,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.2333,2.4875,3.0159,2.8741,3.7366,3.2862
+510776,Santa Rita do Trivelato,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.854,1.7129,2.5946,2.3248,2.5469,2.1691
+510776,Santa Rita do Trivelato,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.3303,2.221,2.3138,2.3011,2.1889,2.2624
+510776,Santa Rita do Trivelato,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.7616,0.9939,1.0501,1.0986,1.2359,1.3094
+510776,Santa Rita do Trivelato,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0,0,0,0,0,0
+510776,Santa Rita do Trivelato,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510776,Santa Rita do Trivelato,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,28.5225,27.7624,37.6374,42.31,50.7652,50.905
+510776,Santa Rita do Trivelato,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),3,3,3,3,4,4
+510776,Santa Rita do Trivelato,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,0,0,0,0
+510776,Santa Rita do Trivelato,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,1,1
+510776,Santa Rita do Trivelato,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),11,10,10,10,11,11
+510776,Santa Rita do Trivelato,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,5.7045,5.5525,6.105,5.9382,5.7753,5.4299
+510776,Santa Rita do Trivelato,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510776,Santa Rita do Trivelato,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),1,1,2,2,2,2
+510776,Santa Rita do Trivelato,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.5257,1.8215,3.5333,3.4469,3.9867,4.7395
+510776,Santa Rita do Trivelato,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.4124,3.2998,5.7961,5.7637,6.1946,7.7907
+510776,Santa Rita do Trivelato,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.9669,1.4531,5.3324,4.3501,5.8288,6.1151
+510776,Santa Rita do Trivelato,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.178,0.2832,0.7512,0.7764,0.7768,0.9208
+510776,Santa Rita do Trivelato,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,15.0233,18.3265,22,19.5172,21.9737,
+510776,Santa Rita do Trivelato,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6452,0.8556,1.8269,1.5656,1.2287,1.095
+510776,Santa Rita do Trivelato,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,4.4452,3.982,4.1056,3.1336,9.2616,10.907
+510776,Santa Rita do Trivelato,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0.0219,0.1202
+510776,Santa Rita do Trivelato,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510776,Santa Rita do Trivelato,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,27.9521,39.1449,38.7668,54.9287,53.4219,41.5724
+510776,Santa Rita do Trivelato,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510776,Santa Rita do Trivelato,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510776,Santa Rita do Trivelato,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510776,Santa Rita do Trivelato,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510776,Santa Rita do Trivelato,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510776,Santa Rita do Trivelato,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,34.6939,67.9178,48.209,70.9353,60.6185,44.2209
+510776,Santa Rita do Trivelato,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510776,Santa Rita do Trivelato,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,5.1,6.4,7.9,28.6,23.8,40.8
+510776,Santa Rita do Trivelato,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",147.9,146.1,144.5,152.3,144.3,144.9
+510776,Santa Rita do Trivelato,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,23.2558,20.4082,0,0,26.3158,
+510776,Santa Rita do Trivelato,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,2.567,4.442,3.0525,3.8599,6.0641,
+510776,Santa Rita do Trivelato,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,51.16,63.27,72,75.86,81.58,
+510776,Santa Rita do Trivelato,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,9.3,12.24,8,17.24,2.63,
+510776,Santa Rita do Trivelato,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,60.47,55.1,70,72.41,78.95,
+510776,Santa Rita do Trivelato,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,13.95,12.24,8,10.34,15.79,
