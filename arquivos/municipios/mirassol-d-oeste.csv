@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510562,Mirassol d'Oeste,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),27941,28135,26785,27146,27511,27637
+510562,Mirassol d'Oeste,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,974.4302,1423.7475,1426.4153,1285.641,1633.0555,1946.9455
+510562,Mirassol d'Oeste,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),266.0222,313.3711,378.1802,488.9957,582.9847,769.8068
+510562,Mirassol d'Oeste,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),647.2115,917.9081,860.5357,694.2251,855.1358,992.1564
+510562,Mirassol d'Oeste,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,76.4226,74.5507,71.1962,72.8283,73.3651,74.9637
+510562,Mirassol d'Oeste,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,3.36,10.6003,6.8444,2.0763,1.2639,4.043
+510562,Mirassol d'Oeste,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6403,0.762,0.8176,0.9309,1.0679,1.1948
+510562,Mirassol d'Oeste,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.5658,0.6142,1.1626,1.034,0.9135,0.8601
+510562,Mirassol d'Oeste,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.442,1.6815,1.9511,1.6938,1.8073,1.8718
+510562,Mirassol d'Oeste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.879,1.8127,1.8977,1.8419,1.8175,1.8092
+510562,Mirassol d'Oeste,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1521,0.1272,0.1602,0.2103,0.1817,0.2504
+510562,Mirassol d'Oeste,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.8224,2.4169,2.8811,2.7382,2.5808,2.569
+510562,Mirassol d'Oeste,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510562,Mirassol d'Oeste,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,14.434,14.2172,15.2772,20.1061,26.7784,27.7092
+510562,Mirassol d'Oeste,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),10,9,10,10,9,9
+510562,Mirassol d'Oeste,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,2,2,2,2,2
+510562,Mirassol d'Oeste,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510562,Mirassol d'Oeste,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),18,18,21,29,33,34
+510562,Mirassol d'Oeste,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.355,2.488,2.6134,2.5786,2.5444,2.5328
+510562,Mirassol d'Oeste,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510562,Mirassol d'Oeste,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,4,4,5
+510562,Mirassol d'Oeste,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.6582,2.2801,2.4427,2.2613,2.6695,2.8471
+510562,Mirassol d'Oeste,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.6489,3.8451,4.6028,4.2688,5.0238,5.5598
+510562,Mirassol d'Oeste,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.8922,1.2601,1.9043,2.0952,2.1537,2.4216
+510562,Mirassol d'Oeste,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0779,0.1135,0.1662,0.248,0.2509,0.2987
+510562,Mirassol d'Oeste,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.3762,14.7178,14.5563,13.8988,15.2293,
+510562,Mirassol d'Oeste,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7854,0.6227,0.7727,0.6846,0.7879,0.7795
+510562,Mirassol d'Oeste,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.4287,2.3872,7.2345,9.0942,10.1394,9.6063
+510562,Mirassol d'Oeste,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0117,0.1057,0.0921,0.0594
+510562,Mirassol d'Oeste,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,24.4086,30.4958,40.8811,42.7319,39.3297,39.0057
+510562,Mirassol d'Oeste,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,52.3961,60.3519,76.1247,83.7692,81.6401,84.0178
+510562,Mirassol d'Oeste,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,97.8006,99.4172,99.5434,99.3966,78.8355,90.4453
+510562,Mirassol d'Oeste,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,2.9326,7.1096,3.1963,2.3276,2.8651,3.4323
+510562,Mirassol d'Oeste,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.9194,5.0828,3.7132,3.5457,3.6229,3.4109
+510562,Mirassol d'Oeste,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510562,Mirassol d'Oeste,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,15.2589,28.5596,21.4982,21.4844,19.1552,17.8132
+510562,Mirassol d'Oeste,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,51.8258,84.5122,74.1624,87.0892,85.9454,88.0783
+510562,Mirassol d'Oeste,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,54.8497,50.8834,48.6023,51.1873,53.1612,54.6081
+510562,Mirassol d'Oeste,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,6.9,8.3,6.6,8.7,9.9,13.8
+510562,Mirassol d'Oeste,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",49,47,43.1,48.2,51.3,56.8
+510562,Mirassol d'Oeste,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,9.7087,12.3762,9.3897,12.0482,16,
+510562,Mirassol d'Oeste,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.659,9.5255,7.2055,7.6623,6.9063,
+510562,Mirassol d'Oeste,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,55.12,57.07,57.51,56.52,61.33,
+510562,Mirassol d'Oeste,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.5,9.65,8.92,13.25,9.6,
+510562,Mirassol d'Oeste,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,93.2,91.58,93.19,89.64,91.73,
+510562,Mirassol d'Oeste,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,16.5,19.55,15.26,15.42,12,

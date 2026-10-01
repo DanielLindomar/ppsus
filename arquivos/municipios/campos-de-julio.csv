@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510268,Campos de Júlio,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),7070,7245,8822,9207,9608,9946
+510268,Campos de Júlio,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1715.9533,1799.2248,2073.1258,2136.6484,2401.0588,2697.7299
+510268,Campos de Júlio,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),145.1578,440.879,455.7547,507.7758,524.8935,584.7261
+510268,Campos de Júlio,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),1157.5052,1005.3222,1264.5666,1275.9353,1385.7725,1431.8966
+510268,Campos de Júlio,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,78.3267,81.15,74.6136,81.0238,79.2952,75.6412
+510268,Campos de Júlio,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,4.9631,3.2982,10.4523,5.8357,5.9119,11.7036
+510268,Campos de Júlio,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.2107,1.4396,1.3274,1.3175,1.378,1.1965
+510268,Campos de Júlio,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.3734,1.0738,1.0859,1.2697,1.249,1.1231
+510268,Campos de Júlio,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.082,3.0835,2.6706,2.4101,2.3678,2.2391
+510268,Campos de Júlio,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.5601,3.4051,2.9755,2.8869,2.8705,2.782
+510268,Campos de Júlio,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2829,0.2761,0.246,0.3617,0.3362,0.3308
+510268,Campos de Júlio,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.4045,2.3464,1.927,1.8464,1.7694,1.7092
+510268,Campos de Júlio,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510268,Campos de Júlio,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,147.1004,143.7819,116.7536,117.3889,113.4471,119.817
+510268,Campos de Júlio,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),2,2,3,3,3,3
+510268,Campos de Júlio,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510268,Campos de Júlio,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510268,Campos de Júlio,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),11,11,13,13,13,14
+510268,Campos de Júlio,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.8289,2.9952,3.4006,3.2584,3.1224,3.0163
+510268,Campos de Júlio,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510268,Campos de Júlio,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,3,3,3
+510268,Campos de Júlio,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.5325,1.6868,1.7056,1.8021,2.3504,2.719
+510268,Campos de Júlio,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.105,2.9832,2.2701,3.0808,3.8868,4.3653
+510268,Campos de Júlio,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.4791,2.1937,2.2295,2.5554,2.6632,3.6646
+510268,Campos de Júlio,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0,0.2969,0.4456,0.5698,0.6032,0.5866
+510268,Campos de Júlio,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,23.65,16.6269,18.5844,16.3197,17.0863,
+510268,Campos de Júlio,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,1.118,0.7698,0.8192,0.7639,0.9614,0.8577
+510268,Campos de Júlio,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,7.0362,2.764,9.4306,14.1607,13.1156,15.4724
+510268,Campos de Júlio,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0.0092,0.0086,0.0247
+510268,Campos de Júlio,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,45.8274,36.3009,39.6735,44.4227,61.9276,62.5377
+510268,Campos de Júlio,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,81.3296,59.7654,73.5661,78.2014,94.2964,98.1299
+510268,Campos de Júlio,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,98.4791,99.1429,100,95.7983,100
+510268,Campos de Júlio,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.6173,1.5209,2.5714,1.2225,0.6723,1.4469
+510268,Campos de Júlio,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.7284,3.3498,2.9086,2.4743,1.8521,2.2106
+510268,Campos de Júlio,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510268,Campos de Júlio,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,27.2465,27.157,16.4712,17.9615,16.6082,15.7099
+510268,Campos de Júlio,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,68.5399,47.4984,43.6329,45.6383,44.7631,46.8232
+510268,Campos de Júlio,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,45.3913,39.261,46.5331,43.3333,34.989,37.2951
+510268,Campos de Júlio,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,23,16.4,14.5,12.9,13.4,15.6
+510268,Campos de Júlio,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",114.5,92.2,100.4,93.6,80.6,88
+510268,Campos de Júlio,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,22.3881,38.961,20.4082,35.9712,
+510268,Campos de Júlio,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,3.9604,3.7267,4.6475,3.8015,4.1632,
+510268,Campos de Júlio,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,83.76,88.81,82.47,82.99,90.65,
+510268,Campos de Júlio,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.5,8.21,7.14,8.16,12.95,
+510268,Campos de Júlio,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,73.33,69.4,72.08,82.31,82.73,
+510268,Campos de Júlio,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,13.33,20.9,16.23,18.37,15.83,

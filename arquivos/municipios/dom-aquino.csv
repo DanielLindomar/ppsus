@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510360,Dom Aquino,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),8159,8087,7872,7893,7915,7890
+510360,Dom Aquino,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,887.8508,1080.1657,1375.3594,1899.4846,2467.4332,2250.1938
+510360,Dom Aquino,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),360.9191,368.5833,490.8005,868.3065,813.157,864.8064
+510360,Dom Aquino,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),136.5163,116.6567,204.5935,266.4247,941.5208,428.2145
+510360,Dom Aquino,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,46.8968,58.3813,56.9778,47.9658,41.4441,72.2728
+510360,Dom Aquino,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,1.8765,7.206,5.8972,11.3405,15.5312,3.8736
+510360,Dom Aquino,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5773,0.5416,0.564,0.6702,0.6734,1.0875
+510360,Dom Aquino,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6618,0.6838,0.8359,0.9375,1.0512,1.4068
+510360,Dom Aquino,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.722,1.8425,1.9334,3.0141,4.163,4.2674
+510360,Dom Aquino,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.1352,3.1532,3.4718,3.5474,3.5376,3.6439
+510360,Dom Aquino,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4081,0.4328,0.5081,0.6651,0.7682,0.6337
+510360,Dom Aquino,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.8385,1.8548,1.9055,1.9004,1.8951,2.3866
+510360,Dom Aquino,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510360,Dom Aquino,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,34.9308,35.86,38.1098,45.3947,46.7467,57.6679
+510360,Dom Aquino,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),4,4,4,6,6,6
+510360,Dom Aquino,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,2
+510360,Dom Aquino,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510360,Dom Aquino,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),8,8,8,10,11,12
+510360,Dom Aquino,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.6769,3.7097,4.0269,5.0678,5.0537,5.0697
+510360,Dom Aquino,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510360,Dom Aquino,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,3,4,4,4
+510360,Dom Aquino,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.5351,1.5175,2.4449,3.2487,3.4275,3.7051
+510360,Dom Aquino,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.7524,1.8023,4.1026,5.8198,6.2623,6.9926
+510360,Dom Aquino,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,7.9697,8.9859,7.9535,6.9002,7.016,9.2977
+510360,Dom Aquino,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.4075,0.3456,0.2311,0.3743,0.378,0.3858
+510360,Dom Aquino,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,23.3377,23.4286,25.2192,16.6386,19.7015,
+510360,Dom Aquino,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6433,0.4835,0.5361,0.5216,0.6142,0.6103
+510360,Dom Aquino,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,0.6942,1.3457,3.0748,4.428,4.2946,5.9648
+510360,Dom Aquino,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0.0022
+510360,Dom Aquino,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,33.0923,47.2363,61.1026,64.4875,47.6311,52.0913
+510360,Dom Aquino,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,56.9923,77.0372,100.2287,111.998,93.4934,111.0266
+510360,Dom Aquino,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,100,100,98.0535
+510360,Dom Aquino,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.3704,2.0942,1.0395,1.3752,0.7958,2.9197
+510360,Dom Aquino,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.0593,2.1204,2.1933,2.0806,2.1565,2.6107
+510360,Dom Aquino,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510360,Dom Aquino,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,14.913,20.1861,26.3414,27.4593,20.2384,17.9262
+510360,Dom Aquino,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,64.483,89.0211,87.5346,110.058,152.2227,160.212
+510360,Dom Aquino,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,41.9355,38.6838,39.2902,42.4208,49.0541,53.1963
+510360,Dom Aquino,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,9,6.1,3.7,6.1,6.4,9.8
+510360,Dom Aquino,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",34.8,29.2,28.1,35.3,38.4,46
+510360,Dom Aquino,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,12.987,28.5714,0,0,0,
+510360,Dom Aquino,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.4764,9.7688,9.0193,9.5021,8.844,
+510360,Dom Aquino,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,61.04,65.71,69.86,78.05,74.63,
+510360,Dom Aquino,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,10.39,2.86,5.48,16.87,8.96,
+510360,Dom Aquino,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,59.74,60,59.72,60.24,73.13,
+510360,Dom Aquino,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.18,24.29,19.18,21.69,16.42,

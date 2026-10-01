@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510706,Querência,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),17937,18386,26769,28253,29820,31100
+510706,Querência,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1815.018,2755.1352,2289.7119,2234.1165,2403.0206,2568.6431
+510706,Querência,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),1786.64,2479.4533,2065.1576,2164.0212,2357.6331,2397.452
+510706,Querência,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),0,0,0,0,0,158.8663
+510706,Querência,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,64.8067,72.6733,70.7476,79.5054,85.6188,76.733
+510706,Querência,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,4.2115,6.1051,4.1142,6.2381,8.1407,10.4972
+510706,Querência,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.0069,1.3004,1.1566,1.1068,1.061,1.1878
+510706,Querência,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.3938,1.9341,1.5593,1.5928,1.4997,1.4971
+510706,Querência,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.5402,4.3337,3.4092,3.0138,2.8407,2.9077
+510706,Querência,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.6134,4.9859,3.4958,2.7328,3.1452,3.1778
+510706,Querência,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4254,0.5102,0.467,0.4276,0.4668,0.392
+510706,Querência,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.4495,1.7769,1.0647,1.0679,0.9725,0.6029
+510706,Querência,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,7,2,0,0,0
+510706,Querência,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,31.1256,51.4413,38.1038,44.8908,60.5869,59.7814
+510706,Querência,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),10,10,10,10,11,11
+510706,Querência,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510706,Querência,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510706,Querência,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),25,26,27,27,28,28
+510706,Querência,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.7186,4.1717,2.8316,2.4493,2.3206,2.2508
+510706,Querência,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,1,1,1,1,1
+510706,Querência,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),6,8,8,8,8,8
+510706,Querência,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,2.7717,3.8715,2.6946,2.6984,2.641,3.5995
+510706,Querência,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,5.6903,8.7532,6.1966,5.586,5.5111,6.6781
+510706,Querência,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.1215,4.8718,3.2835,2.2545,3.628,4.7107
+510706,Querência,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.3347,0.5706,0.4756,0.5186,0.5534,0.5623
+510706,Querência,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,15.5814,17.2294,18.9764,16.7608,16.2635,
+510706,Querência,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,1.2296,1.5515,1.249,1.1952,1.0177,1.0039
+510706,Querência,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,7.799,9.9152,8.71,11.1254,10.8446,12.4916
+510706,Querência,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0738,0.0405,0.044,0.0297,0.0232,0.0477
+510706,Querência,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,65.8416,68.2585,53.1211,64.2764,63.1791,58.6495
+510706,Querência,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,73.4236,83.6506,69.4834,80.0623,79.7451,74.9518
+510706,Querência,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.9153,100,100,100,100,99.9452
+510706,Querência,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.6774,5.3386,1.0549,0.5507,1.2739,1.5899
+510706,Querência,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.6325,2.8502,2.4684,2.7511,2.9835,2.3882
+510706,Querência,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,80.0609,16.2501,0,0,0
+510706,Querência,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,40.887,181.956,52.6799,29.9564,29.6889,29.8063
+510706,Querência,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,60.9764,135.0363,55.4296,61.1678,70.1632,62.8943
+510706,Querência,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,16.0213,28.2185,31.0753,26.8347,28.259,26.5122
+510706,Querência,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,5.4,4.1,5.4,6.6,7.4,8.8
+510706,Querência,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",41.8,58.9,67.8,65.5,70.1,71.3
+510706,Querência,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,10.3093,19.6078,10.8696,10.7914,14.8423,
+510706,Querência,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.1291,6.6899,3.4742,2.7962,3.3199,
+510706,Querência,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,60,64.36,68.43,70.32,72.36,
+510706,Querência,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,4.54,6.08,7.97,5.94,7.98,
+510706,Querência,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,61.86,68.04,68.3,73.02,79.59,
+510706,Querência,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,14.85,18.31,15.58,15.11,16.7,

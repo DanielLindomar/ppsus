@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510515,Juína,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),41101,41190,45869,46825,47800,48396
+510515,Juína,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1391.5505,1602.2434,1504.7837,1701.0012,1691.1351,2119.5852
+510515,Juína,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),208.3208,220.889,211.7253,214.3835,82.7839,287.7415
+510515,Juína,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),910.1353,927.855,1024.7537,1229.7556,1370.5336,1535.266
+510515,Juína,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,40.7477,41.3601,54.9323,50.4798,54.5075,47.9216
+510515,Juína,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.9352,1.2523,2.0976,2.8636,1.249,3.8192
+510515,Juína,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.0924,1.177,1.0371,1.1496,1.282,1.4443
+510515,Juína,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.4056,1.7116,1.7103,1.9082,2.1567,2.2064
+510515,Juína,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.5505,3.789,3.416,3.3745,3.731,4.0282
+510515,Juína,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.506,2.454,2.1051,2.2157,2.2877,2.2987
+510515,Juína,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3053,0.3127,0.2721,0.287,0.299,0.2938
+510515,Juína,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.0357,2.0959,1.6351,1.6782,1.8201,1.7977
+510515,Juína,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),4,8,2,0,0,0
+510515,Juína,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,77.9178,84.8313,80.5729,81.5804,87.9874,90.2967
+510515,Juína,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),14,16,15,15,16,16
+510515,Juína,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,2,2
+510515,Juína,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,1,1,1,1
+510515,Juína,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),46,48,49,50,52,57
+510515,Juína,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.6763,2.9133,2.6161,2.5627,2.5105,2.4795
+510515,Juína,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510515,Juína,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),6,6,6,6,6,7
+510515,Juína,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.9506,2.3417,2.3231,2.0092,1.9954,2.0048
+510515,Juína,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.7452,3.6094,3.4026,2.8938,2.766,3.2559
+510515,Juína,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.1668,1.7018,1.7734,2.6539,3.2308,2.6779
+510515,Juína,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.09,0.1048,0.154,0.1526,0.1523,0.1732
+510515,Juína,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,14.5471,14.5305,15.5049,15.0644,16.5774,
+510515,Juína,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.8465,0.5874,0.6422,0.6571,0.9554,0.8937
+510515,Juína,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,5.9586,5.8294,7.8363,10.5682,11.4955,11.7368
+510515,Juína,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0282,0.0332,0.0216,0.0341,0.0562,0.0824
+510515,Juína,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,79.2438,78.3443,86.7034,94.992,90.0209,91.7844
+510515,Juína,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,61.1907,59.7961,69.3715,81.2387,85.1674,88.7057
+510515,Juína,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.171,99.969,92.3812,80.3058,82.4773,80.3242
+510515,Juína,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.8422,2.5411,1.0309,0.9218,0.8366,0.6303
+510515,Juína,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.9982,4.3403,4.5942,3.9962,4.1755,4.3699
+510515,Juína,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,15.4984,49.1139,11.2494,0,0,0
+510515,Juína,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,65.2532,124.9864,59.8002,42.4811,45.4132,46.6264
+510515,Juína,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,61.1475,116.6917,60.2355,61.6284,77.3584,82.539
+510515,Juína,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,9.1054,10.5562,9.2395,12.8549,13.7067,15.5136
+510515,Juína,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,8.8,10,9.1,12.7,13.6,15.2
+510515,Juína,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",47.4,53.7,48.3,67.8,72.6,82.4
+510515,Juína,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,13.6426,10.6707,19.5804,8.7848,12.894,
+510515,Juína,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.2991,8.9342,5.7555,6.1719,6.1088,
+510515,Juína,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,78.69,83.38,85.59,89.9,82.38,
+510515,Juína,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,10.91,10.21,9.51,7.17,8.17,
+510515,Juína,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,87.86,89.94,90.48,86.53,85.96,
+510515,Juína,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,17.19,16.92,14.55,15.96,12.89,

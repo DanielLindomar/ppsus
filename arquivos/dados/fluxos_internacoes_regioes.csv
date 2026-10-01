@@ -1,0 +1,1396 @@
+ano,co_reg_origem,regiao_origem,co_reg_destino,regiao_destino,nivel,internacoes
+2020,51001,Alto Tapajós - MT,51001,Alto Tapajós - MT,MC,5026
+2020,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,AC,62
+2020,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,MC,268
+2020,51001,Alto Tapajós - MT,51008,Noroeste Matogrossense - MT,MC,8
+2020,51001,Alto Tapajós - MT,51010,Norte Matogrossense - MT,MC,9
+2020,51001,Alto Tapajós - MT,51011,Oeste Matogrossense - MT,MC,1
+2020,51001,Alto Tapajós - MT,51013,Sul Matogrossense - MT,AC,1
+2020,51001,Alto Tapajós - MT,51013,Sul Matogrossense - MT,MC,14
+2020,51001,Alto Tapajós - MT,51014,Teles Pires - MT,AC,82
+2020,51001,Alto Tapajós - MT,51014,Teles Pires - MT,MC,66
+2020,51001,Alto Tapajós - MT,51015,Vale do Peixoto - MT,MC,7
+2020,51001,Alto Tapajós - MT,51016,Vale dos Arinos - MT,MC,2
+2020,51002,Baixada Cuiabana - MT,51001,Alto Tapajós - MT,MC,5
+2020,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,AC,1859
+2020,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,MC,37649
+2020,51002,Baixada Cuiabana - MT,51004,Centro Norte - MT,MC,2
+2020,51002,Baixada Cuiabana - MT,51005,Garças Araguaia - MT,MC,9
+2020,51002,Baixada Cuiabana - MT,51006,Médio Araguaia - MT,MC,1
+2020,51002,Baixada Cuiabana - MT,51007,Médio Norte Matogrossense - MT,MC,6
+2020,51002,Baixada Cuiabana - MT,51008,Noroeste Matogrossense - MT,MC,5
+2020,51002,Baixada Cuiabana - MT,51010,Norte Matogrossense - MT,MC,9
+2020,51002,Baixada Cuiabana - MT,51011,Oeste Matogrossense - MT,MC,23
+2020,51002,Baixada Cuiabana - MT,51012,Sudoeste Matogrossense - MT,MC,4
+2020,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,AC,3
+2020,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,MC,130
+2020,51002,Baixada Cuiabana - MT,51014,Teles Pires - MT,MC,61
+2020,51002,Baixada Cuiabana - MT,51015,Vale do Peixoto - MT,MC,10
+2020,51002,Baixada Cuiabana - MT,51016,Vale dos Arinos - MT,MC,4
+2020,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,AC,25
+2020,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,MC,247
+2020,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,MC,3708
+2020,51003,Araguaia Xingu - MT,51005,Garças Araguaia - MT,MC,12
+2020,51003,Araguaia Xingu - MT,51006,Médio Araguaia - MT,MC,31
+2020,51003,Araguaia Xingu - MT,51008,Noroeste Matogrossense - MT,MC,1
+2020,51003,Araguaia Xingu - MT,51009,Norte Araguaia Karajá - MT,MC,8
+2020,51003,Araguaia Xingu - MT,51010,Norte Matogrossense - MT,MC,4
+2020,51003,Araguaia Xingu - MT,51013,Sul Matogrossense - MT,MC,10
+2020,51003,Araguaia Xingu - MT,51014,Teles Pires - MT,MC,12
+2020,51003,Araguaia Xingu - MT,51015,Vale do Peixoto - MT,MC,16
+2020,51004,Centro Norte - MT,51001,Alto Tapajós - MT,MC,1
+2020,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,AC,89
+2020,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,MC,1180
+2020,51004,Centro Norte - MT,51004,Centro Norte - MT,MC,3533
+2020,51004,Centro Norte - MT,51005,Garças Araguaia - MT,MC,1
+2020,51004,Centro Norte - MT,51006,Médio Araguaia - MT,MC,1
+2020,51004,Centro Norte - MT,51007,Médio Norte Matogrossense - MT,MC,26
+2020,51004,Centro Norte - MT,51008,Noroeste Matogrossense - MT,MC,2
+2020,51004,Centro Norte - MT,51011,Oeste Matogrossense - MT,MC,4
+2020,51004,Centro Norte - MT,51012,Sudoeste Matogrossense - MT,MC,1
+2020,51004,Centro Norte - MT,51013,Sul Matogrossense - MT,MC,19
+2020,51004,Centro Norte - MT,51014,Teles Pires - MT,MC,221
+2020,51004,Centro Norte - MT,51015,Vale do Peixoto - MT,MC,1
+2020,51004,Centro Norte - MT,51016,Vale dos Arinos - MT,MC,5
+2020,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,AC,55
+2020,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,MC,256
+2020,51005,Garças Araguaia - MT,51003,Araguaia Xingu - MT,MC,8
+2020,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,AC,1
+2020,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,MC,5626
+2020,51005,Garças Araguaia - MT,51006,Médio Araguaia - MT,MC,272
+2020,51005,Garças Araguaia - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2020,51005,Garças Araguaia - MT,51010,Norte Matogrossense - MT,MC,1
+2020,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,AC,1
+2020,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,MC,245
+2020,51005,Garças Araguaia - MT,51014,Teles Pires - MT,MC,4
+2020,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,AC,31
+2020,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,MC,172
+2020,51006,Médio Araguaia - MT,51003,Araguaia Xingu - MT,MC,7
+2020,51006,Médio Araguaia - MT,51005,Garças Araguaia - MT,MC,60
+2020,51006,Médio Araguaia - MT,51006,Médio Araguaia - MT,MC,4482
+2020,51006,Médio Araguaia - MT,51009,Norte Araguaia Karajá - MT,MC,3
+2020,51006,Médio Araguaia - MT,51011,Oeste Matogrossense - MT,MC,1
+2020,51006,Médio Araguaia - MT,51013,Sul Matogrossense - MT,MC,30
+2020,51006,Médio Araguaia - MT,51014,Teles Pires - MT,MC,18
+2020,51006,Médio Araguaia - MT,51015,Vale do Peixoto - MT,MC,2
+2020,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,206
+2020,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1349
+2020,51007,Médio Norte Matogrossense - MT,51003,Araguaia Xingu - MT,MC,1
+2020,51007,Médio Norte Matogrossense - MT,51004,Centro Norte - MT,MC,39
+2020,51007,Médio Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2020,51007,Médio Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,1
+2020,51007,Médio Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,8205
+2020,51007,Médio Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,17
+2020,51007,Médio Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,2
+2020,51007,Médio Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,15
+2020,51007,Médio Norte Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,9
+2020,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,46
+2020,51007,Médio Norte Matogrossense - MT,51014,Teles Pires - MT,MC,44
+2020,51007,Médio Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,2
+2020,51008,Noroeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,2
+2020,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,95
+2020,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,531
+2020,51008,Noroeste Matogrossense - MT,51003,Araguaia Xingu - MT,MC,1
+2020,51008,Noroeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,2
+2020,51008,Noroeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,41
+2020,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,AC,2
+2020,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,6833
+2020,51008,Noroeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,1
+2020,51008,Noroeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,12
+2020,51008,Noroeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,1
+2020,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,1
+2020,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,7
+2020,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,MC,23
+2020,51008,Noroeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,1
+2020,51008,Noroeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,4
+2020,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,AC,6
+2020,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,MC,64
+2020,51009,Norte Araguaia Karajá - MT,51003,Araguaia Xingu - MT,MC,38
+2020,51009,Norte Araguaia Karajá - MT,51005,Garças Araguaia - MT,MC,10
+2020,51009,Norte Araguaia Karajá - MT,51006,Médio Araguaia - MT,MC,148
+2020,51009,Norte Araguaia Karajá - MT,51009,Norte Araguaia Karajá - MT,MC,1069
+2020,51009,Norte Araguaia Karajá - MT,51013,Sul Matogrossense - MT,MC,2
+2020,51009,Norte Araguaia Karajá - MT,51014,Teles Pires - MT,MC,4
+2020,51010,Norte Matogrossense - MT,51001,Alto Tapajós - MT,MC,13
+2020,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,34
+2020,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,145
+2020,51010,Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,1
+2020,51010,Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,2873
+2020,51010,Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,12
+2020,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,AC,68
+2020,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,MC,140
+2020,51010,Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,31
+2020,51010,Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,4
+2020,51011,Oeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2020,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,149
+2020,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,396
+2020,51011,Oeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2020,51011,Oeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,4
+2020,51011,Oeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,9
+2020,51011,Oeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,2
+2020,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,11
+2020,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,9428
+2020,51011,Oeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,15
+2020,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,38
+2020,51011,Oeste Matogrossense - MT,51014,Teles Pires - MT,MC,8
+2020,51011,Oeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,1
+2020,51012,Sudoeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2020,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,77
+2020,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,290
+2020,51012,Sudoeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,1
+2020,51012,Sudoeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,3
+2020,51012,Sudoeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,9
+2020,51012,Sudoeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,2
+2020,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,3
+2020,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1242
+2020,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,6238
+2020,51012,Sudoeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,4
+2020,51012,Sudoeste Matogrossense - MT,51014,Teles Pires - MT,MC,4
+2020,51012,Sudoeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,2
+2020,51013,Sul Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2020,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,212
+2020,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,542
+2020,51013,Sul Matogrossense - MT,51003,Araguaia Xingu - MT,MC,4
+2020,51013,Sul Matogrossense - MT,51005,Garças Araguaia - MT,MC,29
+2020,51013,Sul Matogrossense - MT,51006,Médio Araguaia - MT,MC,13
+2020,51013,Sul Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,3
+2020,51013,Sul Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,2
+2020,51013,Sul Matogrossense - MT,51010,Norte Matogrossense - MT,MC,3
+2020,51013,Sul Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1
+2020,51013,Sul Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,2
+2020,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,AC,1220
+2020,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,MC,28935
+2020,51013,Sul Matogrossense - MT,51014,Teles Pires - MT,MC,46
+2020,51013,Sul Matogrossense - MT,51015,Vale do Peixoto - MT,MC,9
+2020,51014,Teles Pires - MT,51001,Alto Tapajós - MT,MC,13
+2020,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,AC,222
+2020,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,MC,594
+2020,51014,Teles Pires - MT,51003,Araguaia Xingu - MT,MC,1
+2020,51014,Teles Pires - MT,51004,Centro Norte - MT,MC,9
+2020,51014,Teles Pires - MT,51005,Garças Araguaia - MT,MC,2
+2020,51014,Teles Pires - MT,51006,Médio Araguaia - MT,MC,10
+2020,51014,Teles Pires - MT,51007,Médio Norte Matogrossense - MT,MC,9
+2020,51014,Teles Pires - MT,51008,Noroeste Matogrossense - MT,MC,14
+2020,51014,Teles Pires - MT,51010,Norte Matogrossense - MT,MC,41
+2020,51014,Teles Pires - MT,51011,Oeste Matogrossense - MT,MC,6
+2020,51014,Teles Pires - MT,51012,Sudoeste Matogrossense - MT,MC,2
+2020,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,MC,85
+2020,51014,Teles Pires - MT,51014,Teles Pires - MT,AC,436
+2020,51014,Teles Pires - MT,51014,Teles Pires - MT,MC,19439
+2020,51014,Teles Pires - MT,51015,Vale do Peixoto - MT,MC,51
+2020,51014,Teles Pires - MT,51016,Vale dos Arinos - MT,MC,27
+2020,51015,Vale do Peixoto - MT,51001,Alto Tapajós - MT,MC,7
+2020,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,AC,79
+2020,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,MC,284
+2020,51015,Vale do Peixoto - MT,51008,Noroeste Matogrossense - MT,MC,3
+2020,51015,Vale do Peixoto - MT,51010,Norte Matogrossense - MT,MC,45
+2020,51015,Vale do Peixoto - MT,51011,Oeste Matogrossense - MT,MC,2
+2020,51015,Vale do Peixoto - MT,51013,Sul Matogrossense - MT,MC,7
+2020,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,AC,30
+2020,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,MC,151
+2020,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,AC,1
+2020,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,MC,4838
+2020,51016,Vale dos Arinos - MT,51001,Alto Tapajós - MT,MC,1
+2020,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,AC,31
+2020,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,MC,134
+2020,51016,Vale dos Arinos - MT,51008,Noroeste Matogrossense - MT,MC,24
+2020,51016,Vale dos Arinos - MT,51010,Norte Matogrossense - MT,MC,2
+2020,51016,Vale dos Arinos - MT,51011,Oeste Matogrossense - MT,MC,4
+2020,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,AC,2
+2020,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,MC,92
+2020,51016,Vale dos Arinos - MT,51015,Vale do Peixoto - MT,MC,3
+2020,51016,Vale dos Arinos - MT,51016,Vale dos Arinos - MT,MC,2198
+2021,51001,Alto Tapajós - MT,51001,Alto Tapajós - MT,MC,6058
+2021,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,AC,84
+2021,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,MC,257
+2021,51001,Alto Tapajós - MT,51003,Araguaia Xingu - MT,MC,1
+2021,51001,Alto Tapajós - MT,51004,Centro Norte - MT,MC,2
+2021,51001,Alto Tapajós - MT,51005,Garças Araguaia - MT,MC,1
+2021,51001,Alto Tapajós - MT,51008,Noroeste Matogrossense - MT,MC,6
+2021,51001,Alto Tapajós - MT,51010,Norte Matogrossense - MT,MC,14
+2021,51001,Alto Tapajós - MT,51011,Oeste Matogrossense - MT,MC,2
+2021,51001,Alto Tapajós - MT,51013,Sul Matogrossense - MT,MC,7
+2021,51001,Alto Tapajós - MT,51014,Teles Pires - MT,AC,39
+2021,51001,Alto Tapajós - MT,51014,Teles Pires - MT,MC,72
+2021,51001,Alto Tapajós - MT,51015,Vale do Peixoto - MT,MC,10
+2021,51001,Alto Tapajós - MT,51016,Vale dos Arinos - MT,MC,4
+2021,51002,Baixada Cuiabana - MT,51001,Alto Tapajós - MT,MC,3
+2021,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,AC,2112
+2021,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,MC,41122
+2021,51002,Baixada Cuiabana - MT,51003,Araguaia Xingu - MT,MC,2
+2021,51002,Baixada Cuiabana - MT,51004,Centro Norte - MT,MC,11
+2021,51002,Baixada Cuiabana - MT,51005,Garças Araguaia - MT,MC,13
+2021,51002,Baixada Cuiabana - MT,51006,Médio Araguaia - MT,MC,4
+2021,51002,Baixada Cuiabana - MT,51007,Médio Norte Matogrossense - MT,MC,10
+2021,51002,Baixada Cuiabana - MT,51008,Noroeste Matogrossense - MT,MC,8
+2021,51002,Baixada Cuiabana - MT,51010,Norte Matogrossense - MT,MC,3
+2021,51002,Baixada Cuiabana - MT,51011,Oeste Matogrossense - MT,MC,22
+2021,51002,Baixada Cuiabana - MT,51012,Sudoeste Matogrossense - MT,MC,7
+2021,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,AC,5
+2021,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,MC,183
+2021,51002,Baixada Cuiabana - MT,51014,Teles Pires - MT,MC,90
+2021,51002,Baixada Cuiabana - MT,51015,Vale do Peixoto - MT,MC,13
+2021,51002,Baixada Cuiabana - MT,51016,Vale dos Arinos - MT,MC,1
+2021,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,AC,29
+2021,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,MC,335
+2021,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,AC,1
+2021,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,MC,4877
+2021,51003,Araguaia Xingu - MT,51005,Garças Araguaia - MT,MC,16
+2021,51003,Araguaia Xingu - MT,51006,Médio Araguaia - MT,MC,70
+2021,51003,Araguaia Xingu - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2021,51003,Araguaia Xingu - MT,51009,Norte Araguaia Karajá - MT,MC,13
+2021,51003,Araguaia Xingu - MT,51010,Norte Matogrossense - MT,MC,7
+2021,51003,Araguaia Xingu - MT,51013,Sul Matogrossense - MT,MC,7
+2021,51003,Araguaia Xingu - MT,51014,Teles Pires - MT,MC,10
+2021,51003,Araguaia Xingu - MT,51015,Vale do Peixoto - MT,MC,12
+2021,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,AC,116
+2021,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,MC,1191
+2021,51004,Centro Norte - MT,51004,Centro Norte - MT,MC,3926
+2021,51004,Centro Norte - MT,51006,Médio Araguaia - MT,MC,1
+2021,51004,Centro Norte - MT,51007,Médio Norte Matogrossense - MT,MC,47
+2021,51004,Centro Norte - MT,51008,Noroeste Matogrossense - MT,MC,2
+2021,51004,Centro Norte - MT,51010,Norte Matogrossense - MT,MC,3
+2021,51004,Centro Norte - MT,51011,Oeste Matogrossense - MT,MC,1
+2021,51004,Centro Norte - MT,51012,Sudoeste Matogrossense - MT,MC,2
+2021,51004,Centro Norte - MT,51013,Sul Matogrossense - MT,MC,42
+2021,51004,Centro Norte - MT,51014,Teles Pires - MT,MC,294
+2021,51004,Centro Norte - MT,51015,Vale do Peixoto - MT,MC,2
+2021,51004,Centro Norte - MT,51016,Vale dos Arinos - MT,MC,2
+2021,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,AC,58
+2021,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,MC,237
+2021,51005,Garças Araguaia - MT,51003,Araguaia Xingu - MT,MC,2
+2021,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,AC,1
+2021,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,MC,6657
+2021,51005,Garças Araguaia - MT,51006,Médio Araguaia - MT,MC,515
+2021,51005,Garças Araguaia - MT,51008,Noroeste Matogrossense - MT,MC,2
+2021,51005,Garças Araguaia - MT,51011,Oeste Matogrossense - MT,MC,2
+2021,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,AC,7
+2021,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,MC,307
+2021,51005,Garças Araguaia - MT,51014,Teles Pires - MT,MC,6
+2021,51005,Garças Araguaia - MT,51015,Vale do Peixoto - MT,MC,1
+2021,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,AC,39
+2021,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,MC,193
+2021,51006,Médio Araguaia - MT,51003,Araguaia Xingu - MT,MC,7
+2021,51006,Médio Araguaia - MT,51004,Centro Norte - MT,MC,1
+2021,51006,Médio Araguaia - MT,51005,Garças Araguaia - MT,MC,37
+2021,51006,Médio Araguaia - MT,51006,Médio Araguaia - MT,MC,6954
+2021,51006,Médio Araguaia - MT,51011,Oeste Matogrossense - MT,MC,1
+2021,51006,Médio Araguaia - MT,51013,Sul Matogrossense - MT,AC,1
+2021,51006,Médio Araguaia - MT,51013,Sul Matogrossense - MT,MC,42
+2021,51006,Médio Araguaia - MT,51014,Teles Pires - MT,MC,7
+2021,51006,Médio Araguaia - MT,51015,Vale do Peixoto - MT,MC,2
+2021,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,272
+2021,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1515
+2021,51007,Médio Norte Matogrossense - MT,51003,Araguaia Xingu - MT,MC,1
+2021,51007,Médio Norte Matogrossense - MT,51004,Centro Norte - MT,MC,6
+2021,51007,Médio Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,3
+2021,51007,Médio Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,3
+2021,51007,Médio Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,10710
+2021,51007,Médio Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,14
+2021,51007,Médio Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,27
+2021,51007,Médio Norte Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,79
+2021,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,AC,2
+2021,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,60
+2021,51007,Médio Norte Matogrossense - MT,51014,Teles Pires - MT,MC,43
+2021,51007,Médio Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,4
+2021,51007,Médio Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,2
+2021,51008,Noroeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,3
+2021,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,110
+2021,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,586
+2021,51008,Noroeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,15
+2021,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,6846
+2021,51008,Noroeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,5
+2021,51008,Noroeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1
+2021,51008,Noroeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,5
+2021,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,5
+2021,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,MC,31
+2021,51008,Noroeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,5
+2021,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,AC,9
+2021,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,MC,73
+2021,51009,Norte Araguaia Karajá - MT,51003,Araguaia Xingu - MT,MC,26
+2021,51009,Norte Araguaia Karajá - MT,51005,Garças Araguaia - MT,MC,14
+2021,51009,Norte Araguaia Karajá - MT,51006,Médio Araguaia - MT,MC,269
+2021,51009,Norte Araguaia Karajá - MT,51009,Norte Araguaia Karajá - MT,MC,1125
+2021,51009,Norte Araguaia Karajá - MT,51013,Sul Matogrossense - MT,MC,4
+2021,51009,Norte Araguaia Karajá - MT,51014,Teles Pires - MT,MC,10
+2021,51010,Norte Matogrossense - MT,51001,Alto Tapajós - MT,MC,40
+2021,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,62
+2021,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,199
+2021,51010,Norte Matogrossense - MT,51003,Araguaia Xingu - MT,MC,2
+2021,51010,Norte Matogrossense - MT,51004,Centro Norte - MT,MC,1
+2021,51010,Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2021,51010,Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2021,51010,Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,2992
+2021,51010,Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,2
+2021,51010,Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,13
+2021,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,AC,66
+2021,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,MC,180
+2021,51010,Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,75
+2021,51010,Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,2
+2021,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,182
+2021,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,604
+2021,51011,Oeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2021,51011,Oeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,1
+2021,51011,Oeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2021,51011,Oeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,3
+2021,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,8
+2021,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,10160
+2021,51011,Oeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,131
+2021,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,3
+2021,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,40
+2021,51011,Oeste Matogrossense - MT,51014,Teles Pires - MT,MC,14
+2021,51012,Sudoeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2021,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,119
+2021,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,325
+2021,51012,Sudoeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,2
+2021,51012,Sudoeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,1
+2021,51012,Sudoeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2021,51012,Sudoeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,8
+2021,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,3
+2021,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1353
+2021,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,AC,2
+2021,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,6349
+2021,51012,Sudoeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,2
+2021,51012,Sudoeste Matogrossense - MT,51014,Teles Pires - MT,MC,7
+2021,51013,Sul Matogrossense - MT,51001,Alto Tapajós - MT,MC,3
+2021,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,206
+2021,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,591
+2021,51013,Sul Matogrossense - MT,51003,Araguaia Xingu - MT,MC,2
+2021,51013,Sul Matogrossense - MT,51004,Centro Norte - MT,MC,1
+2021,51013,Sul Matogrossense - MT,51005,Garças Araguaia - MT,MC,31
+2021,51013,Sul Matogrossense - MT,51006,Médio Araguaia - MT,MC,10
+2021,51013,Sul Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,3
+2021,51013,Sul Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,1
+2021,51013,Sul Matogrossense - MT,51009,Norte Araguaia Karajá - MT,MC,1
+2021,51013,Sul Matogrossense - MT,51010,Norte Matogrossense - MT,MC,1
+2021,51013,Sul Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,2
+2021,51013,Sul Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,2
+2021,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,AC,1375
+2021,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,MC,33836
+2021,51013,Sul Matogrossense - MT,51014,Teles Pires - MT,MC,79
+2021,51013,Sul Matogrossense - MT,51015,Vale do Peixoto - MT,MC,6
+2021,51013,Sul Matogrossense - MT,51016,Vale dos Arinos - MT,MC,3
+2021,51014,Teles Pires - MT,51001,Alto Tapajós - MT,MC,10
+2021,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,AC,271
+2021,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,MC,647
+2021,51014,Teles Pires - MT,51003,Araguaia Xingu - MT,MC,1
+2021,51014,Teles Pires - MT,51004,Centro Norte - MT,MC,12
+2021,51014,Teles Pires - MT,51005,Garças Araguaia - MT,MC,2
+2021,51014,Teles Pires - MT,51006,Médio Araguaia - MT,MC,1
+2021,51014,Teles Pires - MT,51007,Médio Norte Matogrossense - MT,MC,32
+2021,51014,Teles Pires - MT,51008,Noroeste Matogrossense - MT,MC,12
+2021,51014,Teles Pires - MT,51009,Norte Araguaia Karajá - MT,MC,1
+2021,51014,Teles Pires - MT,51010,Norte Matogrossense - MT,MC,26
+2021,51014,Teles Pires - MT,51011,Oeste Matogrossense - MT,MC,8
+2021,51014,Teles Pires - MT,51012,Sudoeste Matogrossense - MT,MC,1
+2021,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,MC,98
+2021,51014,Teles Pires - MT,51014,Teles Pires - MT,AC,507
+2021,51014,Teles Pires - MT,51014,Teles Pires - MT,MC,21937
+2021,51014,Teles Pires - MT,51015,Vale do Peixoto - MT,MC,77
+2021,51014,Teles Pires - MT,51016,Vale dos Arinos - MT,MC,15
+2021,51015,Vale do Peixoto - MT,51001,Alto Tapajós - MT,MC,15
+2021,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,AC,88
+2021,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,MC,208
+2021,51015,Vale do Peixoto - MT,51003,Araguaia Xingu - MT,MC,1
+2021,51015,Vale do Peixoto - MT,51005,Garças Araguaia - MT,MC,1
+2021,51015,Vale do Peixoto - MT,51006,Médio Araguaia - MT,MC,1
+2021,51015,Vale do Peixoto - MT,51008,Noroeste Matogrossense - MT,MC,1
+2021,51015,Vale do Peixoto - MT,51010,Norte Matogrossense - MT,AC,1
+2021,51015,Vale do Peixoto - MT,51010,Norte Matogrossense - MT,MC,45
+2021,51015,Vale do Peixoto - MT,51013,Sul Matogrossense - MT,AC,1
+2021,51015,Vale do Peixoto - MT,51013,Sul Matogrossense - MT,MC,11
+2021,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,AC,73
+2021,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,MC,156
+2021,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,MC,5249
+2021,51015,Vale do Peixoto - MT,51016,Vale dos Arinos - MT,MC,1
+2021,51016,Vale dos Arinos - MT,51001,Alto Tapajós - MT,MC,1
+2021,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,AC,38
+2021,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,MC,209
+2021,51016,Vale dos Arinos - MT,51003,Araguaia Xingu - MT,MC,2
+2021,51016,Vale dos Arinos - MT,51007,Médio Norte Matogrossense - MT,MC,3
+2021,51016,Vale dos Arinos - MT,51008,Noroeste Matogrossense - MT,MC,23
+2021,51016,Vale dos Arinos - MT,51010,Norte Matogrossense - MT,MC,1
+2021,51016,Vale dos Arinos - MT,51013,Sul Matogrossense - MT,MC,1
+2021,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,AC,4
+2021,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,MC,86
+2021,51016,Vale dos Arinos - MT,51015,Vale do Peixoto - MT,MC,4
+2021,51016,Vale dos Arinos - MT,51016,Vale dos Arinos - MT,AC,2
+2021,51016,Vale dos Arinos - MT,51016,Vale dos Arinos - MT,MC,3092
+2022,51001,Alto Tapajós - MT,51001,Alto Tapajós - MT,AC,1
+2022,51001,Alto Tapajós - MT,51001,Alto Tapajós - MT,MC,6237
+2022,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,AC,100
+2022,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,MC,330
+2022,51001,Alto Tapajós - MT,51004,Centro Norte - MT,MC,2
+2022,51001,Alto Tapajós - MT,51005,Garças Araguaia - MT,MC,1
+2022,51001,Alto Tapajós - MT,51007,Médio Norte Matogrossense - MT,MC,4
+2022,51001,Alto Tapajós - MT,51008,Noroeste Matogrossense - MT,MC,1
+2022,51001,Alto Tapajós - MT,51010,Norte Matogrossense - MT,MC,26
+2022,51001,Alto Tapajós - MT,51011,Oeste Matogrossense - MT,MC,5
+2022,51001,Alto Tapajós - MT,51013,Sul Matogrossense - MT,MC,8
+2022,51001,Alto Tapajós - MT,51014,Teles Pires - MT,AC,59
+2022,51001,Alto Tapajós - MT,51014,Teles Pires - MT,MC,78
+2022,51001,Alto Tapajós - MT,51015,Vale do Peixoto - MT,MC,11
+2022,51001,Alto Tapajós - MT,51016,Vale dos Arinos - MT,MC,16
+2022,51002,Baixada Cuiabana - MT,51001,Alto Tapajós - MT,MC,5
+2022,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,AC,2398
+2022,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,MC,43208
+2022,51002,Baixada Cuiabana - MT,51004,Centro Norte - MT,MC,7
+2022,51002,Baixada Cuiabana - MT,51005,Garças Araguaia - MT,MC,15
+2022,51002,Baixada Cuiabana - MT,51006,Médio Araguaia - MT,MC,7
+2022,51002,Baixada Cuiabana - MT,51007,Médio Norte Matogrossense - MT,MC,29
+2022,51002,Baixada Cuiabana - MT,51008,Noroeste Matogrossense - MT,MC,4
+2022,51002,Baixada Cuiabana - MT,51010,Norte Matogrossense - MT,MC,3
+2022,51002,Baixada Cuiabana - MT,51011,Oeste Matogrossense - MT,MC,18
+2022,51002,Baixada Cuiabana - MT,51012,Sudoeste Matogrossense - MT,MC,8
+2022,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,AC,12
+2022,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,MC,162
+2022,51002,Baixada Cuiabana - MT,51014,Teles Pires - MT,MC,57
+2022,51002,Baixada Cuiabana - MT,51015,Vale do Peixoto - MT,MC,11
+2022,51002,Baixada Cuiabana - MT,51016,Vale dos Arinos - MT,MC,6
+2022,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,AC,31
+2022,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,MC,245
+2022,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,AC,1
+2022,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,MC,5314
+2022,51003,Araguaia Xingu - MT,51005,Garças Araguaia - MT,MC,9
+2022,51003,Araguaia Xingu - MT,51006,Médio Araguaia - MT,MC,44
+2022,51003,Araguaia Xingu - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2022,51003,Araguaia Xingu - MT,51009,Norte Araguaia Karajá - MT,MC,18
+2022,51003,Araguaia Xingu - MT,51010,Norte Matogrossense - MT,MC,9
+2022,51003,Araguaia Xingu - MT,51011,Oeste Matogrossense - MT,MC,3
+2022,51003,Araguaia Xingu - MT,51013,Sul Matogrossense - MT,MC,6
+2022,51003,Araguaia Xingu - MT,51014,Teles Pires - MT,MC,24
+2022,51003,Araguaia Xingu - MT,51015,Vale do Peixoto - MT,MC,14
+2022,51004,Centro Norte - MT,51001,Alto Tapajós - MT,MC,1
+2022,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,AC,114
+2022,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,MC,1393
+2022,51004,Centro Norte - MT,51004,Centro Norte - MT,AC,2
+2022,51004,Centro Norte - MT,51004,Centro Norte - MT,MC,4226
+2022,51004,Centro Norte - MT,51005,Garças Araguaia - MT,MC,2
+2022,51004,Centro Norte - MT,51006,Médio Araguaia - MT,MC,2
+2022,51004,Centro Norte - MT,51007,Médio Norte Matogrossense - MT,MC,77
+2022,51004,Centro Norte - MT,51008,Noroeste Matogrossense - MT,MC,3
+2022,51004,Centro Norte - MT,51011,Oeste Matogrossense - MT,MC,6
+2022,51004,Centro Norte - MT,51013,Sul Matogrossense - MT,AC,1
+2022,51004,Centro Norte - MT,51013,Sul Matogrossense - MT,MC,33
+2022,51004,Centro Norte - MT,51014,Teles Pires - MT,AC,1
+2022,51004,Centro Norte - MT,51014,Teles Pires - MT,MC,270
+2022,51004,Centro Norte - MT,51015,Vale do Peixoto - MT,MC,5
+2022,51004,Centro Norte - MT,51016,Vale dos Arinos - MT,MC,5
+2022,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,AC,65
+2022,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,MC,263
+2022,51005,Garças Araguaia - MT,51003,Araguaia Xingu - MT,MC,2
+2022,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,MC,6609
+2022,51005,Garças Araguaia - MT,51006,Médio Araguaia - MT,MC,505
+2022,51005,Garças Araguaia - MT,51009,Norte Araguaia Karajá - MT,MC,2
+2022,51005,Garças Araguaia - MT,51011,Oeste Matogrossense - MT,MC,4
+2022,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,AC,4
+2022,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,MC,242
+2022,51005,Garças Araguaia - MT,51014,Teles Pires - MT,MC,5
+2022,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,AC,46
+2022,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,MC,195
+2022,51006,Médio Araguaia - MT,51003,Araguaia Xingu - MT,MC,3
+2022,51006,Médio Araguaia - MT,51005,Garças Araguaia - MT,MC,52
+2022,51006,Médio Araguaia - MT,51006,Médio Araguaia - MT,AC,25
+2022,51006,Médio Araguaia - MT,51006,Médio Araguaia - MT,MC,7983
+2022,51006,Médio Araguaia - MT,51008,Noroeste Matogrossense - MT,MC,1
+2022,51006,Médio Araguaia - MT,51009,Norte Araguaia Karajá - MT,MC,6
+2022,51006,Médio Araguaia - MT,51010,Norte Matogrossense - MT,MC,1
+2022,51006,Médio Araguaia - MT,51013,Sul Matogrossense - MT,MC,44
+2022,51006,Médio Araguaia - MT,51014,Teles Pires - MT,MC,11
+2022,51006,Médio Araguaia - MT,51015,Vale do Peixoto - MT,MC,4
+2022,51007,Médio Norte Matogrossense - MT,51001,Alto Tapajós - MT,MC,3
+2022,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,298
+2022,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1712
+2022,51007,Médio Norte Matogrossense - MT,51004,Centro Norte - MT,MC,11
+2022,51007,Médio Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,3
+2022,51007,Médio Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,4
+2022,51007,Médio Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,AC,1
+2022,51007,Médio Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,10871
+2022,51007,Médio Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,10
+2022,51007,Médio Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,1
+2022,51007,Médio Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,23
+2022,51007,Médio Norte Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,28
+2022,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,AC,1
+2022,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,56
+2022,51007,Médio Norte Matogrossense - MT,51014,Teles Pires - MT,MC,60
+2022,51007,Médio Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,6
+2022,51007,Médio Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,7
+2022,51008,Noroeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,4
+2022,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,148
+2022,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,758
+2022,51008,Noroeste Matogrossense - MT,51004,Centro Norte - MT,MC,2
+2022,51008,Noroeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2022,51008,Noroeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,1
+2022,51008,Noroeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,20
+2022,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,AC,6
+2022,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,8764
+2022,51008,Noroeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,6
+2022,51008,Noroeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,10
+2022,51008,Noroeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,1
+2022,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,2
+2022,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,17
+2022,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,AC,1
+2022,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,MC,34
+2022,51008,Noroeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,1
+2022,51008,Noroeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,12
+2022,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,AC,14
+2022,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,MC,106
+2022,51009,Norte Araguaia Karajá - MT,51003,Araguaia Xingu - MT,MC,29
+2022,51009,Norte Araguaia Karajá - MT,51005,Garças Araguaia - MT,MC,15
+2022,51009,Norte Araguaia Karajá - MT,51006,Médio Araguaia - MT,MC,251
+2022,51009,Norte Araguaia Karajá - MT,51009,Norte Araguaia Karajá - MT,AC,1
+2022,51009,Norte Araguaia Karajá - MT,51009,Norte Araguaia Karajá - MT,MC,1118
+2022,51009,Norte Araguaia Karajá - MT,51013,Sul Matogrossense - MT,MC,3
+2022,51009,Norte Araguaia Karajá - MT,51014,Teles Pires - MT,MC,9
+2022,51010,Norte Matogrossense - MT,51001,Alto Tapajós - MT,MC,42
+2022,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,86
+2022,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,231
+2022,51010,Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,2
+2022,51010,Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,4
+2022,51010,Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,2
+2022,51010,Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,2
+2022,51010,Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,3672
+2022,51010,Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,3
+2022,51010,Norte Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,1
+2022,51010,Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,3
+2022,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,AC,141
+2022,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,MC,134
+2022,51010,Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,36
+2022,51010,Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,1
+2022,51011,Oeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2022,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,187
+2022,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,559
+2022,51011,Oeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,2
+2022,51011,Oeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,6
+2022,51011,Oeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,2
+2022,51011,Oeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,1
+2022,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,15
+2022,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,10275
+2022,51011,Oeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,24
+2022,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,1
+2022,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,49
+2022,51011,Oeste Matogrossense - MT,51014,Teles Pires - MT,MC,10
+2022,51011,Oeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,1
+2022,51011,Oeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,1
+2022,51012,Sudoeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2022,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,118
+2022,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,373
+2022,51012,Sudoeste Matogrossense - MT,51003,Araguaia Xingu - MT,MC,1
+2022,51012,Sudoeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,4
+2022,51012,Sudoeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,1
+2022,51012,Sudoeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,4
+2022,51012,Sudoeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,3
+2022,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,7
+2022,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1208
+2022,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,AC,3
+2022,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,7162
+2022,51012,Sudoeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,5
+2022,51012,Sudoeste Matogrossense - MT,51014,Teles Pires - MT,MC,7
+2022,51012,Sudoeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,6
+2022,51013,Sul Matogrossense - MT,51001,Alto Tapajós - MT,MC,3
+2022,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,216
+2022,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,863
+2022,51013,Sul Matogrossense - MT,51004,Centro Norte - MT,MC,3
+2022,51013,Sul Matogrossense - MT,51005,Garças Araguaia - MT,MC,35
+2022,51013,Sul Matogrossense - MT,51006,Médio Araguaia - MT,MC,11
+2022,51013,Sul Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,7
+2022,51013,Sul Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,1
+2022,51013,Sul Matogrossense - MT,51010,Norte Matogrossense - MT,MC,5
+2022,51013,Sul Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,10
+2022,51013,Sul Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,1
+2022,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,AC,1779
+2022,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,MC,36698
+2022,51013,Sul Matogrossense - MT,51014,Teles Pires - MT,MC,67
+2022,51013,Sul Matogrossense - MT,51015,Vale do Peixoto - MT,MC,8
+2022,51013,Sul Matogrossense - MT,51016,Vale dos Arinos - MT,MC,10
+2022,51014,Teles Pires - MT,51001,Alto Tapajós - MT,MC,15
+2022,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,AC,276
+2022,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,MC,814
+2022,51014,Teles Pires - MT,51003,Araguaia Xingu - MT,MC,4
+2022,51014,Teles Pires - MT,51004,Centro Norte - MT,MC,11
+2022,51014,Teles Pires - MT,51005,Garças Araguaia - MT,MC,1
+2022,51014,Teles Pires - MT,51006,Médio Araguaia - MT,MC,15
+2022,51014,Teles Pires - MT,51007,Médio Norte Matogrossense - MT,MC,39
+2022,51014,Teles Pires - MT,51008,Noroeste Matogrossense - MT,MC,7
+2022,51014,Teles Pires - MT,51010,Norte Matogrossense - MT,MC,68
+2022,51014,Teles Pires - MT,51011,Oeste Matogrossense - MT,MC,19
+2022,51014,Teles Pires - MT,51012,Sudoeste Matogrossense - MT,MC,3
+2022,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,AC,8
+2022,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,MC,68
+2022,51014,Teles Pires - MT,51014,Teles Pires - MT,AC,769
+2022,51014,Teles Pires - MT,51014,Teles Pires - MT,MC,22649
+2022,51014,Teles Pires - MT,51015,Vale do Peixoto - MT,MC,75
+2022,51014,Teles Pires - MT,51016,Vale dos Arinos - MT,MC,43
+2022,51015,Vale do Peixoto - MT,51001,Alto Tapajós - MT,MC,12
+2022,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,AC,102
+2022,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,MC,257
+2022,51015,Vale do Peixoto - MT,51008,Noroeste Matogrossense - MT,MC,2
+2022,51015,Vale do Peixoto - MT,51010,Norte Matogrossense - MT,MC,50
+2022,51015,Vale do Peixoto - MT,51011,Oeste Matogrossense - MT,MC,6
+2022,51015,Vale do Peixoto - MT,51013,Sul Matogrossense - MT,AC,2
+2022,51015,Vale do Peixoto - MT,51013,Sul Matogrossense - MT,MC,11
+2022,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,AC,91
+2022,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,MC,157
+2022,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,AC,1
+2022,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,MC,5586
+2022,51015,Vale do Peixoto - MT,51016,Vale dos Arinos - MT,MC,3
+2022,51016,Vale dos Arinos - MT,51001,Alto Tapajós - MT,MC,2
+2022,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,AC,55
+2022,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,MC,182
+2022,51016,Vale dos Arinos - MT,51004,Centro Norte - MT,MC,1
+2022,51016,Vale dos Arinos - MT,51007,Médio Norte Matogrossense - MT,MC,4
+2022,51016,Vale dos Arinos - MT,51008,Noroeste Matogrossense - MT,MC,27
+2022,51016,Vale dos Arinos - MT,51010,Norte Matogrossense - MT,MC,2
+2022,51016,Vale dos Arinos - MT,51011,Oeste Matogrossense - MT,MC,2
+2022,51016,Vale dos Arinos - MT,51013,Sul Matogrossense - MT,AC,1
+2022,51016,Vale dos Arinos - MT,51013,Sul Matogrossense - MT,MC,4
+2022,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,AC,4
+2022,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,MC,124
+2022,51016,Vale dos Arinos - MT,51015,Vale do Peixoto - MT,MC,3
+2022,51016,Vale dos Arinos - MT,51016,Vale dos Arinos - MT,MC,3009
+2023,51001,Alto Tapajós - MT,51001,Alto Tapajós - MT,MC,5902
+2023,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,AC,134
+2023,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,MC,393
+2023,51001,Alto Tapajós - MT,51005,Garças Araguaia - MT,MC,4
+2023,51001,Alto Tapajós - MT,51006,Médio Araguaia - MT,MC,2
+2023,51001,Alto Tapajós - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2023,51001,Alto Tapajós - MT,51008,Noroeste Matogrossense - MT,MC,5
+2023,51001,Alto Tapajós - MT,51010,Norte Matogrossense - MT,MC,78
+2023,51001,Alto Tapajós - MT,51011,Oeste Matogrossense - MT,MC,6
+2023,51001,Alto Tapajós - MT,51013,Sul Matogrossense - MT,MC,17
+2023,51001,Alto Tapajós - MT,51014,Teles Pires - MT,AC,66
+2023,51001,Alto Tapajós - MT,51014,Teles Pires - MT,MC,206
+2023,51001,Alto Tapajós - MT,51015,Vale do Peixoto - MT,MC,17
+2023,51001,Alto Tapajós - MT,51016,Vale dos Arinos - MT,MC,18
+2023,51002,Baixada Cuiabana - MT,51001,Alto Tapajós - MT,MC,2
+2023,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,AC,2870
+2023,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,MC,47802
+2023,51002,Baixada Cuiabana - MT,51004,Centro Norte - MT,MC,46
+2023,51002,Baixada Cuiabana - MT,51005,Garças Araguaia - MT,MC,14
+2023,51002,Baixada Cuiabana - MT,51006,Médio Araguaia - MT,MC,17
+2023,51002,Baixada Cuiabana - MT,51007,Médio Norte Matogrossense - MT,MC,14
+2023,51002,Baixada Cuiabana - MT,51008,Noroeste Matogrossense - MT,MC,19
+2023,51002,Baixada Cuiabana - MT,51010,Norte Matogrossense - MT,MC,1
+2023,51002,Baixada Cuiabana - MT,51011,Oeste Matogrossense - MT,AC,1
+2023,51002,Baixada Cuiabana - MT,51011,Oeste Matogrossense - MT,MC,41
+2023,51002,Baixada Cuiabana - MT,51012,Sudoeste Matogrossense - MT,MC,6
+2023,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,AC,12
+2023,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,MC,211
+2023,51002,Baixada Cuiabana - MT,51014,Teles Pires - MT,AC,1
+2023,51002,Baixada Cuiabana - MT,51014,Teles Pires - MT,MC,90
+2023,51002,Baixada Cuiabana - MT,51015,Vale do Peixoto - MT,MC,15
+2023,51002,Baixada Cuiabana - MT,51016,Vale dos Arinos - MT,MC,4
+2023,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,AC,61
+2023,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,MC,358
+2023,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,AC,4
+2023,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,MC,5629
+2023,51003,Araguaia Xingu - MT,51004,Centro Norte - MT,MC,1
+2023,51003,Araguaia Xingu - MT,51005,Garças Araguaia - MT,MC,26
+2023,51003,Araguaia Xingu - MT,51006,Médio Araguaia - MT,MC,26
+2023,51003,Araguaia Xingu - MT,51009,Norte Araguaia Karajá - MT,MC,8
+2023,51003,Araguaia Xingu - MT,51010,Norte Matogrossense - MT,MC,10
+2023,51003,Araguaia Xingu - MT,51011,Oeste Matogrossense - MT,MC,3
+2023,51003,Araguaia Xingu - MT,51013,Sul Matogrossense - MT,MC,38
+2023,51003,Araguaia Xingu - MT,51014,Teles Pires - MT,AC,2
+2023,51003,Araguaia Xingu - MT,51014,Teles Pires - MT,MC,26
+2023,51003,Araguaia Xingu - MT,51015,Vale do Peixoto - MT,MC,11
+2023,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,AC,181
+2023,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,MC,1477
+2023,51004,Centro Norte - MT,51004,Centro Norte - MT,MC,4473
+2023,51004,Centro Norte - MT,51006,Médio Araguaia - MT,MC,2
+2023,51004,Centro Norte - MT,51007,Médio Norte Matogrossense - MT,MC,72
+2023,51004,Centro Norte - MT,51008,Noroeste Matogrossense - MT,MC,6
+2023,51004,Centro Norte - MT,51010,Norte Matogrossense - MT,MC,6
+2023,51004,Centro Norte - MT,51011,Oeste Matogrossense - MT,MC,6
+2023,51004,Centro Norte - MT,51012,Sudoeste Matogrossense - MT,MC,2
+2023,51004,Centro Norte - MT,51013,Sul Matogrossense - MT,MC,44
+2023,51004,Centro Norte - MT,51014,Teles Pires - MT,AC,1
+2023,51004,Centro Norte - MT,51014,Teles Pires - MT,MC,215
+2023,51004,Centro Norte - MT,51015,Vale do Peixoto - MT,MC,3
+2023,51004,Centro Norte - MT,51016,Vale dos Arinos - MT,MC,3
+2023,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,AC,76
+2023,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,MC,416
+2023,51005,Garças Araguaia - MT,51003,Araguaia Xingu - MT,MC,3
+2023,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,AC,7
+2023,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,MC,7270
+2023,51005,Garças Araguaia - MT,51006,Médio Araguaia - MT,MC,644
+2023,51005,Garças Araguaia - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2023,51005,Garças Araguaia - MT,51008,Noroeste Matogrossense - MT,MC,2
+2023,51005,Garças Araguaia - MT,51009,Norte Araguaia Karajá - MT,MC,3
+2023,51005,Garças Araguaia - MT,51011,Oeste Matogrossense - MT,MC,7
+2023,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,AC,18
+2023,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,MC,240
+2023,51005,Garças Araguaia - MT,51014,Teles Pires - MT,AC,4
+2023,51005,Garças Araguaia - MT,51014,Teles Pires - MT,MC,12
+2023,51005,Garças Araguaia - MT,51015,Vale do Peixoto - MT,MC,1
+2023,51005,Garças Araguaia - MT,51016,Vale dos Arinos - MT,MC,2
+2023,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,AC,76
+2023,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,MC,300
+2023,51006,Médio Araguaia - MT,51003,Araguaia Xingu - MT,MC,5
+2023,51006,Médio Araguaia - MT,51005,Garças Araguaia - MT,MC,85
+2023,51006,Médio Araguaia - MT,51006,Médio Araguaia - MT,AC,4
+2023,51006,Médio Araguaia - MT,51006,Médio Araguaia - MT,MC,7733
+2023,51006,Médio Araguaia - MT,51009,Norte Araguaia Karajá - MT,MC,10
+2023,51006,Médio Araguaia - MT,51010,Norte Matogrossense - MT,MC,2
+2023,51006,Médio Araguaia - MT,51011,Oeste Matogrossense - MT,MC,1
+2023,51006,Médio Araguaia - MT,51013,Sul Matogrossense - MT,MC,44
+2023,51006,Médio Araguaia - MT,51014,Teles Pires - MT,AC,1
+2023,51006,Médio Araguaia - MT,51014,Teles Pires - MT,MC,17
+2023,51006,Médio Araguaia - MT,51016,Vale dos Arinos - MT,MC,1
+2023,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,423
+2023,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1955
+2023,51007,Médio Norte Matogrossense - MT,51004,Centro Norte - MT,MC,24
+2023,51007,Médio Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,5
+2023,51007,Médio Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,3
+2023,51007,Médio Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,9511
+2023,51007,Médio Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,36
+2023,51007,Médio Norte Matogrossense - MT,51009,Norte Araguaia Karajá - MT,MC,1
+2023,51007,Médio Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,24
+2023,51007,Médio Norte Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,15
+2023,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,AC,3
+2023,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,82
+2023,51007,Médio Norte Matogrossense - MT,51014,Teles Pires - MT,AC,3
+2023,51007,Médio Norte Matogrossense - MT,51014,Teles Pires - MT,MC,83
+2023,51007,Médio Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,8
+2023,51007,Médio Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,14
+2023,51008,Noroeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,4
+2023,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,276
+2023,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1133
+2023,51008,Noroeste Matogrossense - MT,51004,Centro Norte - MT,MC,9
+2023,51008,Noroeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2023,51008,Noroeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,1
+2023,51008,Noroeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,15
+2023,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,AC,6
+2023,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,9511
+2023,51008,Noroeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,7
+2023,51008,Noroeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,7
+2023,51008,Noroeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,2
+2023,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,7
+2023,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,34
+2023,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,AC,1
+2023,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,MC,64
+2023,51008,Noroeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,3
+2023,51008,Noroeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,18
+2023,51009,Norte Araguaia Karajá - MT,51001,Alto Tapajós - MT,MC,1
+2023,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,AC,21
+2023,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,MC,88
+2023,51009,Norte Araguaia Karajá - MT,51003,Araguaia Xingu - MT,MC,25
+2023,51009,Norte Araguaia Karajá - MT,51005,Garças Araguaia - MT,MC,20
+2023,51009,Norte Araguaia Karajá - MT,51006,Médio Araguaia - MT,MC,235
+2023,51009,Norte Araguaia Karajá - MT,51009,Norte Araguaia Karajá - MT,MC,1263
+2023,51009,Norte Araguaia Karajá - MT,51013,Sul Matogrossense - MT,AC,1
+2023,51009,Norte Araguaia Karajá - MT,51013,Sul Matogrossense - MT,MC,4
+2023,51009,Norte Araguaia Karajá - MT,51014,Teles Pires - MT,MC,7
+2023,51009,Norte Araguaia Karajá - MT,51016,Vale dos Arinos - MT,MC,2
+2023,51010,Norte Matogrossense - MT,51001,Alto Tapajós - MT,MC,44
+2023,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,95
+2023,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,311
+2023,51010,Norte Matogrossense - MT,51004,Centro Norte - MT,MC,1
+2023,51010,Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2023,51010,Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,2
+2023,51010,Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,1
+2023,51010,Norte Matogrossense - MT,51010,Norte Matogrossense - MT,AC,1
+2023,51010,Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,3251
+2023,51010,Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,2
+2023,51010,Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,9
+2023,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,AC,137
+2023,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,MC,294
+2023,51010,Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,57
+2023,51010,Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,5
+2023,51011,Oeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2023,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,196
+2023,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,868
+2023,51011,Oeste Matogrossense - MT,51004,Centro Norte - MT,MC,2
+2023,51011,Oeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,2
+2023,51011,Oeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,4
+2023,51011,Oeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,12
+2023,51011,Oeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,7
+2023,51011,Oeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,3
+2023,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,10
+2023,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,12386
+2023,51011,Oeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,16
+2023,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,3
+2023,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,47
+2023,51011,Oeste Matogrossense - MT,51014,Teles Pires - MT,MC,30
+2023,51011,Oeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,3
+2023,51011,Oeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,1
+2023,51012,Sudoeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2023,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,186
+2023,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,666
+2023,51012,Sudoeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,3
+2023,51012,Sudoeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,6
+2023,51012,Sudoeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,6
+2023,51012,Sudoeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,2
+2023,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,5
+2023,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1383
+2023,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,AC,2
+2023,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,7834
+2023,51012,Sudoeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,6
+2023,51012,Sudoeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,28
+2023,51012,Sudoeste Matogrossense - MT,51014,Teles Pires - MT,MC,21
+2023,51012,Sudoeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,5
+2023,51012,Sudoeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,2
+2023,51013,Sul Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2023,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,387
+2023,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1140
+2023,51013,Sul Matogrossense - MT,51003,Araguaia Xingu - MT,MC,3
+2023,51013,Sul Matogrossense - MT,51004,Centro Norte - MT,MC,8
+2023,51013,Sul Matogrossense - MT,51005,Garças Araguaia - MT,MC,71
+2023,51013,Sul Matogrossense - MT,51006,Médio Araguaia - MT,MC,16
+2023,51013,Sul Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,4
+2023,51013,Sul Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,10
+2023,51013,Sul Matogrossense - MT,51009,Norte Araguaia Karajá - MT,MC,2
+2023,51013,Sul Matogrossense - MT,51010,Norte Matogrossense - MT,MC,1
+2023,51013,Sul Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,17
+2023,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,AC,2419
+2023,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,MC,39378
+2023,51013,Sul Matogrossense - MT,51014,Teles Pires - MT,AC,7
+2023,51013,Sul Matogrossense - MT,51014,Teles Pires - MT,MC,70
+2023,51013,Sul Matogrossense - MT,51015,Vale do Peixoto - MT,MC,7
+2023,51013,Sul Matogrossense - MT,51016,Vale dos Arinos - MT,MC,4
+2023,51014,Teles Pires - MT,51001,Alto Tapajós - MT,MC,203
+2023,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,AC,343
+2023,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,MC,1158
+2023,51014,Teles Pires - MT,51003,Araguaia Xingu - MT,MC,2
+2023,51014,Teles Pires - MT,51004,Centro Norte - MT,MC,54
+2023,51014,Teles Pires - MT,51005,Garças Araguaia - MT,MC,2
+2023,51014,Teles Pires - MT,51006,Médio Araguaia - MT,MC,12
+2023,51014,Teles Pires - MT,51007,Médio Norte Matogrossense - MT,MC,46
+2023,51014,Teles Pires - MT,51008,Noroeste Matogrossense - MT,MC,18
+2023,51014,Teles Pires - MT,51009,Norte Araguaia Karajá - MT,MC,3
+2023,51014,Teles Pires - MT,51010,Norte Matogrossense - MT,MC,302
+2023,51014,Teles Pires - MT,51011,Oeste Matogrossense - MT,MC,17
+2023,51014,Teles Pires - MT,51012,Sudoeste Matogrossense - MT,MC,2
+2023,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,AC,11
+2023,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,MC,99
+2023,51014,Teles Pires - MT,51014,Teles Pires - MT,AC,1118
+2023,51014,Teles Pires - MT,51014,Teles Pires - MT,MC,25500
+2023,51014,Teles Pires - MT,51015,Vale do Peixoto - MT,MC,78
+2023,51014,Teles Pires - MT,51016,Vale dos Arinos - MT,MC,55
+2023,51015,Vale do Peixoto - MT,51001,Alto Tapajós - MT,MC,14
+2023,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,AC,143
+2023,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,MC,313
+2023,51015,Vale do Peixoto - MT,51004,Centro Norte - MT,MC,4
+2023,51015,Vale do Peixoto - MT,51005,Garças Araguaia - MT,MC,1
+2023,51015,Vale do Peixoto - MT,51006,Médio Araguaia - MT,MC,2
+2023,51015,Vale do Peixoto - MT,51008,Noroeste Matogrossense - MT,MC,3
+2023,51015,Vale do Peixoto - MT,51010,Norte Matogrossense - MT,MC,68
+2023,51015,Vale do Peixoto - MT,51011,Oeste Matogrossense - MT,MC,1
+2023,51015,Vale do Peixoto - MT,51013,Sul Matogrossense - MT,MC,4
+2023,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,AC,52
+2023,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,MC,243
+2023,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,MC,6782
+2023,51015,Vale do Peixoto - MT,51016,Vale dos Arinos - MT,MC,6
+2023,51016,Vale dos Arinos - MT,51001,Alto Tapajós - MT,MC,6
+2023,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,AC,53
+2023,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,MC,229
+2023,51016,Vale dos Arinos - MT,51008,Noroeste Matogrossense - MT,MC,35
+2023,51016,Vale dos Arinos - MT,51010,Norte Matogrossense - MT,MC,7
+2023,51016,Vale dos Arinos - MT,51011,Oeste Matogrossense - MT,MC,7
+2023,51016,Vale dos Arinos - MT,51013,Sul Matogrossense - MT,MC,7
+2023,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,AC,8
+2023,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,MC,209
+2023,51016,Vale dos Arinos - MT,51015,Vale do Peixoto - MT,MC,6
+2023,51016,Vale dos Arinos - MT,51016,Vale dos Arinos - MT,MC,2875
+2024,51001,Alto Tapajós - MT,51001,Alto Tapajós - MT,AC,2
+2024,51001,Alto Tapajós - MT,51001,Alto Tapajós - MT,MC,7010
+2024,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,AC,154
+2024,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,MC,303
+2024,51001,Alto Tapajós - MT,51004,Centro Norte - MT,MC,2
+2024,51001,Alto Tapajós - MT,51008,Noroeste Matogrossense - MT,MC,3
+2024,51001,Alto Tapajós - MT,51010,Norte Matogrossense - MT,MC,75
+2024,51001,Alto Tapajós - MT,51011,Oeste Matogrossense - MT,MC,2
+2024,51001,Alto Tapajós - MT,51013,Sul Matogrossense - MT,AC,2
+2024,51001,Alto Tapajós - MT,51013,Sul Matogrossense - MT,MC,18
+2024,51001,Alto Tapajós - MT,51014,Teles Pires - MT,AC,130
+2024,51001,Alto Tapajós - MT,51014,Teles Pires - MT,MC,375
+2024,51001,Alto Tapajós - MT,51015,Vale do Peixoto - MT,MC,6
+2024,51001,Alto Tapajós - MT,51016,Vale dos Arinos - MT,MC,15
+2024,51002,Baixada Cuiabana - MT,51001,Alto Tapajós - MT,MC,2
+2024,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,AC,3814
+2024,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,MC,52417
+2024,51002,Baixada Cuiabana - MT,51004,Centro Norte - MT,MC,33
+2024,51002,Baixada Cuiabana - MT,51005,Garças Araguaia - MT,MC,28
+2024,51002,Baixada Cuiabana - MT,51006,Médio Araguaia - MT,MC,9
+2024,51002,Baixada Cuiabana - MT,51007,Médio Norte Matogrossense - MT,MC,26
+2024,51002,Baixada Cuiabana - MT,51008,Noroeste Matogrossense - MT,MC,6
+2024,51002,Baixada Cuiabana - MT,51009,Norte Araguaia Karajá - MT,MC,2
+2024,51002,Baixada Cuiabana - MT,51010,Norte Matogrossense - MT,MC,3
+2024,51002,Baixada Cuiabana - MT,51011,Oeste Matogrossense - MT,MC,25
+2024,51002,Baixada Cuiabana - MT,51012,Sudoeste Matogrossense - MT,MC,7
+2024,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,AC,24
+2024,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,MC,259
+2024,51002,Baixada Cuiabana - MT,51014,Teles Pires - MT,AC,2
+2024,51002,Baixada Cuiabana - MT,51014,Teles Pires - MT,MC,164
+2024,51002,Baixada Cuiabana - MT,51015,Vale do Peixoto - MT,MC,12
+2024,51002,Baixada Cuiabana - MT,51016,Vale dos Arinos - MT,MC,2
+2024,51003,Araguaia Xingu - MT,51001,Alto Tapajós - MT,MC,2
+2024,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,AC,74
+2024,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,MC,645
+2024,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,AC,4
+2024,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,MC,5955
+2024,51003,Araguaia Xingu - MT,51005,Garças Araguaia - MT,MC,38
+2024,51003,Araguaia Xingu - MT,51006,Médio Araguaia - MT,MC,42
+2024,51003,Araguaia Xingu - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2024,51003,Araguaia Xingu - MT,51008,Noroeste Matogrossense - MT,MC,1
+2024,51003,Araguaia Xingu - MT,51009,Norte Araguaia Karajá - MT,MC,36
+2024,51003,Araguaia Xingu - MT,51010,Norte Matogrossense - MT,MC,2
+2024,51003,Araguaia Xingu - MT,51011,Oeste Matogrossense - MT,MC,1
+2024,51003,Araguaia Xingu - MT,51013,Sul Matogrossense - MT,AC,1
+2024,51003,Araguaia Xingu - MT,51013,Sul Matogrossense - MT,MC,22
+2024,51003,Araguaia Xingu - MT,51014,Teles Pires - MT,MC,17
+2024,51003,Araguaia Xingu - MT,51015,Vale do Peixoto - MT,MC,6
+2024,51004,Centro Norte - MT,51001,Alto Tapajós - MT,MC,1
+2024,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,AC,210
+2024,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,MC,1610
+2024,51004,Centro Norte - MT,51004,Centro Norte - MT,MC,4575
+2024,51004,Centro Norte - MT,51006,Médio Araguaia - MT,MC,3
+2024,51004,Centro Norte - MT,51007,Médio Norte Matogrossense - MT,MC,50
+2024,51004,Centro Norte - MT,51008,Noroeste Matogrossense - MT,MC,1
+2024,51004,Centro Norte - MT,51010,Norte Matogrossense - MT,MC,1
+2024,51004,Centro Norte - MT,51011,Oeste Matogrossense - MT,MC,2
+2024,51004,Centro Norte - MT,51013,Sul Matogrossense - MT,MC,45
+2024,51004,Centro Norte - MT,51014,Teles Pires - MT,AC,21
+2024,51004,Centro Norte - MT,51014,Teles Pires - MT,MC,271
+2024,51004,Centro Norte - MT,51015,Vale do Peixoto - MT,MC,2
+2024,51004,Centro Norte - MT,51016,Vale dos Arinos - MT,MC,1
+2024,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,AC,130
+2024,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,MC,530
+2024,51005,Garças Araguaia - MT,51003,Araguaia Xingu - MT,MC,5
+2024,51005,Garças Araguaia - MT,51004,Centro Norte - MT,MC,2
+2024,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,AC,3
+2024,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,MC,7776
+2024,51005,Garças Araguaia - MT,51006,Médio Araguaia - MT,AC,2
+2024,51005,Garças Araguaia - MT,51006,Médio Araguaia - MT,MC,615
+2024,51005,Garças Araguaia - MT,51007,Médio Norte Matogrossense - MT,MC,3
+2024,51005,Garças Araguaia - MT,51009,Norte Araguaia Karajá - MT,MC,11
+2024,51005,Garças Araguaia - MT,51010,Norte Matogrossense - MT,MC,2
+2024,51005,Garças Araguaia - MT,51011,Oeste Matogrossense - MT,MC,7
+2024,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,AC,6
+2024,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,MC,214
+2024,51005,Garças Araguaia - MT,51014,Teles Pires - MT,AC,7
+2024,51005,Garças Araguaia - MT,51014,Teles Pires - MT,MC,14
+2024,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,AC,131
+2024,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,MC,337
+2024,51006,Médio Araguaia - MT,51003,Araguaia Xingu - MT,MC,4
+2024,51006,Médio Araguaia - MT,51005,Garças Araguaia - MT,MC,165
+2024,51006,Médio Araguaia - MT,51006,Médio Araguaia - MT,MC,8486
+2024,51006,Médio Araguaia - MT,51007,Médio Norte Matogrossense - MT,MC,3
+2024,51006,Médio Araguaia - MT,51009,Norte Araguaia Karajá - MT,MC,17
+2024,51006,Médio Araguaia - MT,51011,Oeste Matogrossense - MT,MC,2
+2024,51006,Médio Araguaia - MT,51013,Sul Matogrossense - MT,AC,1
+2024,51006,Médio Araguaia - MT,51013,Sul Matogrossense - MT,MC,52
+2024,51006,Médio Araguaia - MT,51014,Teles Pires - MT,MC,10
+2024,51006,Médio Araguaia - MT,51015,Vale do Peixoto - MT,MC,2
+2024,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,485
+2024,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,2030
+2024,51007,Médio Norte Matogrossense - MT,51003,Araguaia Xingu - MT,MC,1
+2024,51007,Médio Norte Matogrossense - MT,51004,Centro Norte - MT,MC,33
+2024,51007,Médio Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,19
+2024,51007,Médio Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,3
+2024,51007,Médio Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,AC,2
+2024,51007,Médio Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,13001
+2024,51007,Médio Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,4
+2024,51007,Médio Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,1
+2024,51007,Médio Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,1
+2024,51007,Médio Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,32
+2024,51007,Médio Norte Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,8
+2024,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,AC,13
+2024,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,73
+2024,51007,Médio Norte Matogrossense - MT,51014,Teles Pires - MT,AC,4
+2024,51007,Médio Norte Matogrossense - MT,51014,Teles Pires - MT,MC,141
+2024,51007,Médio Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,6
+2024,51007,Médio Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,8
+2024,51008,Noroeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,8
+2024,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,313
+2024,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1442
+2024,51008,Noroeste Matogrossense - MT,51004,Centro Norte - MT,MC,4
+2024,51008,Noroeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2024,51008,Noroeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,2
+2024,51008,Noroeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,23
+2024,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,AC,13
+2024,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,9626
+2024,51008,Noroeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,2
+2024,51008,Noroeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,8
+2024,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,1
+2024,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,18
+2024,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,AC,4
+2024,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,MC,50
+2024,51008,Noroeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,3
+2024,51008,Noroeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,19
+2024,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,AC,22
+2024,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,MC,115
+2024,51009,Norte Araguaia Karajá - MT,51003,Araguaia Xingu - MT,MC,43
+2024,51009,Norte Araguaia Karajá - MT,51005,Garças Araguaia - MT,MC,37
+2024,51009,Norte Araguaia Karajá - MT,51006,Médio Araguaia - MT,MC,285
+2024,51009,Norte Araguaia Karajá - MT,51009,Norte Araguaia Karajá - MT,MC,1451
+2024,51009,Norte Araguaia Karajá - MT,51010,Norte Matogrossense - MT,MC,1
+2024,51009,Norte Araguaia Karajá - MT,51011,Oeste Matogrossense - MT,MC,1
+2024,51009,Norte Araguaia Karajá - MT,51013,Sul Matogrossense - MT,MC,5
+2024,51009,Norte Araguaia Karajá - MT,51014,Teles Pires - MT,AC,1
+2024,51009,Norte Araguaia Karajá - MT,51014,Teles Pires - MT,MC,8
+2024,51009,Norte Araguaia Karajá - MT,51015,Vale do Peixoto - MT,MC,1
+2024,51010,Norte Matogrossense - MT,51001,Alto Tapajós - MT,MC,43
+2024,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,100
+2024,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,283
+2024,51010,Norte Matogrossense - MT,51003,Araguaia Xingu - MT,MC,1
+2024,51010,Norte Matogrossense - MT,51004,Centro Norte - MT,MC,2
+2024,51010,Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,4
+2024,51010,Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,4
+2024,51010,Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,1
+2024,51010,Norte Matogrossense - MT,51009,Norte Araguaia Karajá - MT,MC,2
+2024,51010,Norte Matogrossense - MT,51010,Norte Matogrossense - MT,AC,1
+2024,51010,Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,3720
+2024,51010,Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1
+2024,51010,Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,9
+2024,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,AC,172
+2024,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,MC,374
+2024,51010,Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,36
+2024,51010,Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,6
+2024,51011,Oeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,1
+2024,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,263
+2024,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,908
+2024,51011,Oeste Matogrossense - MT,51004,Centro Norte - MT,MC,2
+2024,51011,Oeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,2
+2024,51011,Oeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,2
+2024,51011,Oeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,7
+2024,51011,Oeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,2
+2024,51011,Oeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,1
+2024,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,49
+2024,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,13383
+2024,51011,Oeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,9
+2024,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,2
+2024,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,54
+2024,51011,Oeste Matogrossense - MT,51014,Teles Pires - MT,AC,6
+2024,51011,Oeste Matogrossense - MT,51014,Teles Pires - MT,MC,26
+2024,51011,Oeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,4
+2024,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,200
+2024,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,766
+2024,51012,Sudoeste Matogrossense - MT,51003,Araguaia Xingu - MT,MC,1
+2024,51012,Sudoeste Matogrossense - MT,51004,Centro Norte - MT,MC,4
+2024,51012,Sudoeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,2
+2024,51012,Sudoeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,1
+2024,51012,Sudoeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,2
+2024,51012,Sudoeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,6
+2024,51012,Sudoeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,1
+2024,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,2
+2024,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1410
+2024,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,8145
+2024,51012,Sudoeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,3
+2024,51012,Sudoeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,29
+2024,51012,Sudoeste Matogrossense - MT,51014,Teles Pires - MT,MC,34
+2024,51012,Sudoeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,4
+2024,51013,Sul Matogrossense - MT,51001,Alto Tapajós - MT,MC,2
+2024,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,411
+2024,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,961
+2024,51013,Sul Matogrossense - MT,51003,Araguaia Xingu - MT,MC,2
+2024,51013,Sul Matogrossense - MT,51004,Centro Norte - MT,MC,5
+2024,51013,Sul Matogrossense - MT,51005,Garças Araguaia - MT,MC,106
+2024,51013,Sul Matogrossense - MT,51006,Médio Araguaia - MT,MC,32
+2024,51013,Sul Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,3
+2024,51013,Sul Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,2
+2024,51013,Sul Matogrossense - MT,51009,Norte Araguaia Karajá - MT,MC,3
+2024,51013,Sul Matogrossense - MT,51010,Norte Matogrossense - MT,MC,1
+2024,51013,Sul Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,10
+2024,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,AC,2463
+2024,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,MC,41136
+2024,51013,Sul Matogrossense - MT,51014,Teles Pires - MT,AC,9
+2024,51013,Sul Matogrossense - MT,51014,Teles Pires - MT,MC,95
+2024,51013,Sul Matogrossense - MT,51015,Vale do Peixoto - MT,MC,2
+2024,51013,Sul Matogrossense - MT,51016,Vale dos Arinos - MT,MC,5
+2024,51014,Teles Pires - MT,51001,Alto Tapajós - MT,MC,146
+2024,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,AC,295
+2024,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,MC,1050
+2024,51014,Teles Pires - MT,51003,Araguaia Xingu - MT,MC,1
+2024,51014,Teles Pires - MT,51004,Centro Norte - MT,MC,49
+2024,51014,Teles Pires - MT,51005,Garças Araguaia - MT,MC,9
+2024,51014,Teles Pires - MT,51006,Médio Araguaia - MT,MC,16
+2024,51014,Teles Pires - MT,51007,Médio Norte Matogrossense - MT,MC,21
+2024,51014,Teles Pires - MT,51008,Noroeste Matogrossense - MT,MC,3
+2024,51014,Teles Pires - MT,51010,Norte Matogrossense - MT,MC,197
+2024,51014,Teles Pires - MT,51011,Oeste Matogrossense - MT,MC,6
+2024,51014,Teles Pires - MT,51012,Sudoeste Matogrossense - MT,MC,1
+2024,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,AC,6
+2024,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,MC,78
+2024,51014,Teles Pires - MT,51014,Teles Pires - MT,AC,1257
+2024,51014,Teles Pires - MT,51014,Teles Pires - MT,MC,28650
+2024,51014,Teles Pires - MT,51015,Vale do Peixoto - MT,MC,84
+2024,51014,Teles Pires - MT,51016,Vale dos Arinos - MT,MC,34
+2024,51015,Vale do Peixoto - MT,51001,Alto Tapajós - MT,MC,23
+2024,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,AC,182
+2024,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,MC,360
+2024,51015,Vale do Peixoto - MT,51004,Centro Norte - MT,MC,1
+2024,51015,Vale do Peixoto - MT,51005,Garças Araguaia - MT,MC,1
+2024,51015,Vale do Peixoto - MT,51007,Médio Norte Matogrossense - MT,MC,1
+2024,51015,Vale do Peixoto - MT,51009,Norte Araguaia Karajá - MT,MC,1
+2024,51015,Vale do Peixoto - MT,51010,Norte Matogrossense - MT,MC,80
+2024,51015,Vale do Peixoto - MT,51011,Oeste Matogrossense - MT,MC,1
+2024,51015,Vale do Peixoto - MT,51013,Sul Matogrossense - MT,MC,11
+2024,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,AC,73
+2024,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,MC,377
+2024,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,AC,66
+2024,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,MC,6043
+2024,51015,Vale do Peixoto - MT,51016,Vale dos Arinos - MT,MC,3
+2024,51016,Vale dos Arinos - MT,51001,Alto Tapajós - MT,MC,6
+2024,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,AC,66
+2024,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,MC,210
+2024,51016,Vale dos Arinos - MT,51004,Centro Norte - MT,MC,1
+2024,51016,Vale dos Arinos - MT,51006,Médio Araguaia - MT,MC,1
+2024,51016,Vale dos Arinos - MT,51007,Médio Norte Matogrossense - MT,MC,2
+2024,51016,Vale dos Arinos - MT,51008,Noroeste Matogrossense - MT,MC,17
+2024,51016,Vale dos Arinos - MT,51010,Norte Matogrossense - MT,MC,14
+2024,51016,Vale dos Arinos - MT,51011,Oeste Matogrossense - MT,MC,4
+2024,51016,Vale dos Arinos - MT,51013,Sul Matogrossense - MT,MC,2
+2024,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,AC,16
+2024,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,MC,248
+2024,51016,Vale dos Arinos - MT,51015,Vale do Peixoto - MT,MC,1
+2024,51016,Vale dos Arinos - MT,51016,Vale dos Arinos - MT,AC,1
+2024,51016,Vale dos Arinos - MT,51016,Vale dos Arinos - MT,MC,3346
+2025,51001,Alto Tapajós - MT,51001,Alto Tapajós - MT,MC,8071
+2025,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,AC,168
+2025,51001,Alto Tapajós - MT,51002,Baixada Cuiabana - MT,MC,347
+2025,51001,Alto Tapajós - MT,51006,Médio Araguaia - MT,MC,1
+2025,51001,Alto Tapajós - MT,51008,Noroeste Matogrossense - MT,MC,4
+2025,51001,Alto Tapajós - MT,51010,Norte Matogrossense - MT,MC,58
+2025,51001,Alto Tapajós - MT,51011,Oeste Matogrossense - MT,MC,3
+2025,51001,Alto Tapajós - MT,51013,Sul Matogrossense - MT,AC,1
+2025,51001,Alto Tapajós - MT,51013,Sul Matogrossense - MT,MC,12
+2025,51001,Alto Tapajós - MT,51014,Teles Pires - MT,AC,130
+2025,51001,Alto Tapajós - MT,51014,Teles Pires - MT,MC,338
+2025,51001,Alto Tapajós - MT,51015,Vale do Peixoto - MT,MC,18
+2025,51001,Alto Tapajós - MT,51016,Vale dos Arinos - MT,MC,9
+2025,51002,Baixada Cuiabana - MT,51001,Alto Tapajós - MT,MC,1
+2025,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,AC,4332
+2025,51002,Baixada Cuiabana - MT,51002,Baixada Cuiabana - MT,MC,58092
+2025,51002,Baixada Cuiabana - MT,51004,Centro Norte - MT,MC,15
+2025,51002,Baixada Cuiabana - MT,51005,Garças Araguaia - MT,AC,1
+2025,51002,Baixada Cuiabana - MT,51005,Garças Araguaia - MT,MC,25
+2025,51002,Baixada Cuiabana - MT,51006,Médio Araguaia - MT,MC,14
+2025,51002,Baixada Cuiabana - MT,51007,Médio Norte Matogrossense - MT,MC,13
+2025,51002,Baixada Cuiabana - MT,51008,Noroeste Matogrossense - MT,MC,10
+2025,51002,Baixada Cuiabana - MT,51009,Norte Araguaia Karajá - MT,MC,2
+2025,51002,Baixada Cuiabana - MT,51010,Norte Matogrossense - MT,MC,2
+2025,51002,Baixada Cuiabana - MT,51011,Oeste Matogrossense - MT,MC,23
+2025,51002,Baixada Cuiabana - MT,51012,Sudoeste Matogrossense - MT,MC,7
+2025,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,AC,16
+2025,51002,Baixada Cuiabana - MT,51013,Sul Matogrossense - MT,MC,243
+2025,51002,Baixada Cuiabana - MT,51014,Teles Pires - MT,AC,8
+2025,51002,Baixada Cuiabana - MT,51014,Teles Pires - MT,MC,167
+2025,51002,Baixada Cuiabana - MT,51015,Vale do Peixoto - MT,MC,13
+2025,51002,Baixada Cuiabana - MT,51016,Vale dos Arinos - MT,MC,4
+2025,51003,Araguaia Xingu - MT,51001,Alto Tapajós - MT,MC,2
+2025,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,AC,107
+2025,51003,Araguaia Xingu - MT,51002,Baixada Cuiabana - MT,MC,657
+2025,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,AC,3
+2025,51003,Araguaia Xingu - MT,51003,Araguaia Xingu - MT,MC,6333
+2025,51003,Araguaia Xingu - MT,51005,Garças Araguaia - MT,AC,1
+2025,51003,Araguaia Xingu - MT,51005,Garças Araguaia - MT,MC,112
+2025,51003,Araguaia Xingu - MT,51006,Médio Araguaia - MT,MC,42
+2025,51003,Araguaia Xingu - MT,51008,Noroeste Matogrossense - MT,MC,2
+2025,51003,Araguaia Xingu - MT,51009,Norte Araguaia Karajá - MT,MC,29
+2025,51003,Araguaia Xingu - MT,51010,Norte Matogrossense - MT,MC,6
+2025,51003,Araguaia Xingu - MT,51011,Oeste Matogrossense - MT,MC,2
+2025,51003,Araguaia Xingu - MT,51013,Sul Matogrossense - MT,AC,1
+2025,51003,Araguaia Xingu - MT,51013,Sul Matogrossense - MT,MC,8
+2025,51003,Araguaia Xingu - MT,51014,Teles Pires - MT,AC,4
+2025,51003,Araguaia Xingu - MT,51014,Teles Pires - MT,MC,10
+2025,51003,Araguaia Xingu - MT,51015,Vale do Peixoto - MT,MC,13
+2025,51004,Centro Norte - MT,51001,Alto Tapajós - MT,MC,1
+2025,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,AC,263
+2025,51004,Centro Norte - MT,51002,Baixada Cuiabana - MT,MC,1781
+2025,51004,Centro Norte - MT,51004,Centro Norte - MT,MC,4569
+2025,51004,Centro Norte - MT,51006,Médio Araguaia - MT,MC,1
+2025,51004,Centro Norte - MT,51007,Médio Norte Matogrossense - MT,MC,37
+2025,51004,Centro Norte - MT,51008,Noroeste Matogrossense - MT,MC,6
+2025,51004,Centro Norte - MT,51010,Norte Matogrossense - MT,MC,1
+2025,51004,Centro Norte - MT,51011,Oeste Matogrossense - MT,MC,1
+2025,51004,Centro Norte - MT,51012,Sudoeste Matogrossense - MT,MC,3
+2025,51004,Centro Norte - MT,51013,Sul Matogrossense - MT,AC,9
+2025,51004,Centro Norte - MT,51013,Sul Matogrossense - MT,MC,30
+2025,51004,Centro Norte - MT,51014,Teles Pires - MT,AC,18
+2025,51004,Centro Norte - MT,51014,Teles Pires - MT,MC,330
+2025,51004,Centro Norte - MT,51015,Vale do Peixoto - MT,MC,1
+2025,51004,Centro Norte - MT,51016,Vale dos Arinos - MT,MC,1
+2025,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,AC,179
+2025,51005,Garças Araguaia - MT,51002,Baixada Cuiabana - MT,MC,569
+2025,51005,Garças Araguaia - MT,51003,Araguaia Xingu - MT,MC,3
+2025,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,AC,40
+2025,51005,Garças Araguaia - MT,51005,Garças Araguaia - MT,MC,8031
+2025,51005,Garças Araguaia - MT,51006,Médio Araguaia - MT,MC,588
+2025,51005,Garças Araguaia - MT,51008,Noroeste Matogrossense - MT,MC,1
+2025,51005,Garças Araguaia - MT,51009,Norte Araguaia Karajá - MT,MC,6
+2025,51005,Garças Araguaia - MT,51011,Oeste Matogrossense - MT,MC,4
+2025,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,AC,2
+2025,51005,Garças Araguaia - MT,51013,Sul Matogrossense - MT,MC,281
+2025,51005,Garças Araguaia - MT,51014,Teles Pires - MT,AC,6
+2025,51005,Garças Araguaia - MT,51014,Teles Pires - MT,MC,15
+2025,51005,Garças Araguaia - MT,51016,Vale dos Arinos - MT,MC,1
+2025,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,AC,172
+2025,51006,Médio Araguaia - MT,51002,Baixada Cuiabana - MT,MC,496
+2025,51006,Médio Araguaia - MT,51003,Araguaia Xingu - MT,MC,7
+2025,51006,Médio Araguaia - MT,51005,Garças Araguaia - MT,AC,3
+2025,51006,Médio Araguaia - MT,51005,Garças Araguaia - MT,MC,255
+2025,51006,Médio Araguaia - MT,51006,Médio Araguaia - MT,AC,12
+2025,51006,Médio Araguaia - MT,51006,Médio Araguaia - MT,MC,9040
+2025,51006,Médio Araguaia - MT,51009,Norte Araguaia Karajá - MT,MC,52
+2025,51006,Médio Araguaia - MT,51010,Norte Matogrossense - MT,MC,1
+2025,51006,Médio Araguaia - MT,51013,Sul Matogrossense - MT,MC,39
+2025,51006,Médio Araguaia - MT,51014,Teles Pires - MT,MC,31
+2025,51006,Médio Araguaia - MT,51015,Vale do Peixoto - MT,MC,3
+2025,51006,Médio Araguaia - MT,51016,Vale dos Arinos - MT,MC,2
+2025,51007,Médio Norte Matogrossense - MT,51001,Alto Tapajós - MT,MC,2
+2025,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,618
+2025,51007,Médio Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,2239
+2025,51007,Médio Norte Matogrossense - MT,51003,Araguaia Xingu - MT,MC,1
+2025,51007,Médio Norte Matogrossense - MT,51004,Centro Norte - MT,MC,13
+2025,51007,Médio Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,9
+2025,51007,Médio Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,4
+2025,51007,Médio Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,AC,3
+2025,51007,Médio Norte Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,13782
+2025,51007,Médio Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,12
+2025,51007,Médio Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,4
+2025,51007,Médio Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,21
+2025,51007,Médio Norte Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,22
+2025,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,AC,2
+2025,51007,Médio Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,72
+2025,51007,Médio Norte Matogrossense - MT,51014,Teles Pires - MT,AC,18
+2025,51007,Médio Norte Matogrossense - MT,51014,Teles Pires - MT,MC,149
+2025,51007,Médio Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,3
+2025,51007,Médio Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,8
+2025,51008,Noroeste Matogrossense - MT,51001,Alto Tapajós - MT,MC,4
+2025,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,421
+2025,51008,Noroeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1668
+2025,51008,Noroeste Matogrossense - MT,51004,Centro Norte - MT,MC,1
+2025,51008,Noroeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2025,51008,Noroeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,3
+2025,51008,Noroeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,13
+2025,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,AC,6
+2025,51008,Noroeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,10638
+2025,51008,Noroeste Matogrossense - MT,51010,Norte Matogrossense - MT,MC,5
+2025,51008,Noroeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,11
+2025,51008,Noroeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,1
+2025,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,9
+2025,51008,Noroeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,14
+2025,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,AC,4
+2025,51008,Noroeste Matogrossense - MT,51014,Teles Pires - MT,MC,53
+2025,51008,Noroeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,4
+2025,51008,Noroeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,22
+2025,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,AC,29
+2025,51009,Norte Araguaia Karajá - MT,51002,Baixada Cuiabana - MT,MC,105
+2025,51009,Norte Araguaia Karajá - MT,51003,Araguaia Xingu - MT,MC,46
+2025,51009,Norte Araguaia Karajá - MT,51005,Garças Araguaia - MT,MC,33
+2025,51009,Norte Araguaia Karajá - MT,51006,Médio Araguaia - MT,MC,289
+2025,51009,Norte Araguaia Karajá - MT,51009,Norte Araguaia Karajá - MT,MC,1550
+2025,51009,Norte Araguaia Karajá - MT,51013,Sul Matogrossense - MT,AC,3
+2025,51009,Norte Araguaia Karajá - MT,51013,Sul Matogrossense - MT,MC,1
+2025,51009,Norte Araguaia Karajá - MT,51014,Teles Pires - MT,MC,4
+2025,51010,Norte Matogrossense - MT,51001,Alto Tapajós - MT,MC,67
+2025,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,168
+2025,51010,Norte Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,256
+2025,51010,Norte Matogrossense - MT,51003,Araguaia Xingu - MT,MC,1
+2025,51010,Norte Matogrossense - MT,51005,Garças Araguaia - MT,MC,1
+2025,51010,Norte Matogrossense - MT,51006,Médio Araguaia - MT,MC,2
+2025,51010,Norte Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,3
+2025,51010,Norte Matogrossense - MT,51010,Norte Matogrossense - MT,AC,1
+2025,51010,Norte Matogrossense - MT,51010,Norte Matogrossense - MT,MC,3713
+2025,51010,Norte Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1
+2025,51010,Norte Matogrossense - MT,51013,Sul Matogrossense - MT,AC,2
+2025,51010,Norte Matogrossense - MT,51013,Sul Matogrossense - MT,MC,6
+2025,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,AC,140
+2025,51010,Norte Matogrossense - MT,51014,Teles Pires - MT,MC,665
+2025,51010,Norte Matogrossense - MT,51015,Vale do Peixoto - MT,MC,30
+2025,51010,Norte Matogrossense - MT,51016,Vale dos Arinos - MT,MC,9
+2025,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,396
+2025,51011,Oeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1174
+2025,51011,Oeste Matogrossense - MT,51004,Centro Norte - MT,MC,3
+2025,51011,Oeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,3
+2025,51011,Oeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,3
+2025,51011,Oeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,12
+2025,51011,Oeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,4
+2025,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,50
+2025,51011,Oeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,13063
+2025,51011,Oeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,24
+2025,51011,Oeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,39
+2025,51011,Oeste Matogrossense - MT,51014,Teles Pires - MT,AC,5
+2025,51011,Oeste Matogrossense - MT,51014,Teles Pires - MT,MC,43
+2025,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,295
+2025,51012,Sudoeste Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,788
+2025,51012,Sudoeste Matogrossense - MT,51005,Garças Araguaia - MT,MC,2
+2025,51012,Sudoeste Matogrossense - MT,51006,Médio Araguaia - MT,MC,1
+2025,51012,Sudoeste Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,6
+2025,51012,Sudoeste Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,4
+2025,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,10
+2025,51012,Sudoeste Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,1471
+2025,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,AC,2
+2025,51012,Sudoeste Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,8528
+2025,51012,Sudoeste Matogrossense - MT,51013,Sul Matogrossense - MT,AC,3
+2025,51012,Sudoeste Matogrossense - MT,51013,Sul Matogrossense - MT,MC,28
+2025,51012,Sudoeste Matogrossense - MT,51014,Teles Pires - MT,AC,1
+2025,51012,Sudoeste Matogrossense - MT,51014,Teles Pires - MT,MC,21
+2025,51012,Sudoeste Matogrossense - MT,51015,Vale do Peixoto - MT,MC,8
+2025,51012,Sudoeste Matogrossense - MT,51016,Vale dos Arinos - MT,MC,2
+2025,51013,Sul Matogrossense - MT,51001,Alto Tapajós - MT,MC,2
+2025,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,AC,506
+2025,51013,Sul Matogrossense - MT,51002,Baixada Cuiabana - MT,MC,1212
+2025,51013,Sul Matogrossense - MT,51003,Araguaia Xingu - MT,MC,3
+2025,51013,Sul Matogrossense - MT,51004,Centro Norte - MT,MC,3
+2025,51013,Sul Matogrossense - MT,51005,Garças Araguaia - MT,AC,1
+2025,51013,Sul Matogrossense - MT,51005,Garças Araguaia - MT,MC,109
+2025,51013,Sul Matogrossense - MT,51006,Médio Araguaia - MT,MC,26
+2025,51013,Sul Matogrossense - MT,51007,Médio Norte Matogrossense - MT,MC,5
+2025,51013,Sul Matogrossense - MT,51008,Noroeste Matogrossense - MT,MC,3
+2025,51013,Sul Matogrossense - MT,51009,Norte Araguaia Karajá - MT,MC,2
+2025,51013,Sul Matogrossense - MT,51011,Oeste Matogrossense - MT,AC,2
+2025,51013,Sul Matogrossense - MT,51011,Oeste Matogrossense - MT,MC,19
+2025,51013,Sul Matogrossense - MT,51012,Sudoeste Matogrossense - MT,MC,4
+2025,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,AC,2357
+2025,51013,Sul Matogrossense - MT,51013,Sul Matogrossense - MT,MC,42504
+2025,51013,Sul Matogrossense - MT,51014,Teles Pires - MT,AC,7
+2025,51013,Sul Matogrossense - MT,51014,Teles Pires - MT,MC,65
+2025,51013,Sul Matogrossense - MT,51015,Vale do Peixoto - MT,MC,3
+2025,51013,Sul Matogrossense - MT,51016,Vale dos Arinos - MT,MC,3
+2025,51014,Teles Pires - MT,51001,Alto Tapajós - MT,MC,103
+2025,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,AC,325
+2025,51014,Teles Pires - MT,51002,Baixada Cuiabana - MT,MC,1250
+2025,51014,Teles Pires - MT,51003,Araguaia Xingu - MT,MC,1
+2025,51014,Teles Pires - MT,51004,Centro Norte - MT,MC,44
+2025,51014,Teles Pires - MT,51005,Garças Araguaia - MT,MC,3
+2025,51014,Teles Pires - MT,51006,Médio Araguaia - MT,MC,14
+2025,51014,Teles Pires - MT,51007,Médio Norte Matogrossense - MT,MC,13
+2025,51014,Teles Pires - MT,51008,Noroeste Matogrossense - MT,MC,4
+2025,51014,Teles Pires - MT,51009,Norte Araguaia Karajá - MT,MC,1
+2025,51014,Teles Pires - MT,51010,Norte Matogrossense - MT,MC,80
+2025,51014,Teles Pires - MT,51011,Oeste Matogrossense - MT,MC,2
+2025,51014,Teles Pires - MT,51012,Sudoeste Matogrossense - MT,MC,3
+2025,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,AC,1
+2025,51014,Teles Pires - MT,51013,Sul Matogrossense - MT,MC,120
+2025,51014,Teles Pires - MT,51014,Teles Pires - MT,AC,1243
+2025,51014,Teles Pires - MT,51014,Teles Pires - MT,MC,27027
+2025,51014,Teles Pires - MT,51015,Vale do Peixoto - MT,MC,92
+2025,51014,Teles Pires - MT,51016,Vale dos Arinos - MT,MC,53
+2025,51015,Vale do Peixoto - MT,51001,Alto Tapajós - MT,MC,15
+2025,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,AC,168
+2025,51015,Vale do Peixoto - MT,51002,Baixada Cuiabana - MT,MC,334
+2025,51015,Vale do Peixoto - MT,51005,Garças Araguaia - MT,MC,3
+2025,51015,Vale do Peixoto - MT,51006,Médio Araguaia - MT,MC,2
+2025,51015,Vale do Peixoto - MT,51007,Médio Norte Matogrossense - MT,MC,2
+2025,51015,Vale do Peixoto - MT,51010,Norte Matogrossense - MT,MC,76
+2025,51015,Vale do Peixoto - MT,51012,Sudoeste Matogrossense - MT,MC,1
+2025,51015,Vale do Peixoto - MT,51013,Sul Matogrossense - MT,MC,7
+2025,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,AC,67
+2025,51015,Vale do Peixoto - MT,51014,Teles Pires - MT,MC,498
+2025,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,AC,23
+2025,51015,Vale do Peixoto - MT,51015,Vale do Peixoto - MT,MC,6929
+2025,51015,Vale do Peixoto - MT,51016,Vale dos Arinos - MT,MC,2
+2025,51016,Vale dos Arinos - MT,51001,Alto Tapajós - MT,MC,8
+2025,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,AC,82
+2025,51016,Vale dos Arinos - MT,51002,Baixada Cuiabana - MT,MC,231
+2025,51016,Vale dos Arinos - MT,51005,Garças Araguaia - MT,MC,1
+2025,51016,Vale dos Arinos - MT,51008,Noroeste Matogrossense - MT,MC,12
+2025,51016,Vale dos Arinos - MT,51010,Norte Matogrossense - MT,MC,4
+2025,51016,Vale dos Arinos - MT,51011,Oeste Matogrossense - MT,MC,2
+2025,51016,Vale dos Arinos - MT,51013,Sul Matogrossense - MT,MC,3
+2025,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,AC,29
+2025,51016,Vale dos Arinos - MT,51014,Teles Pires - MT,MC,237
+2025,51016,Vale dos Arinos - MT,51015,Vale do Peixoto - MT,MC,3
+2025,51016,Vale dos Arinos - MT,51016,Vale dos Arinos - MT,MC,3702

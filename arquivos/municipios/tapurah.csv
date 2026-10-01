@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510800,Tapurah,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),14046,14380,14370,14814,15272,15638
+510800,Tapurah,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,888.334,832.3955,1412.035,1533.7714,1834.2015,1908.0082
+510800,Tapurah,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),290.0304,284.5056,380.0874,423.5167,447.9989,526.1437
+510800,Tapurah,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),410.6826,420.2394,692.6314,732.2046,915.1255,948.8051
+510800,Tapurah,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,75.7589,80.9494,83.0289,81.9287,74.807,71.3277
+510800,Tapurah,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,3.845,0.2743,5.4183,1.6487,12.4903,1.6256
+510800,Tapurah,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6201,0.5209,0.5943,0.6669,0.7661,0.9733
+510800,Tapurah,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6735,0.7218,0.8803,1.0099,1.0843,1.1197
+510800,Tapurah,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.6239,1.5939,1.6639,1.5661,1.8223,1.8839
+510800,Tapurah,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.3437,2.0515,2.6507,3.0606,2.8975,2.9946
+510800,Tapurah,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2741,0.2552,0.2317,0.2815,0.2894,0.3408
+510800,Tapurah,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.5663,1.5299,1.531,1.4851,1.4405,1.2201
+510800,Tapurah,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510800,Tapurah,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,12.815,12.5174,13.9179,15.7486,20.2986,22.0616
+510800,Tapurah,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),6,6,6,7,7,7
+510800,Tapurah,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510800,Tapurah,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510800,Tapurah,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),18,19,20,20,20,20
+510800,Tapurah,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.8478,2.7816,2.7836,2.7001,2.6192,2.5579
+510800,Tapurah,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,2,2
+510800,Tapurah,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),4,4,4,4,5,6
+510800,Tapurah,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,2.5405,1.9889,2.706,2.4966,2.663,2.4909
+510800,Tapurah,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,3.6343,1.8066,2.0697,1.8587,1.8773,2.9059
+510800,Tapurah,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.7764,2.0428,3.7635,4.9671,3.847,3.5006
+510800,Tapurah,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1482,0.1721,0.2516,0.2911,0.312,0.2867
+510800,Tapurah,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,1.7956,1.2949,11.4622,19.7511,16.9213,
+510800,Tapurah,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.0356,0.0245,0.3154,0.7442,0.8409,0.8309
+510800,Tapurah,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,5.2286,7.4997,8.3985,7.9271,7.7331,10.2835
+510800,Tapurah,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0035,0.0421,0.0291,0.0452,0.0683,0.0881
+510800,Tapurah,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,18.5106,9.4576,29.5059,35.8445,17.0246,21.9977
+510800,Tapurah,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,53.9655,44.9235,66.8754,76.0092,69.7355,72.1959
+510800,Tapurah,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,98.0769,100,90.8019,82.1092,99.6154,96.8023
+510800,Tapurah,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0,0,0.2358,1.1299,1.5385,2.0349
+510800,Tapurah,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.3231,3.6471,3.0165,3.2881,3.7385,3.5843
+510800,Tapurah,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510800,Tapurah,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,8.2561,5.1155,8.8116,9.4812,4.0328,4.4432
+510800,Tapurah,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,52.9631,69.5896,56.4261,61.9002,85.8733,82.1213
+510800,Tapurah,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,65.9631,78.9474,55.8793,53.1972,75.5869,69.6191
+510800,Tapurah,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,4.4,7,7,8.6,6.3,9
+510800,Tapurah,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",70.7,90.7,70,67.3,86.5,86.2
+510800,Tapurah,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,8.8889,13.8249,7.9681,13.5747,18.5185,
+510800,Tapurah,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.8412,5.007,4.7321,5.1978,5.4348,
+510800,Tapurah,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,85.33,83.41,85.26,79.19,87.96,
+510800,Tapurah,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,9.33,10.6,7.57,9.5,8.33,
+510800,Tapurah,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,57.78,61.75,62.55,65.16,64.81,
+510800,Tapurah,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.22,14.29,14.34,11.31,13.89,

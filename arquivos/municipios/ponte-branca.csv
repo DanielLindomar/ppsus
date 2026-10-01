@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510670,Ponte Branca,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),1550,1525,2008,2042,2076,2098
+510670,Ponte Branca,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,2757.1728,2942.2578,2802.292,3174.5962,3787.6031,4534.5765
+510670,Ponte Branca,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),601.4022,824.6092,841.4555,669.8825,795.2472,1271.1135
+510670,Ponte Branca,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),1671.9254,1691.2867,1540.1885,2091.0071,2097.9923,2429.4981
+510670,Ponte Branca,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,51.928,70.8863,68.2228,69.2178,59.8247,69.8599
+510670,Ponte Branca,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,10.5351,9.6747,11.7761,5.9964,6.0103,14.2675
+510670,Ponte Branca,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.9032,1.7967,1.4741,1.9589,2.264,1.7541
+510670,Ponte Branca,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.9355,1.8557,1.5339,1.9589,2.2495,2.3832
+510670,Ponte Branca,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,7.0968,7.5934,5.3536,6.3663,6.9846,7.469
+510670,Ponte Branca,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,7.7419,7.9803,6.5139,6.6944,6.421,5.3241
+510670,Ponte Branca,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.9677,0.6557,0.5179,0.8178,0.9634,0.9533
+510670,Ponte Branca,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,13.5484,12.623,8.7151,8.9765,8.1888,8.103
+510670,Ponte Branca,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510670,Ponte Branca,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,109.6774,166.6885,131.1255,203.6239,294.6532,291.5634
+510670,Ponte Branca,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),1,1,1,1,1,1
+510670,Ponte Branca,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510670,Ponte Branca,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510670,Ponte Branca,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),6,6,6,6,6,6
+510670,Ponte Branca,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,6.4516,6.5574,4.9801,4.8972,4.817,4.7664
+510670,Ponte Branca,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510670,Ponte Branca,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),1,1,1,1,1,1
+510670,Ponte Branca,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.8826,1.2898,2.5224,3.2752,3.697,3.7879
+510670,Ponte Branca,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.5703,1.537,2.3725,3.4667,3.8165,3.5419
+510670,Ponte Branca,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,4.7252,4.3711,4.0393,6.5867,5.8757,9.4266
+510670,Ponte Branca,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.2219,0.3948,0.4213,0.5548,1.0303,0.7688
+510670,Ponte Branca,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,14.5625,28.1429,31.0625,38.1538,25.9167,
+510670,Ponte Branca,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.5865,0.5823,0.6663,0.5681,0.6835,0.5682
+510670,Ponte Branca,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,5.1226,5.8105,12.4128,20.2537,23.2283,20.5596
+510670,Ponte Branca,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0013,0.0262,0,0.0034,0.0024,0
+510670,Ponte Branca,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,32.2581,66.2295,52.7888,74.4368,55.395,33.8418
+510670,Ponte Branca,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,50.3226,85.2459,78.6853,105.7786,73.6994,66.2536
+510670,Ponte Branca,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,68.4211,56.5217,85.9155
+510670,Ponte Branca,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,4,0.9901,0,0.6579,0,0
+510670,Ponte Branca,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.68,2.5644,1.5094,1.5329,2.1739,2.9577
+510670,Ponte Branca,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510670,Ponte Branca,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,10.271,18.7213,14.101,32.4143,29.2822,15.238
+510670,Ponte Branca,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,71.0706,70.57,41.2118,109.0917,82.2238,122.3006
+510670,Ponte Branca,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,52.5641,33.0769,36.7089,31.0185,35.9477,52.518
+510670,Ponte Branca,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,16.7,10,9.5,7.4,7.2,13.7
+510670,Ponte Branca,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",100.7,63.5,60.2,55.7,57.5,89.1
+510670,Ponte Branca,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,0,0,0,0,
+510670,Ponte Branca,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,11.6129,11.8033,5.4781,6.856,9.1522,
+510670,Ponte Branca,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,43.75,64.29,50,61.54,75,
+510670,Ponte Branca,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,12.5,7.14,12.5,15.38,0,
+510670,Ponte Branca,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,81.25,57.14,56.25,84.62,83.33,
+510670,Ponte Branca,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.75,21.43,12.5,23.08,16.67,

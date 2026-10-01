@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510080,Apiacás,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),10283,10431,8590,8641,8692,8693
+510080,Apiacás,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,917.0689,997.3629,1371.5559,1678.0926,1805.8845,2065.6513
+510080,Apiacás,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),221.184,226.6584,299.9664,373.8637,387.1321,454.4177
+510080,Apiacás,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),580.6537,598.7216,890.1254,1096.6013,1182.3578,1307.3232
+510080,Apiacás,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,39.3737,62.6537,65.5468,60.1679,61.7406,64.0026
+510080,Apiacás,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,18.3219,5.5372,2.9503,6.9827,3.0366,3.089
+510080,Apiacás,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.4551,0.6567,0.8114,0.7939,0.7858,0.7638
+510080,Apiacás,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9161,1.0948,1.397,1.4177,1.4473,1.6013
+510080,Apiacás,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.4344,1.7975,2.5122,2.421,2.378,2.6263
+510080,Apiacás,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.9527,1.7496,1.9302,1.9002,2.0709,2.4445
+510080,Apiacás,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1945,0.1917,0.3295,0.3183,0.3451,0.3601
+510080,Apiacás,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.0468,3.0678,3.7253,3.7033,3.6815,3.6811
+510080,Apiacás,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510080,Apiacás,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,23.3395,23.0083,71.5949,93.8317,96.445,105.6367
+510080,Apiacás,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),3,4,4,3,3,3
+510080,Apiacás,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510080,Apiacás,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510080,Apiacás,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),8,9,9,8,10,11
+510080,Apiacás,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.9174,2.876,3.4924,3.4718,3.4514,3.4511
+510080,Apiacás,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510080,Apiacás,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,3,3,3
+510080,Apiacás,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.474,1.3669,1.9085,1.9241,1.9616,2.3459
+510080,Apiacás,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.6541,0.9412,2.6836,3.117,3.2667,3.8283
+510080,Apiacás,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.9576,2.2759,2.6634,2.0983,3.5839,4.5186
+510080,Apiacás,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1989,0.2072,0.3664,0.3855,0.394,0.4577
+510080,Apiacás,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,17.5246,18.7615,18.0449,17.2752,17.2462,
+510080,Apiacás,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7464,0.6725,0.9466,1.0122,0.9577,0.8912
+510080,Apiacás,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,23.8231,32.7163,37.0625,40.0005,42.266,42.49
+510080,Apiacás,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0047,0.0115,0.0142,0.0087,0.0418,0.0591
+510080,Apiacás,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,31.8973,50.3307,54.8312,59.831,29.9126,49.12
+510080,Apiacás,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,60.0992,76.9821,87.8929,94.8964,71.2149,101.1158
+510080,Apiacás,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,99.8095,100,100,99.6154,100
+510080,Apiacás,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0,0.1905,0.4246,0.1934,1.1538,0.4684
+510080,Apiacás,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.2774,3.1086,2.6879,3.4255,3.3346,3.4403
+510080,Apiacás,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510080,Apiacás,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,11.636,32.2705,25.5566,23.7472,12.5281,17.8465
+510080,Apiacás,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,33.6698,86.0686,58.0298,70.7426,59.721,89.1398
+510080,Apiacás,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,47.5728,34.6202,38.1457,37.3171,58.643,51.5358
+510080,Apiacás,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,8.1,7.5,6.5,9.6,13.4,10.4
+510080,Apiacás,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",96.7,78.1,79.1,86.4,129.8,109.8
+510080,Apiacás,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,24.5902,7.6923,32.0513,26.8456,15.3846,
+510080,Apiacás,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,3.9872,5.2727,5.5879,4.7448,6.2126,
+510080,Apiacás,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,89.34,91.54,91.03,93.29,93.08,
+510080,Apiacás,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.74,10.77,9.62,7.38,8.46,
+510080,Apiacás,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,53.28,53.08,55.13,46.31,59.23,
+510080,Apiacás,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,20.49,22.31,23.72,17.45,21.54,

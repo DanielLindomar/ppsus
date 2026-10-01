@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510860,Vila Rica,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),26496,26946,19888,19857,19827,19686
+510860,Vila Rica,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,735.5701,805.5138,1261.6383,1269.7928,1551.6694,1735.8385
+510860,Vila Rica,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),212.27,233.0555,444.6657,460.8665,507.6262,563.3592
+510860,Vila Rica,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),341.9619,379.0669,574.7115,542.8413,743.0818,868.6496
+510860,Vila Rica,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,63.8777,61.69,57.0132,61.5223,64.0256,65.292
+510860,Vila Rica,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,3.7794,4.3033,7.4921,2.8796,2.8274,3.4796
+510860,Vila Rica,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.4152,0.5259,0.6547,0.7353,0.8438,0.9525
+510860,Vila Rica,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.4465,0.501,0.6496,0.6632,0.7228,0.8214
+510860,Vila Rica,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.1009,1.3011,1.7347,1.7334,1.8828,1.9938
+510860,Vila Rica,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.5725,2.6345,3.2472,3.0337,2.9717,2.9717
+510860,Vila Rica,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1887,0.1792,0.2514,0.2981,0.3026,0.288
+510860,Vila Rica,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.7926,1.398,1.2234,1.0576,1.0592,1.0667
+510860,Vila Rica,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510860,Vila Rica,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,21.5768,22.5154,30.1287,34.4967,37.4893,37.8442
+510860,Vila Rica,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,5,5,6,6,6
+510860,Vila Rica,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510860,Vila Rica,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510860,Vila Rica,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),13,14,13,15,16,16
+510860,Vila Rica,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.106,2.2267,3.0169,3.3993,3.5305,3.5558
+510860,Vila Rica,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510860,Vila Rica,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),5,5,5,6,6,5
+510860,Vila Rica,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.811,1.3674,2.2063,2.3445,2.2826,2.3821
+510860,Vila Rica,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.7916,2.9168,4.5529,5.0442,5.1005,5.541
+510860,Vila Rica,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.0144,4.3439,6.5328,7.8653,7.1852,6.411
+510860,Vila Rica,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0824,0.1827,0.2591,0.3634,0.354,0.3474
+510860,Vila Rica,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,21.0831,25.4265,23.569,21.3849,19.0275,
+510860,Vila Rica,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.9635,0.8313,1.3233,1.2353,1.0348,0.9603
+510860,Vila Rica,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.7406,2.1035,2.9924,2.7534,6.3804,9.2935
+510860,Vila Rica,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0.0833,0.1308
+510860,Vila Rica,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,18.7198,38.2246,46.5607,47.7414,50.638,59.7379
+510860,Vila Rica,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,27.5136,48.4302,61.5949,64.3098,69.7029,79.0409
+510860,Vila Rica,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.7984,99.1262,100,100,89.741,68.8776
+510860,Vila Rica,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.8145,2.8155,3.0238,3.481,3.7849,2.551
+510860,Vila Rica,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.0101,3.0223,2.5205,3.0243,3.1026,2.9167
+510860,Vila Rica,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510860,Vila Rica,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,7.9147,23.0152,20.3189,21.6251,22.5881,32.171
+510860,Vila Rica,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,23.4456,54.7481,44.127,43.1346,51.3936,77.6539
+510860,Vila Rica,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,37.4486,23.1418,25.8776,27.0164,29.233,25.964
+510860,Vila Rica,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,12.1,8.3,7.8,8.1,11.5,12.5
+510860,Vila Rica,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",117.7,76.8,74.6,78.1,106,108.8
+510860,Vila Rica,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,12.7796,3.6765,13.7931,9.8684,3.4364,
+510860,Vila Rica,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,3.8874,5.0842,5.0282,5.3885,5.8002,
+510860,Vila Rica,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,79.23,78.68,84.43,84.54,87.97,
+510860,Vila Rica,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.43,6.99,7.93,6.91,5.15,
+510860,Vila Rica,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,53.35,51.47,61.72,72.04,78.35,
+510860,Vila Rica,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,19.81,22.06,21.72,16.45,17.87,

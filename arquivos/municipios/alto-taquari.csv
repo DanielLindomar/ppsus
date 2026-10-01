@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510060,Alto Taquari,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),11133,11413,10904,11233,11571,11877
+510060,Alto Taquari,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1445.3289,1903.9382,1674.9737,1916.6597,2514.3367,2509.3114
+510060,Alto Taquari,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),422.0054,590.2478,641.7955,601.1138,696.984,792.3087
+510060,Alto Taquari,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),567.316,866.7488,651.2718,997.5357,1526.0299,1371.4799
+510060,Alto Taquari,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,77.3631,70.8133,70.4838,78.5688,76.9722,85.0738
+510060,Alto Taquari,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,6.9974,5.7334,5.0714,3.1323,5.4064,6.4026
+510060,Alto Taquari,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7644,0.9121,0.9409,1.0273,1.0933,1.0314
+510060,Alto Taquari,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.1605,1.5263,1.2913,1.387,1.3949,1.2175
+510060,Alto Taquari,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.4641,1.5211,1.6352,1.825,2.1035,2.0561
+510060,Alto Taquari,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.9866,3.2051,2.9806,2.8114,2.9021,2.6732
+510060,Alto Taquari,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4338,0.3873,0.2825,0.2671,0.2593,0.2644
+510060,Alto Taquari,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.2456,1.8549,1.8342,1.7805,1.7285,1.7403
+510060,Alto Taquari,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510060,Alto Taquari,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,39.5221,38.5525,44.4791,47.2536,47.5326,45.1882
+510060,Alto Taquari,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),3,3,3,3,4,4
+510060,Alto Taquari,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510060,Alto Taquari,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510060,Alto Taquari,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),8,8,7,7,10,10
+510060,Alto Taquari,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.6947,2.6286,2.7513,2.6707,2.5927,2.5259
+510060,Alto Taquari,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510060,Alto Taquari,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,3,3,3,3
+510060,Alto Taquari,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.3775,3.2436,4.1038,3.3552,3.8638,3.4297
+510060,Alto Taquari,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.2355,4.6134,6.3749,5.3326,6.1381,5.6964
+510060,Alto Taquari,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.2581,6.9782,9.671,8.1004,7.655,6.9731
+510060,Alto Taquari,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.3848,0.6149,0.9428,1.1081,1.0028,0.8562
+510060,Alto Taquari,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,18.4795,17.2252,18.4085,17.7628,14.2803,
+510060,Alto Taquari,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7927,0.6359,0.7507,0.7557,0.6269,0.6059
+510060,Alto Taquari,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,6.0991,7.7249,10.6034,7.9461,7.4292,9.2961
+510060,Alto Taquari,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0
+510060,Alto Taquari,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,10.3297,13.0553,27.9714,37.4789,41.483,24.5011
+510060,Alto Taquari,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,19.6712,23.3944,40.4439,53.7701,61.706,48.9181
+510060,Alto Taquari,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,26.087,24.1611,11.4754,58.9074,85,65.2921
+510060,Alto Taquari,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0,0,0,0.9501,1.4583,0.3436
+510060,Alto Taquari,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.5043,2.5302,1.7311,2.228,2.0271,2.1306
+510060,Alto Taquari,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510060,Alto Taquari,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,6.2727,8.1244,16.5678,22.4031,16.0993,14.5124
+510060,Alto Taquari,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,24.2119,65.5848,45.0467,58.3912,73.1082,74.8768
+510060,Alto Taquari,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,49.7717,44.9438,31.2925,31.6225,33.1933,50.0861
+510060,Alto Taquari,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,2.7,1.1,3.2,3.3,2.5,1.5
+510060,Alto Taquari,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",109.2,96.9,72.1,72.3,73.6,108.1
+510060,Alto Taquari,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,6.8493,6.6225,18.2927,0,31.8471,
+510060,Alto Taquari,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.581,4.9067,5.5943,4.3621,4.1483,
+510060,Alto Taquari,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,62.33,58.28,80.49,83.97,73.89,
+510060,Alto Taquari,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,10.27,6.62,6.1,7.05,7.64,
+510060,Alto Taquari,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,89.04,88.67,85.98,85.26,83.33,
+510060,Alto Taquari,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,23.29,18.54,9.76,10.26,15.29,

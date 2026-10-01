@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510770,Rosário Oeste,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),17054,16999,15453,15344,15236,15041
+510770,Rosário Oeste,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1131.9402,1288.3517,1739.8209,2143.8401,2379.2563,2350.9806
+510770,Rosário Oeste,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),480.1246,551.7739,789.9164,718.1365,917.8492,1083.5791
+510770,Rosário Oeste,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),349.5106,411.3115,627.7379,867.8467,921.1903,832.5985
+510770,Rosário Oeste,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,56.635,68.6287,62.165,60.4111,63.9949,72.0964
+510770,Rosário Oeste,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,3.316,3.0536,3.2513,4.5873,2.1144,3.8454
+510770,Rosário Oeste,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.601,0.7059,1.2671,1.3178,1.6756,1.8968
+510770,Rosário Oeste,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.7347,0.903,1.2367,1.3263,1.7984,1.9015
+510770,Rosário Oeste,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.4724,1.9278,2.0844,2.4837,3.1209,3.4772
+510770,Rosário Oeste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.0167,4.0691,4.383,4.4806,4.5025,4.388
+510770,Rosário Oeste,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3137,0.3612,0.3935,0.3839,0.5205,0.5385
+510770,Rosário Oeste,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.2837,3.5884,4.3034,5.2138,5.3872,5.6512
+510770,Rosário Oeste,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510770,Rosário Oeste,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,34.0096,41.8672,47.8871,48.2795,53.8724,84.7683
+510770,Rosário Oeste,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),7,7,7,6,7,7
+510770,Rosário Oeste,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510770,Rosário Oeste,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510770,Rosário Oeste,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),18,19,20,22,24,27
+510770,Rosário Oeste,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.272,3.5296,3.8827,3.9103,3.9905,4.6539
+510770,Rosário Oeste,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510770,Rosário Oeste,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),5,5,5,5,5,6
+510770,Rosário Oeste,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.7965,1.2029,1.5272,2.0669,2.189,2.3837
+510770,Rosário Oeste,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.7785,2.0904,3.1003,4.0735,4.3439,4.887
+510770,Rosário Oeste,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.9047,4.1987,6.4662,6.2114,6.429,6.5749
+510770,Rosário Oeste,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0794,0.1914,0.3719,0.3218,0.4082,0.4032
+510770,Rosário Oeste,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.4451,14.0806,18.427,16.8245,19.9726,
+510770,Rosário Oeste,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.5668,0.7059,1.1335,1.0017,1.1166,0.885
+510770,Rosário Oeste,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,2.2101,2.499,3.0855,3.9503,3.0772,4.178
+510770,Rosário Oeste,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0.0231
+510770,Rosário Oeste,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,47.9066,44.885,39.8628,49.6611,61.6303,50.9275
+510770,Rosário Oeste,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,68.8988,66.5922,66.7831,69.4082,78.1045,77.5214
+510770,Rosário Oeste,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,98.4273,100,80.7087,85.0905,87.3368
+510770,Rosário Oeste,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,2.5704,1.3106,2.2727,1.8373,2.8754,3.0026
+510770,Rosário Oeste,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.5263,3.865,3.7549,3.0984,3.443,3.4843
+510770,Rosário Oeste,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510770,Rosário Oeste,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,27.849,29.8365,18.2317,23.263,29.0506,24.5081
+510770,Rosário Oeste,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,67.9686,87.3313,62.4605,63.3943,68.0304,89.2895
+510770,Rosário Oeste,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,30.8085,36.2191,40.8915,31.9249,27.3109,36.1921
+510770,Rosário Oeste,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,29.5,34.3,35.7,29.4,26.5,35.5
+510770,Rosário Oeste,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",28,32.4,36.9,28.9,26.4,33.9
+510770,Rosário Oeste,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,6.0976,21.5054,5.618,10.6383,27.3973,
+510770,Rosário Oeste,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.626,8.177,8.3479,8.9937,8.9919,
+510770,Rosário Oeste,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,79.27,79.46,83.15,78.19,86.99,
+510770,Rosário Oeste,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,9.76,7.53,8.43,9.04,6.85,
+510770,Rosário Oeste,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,45.12,54.84,60.67,54.55,63.7,
+510770,Rosário Oeste,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.29,17.2,17.98,18.09,9.59,

@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510460,Itiquira,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),13552,13727,12236,12377,12519,12587
+510460,Itiquira,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1708.7111,1917.7495,2543.9827,2691.9298,2574.6199,3075.4862
+510460,Itiquira,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),425.6655,377.4863,595.5636,638.362,672.5254,680.9191
+510460,Itiquira,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),996.4592,1157.2196,1443.5347,1502.8963,1373.6784,1694.9531
+510460,Itiquira,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,69.1256,76.7668,77.265,75.087,74.3824,79.5746
+510460,Itiquira,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,8.1232,5.3337,0.9895,2.2728,8.8391,5.9426
+510460,Itiquira,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.0404,1.0119,1.2185,1.199,1.3963,1.5476
+510460,Itiquira,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.2448,1.2982,1.6419,1.6935,1.56,1.5151
+510460,Itiquira,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.1184,2.8149,3.4472,3.4403,3.2375,3.127
+510460,Itiquira,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.2409,3.1871,3.7455,3.5275,3.4563,3.3995
+510460,Itiquira,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3704,0.4189,0.4838,0.4783,0.4697,0.4092
+510460,Itiquira,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.6564,2.6226,3.0239,2.9894,2.9555,2.9395
+510460,Itiquira,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510460,Itiquira,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,34.8657,40.6717,53.3916,59.247,65.5004,65.6074
+510460,Itiquira,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,5,5,5,5,5
+510460,Itiquira,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510460,Itiquira,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510460,Itiquira,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),20,20,19,18,18,17
+510460,Itiquira,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.6895,3.6425,4.0863,4.0398,3.9939,3.9724
+510460,Itiquira,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510460,Itiquira,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),5,5,5,5,5,5
+510460,Itiquira,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.7469,1.792,3.5808,3.1533,2.9613,2.9106
+510460,Itiquira,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.4351,1.4705,8.0991,8.7894,9.6573,9.3641
+510460,Itiquira,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.8045,3.7273,1.9441,1.8255,1.6731,1.5943
+510460,Itiquira,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1881,0.2129,0.5696,0.5682,0.4166,0.3729
+510460,Itiquira,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.6488,14.3129,18.1216,20.2286,17.7923,
+510460,Itiquira,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.5694,0.4351,0.5369,0.5931,0.7939,0.6678
+510460,Itiquira,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,4.6254,6.8638,9.1396,9.8234,12.9421,13.3237
+510460,Itiquira,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0025,0.0004,0.013,0,0.0082,0.0259
+510460,Itiquira,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,21.6204,24.2588,35.796,42.4982,24.5227,41.0741
+510460,Itiquira,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,50.6936,55.6567,78.1301,90.4096,79.9585,100.6594
+510460,Itiquira,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,21.1604,16.8168,92.6941,90.6844,99.0228,93.0368
+510460,Itiquira,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,2.3891,2.7027,1.3699,1.5209,0.9772,1.9342
+510460,Itiquira,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.7372,3.1862,2.9932,2.6046,3.0065,2.8723
+510460,Itiquira,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510460,Itiquira,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,8.6305,12.4324,15.8268,16.4573,8.8379,15.2351
+510460,Itiquira,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,61.7015,81.8258,96.5495,113.2725,110.5402,109.0059
+510460,Itiquira,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,57.6419,56.4136,54.2887,52.9937,69.3307,59.1949
+510460,Itiquira,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,0.7,0.9,4,2.9,2.6,2.6
+510460,Itiquira,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",58.3,56.4,60.9,58.7,74.6,64.4
+510460,Itiquira,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,23.8095,27.2109,13.5135,0,0,
+510460,Itiquira,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.2798,6.5564,4.9853,5.4941,3.5945,
+510460,Itiquira,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,77.38,80.27,80.41,84.29,82.31,
+510460,Itiquira,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.93,8.22,5.41,6.43,7.69,
+510460,Itiquira,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,62.5,54.42,61.49,59.71,56.92,
+510460,Itiquira,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,16.07,15.65,15.54,14.29,18.46,

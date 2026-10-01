@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510520,Juscimeira,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),11176,11124,11480,11550,11620,11622
+510520,Juscimeira,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,988.7315,1169.8017,1397.06,1581.9547,2073.9322,2046.5725
+510520,Juscimeira,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),281.8468,289.7995,460.0738,507.5418,629.7074,552.1929
+510520,Juscimeira,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),230.0867,211.5311,510.623,614.5835,712.3614,743.7084
+510520,Juscimeira,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,55.8903,68.9504,70.9621,68.0058,51.9474,62.282
+510520,Juscimeira,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,4.3371,2.7016,2.4311,2.7823,3.2769,14.2121
+510520,Juscimeira,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6147,0.7713,0.7483,0.6736,0.7444,0.746
+510520,Juscimeira,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6129,0.8055,0.8206,0.7792,0.79,1.2038
+510520,Juscimeira,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.3533,2.3697,2.1315,2.1801,2.4389,2.0848
+510520,Juscimeira,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.5174,3.5545,3.4085,3.3697,3.654,3.8143
+510520,Juscimeira,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3803,0.3506,0.1655,0.1706,0.3503,0.4182
+510520,Juscimeira,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.7738,2.6366,1.8005,1.3853,1.2909,1.2907
+510520,Juscimeira,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510520,Juscimeira,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,14.0211,80.3848,147.5,154.9784,167.2375,183.4194
+510520,Juscimeira,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),7,7,8,8,8,8
+510520,Juscimeira,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),2,2,1,1,1,1
+510520,Juscimeira,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510520,Juscimeira,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),15,14,15,15,16,19
+510520,Juscimeira,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.5791,3.5958,3.4843,3.4632,4.2341,4.3022
+510520,Juscimeira,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510520,Juscimeira,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),4,4,3,3,4,5
+510520,Juscimeira,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.5579,0.7835,0.9298,1.046,1.2736,2.2543
+510520,Juscimeira,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.2017,2.0296,2.5521,2.3255,2.7965,4.2742
+510520,Juscimeira,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.6472,6.0499,6.7287,6.3177,5.6186,6.4609
+510520,Juscimeira,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1188,0.0942,0.1455,0.2303,0.25,0.6118
+510520,Juscimeira,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,18.4859,24.0865,22.5702,18.9029,18.6481,
+510520,Juscimeira,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7808,0.6405,0.6155,0.6656,0.7203,0.7917
+510520,Juscimeira,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,3.997,13.5258,13.5878,12.9668,7.8075,5.3629
+510520,Juscimeira,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0013,0.0026,0.0002,0.0005
+510520,Juscimeira,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,19.9535,37.6663,53.1359,59.0476,70.3098,72.0186
+510520,Juscimeira,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,57.2656,77.58,95.9059,105.5411,120.3959,123.989
+510520,Juscimeira,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,98.6547,100,100,96.6276,100,100
+510520,Juscimeira,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,4.4843,2.864,2.1311,1.4663,3.3048,1.5532
+510520,Juscimeira,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,4.2691,3.3604,3.0311,2.7801,3.1089,3.2103
+510520,Juscimeira,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510520,Juscimeira,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,9.1171,20.0666,22.5218,20.5084,23.4541,24.255
+510520,Juscimeira,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,79.1522,168.2095,95.5564,105.882,121.1708,111.9449
+510520,Juscimeira,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,65.9375,52.7231,45.3224,45.3651,42.3874,42.1929
+510520,Juscimeira,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,2.2,2,3.9,4,2.1,1.9
+510520,Juscimeira,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",33.7,28.9,28.1,28,23,23.9
+510520,Juscimeira,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,19.2308,26.3158,19.4175,27.7778,
+510520,Juscimeira,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,9.3057,9.7087,5.4878,7.4459,9.8107,
+510520,Juscimeira,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,64.79,63.46,64.04,59.22,67.59,
+510520,Juscimeira,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.45,11.54,8.77,14.56,11.11,
+510520,Juscimeira,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,63.38,63.11,63.16,55.34,69.44,
+510520,Juscimeira,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,15.49,14.42,13.16,20.39,20.37,

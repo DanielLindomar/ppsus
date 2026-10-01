@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510675,Pontes e Lacerda,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),45774,46105,52018,53388,54795,55762
+510675,Pontes e Lacerda,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,893.7845,1194.8406,1164.4685,1254.5198,1504.8055,1678.3894
+510675,Pontes e Lacerda,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),223.7407,256.5815,315.8488,410.03,411.9699,473.9149
+510675,Pontes e Lacerda,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),337.6896,479.1271,505.2264,498.2906,676.3485,880.0521
+510675,Pontes e Lacerda,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,48.5764,39.7613,54.665,59.538,61.8628,69.4739
+510675,Pontes e Lacerda,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.2527,8.0169,7.7056,5.8111,2.3946,1.8183
+510675,Pontes e Lacerda,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7981,0.9715,0.9351,0.9637,1.1563,1.0907
+510675,Pontes e Lacerda,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.001,1.3094,1.1794,1.0294,1.0351,1.1429
+510675,Pontes e Lacerda,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.4384,1.7898,1.7625,1.7056,2.1164,2.9631
+510675,Pontes e Lacerda,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.9711,2.8071,2.4736,2.3835,1.8936,1.2431
+510675,Pontes e Lacerda,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2912,0.2603,0.234,0.2248,0.2433,0.2331
+510675,Pontes e Lacerda,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.6554,1.3411,1.2592,1.3205,1.3505,1.3271
+510675,Pontes e Lacerda,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510675,Pontes e Lacerda,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,32.4049,52.9053,48.91,51.1819,57.7151,72.0921
+510675,Pontes e Lacerda,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),11,11,10,11,11,11
+510675,Pontes e Lacerda,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510675,Pontes e Lacerda,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,1,0
+510675,Pontes e Lacerda,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),41,47,55,60,64,68
+510675,Pontes e Lacerda,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.3114,2.5485,2.3069,2.2477,2.19,2.048
+510675,Pontes e Lacerda,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510675,Pontes e Lacerda,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),8,9,9,9,10,10
+510675,Pontes e Lacerda,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.7466,0.8695,1.2303,1.6085,1.8807,1.5962
+510675,Pontes e Lacerda,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.3341,1.212,1.3223,2.1257,2.1182,2.0366
+510675,Pontes e Lacerda,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.0415,2.6181,2.5883,3.0592,2.7061,3.5011
+510675,Pontes e Lacerda,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0598,0.124,0.2031,0.2315,0.2389,0.1713
+510675,Pontes e Lacerda,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,8.9686,14.764,16.2966,15.7101,16.3863,
+510675,Pontes e Lacerda,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6154,0.9398,1.0228,0.9971,0.8881,0.9256
+510675,Pontes e Lacerda,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,5.2479,6.6362,7.4723,9.54,11.5879,12.926
+510675,Pontes e Lacerda,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0272,0.0351,0.0347,0.0492,0.0534,0.1032
+510675,Pontes e Lacerda,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,76.8122,85.2185,84.1632,89.7393,88.1102,91.8905
+510675,Pontes e Lacerda,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,67.44,74.3303,71.1869,77.789,79.0583,82.7804
+510675,Pontes e Lacerda,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,94.6246,94.0952,90.6122,87.7687,89.0845,94.4184
+510675,Pontes e Lacerda,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.9625,4.3013,1.9644,1.3776,1.1599,1.9321
+510675,Pontes e Lacerda,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.6769,2.9896,2.8958,2.8852,3.2026,3.4619
+510675,Pontes e Lacerda,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510675,Pontes e Lacerda,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,33.4155,43.7164,37.6462,43.8565,44.811,46.7525
+510675,Pontes e Lacerda,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,50.7958,58.2818,52.5225,77.9117,85.3009,85.2763
+510675,Pontes e Lacerda,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,22.7081,22.206,21.307,25.1866,26.7544,28.5312
+510675,Pontes e Lacerda,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,22.3,21.4,20.7,24.5,25.7,25.8
+510675,Pontes e Lacerda,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",53,53,52.9,66.4,71.3,73.5
+510675,Pontes e Lacerda,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,8.149,15.1163,11.7233,12.6984,8.4236,
+510675,Pontes e Lacerda,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.3841,10.2158,6.4401,5.3757,6.0224,
+510675,Pontes e Lacerda,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,71.6,73.15,73.91,76.86,78.95,
+510675,Pontes e Lacerda,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,6.64,10.58,8.32,10.16,8.54,
+510675,Pontes e Lacerda,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,72.06,74.62,75.97,73.86,81.59,
+510675,Pontes e Lacerda,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.86,17.33,14.77,15.34,12.76,

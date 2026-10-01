@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510775,Salto do Céu,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),3295,3226,3679,3679,3679,3657
+510775,Salto do Céu,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1491.5646,1799.5683,1857.9039,2000.6314,2133.4099,2386.0225
+510775,Salto do Céu,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),776.2583,920.5321,1029.5706,994.7072,758.1197,959.6992
+510775,Salto do Céu,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),386.7,625.4928,631.4662,853.4682,1162.3262,1187.8709
+510775,Salto do Céu,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,60.1018,63.3835,55.322,59.8418,63.1483,66.7166
+510775,Salto do Céu,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,1.7003,5.1537,5.559,8.0727,10.7268,7.3792
+510775,Salto do Céu,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.3657,1.5375,1.4243,1.3808,1.5629,1.4876
+510775,Salto do Céu,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8801,0.9299,1.0193,1.2232,1.0873,1.0938
+510775,Salto do Céu,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.1487,4.5722,4.0092,3.1938,2.8758,3.0818
+510775,Salto do Céu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,5.4628,6.0198,5.4363,5.4363,5.3004,5.3322
+510775,Salto do Céu,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.607,0.62,0.5219,0.4757,0.5219,0.6153
+510775,Salto do Céu,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,4.2489,4.3397,3.8054,3.8054,3.8054,3.8283
+510775,Salto do Céu,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510775,Salto do Céu,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,72.8376,74.3955,67.4912,68.4153,73.3895,71.9989
+510775,Salto do Céu,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),2,2,3,4,4,4
+510775,Salto do Céu,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510775,Salto do Céu,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510775,Salto do Céu,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),8,8,10,10,10,10
+510775,Salto do Céu,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,6.0698,6.1996,5.4363,5.4363,5.4363,5.469
+510775,Salto do Céu,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510775,Salto do Céu,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,2,2,2
+510775,Salto do Céu,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,3.5056,3.403,4.1895,4.9106,4.7488,6.5176
+510775,Salto do Céu,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,5.5472,5.5025,6.0448,6.5243,6.3917,7.8253
+510775,Salto do Céu,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,4.4392,5.6649,9.6279,9.6752,9.0576,11.1088
+510775,Salto do Céu,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.6856,0.6448,0.6899,0.7445,0.4156,0.3902
+510775,Salto do Céu,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.614,18.0233,15.7833,19.125,23.8049,
+510775,Salto do Céu,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7596,0.5304,0.5849,0.6004,1.0304,0.9212
+510775,Salto do Céu,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,4.8816,4.9442,5.2245,5.925,7.8606,9.1736
+510775,Salto do Céu,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0.0022,0.0071,0.0211
+510775,Salto do Céu,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,31.563,34.7179,36.6948,27.9967,25.0068,18.5945
+510775,Salto do Céu,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,67.3748,83.385,74.4768,67.9532,80.1848,100.082
+510775,Salto do Céu,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.0385,95.5357,96.2963,90.2913,100,100
+510775,Salto do Céu,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,2.8846,1.7857,4.4444,2.9126,6.5217,1.4706
+510775,Salto do Céu,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.5,3.9018,3.3852,3.3204,3.5978,5.3382
+510775,Salto do Céu,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510775,Salto do Céu,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,10.6569,14.0684,8.2737,8.9129,9.8994,5.7061
+510775,Salto do Céu,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,53.5321,89.8736,41.6306,51.093,78.23,133.3859
+510775,Salto do Céu,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,56.3063,59.1078,51.0949,59.2,69.8305,81.694
+510775,Salto do Céu,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,4.1,5.2,2.9,6.4,6.8,17.8
+510775,Salto do Céu,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",69.5,73.7,63.5,76.6,88.4,114
+510775,Salto do Céu,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,17.5439,23.2558,0,50,0,
+510775,Salto do Céu,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.3733,12.0893,8.1544,5.9799,8.698,
+510775,Salto do Céu,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,92.98,88.37,85,82.5,92.68,
+510775,Salto do Céu,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,10.53,11.63,5,5,2.44,
+510775,Salto do Céu,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,52.63,67.44,56.67,62.5,56.1,
+510775,Salto do Céu,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,14.04,11.63,16.67,15,7.32,

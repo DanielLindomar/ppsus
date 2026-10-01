@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510558,Marcelândia,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),10301,10107,11396,11405,11414,11355
+510558,Marcelândia,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1151.5503,1370.7446,1573.685,1498.7949,1829.4573,2068.6844
+510558,Marcelândia,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),493.4739,603.3951,695.6215,450.4586,554.008,611.1324
+510558,Marcelândia,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),503.6406,650.7005,767.3093,780.9031,931.0366,967.5346
+510558,Marcelândia,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,55.4885,62.0504,74.7124,60.9651,56.4664,56.467
+510558,Marcelândia,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,12.8706,1.3667,7.2897,4.0976,4.6585,5.839
+510558,Marcelândia,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7824,0.8895,0.9196,0.9224,0.9147,0.9775
+510558,Marcelândia,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9145,1.027,0.9284,0.8479,0.8612,0.9714
+510558,Marcelândia,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.9706,3.1918,2.9089,2.4787,2.4531,2.8428
+510558,Marcelândia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.2113,3.735,3.8391,3.8097,4.2019,4.0141
+510558,Marcelândia,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2262,0.2968,0.4168,0.4384,0.4162,0.4403
+510558,Marcelândia,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.4076,2.0946,1.5795,2.0456,1.9494,1.9375
+510558,Marcelândia,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510558,Marcelândia,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,29.2884,36.8556,26.1759,28.2771,34.7556,35.9577
+510558,Marcelândia,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),4,4,4,4,4,4
+510558,Marcelândia,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510558,Marcelândia,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510558,Marcelândia,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),15,15,15,14,14,13
+510558,Marcelândia,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.8831,3.9577,3.51,3.5072,3.5045,3.5227
+510558,Marcelândia,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510558,Marcelândia,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),1,3,4,4,4,4
+510558,Marcelândia,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.3315,1.9299,2.7117,2.809,3.0114,2.8789
+510558,Marcelândia,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.8192,3.5822,4.1241,4.9218,5.4716,6.1946
+510558,Marcelândia,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.3867,2.5292,2.437,4.0332,4.8863,3.9497
+510558,Marcelândia,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.02,0.0788,0.4181,0.3869,0.3473,0.3731
+510558,Marcelândia,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,12.6422,13.0159,13.6148,16.2018,15.5181,
+510558,Marcelândia,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.8982,0.6413,0.8393,0.8456,0.8987,1.0282
+510558,Marcelândia,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,10.922,3.9586,13.5103,11.6149,18.1132,20.2714
+510558,Marcelândia,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0001,0,0.0008,0.0014,0.0132,0.0341
+510558,Marcelândia,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,41.5494,48.6791,65.1106,47.26,52.129,30.207
+510558,Marcelândia,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,74.1676,86.8705,105.7389,86.1026,89.8896,93.3509
+510558,Marcelândia,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,97.7642,100,100,99.4958,97.9592
+510558,Marcelândia,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0,0,0,1.6698,0.6723,1.4577
+510558,Marcelândia,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.8808,4.0427,4.031,4.3915,4.5076,4.7726
+510558,Marcelândia,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510558,Marcelândia,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,22.5139,33.3401,30.1768,20.0528,23.4793,14.5467
+510558,Marcelândia,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,70.6093,127.8208,88.5772,88.2583,94.9242,100.195
+510558,Marcelândia,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,46.0733,44.0774,40.4979,46.7413,44.2495,68.5849
+510558,Marcelândia,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,9.8,12.6,8.5,16.5,16.1,18.8
+510558,Marcelândia,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",63.4,69.9,58.7,78.6,77.9,106.2
+510558,Marcelândia,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,4.5872,15.873,4.0984,26.9058,15.544,
+510558,Marcelândia,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.4364,11.4772,5.4405,6.4007,6.0452,
+510558,Marcelândia,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,65.6,74.07,70.49,77.13,80.21,
+510558,Marcelândia,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.72,5.29,6.97,10.76,8.29,
+510558,Marcelândia,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,64.22,61.38,72.54,73.99,71.5,
+510558,Marcelândia,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,25.23,19.05,21.4,19.28,15.03,

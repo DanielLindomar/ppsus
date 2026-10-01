@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510795,Tangará da Serra,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),105711,107631,106434,109448,112547,114603
+510795,Tangará da Serra,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,903.3661,1103.4321,1106.9419,1423.193,1577.1378,1733.864
+510795,Tangará da Serra,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),147.498,148.5655,183.3046,233.7406,240.893,258.995
+510795,Tangará da Serra,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),579.5522,680.2039,776.2081,1061.9253,1208.6352,1343.0956
+510795,Tangará da Serra,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,51.9531,48.0281,49.8759,54.8469,59.8872,61.0292
+510795,Tangará da Serra,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.4191,6.8209,1.8213,2.9988,2.1238,3.2802
+510795,Tangará da Serra,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.928,1.056,1.1563,0.9987,1.0263,1.1098
+510795,Tangará da Serra,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8749,1.055,1.0584,1.0237,0.9732,0.9416
+510795,Tangará da Serra,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.5866,3.0028,3.0632,3.1665,3.2274,3.086
+510795,Tangará da Serra,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.8182,1.8009,1.6896,1.8658,1.7857,1.7397
+510795,Tangará da Serra,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1923,0.198,0.2029,0.2062,0.2021,0.2079
+510795,Tangará da Serra,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.2423,1.1614,0.8698,0.8885,1.3335,1.5212
+510795,Tangará da Serra,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),5,12,2,0,0,0
+510795,Tangará da Serra,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,52.8639,66.6007,85.9847,87.7586,93.0056,92.5735
+510795,Tangará da Serra,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),29,30,30,29,29,30
+510795,Tangará da Serra,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),4,4,4,4,3,3
+510795,Tangará da Serra,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,1,1,1,1
+510795,Tangará da Serra,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),70,72,74,77,90,97
+510795,Tangará da Serra,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.1445,2.1369,2.161,2.1015,2.0436,2.0069
+510795,Tangará da Serra,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510795,Tangará da Serra,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),10,10,11,14,14,14
+510795,Tangará da Serra,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.203,1.2821,1.4763,1.5041,1.571,1.4183
+510795,Tangará da Serra,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.3184,2.586,3.1707,2.996,3.236,2.8205
+510795,Tangará da Serra,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.552,1.1642,1.2505,1.3876,1.3244,1.444
+510795,Tangará da Serra,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0391,0.0851,0.1076,0.1867,0.1593,0.147
+510795,Tangará da Serra,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,14.7663,14.0555,14.5691,18.2657,18.6705,
+510795,Tangará da Serra,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7528,0.8725,0.8724,0.864,0.8715,0.7764
+510795,Tangará da Serra,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,5.2982,6.5223,7.041,7.5592,8.441,8.0168
+510795,Tangará da Serra,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.2441,0.2333,0.2462,0.2885,0.3324,0.351
+510795,Tangará da Serra,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,39.2107,46.7616,44.0461,21.5262,50.4411,52.5466
+510795,Tangará da Serra,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,42.777,50.0971,49.2982,28.8356,56.8207,60.0857
+510795,Tangará da Serra,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.7829,99.4635,99.552,99.5756,99.8943,96.546
+510795,Tangará da Serra,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,5.3317,6.4176,3.9676,3.6503,2.8888,2.3414
+510795,Tangará da Serra,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.7643,3.842,4.1416,4.1337,3.7502,3.92
+510795,Tangará da Serra,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,3.9069,21.6945,4.1904,0,0,0
+510795,Tangará da Serra,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,32.7387,70.8749,31.9426,10.1479,26.554,29.2173
+510795,Tangará da Serra,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,42.201,75.9621,44.2651,29.1379,46.3222,53.2646
+510795,Tangará da Serra,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,11.5436,10.4228,13.9127,27.6933,11.9781,13.9994
+510795,Tangará da Serra,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,10,9.6,12.3,25.1,11.4,13.5
+510795,Tangará da Serra,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",20.3,19.4,24.9,52,22.2,26
+510795,Tangará da Serra,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,8.3682,12.0069,17.9294,16.5235,10.211,
+510795,Tangará da Serra,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.0732,7.981,5.8534,5.5369,6.5661,
+510795,Tangará da Serra,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,75.37,75.04,81.09,79.78,80.94,
+510795,Tangará da Serra,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.41,9.83,8.56,8.59,7.28,
+510795,Tangará da Serra,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,85.77,84.79,85.66,80.11,81.28,
+510795,Tangará da Serra,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,14.41,14.12,11.8,11.1,10.89,

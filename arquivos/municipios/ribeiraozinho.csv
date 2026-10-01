@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510719,Ribeirãozinho,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),2422,2439,2593,2644,2697,2733
+510719,Ribeirãozinho,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,2043.3599,2422.6519,2418.5454,2712.877,3655.5557,3871.9936
+510719,Ribeirãozinho,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),644.477,857.9969,864.1096,789.7984,1067.1222,1121.9392
+510719,Ribeirãozinho,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),1151.5402,1243.7455,1126.5267,1239.0828,1792.1789,1750.1985
+510719,Ribeirãozinho,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,59.3266,70.2795,69.698,62.3402,59.32,77.2239
+510719,Ribeirãozinho,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,1.5717,9.9629,8.1129,5.2794,7.5011,4.4684
+510719,Ribeirãozinho,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,2.1594,1.8696,1.693,1.6377,2.9626,1.7344
+510719,Ribeirãozinho,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.4855,2.1033,1.9476,2.2617,2.1876,1.9429
+510719,Ribeirãozinho,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.0215,3.7392,3.656,3.7443,4.7015,5.2067
+510719,Ribeirãozinho,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.0586,4.305,4.4042,4.9168,4.8498,4.6359
+510719,Ribeirãozinho,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4129,0.41,0.3857,0.3782,0.5413,0.6696
+510719,Ribeirãozinho,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,6.1932,6.1501,5.7848,5.6732,5.5617,5.0018
+510719,Ribeirãozinho,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510719,Ribeirãozinho,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,82.5764,82.0008,77.1307,75.9455,86.5035,89.6451
+510719,Ribeirãozinho,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),2,2,2,2,2,2
+510719,Ribeirãozinho,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510719,Ribeirãozinho,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510719,Ribeirãozinho,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),7,7,7,7,7,8
+510719,Ribeirãozinho,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,4.1288,4.1,3.8565,3.7821,3.7078,3.659
+510719,Ribeirãozinho,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510719,Ribeirãozinho,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),1,1,1,1,1,1
+510719,Ribeirãozinho,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,2.5549,1.9418,2.4246,2.8166,2.8113,4.0351
+510719,Ribeirãozinho,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,5.6635,2.5797,2.833,3.323,4.2154,6.2931
+510719,Ribeirãozinho,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.3386,1.8762,2.9776,2.716,3.3218,2.8624
+510719,Ribeirãozinho,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1334,0.1468,0.4331,0.3476,0.9017,0.5558
+510719,Ribeirãozinho,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.881,22,39.875,26.8636,19.6562,
+510719,Ribeirãozinho,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7754,0.7929,0.6533,0.6433,0.7757,0.8965
+510719,Ribeirãozinho,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,6.8551,7.378,9.9233,10.5806,11.7901,8.0651
+510719,Ribeirãozinho,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0
+510719,Ribeirãozinho,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,23.9472,13.1201,12.7266,19.6672,15.2021,25.9788
+510719,Ribeirãozinho,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,53.2618,37.3104,35.0945,56.354,60.4375,58.1778
+510719,Ribeirãozinho,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,90.3846,92.6829,81.6901
+510719,Ribeirãozinho,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0,0,0,1.9231,0,4.2254
+510719,Ribeirãozinho,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.3103,4.6875,3.9091,4.25,6.1951,5.1549
+510719,Ribeirãozinho,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510719,Ribeirãozinho,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,9.8377,9.6332,4.3066,6.7004,5.9963,12.1686
+510719,Ribeirãozinho,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,62.2279,83.86,39.6291,50.1579,79.8588,81.0852
+510719,Ribeirãozinho,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,60.4651,65.9341,63.7363,65.1007,75.4601,57.8616
+510719,Ribeirãozinho,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,8.5,12.1,15.4,14.1,9.2,8.8
+510719,Ribeirãozinho,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",63.3,92.8,86.7,79.2,82.5,65.8
+510719,Ribeirãozinho,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,0,62.5,45.4545,0,
+510719,Ribeirãozinho,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.019,9.8401,6.1705,6.0514,7.4156,
+510719,Ribeirãozinho,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,83.33,81.48,87.5,77.27,71.88,
+510719,Ribeirãozinho,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.14,7.41,0,4.55,3.13,
+510719,Ribeirãozinho,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,83.33,74.07,81.25,77.27,90.63,
+510719,Ribeirãozinho,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,23.81,18.52,18.75,13.64,12.5,

@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510170,Barra do Bugres,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),35307,35642,29403,29489,29576,29406
+510170,Barra do Bugres,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,871.0732,912.3514,1410.9033,1864.7376,3033.8921,2488.3664
+510170,Barra do Bugres,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),189.0372,190.8799,269.8609,349.6027,458.6399,745.9007
+510170,Barra do Bugres,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),437.7568,510.9865,752.0835,1209.0298,2268.9186,1384.6194
+510170,Barra do Bugres,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,49.0666,79.5033,79.8708,65.8923,36.2488,50.899
+510170,Barra do Bugres,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,15.822,6.2233,4.9354,7.5602,35.8914,13.0533
+510170,Barra do Bugres,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8183,0.6251,0.8162,1.4992,1.4961,1.5966
+510170,Barra do Bugres,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6792,0.661,0.9387,1.255,1.2852,1.3756
+510170,Barra do Bugres,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.382,2.0192,2.8507,3.893,4.314,4.4025
+510170,Barra do Bugres,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.6334,1.2393,1.4305,1.4063,1.3795,1.4273
+510170,Barra do Bugres,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1144,0.1414,0.1979,0.2147,0.2133,0.2448
+510170,Barra do Bugres,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.0904,0,0.3258,1.2886,1.082,1.0882
+510170,Barra do Bugres,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510170,Barra do Bugres,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,20.9109,14.8701,24.8274,42.643,49.6754,51.9724
+510170,Barra do Bugres,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),12,13,11,10,11,11
+510170,Barra do Bugres,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,0,0,1,1,1
+510170,Barra do Bugres,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,1,1,1,1
+510170,Barra do Bugres,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),25,25,24,25,27,28
+510170,Barra do Bugres,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,1.9826,2.1043,2.7208,2.6857,2.7624,2.7783
+510170,Barra do Bugres,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,1,1,1
+510170,Barra do Bugres,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),4,4,4,4,4,4
+510170,Barra do Bugres,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.1102,1.3289,1.8796,1.5972,1.6533,1.7379
+510170,Barra do Bugres,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.0175,2.5032,3.4826,3.2608,3.4964,3.6003
+510170,Barra do Bugres,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.185,0.9764,1.4562,1.3933,1.4059,1.7534
+510170,Barra do Bugres,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0881,0.1437,0.2391,0.2643,0.2373,0.2819
+510170,Barra do Bugres,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.5695,16.6067,17.9812,16.6107,15.2108,
+510170,Barra do Bugres,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7818,0.6905,0.8392,0.639,0.8823,0.8997
+510170,Barra do Bugres,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,7.5715,13.0632,22.8931,22.1363,19.3693,22.0411
+510170,Barra do Bugres,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.001,0.0029,0.0023,0,0,0.0083
+510170,Barra do Bugres,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,35.8286,0,2.4827,36.7256,44.2589,51.8602
+510170,Barra do Bugres,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,30.9004,21.3512,36.5269,51.2734,56.769,63.5925
+510170,Barra do Bugres,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,99.9209,,6.8493,49.5845,90.8327,97.2459
+510170,Barra do Bugres,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.581,,0,1.662,3.4377,3.2131
+510170,Barra do Bugres,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.0545,,1.8219,3.0175,3.424,3.2525
+510170,Barra do Bugres,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510170,Barra do Bugres,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,16.1277,0,1.1347,16.7832,20.6922,24.3149
+510170,Barra do Bugres,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,34.6269,46.1344,46.94,59.9394,75.4051,76.0426
+510170,Barra do Bugres,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,28.5976,100,93.203,33.3995,29.9583,25.8824
+510170,Barra do Bugres,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,26.8,42,36.9,32,29.2,24.8
+510170,Barra do Bugres,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",36.8,105.3,93.4,45,42.6,34.2
+510170,Barra do Bugres,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,4.415,13.3333,11.7647,8.9485,18.7354,
+510170,Barra do Bugres,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.6929,5.8639,6.2239,7.2909,8.4528,
+510170,Barra do Bugres,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,69.32,70.22,78.12,80.27,82.67,
+510170,Barra do Bugres,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.83,8.22,7.29,6.49,9.13,
+510170,Barra do Bugres,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,55.63,68.44,56.94,64.13,60.66,
+510170,Barra do Bugres,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.76,17.56,17.65,17.23,16.39,

@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510185,Bom Jesus do Araguaia,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),6706,6830,7280,7502,7731,7912
+510185,Bom Jesus do Araguaia,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1139.2433,1141.1334,1525.6512,1512.8671,1882.5825,2338.8423
+510185,Bom Jesus do Araguaia,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),693.4551,978.7322,1399.846,1460.6599,1753.0192,1992.9351
+510185,Bom Jesus do Araguaia,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),431.2316,144.1647,109.7684,27.0737,105.5294,238.2244
+510185,Bom Jesus do Araguaia,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,99.6531,96.4466,87.8753,67.3647,58.749,65.5271
+510185,Bom Jesus do Araguaia,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,9.4511,5.2512,13.2756,5.7919,18.3941,19.7253
+510185,Bom Jesus do Araguaia,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.0259,0.8565,0.8324,0.7625,0.8537,0.7571
+510185,Bom Jesus do Araguaia,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0319,0.5769,0.7184,0.6798,0.6868,0.5688
+510185,Bom Jesus do Araguaia,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.6215,2.7145,2.706,2.8952,2.8677,3.2963
+510185,Bom Jesus do Araguaia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.4363,4.1245,4.2349,3.0658,2.9427,3.2015
+510185,Bom Jesus do Araguaia,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3847,0.2928,0.2747,0.2893,0.2962,0.2692
+510185,Bom Jesus do Araguaia,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0,0,0,0,0,0
+510185,Bom Jesus do Araguaia,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510185,Bom Jesus do Araguaia,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,12.7945,13.1772,16.3736,13.663,16.8154,15.7988
+510185,Bom Jesus do Araguaia,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),4,5,4,4,4,3
+510185,Bom Jesus do Araguaia,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,0,0,0,0
+510185,Bom Jesus do Araguaia,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,1
+510185,Bom Jesus do Araguaia,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),8,11,12,12,12,10
+510185,Bom Jesus do Araguaia,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.9824,4.1435,4.1209,3.9989,3.8805,3.7917
+510185,Bom Jesus do Araguaia,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,1,1,1,0,0
+510185,Bom Jesus do Araguaia,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,2,2,2
+510185,Bom Jesus do Araguaia,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.024,1.6419,1.9604,2.6445,2.356,2.5163
+510185,Bom Jesus do Araguaia,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.1438,2.7603,3.3625,4.4881,4.4681,4.8121
+510185,Bom Jesus do Araguaia,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.4393,3.2728,4.7109,3.0882,3.28,4.152
+510185,Bom Jesus do Araguaia,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0749,0.1956,0.3588,0.4904,0.2604,0.4215
+510185,Bom Jesus do Araguaia,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,20.8261,15.1356,22.0099,21.0941,16.6952,
+510185,Bom Jesus do Araguaia,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.9514,0.6394,1.0404,0.865,0.8082,0.7659
+510185,Bom Jesus do Araguaia,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,0.1815,1.6306,2.0106,10.7077,7.3134,9.2945
+510185,Bom Jesus do Araguaia,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0
+510185,Bom Jesus do Araguaia,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510185,Bom Jesus do Araguaia,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,20.2803,43.4846,47.5275,38.7897,46.9538,51.82
+510185,Bom Jesus do Araguaia,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510185,Bom Jesus do Araguaia,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510185,Bom Jesus do Araguaia,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510185,Bom Jesus do Araguaia,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510185,Bom Jesus do Araguaia,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510185,Bom Jesus do Araguaia,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,23.6388,53.4844,46.2723,45.5871,48.2157,65.5308
+510185,Bom Jesus do Araguaia,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510185,Bom Jesus do Araguaia,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,11,3.7,8.1,5.8,13.5,19
+510185,Bom Jesus do Araguaia,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",235.8,228.4,240.1,228.3,255.5,243.2
+510185,Bom Jesus do Araguaia,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,54.3478,33.8983,49.505,35.2941,9.5238,
+510185,Bom Jesus do Araguaia,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.7718,6.8814,4.8077,2.7993,3.8805,
+510185,Bom Jesus do Araguaia,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,79.35,53.39,65.31,72.94,78.1,
+510185,Bom Jesus do Araguaia,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,4.35,7.63,4.95,7.06,3.81,
+510185,Bom Jesus do Araguaia,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,77.17,68.64,75.25,74.12,81.9,
+510185,Bom Jesus do Araguaia,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,31.52,31.36,17.82,15.29,24.76,

@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510629,Paranaíta,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),11244,11291,11671,11829,11989,12079
+510629,Paranaíta,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1888.0086,2303.9512,2690.9035,2669.3948,2961.7593,3454.5409
+510629,Paranaíta,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),405.3704,403.6807,492.575,632.2829,737.9159,1050.8653
+510629,Paranaíta,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),892.86,1301.247,1918.9548,1782.8375,1975.6564,2121.2834
+510629,Paranaíta,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,57.7001,74.6856,58.7647,53.648,55.2856,20.8636
+510629,Paranaíta,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,7.9295,2.9377,4.228,4.9479,4.9702,11.2757
+510629,Paranaíta,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.949,1.4374,1.4772,1.7119,1.6815,1.8454
+510629,Paranaíta,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6875,0.883,0.9768,1.0018,1.0568,1.2327
+510629,Paranaíta,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.1354,2.6393,2.8866,2.7179,2.68,3.3703
+510629,Paranaíta,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.2311,3.1592,3.0846,3.0924,2.7917,2.3015
+510629,Paranaíta,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3557,0.3543,0.3025,0.3424,0.3378,0.4702
+510629,Paranaíta,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.6681,2.7455,3.4342,3.6351,3.5866,2.8007
+510629,Paranaíta,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510629,Paranaíta,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,94.1213,102.3647,100.8911,105.1061,109.4754,117.8326
+510629,Paranaíta,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),4,4,4,4,4,5
+510629,Paranaíta,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510629,Paranaíta,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510629,Paranaíta,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),11,12,12,12,13,14
+510629,Paranaíta,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.5575,3.5426,3.4273,3.3815,3.6116,4.3464
+510629,Paranaíta,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510629,Paranaíta,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),4,4,4,4,4,5
+510629,Paranaíta,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.3962,1.9008,2.4173,2.5879,3.0683,3.323
+510629,Paranaíta,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,5.1788,6.052,7.9955,8.331,6.9271,7.5595
+510629,Paranaíta,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,6.0221,4.9074,5.825,7.022,7.6405,7.6902
+510629,Paranaíta,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1597,0.2413,0.277,0.4873,0.4588,0.5418
+510629,Paranaíta,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.7713,14.4595,16.1117,15.8155,15.8987,
+510629,Paranaíta,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6224,0.8548,0.9345,0.9751,0.6689,0.8151
+510629,Paranaíta,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,10.5932,15.7522,16.062,16.6934,15.0655,15.9416
+510629,Paranaíta,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0.0325,0.0705,0.0867,0.1145,0.1997
+510629,Paranaíta,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,20.1885,70.9415,128.0953,115.648,145.3833,158.374
+510629,Paranaíta,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,63.2337,101.3196,100.5055,110.9139,129.869,138.4221
+510629,Paranaíta,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,74.0088,56.9288,5.8194,0,0,0.4705
+510629,Paranaíta,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.4405,0.1248,0.3344,0.1462,0.6311,0.4705
+510629,Paranaíta,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.793,2.814,2.7291,2.8911,2.7034,2.518
+510629,Paranaíta,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510629,Paranaíta,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,13.4332,44.3204,61.876,53.5291,71.7148,166.4164
+510629,Paranaíta,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,47.4514,116.3135,73.5733,72.2678,92.54,116.9082
+510629,Paranaíta,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,72.9958,37.5,29.497,28.9634,27.8099,29.7249
+510629,Paranaíta,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,9,6.3,6.5,9.2,8.8,10.2
+510629,Paranaíta,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",73.5,47.9,45.7,55.7,46.7,57.2
+510629,Paranaíta,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,16.2162,11.1732,23.8095,0,
+510629,Paranaíta,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.7809,8.8566,5.398,7.0167,5.8387,
+510629,Paranaíta,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,82.98,91.89,91.06,92.22,92.41,
+510629,Paranaíta,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.32,5.41,7.82,6.55,5.06,
+510629,Paranaíta,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,75.53,67.57,77.65,82.74,81.01,
+510629,Paranaíta,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,15.43,14.59,15.08,13.1,13.92,

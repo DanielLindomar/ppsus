@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510642,Peixoto de Azevedo,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),35338,35695,32714,33154,33599,33754
+510642,Peixoto de Azevedo,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,810.1187,911.9324,1287.4343,1451.8826,1278.1785,1525.1778
+510642,Peixoto de Azevedo,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),274.2142,381.7866,433.9768,433.1181,432.1534,489.234
+510642,Peixoto de Azevedo,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),278.0395,260.2568,505.6329,699.293,595.2245,623.036
+510642,Peixoto de Azevedo,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,24.2692,,66.5691,53.1494,62.823,21.2954
+510642,Peixoto de Azevedo,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,4.9254,2.1067,6.7061,6.0125,1.2028,2.3601
+510642,Peixoto de Azevedo,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8894,1.1147,1.3279,1.3492,1.3096,1.321
+510642,Peixoto de Azevedo,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0329,1.3274,1.8087,2.1608,2.1382,2.1645
+510642,Peixoto de Azevedo,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.2096,3.684,4.4999,5.2941,4.5722,4.7713
+510642,Peixoto de Azevedo,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.653,2.5914,2.741,2.5991,2.5578,2.5553
+510642,Peixoto de Azevedo,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1305,0.1143,0.1706,0.1659,0.1586,0.168
+510642,Peixoto de Azevedo,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.7664,1.5688,1.7959,1.9304,1.823,1.9405
+510642,Peixoto de Azevedo,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,7,2,0,0,0
+510642,Peixoto de Azevedo,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,28.8415,55.0974,74.5094,99.3606,82.9132,64.8575
+510642,Peixoto de Azevedo,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),8,8,9,9,9,9
+510642,Peixoto de Azevedo,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510642,Peixoto de Azevedo,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,1,1,1,1
+510642,Peixoto de Azevedo,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),22,22,24,25,25,28
+510642,Peixoto de Azevedo,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.4534,2.5214,2.4699,2.413,2.381,2.5182
+510642,Peixoto de Azevedo,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510642,Peixoto de Azevedo,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,4,5,5,4,5
+510642,Peixoto de Azevedo,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.0764,1.2894,1.4643,1.6429,1.6054,1.7579
+510642,Peixoto de Azevedo,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.0734,2.4079,2.5979,2.7709,2.8765,3.3211
+510642,Peixoto de Azevedo,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.8925,3.394,4.0963,4.0214,4.263,4.5665
+510642,Peixoto de Azevedo,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0275,0.0814,0.1013,0.1304,0.1689,0.2153
+510642,Peixoto de Azevedo,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,10.2361,11.3767,13.3505,13.4607,12.7718,
+510642,Peixoto de Azevedo,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.4485,0.4624,0.5606,0.6015,0.8187,0.8626
+510642,Peixoto de Azevedo,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.9928,2.5044,4.8024,8.0661,6.2863,6.1393
+510642,Peixoto de Azevedo,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0.0061,0.0631,0.2416,0.2993,0.3132
+510642,Peixoto de Azevedo,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,83.7908,87.5473,84.7649,87.4103,62.6804,91.9595
+510642,Peixoto de Azevedo,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,57.6999,60.2045,60.066,61.8628,51.8468,73.1173
+510642,Peixoto de Azevedo,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,91.9959,99.424,96.2856,98.5507,76.7806,74.6456
+510642,Peixoto de Azevedo,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,2.8369,5.824,3.498,1.3112,2.1842,2.384
+510642,Peixoto de Azevedo,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.9267,3.4723,3.2045,3.2992,3.6505,3.9646
+510642,Peixoto de Azevedo,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,28.3233,14.0613,0,0,0
+510642,Peixoto de Azevedo,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,46.4471,95.9983,69.1581,48.1127,29.5257,45.7499
+510642,Peixoto de Azevedo,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,46.3117,57.8002,50.6289,49.8419,51.6556,65.2321
+510642,Peixoto de Azevedo,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,9.7106,11.1215,11.9084,14.8708,24.225,17.3015
+510642,Peixoto de Azevedo,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,8.8,10.5,10.9,12.9,22.1,16.1
+510642,Peixoto de Azevedo,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",38.8,42.6,44.5,51.6,96.2,67.6
+510642,Peixoto de Azevedo,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,13.1148,4.5942,25.0391,15.7233,9.5087,
+510642,Peixoto de Azevedo,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.8199,7.7042,7.0918,6.696,6.7264,
+510642,Peixoto de Azevedo,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,62.56,61.56,64.48,67.77,73.38,
+510642,Peixoto de Azevedo,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.74,7.81,6.26,8.65,9.19,
+510642,Peixoto de Azevedo,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,61.31,61.56,65.41,67.77,67.35,
+510642,Peixoto de Azevedo,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,17.7,20.52,19.09,18.08,19.33,

@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510628,Novo São Joaquim,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),4938,4837,6919,7038,7160,7239
+510628,Novo São Joaquim,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,2133.5979,2712.4577,2171.426,1966.7363,2747.0707,2880.0254
+510628,Novo São Joaquim,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),34.6297,281.9246,401.6049,441.7013,521.4166,541.9489
+510628,Novo São Joaquim,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),1071.9247,883.4203,898.7848,828.0682,1669.2395,1793.1419
+510628,Novo São Joaquim,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,78.395,63.2404,81.7712,73.9721,63.2417,71.6476
+510628,Novo São Joaquim,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,24.6438,7.9128,5.0975,1.6429,7.0037,8.7469
+510628,Novo São Joaquim,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.0612,1.0668,1.2487,1.2504,1.1383,1.4519
+510628,Novo São Joaquim,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.207,1.6808,1.373,1.1964,1.0936,1.1991
+510628,Novo São Joaquim,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.2058,3.8081,3.2606,3.3717,2.8869,2.9148
+510628,Novo São Joaquim,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,5.2491,5.1685,3.6855,3.4044,3.236,3.2587
+510628,Novo São Joaquim,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.6075,0.6368,0.5059,0.4362,0.4609,0.4517
+510628,Novo São Joaquim,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,5.2653,6.9092,5.865,4.5936,4.2835,4.444
+510628,Novo São Joaquim,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510628,Novo São Joaquim,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,81.0045,84.7633,61.0637,147.3004,218.8128,217.461
+510628,Novo São Joaquim,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,5,5,5,5,4
+510628,Novo São Joaquim,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510628,Novo São Joaquim,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510628,Novo São Joaquim,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),11,11,11,10,11,12
+510628,Novo São Joaquim,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,6.0753,6.2022,4.3359,4.2626,4.1899,4.1442
+510628,Novo São Joaquim,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510628,Novo São Joaquim,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,3,3,3,3
+510628,Novo São Joaquim,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.6721,1.6593,1.7985,2.192,2.2601,2.8451
+510628,Novo São Joaquim,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.8254,3.5429,3.4911,3.9916,4.1351,5.611
+510628,Novo São Joaquim,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.8238,2.5696,2.2075,3.0263,3.6427,12.1456
+510628,Novo São Joaquim,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.077,0.2992,0.2879,0.3438,0.4802,0.286
+510628,Novo São Joaquim,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,17.4038,16.2333,17.7054,14.2685,15.2667,
+510628,Novo São Joaquim,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.9164,0.9444,1.0228,0.7751,0.7244,0.6645
+510628,Novo São Joaquim,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,3.2161,4.7381,4.4631,5.6459,6.5193,5.6798
+510628,Novo São Joaquim,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0.0041,0.1006,0.034
+510628,Novo São Joaquim,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,63.5885,91.9992,76.0225,73.7425,88.4078,90.7584
+510628,Novo São Joaquim,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,76.9542,110.6057,90.331,99.4601,103.9106,94.7645
+510628,Novo São Joaquim,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,99.5506,57.7947,5.2023,1.4218,3.5008
+510628,Novo São Joaquim,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.6369,1.3483,1.1407,0.1927,0.316,1.6743
+510628,Novo São Joaquim,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.4268,3.0022,2.1084,2.3391,2.8057,2.6256
+510628,Novo São Joaquim,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510628,Novo São Joaquim,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,27.7312,49.8423,33.9724,29.2536,83.3768,323.2224
+510628,Novo São Joaquim,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,68.5076,99.5554,60.301,71.7712,91.6942,173.7023
+510628,Novo São Joaquim,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,25.5263,16.8224,15.84,26,27.1505,36.0058
+510628,Novo São Joaquim,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,8.9,8.8,4.8,8.3,10.3,12.7
+510628,Novo São Joaquim,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",46.3,34.5,26.5,46.2,52.4,67
+510628,Novo São Joaquim,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,19.2308,11.1111,17.8571,27.7778,55.5556,
+510628,Novo São Joaquim,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.8979,8.6831,6.3593,7.5305,5.8659,
+510628,Novo São Joaquim,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,87.5,73.33,79.46,76.85,79.78,
+510628,Novo São Joaquim,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.77,8.89,6.25,10.19,6.67,
+510628,Novo São Joaquim,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,70.19,58.89,75.89,78.7,82.22,
+510628,Novo São Joaquim,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.27,28.89,21.43,15.74,16.67,

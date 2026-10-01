@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510480,Jaciara,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),27807,27696,28569,29060,29560,29803
+510480,Jaciara,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1304.1222,1312.3858,1537.9471,1495.1721,1915.2492,1854.5294
+510480,Jaciara,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),455.0793,395.4833,536.4122,486.5489,625.5553,674.3927
+510480,Jaciara,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),671.8922,777.8728,837.9354,852.8276,1111.4752,991.0365
+510480,Jaciara,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,47.3851,61.42,49.0781,54.9144,35.5797,47.6119
+510480,Jaciara,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.7852,5.3705,3.3984,0.2283,0.5631,4.4957
+510480,Jaciara,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8595,1.0532,1.1929,1.074,1.5541,1.8736
+510480,Jaciara,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9548,1.0399,1.0392,0.8775,0.9878,0.8815
+510480,Jaciara,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.1214,2.6368,2.4271,2.4959,2.4926,2.3457
+510480,Jaciara,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.2873,3.1864,3.1503,3.0024,2.9093,2.9081
+510480,Jaciara,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3301,0.2953,0.2688,0.2825,0.275,0.2782
+510480,Jaciara,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.3784,1.4443,1.6336,1.5771,1.8495,1.7223
+510480,Jaciara,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510480,Jaciara,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,44.8017,53.5565,56.1203,56.6655,69.0697,61.4301
+510480,Jaciara,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),8,8,8,8,8,8
+510480,Jaciara,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,2,1,2,2
+510480,Jaciara,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510480,Jaciara,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),23,26,27,26,28,29
+510480,Jaciara,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.877,2.8885,2.8002,2.7529,2.7064,2.6843
+510480,Jaciara,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,1,1
+510480,Jaciara,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),8,8,8,8,8,8
+510480,Jaciara,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.0569,1.7277,1.9763,2.0913,1.686,2.256
+510480,Jaciara,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.2315,2.5762,3.0889,3.0121,2.7189,3.525
+510480,Jaciara,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,6.6593,8.0256,8.5069,8.4025,8.6552,8.8833
+510480,Jaciara,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1449,0.2079,0.3746,0.4384,0.4331,0.3889
+510480,Jaciara,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,15.5253,13.7897,16.3139,16.0761,15.438,
+510480,Jaciara,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6994,0.5193,0.5665,0.5919,0.6204,0.6915
+510480,Jaciara,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,4.9045,6.6952,8.8405,9.1026,11.3204,11.8661
+510480,Jaciara,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0228,0.0221,0.0449,0.0258,0.0185,0.0207
+510480,Jaciara,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,42.7231,56.4702,62.0603,53.3723,63.1258,54.055
+510480,Jaciara,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,56.6045,73.5846,80.2268,78.5616,83.5927,78.0794
+510480,Jaciara,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,91.4983,90.0256,84.1512,88.0077,84.1908,94.2272
+510480,Jaciara,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,2.9461,2.11,1.5792,2.0632,1.2326,1.3656
+510480,Jaciara,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.0101,3.2276,2.9532,3.0567,2.8687,3.0068
+510480,Jaciara,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510480,Jaciara,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,27.5634,35.5387,30.5937,26.4802,30.4694,25.5572
+510480,Jaciara,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,86.951,130.6838,90.5029,101.3072,106.795,107.9592
+510480,Jaciara,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,37.7382,35.525,35.3403,41.5681,36.9081,42.8449
+510480,Jaciara,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,5.5,4.7,5.3,5.8,5,5.9
+510480,Jaciara,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",30.7,27.9,28.4,32,28.3,32.8
+510480,Jaciara,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,4.6083,4.6729,2.4331,19.0217,8.6455,
+510480,Jaciara,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,7.5161,8.8821,6.1255,7.1232,6.4276,
+510480,Jaciara,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,51.15,57.24,62.77,62.77,67.15,
+510480,Jaciara,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.99,5.61,7.79,7.07,6.92,
+510480,Jaciara,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,67.74,72.13,71.53,70.3,72.05,
+510480,Jaciara,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,19.12,15.19,11.44,13.32,14.99,

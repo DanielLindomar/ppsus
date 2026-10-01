@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510730,São José do Rio Claro,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),21011,21351,14911,14786,14662,14455
+510730,São José do Rio Claro,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1040.5876,1104.3555,1849.6554,2097.9573,2470.7207,2843.596
+510730,São José do Rio Claro,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),338.3257,243.9609,462.4297,589.7198,658.0973,1042.7009
+510730,São José do Rio Claro,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),517.3841,569.1265,1118.5181,1181.228,1389.2351,1300.8177
+510730,São José do Rio Claro,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,67.8957,63.8335,69.0394,63.032,73.6764,72.1762
+510730,São José do Rio Claro,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,1.8991,6.5941,5.5104,2.6815,2.7053,6.3023
+510730,São José do Rio Claro,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5673,0.6098,0.7927,0.913,1.2174,1.3255
+510730,São José do Rio Claro,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9124,1.1288,1.8429,1.941,2.2166,2.1896
+510730,São José do Rio Claro,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.6815,1.9301,2.6812,2.9379,3.5711,4.8149
+510730,São José do Rio Claro,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.0546,1.94,2.6605,2.6545,2.825,1.7468
+510730,São José do Rio Claro,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3175,0.2815,0.3984,0.4085,0.3901,0.384
+510730,São José do Rio Claro,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.0471,1.0304,1.4754,1.4879,1.5005,1.522
+510730,São José do Rio Claro,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510730,São José do Rio Claro,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,36.6475,37.9373,53.6517,57.825,71.9002,71.9474
+510730,São José do Rio Claro,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),8,8,8,7,7,7
+510730,São José do Rio Claro,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510730,São José do Rio Claro,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510730,São José do Rio Claro,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),18,19,19,19,20,21
+510730,São José do Rio Claro,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.7367,2.8102,4.0239,4.0579,4.0922,4.1508
+510730,São José do Rio Claro,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510730,São José do Rio Claro,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),6,6,6,6,6,6
+510730,São José do Rio Claro,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.3404,1.6303,2.6392,2.6453,3.0112,3.0852
+510730,São José do Rio Claro,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.2416,2.0376,4.1923,2.5397,2.796,3.2241
+510730,São José do Rio Claro,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.6209,3.0259,11.3041,7.3072,9.3232,8.9792
+510730,São José do Rio Claro,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1322,0.1941,0.4404,0.4572,0.3688,0.2796
+510730,São José do Rio Claro,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.1654,16.8589,18.7143,19.6618,17.3927,
+510730,São José do Rio Claro,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7747,0.5641,1.0557,0.782,0.9696,0.941
+510730,São José do Rio Claro,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,5.3868,6.6255,11.035,9.835,12.7804,13.8001
+510730,São José do Rio Claro,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0003,0,0,0
+510730,São José do Rio Claro,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,26.6051,38.031,57.7426,62.7621,60.4965,56.5202
+510730,São José do Rio Claro,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,35.1245,48.5223,79.6057,90.6939,93.5752,95.7454
+510730,São José do Rio Claro,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,78.5331,85.5911,81.6492,71.2284,59.0755,44.4308
+510730,São José do Rio Claro,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,3.9356,2.9557,0.9292,2.0474,2.3675,2.3256
+510730,São José do Rio Claro,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.5259,2.9643,2.8293,2.6466,3.3348,2.9266
+510730,São José do Rio Claro,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510730,São José do Rio Claro,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,14.1369,21.6935,23.4449,22.7909,24.9616,22.7735
+510730,São José do Rio Claro,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,24.7096,75.7646,59.0616,73.5751,89.3797,100.6732
+510730,São José do Rio Claro,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,26.9648,23.5521,27.8012,31.5436,35.5685,41.4017
+510730,São José do Rio Claro,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,26,22.5,24,24.6,29.4,35.3
+510730,São José do Rio Claro,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",61.6,48.2,57.8,63,73.5,83.1
+510730,São José do Rio Claro,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,31.4961,24.1935,4.329,28.9855,0,
+510730,São José do Rio Claro,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.9974,6.2761,7.3771,7.0337,6.8204,
+510730,São José do Rio Claro,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,78.74,90.32,86.9,82.13,88.13,
+510730,São José do Rio Claro,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.87,4.84,7.79,8.7,4.11,
+510730,São José do Rio Claro,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,51.18,52.02,53.25,62.32,77.63,
+510730,São José do Rio Claro,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,21.26,14.52,14.72,14.49,19.63,

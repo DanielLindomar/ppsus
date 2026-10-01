@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510787,Sapezal,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),26688,27485,28944,30194,31499,32514
+510787,Sapezal,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1404.3494,1528.3132,1554.969,1906.6281,2124.5653,2233.6425
+510787,Sapezal,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),386.9218,384.1603,478.0503,599.8301,830.6758,924.9048
+510787,Sapezal,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),708.944,785.9697,823.7418,1002.9699,993.7995,1009.6353
+510787,Sapezal,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,78.611,88.4683,88.188,85.4539,83.6977,86.6012
+510787,Sapezal,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,7.1315,3.7324,2.9645,2.8461,3.4556,2.3753
+510787,Sapezal,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.3328,1.1796,1.2376,1.2648,1.3927,1.4338
+510787,Sapezal,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6808,0.7702,0.6278,0.6717,0.7315,0.7514
+510787,Sapezal,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.228,2.4119,2.3953,2.47,2.588,3.2678
+510787,Sapezal,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.3014,2.1619,1.8284,1.7911,2.389,1.8352
+510787,Sapezal,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2342,0.2547,0.2584,0.2898,0.2943,0.3088
+510787,Sapezal,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.3115,1.237,1.1747,1.1261,1.0794,1.0457
+510787,Sapezal,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510787,Sapezal,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,37.2827,48.9976,69.5585,67.4803,68.8911,72.5072
+510787,Sapezal,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),6,8,7,6,6,7
+510787,Sapezal,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510787,Sapezal,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510787,Sapezal,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),17,20,20,21,23,26
+510787,Sapezal,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,1.9672,2.183,2.073,1.9871,1.9048,2.0237
+510787,Sapezal,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510787,Sapezal,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),5,5,5,5,5,5
+510787,Sapezal,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.7675,2.5902,2.19,1.9559,2.0337,2.0667
+510787,Sapezal,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,5.1053,7.5487,7.3999,6.8366,5.7188,6.9486
+510787,Sapezal,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.965,0.5523,1.2396,1.5779,4.8937,4.4257
+510787,Sapezal,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.06,0.1753,0.2513,0.2614,0.2361,0.2317
+510787,Sapezal,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.4109,13.6115,14.2631,13.8476,14.2537,
+510787,Sapezal,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.8807,1.0234,1.1218,0.9968,1.0067,0.7858
+510787,Sapezal,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,1.1725,2.1226,7.3422,7.2983,7.7857,9.6629
+510787,Sapezal,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0.0065,0.0488,0.045,0.0412,0.0827
+510787,Sapezal,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,49.0108,48.6083,46.3308,56.4351,55.5573,51.8238
+510787,Sapezal,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,56.5423,57.5951,55.9011,65.9734,66.1926,62.0963
+510787,Sapezal,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,91.5902,86.3772,83.4452,83.9202,85.3714,86.2315
+510787,Sapezal,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.7645,0.9731,0.6711,1.6432,1.2,1.0089
+510787,Sapezal,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.9281,3.134,3.2491,3.392,3.5926,4.6404
+510787,Sapezal,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510787,Sapezal,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,24.2452,31.2375,22.9199,25.8938,25.5764,26.4412
+510787,Sapezal,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,43.3172,69.4305,48.5317,49.594,52.1657,52.646
+510787,Sapezal,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,13.3201,15.6665,17.1817,14.508,16.1151,16.6419
+510787,Sapezal,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,12.7,14.7,16.7,14.1,15.7,16.1
+510787,Sapezal,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",47.9,57.2,63.1,52.9,58.4,60.8
+510787,Sapezal,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,10.1868,8.7108,19.6078,18.4255,11.0294,
+510787,Sapezal,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,3.4472,4.2933,3.3167,3.6762,2.6033,
+510787,Sapezal,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,84.16,86.93,76.8,75.04,78.31,
+510787,Sapezal,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.15,7.14,8.82,8.54,8.27,
+510787,Sapezal,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,73.34,73.65,78.59,82.24,77.53,
+510787,Sapezal,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,13.58,13.94,11.93,12.73,12.87,

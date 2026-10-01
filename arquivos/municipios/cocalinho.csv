@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510310,Cocalinho,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),5681,5716,6220,6323,6428,6495
+510310,Cocalinho,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1392.8403,1839.9959,2308.992,2161.2711,2319.451,3169.7277
+510310,Cocalinho,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),399.0998,434,749.5709,503.0637,687.1046,858.885
+510310,Cocalinho,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),804.7872,1348.8252,1447.2523,1574.9941,1545.9766,2228.4239
+510310,Cocalinho,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,50.3906,92.3181,80.8661,78.7443,59.2762,69.4628
+510310,Cocalinho,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,1.6811,14.8139,5.8059,7.0548,5.4562,2.8392
+510310,Cocalinho,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8097,1.4118,1.2685,0.9173,0.9521,0.9992
+510310,Cocalinho,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.5402,1.4661,1.3907,1.4471,1.5775,1.3364
+510310,Cocalinho,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.9803,2.3478,2.8264,2.8689,2.8002,2.9315
+510310,Cocalinho,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.1507,3.9223,3.537,3.3339,3.1238,3.1178
+510310,Cocalinho,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5281,0.5248,0.4823,0.4745,0.4667,0.4619
+510310,Cocalinho,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.8164,2.9006,2.7331,2.6886,2.6447,2.6174
+510310,Cocalinho,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510310,Cocalinho,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,35.2051,41.1127,41.8006,41.3886,50.0467,51.8399
+510310,Cocalinho,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),3,3,3,3,3,3
+510310,Cocalinho,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510310,Cocalinho,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510310,Cocalinho,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),9,10,10,10,12,13
+510310,Cocalinho,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,5.2808,5.2484,4.8232,4.7446,4.6671,4.6189
+510310,Cocalinho,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510310,Cocalinho,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,3,3,3,3
+510310,Cocalinho,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,2.4429,2.4927,3.3976,3.5847,3.5285,3.313
+510310,Cocalinho,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,4.3873,5.1274,6.3076,6.396,6.1511,6.129
+510310,Cocalinho,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.0158,2.4305,2.9341,4.7677,4.435,3.9865
+510310,Cocalinho,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1611,0.2552,0.2807,0.3343,0.395,0.4142
+510310,Cocalinho,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,25.8696,22.125,26.0758,22.8571,18.4583,
+510310,Cocalinho,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,1.0889,0.9893,1.0153,0.9236,0.7567,0.9704
+510310,Cocalinho,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,2.2447,8.7082,10.5458,17.4376,22.5529,26.7954
+510310,Cocalinho,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0
+510310,Cocalinho,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,43.3022,50.5598,46.463,45.0735,89.2968,51.4242
+510310,Cocalinho,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,35.2051,76.1022,87.1383,82.8721,127.5669,96.0739
+510310,Cocalinho,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,78.0488,0,28.3737,57.193,80.662,97.9042
+510310,Cocalinho,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0,0,0,1.4035,1.0453,0
+510310,Cocalinho,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.8211,3.2145,3.3702,2.8421,2.7178,2.8982
+510310,Cocalinho,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510310,Cocalinho,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,12.3614,22.7732,15.1743,11.6124,23.0927,15.6789
+510310,Cocalinho,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,17.6556,77.5275,47.7086,52.7335,73.7786,85.7466
+510310,Cocalinho,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,43,55.1724,52.583,46.7557,31.5854,47.7564
+510310,Cocalinho,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,2.5,1.1,0.7,1.7,1.5,5.4
+510310,Cocalinho,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",63.5,77.6,72.1,67.6,45.7,79.6
+510310,Cocalinho,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,14.4928,13.8889,0,14.2857,0,
+510310,Cocalinho,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.5129,7.5227,7.074,5.8517,4.9782,
+510310,Cocalinho,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,75.36,52.78,80.3,78.26,77.78,
+510310,Cocalinho,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.25,5.56,7.58,8.57,9.86,
+510310,Cocalinho,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,73.91,79.17,68.18,68.57,77.78,
+510310,Cocalinho,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,33.33,12.5,21.21,28.57,16.67,

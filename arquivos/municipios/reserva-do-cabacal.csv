@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510715,Reserva do Cabaçal,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),2743,2754,2122,2092,2062,2020
+510715,Reserva do Cabaçal,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1402.2866,1472.1759,2498.469,2803.6279,3239.1778,4154.4095
+510715,Reserva do Cabaçal,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),1293.5966,1428.0659,2273.2792,2416.2821,2869.788,3403.5736
+510715,Reserva do Cabaçal,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),2.9391,0,73.4686,217.2358,183.4568,539.814
+510715,Reserva do Cabaçal,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,73.4854,63.287,68.0087,71.7855,64.5464,80.0998
+510715,Reserva do Cabaçal,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,0.9155,6.0183,2.3804,4.9325,4.671,4.6343
+510715,Reserva do Cabaçal,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5031,0.7553,1.0697,1.1281,1.0718,1.5149
+510715,Reserva do Cabaçal,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.6697,1.2709,2.394,2.7868,3.356,4.495
+510715,Reserva do Cabaçal,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.9785,3.0247,4.1235,4.5793,5.7371,5.2277
+510715,Reserva do Cabaçal,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.7393,4.6587,6.8709,7.2514,8.3657,7.2624
+510715,Reserva do Cabaçal,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.6088,0.6354,0.9425,0.6358,0.485,0.495
+510715,Reserva do Cabaçal,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0,0,0,0,0,0
+510715,Reserva do Cabaçal,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510715,Reserva do Cabaçal,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,18.2282,18.1554,27.4741,36.2333,77.5946,82.9208
+510715,Reserva do Cabaçal,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),1,1,1,1,1,1
+510715,Reserva do Cabaçal,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),0,0,0,0,0,0
+510715,Reserva do Cabaçal,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510715,Reserva do Cabaçal,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),4,4,4,4,5,5
+510715,Reserva do Cabaçal,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.6456,3.6311,4.7125,4.7801,4.8497,4.9505
+510715,Reserva do Cabaçal,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510715,Reserva do Cabaçal,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),1,1,1,1,1,1
+510715,Reserva do Cabaçal,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.2559,2.264,4.3007,4.6539,4.7415,5.1045
+510715,Reserva do Cabaçal,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.2297,3.358,6.4604,6.8967,6.8337,7.5965
+510715,Reserva do Cabaçal,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.2049,1.6845,3.1951,3.305,4.1271,6.554
+510715,Reserva do Cabaçal,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0653,0.2208,0.2625,0.2208,0.1935,0.1337
+510715,Reserva do Cabaçal,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,26.4706,20.3913,22.0909,16.9062,25.2222,
+510715,Reserva do Cabaçal,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7543,0.4234,0.6767,0.9044,0.9777,0.9431
+510715,Reserva do Cabaçal,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,0.1783,0.2233,0.2959,1.5559,2.8002,5.3713
+510715,Reserva do Cabaçal,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0.001,0.0131,0.0376
+510715,Reserva do Cabaçal,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510715,Reserva do Cabaçal,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,35.7273,40.6681,49.0104,72.6577,73.7148,88.1188
+510715,Reserva do Cabaçal,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510715,Reserva do Cabaçal,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510715,Reserva do Cabaçal,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510715,Reserva do Cabaçal,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510715,Reserva do Cabaçal,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510715,Reserva do Cabaçal,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,28.1167,73.3332,68.6412,107.3791,86.9711,106.349
+510715,Reserva do Cabaçal,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510715,Reserva do Cabaçal,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,5.1,15.2,9.6,15.1,10.5,14
+510715,Reserva do Cabaçal,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",136.3,152,148.9,153,145.3,148.5
+510715,Reserva do Cabaçal,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,0,0,31.25,111.1111,
+510715,Reserva do Cabaçal,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.7393,7.6253,12.7238,9.5602,8.2444,
+510715,Reserva do Cabaçal,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,58.82,78.26,86.36,81.25,83.33,
+510715,Reserva do Cabaçal,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,17.65,8.7,0,18.75,11.11,
+510715,Reserva do Cabaçal,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,82.35,65.22,77.27,96.88,77.78,
+510715,Reserva do Cabaçal,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,23.53,8.7,9.09,6.25,5.56,

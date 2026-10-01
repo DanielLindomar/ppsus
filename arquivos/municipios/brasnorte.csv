@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510190,Brasnorte,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),20140,20571,17004,17248,17496,17645
+510190,Brasnorte,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1235.3274,1461.6176,2179.2559,2461.1567,2629.5896,2875.5816
+510190,Brasnorte,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),303.6958,268.6369,385.9471,461.955,497.4673,580.1439
+510190,Brasnorte,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),841.7465,1122.8653,1457.4956,1579.8749,1545.1781,1743.018
+510190,Brasnorte,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,49.7103,80.4182,76.0026,73.3889,71.2516,76.3127
+510190,Brasnorte,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,4.2989,2.5071,4.7173,3.3091,5.2935,2.421
+510190,Brasnorte,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7944,0.8342,1.2838,1.392,1.3174,1.478
+510190,Brasnorte,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9196,1.0014,1.2779,1.3845,1.5872,1.5971
+510190,Brasnorte,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.3431,3.4719,4.386,4.6556,5.2578,6.0272
+510190,Brasnorte,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.006,2.8924,3.3986,3.3047,3.139,2.6982
+510190,Brasnorte,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2483,0.1862,0.1888,0.2754,0.2772,0.2647
+510190,Brasnorte,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.5392,1.507,1.8231,2.1452,2.2862,2.2669
+510190,Brasnorte,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510190,Brasnorte,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,71.6634,96.6992,117.0313,116.054,120.1246,122.0856
+510190,Brasnorte,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),9,9,10,11,12,11
+510190,Brasnorte,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510190,Brasnorte,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510190,Brasnorte,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),34,34,33,34,35,36
+510190,Brasnorte,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.4826,2.4306,2.9405,2.8989,2.8578,2.8337
+510190,Brasnorte,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510190,Brasnorte,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,3,4,4,4
+510190,Brasnorte,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,1.1414,1.225,2.2859,2.3369,2.2049,2.012
+510190,Brasnorte,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,2.5988,2.5742,4.3686,4.6747,4.7275,2.5105
+510190,Brasnorte,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.1348,2.1098,3.153,4.2649,3.9758,1.1712
+510190,Brasnorte,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1071,0.0867,0.1708,0.2385,0.266,0.1806
+510190,Brasnorte,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,14.4503,13.2378,14.0456,16.2114,13.9484,
+510190,Brasnorte,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6049,0.532,0.8894,1.0237,0.9329,0.8276
+510190,Brasnorte,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,3.6058,5.0665,10.065,10.7474,11.0876,12.222
+510190,Brasnorte,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0282,0.0231,0.0115,0.0016,0.0057,0.0735
+510190,Brasnorte,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,53.6743,46.1329,81.9219,105.6354,85.3338,91.6407
+510190,Brasnorte,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,69.3644,64.3138,101.682,125.4058,103.738,109.0394
+510190,Brasnorte,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,99.8946,96.7696,99.8902,99.933,99.8145
+510190,Brasnorte,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,1.4801,3.5827,0.7897,0.7684,0.8707,1.4224
+510190,Brasnorte,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.2146,3.3467,3.458,3.0681,3.572,3.8287
+510190,Brasnorte,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510190,Brasnorte,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,18.5588,21.5987,32.8802,40.3108,33.9804,34.5171
+510190,Brasnorte,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,40.2248,80.1275,70.1893,78.5694,72.4415,77.0723
+510190,Brasnorte,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,22.6915,28.7982,19.9537,16.8285,18.0165,16.8919
+510190,Brasnorte,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,11.5,14,12.6,10.7,13.6,13.8
+510190,Brasnorte,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",59.4,76.2,61.3,52.6,62.2,61.2
+510190,Brasnorte,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,11.6959,9.772,18.2371,9.4637,12.9032,
+510190,Brasnorte,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.8163,6.1737,4.7636,4.8122,5.2012,
+510190,Brasnorte,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,63.16,72.55,75.99,85.13,82.26,
+510190,Brasnorte,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,9.06,15.31,12.46,8.52,10.65,
+510190,Brasnorte,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,69.3,76.55,82.07,83.6,78.06,
+510190,Brasnorte,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,21.93,14.01,19.76,14.83,20.32,

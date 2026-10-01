@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510637,Pedra Preta,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),17446,17547,18066,18391,18722,18946
+510637,Pedra Preta,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1047.6521,1266.2761,1405.7737,1740.8431,1908.0575,1864.3474
+510637,Pedra Preta,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),139.669,147.86,260.3582,347.3444,345.4523,298.9011
+510637,Pedra Preta,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),603.6557,649.9496,1110.5334,1315.0985,1479.6687,1499.9594
+510637,Pedra Preta,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,68.1367,82.6943,75.7627,66.6754,68.5729,66.4272
+510637,Pedra Preta,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.6194,6.7168,4.3809,5.6721,8.5894,2.7189
+510637,Pedra Preta,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8816,1.0623,1.3063,1.1875,1.4384,1.3586
+510637,Pedra Preta,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8311,0.7933,0.9039,0.852,0.8637,0.8973
+510637,Pedra Preta,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.7958,2.0562,2.2855,2.1239,2.4127,2.4543
+510637,Pedra Preta,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.2882,1.8852,1.7204,1.554,1.4464,1.4341
+510637,Pedra Preta,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1909,0.1898,0.3044,0.2039,0.1602,0.2111
+510637,Pedra Preta,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.8342,1.8237,1.7713,1.74,1.7092,1.337
+510637,Pedra Preta,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510637,Pedra Preta,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,11.2232,11.4948,11.3473,10.9673,11.7509,19.8828
+510637,Pedra Preta,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,5,6,5,5,5
+510637,Pedra Preta,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510637,Pedra Preta,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510637,Pedra Preta,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),11,12,12,11,12,13
+510637,Pedra Preta,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.2928,2.2796,2.3968,2.7187,2.6707,2.6391
+510637,Pedra Preta,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510637,Pedra Preta,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,3,4,3,4,4
+510637,Pedra Preta,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.6785,0.631,0.8213,1.2648,1.6121,1.5334
+510637,Pedra Preta,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.3055,0.382,1.1518,2.1495,2.8511,2.7635
+510637,Pedra Preta,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.9982,0.9395,1.1377,1.5042,1.2314,1.7327
+510637,Pedra Preta,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0802,0.0373,0.0943,0.1267,0.0877,0.1138
+510637,Pedra Preta,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,10.3207,11.1369,9.2389,11.4383,12.4781,
+510637,Pedra Preta,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.4869,0.4013,0.3253,0.4677,0.6402,0.7117
+510637,Pedra Preta,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,3.0677,2.8966,3.789,7.5732,8.62,9.2551
+510637,Pedra Preta,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0006,0.0004,0,0
+510637,Pedra Preta,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,20.7497,25.7024,21.2554,20.4992,24.1427,20.6904
+510637,Pedra Preta,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,60.243,65.1393,62.1056,67.4787,87.8645,80.0697
+510637,Pedra Preta,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,93.6464,100,100,100,100,96.9388
+510637,Pedra Preta,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,8.2873,5.3215,4.1667,3.7135,5.3097,3.8265
+510637,Pedra Preta,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,4.2348,5.3636,5.2318,5.0769,4.7566,5.1811
+510637,Pedra Preta,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510637,Pedra Preta,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,12.0547,13.1648,7.55,7.1881,9.0099,7.6297
+510637,Pedra Preta,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,91.2847,103.9141,88.6877,91.6729,130.8418,127.2421
+510637,Pedra Preta,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,65.5566,60.7174,65.9537,69.9436,72.5228,74.1595
+510637,Pedra Preta,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,1.4,0.8,1.8,2.9,1.8,3.4
+510637,Pedra Preta,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",18.7,16.4,20.1,23.8,23.2,28.6
+510637,Pedra Preta,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,16.8776,16.5975,26.5487,17.0213,21.9298,
+510637,Pedra Preta,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,9.4578,8.0356,6.6977,6.9056,7.6381,
+510637,Pedra Preta,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,68.35,72.2,70.8,77.87,78.95,
+510637,Pedra Preta,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.17,8.71,6.64,6.81,9.21,
+510637,Pedra Preta,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,49.37,51.87,51.77,58.3,46.93,
+510637,Pedra Preta,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.57,12.86,18.58,14.89,12.28,

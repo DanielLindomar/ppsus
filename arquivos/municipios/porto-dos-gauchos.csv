@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510680,Porto dos Gaúchos,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),5363,5344,5593,5641,5690,5705
+510680,Porto dos Gaúchos,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,2113.5388,2386.6897,3247.9014,3705.3676,3879.5887,4708.0454
+510680,Porto dos Gaúchos,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),594.8618,721.1597,956.748,1159.6656,1273.4866,1444.2436
+510680,Porto dos Gaúchos,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),835.6808,869.0825,1311.7764,1406.2114,1587.096,1974.2798
+510680,Porto dos Gaúchos,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,61.7329,74.497,74.5739,74.7547,74.8922,76.1171
+510680,Porto dos Gaúchos,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.651,6.5933,10.4205,4.6371,2.4775,3.9829
+510680,Porto dos Gaúchos,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.9043,1.018,1.0334,1.3934,1.5325,1.6196
+510680,Porto dos Gaúchos,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.1188,1.2032,1.0513,1.2799,1.6696,1.9071
+510680,Porto dos Gaúchos,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.3806,3.3645,3.1414,3.0704,3.0826,4.1332
+510680,Porto dos Gaúchos,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.5702,4.3975,4.157,3.9443,3.8805,3.1551
+510680,Porto dos Gaúchos,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,1.1132,0.7579,0.59,0.585,0.6819,0.7397
+510680,Porto dos Gaúchos,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,4.2886,4.1486,3.7547,3.9585,3.6028,3.5057
+510680,Porto dos Gaúchos,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510680,Porto dos Gaúchos,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,147.3056,155.7822,159.1275,163.6767,180.58,290.8326
+510680,Porto dos Gaúchos,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,5,5,5,4,4
+510680,Porto dos Gaúchos,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510680,Porto dos Gaúchos,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510680,Porto dos Gaúchos,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),12,12,12,14,15,17
+510680,Porto dos Gaúchos,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,5.4447,5.6138,5.3638,5.3182,5.2724,5.5565
+510680,Porto dos Gaúchos,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510680,Porto dos Gaúchos,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,3,3,3,3
+510680,Porto dos Gaúchos,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,3.0431,4.3765,5.5087,4.9091,5.403,7.5967
+510680,Porto dos Gaúchos,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,5.0878,8.3795,11.2088,10.9305,10.9392,15.2177
+510680,Porto dos Gaúchos,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,3.7925,4.5589,9.2053,9.7539,11.254,9.1618
+510680,Porto dos Gaúchos,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.4828,0.9426,0.9941,0.9312,0.7845,1.1609
+510680,Porto dos Gaúchos,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,19.2738,13.8352,14.7191,15.9545,16.9091,
+510680,Porto dos Gaúchos,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.8577,0.5296,0.7509,0.7458,1.0761,0.9523
+510680,Porto dos Gaúchos,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,11.1818,12.1265,15.5695,18.2656,19.4267,20.0663
+510680,Porto dos Gaúchos,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0.011,0.0552,0.0746,0.1316,0.1423
+510680,Porto dos Gaúchos,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,66.5672,79.5284,77.9546,103.3505,107.3814,123.7511
+510680,Porto dos Gaúchos,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,78.1279,99.5509,98.516,138.8052,140.7733,149.518
+510680,Porto dos Gaúchos,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,91.8768,99.7647,91.055,17.8388,83.1424,73.9377
+510680,Porto dos Gaúchos,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,3.0812,3.0588,2.7523,0.3431,0.3273,1.1331
+510680,Porto dos Gaúchos,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.7675,2.5318,3.1445,2.8902,2.6907,3.8102
+510680,Porto dos Gaúchos,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510680,Porto dos Gaúchos,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,29.4576,40.7068,35.0239,40.6448,38.422,45.5923
+510680,Porto dos Gaúchos,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,50.8716,105.1408,64.359,82.5713,103.1034,106.4007
+510680,Porto dos Gaúchos,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,28.8783,25.3759,22.686,26.1814,24.4694,29.1911
+510680,Porto dos Gaúchos,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,10.7,9.8,8.3,10,11.1,14
+510680,Porto dos Gaúchos,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",47.9,48,37.1,39.3,44.7,52.7
+510680,Porto dos Gaúchos,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,23.8095,10.989,0,9.0909,11.3636,
+510680,Porto dos Gaúchos,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.8991,6.7365,9.4761,5.6728,6.1511,
+510680,Porto dos Gaúchos,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,85.71,84.44,80.9,85.45,88.64,
+510680,Porto dos Gaúchos,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,7.14,7.69,8.99,7.27,3.41,
+510680,Porto dos Gaúchos,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,63.1,64.84,73.03,75.45,76.14,
+510680,Porto dos Gaúchos,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,21.43,14.29,20.22,18.18,13.64,

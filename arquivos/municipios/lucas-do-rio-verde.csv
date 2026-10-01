@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510525,Lucas do Rio Verde,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),67620,69671,83798,87925,92256,95792
+510525,Lucas do Rio Verde,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1197.8947,1674.4431,1383.9203,1658.3203,1869.0054,2081.2558
+510525,Lucas do Rio Verde,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),416.4089,547.9873,456.3135,640.9436,693.877,876.786
+510525,Lucas do Rio Verde,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),516.4511,944.1039,730.0606,820.6464,948.2133,955.8146
+510525,Lucas do Rio Verde,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,64.6624,72.0105,70.5222,74.1053,71.4067,64.7981
+510525,Lucas do Rio Verde,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.7168,1.842,2.4192,2.8617,4.1765,3.3484
+510525,Lucas do Rio Verde,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.4247,1.5923,1.4763,1.5446,1.5628,1.9387
+510525,Lucas do Rio Verde,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0716,1.188,1.0559,1.1865,1.3934,1.4736
+510525,Lucas do Rio Verde,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.0899,3.5091,2.9122,3.2883,3.6634,4.0117
+510525,Lucas do Rio Verde,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.9564,2.0059,1.8178,1.6962,1.7744,1.5036
+510525,Lucas do Rio Verde,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2757,0.3089,0.2851,0.3011,0.2862,0.3261
+510525,Lucas do Rio Verde,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.9883,1.2104,0.7995,1.143,1.5013,1.1309
+510525,Lucas do Rio Verde,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,4,0,0,0,0
+510525,Lucas do Rio Verde,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,63.11,66.682,59.2496,58.791,54.0615,53.1704
+510525,Lucas do Rio Verde,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),18,18,18,18,19,19
+510525,Lucas do Rio Verde,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510525,Lucas do Rio Verde,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,1,1,1,1
+510525,Lucas do Rio Verde,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),62,67,73,79,84,99
+510525,Lucas do Rio Verde,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.4519,2.4644,2.2876,2.4168,2.7099,2.6098
+510525,Lucas do Rio Verde,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,2,2
+510525,Lucas do Rio Verde,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),16,17,17,18,20,20
+510525,Lucas do Rio Verde,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,2.3277,2.6613,2.4924,2.4752,2.4763,1.7522
+510525,Lucas do Rio Verde,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,6.0036,7.5651,7.4516,8.422,5.6431,3.9419
+510525,Lucas do Rio Verde,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,1.2362,2.2517,2.5901,2.1127,2.4763,2.3165
+510525,Lucas do Rio Verde,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0911,0.1919,0.2965,0.3074,0.2912,0.3092
+510525,Lucas do Rio Verde,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.6809,12.4923,14.776,14.9049,15.6521,
+510525,Lucas do Rio Verde,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.9562,1.0776,1.1256,0.8348,0.8892,0.921
+510525,Lucas do Rio Verde,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,5.6969,8.889,8.2116,8.7832,6.6523,8.3283
+510525,Lucas do Rio Verde,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.0118,0.0247,0.0243,0.0252,0.0131,0.0446
+510525,Lucas do Rio Verde,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,63.428,73.029,62.6029,75.0185,73.0576,74.1816
+510525,Lucas do Rio Verde,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,66.5336,77.0909,63.3547,76.6335,72.4397,71.1542
+510525,Lucas do Rio Verde,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,91.1868,83.1761,74.857,73.0139,82.6261,82.9581
+510525,Lucas do Rio Verde,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,2.4248,1.8082,0.9722,1.5616,1.4985,1.7309
+510525,Lucas do Rio Verde,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.5878,3.3451,3.6151,3.7282,3.6583,4.4744
+510525,Lucas do Rio Verde,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,1.6363,0,0,0,0
+510525,Lucas do Rio Verde,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,40.5558,49.0166,33.0309,43.3473,41.0412,43.9488
+510525,Lucas do Rio Verde,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,59.8315,77.0951,42.024,55.5855,51.9942,52.0412
+510525,Lucas do Rio Verde,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,8.9131,8.0991,7.2707,7.5245,8.0353,6.8662
+510525,Lucas do Rio Verde,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,3.7,3.4,4.3,4.1,3.7,4.3
+510525,Lucas do Rio Verde,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",15.7,14.8,15.5,15.2,15,14.5
+510525,Lucas do Rio Verde,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,14.8936,14.775,16.1394,11.4943,14.8048,
+510525,Lucas do Rio Verde,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.3774,6.3585,4.2602,3.3665,3.1109,
+510525,Lucas do Rio Verde,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,80.78,83.34,83.67,85.89,87.08,
+510525,Lucas do Rio Verde,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.87,8.33,8.52,9,7.54,
+510525,Lucas do Rio Verde,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,56.88,60.17,69.01,71.52,77.73,
+510525,Lucas do Rio Verde,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,12.77,12.16,12.46,11.81,9.76,

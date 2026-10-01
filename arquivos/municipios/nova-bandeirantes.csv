@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510615,Nova Bandeirantes,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),15685,16052,13635,13895,14160,14340
+510615,Nova Bandeirantes,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,680.0634,841.6326,1003.0963,1421.2699,1561.5882,1716.9567
+510615,Nova Bandeirantes,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),320.952,448.7793,503.0108,617.7128,728.4852,913.8768
+510615,Nova Bandeirantes,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),270.9694,289.2063,442.3772,724.613,748.0675,679.9563
+510615,Nova Bandeirantes,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,59.4702,61.7178,66.4075,51.3155,48.9812,54.6719
+510615,Nova Bandeirantes,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,8.8375,17.0204,10.9471,21.9516,18.4631,16.1369
+510615,Nova Bandeirantes,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.3054,0.3158,0.454,0.4584,0.601,0.6437
+510615,Nova Bandeirantes,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.5859,0.6579,0.7613,0.7593,0.8298,0.728
+510615,Nova Bandeirantes,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.7367,2.0639,2.4664,2.5196,2.6073,2.7287
+510615,Nova Bandeirantes,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.4546,2.419,2.6645,2.2728,2.1483,2.0049
+510615,Nova Bandeirantes,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2231,0.1919,0.22,0.2217,0.2175,0.3487
+510615,Nova Bandeirantes,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.9245,0.8722,1.0268,1.0076,0.9887,0.9763
+510615,Nova Bandeirantes,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510615,Nova Bandeirantes,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,29.9649,38.8301,46.2046,45.3976,45.904,56.5411
+510615,Nova Bandeirantes,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),7,7,7,7,8,7
+510615,Nova Bandeirantes,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510615,Nova Bandeirantes,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510615,Nova Bandeirantes,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),15,16,16,16,17,16
+510615,Nova Bandeirantes,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.3398,2.4919,2.9336,2.8787,3.5311,4.1841
+510615,Nova Bandeirantes,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510615,Nova Bandeirantes,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),3,3,4,4,4,5
+510615,Nova Bandeirantes,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.9384,1.4294,2.4404,2.375,2.5833,2.7761
+510615,Nova Bandeirantes,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.23,1.8659,3.8733,4.316,5.1091,6.1541
+510615,Nova Bandeirantes,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.6814,3.3413,5.4349,5.2863,5.303,5.6039
+510615,Nova Bandeirantes,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1122,0.1937,0.2898,0.3166,0.2729,0.4222
+510615,Nova Bandeirantes,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,17.0291,17.7011,17.0633,18.8768,18.4529,
+510615,Nova Bandeirantes,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.5682,0.4606,0.6428,0.7193,0.6781,0.6619
+510615,Nova Bandeirantes,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,2.1639,3.206,3.9945,3.4912,1.9727,4.702
+510615,Nova Bandeirantes,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0.0119,0.0015
+510615,Nova Bandeirantes,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,0,0,0,0,0,0
+510615,Nova Bandeirantes,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,22.123,26.2273,44.2978,40.2303,48.0226,52.8591
+510615,Nova Bandeirantes,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,,,,,,
+510615,Nova Bandeirantes,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,,,,,,
+510615,Nova Bandeirantes,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,,,,,,
+510615,Nova Bandeirantes,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510615,Nova Bandeirantes,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,0,0,0,0,0,0
+510615,Nova Bandeirantes,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,24.3459,58.394,54.5635,38.4001,44.7123,48.6674
+510615,Nova Bandeirantes,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,100,100,100,100,100,100
+510615,Nova Bandeirantes,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,15,6.9,11.8,18.1,15.9,12.1
+510615,Nova Bandeirantes,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",238.2,211.4,219.9,235.7,231.6,226.9
+510615,Nova Bandeirantes,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,11.6279,16.3043,9.0498,14.218,11.7647,
+510615,Nova Bandeirantes,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,4.4629,5.7314,5.5739,6.0453,4.4492,
+510615,Nova Bandeirantes,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,80.23,81.97,80.09,86.73,85.88,
+510615,Nova Bandeirantes,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,8.14,5.43,9.95,7.11,5.88,
+510615,Nova Bandeirantes,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,69.19,74.46,72.4,78.2,82.94,
+510615,Nova Bandeirantes,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,15.12,15.76,13.57,9.48,13.53,

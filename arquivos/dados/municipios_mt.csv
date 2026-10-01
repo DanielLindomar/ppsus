@@ -1,0 +1,143 @@
+cod_mun6,cod_ibge7,municipio,slug,co_regsaud,regiao_saude,co_macsaud,macrorregiao,populacao_2025,tem_hospital_sus_2025
+510010,5100102,Acorizal,acorizal,51002,Baixada Cuiabana,5105,Centro-Norte,4948,0
+510020,5100201,Água Boa,agua-boa,51006,Médio Araguaia,5104,Leste,32099,1
+510025,5100250,Alta Floresta,alta-floresta,51001,Alto Tapajós,5103,Norte,62158,1
+510030,5100300,Alto Araguaia,alto-araguaia,51013,Sul Matogrossense,5101,Sul,17751,1
+510035,5100359,Alto Boa Vista,alto-boa-vista,51009,Norte Araguaia Karajá,5104,Leste,5920,0
+510040,5100409,Alto Garças,alto-garcas,51013,Sul Matogrossense,5101,Sul,13956,1
+510050,5100508,Alto Paraguai,alto-paraguai,51004,Centro Norte,5106,Centro-Noroeste,7525,0
+510060,5100607,Alto Taquari,alto-taquari,51013,Sul Matogrossense,5101,Sul,11877,1
+510080,5100805,Apiacás,apiacas,51001,Alto Tapajós,5103,Norte,8693,1
+510100,5101001,Araguaiana,araguaiana,51005,Garças Araguaia,5104,Leste,4005,0
+510120,5101209,Araguainha,araguainha,51013,Sul Matogrossense,5101,Sul,997,0
+510125,5101258,Araputanga,araputanga,51011,Oeste Matogrossense,5102,Oeste,14805,1
+510130,5101308,Arenápolis,arenapolis,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,10769,1
+510140,5101407,Aripuanã,aripuana,51008,Noroeste Matogrossense,5106,Centro-Noroeste,26558,1
+510160,5101605,Barão de Melgaço,barao-de-melgaco,51002,Baixada Cuiabana,5105,Centro-Norte,7137,0
+510170,5101704,Barra do Bugres,barra-do-bugres,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,29406,1
+510180,5101803,Barra do Garças,barra-do-garcas,51005,Garças Araguaia,5104,Leste,73878,1
+510183,5101837,Boa Esperança do Norte,boa-esperanca-do-norte,51014,Teles Pires,5103,Norte,5877,0
+510185,5101852,Bom Jesus do Araguaia,bom-jesus-do-araguaia,51006,Médio Araguaia,5104,Leste,7912,0
+510190,5101902,Brasnorte,brasnorte,51008,Noroeste Matogrossense,5106,Centro-Noroeste,17645,1
+510250,5102504,Cáceres,caceres,51011,Oeste Matogrossense,5102,Oeste,91767,1
+510260,5102603,Campinápolis,campinapolis,51005,Garças Araguaia,5104,Leste,15808,1
+510263,5102637,Campo Novo do Parecis,campo-novo-do-parecis,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,51722,1
+510267,5102678,Campo Verde,campo-verde,51013,Sul Matogrossense,5101,Sul,49053,1
+510268,5102686,Campos de Júlio,campos-de-julio,51012,Sudoeste Matogrossense,5102,Oeste,9946,1
+510269,5102694,Canabrava do Norte,canabrava-do-norte,51003,Araguaia Xingu,5104,Leste,4451,0
+510270,5102702,Canarana,canarana,51006,Médio Araguaia,5104,Leste,28324,1
+510279,5102793,Carlinda,carlinda,51001,Alto Tapajós,5103,Norte,10260,0
+510285,5102850,Castanheira,castanheira,51008,Noroeste Matogrossense,5106,Centro-Noroeste,7392,0
+510300,5103007,Chapada dos Guimarães,chapada-dos-guimaraes,51002,Baixada Cuiabana,5105,Centro-Norte,19458,0
+510305,5103056,Cláudia,claudia,51014,Teles Pires,5103,Norte,9301,1
+510310,5103106,Cocalinho,cocalinho,51006,Médio Araguaia,5104,Leste,6495,1
+510320,5103205,Colíder,colider,51010,Norte Matogrossense,5103,Norte,32054,1
+510325,5103254,Colniza,colniza,51008,Noroeste Matogrossense,5106,Centro-Noroeste,26026,1
+510330,5103304,Comodoro,comodoro,51012,Sudoeste Matogrossense,5102,Oeste,18469,1
+510335,5103353,Confresa,confresa,51003,Araguaia Xingu,5104,Leste,38460,1
+510336,5103361,Conquista D'Oeste,conquista-d-oeste,51012,Sudoeste Matogrossense,5102,Oeste,3908,0
+510337,5103379,Cotriguaçu,cotriguacu,51008,Noroeste Matogrossense,5106,Centro-Noroeste,10030,1
+510340,5103403,Cuiabá,cuiaba,51002,Baixada Cuiabana,5105,Centro-Norte,691875,1
+510343,5103437,Curvelândia,curvelandia,51011,Oeste Matogrossense,5102,Oeste,4970,0
+510345,5103452,Denise,denise,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,6675,0
+510350,5103502,Diamantino,diamantino,51004,Centro Norte,5106,Centro-Noroeste,22623,1
+510360,5103601,Dom Aquino,dom-aquino,51013,Sul Matogrossense,5101,Sul,7890,1
+510370,5103700,Feliz Natal,feliz-natal,51014,Teles Pires,5103,Norte,10523,0
+510380,5103809,Figueirópolis D'Oeste,figueiropolis-d-oeste,51012,Sudoeste Matogrossense,5102,Oeste,3056,0
+510385,5103858,Gaúcha do Norte,gaucha-do-norte,51006,Médio Araguaia,5104,Leste,9397,1
+510390,5103908,General Carneiro,general-carneiro,51005,Garças Araguaia,5104,Leste,6319,1
+510395,5103957,Glória D'Oeste,gloria-d-oeste,51011,Oeste Matogrossense,5102,Oeste,2878,0
+510410,5104104,Guarantã do Norte,guaranta-do-norte,51015,Vale do Peixoto,5103,Norte,31209,1
+510420,5104203,Guiratinga,guiratinga,51013,Sul Matogrossense,5101,Sul,10252,1
+510450,5104500,Indiavaí,indiavai,51011,Oeste Matogrossense,5102,Oeste,2172,0
+510452,5104526,Ipiranga do Norte,ipiranga-do-norte,51014,Teles Pires,5103,Norte,8658,0
+510454,5104542,Itanhangá,itanhanga,51014,Teles Pires,5103,Norte,8257,0
+510455,5104559,Itaúba,itauba,51010,Norte Matogrossense,5103,Norte,5201,1
+510460,5104609,Itiquira,itiquira,51013,Sul Matogrossense,5101,Sul,12587,1
+510480,5104807,Jaciara,jaciara,51013,Sul Matogrossense,5101,Sul,29803,1
+510490,5104906,Jangada,jangada,51002,Baixada Cuiabana,5105,Centro-Norte,7413,0
+510500,5105002,Jauru,jauru,51012,Sudoeste Matogrossense,5102,Oeste,7881,1
+510510,5105101,Juara,juara,51016,Vale dos Arinos,5103,Norte,36089,1
+510515,5105150,Juína,juina,51008,Noroeste Matogrossense,5106,Centro-Noroeste,48396,1
+510517,5105176,Juruena,juruena,51008,Noroeste Matogrossense,5106,Centro-Noroeste,10057,1
+510520,5105200,Juscimeira,juscimeira,51013,Sul Matogrossense,5101,Sul,11622,1
+510523,5105234,Lambari D'Oeste,lambari-d-oeste,51011,Oeste Matogrossense,5102,Oeste,4662,0
+510525,5105259,Lucas do Rio Verde,lucas-do-rio-verde,51014,Teles Pires,5103,Norte,95792,1
+510530,5105309,Luciára,luciara,51009,Norte Araguaia Karajá,5104,Leste,2616,0
+510550,5105507,Vila Bela da Santíssima Trindade,vila-bela-da-santissima-trindade,51012,Sudoeste Matogrossense,5102,Oeste,17592,1
+510558,5105580,Marcelândia,marcelandia,51010,Norte Matogrossense,5103,Norte,11355,1
+510560,5105606,Matupá,matupa,51015,Vale do Peixoto,5103,Norte,21959,1
+510562,5105622,Mirassol d'Oeste,mirassol-d-oeste,51011,Oeste Matogrossense,5102,Oeste,27637,1
+510590,5105903,Nobres,nobres,51004,Centro Norte,5106,Centro-Noroeste,15796,1
+510600,5106000,Nortelândia,nortelandia,51004,Centro Norte,5106,Centro-Noroeste,5890,1
+510610,5106109,Nossa Senhora do Livramento,nossa-senhora-do-livramento,51002,Baixada Cuiabana,5105,Centro-Norte,11658,1
+510615,5106158,Nova Bandeirantes,nova-bandeirantes,51001,Alto Tapajós,5103,Norte,14340,1
+510617,5106174,Nova Nazaré,nova-nazare,51006,Médio Araguaia,5104,Leste,4575,0
+510618,5106182,Nova Lacerda,nova-lacerda,51012,Sudoeste Matogrossense,5102,Oeste,7072,0
+510619,5106190,Nova Santa Helena,nova-santa-helena,51010,Norte Matogrossense,5103,Norte,4502,0
+510620,5106208,Nova Brasilândia,nova-brasilandia,51002,Baixada Cuiabana,5105,Centro-Norte,3791,0
+510621,5106216,Nova Canaã do Norte,nova-canaa-do-norte,51010,Norte Matogrossense,5103,Norte,11734,0
+510622,5106224,Nova Mutum,nova-mutum,51014,Teles Pires,5103,Norte,63455,1
+510623,5106232,Nova Olímpia,nova-olimpia,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,16204,1
+510624,5106240,Nova Ubiratã,nova-ubirata,51014,Teles Pires,5103,Norte,9760,1
+510625,5106257,Nova Xavantina,nova-xavantina,51005,Garças Araguaia,5104,Leste,25915,1
+510626,5106265,Novo Mundo,novo-mundo,51015,Vale do Peixoto,5103,Norte,6368,0
+510627,5106273,Novo Horizonte do Norte,novo-horizonte-do-norte,51016,Vale dos Arinos,5103,Norte,3267,1
+510628,5106281,Novo São Joaquim,novo-sao-joaquim,51005,Garças Araguaia,5104,Leste,7239,1
+510629,5106299,Paranaíta,paranaita,51001,Alto Tapajós,5103,Norte,12079,1
+510630,5106307,Paranatinga,paranatinga,51013,Sul Matogrossense,5101,Sul,28870,1
+510631,5106315,Novo Santo Antônio,novo-santo-antonio,51009,Norte Araguaia Karajá,5104,Leste,2041,0
+510637,5106372,Pedra Preta,pedra-preta,51013,Sul Matogrossense,5101,Sul,18946,1
+510642,5106422,Peixoto de Azevedo,peixoto-de-azevedo,51015,Vale do Peixoto,5103,Norte,33754,1
+510645,5106455,Planalto da Serra,planalto-da-serra,51002,Baixada Cuiabana,5105,Centro-Norte,3328,0
+510650,5106505,Poconé,pocone,51002,Baixada Cuiabana,5105,Centro-Norte,31203,1
+510665,5106653,Pontal do Araguaia,pontal-do-araguaia,51005,Garças Araguaia,5104,Leste,7441,0
+510670,5106703,Ponte Branca,ponte-branca,51005,Garças Araguaia,5104,Leste,2098,1
+510675,5106752,Pontes e Lacerda,pontes-e-lacerda,51012,Sudoeste Matogrossense,5102,Oeste,55762,1
+510677,5106778,Porto Alegre do Norte,porto-alegre-do-norte,51003,Araguaia Xingu,5104,Leste,12649,1
+510680,5106802,Porto dos Gaúchos,porto-dos-gauchos,51016,Vale dos Arinos,5103,Norte,5705,1
+510682,5106828,Porto Esperidião,porto-esperidiao,51011,Oeste Matogrossense,5102,Oeste,10088,0
+510685,5106851,Porto Estrela,porto-estrela,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,3141,0
+510700,5107008,Poxoréo,poxoreo,51013,Sul Matogrossense,5101,Sul,25103,1
+510704,5107040,Primavera do Leste,primavera-do-leste,51013,Sul Matogrossense,5101,Sul,96006,1
+510706,5107065,Querência,querencia,51006,Médio Araguaia,5104,Leste,31100,1
+510710,5107107,São José dos Quatro Marcos,sao-jose-dos-quatro-marcos,51011,Oeste Matogrossense,5102,Oeste,17721,1
+510715,5107156,Reserva do Cabaçal,reserva-do-cabacal,51011,Oeste Matogrossense,5102,Oeste,2020,0
+510718,5107180,Ribeirão Cascalheira,ribeirao-cascalheira,51006,Médio Araguaia,5104,Leste,10541,1
+510719,5107198,Ribeirãozinho,ribeiraozinho,51005,Garças Araguaia,5104,Leste,2733,1
+510720,5107206,Rio Branco,rio-branco,51011,Oeste Matogrossense,5102,Oeste,4440,1
+510724,5107248,Santa Carmem,santa-carmem,51014,Teles Pires,5103,Norte,5795,0
+510726,5107263,Santo Afonso,santo-afonso,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,2416,0
+510729,5107297,São José do Povo,sao-jose-do-povo,51013,Sul Matogrossense,5101,Sul,2716,0
+510730,5107305,São José do Rio Claro,sao-jose-do-rio-claro,51004,Centro Norte,5106,Centro-Noroeste,14455,1
+510735,5107354,São José do Xingu,sao-jose-do-xingu,51003,Araguaia Xingu,5104,Leste,6234,0
+510740,5107404,São Pedro da Cipa,sao-pedro-da-cipa,51013,Sul Matogrossense,5101,Sul,4250,0
+510757,5107578,Rondolândia,rondolandia,51012,Sudoeste Matogrossense,5102,Oeste,3518,0
+510760,5107602,Rondonópolis,rondonopolis,51013,Sul Matogrossense,5101,Sul,263708,1
+510770,5107701,Rosário Oeste,rosario-oeste,51004,Centro Norte,5106,Centro-Noroeste,15041,1
+510774,5107743,Santa Cruz do Xingu,santa-cruz-do-xingu,51003,Araguaia Xingu,5104,Leste,2904,0
+510775,5107750,Salto do Céu,salto-do-ceu,51011,Oeste Matogrossense,5102,Oeste,3657,1
+510776,5107768,Santa Rita do Trivelato,santa-rita-do-trivelato,51014,Teles Pires,5103,Norte,3536,0
+510777,5107776,Santa Terezinha,santa-terezinha,51003,Araguaia Xingu,5104,Leste,7737,1
+510779,5107792,Santo Antônio do Leste,santo-antonio-do-leste,51013,Sul Matogrossense,5101,Sul,4244,0
+510780,5107800,Santo Antônio do Leverger,santo-antonio-do-leverger,51002,Baixada Cuiabana,5105,Centro-Norte,16839,1
+510785,5107859,São Félix do Araguaia,sao-felix-do-araguaia,51009,Norte Araguaia Karajá,5104,Leste,14604,1
+510787,5107875,Sapezal,sapezal,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,32514,1
+510788,5107883,Serra Nova Dourada,serra-nova-dourada,51009,Norte Araguaia Karajá,5104,Leste,1941,0
+510790,5107909,Sinop,sinop,51014,Teles Pires,5103,Norte,223780,1
+510792,5107925,Sorriso,sorriso,51014,Teles Pires,5103,Norte,124665,1
+510794,5107941,Tabaporã,tabapora,51016,Vale dos Arinos,5103,Norte,9895,1
+510795,5107958,Tangará da Serra,tangara-da-serra,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,114603,1
+510800,5108006,Tapurah,tapurah,51014,Teles Pires,5103,Norte,15638,1
+510805,5108055,Terra Nova do Norte,terra-nova-do-norte,51015,Vale do Peixoto,5103,Norte,10591,1
+510810,5108105,Tesouro,tesouro,51013,Sul Matogrossense,5101,Sul,2935,1
+510820,5108204,Torixoréu,torixoreu,51005,Garças Araguaia,5104,Leste,4238,1
+510830,5108303,União do Sul,uniao-do-sul,51014,Teles Pires,5103,Norte,3904,0
+510835,5108352,Vale de São Domingos,vale-de-sao-domingos,51012,Sudoeste Matogrossense,5102,Oeste,2892,0
+510840,5108402,Várzea Grande,varzea-grande,51002,Baixada Cuiabana,5105,Centro-Norte,318922,1
+510850,5108501,Vera,vera,51014,Teles Pires,5103,Norte,10758,1
+510860,5108600,Vila Rica,vila-rica,51003,Araguaia Xingu,5104,Leste,19686,1
+510880,5108808,Nova Guarita,nova-guarita,51010,Norte Matogrossense,5103,Norte,4546,0
+510885,5108857,Nova Marilândia,nova-marilandia,51007,Médio Norte Matogrossense,5106,Centro-Noroeste,3731,0
+510890,5108907,Nova Maringá,nova-maringa,51004,Centro Norte,5106,Centro-Noroeste,5705,0
+510895,5108956,Nova Monte Verde,nova-monte-verde,51001,Alto Tapajós,5103,Norte,8470,0

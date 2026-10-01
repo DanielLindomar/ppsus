@@ -1,0 +1,270 @@
+grupo,indicador,rotulo,unidade,ano,valor,mediana
+contexto,populacao,População,habitantes,2020,3526220.0,11133.0
+contexto,populacao,População,habitantes,2021,3567234.0,11124.0
+contexto,populacao,População,habitantes,2022,3658649.0,10332.0
+contexto,populacao,População,habitantes,2023,3746012.0,10328.0
+contexto,populacao,População,habitantes,2024,3836399.0,10398.0
+contexto,populacao,População,habitantes,2025,3893659.0,10072.0
+financiamento,desp_total_pc,Despesa em saúde por habitante,R$ por habitante,2020,1135.1931,1109.5277
+financiamento,desp_total_pc,Despesa em saúde por habitante,R$ por habitante,2021,1335.4907,1320.7229
+financiamento,desp_total_pc,Despesa em saúde por habitante,R$ por habitante,2022,1480.97,1610.6927
+financiamento,desp_total_pc,Despesa em saúde por habitante,R$ por habitante,2023,1620.5727,1815.4814
+financiamento,desp_total_pc,Despesa em saúde por habitante,R$ por habitante,2024,1763.5564,2124.8507
+financiamento,desp_total_pc,Despesa em saúde por habitante,R$ por habitante,2025,1898.6502,2289.8059
+financiamento,desp_ab_pc,Despesa em atenção básica por habitante,R$ por habitante,2020,293.8805,399.743
+financiamento,desp_ab_pc,Despesa em atenção básica por habitante,R$ por habitante,2021,331.9427,468.897
+financiamento,desp_ab_pc,Despesa em atenção básica por habitante,R$ por habitante,2022,389.5989,605.7307
+financiamento,desp_ab_pc,Despesa em atenção básica por habitante,R$ por habitante,2023,447.166,669.8825
+financiamento,desp_ab_pc,Despesa em atenção básica por habitante,R$ por habitante,2024,478.9085,737.9159
+financiamento,desp_ab_pc,Despesa em atenção básica por habitante,R$ por habitante,2025,534.4635,836.5595
+financiamento,desp_mac_pc,Despesa em média e alta complexidade por habitante,R$ por habitante,2020,516.1611,370.0656
+financiamento,desp_mac_pc,Despesa em média e alta complexidade por habitante,R$ por habitante,2021,633.7033,471.8746
+financiamento,desp_mac_pc,Despesa em média e alta complexidade por habitante,R$ por habitante,2022,715.3636,663.7522
+financiamento,desp_mac_pc,Despesa em média e alta complexidade por habitante,R$ por habitante,2023,772.926,743.5135
+financiamento,desp_mac_pc,Despesa em média e alta complexidade por habitante,R$ por habitante,2024,852.4492,908.8063
+financiamento,desp_mac_pc,Despesa em média e alta complexidade por habitante,R$ por habitante,2025,896.1188,957.639
+financiamento,pct_recursos_proprios,Despesa com recursos próprios,% da despesa total,2020,55.9744,60.6304
+financiamento,pct_recursos_proprios,Despesa com recursos próprios,% da despesa total,2021,59.3891,69.6194
+financiamento,pct_recursos_proprios,Despesa com recursos próprios,% da despesa total,2022,60.4098,67.625
+financiamento,pct_recursos_proprios,Despesa com recursos próprios,% da despesa total,2023,60.1252,68.0058
+financiamento,pct_recursos_proprios,Despesa com recursos próprios,% da despesa total,2024,58.5507,65.3208
+financiamento,pct_recursos_proprios,Despesa com recursos próprios,% da despesa total,2025,60.8523,68.9784
+financiamento,pct_capital,Despesa de capital,% da despesa total,2020,3.8924,4.1624
+financiamento,pct_capital,Despesa de capital,% da despesa total,2021,3.053,5.1374
+financiamento,pct_capital,Despesa de capital,% da despesa total,2022,3.7554,5.4183
+financiamento,pct_capital,Despesa de capital,% da despesa total,2023,3.1492,4.089
+financiamento,pct_capital,Despesa de capital,% da despesa total,2024,4.5876,4.671
+financiamento,pct_capital,Despesa de capital,% da despesa total,2025,3.43,4.013
+capacidade,fte_medicos_p1000,Médicos SUS por mil habitantes,FTE por mil hab.,2020,1.1672,0.7833
+capacidade,fte_medicos_p1000,Médicos SUS por mil habitantes,FTE por mil hab.,2021,1.2989,0.8342
+capacidade,fte_medicos_p1000,Médicos SUS por mil habitantes,FTE por mil hab.,2022,1.3924,0.9263
+capacidade,fte_medicos_p1000,Médicos SUS por mil habitantes,FTE por mil hab.,2023,1.4735,0.9992
+capacidade,fte_medicos_p1000,Médicos SUS por mil habitantes,FTE por mil hab.,2024,1.6488,1.1086
+capacidade,fte_medicos_p1000,Médicos SUS por mil habitantes,FTE por mil hab.,2025,1.8008,1.1918
+capacidade,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,FTE por mil hab.,2020,1.2795,0.9812
+capacidade,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,FTE por mil hab.,2021,1.5472,1.1288
+capacidade,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,FTE por mil hab.,2022,1.6223,1.244
+capacidade,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,FTE por mil hab.,2023,1.6987,1.3186
+capacidade,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,FTE por mil hab.,2024,1.7669,1.4118
+capacidade,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,FTE por mil hab.,2025,1.7926,1.4541
+capacidade,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,FTE por mil hab.,2020,3.0111,2.228
+capacidade,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,FTE por mil hab.,2021,3.37,2.5779
+capacidade,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,FTE por mil hab.,2022,3.4917,2.6812
+capacidade,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,FTE por mil hab.,2023,3.6845,2.7925
+capacidade,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,FTE por mil hab.,2024,3.7941,2.8526
+capacidade,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,FTE por mil hab.,2025,3.9074,3.1814
+capacidade,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,FTE por mil hab.,2020,2.3489,3.2075
+capacidade,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,FTE por mil hab.,2021,2.3564,3.1871
+capacidade,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,FTE por mil hab.,2022,2.3296,3.3986
+capacidade,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,FTE por mil hab.,2023,2.2935,3.3495
+capacidade,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,FTE por mil hab.,2024,2.3022,3.4209
+capacidade,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,FTE por mil hab.,2025,2.2795,3.1896
+capacidade,fte_dentistas_p1000,Dentistas SUS por mil habitantes,FTE por mil hab.,2020,0.2939,0.3234
+capacidade,fte_dentistas_p1000,Dentistas SUS por mil habitantes,FTE por mil hab.,2021,0.2933,0.333
+capacidade,fte_dentistas_p1000,Dentistas SUS por mil habitantes,FTE por mil hab.,2022,0.2981,0.341
+capacidade,fte_dentistas_p1000,Dentistas SUS por mil habitantes,FTE por mil hab.,2023,0.3091,0.3617
+capacidade,fte_dentistas_p1000,Dentistas SUS por mil habitantes,FTE por mil hab.,2024,0.3206,0.3825
+capacidade,fte_dentistas_p1000,Dentistas SUS por mil habitantes,FTE por mil hab.,2025,0.3365,0.3854
+capacidade,leitos_sus_p1000,Leitos SUS por mil habitantes,leitos por mil hab.,2020,1.6913,1.3137
+capacidade,leitos_sus_p1000,Leitos SUS por mil habitantes,leitos por mil hab.,2021,1.8488,1.4443
+capacidade,leitos_sus_p1000,Leitos SUS por mil habitantes,leitos por mil hab.,2022,1.7229,1.4161
+capacidade,leitos_sus_p1000,Leitos SUS por mil habitantes,leitos por mil hab.,2023,1.7055,1.3017
+capacidade,leitos_sus_p1000,Leitos SUS por mil habitantes,leitos por mil hab.,2024,1.7724,1.3026
+capacidade,leitos_sus_p1000,Leitos SUS por mil habitantes,leitos por mil hab.,2025,1.7435,1.2879
+capacidade,leitos_uti_sus,Leitos de UTI SUS,leitos,2020,454.0,0.0
+capacidade,leitos_uti_sus,Leitos de UTI SUS,leitos,2021,761.0,0.0
+capacidade,leitos_uti_sus,Leitos de UTI SUS,leitos,2022,483.0,0.0
+capacidade,leitos_uti_sus,Leitos de UTI SUS,leitos,2023,472.0,0.0
+capacidade,leitos_uti_sus,Leitos de UTI SUS,leitos,2024,488.0,0.0
+capacidade,leitos_uti_sus,Leitos de UTI SUS,leitos,2025,488.0,0.0
+capacidade,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,equipamentos por 10 mil hab.,2020,57.5319,35.3812
+capacidade,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,equipamentos por 10 mil hab.,2021,66.5881,41.2776
+capacidade,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,equipamentos por 10 mil hab.,2022,74.9191,50.0103
+capacidade,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,equipamentos por 10 mil hab.,2023,79.4361,55.5057
+capacidade,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,equipamentos por 10 mil hab.,2024,89.9571,62.5764
+capacidade,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,equipamentos por 10 mil hab.,2025,96.2757,64.5698
+capacidade,n_ubs,Unidades básicas de saúde,unidades,2020,1013.0,5.0
+capacidade,n_ubs,Unidades básicas de saúde,unidades,2021,1045.0,5.0
+capacidade,n_ubs,Unidades básicas de saúde,unidades,2022,1051.0,4.0
+capacidade,n_ubs,Unidades básicas de saúde,unidades,2023,1041.0,5.0
+capacidade,n_ubs,Unidades básicas de saúde,unidades,2024,1049.0,4.0
+capacidade,n_ubs,Unidades básicas de saúde,unidades,2025,1061.0,4.0
+capacidade,n_hospitais_sus,Hospitais SUS,hospitais,2020,119.0,1.0
+capacidade,n_hospitais_sus,Hospitais SUS,hospitais,2021,123.0,1.0
+capacidade,n_hospitais_sus,Hospitais SUS,hospitais,2022,127.0,1.0
+capacidade,n_hospitais_sus,Hospitais SUS,hospitais,2023,128.0,1.0
+capacidade,n_hospitais_sus,Hospitais SUS,hospitais,2024,135.0,1.0
+capacidade,n_hospitais_sus,Hospitais SUS,hospitais,2025,140.0,1.0
+capacidade,n_upa,Unidades de pronto atendimento,unidades,2020,34.0,0.0
+capacidade,n_upa,Unidades de pronto atendimento,unidades,2021,38.0,0.0
+capacidade,n_upa,Unidades de pronto atendimento,unidades,2022,39.0,0.0
+capacidade,n_upa,Unidades de pronto atendimento,unidades,2023,40.0,0.0
+capacidade,n_upa,Unidades de pronto atendimento,unidades,2024,47.0,0.0
+capacidade,n_upa,Unidades de pronto atendimento,unidades,2025,51.0,0.0
+capacidade,n_estab_sus,Estabelecimentos com atendimento SUS,estabelecimentos,2020,2816.0,12.0
+capacidade,n_estab_sus,Estabelecimentos com atendimento SUS,estabelecimentos,2021,2958.0,12.0
+capacidade,n_estab_sus,Estabelecimentos com atendimento SUS,estabelecimentos,2022,3065.0,12.0
+capacidade,n_estab_sus,Estabelecimentos com atendimento SUS,estabelecimentos,2023,3193.0,13.0
+capacidade,n_estab_sus,Estabelecimentos com atendimento SUS,estabelecimentos,2024,3381.0,13.0
+capacidade,n_estab_sus,Estabelecimentos com atendimento SUS,estabelecimentos,2025,3581.0,14.0
+capacidade,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,equipes por 10 mil hab.,2020,2.3113,3.2041
+capacidade,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,equipes por 10 mil hab.,2021,2.4392,3.2637
+capacidade,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,equipes por 10 mil hab.,2022,2.4383,3.51
+capacidade,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,equipes por 10 mil hab.,2023,2.554,3.5791
+capacidade,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,equipes por 10 mil hab.,2024,2.6705,3.7078
+capacidade,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,equipes por 10 mil hab.,2025,2.6238,3.6867
+capacidade,n_equipes_eap,Equipes de atenção primária (eAP),equipes,2020,6.0,0.0
+capacidade,n_equipes_eap,Equipes de atenção primária (eAP),equipes,2021,30.0,0.0
+capacidade,n_equipes_eap,Equipes de atenção primária (eAP),equipes,2022,35.0,0.0
+capacidade,n_equipes_eap,Equipes de atenção primária (eAP),equipes,2023,35.0,0.0
+capacidade,n_equipes_eap,Equipes de atenção primária (eAP),equipes,2024,44.0,0.0
+capacidade,n_equipes_eap,Equipes de atenção primária (eAP),equipes,2025,48.0,0.0
+capacidade,n_equipes_esb,Equipes de saúde bucal,equipes,2020,580.0,3.0
+capacidade,n_equipes_esb,Equipes de saúde bucal,equipes,2021,628.0,3.0
+capacidade,n_equipes_esb,Equipes de saúde bucal,equipes,2022,658.0,3.0
+capacidade,n_equipes_esb,Equipes de saúde bucal,equipes,2023,696.0,3.0
+capacidade,n_equipes_esb,Equipes de saúde bucal,equipes,2024,751.0,3.0
+capacidade,n_equipes_esb,Equipes de saúde bucal,equipes,2025,770.0,3.0
+atencao_basica,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atendimentos por hab.,2020,1.0525,1.2769
+atencao_basica,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atendimentos por hab.,2021,1.3337,1.534
+atencao_basica,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atendimentos por hab.,2022,1.6148,2.3117
+atencao_basica,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atendimentos por hab.,2023,1.7203,2.4752
+atencao_basica,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atendimentos por hab.,2024,1.8589,2.5381
+atencao_basica,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atendimentos por hab.,2025,1.9626,2.739
+atencao_basica,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,procedimentos por hab.,2020,1.7926,2.0175
+atencao_basica,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,procedimentos por hab.,2021,2.3992,2.6632
+atencao_basica,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,procedimentos por hab.,2022,2.9335,3.8684
+atencao_basica,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,procedimentos por hab.,2023,3.1667,4.3512
+atencao_basica,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,procedimentos por hab.,2024,3.3545,4.4681
+atencao_basica,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,procedimentos por hab.,2025,3.6095,4.9698
+atencao_basica,visitas_pc,Visitas domiciliares por habitante,visitas por hab.,2020,1.7981,2.1537
+atencao_basica,visitas_pc,Visitas domiciliares por habitante,visitas por hab.,2021,2.1447,3.0259
+atencao_basica,visitas_pc,Visitas domiciliares por habitante,visitas por hab.,2022,2.7629,4.053
+atencao_basica,visitas_pc,Visitas domiciliares por habitante,visitas por hab.,2023,2.9588,4.4932
+atencao_basica,visitas_pc,Visitas domiciliares por habitante,visitas por hab.,2024,3.1577,4.729
+atencao_basica,visitas_pc,Visitas domiciliares por habitante,visitas por hab.,2025,3.4753,5.294
+atencao_basica,atend_odonto_pc,Atendimentos odontológicos por habitante,atendimentos por hab.,2020,0.0921,0.1188
+atencao_basica,atend_odonto_pc,Atendimentos odontológicos por habitante,atendimentos por hab.,2021,0.1567,0.1919
+atencao_basica,atend_odonto_pc,Atendimentos odontológicos por habitante,atendimentos por hab.,2022,0.2172,0.2917
+atencao_basica,atend_odonto_pc,Atendimentos odontológicos por habitante,atendimentos por hab.,2023,0.2514,0.3361
+atencao_basica,atend_odonto_pc,Atendimentos odontológicos por habitante,atendimentos por hab.,2024,0.2566,0.3279
+atencao_basica,atend_odonto_pc,Atendimentos odontológicos por habitante,atendimentos por hab.,2025,0.2665,0.3668
+atencao_basica,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,doses por nascido vivo,2020,13.0635,15.5814
+atencao_basica,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,doses por nascido vivo,2021,12.932,14.8701
+atencao_basica,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,doses por nascido vivo,2022,14.4628,17.3699
+atencao_basica,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,doses por nascido vivo,2023,15.1941,16.6107
+atencao_basica,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,doses por nascido vivo,2024,15.6501,16.8941
+atencao_basica,doses_pc,Doses de vacina aplicadas por habitante,doses por hab.,2020,0.6937,0.7107
+atencao_basica,doses_pc,Doses de vacina aplicadas por habitante,doses por hab.,2021,0.6437,0.5874
+atencao_basica,doses_pc,Doses de vacina aplicadas por habitante,doses por hab.,2022,0.7441,0.7649
+atencao_basica,doses_pc,Doses de vacina aplicadas por habitante,doses por hab.,2023,0.7504,0.7639
+atencao_basica,doses_pc,Doses de vacina aplicadas por habitante,doses por hab.,2024,0.8451,0.8658
+atencao_basica,doses_pc,Doses de vacina aplicadas por habitante,doses por hab.,2025,0.8617,0.8694
+media_alta,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,procedimentos por hab.,2020,6.4322,3.7619
+media_alta,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,procedimentos por hab.,2021,7.7494,4.4966
+media_alta,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,procedimentos por hab.,2022,8.9236,6.531
+media_alta,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,procedimentos por hab.,2023,9.455,7.8473
+media_alta,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,procedimentos por hab.,2024,10.3234,7.7857
+media_alta,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,procedimentos por hab.,2025,11.1574,8.9342
+media_alta,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,procedimentos por hab.,2020,2.2237,0.0
+media_alta,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,procedimentos por hab.,2021,2.3738,0.0
+media_alta,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,procedimentos por hab.,2022,2.3802,0.0002
+media_alta,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,procedimentos por hab.,2023,2.8365,0.0016
+media_alta,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,procedimentos por hab.,2024,3.4701,0.0119
+media_alta,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,procedimentos por hab.,2025,3.953,0.0296
+media_alta,internacoes_local_p1000,Internações realizadas no município por mil habitantes,internações por mil hab.,2020,47.6005,20.1885
+media_alta,internacoes_local_p1000,Internações realizadas no município por mil habitantes,internações por mil hab.,2021,53.9861,22.1728
+media_alta,internacoes_local_p1000,Internações realizadas no município por mil habitantes,internações por mil hab.,2022,56.3446,29.5059
+media_alta,internacoes_local_p1000,Internações realizadas no município por mil habitantes,internações por mil hab.,2023,60.664,27.9967
+media_alta,internacoes_local_p1000,Internações realizadas no município por mil habitantes,internações por mil hab.,2024,64.8217,24.5227
+media_alta,internacoes_local_p1000,Internações realizadas no município por mil habitantes,internações por mil hab.,2025,67.6148,25.2826
+media_alta,internacoes_res_p1000,Internações de residentes por mil habitantes,internações por mil hab.,2020,47.0124,43.0586
+media_alta,internacoes_res_p1000,Internações de residentes por mil habitantes,internações por mil hab.,2021,53.3245,50.0666
+media_alta,internacoes_res_p1000,Internações de residentes por mil habitantes,internações por mil hab.,2022,55.7277,56.9039
+media_alta,internacoes_res_p1000,Internações de residentes por mil habitantes,internações por mil hab.,2023,59.8647,63.8298
+media_alta,internacoes_res_p1000,Internações de residentes por mil habitantes,internações por mil hab.,2024,63.8307,69.7355
+media_alta,internacoes_res_p1000,Internações de residentes por mil habitantes,internações por mil hab.,2025,66.5187,73.1894
+media_alta,pct_urgencia,Internações de urgência,% das internações locais,2020,89.661,99.4152
+media_alta,pct_urgencia,Internações de urgência,% das internações locais,2021,87.1451,99.2717
+media_alta,pct_urgencia,Internações de urgência,% das internações locais,2022,83.7609,96.2963
+media_alta,pct_urgencia,Internações de urgência,% das internações locais,2023,77.5892,88.0077
+media_alta,pct_urgencia,Internações de urgência,% das internações locais,2024,78.3784,85.0905
+media_alta,pct_urgencia,Internações de urgência,% das internações locais,2025,78.0183,87.3368
+media_alta,mortalidade_hosp_pct,Mortalidade hospitalar,% das internações locais,2020,4.6488,2.3392
+media_alta,mortalidade_hosp_pct,Mortalidade hospitalar,% das internações locais,2021,5.8256,2.9098
+media_alta,mortalidade_hosp_pct,Mortalidade hospitalar,% das internações locais,2022,3.2826,1.9644
+media_alta,mortalidade_hosp_pct,Mortalidade hospitalar,% das internações locais,2023,3.1098,1.8373
+media_alta,mortalidade_hosp_pct,Mortalidade hospitalar,% das internações locais,2024,3.2182,2.0115
+media_alta,mortalidade_hosp_pct,Mortalidade hospitalar,% das internações locais,2025,3.1865,1.9883
+media_alta,permanencia_media,Permanência média das internações,dias,2020,4.0306,3.0101
+media_alta,permanencia_media,Permanência média das internações,dias,2021,4.0489,3.2138
+media_alta,permanencia_media,Permanência média das internações,dias,2022,4.0497,2.9932
+media_alta,permanencia_media,Permanência média das internações,dias,2023,3.9505,3.0243
+media_alta,permanencia_media,Permanência média das internações,dias,2024,4.0194,3.1103
+media_alta,permanencia_media,Permanência média das internações,dias,2025,4.0556,3.2164
+media_alta,diarias_uti_p1000,Diárias de UTI por mil habitantes,diárias por mil hab.,2020,27.1761,0.0
+media_alta,diarias_uti_p1000,Diárias de UTI por mil habitantes,diárias por mil hab.,2021,42.3987,0.0
+media_alta,diarias_uti_p1000,Diárias de UTI por mil habitantes,diárias por mil hab.,2022,30.3828,0.0
+media_alta,diarias_uti_p1000,Diárias de UTI por mil habitantes,diárias por mil hab.,2023,33.0341,0.0
+media_alta,diarias_uti_p1000,Diárias de UTI por mil habitantes,diárias por mil hab.,2024,37.8709,0.0
+media_alta,diarias_uti_p1000,Diárias de UTI por mil habitantes,diárias por mil hab.,2025,38.3821,0.0
+media_alta,valor_sih_local_pc,Valor das internações realizadas no município por habitante,R$ por habitante,2020,59.2085,7.9147
+media_alta,valor_sih_local_pc,Valor das internações realizadas no município por habitante,R$ por habitante,2021,94.034,11.3994
+media_alta,valor_sih_local_pc,Valor das internações realizadas no município por habitante,R$ por habitante,2022,66.5489,8.8927
+media_alta,valor_sih_local_pc,Valor das internações realizadas no município por habitante,R$ por habitante,2023,72.5914,9.4812
+media_alta,valor_sih_local_pc,Valor das internações realizadas no município por habitante,R$ por habitante,2024,84.0511,9.1757
+media_alta,valor_sih_local_pc,Valor das internações realizadas no município por habitante,R$ por habitante,2025,89.7801,11.0052
+media_alta,valor_sih_res_pc,Valor das internações de residentes por habitante,R$ por habitante,2020,58.4282,43.9797
+media_alta,valor_sih_res_pc,Valor das internações de residentes por habitante,R$ por habitante,2021,92.3263,77.0951
+media_alta,valor_sih_res_pc,Valor das internações de residentes por habitante,R$ por habitante,2022,65.7238,57.5076
+media_alta,valor_sih_res_pc,Valor das internações de residentes por habitante,R$ por habitante,2023,71.6125,65.0385
+media_alta,valor_sih_res_pc,Valor das internações de residentes por habitante,R$ por habitante,2024,82.6202,76.4042
+media_alta,valor_sih_res_pc,Valor das internações de residentes por habitante,R$ por habitante,2025,88.0944,85.9902
+deslocamento,pct_internacoes_fora_mun,Internações fora do município de residência,% das internações de residentes,2020,27.6554,61.7834
+deslocamento,pct_internacoes_fora_mun,Internações fora do município de residência,% das internações de residentes,2021,26.9781,59.2664
+deslocamento,pct_internacoes_fora_mun,Internações fora do município de residência,% das internações de residentes,2022,27.648,58.5253
+deslocamento,pct_internacoes_fora_mun,Internações fora do município de residência,% das internações de residentes,2023,28.7973,62.6531
+deslocamento,pct_internacoes_fora_mun,Internações fora do município de residência,% das internações de residentes,2024,29.3205,67.9697
+deslocamento,pct_internacoes_fora_mun,Internações fora do município de residência,% das internações de residentes,2025,29.6644,62.3656
+deslocamento,pct_internacoes_fora_regiao,Internações fora da região de saúde,% das internações de residentes,2020,7.3388,9.0
+deslocamento,pct_internacoes_fora_regiao,Internações fora da região de saúde,% das internações de residentes,2021,7.5297,9.5
+deslocamento,pct_internacoes_fora_regiao,Internações fora da região de saúde,% das internações de residentes,2022,7.6047,9.7
+deslocamento,pct_internacoes_fora_regiao,Internações fora da região de saúde,% das internações de residentes,2023,9.2364,12.7
+deslocamento,pct_internacoes_fora_regiao,Internações fora da região de saúde,% das internações de residentes,2024,9.182,13.2
+deslocamento,pct_internacoes_fora_regiao,Internações fora da região de saúde,% das internações de residentes,2025,9.7903,13.8
+deslocamento,km_medio_internacao,Distância média até a internação,km,2020,35.7362,70.7
+deslocamento,km_medio_internacao,Distância média até a internação,km,2021,36.2213,70.5
+deslocamento,km_medio_internacao,Distância média até a internação,km,2022,38.0892,71.6
+deslocamento,km_medio_internacao,Distância média até a internação,km,2023,43.0738,72.9
+deslocamento,km_medio_internacao,Distância média até a internação,km,2024,45.003,77.9
+deslocamento,km_medio_internacao,Distância média até a internação,km,2025,47.0007,80.3
+resultados,taxa_mortalidade_infantil,Taxa de mortalidade infantil,óbitos por mil nascidos vivos,2020,12.0801,11.6279
+resultados,taxa_mortalidade_infantil,Taxa de mortalidade infantil,óbitos por mil nascidos vivos,2021,12.6729,12.3762
+resultados,taxa_mortalidade_infantil,Taxa de mortalidade infantil,óbitos por mil nascidos vivos,2022,14.0801,11.7233
+resultados,taxa_mortalidade_infantil,Taxa de mortalidade infantil,óbitos por mil nascidos vivos,2023,14.0386,12.6984
+resultados,taxa_mortalidade_infantil,Taxa de mortalidade infantil,óbitos por mil nascidos vivos,2024,14.1927,12.894
+resultados,taxa_mortalidade_geral,Taxa de mortalidade geral,óbitos por mil habitantes,2020,6.6323,5.8454
+resultados,taxa_mortalidade_geral,Taxa de mortalidade geral,óbitos por mil habitantes,2021,8.0197,7.7092
+resultados,taxa_mortalidade_geral,Taxa de mortalidade geral,óbitos por mil habitantes,2022,5.9383,6.1293
+resultados,taxa_mortalidade_geral,Taxa de mortalidade geral,óbitos por mil habitantes,2023,5.8147,6.0281
+resultados,taxa_mortalidade_geral,Taxa de mortalidade geral,óbitos por mil habitantes,2024,5.9431,6.5661
+resultados,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,% dos nascidos vivos,2020,70.2773,73.58
+resultados,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,% dos nascidos vivos,2021,72.6032,75.0
+resultados,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,% dos nascidos vivos,2022,74.225,77.78
+resultados,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,% dos nascidos vivos,2023,76.8499,79.21
+resultados,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,% dos nascidos vivos,2024,80.5557,83.34
+resultados,pct_baixo_peso,Nascidos vivos com baixo peso,% dos nascidos vivos,2020,7.8495,7.4
+resultados,pct_baixo_peso,Nascidos vivos com baixo peso,% dos nascidos vivos,2021,8.0899,7.69
+resultados,pct_baixo_peso,Nascidos vivos com baixo peso,% dos nascidos vivos,2022,8.2491,7.79
+resultados,pct_baixo_peso,Nascidos vivos com baixo peso,% dos nascidos vivos,2023,8.3392,8.16
+resultados,pct_baixo_peso,Nascidos vivos com baixo peso,% dos nascidos vivos,2024,8.2562,7.84
+resultados,pct_cesarea,Partos cesáreos,% dos nascidos vivos,2020,63.2397,65.66
+resultados,pct_cesarea,Partos cesáreos,% dos nascidos vivos,2021,64.4323,67.76
+resultados,pct_cesarea,Partos cesáreos,% dos nascidos vivos,2022,64.3248,68.18
+resultados,pct_cesarea,Partos cesáreos,% dos nascidos vivos,2023,65.0196,71.33
+resultados,pct_cesarea,Partos cesáreos,% dos nascidos vivos,2024,67.1706,75.26
+resultados,pct_mae_adolescente,Nascidos vivos de mães adolescentes,% dos nascidos vivos,2020,15.3634,18.18
+resultados,pct_mae_adolescente,Nascidos vivos de mães adolescentes,% dos nascidos vivos,2021,15.5879,17.54
+resultados,pct_mae_adolescente,Nascidos vivos de mães adolescentes,% dos nascidos vivos,2022,14.2444,15.88
+resultados,pct_mae_adolescente,Nascidos vivos de mães adolescentes,% dos nascidos vivos,2023,13.7981,15.63
+resultados,pct_mae_adolescente,Nascidos vivos de mães adolescentes,% dos nascidos vivos,2024,13.4174,15.56

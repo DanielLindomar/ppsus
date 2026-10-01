@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510622,Nova Mutum,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),46813,48222,55839,58469,61223,63455
+510622,Nova Mutum,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1455.4153,1663.6661,1624.1323,1780.7244,1690.2526,1747.3837
+510622,Nova Mutum,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),370.3572,420.507,437.63,528.675,575.2838,663.4374
+510622,Nova Mutum,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),598.8986,941.6906,925.8778,978.0587,795.5235,710.5823
+510622,Nova Mutum,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,70.1941,64.3899,64.5989,63.8591,75.094,84.7343
+510622,Nova Mutum,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.0862,0.6665,1.8095,4.9356,5.4363,7.0119
+510622,Nova Mutum,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.0196,1.1144,1.1804,1.07,1.2997,1.5219
+510622,Nova Mutum,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.1817,1.3859,1.3254,1.5164,2.0582,2.0889
+510622,Nova Mutum,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.6102,2.8124,2.4678,3.1793,3.8335,4.061
+510622,Nova Mutum,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.1058,2.0099,1.7984,1.7163,1.6959,2.1448
+510622,Nova Mutum,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2982,0.2843,0.2727,0.2596,0.2961,0.2884
+510622,Nova Mutum,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.3137,3.6913,2.0133,2.3474,2.7958,2.6409
+510622,Nova Mutum,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),5,26,18,20,20,20
+510622,Nova Mutum,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,54.5959,99.2638,141.4191,179.5259,202.8372,218.9615
+510622,Nova Mutum,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),13,13,13,13,14,15
+510622,Nova Mutum,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),2,2,2,1,1,1
+510622,Nova Mutum,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,1,1,1,1
+510622,Nova Mutum,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),54,62,64,65,65,67
+510622,Nova Mutum,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.2964,2.2811,1.9699,1.8813,2.0548,2.2851
+510622,Nova Mutum,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,2,2,2
+510622,Nova Mutum,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),11,11,11,12,14,16
+510622,Nova Mutum,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,2.5898,2.7068,2.3136,2.4757,2.7719,3.1611
+510622,Nova Mutum,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,5.869,5.7502,3.9745,4.663,4.8049,5.31
+510622,Nova Mutum,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,4.0244,5.5296,4.2647,5.0996,4.4039,4.3596
+510622,Nova Mutum,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.2693,0.3388,0.284,0.3302,0.322,0.3471
+510622,Nova Mutum,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,15.5905,13.6506,14.8208,18.4513,16.6447,
+510622,Nova Mutum,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,1.3326,0.9551,0.8888,0.8764,1.0967,1.0116
+510622,Nova Mutum,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,7.656,10.7319,9.4596,9.8381,9.5697,10.0746
+510622,Nova Mutum,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.006,0.0136,0.0113,0.0252,0.0605,0.1031
+510622,Nova Mutum,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,45.6924,61.8183,68.3035,71.9013,116.2472,135.5606
+510622,Nova Mutum,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,45.2866,56.1569,54.9795,57.6887,69.304,79.1427
+510622,Nova Mutum,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,96.9612,91.3787,71.7357,88.4396,79.9213,71.2974
+510622,Nova Mutum,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,2.8518,9.1245,1.6518,4.5909,2.473,1.9182
+510622,Nova Mutum,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,3.3184,3.3083,2.3277,2.5383,2.4673,2.3584
+510622,Nova Mutum,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,16.5125,124.3831,17.3176,121.5345,115.6265,115.0579
+510622,Nova Mutum,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,52.7421,255.038,55.3771,121.7501,161.7162,198.5135
+510622,Nova Mutum,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,47.2979,135.9159,43.3218,65.5598,73.7216,89.2927
+510622,Nova Mutum,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,12.7358,10.3397,9.4137,10.0208,8.3903,7.9251
+510622,Nova Mutum,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,8.6,6.9,7.1,7.2,5.8,5.5
+510622,Nova Mutum,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",23.7,19.5,18.5,19.4,15.9,14.8
+510622,Nova Mutum,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,7.0779,8.5745,12.3928,12.6706,10.2041,
+510622,Nova Mutum,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,3.9733,5.4539,4.1011,3.6259,3.5281,
+510622,Nova Mutum,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,85.95,86.17,85.99,88.01,91.65,
+510622,Nova Mutum,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.86,6.97,6.67,7.41,7.88,
+510622,Nova Mutum,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,64.41,70.63,65.65,70.7,72.17,
+510622,Nova Mutum,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,11.83,11.79,10.39,10.04,10.48,

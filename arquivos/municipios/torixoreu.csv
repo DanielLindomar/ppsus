@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510820,Torixoréu,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),3547,3487,4164,4197,4230,4238
+510820,Torixoréu,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,2358.3024,1973.3932,1979.2756,2326.9145,2999.1512,5088.0815
+510820,Torixoréu,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),760.852,1042.7543,1273.8491,1073.0215,1135.4265,3032.3245
+510820,Torixoréu,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),1176.1875,876.5587,684.2749,1231.211,1849.2451,2049.4263
+510820,Torixoréu,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,52.7109,67.3655,53.3634,44.3948,46.4518,37.1428
+510820,Torixoréu,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,2.6081,3.3423,9.9165,9.5677,14.0274,13.0946
+510820,Torixoréu,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,2.1596,1.5371,1.501,1.9347,2.1418,2.8315
+510820,Torixoréu,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0798,1.4511,1.561,1.9204,1.7139,1.8971
+510820,Torixoréu,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.1359,4.5397,3.4486,3.605,3.5272,3.5984
+510820,Torixoréu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.7928,6.1887,4.2435,4.3293,3.6241,3.4804
+510820,Torixoréu,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5639,0.5736,0.4803,0.4765,0.4728,0.4719
+510820,Torixoréu,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,6.2024,6.3091,5.4443,5.5587,5.6738,5.781
+510820,Torixoréu,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510820,Torixoréu,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,36.6507,37.2813,32.0125,38.1225,44.9173,47.5932
+510820,Torixoréu,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),2,2,2,2,2,2
+510820,Torixoréu,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510820,Torixoréu,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510820,Torixoréu,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),9,10,10,10,10,10
+510820,Torixoréu,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,5.6386,5.7356,4.8031,4.7653,4.7281,4.7192
+510820,Torixoréu,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510820,Torixoréu,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,2,2,2,2,2
+510820,Torixoréu,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.0772,0.4755,1.9666,2.8816,2.4203,3.1925
+510820,Torixoréu,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.1043,0.2638,2.8096,3.5023,3.9825,5.0604
+510820,Torixoréu,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.5641,2.1127,4.7483,5.3107,5.3064,5.4578
+510820,Torixoréu,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.1376,0.2615,0.3965,0.3567,0.4896,0.3839
+510820,Torixoréu,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,22.641,16.34,24.6286,25.3704,21.2903,
+510820,Torixoréu,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.6513,0.5185,0.5473,0.507,0.7423,0.6992
+510820,Torixoréu,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,2.0964,1.3737,3.8021,12.8406,14.4889,16.6239
+510820,Torixoréu,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0036,0.05,0.1362,0.1461
+510820,Torixoréu,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,68.5086,56.4956,50.4323,91.9705,107.0922,99.3393
+510820,Torixoréu,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,77.2484,73.1288,55.4755,57.6602,53.9007,64.4172
+510820,Torixoréu,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,93.401,45.7143,4.9223,2.649,10.6888
+510820,Torixoréu,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,0.823,2.5381,2.8571,1.2953,0.6623,1.9002
+510820,Torixoréu,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.3951,3.2132,2.3714,1.4948,1.3422,1.5487
+510820,Torixoréu,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510820,Torixoréu,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,28.3776,34.0948,26.6842,61.6734,67.8667,78.6972
+510820,Torixoréu,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,66.3005,96.147,40.3759,42.9756,41.2822,82.6559
+510820,Torixoréu,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,26.6423,25.098,23.8095,21.4876,27.6316,32.2344
+510820,Torixoréu,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,4.7,4.7,6.5,3.7,6.1,7
+510820,Torixoréu,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",27.7,28.6,30.8,25,35.5,36.4
+510820,Torixoréu,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,51.2821,20,0,0,0,
+510820,Torixoréu,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,9.0217,14.339,10.0865,7.6245,9.9291,
+510820,Torixoréu,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,28.21,70,88.57,92.59,87.1,
+510820,Torixoréu,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,12.82,2,0,3.7,3.23,
+510820,Torixoréu,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,82.05,76,85.71,100,87.1,
+510820,Torixoréu,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,20.51,14,17.14,11.11,16.13,

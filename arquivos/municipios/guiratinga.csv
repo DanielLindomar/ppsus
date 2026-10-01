@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510420,Guiratinga,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),15245,15740,10966,10747,10532,10252
+510420,Guiratinga,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,886.4269,935.974,1515.8087,1911.5282,2001.4783,2118.6207
+510420,Guiratinga,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),331.8045,352.8177,562.4191,631.774,677.1202,782.2836
+510420,Guiratinga,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),304.7093,295.4521,476.5221,497.4994,668.9271,700.3242
+510420,Guiratinga,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,59.7563,57.2372,62.8644,72.6158,65.2381,53.3471
+510420,Guiratinga,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,4.0936,5.6691,3.4582,1.6228,2.5199,2.9799
+510420,Guiratinga,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6337,0.6258,0.9374,0.9621,1.2714,1.3675
+510420,Guiratinga,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6153,0.6817,0.8873,0.9575,1.0758,0.9949
+510420,Guiratinga,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.0587,1.1671,1.6779,2.1922,2.612,2.2103
+510420,Guiratinga,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.9026,2.7878,4.3452,4.4822,4.7474,4.9142
+510420,Guiratinga,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.41,0.425,0.5626,0.5425,0.4985,0.4799
+510420,Guiratinga,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.2463,1.2071,1.7326,1.7679,1.8591,0.4877
+510420,Guiratinga,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510420,Guiratinga,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,11.4267,11.4358,16.4144,16.8233,29.0353,26.9899
+510420,Guiratinga,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),6,6,6,6,6,6
+510420,Guiratinga,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,2,1
+510420,Guiratinga,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510420,Guiratinga,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),11,12,13,12,12,12
+510420,Guiratinga,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,3.2798,3.1766,4.5595,4.6525,4.7474,4.8771
+510420,Guiratinga,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510420,Guiratinga,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),5,5,5,5,5,5
+510420,Guiratinga,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.7331,1.1323,2.5072,2.6499,2.8261,2.9161
+510420,Guiratinga,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.1919,2.0407,4.3896,4.6464,4.3136,4.8025
+510420,Guiratinga,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.3683,2.9428,5.7852,4.7273,5.1022,6.7436
+510420,Guiratinga,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0432,0.0842,0.2163,0.2936,0.2135,0.2485
+510420,Guiratinga,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,17.5567,18.4578,18.2614,16.3565,18.375,
+510420,Guiratinga,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.4164,0.2904,0.4281,0.4197,0.6927,0.6079
+510420,Guiratinga,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,0.5164,1.6268,5.1011,5.1129,6.9273,9.172
+510420,Guiratinga,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0,0,0,0
+510420,Guiratinga,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,17.3172,22.1728,36.3852,50.2466,31.7129,34.6274
+510420,Guiratinga,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,35.7494,45.9975,75.0502,100.5862,87.3528,90.714
+510420,Guiratinga,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,100,99.7006,99.4366
+510420,Guiratinga,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,4.5455,6.5903,8.2707,2.2222,4.1916,4.507
+510420,Guiratinga,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,1.8447,3.2292,2.1404,2.4056,3.1886,3.8535
+510420,Guiratinga,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510420,Guiratinga,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,7.1944,12.3478,14.4545,18.8924,11.1128,10.7533
+510420,Guiratinga,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,42.5689,96.264,82.9809,132.429,122.1991,135.4684
+510420,Guiratinga,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,51.7431,51.9337,51.5188,50.1388,63.8043,62.3656
+510420,Guiratinga,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,2.8,3.5,1.5,3.9,4.6,3
+510420,Guiratinga,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",52.1,54.6,50.5,53.2,67.5,62.6
+510420,Guiratinga,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,36.1446,0,8.6957,0,
+510420,Guiratinga,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.4939,9.4663,10.3958,10.3285,10.0646,
+510420,Guiratinga,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,74.23,84.34,82.95,86.09,87.5,
+510420,Guiratinga,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,6.19,10.84,6.82,12.17,10,
+510420,Guiratinga,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,61.86,63.86,55.68,57.89,48.75,
+510420,Guiratinga,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,11.34,22.89,14.77,10.43,16.25,

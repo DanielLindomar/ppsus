@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510630,Paranatinga,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),22861,23250,26423,27311,28228,28870
+510630,Paranatinga,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,1072.322,1403.3453,1606.9097,1815.4814,2124.8507,2177.8331
+510630,Paranatinga,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),303.6513,420.4319,503.0197,975.7897,957.5604,952.4388
+510630,Paranatinga,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),595.9683,779.6216,834.4349,518.3743,818.8319,980.0077
+510630,Paranatinga,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,67.1519,77.2185,72.0712,76.5634,80.1418,71.9767
+510630,Paranatinga,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,3.9447,5.242,1.9811,0.6841,0.4263,2.8821
+510630,Paranatinga,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6815,0.7239,0.6377,0.6261,0.688,0.9886
+510630,Paranatinga,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.7471,0.8344,0.8863,0.9729,0.9473,1.008
+510630,Paranatinga,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.2637,2.5161,2.477,2.5199,2.6066,2.6086
+510630,Paranatinga,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.6928,3.5948,3.2199,3.2038,2.9758,2.9609
+510630,Paranatinga,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3246,0.3174,0.3028,0.3343,0.3011,0.2598
+510630,Paranatinga,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.531,2.1325,1.7663,1.2815,1.2399,1.1257
+510630,Paranatinga,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510630,Paranatinga,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,26.2456,26.1634,20.4367,19.6185,20.3096,20.6685
+510630,Paranatinga,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),5,6,5,7,7,7
+510630,Paranatinga,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510630,Paranatinga,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),1,1,0,0,0,0
+510630,Paranatinga,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),21,22,21,22,23,25
+510630,Paranatinga,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.1871,2.1505,1.8923,2.5008,2.4798,2.4247
+510630,Paranatinga,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,0,0,0
+510630,Paranatinga,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),4,4,4,5,5,5
+510630,Paranatinga,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.5462,0.6674,0.8795,1.0815,1.2259,1.5692
+510630,Paranatinga,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,0.976,1.2216,1.3388,2.1482,2.3912,3.1092
+510630,Paranatinga,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,2.601,3.9856,3.4373,2.1663,3.3764,4.4841
+510630,Paranatinga,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0521,0.0719,0.1371,0.1798,0.1693,0.1859
+510630,Paranatinga,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,16.7172,18.4094,20.3033,15.8644,16.8941,
+510630,Paranatinga,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.8276,0.9055,0.9054,0.686,0.8427,0.7602
+510630,Paranatinga,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,6.277,6.9718,5.8934,6.8677,6.4065,8.3092
+510630,Paranatinga,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0,0,0.0174,0.0121,0.0013,0.0003
+510630,Paranatinga,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,37.5312,45.2903,52.6814,53.1654,49.2773,36.7856
+510630,Paranatinga,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,59.14,74.4086,77.0541,75.757,76.2009,64.3228
+510630,Paranatinga,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,87.4644,86.0632,79.9587,79.0798,70.6215
+510630,Paranatinga,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,2.331,1.0446,1.0057,0.551,1.0784,1.2241
+510630,Paranatinga,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.4161,2.4729,2.7047,2.7293,2.9008,3.0885
+510630,Paranatinga,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510630,Paranatinga,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,23.2059,26.4903,26.0504,24.2502,23.073,17.3625
+510630,Paranatinga,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,67.3047,118.9883,85.2848,80.8815,86.381,79.3048
+510630,Paranatinga,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,39.8669,39.6532,32.3674,30.5462,36.0298,42.9725
+510630,Paranatinga,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,5,5.5,5,6.1,7.6,10.2
+510630,Paranatinga,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",90.9,90,73.6,70.3,84.7,98.3
+510630,Paranatinga,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,7.7121,14.8883,28.436,20,18.0879,
+510630,Paranatinga,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,6.9113,7.0538,6.2824,5.1628,5.1722,
+510630,Paranatinga,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,60.93,65.26,64.45,69.33,69.51,
+510630,Paranatinga,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,6.68,8.93,8.06,8.89,10.08,
+510630,Paranatinga,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,51.16,69.73,65.64,72,74.94,
+510630,Paranatinga,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,16.71,22.83,15.88,21.11,15.76,

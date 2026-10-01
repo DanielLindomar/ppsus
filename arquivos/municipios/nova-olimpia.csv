@@ -1,0 +1,47 @@
+cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2023,2024,2025
+510623,Nova Olímpia,populacao,População,contexto,habitantes,IBGE,Estimativa populacional do IBGE (2022 = Censo; 2023 = interpolação entre o Censo 2022 e a estimativa 2024),20563,20820,16352,16333,16314,16204
+510623,Nova Olímpia,desp_total_pc,Despesa em saúde por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_total_saude / populacao,836.1915,1017.6138,1625.6856,1853.6106,2110.6653,2384.8294
+510623,Nova Olímpia,desp_ab_pc,Despesa em atenção básica por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_301_atencao_basica / populacao  (subfunção 301),227.1927,227.0062,392.7814,450.2028,546.4363,494.6874
+510623,Nova Olímpia,desp_mac_pc,Despesa em média e alta complexidade por habitante,financiamento,R$ por habitante,SIOPS (RREO),desp_302_mac / populacao  (subfunção 302 — assistência hospitalar e ambulatorial),449.8258,623.2382,1019.9593,1225.6952,1355.4742,1718.1018
+510623,Nova Olímpia,pct_recursos_proprios,Despesa com recursos próprios,financiamento,% da despesa total,SIOPS (RREO),100 × desp_recursos_proprios / desp_total_saude,70.8373,77.6826,74.102,75.1344,75.5251,72.5323
+510623,Nova Olímpia,pct_capital,Despesa de capital,financiamento,% da despesa total,SIOPS (RREO),100 × desp_capital / desp_total_saude,1.8383,7.1684,2.1074,1.9432,1.4589,4.6981
+510623,Nova Olímpia,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6132,0.7709,1.0048,0.9925,1.1843,1.3423
+510623,Nova Olímpia,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.5753,0.7123,0.9461,0.9796,1.1132,1.1843
+510623,Nova Olímpia,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.5844,1.9803,2.4003,2.449,2.656,2.5253
+510623,Nova Olímpia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.2158,1.3967,1.8652,2.7809,2.6817,2.695
+510623,Nova Olímpia,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.0729,0.1042,0.2648,0.2755,0.2758,0.3394
+510623,Nova Olímpia,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.7021,1.6811,2.1404,2.3113,2.3293,2.3451
+510623,Nova Olímpia,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
+510623,Nova Olímpia,equip_sus_p10000,Equipamentos SUS em uso por 10 mil habitantes,capacidade,equipamentos por 10 mil hab.,CNES,10000 × equip_sus_uso / populacao,28.6923,28.3381,36.0812,36.2763,38.0042,37.645
+510623,Nova Olímpia,n_ubs,Unidades básicas de saúde,capacidade,unidades,CNES,n_ubs (média das competências do ano),6,5,6,6,7,7
+510623,Nova Olímpia,n_hospitais_sus,Hospitais SUS,capacidade,hospitais,CNES,n_hospitais_sus (média das competências do ano),1,1,1,1,1,1
+510623,Nova Olímpia,n_upa,Unidades de pronto atendimento,capacidade,unidades,CNES,n_upa (média das competências do ano),0,0,0,0,0,0
+510623,Nova Olímpia,n_estab_sus,Estabelecimentos com atendimento SUS,capacidade,estabelecimentos,CNES,n_estab_sus (média das competências do ano),15,15,16,18,20,21
+510623,Nova Olímpia,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes,capacidade,equipes por 10 mil hab.,CNES,10000 × n_equipes_esf / populacao,2.592,2.8818,3.3635,3.0613,3.0649,3.0857
+510623,Nova Olímpia,n_equipes_eap,Equipes de atenção primária (eAP),capacidade,equipes,CNES,n_equipes_eap (média das competências do ano),0,0,0,1,0,0
+510623,Nova Olímpia,n_equipes_esb,Equipes de saúde bucal,capacidade,equipes,CNES,n_equipes_esb (média das competências do ano),2,3,5,5,5,5
+510623,Nova Olímpia,atend_individual_pc,Atendimentos individuais na atenção básica por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_individual / populacao,0.4945,0.7577,0.9451,1.4938,1.1817,1.5131
+510623,Nova Olímpia,procedimentos_ab_pc,Procedimentos na atenção básica por habitante,atencao_basica,procedimentos por hab.,SISAB,sisab_procedimentos / populacao,1.2005,1.7136,1.8323,2.9019,2.4194,3.0117
+510623,Nova Olímpia,visitas_pc,Visitas domiciliares por habitante,atencao_basica,visitas por hab.,SISAB,sisab_visitas_domiciliares / populacao,0.3906,0.2725,0.4857,2.088,2.7714,3.6176
+510623,Nova Olímpia,atend_odonto_pc,Atendimentos odontológicos por habitante,atencao_basica,atendimentos por hab.,SISAB,sisab_atend_odonto / populacao,0.0927,0.0914,0.2046,0.2791,0.276,0.3684
+510623,Nova Olímpia,doses_menor1_por_nv,Doses de vacina em menores de 1 ano por nascido vivo,atencao_basica,doses por nascido vivo,SI-PNI / SINASC,sipni_doses_menor1_local / nascidos_vivos,13.6486,14.8701,17.1403,12.8304,14.9668,
+510623,Nova Olímpia,doses_pc,Doses de vacina aplicadas por habitante,atencao_basica,doses por hab.,SI-PNI,sipni_doses_local / populacao,0.7522,0.7309,0.7831,0.7844,0.8387,0.827
+510623,Nova Olímpia,qtd_mc_local_pc,Procedimentos de média complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_mc_local / populacao,3.0539,1.5916,4.0829,6.9744,10.0167,8.8618
+510623,Nova Olímpia,qtd_ac_local_pc,Procedimentos de alta complexidade por habitante,media_alta,procedimentos por hab.,SIA/SUS,qtd_ac_local / populacao,0.001,0.0003,0,0.0003,0.0159,0.0259
+510623,Nova Olímpia,internacoes_local_p1000,Internações realizadas no município por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_local / populacao,31.367,32.757,39.4447,34.1027,38.5558,38.941
+510623,Nova Olímpia,internacoes_res_p1000,Internações de residentes por mil habitantes,media_alta,internações por mil hab.,SIH/SUS,1000 × internacoes_res / populacao,40.8987,41.5466,51.7368,49.4092,59.1516,59.3681
+510623,Nova Olímpia,pct_urgencia,Internações de urgência,media_alta,% das internações locais,SIH/SUS,100 × internacoes_urgencia_local / internacoes_local,100,100,100,100,100,100
+510623,Nova Olímpia,mortalidade_hosp_pct,Mortalidade hospitalar,media_alta,% das internações locais,SIH/SUS,100 × obitos_hosp_local / internacoes_local,3.2558,1.4663,1.8605,0.7181,1.2719,0.9509
+510623,Nova Olímpia,permanencia_media,Permanência média das internações,media_alta,dias,SIH/SUS,diarias_local / internacoes_local,2.5876,2.783,2.6605,2.4722,2.6296,2.7861
+510623,Nova Olímpia,diarias_uti_p1000,Diárias de UTI por mil habitantes,media_alta,diárias por mil hab.,SIH/SUS,1000 × diarias_uti_local / populacao,0,0,0,0,0,0
+510623,Nova Olímpia,valor_sih_local_pc,Valor das internações realizadas no município por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_local / populacao,16.5647,18.3425,21.1836,19.2051,22.4113,20.5361
+510623,Nova Olímpia,valor_sih_res_pc,Valor das internações de residentes por habitante,media_alta,R$ por habitante,SIH/SUS,valor_sih_res / populacao,40.6962,58.9209,60.3303,61.8453,108.9947,82.0777
+510623,Nova Olímpia,pct_internacoes_fora_mun,Internações fora do município de residência,deslocamento,% das internações de residentes,SIH/SUS,100 × internacoes_res_fora / internacoes_res,23.7812,21.9653,24.8227,32.2181,36.0622,35.8628
+510623,Nova Olímpia,pct_internacoes_fora_regiao,Internações fora da região de saúde,deslocamento,% das internações de residentes,SIH/SUS (AIH reduzida),100 × internações em hospitais de outra região de saúde / internações de residentes,15.3,19.4,21,24.5,31.1,32.3
+510623,Nova Olímpia,km_medio_internacao,Distância média até a internação,deslocamento,km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),"média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",30.6,33.3,38.4,46.9,57,57.9
+510623,Nova Olímpia,taxa_mortalidade_infantil,Taxa de mortalidade infantil,resultados,óbitos por mil nascidos vivos,SIM / SINASC,1000 × obitos_menor1 / nascidos_vivos,0,11.811,13.5747,21.2014,14.7601,
+510623,Nova Olímpia,taxa_mortalidade_geral,Taxa de mortalidade geral,resultados,óbitos por mil habitantes,SIM,1000 × obitos_residentes / populacao,5.3008,7.7329,5.9932,4.5307,6.6201,
+510623,Nova Olímpia,pct_prenatal_7mais,Nascidos vivos com 7 ou mais consultas de pré-natal,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com 7+ consultas / nascidos vivos com informação,64.86,67.32,73.3,75.62,79.34,
+510623,Nova Olímpia,pct_baixo_peso,Nascidos vivos com baixo peso,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos com menos de 2.500 g / nascidos vivos com informação,5.41,9.06,8.14,7.77,9.59,
+510623,Nova Olímpia,pct_cesarea,Partos cesáreos,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos por cesariana / nascidos vivos com informação,61,71.94,65.16,72.79,73.8,
+510623,Nova Olímpia,pct_mae_adolescente,Nascidos vivos de mães adolescentes,resultados,% dos nascidos vivos,SINASC,100 × nascidos vivos de mães com menos de 20 anos / nascidos vivos com informação,18.53,18.9,15.84,20.14,18.08,
