@@ -48,7 +48,8 @@ DOWN = RAIZ / "arquivos" / "dados"
 GEO_IN = RAIZ / "arquivos" / "geo" / "mt_municipios_ibge_minima.geojson"
 ARQ_DESLOC = DADOS / "deslocamento_mun_ano.csv"
 ARQ_SEDES = DADOS / "sedes_municipais.csv"  # script 00 (IBGE, Localidades 2022)
-SENHA = Path(r"D:\ppsus_repo\.pgpass_superuser.txt")
+from config_local import caminho  # noqa: E402  (caminhos locais fora do repositório)
+SENHA = caminho("PPSUS_PGPASS")
 
 ANOS = list(range(2020, 2026))
 ANO_MAX = 2025

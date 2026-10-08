@@ -38,8 +38,8 @@ ds    <- function(...) file.path(RAIZ, "dados_site", ...)
 aviso <- function(...) message("[funcoes.R] ", sprintf(...))
 
 # ---- 0. Constantes ------------------------------------------------------------
-VERSAO_SITE <- "0.1"
-DATA_VERSAO <- "01/10/2026"
+VERSAO_SITE <- "0.2"
+DATA_VERSAO <- "08/10/2026"
 ANOS        <- 2020:2025           # janela analítica publicada
 ANO_REF     <- 2025L               # ano de referência dos KPIs (resultados: 2024)
 
@@ -335,8 +335,9 @@ situacao <- function(valor, ref, sentido) {
 span_sit <- function(sit) span(class = paste("sit", sit$cls), sit$txt)
 
 # ---- 4. Componentes htmltools --------------------------------------------------------
-TEXTO_VERSAO <- paste0("<b>Versão ", VERSAO_SITE, "</b> — dados e indicadores 2020–2025; escores de eficiência (DEA) ",
-                       "e produtividade (Malmquist) em preparação. Cada valor mostra a fonte e o ano a que se refere.")
+TEXTO_VERSAO <- paste0("<b>Versão ", VERSAO_SITE, "</b> (", DATA_VERSAO, ") — dados e indicadores 2020–2025, escores de eficiência (DEA) ",
+                       "e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da ",
+                       "versão 2 da estimação, em validação com a SES-MT e o COSEMS-MT. Cada valor mostra a fonte e o ano a que se refere.")
 faixa_versao <- function(texto = TEXTO_VERSAO) div(class = "faixa-versao", HTML(texto))
 faixa_construcao <- function(texto) div(class = "faixa-construcao", HTML(texto))
 
@@ -806,10 +807,14 @@ resumo_desl <- function(ano, nivel = "total") {
 
 # ---- 9. Rodapé de fontes -----------------------------------------------------------------------
 # prefixo: caminho relativo até a raiz do site ("" na raiz, "../" nas subpastas)
-fonte_rodape <- function(prefixo = "../", extra = NULL) {
+# eficiencia = TRUE: páginas com valores de eficiência (em R$ de 2025, IPCA) ao lado dos indicadores (R$ correntes)
+fonte_rodape <- function(prefixo = "../", extra = NULL, eficiencia = FALSE) {
   p(class = "nota-fonte",
     "Fontes: DATASUS/Ministério da Saúde (CNES, SIA, SIH, SISAB, SI-PNI, SIM, SINASC), SIOPS e IBGE, tratados pelo ",
-    "Projeto PPSUS-MT (Data Lake do SUS-MT). Despesas em R$ correntes (liquidadas); produção hospitalar pelo ano da alta; ",
+    "Projeto PPSUS-MT (Data Lake do SUS-MT). ",
+    if (eficiencia) "Indicadores em R$ correntes (despesa liquidada); valores de eficiência em R$ de 2025 (IPCA); "
+    else "Despesas em R$ correntes (liquidadas); ",
+    "produção hospitalar pelo ano da alta; ",
     "medianas calculadas entre os municípios de Mato Grosso no ano indicado. ", extra,
     "Definições, ressalvas e anomalias conhecidas em ", a(href = paste0(prefixo, "metodologia.html"), "Metodologia", .noWS = "after"),
     "; arquivos completos em ", a(href = paste0(prefixo, "dados/index.html"), "Dados", .noWS = "after"), ".")

@@ -1,0 +1,61 @@
+modelo,nome_modelo,grupo,rotulo_grupo,ano,n_unidades,n_avaliados,n_nao_publicavel,n_fora_modelo,media_escore,mediana_escore,media_escore_original,n_fronteira,n_quartil_superior,n_terceiro_quartil,n_segundo_quartil,n_quartil_inferior,n_ic_cruza_faixa,n_registro_a_verificar,mq_n,mq_mi,mq_ec,mq_tc,mq_n_ec_maior_1,mq_especificacao,mq_tc_publicavel
+M1,Atenção básica,todos,todos,2020,142,138,3,1,0.643515,0.660424,0.746221,30,27,27,27,27,74,19,0,,,,,,0
+M1,Atenção básica,todos,todos,2021,142,140,1,1,0.694442,0.723164,0.78723,43,25,24,24,24,57,15,126,0.95521,1.056244,0.904346,72,c_absoluto_crs,0
+M1,Atenção básica,todos,todos,2022,142,141,0,1,0.731583,0.77117,0.818289,45,24,24,24,24,63,9,135,1.197875,1.067306,1.122335,75,c_absoluto_crs,0
+M1,Atenção básica,todos,todos,2023,142,141,0,1,0.766526,0.819495,0.846353,51,23,22,22,23,70,8,138,1.01161,1.058244,0.955933,72,c_absoluto_crs,0
+M1,Atenção básica,todos,todos,2024,142,141,0,1,0.817034,0.880041,0.885536,57,21,21,21,21,58,10,139,1.03802,1.053594,0.985218,78,c_absoluto_crs,0
+M1,Atenção básica,todos,todos,2025,142,142,0,0,0.849668,0.901902,0.910425,69,19,18,18,18,53,9,140,1.021832,1.055371,0.968221,75,c_absoluto_crs,0
+M0,Consolidado (sistema municipal de saúde),todos,todos,2020,142,130,11,1,0.666752,0.701496,0.752869,31,25,25,24,25,64,17,0,,,,,,0
+M0,Consolidado (sistema municipal de saúde),todos,todos,2021,142,135,6,1,0.658895,0.65777,0.747203,30,27,26,26,26,63,10,126,0.977323,0.975405,1.001966,46,c_absoluto_crs,0
+M0,Consolidado (sistema municipal de saúde),todos,todos,2022,142,139,2,1,0.674265,0.685427,0.760873,33,27,26,26,27,69,6,135,1.166976,1.030777,1.132132,70,c_absoluto_crs,0
+M0,Consolidado (sistema municipal de saúde),todos,todos,2023,142,140,1,1,0.695361,0.705514,0.782028,31,28,27,27,27,78,5,138,1.018401,1.034408,0.984526,69,c_absoluto_crs,0
+M0,Consolidado (sistema municipal de saúde),todos,todos,2024,142,140,1,1,0.752793,0.756577,0.819121,30,28,27,27,28,66,5,139,1.020604,1.065537,0.95783,80,c_absoluto_crs,0
+M0,Consolidado (sistema municipal de saúde),todos,todos,2025,142,142,0,0,0.758394,0.770261,0.82964,39,26,26,25,26,73,5,140,0.996295,1.030129,0.967156,72,c_absoluto_crs,0
+M2,Média complexidade (produção local),todos,todos,2020,142,71,7,64,0.577886,0.580585,0.689165,16,14,14,13,14,32,18,0,,,,,,0
+M2,Média complexidade (produção local),todos,todos,2021,142,77,1,64,0.581365,0.610389,0.696101,22,14,14,13,14,33,12,70,1.038745,1.057653,0.982123,38,c_absoluto_crs,0
+M2,Média complexidade (produção local),todos,todos,2022,142,76,1,65,0.65938,0.714435,0.767248,27,13,12,12,12,28,8,76,1.1195,1.136944,0.984658,46,c_absoluto_crs,0
+M2,Média complexidade (produção local),todos,todos,2023,142,76,1,65,0.707788,0.797007,0.817771,32,11,11,11,11,28,7,75,1.072799,1.005429,1.067006,40,c_absoluto_crs,0
+M2,Média complexidade (produção local),todos,todos,2024,142,77,1,64,0.709885,0.78699,0.813365,28,13,12,12,12,37,5,75,0.96811,1.059322,0.913896,41,c_absoluto_crs,0
+M2,Média complexidade (produção local),todos,todos,2025,142,80,0,62,0.722813,0.815266,0.812626,27,14,13,13,13,35,7,76,1.048146,0.997767,1.050492,31,c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),todos,todos,2020,142,127,10,5,0.618468,0.639567,0.701395,18,28,27,26,28,69,21,0,,,,,,0
+M2A,Média complexidade (ótica do acesso),com_leito,municípios com leito SUS,2020,101,92,7,2,0.591074,0.595531,0.672777,10,21,20,20,21,49,18,0,,,,,,0
+M2A,Média complexidade (ótica do acesso),sem_leito,municípios sem leito SUS,2020,40,35,3,2,0.690475,0.720602,0.776618,8,7,7,6,7,20,3,0,,,,,,0
+M2A,Média complexidade (ótica do acesso),todos,todos,2021,142,132,4,6,0.652441,0.67226,0.729411,24,28,26,26,28,65,15,113,1.036379,0.980718,1.056756,44,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),com_leito,municípios com leito SUS,2021,100,96,2,2,0.643267,0.656886,0.712306,14,21,20,20,21,49,13,81,0.997314,0.951456,1.048198,31,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),sem_leito,municípios sem leito SUS,2021,41,36,2,3,0.676906,0.68983,0.775022,10,7,6,6,7,16,2,32,1.142237,1.058871,1.078731,13,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),todos,todos,2022,142,133,2,7,0.622734,0.649686,0.708303,23,28,27,27,28,69,11,121,1.016686,1.014857,1.001802,63,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),com_leito,municípios com leito SUS,2022,100,95,2,3,0.62535,0.639608,0.698069,11,21,21,21,21,50,9,87,1.051454,1.075017,0.978081,55,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),sem_leito,municípios sem leito SUS,2022,41,38,0,3,0.616195,0.655216,0.733886,12,7,6,6,7,19,2,34,0.932866,0.875806,1.065152,8,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),todos,todos,2023,142,135,1,6,0.650936,0.680316,0.7325,27,27,27,27,27,60,10,121,1.057683,1.00593,1.051448,58,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),com_leito,municípios com leito SUS,2023,98,94,1,3,0.638352,0.671804,0.719448,18,19,19,19,19,43,7,86,1.060263,1.00582,1.054128,42,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),sem_leito,municípios sem leito SUS,2023,43,41,0,2,0.679786,0.700253,0.762423,9,8,8,8,8,17,3,35,1.05137,1.006199,1.044893,16,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),todos,todos,2024,142,136,1,5,0.627156,0.636941,0.716638,27,28,27,27,27,65,8,121,0.975123,0.980125,0.994896,58,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),com_leito,municípios com leito SUS,2024,97,94,1,2,0.640211,0.638184,0.722032,17,20,19,19,19,44,5,86,0.965939,1.018499,0.948395,46,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),sem_leito,municípios sem leito SUS,2024,44,42,0,2,0.597939,0.593042,0.704566,10,8,8,8,8,21,3,35,0.998061,0.891866,1.119071,12,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),todos,todos,2025,142,141,0,1,0.610627,0.621775,0.70508,30,28,28,27,28,64,12,122,1.009118,1.043357,0.967184,68,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),com_leito,municípios com leito SUS,2025,97,97,0,0,0.63112,0.640428,0.719605,21,19,19,19,19,43,7,87,1.042384,1.117009,0.933193,58,d2_acesso_hospitalar_c_absoluto_crs,0
+M2A,Média complexidade (ótica do acesso),sem_leito,municípios sem leito SUS,2025,45,44,0,1,0.565452,0.589994,0.673059,9,9,9,8,9,21,5,35,0.930955,0.880637,1.057138,10,d2_acesso_hospitalar_c_absoluto_crs,0
+H,Hospitais,todos,todos,2020,87,83,4,0,0.501439,0.468652,0.625629,16,16,17,18,16,40,43,0,,,,,,0
+H,Hospitais,privado_filantropico,hospitais privados e filantrópicos,2020,31,28,3,0,0.567497,0.608769,0.717822,7,8,6,4,3,13,13,0,,,,,,0
+H,Hospitais,publico,hospitais públicos,2020,56,55,1,0,0.46781,0.42295,0.578695,9,8,11,14,13,27,30,0,,,,,,0
+H,Hospitais,todos,todos,2021,92,88,4,0,0.506949,0.508592,0.621771,17,16,17,19,19,45,48,58,1.105906,1.121902,0.985742,40,c_absoluto_crs,0
+H,Hospitais,privado_filantropico,hospitais privados e filantrópicos,2021,29,26,3,0,0.539313,0.545675,0.675583,6,5,6,7,2,16,15,15,1.072196,1.062231,1.009382,9,c_absoluto_crs,0
+H,Hospitais,publico,hospitais públicos,2021,63,62,1,0,0.493377,0.504549,0.599206,11,11,11,12,17,29,33,43,1.117912,1.143497,0.977626,31,c_absoluto_crs,0
+H,Hospitais,todos,todos,2022,92,88,4,0,0.558183,0.609312,0.665028,22,16,15,14,21,31,38,52,1.102536,1.122863,0.981898,34,c_absoluto_crs,0
+H,Hospitais,privado_filantropico,hospitais privados e filantrópicos,2022,27,24,3,0,0.612648,0.711342,0.745853,10,5,2,3,4,7,10,14,0.980275,1.035256,0.946892,8,c_absoluto_crs,0
+H,Hospitais,publico,hospitais públicos,2022,65,64,1,0,0.537759,0.567385,0.634719,12,11,13,11,17,24,28,38,1.151328,1.156976,0.995118,26,c_absoluto_crs,0
+H,Hospitais,todos,todos,2023,92,88,4,0,0.623797,0.668334,0.720725,23,14,17,16,18,34,28,64,1.040747,1.100984,0.945288,44,c_absoluto_crs,0
+H,Hospitais,privado_filantropico,hospitais privados e filantrópicos,2023,26,23,3,0,0.635712,0.727118,0.747215,7,2,8,2,4,10,10,16,0.990449,1.037052,0.955062,9,c_absoluto_crs,0
+H,Hospitais,publico,hospitais públicos,2023,66,65,1,0,0.619581,0.64198,0.711351,16,12,9,14,14,24,18,48,1.058074,1.123159,0.942052,35,c_absoluto_crs,0
+H,Hospitais,todos,todos,2024,91,87,4,0,0.640334,0.672479,0.737157,24,16,15,17,15,30,32,66,1.021423,1.066477,0.957754,43,c_absoluto_crs,0
+H,Hospitais,privado_filantropico,hospitais privados e filantrópicos,2024,24,21,3,0,0.722033,0.774984,0.852825,9,5,4,2,1,9,8,16,0.955948,1.026946,0.930865,8,c_absoluto_crs,0
+H,Hospitais,publico,hospitais públicos,2024,67,66,1,0,0.614339,0.632096,0.700353,15,11,11,15,14,21,24,50,1.043307,1.079446,0.966521,35,c_absoluto_crs,0
+H,Hospitais,todos,todos,2025,92,89,3,0,0.639794,0.695181,0.74102,28,13,16,17,15,33,24,65,1.052289,1.037224,1.014525,36,c_absoluto_crs,0
+H,Hospitais,privado_filantropico,hospitais privados e filantrópicos,2025,22,20,2,0,0.665768,0.748205,0.79171,9,2,4,3,2,7,7,14,1.050346,1.076544,0.975665,10,c_absoluto_crs,0
+H,Hospitais,publico,hospitais públicos,2025,70,69,1,0,0.632265,0.682896,0.726327,19,11,12,14,13,26,17,51,1.052823,1.026684,1.025461,26,c_absoluto_crs,0
+M3,Alta complexidade (diagnóstico regional),todos,todos,2020,16,3,0,0,0.570799,0.531819,0.649726,0,0,0,1,2,1,9,0,,,,,,0
+M3,Alta complexidade (diagnóstico regional),todos,todos,2021,16,3,0,0,0.604547,0.582519,0.687061,0,0,1,1,1,2,10,0,,,,,,0
+M3,Alta complexidade (diagnóstico regional),todos,todos,2022,16,3,0,0,0.665579,0.710516,0.749387,0,0,1,1,1,2,8,0,,,,,,0
+M3,Alta complexidade (diagnóstico regional),todos,todos,2023,16,3,0,0,0.75393,0.764532,0.849006,0,1,1,1,0,3,6,0,,,,,,0
+M3,Alta complexidade (diagnóstico regional),todos,todos,2024,16,3,0,0,0.846179,0.847502,0.945849,1,2,0,0,0,2,4,0,,,,,,0
+M3,Alta complexidade (diagnóstico regional),todos,todos,2025,16,3,0,0,0.85898,0.83363,0.966217,1,1,1,0,0,2,1,0,,,,,,0

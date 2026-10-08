@@ -20,7 +20,7 @@ n_ind <- nrow(IND[!is.na(IND$grupo), ])
 faixa_versao()
 ```
 
-Este site publica, em um só lugar, os dados e indicadores de saúde dos **142 municípios de Mato Grosso** organizados pelo projeto *Gestão integrada no SUS* (PPSUS 004/2025 FAPEMAT): quanto cada município gasta, que estrutura e profissionais tem, o que produz na atenção básica e na média e alta complexidade, quais resultados alcança e para onde os moradores se deslocam quando precisam de internação. Cada número traz a fonte e o ano; as ressalvas ficam à vista. Os escores de eficiência (DEA) e de produtividade (Malmquist), objetivo central do projeto, serão publicados nas próximas versões.
+Este site publica, em um só lugar, os dados e indicadores de saúde dos **142 municípios de Mato Grosso** organizados pelo projeto *Gestão integrada no SUS* (PPSUS 004/2025 FAPEMAT): quanto cada município gasta, que estrutura e profissionais tem, o que produz na atenção básica e na média e alta complexidade, quais resultados alcança e para onde os moradores se deslocam quando precisam de internação. Cada número traz a fonte e o ano; as ressalvas ficam à vista. Desde a versão 0.2, o site traz também os escores de eficiência (DEA) e a evolução da produtividade (Malmquist) dos municípios, dos hospitais SUS e das regiões de saúde — objetivo central do projeto —, com fichas para o gestor em cada perfil municipal.
 
 ```{r}
 div(class = "atalhos", seletor_municipios(), seletor_indicadores())
@@ -42,7 +42,7 @@ Valores do estado (soma ou razão dos totais estaduais). Despesa liquidada decla
 
 ## Municípios
 
-Clique em um município do mapa para abrir o perfil: indicadores por grupo, comparação com a região de saúde e com o estado, deslocamento para internação e hospitais SUS.
+Clique em um município do mapa para abrir o perfil: indicadores por grupo, comparação com a região de saúde e com o estado, eficiência por modelo, deslocamento para internação e hospitais SUS.
 
 ```{r}
 mapa_municipio(NULL, altura = 420, prefixo = "municipios/")
@@ -56,10 +56,10 @@ Malha municipal do IBGE simplificada. Boa Esperança do Norte (instalado em 2025
 
 ```{r}
 cartoes(
-  cartao("municipios/index.html", "Municípios", "Perfil de cada um dos 142 municípios: indicadores de financiamento, capacidade, atenção básica, média e alta complexidade e resultados, com posição no estado e na região de saúde."),
+  cartao("municipios/index.html", "Municípios", "Perfil de cada um dos 142 municípios: indicadores de financiamento, capacidade, atenção básica, média e alta complexidade e resultados, com posição no estado e na região de saúde, e ficha de eficiência por modelo."),
   cartao("indicadores/index.html", sprintf("Indicadores (%d)", n_ind), "Cada indicador com definição, fonte, mapa dos municípios, ranking, evolução 2020–2025 e valores por região de saúde."),
   cartao("deslocamento/index.html", "Deslocamento", "Onde os moradores de cada município se internam: fluxos entre municípios e regiões, polos de atendimento, distância média e municípios mais dependentes."),
-  cartao("eficiencia.html", "Eficiência (em construção)", "O que são os escores DEA e o índice de Malmquist, como serão calculados e o que virá nas próximas versões.", desativado = TRUE),
+  cartao("eficiencia/index.html", "Eficiência", "Escores de eficiência (DEA) por faixa com intervalo de confiança, pares de referência, metas e potencial de melhoria, e evolução da produtividade (Malmquist): atenção básica, consolidado, média complexidade, hospitais e alta complexidade por região de saúde."),
   cartao("dados/index.html", "Dados", "Explorador com filtros por município, região, grupo e ano; download dos painéis, fluxos, hospitais e malhas em CSV/GeoJSON."),
   cartao("metodologia.html", "Metodologia", "Fontes e períodos, definições, janela 2020–2025, anomalias conhecidas e o caminho dos dados até o site."),
   cartao("sobre.html", "Sobre", "O projeto, a equipe, os produtos previstos, o financiamento e como citar."))
@@ -67,6 +67,7 @@ cartoes(
 
 ## Novidades
 
+- **08/10/2026** — Versão 0.2: escores de eficiência (DEA) e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde, com fichas para o gestor. Nova seção [Eficiência](eficiencia/index.html) (atenção básica, consolidado municipal, média complexidade pela produção local e pela ótica do acesso, hospitais SUS, painel regional de alta complexidade e produtividade); ficha de eficiência em cada [perfil municipal](municipios/index.html) e faixa de eficiência dos hospitais; arquivos e dicionário em [Dados](dados/index.html#eficiencia); método em [Metodologia](metodologia.html#eficiencia). Resultados da versão 2 da estimação, em validação com a SES-MT e o COSEMS-MT.
 - **01/10/2026** — Versão 0.1: primeira publicação. Distâncias do deslocamento calculadas em linha reta entre as sedes municipais (IBGE, Localidades do Brasil 2022). Dados e indicadores 2020–2025 dos 142 municípios (`r n_ind` indicadores em sete grupos), perfis municipais, páginas por indicador com mapa e ranking, análise de deslocamento residência × atendimento nas internações, explorador e downloads. Escores DEA e Malmquist em preparação.
 
 ```{r}

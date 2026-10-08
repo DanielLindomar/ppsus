@@ -1,0 +1,173 @@
+---
+title: "Produtividade: evolução 2020–2025 (índice de Malmquist)"
+description: "Evolução da produtividade e da aproximação às melhores práticas dos municípios e hospitais SUS de Mato Grosso, 2020–2025, por modelo e região de saúde (índice de Malmquist)"
+page-layout: full
+toc: false
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_eficiencia_extra.R"))
+JE <- lapply(names(MODELOS_MQ), function(md) { x <- efx_mq(md, "estado", "todos", "janela"); x$cod <- rep(md, nrow(x)); x })
+JE <- bind_rows(JE)
+j22 <- JE[JE$periodo == "2022-2025", ]; j20 <- JE[JE$periodo == "2020-2022", ]
+melhor <- j22[which.max(j22$ec), ]; pior <- j22[which.min(j22$ec), ]
+n_ec_pos <- sum(j22$ec > 1)
+tc_baixo <- j22$cod[j22$tc < 1]
+frase_ec <- paste(sprintf("%s, %s", tolower(MODELOS_MQ[j22$cod]), efx_var(j22$ec)), collapse = "; ")
+lim_t <- num(100 * efx_param("tendencia_limiar", 0.02), 0)
+```
+
+```{r}
+efx_css()
+efx_nav("produtividade.html")
+efx_faixa()
+efx_atalhos(c(como = "Como ler", panorama = "Panorama 2022–2025", modelos = "Por modelo e janela", serie = "Ano a ano",
+              regioes = "Por região de saúde", ressalvas = "Ressalvas", arquivos = "Arquivos"))
+```
+
+Os escores de eficiência de cada ano comparam as unidades com as **melhores práticas daquele ano**. Para saber se um município ou hospital **melhorou ao longo do tempo**, usa-se o **índice de Malmquist**, que compara cada unidade consigo mesma entre dois anos consecutivos. Esta página resume essa evolução por modelo, por período e por região de saúde, de 2020 a 2025.
+
+## Como ler {#como}
+
+O índice de Malmquist (MI) mede a variação da produtividade — produção obtida por unidade de recurso — e se decompõe em dois componentes:
+
+- **Aproximação às melhores práticas (EC, mudança de eficiência)** — se a unidade ficou mais perto (EC > 1) ou mais longe (EC < 1) das melhores práticas do seu tempo. É o **componente de gestão**, sobre o qual o gestor local tem mais influência, e por isso é o destaque desta página e das fichas.
+- **Deslocamento das melhores práticas (TC, mudança tecnológica)** — se as próprias melhores práticas avançaram ou recuaram. Depende de fatores comuns a todos (tecnologia, financiamento, regras de registro) e é mostrado só como agregado, com reserva (veja a nota abaixo).
+
+MI = EC × TC. Os valores são médias geométricas anuais: 1,050 significa +5,0% ao ano; 0,970, −3,0% ao ano. Os períodos são lidos em duas **janelas** — **2020–2022** (pandemia e recuperação) e **2022–2025** (período recente, o de maior interesse para a gestão) — e no período completo. A tendência de cada unidade é rotulada "melhora consistente" (ou "piora consistente") quando pelo menos duas transições têm intervalo de confiança inteiramente acima (abaixo) de 1, nenhuma no sentido oposto, e a média da janela é de pelo menos +`r lim_t`% (−`r lim_t`%) ao ano.
+
+## Panorama 2022–2025 {#panorama}
+
+Aproximação às melhores práticas (EC), média anual 2022–2025, em cada modelo. Clique no nome do modelo para abrir a página correspondente.
+
+```{r}
+efx_mq_kpis()
+```
+
+Em 2022–2025, a aproximação às melhores práticas foi positiva em `r n_ec_pos` dos `r nrow(j22)` modelos: `r frase_ec`. A maior aproximação ocorreu em `r tolower(MODELOS_MQ[[melhor$cod]])` e a menor em `r tolower(MODELOS_MQ[[pior$cod]])`. Fonte: índice de Malmquist da estimação DEA v2 (`r EFX_DATA`), especificação em níveis absolutos com retornos constantes de escala; dados de SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025.
+
+::: {.callout-note title="Nota sobre o deslocamento das melhores práticas (TC)"}
+Em 2022–2025 o TC fica abaixo de 1 em `r length(tc_baixo)` dos `r nrow(j22)` modelos (`r efx_lista_e(tolower(MODELOS_MQ[tc_baixo]))`). Isso pode refletir o **crescimento do registro de profissionais e equipamentos no CNES após 2022**, sem aumento proporcional da produção, e não uma piora real das melhores práticas: quando os recursos físicos são mantidos no nível de 2022, o TC desses modelos sobe. Por isso o TC aparece aqui em cinza, como informação técnica, e as fichas municipais e hospitalares publicam apenas a aproximação às melhores práticas (EC) e o índice de Malmquist.
+:::
+
+## Por modelo e janela {#modelos}
+
+Mato Grosso (média geométrica das unidades avaliadas). Na média complexidade pela ótica do acesso há duas fronteiras — municípios com e sem leito SUS — e nos hospitais, dois grupos (públicos e privados/filantrópicos), mostrados separadamente.
+
+```{r}
+efx_mq_tabela_janelas(names(MODELOS_MQ), grupos = list(M2A = c("todos", "com_leito", "sem_leito"),
+                                                       H = c("todos", "publico", "privado_filantropico")))
+```
+
+::: {.nota-fonte}
+*Unidades*: municípios ou hospitais com ao menos uma transição publicável na janela. *Unidades com EC > 1*: parcela das unidades que se aproximaram das melhores práticas. *Melhora / piora consistente*: unidades com tendência estatisticamente definida na janela ("—" quando a contagem não está disponível no agregado do modelo; nas fichas de cada unidade a tendência é sempre informada). \* TC: ver a nota acima. Transições com quebra de registro (por exemplo, produção ambulatorial ou da atenção básica com registro incompleto) ficam fora das médias.
+:::
+
+## Ano a ano {#serie}
+
+Média geométrica de cada transição anual, marcada no ano de chegada (2021 = transição 2020–2021).
+
+```{r}
+tagList(
+  h4("Aproximação às melhores práticas (EC)"),
+  HTML(efx_mq_serie(lapply(names(MODELOS_MQ), function(md) list(modelo = md, grupo = "todos", nome = MODELOS_MQ[[md]], cor = COR_MODELO[[md]],
+                                                                    larg = 2.4, dash = if (md %in% c("M2A", "H")) "6,4" else "")),
+                        titulo = "Aproximação às melhores práticas (EC) por transição anual, Mato Grosso")),
+  h4("Índice de Malmquist (MI)"),
+  HTML(efx_mq_serie(lapply(names(MODELOS_MQ), function(md) list(modelo = md, grupo = "todos", nome = MODELOS_MQ[[md]], cor = COR_MODELO[[md]],
+                                                                    larg = 2.4, dash = if (md %in% c("M2A", "H")) "6,4" else "")),
+                        titulo = "Índice de Malmquist (MI) por transição anual, Mato Grosso", campo = "mi")))
+```
+
+A transição 2021–2022 concentra variações grandes em vários modelos (retomada da produção após a pandemia e mudanças de registro); por isso a leitura gerencial privilegia as janelas, e não uma transição isolada.
+
+## Por região de saúde {#regioes}
+
+Em cada aba, a aproximação às melhores práticas (EC) dos municípios ou hospitais de cada região de saúde, nas três janelas, com o índice de Malmquist de 2022–2025. As barras mostram a variação anual média de 2022–2025 (a linha tracejada é Mato Grosso). Regiões com poucas unidades oscilam mais; confira a coluna *Unidades*.
+
+::: {.panel-tabset}
+
+### Atenção básica
+
+```{r}
+HTML(efx_mq_regioes_barras("M1"))
+```
+
+```{r}
+efx_mq_regioes_tabela("M1")
+```
+
+### Consolidado
+
+```{r}
+HTML(efx_mq_regioes_barras("M0"))
+```
+
+```{r}
+efx_mq_regioes_tabela("M0")
+```
+
+### Média complexidade
+
+Produção local de média complexidade (municípios com produção hospitalar e ambulatorial avaliável).
+
+```{r}
+HTML(efx_mq_regioes_barras("M2"))
+```
+
+```{r}
+efx_mq_regioes_tabela("M2")
+```
+
+### Ótica do acesso
+
+Média complexidade pela ótica do acesso (internações de residentes), com as duas fronteiras — municípios com e sem leito SUS — reunidas na média da região.
+
+```{r}
+HTML(efx_mq_regioes_barras("M2A"))
+```
+
+```{r}
+efx_mq_regioes_tabela("M2A")
+```
+
+### Hospitais
+
+Hospitais do painel completo 2020–2025, agregados pela região de saúde do município-sede.
+
+```{r}
+HTML(efx_mq_regioes_barras("H"))
+```
+
+```{r}
+efx_mq_regioes_tabela("H")
+```
+
+:::
+
+::: {.nota-fonte}
+A alta complexidade não tem índice de Malmquist publicado: o modelo regional é só diagnóstico e usa fronteira única para 2020–2025 (veja [Alta complexidade](alta-complexidade.html)). A evolução de cada município e hospital, com a tendência rotulada, está nas fichas dos [perfis municipais](../municipios/index.html) e na página de [hospitais](hospitais.html).
+:::
+
+## Ressalvas {#ressalvas}
+
+::: {.callout-warning title="Leia antes de interpretar"}
+- **Resultados da versão 2, em validação** com a SES-MT e o COSEMS-MT (Resultados DEA v2, `r EFX_DATA`).
+- **Produtividade não é qualidade.** O índice mede a variação da produção por recurso; não mede resultado em saúde.
+- **COVID-19.** 2020 e 2021 tiveram produção deprimida e recursos realocados; a janela 2020–2022 mistura queda e recuperação.
+- **Registro.** Mudanças de registro (CNES após 2022, SISAB incompleto, quebras na produção ambulatorial) afetam o deslocamento das melhores práticas e algumas transições, que ficam fora das médias.
+- **Especificação usada.** O índice é calculado com as variáveis em níveis absolutos e retornos constantes de escala (necessário para a comparação entre anos); os escores anuais usam retornos variáveis. A aproximação às melhores práticas publicada nas fichas é a mesma desta página.
+- **Média geométrica.** As médias regionais e estaduais dão o mesmo peso a cada unidade, independentemente do porte.
+:::
+
+## Arquivos {#arquivos}
+
+```{r}
+efx_arquivos(c("malmquist_regiao", "resumo_modelos", "fichas_municipio", "fichas_hospital"))
+```
+
+```{r}
+fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Produtividade: Resultados DEA v2 (%s), Projeto PPSUS-MT — índice de Malmquist com intervalo de confiança por bootstrap, médias geométricas por região e estado; dados de SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025. ", EFX_DATA))
+```

@@ -28,7 +28,7 @@ tam_total <- if (is.null(cat_b)) NA_real_ else sum(cat_b$bytes, na.rm = TRUE)
 faixa_versao()
 ```
 
-Esta página reúne tudo o que o Observatório publica em forma de arquivo: um [explorador](#explorador) para consultar e baixar recortes dos `r n_ind` indicadores por município, os [arquivos completos para download](#downloads) (painéis, séries, fluxos de internação, hospitais, malhas), o [dicionário dos indicadores](#dicionario) e as condições de [uso e citação](#licenca). Só são publicados agregados por município, região de saúde ou estabelecimento; nenhum microdado é divulgado.
+Esta página reúne tudo o que o Observatório publica em forma de arquivo: um [explorador](#explorador) para consultar e baixar recortes dos `r n_ind` indicadores por município, os [arquivos completos para download](#downloads) (painéis, séries, fluxos de internação, hospitais, malhas), os [resultados de eficiência e produtividade](#eficiencia) (fichas, metas, pares e painéis regionais), o [dicionário dos indicadores](#dicionario) e as condições de [uso e citação](#licenca). Só são publicados agregados por município, região de saúde ou estabelecimento; nenhum microdado é divulgado.
 
 ## Explorador de indicadores {#explorador}
 
@@ -86,6 +86,43 @@ mapa   = malha.merge(painel[painel.ano == 2025], on="cod_mun6")</pre>
 - **Resultados em saúde** (SIM/SINASC) vão até 2024 e são instáveis em municípios com menos de 100 nascidos vivos por ano. Os anos de 2020 e 2021 foram afetados pela COVID-19 em todas as fontes.
 - A lista completa de anomalias conhecidas está em [Metodologia](../metodologia.html).
 :::
+
+## Eficiência e produtividade (DEA e Malmquist) {#eficiencia}
+
+```{r}
+#| include: false
+cat_e <- catalogo_eficiencia()
+n_ef <- if (is.null(cat_e)) 0L else sum(cat_e$existe)
+tam_ef <- if (is.null(cat_e)) NA_real_ else sum(cat_e$bytes, na.rm = TRUE)
+md_ef <- file.path(RAIZ, "arquivos", "dados", "eficiencia", "metadados.csv")
+meta_ef <- if (file.exists(md_ef)) data.table::fread(md_ef, encoding = "UTF-8", colClasses = "character") else NULL
+data_ef <- if (is.null(meta_ef)) "" else meta_ef$valor[meta_ef$item == "data_resultados"][1]
+```
+
+Resultados da versão 2 da estimação de eficiência (Resultados DEA v2, `r data_ef`), publicados na seção [Eficiência](../eficiencia/index.html) e nos perfis municipais: `r n_ef` arquivos (`r fmt_bytes(tam_ef)` no total), no mesmo formato dos demais (CSV UTF-8, separador vírgula, decimal ponto, célula vazia = indisponível ou não publicável; booleanos em 0/1). Chaves de junção: `cod_mun6` + `modelo` + `ano` nos municípios (modelos M1 atenção básica, M0 consolidado, M2 média complexidade e M2A média complexidade pela ótica do acesso), `cnes` + `ano` nos hospitais (CNES como texto de 7 dígitos) e `co_regsaud` + `ano` nas regiões de saúde. Valores monetários em R$ de 2025 (IPCA).
+
+```{r}
+tabela_downloads_eficiencia()
+```
+
+::: {.callout-warning collapse="true"}
+## Como usar os arquivos de eficiência
+
+- **Leia por faixa, não por posição exata.** `faixa` é a fronteira ou o quartil do escore corrigido (`escore_bc`) entre as unidades avaliadas no ano; `ic_inf`–`ic_sup` é o intervalo de confiança de 95%, e `ic_cruza_faixa = 1` indica posição incerta entre duas faixas. Não ordene as unidades pelo escore para montar rankings.
+- **Eficiência não é qualidade.** Os indicadores de resultado das fichas (mortalidade infantil, pré-natal, mortalidade hospitalar padronizada) ficam ao lado do escore e não o alteram.
+- **Linhas sem escore** têm `situacao` diferente de "avaliado", com o motivo em `motivo_situacao`. Metas só devem ser usadas quando `meta_publicavel = 1`. O escore esperado pelo contexto não existe para a ótica do acesso (M2A), para hospitais fora do painel balanceado e para Boa Esperança do Norte (primeiro exercício em 2025).
+- **Registro a verificar** (`registro_a_verificar = 1`) indica dado de origem atípico: a unidade segue avaliada, mas não serve de referência e pode ter a meta financeira omitida. A lista de verificações será encaminhada à SES-MT e ao COSEMS-MT.
+- **Evolução:** as fronteiras são anuais, então o nível do escore não se compara entre anos; use a mudança de eficiência (`ec_*`) e o Malmquist (`mi_*`). O deslocamento tecnológico só aparece de forma agregada (`resumo_modelos.csv`, `malmquist_regiao.csv`), com a ressalva do crescimento do registro no CNES após 2022.
+- Método, modelos e ressalvas em [Metodologia](../metodologia.html#eficiencia) e em [Eficiência — como ler](../eficiencia/index.html).
+:::
+
+### Dicionário dos campos de eficiência
+
+Todos os campos dos arquivos acima, por arquivo: nome gerencial, unidade, definição e fonte. Clique no nome do arquivo para abrir a lista; a busca procura em todos os campos. O mesmo conteúdo está em [`dicionario_eficiencia.csv`](../arquivos/dados/eficiencia/dicionario_eficiencia.csv).
+
+```{r}
+tabela_dicionario_eficiencia()
+```
 
 ## Dicionário dos indicadores {#dicionario}
 

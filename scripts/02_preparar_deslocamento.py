@@ -50,7 +50,8 @@ DADOS = ROOT / "dados_site"
 ARQ_DADOS = ROOT / "arquivos" / "dados"
 GEOJSON = ROOT / "arquivos" / "geo" / "mt_municipios_ibge_minima.geojson"
 SEDES = DADOS / "sedes_municipais.csv"   # script 00 (IBGE, Localidades 2022)
-PGPASS = Path(r"D:\ppsus_repo\.pgpass_superuser.txt")
+from config_local import caminho  # noqa: E402  (caminhos locais fora do repositório)
+PGPASS = caminho("PPSUS_PGPASS")
 
 ANO_INI, ANO_FIM = 2020, 2025
 NIVEIS = ["MC", "AC", "outro"]

@@ -4,6 +4,7 @@
 # scripts/03_gerar_paginas.py) define MUN_ID, carrega R/funcoes.R e inclui este arquivo.
 if (!exists("MUN")) source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
 source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_municipios.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_perfil_eficiencia.R"))
 M     <- info_mun(MUN_ID)
 NOME  <- M$municipio
 N_REG <- n_mun_regiao(MUN_ID)
@@ -84,6 +85,13 @@ tabela_grupo("resultados", MUN_ID)
 
 :::
 
+## Eficiência
+
+```{r}
+#| results: asis
+secao_eficiencia(MUN_ID)
+```
+
 ## Deslocamento para internação
 
 Internações SUS (AIH tipo 1, pelo ano da alta) de residentes de Mato Grosso, cruzando o município de residência com o município do hospital. Só há SIH de Mato Grosso: internações de moradores em outros estados não são observadas. A análise completa está em [Deslocamento](../deslocamento/index.html).
@@ -109,7 +117,11 @@ if (resumo_hospitais(MUN_ID)$n > 0) tabela_hospitais(MUN_ID)
 ```
 
 ```{r}
-fonte_rodape(extra = "Deslocamento: AIH tipo 1 do SIH, residentes de Mato Grosso; distâncias em linha reta entre as sedes municipais (IBGE, Localidades 2022), não rodoviárias. ")
+bloco_hospitais_ef(MUN_ID)
+```
+
+```{r}
+fonte_rodape(eficiencia = TRUE, extra = "Deslocamento: AIH tipo 1 do SIH, residentes de Mato Grosso; distâncias em linha reta entre as sedes municipais (IBGE, Localidades 2022), não rodoviárias. ")
 ```
 
 ```{r}

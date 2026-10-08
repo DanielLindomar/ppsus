@@ -1,0 +1,124 @@
+---
+title: "Eficiência do sistema municipal de saúde (consolidado)"
+description: "Escores de eficiência (DEA) do sistema municipal de saúde dos 142 municípios de Mato Grosso, 2020–2025: despesa total, profissionais e estabelecimentos frente a atendimentos, procedimentos, internações e vacinas — faixas, mapa, pares, metas e evolução"
+page-layout: full
+toc: false
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_eficiencia.R"))
+M <- "M0"; A <- ANO_EF
+F  <- fichas_modelo(M, A); AV <- avaliados(F)
+r  <- resumo_mod(M, A); j <- mq_janela(M, "2022-2025"); j0 <- mq_janela(M, "2020-2022")
+n_esp_acima <- sum(AV$residuo_escore > 0, na.rm = TRUE); n_esp <- sum(!is.na(AV$residuo_escore))
+n_sem_hosp <- sum(AV$flag_rede_sem_hospital == 1, na.rm = TRUE)
+b_boot <- param_ef(paste0("b_bootstrap_", M), NA)
+# Concordância de faixa com a atenção básica (mesmos municípios, mesmo ano)
+F1 <- avaliados(fichas_modelo("M1", A))
+cmp <- inner_join(select(AV, cod_mun6, f0 = faixa), select(F1, cod_mun6, f1 = faixa), by = "cod_mun6")
+n_fr_ambos <- sum(cmp$f0 == "fronteira" & cmp$f1 == "fronteira")
+n_fr1 <- sum(F1$faixa == "fronteira", na.rm = TRUE)
+comp_fr <- if (r$n_fronteira < n_fr1) "mais estreita" else if (r$n_fronteira > n_fr1) "mais ampla" else "do mesmo tamanho"
+```
+
+```{r}
+css_eficiencia()
+faixa_versao_ef()
+nav_eficiencia("consolidado.html")
+secoes_pagina(c(modelo = "O que compara", panorama = paste("Panorama", A), mapa = "Mapa", regioes = "Por região",
+                municipios = "Municípios", potencial = "Potencial de melhoria", pares = "Pares mais usados",
+                evolucao = "Evolução", ressalvas = "Ressalvas"))
+```
+
+O modelo consolidado olha o **sistema municipal de saúde como um todo**: toda a despesa em saúde, todos os profissionais e estabelecimentos SUS do município frente ao conjunto da produção — atendimentos na atenção primária, procedimentos ambulatoriais de média e alta complexidade, internações e vacinas. É a leitura mais próxima da pergunta do gestor municipal: **o sistema, somadas todas as frentes, produz o que poderia com o que custa?** Valores por mil habitantes. Para interpretar faixas, intervalos, pares e metas, veja [Como ler](index.qmd#como-ler).
+
+## O que o modelo compara {#modelo}
+
+```{r}
+bloco_especificacao(M)
+```
+
+DEA com retornos variáveis de escala, orientada à produção, uma fronteira por ano, 2020–`r A`; escore corrigido por bootstrap`r if (is.numeric(b_boot)) paste0(" (", num(b_boot), " réplicas)") else ""`. Despesa total liquidada em saúde (SIOPS), em R$ de 2025 (IPCA); profissionais em equivalente de 40 horas semanais e estabelecimentos com atendimento SUS (CNES); produção registrada nos estabelecimentos do próprio município (SIA, SIH), SISAB anualizado e doses sem COVID-19.
+
+## Panorama `r A` {#panorama}
+
+```{r}
+kpis_modelo(M)
+```
+
+Em `r A`, `r r$n_fronteira` dos `r r$n_avaliados` municípios estão na fronteira do sistema consolidado — uma fronteira `r comp_fr` que a da atenção básica (`r n_fr1` municípios; `r n_fr_ambos` estão na fronteira dos dois modelos). Fora dela, a mediana do potencial de expansão da produção é de `r pct_ef(median(AV$potencial_expansao_pct, na.rm = TRUE))`. Considerado o contexto, `r n_esp_acima` dos `r n_esp` municípios com escore esperado estão **acima** do que o contexto prevê. `r n_sem_hosp` municípios não têm hospital SUS: neles as internações locais são zero por configuração da rede, e a meta de internações é apenas informativa.
+
+## Mapa por faixa, `r A` {#mapa}
+
+```{r}
+mapa_faixas(M, A)
+```
+
+Cor = faixa do escore corrigido no estado (escuro = mais próximo das melhores práticas). Contorno tracejado: o intervalo de confiança alcança a faixa vizinha. Círculo branco na sede: registro a verificar. Clique para abrir o perfil do município. Boa Esperança do Norte não está na malha municipal e aparece só na tabela.
+
+## Distribuição por região de saúde {#regioes}
+
+```{r}
+faixas_por_regiao(M, A)
+```
+
+Número de municípios de cada região de saúde em cada faixa estadual, `r A`.
+
+## Municípios {#municipios}
+
+```{r}
+tabela_eficiencia(M, A)
+```
+
+*Escore corrigido* com IC de `r num(100 * IC_NIVEL, 0)`% (régua: traço = IC, ponto = escore). *Faixa* com **±**: o IC alcança a faixa vizinha. *Escore esperado* e diferença no segundo estágio (▲ acima / ▼ abaixo do esperado). *Tendência*: componente de gestão do Malmquist (EC), 2022–2025. A ficha (▸) traz a frase-síntese, os pares e as metas.
+
+## Potencial de melhoria `r A` {#potencial}
+
+`r texto_potencial(M, A)`
+
+```{r}
+tabela_potencial(M, A)
+```
+
+Soma dos valores absolutos de `r A` dos municípios com potencial de melhoria frente aos pares plausíveis (só metas publicáveis). Nos recursos, valores negativos indicam folga que poderia ser redirecionada, mantida a produção. Em municípios sem hospital SUS, a meta de internações é informativa.
+
+## Pares de referência mais usados {#pares}
+
+```{r}
+pares_mais_usados(M, A)
+```
+
+Municípios de registro plausível que mais aparecem como referência para os demais em `r A`.
+
+## Evolução 2020–`r A` {#evolucao}
+
+```{r}
+HTML(svg_evolucao(M))
+```
+
+```{r}
+tabela_janelas(M)
+```
+
+Na média do estado, a aproximação às melhores práticas (EC) foi de `r var_ano(j$ec)` em 2022–2025 (`r var_ano(j0$ec)` em 2020–2022), com `r j$n_melhora_ec` municípios em melhora consistente e `r j$n_piora_ec` em piora consistente. O deslocamento das melhores práticas (TC) fica em [Produtividade](produtividade.qmd), com a nota sobre o registro do CNES após 2022.
+
+```{r}
+ec_por_regiao(M)
+```
+
+Média geométrica anual da aproximação às melhores práticas por região de saúde, 2022–2025 (entre parênteses, o número de municípios); a linha tracejada marca Mato Grosso.
+
+## Ressalvas deste modelo {#ressalvas}
+
+::: {.ef-ressalva}
+- A produção é a **realizada no município** (estabelecimentos locais): municípios-polo atendem moradores de outros municípios, o que eleva sua produção por habitante; municípios sem hospital dependem de vizinhos para internar. Veja [Deslocamento](../deslocamento/index.qmd) e a [ótica do acesso](media-complexidade.qmd#acesso).
+- Despesa total inclui gastos de todas as subfunções; não há separação entre custeio e investimento no modelo.
+- Quebras de registro na produção ambulatorial e SIOPS incompleto são sinalizados (*registro a verificar*); essas unidades não servem de par.
+- Eficiência não é qualidade: indicadores de resultado estão nas fichas, ao lado do escore.
+:::
+
+```{r}
+fonte_eficiencia("../")
+```

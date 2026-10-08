@@ -4,11 +4,13 @@ Site público do projeto **Gestão integrada no SUS: avaliação da eficiência 
 
 Publicado em: https://daniellindomar.github.io/ppsus/
 
-Versão 0.1: dados e indicadores 2020–2025 dos 142 municípios e análise de deslocamento residência × atendimento (internações). Escores de eficiência (DEA) e produtividade (Malmquist) virão em versões seguintes.
+Versão 0.2 (08/10/2026): dados e indicadores 2020–2025 dos 142 municípios, análise de deslocamento residência × atendimento (internações) e seção Eficiência — escores DEA e produtividade Malmquist (versão 2 da estimação) de municípios, hospitais SUS e regiões de saúde, com fichas no perfil de cada município.
 
 ## Como atualizar
 
 Todos os comandos rodam pelo PowerShell, na raiz do repositório. Os scripts leem o PostgreSQL local (somente leitura) e gravam `dados_site/` e `arquivos/dados/`.
+
+**Configuração local (uma vez por máquina).** Os scripts 01, 02 e 06 não fixam caminhos da máquina: o arquivo com a senha do PostgreSQL e o dicionário técnico da estimação v2 são lidos das variáveis de ambiente `PPSUS_PGPASS` e `PPSUS_DIC_V2` ou, na falta delas, do arquivo `.env.local` na raiz (linhas `CHAVE=caminho`; fora do controle de versão — ver `scripts/config_local.py`).
 
 1. **Preparar os dados e gerar as páginas** (nesta ordem):
 
@@ -17,6 +19,7 @@ Todos os comandos rodam pelo PowerShell, na raiz do repositório. Os scripts lee
    python scripts/01_preparar_dados.py          # municipios, indicadores, series, hospitais, geo, centroides.csv (= sedes), downloads do contrato
    python scripts/02_preparar_deslocamento.py   # fluxos de internação, deslocamento por município, polos, resumo, outras UFs, achados
    python scripts/01_preparar_dados.py          # de novo: incorpora pct_internacoes_fora_regiao e km_medio_internacao à serie.csv
+   python scripts/06_preparar_eficiencia.py     # resultados DEA/Malmquist v2 (schema dea, versao='v2') → dados_site/eficiencia/ e arquivos/dados/eficiencia/
    python scripts/03_gerar_paginas.py           # municipios/<slug>.qmd, indicadores/<id>.qmd e arquivos/municipios/<slug>.csv
    python scripts/04_gerar_indicadores.py       # regrava indicadores/<id>.qmd só a partir do catálogo (remove ids que saíram dele)
    python scripts/05_downloads.py               # downloads complementares e catálogo (arquivos/dados/catalogo_arquivos.csv)
@@ -24,7 +27,7 @@ Todos os comandos rodam pelo PowerShell, na raiz do repositório. Os scripts lee
 
    O script 00 lê o `.dbf` do shapefile `arquivos/geo/ibge_localidades_2022_mt/` (baixa o zip do IBGE se a pasta não existir) e grava as coordenadas das 142 sedes municipais; o script 01 copia essas coordenadas para `dados_site/centroides.csv` (nome do contrato), que o script 02 e as páginas usam em todas as distâncias — em linha reta entre as sedes, não rodoviárias. Os indicadores `pct_internacoes_fora_regiao` e `km_medio_internacao` vêm de `dados_site/deslocamento_mun_ano.csv` (script 02); por isso o script 01 roda duas vezes na primeira execução (na segunda ele encontra o arquivo e completa `serie.csv`, `serie_regiao.csv` e `serie_mt.csv`). Os scripts 03 e 04 não acessam o banco: o 03 gera as páginas de município (e também as de indicador) e os CSV por município; o 04 gera apenas as páginas de indicador a partir de `dados_site/indicadores.csv` e pode ser rodado sozinho sempre que o catálogo mudar. O script 05 só copia e enriquece arquivos de `dados_site/` (séries por região e MT, deslocamento, polos, sedes municipais, dicionário das 114 colunas do painel, malha com regiões de saúde) e gera o catálogo que a página Dados lê; rode-o sempre por último. Os scripts 00 a 05 completos levam cerca de 1 minuto.
 
-2. **Renderizar e conferir localmente:** `quarto preview` (ou `quarto render` para o site inteiro — cerca de 190 páginas; `quarto render sobre.qmd` para uma página).
+2. **Renderizar e conferir localmente:** `quarto preview` (ou `quarto render` para o site inteiro — cerca de 200 páginas; `quarto render sobre.qmd` para uma página). Ao fim de cada render, `scripts/07_pos_render.py` (post-render do `_quarto.yml`) troca por `/` as barras invertidas que o Quarto grava no Windows em `src`/`href` e nos redirecionamentos.
 
 3. **Publicar:** `quarto publish gh-pages` (renderiza e envia o HTML para o ramo `gh-pages`).
 
@@ -44,7 +47,8 @@ Todos os comandos rodam pelo PowerShell, na raiz do repositório. Os scripts lee
 | `assets/` | Logomarcas, favicon e glossário de siglas (`glossario.html`) |
 | `municipios/_perfil.qmd` | Modelo das 142 páginas de município (`<slug>.qmd`, geradas pelo script 03) |
 | `indicadores/_indicador.qmd` | Modelo das páginas de indicador (`<id>.qmd`, geradas pelos scripts 03/04) |
-| `deslocamento/`, `dados/`, `metodologia.qmd`, `eficiencia.qmd`, `sobre.qmd` | Demais seções |
+| `eficiencia/` | Seção Eficiência (visão geral, atenção básica, consolidado, média complexidade, hospitais, alta complexidade, produtividade); dados em `dados_site/eficiencia/` (script 06) |
+| `deslocamento/`, `dados/`, `metodologia.qmd`, `sobre.qmd` | Demais seções |
 
 ## Regras de conteúdo
 

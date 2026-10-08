@@ -1,0 +1,119 @@
+---
+title: "Eficiência na atenção básica"
+description: "Escores de eficiência (DEA) da atenção básica dos 142 municípios de Mato Grosso, 2020–2025: faixas com intervalo de confiança, mapa, pares de referência, metas, potencial de melhoria e evolução (Malmquist)"
+page-layout: full
+toc: false
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_eficiencia.R"))
+M <- "M1"; A <- ANO_EF
+F  <- fichas_modelo(M, A); AV <- avaliados(F)
+r  <- resumo_mod(M, A); j <- mq_janela(M, "2022-2025"); j0 <- mq_janela(M, "2020-2022")
+n_esp_acima <- sum(AV$residuo_escore > 0, na.rm = TRUE); n_esp <- sum(!is.na(AV$residuo_escore))
+n_par <- sum(AV$elegivel_par == 1, na.rm = TRUE)
+b_boot <- param_ef(paste0("b_bootstrap_", M), NA)
+```
+
+```{r}
+css_eficiencia()
+faixa_versao_ef()
+nav_eficiencia("atencao-basica.html")
+secoes_pagina(c(modelo = "O que compara", panorama = paste("Panorama", A), mapa = "Mapa", regioes = "Por região",
+                municipios = "Municípios", potencial = "Potencial de melhoria", pares = "Pares mais usados",
+                evolucao = "Evolução", ressalvas = "Ressalvas"))
+```
+
+A atenção básica é a porta de entrada do SUS e a parte do sistema mais diretamente sob gestão municipal. Este modelo pergunta: **com o gasto, os profissionais e as equipes de atenção primária que mantém, quanto cada município produz em atendimentos, visitas domiciliares e vacinação, comparado aos municípios que mais produzem com recursos semelhantes?** Todos os valores estão por mil habitantes, o que permite comparar municípios de portes diferentes. Para interpretar faixas, intervalos, pares e metas, veja [Como ler](index.qmd#como-ler).
+
+## O que o modelo compara {#modelo}
+
+```{r}
+bloco_especificacao(M)
+```
+
+DEA com retornos variáveis de escala, orientada à produção (quanto a mais se poderia produzir com os mesmos recursos), uma fronteira por ano, 2020–`r A`; escore corrigido por bootstrap`r if (is.numeric(b_boot)) paste0(" (", num(b_boot), " réplicas)") else ""`. Despesa liquidada nas subfunções de atenção básica (301) e suporte profilático e terapêutico (303) do SIOPS, em R$ de 2025 (IPCA); profissionais em equivalente de 40 horas semanais (CNES); produção do SISAB anualizada quando há meses faltantes; doses sem as vacinas contra a COVID-19.
+
+## Panorama `r A` {#panorama}
+
+```{r}
+kpis_modelo(M)
+```
+
+Em `r A`, `r r$n_fronteira` dos `r r$n_avaliados` municípios avaliados formam a fronteira de melhores práticas da atenção básica — uma fronteira ampla, comum em modelos com vários produtos per capita, em que muitos municípios se destacam em ao menos uma combinação de recursos e produção. Entre os demais, a mediana do potencial de expansão da produção é de `r pct_ef(median(AV$potencial_expansao_pct, na.rm = TRUE))`. Considerado o contexto (porte, riqueza, densidade, distância e finanças), `r n_esp_acima` dos `r n_esp` municípios com escore esperado estão **acima** do que o contexto prevê. `r n_par` municípios têm registro plausível e podem servir de par de referência.
+
+## Mapa por faixa, `r A` {#mapa}
+
+```{r}
+mapa_faixas(M, A)
+```
+
+Cor = faixa do escore corrigido no estado (escuro = mais próximo das melhores práticas). Contorno tracejado: o intervalo de confiança alcança a faixa vizinha. Círculo branco na sede: registro a verificar. Passe o cursor para ver escore, IC e escore esperado; clique para abrir o perfil do município. Boa Esperança do Norte não está na malha municipal e aparece só na tabela.
+
+## Distribuição por região de saúde {#regioes}
+
+```{r}
+faixas_por_regiao(M, A)
+```
+
+Número de municípios de cada região de saúde em cada faixa estadual, `r A`. As faixas são calculadas no estado; a posição de cada município dentro da sua região está na ficha (tabela abaixo).
+
+## Municípios {#municipios}
+
+```{r}
+tabela_eficiencia(M, A)
+```
+
+*Escore corrigido*: escala de 0 a 1, com o intervalo de confiança de `r num(100 * IC_NIVEL, 0)`% e a régua (traço = IC, ponto = escore). *Faixa* com **±**: o IC alcança a faixa vizinha. *Escore esperado pelo contexto* e diferença no segundo estágio (▲ acima / ▼ abaixo do esperado). *Potencial de expansão*: quanto a mais o município poderia produzir com os mesmos recursos. *Tendência*: componente de gestão do Malmquist (EC), 2022–2025. A ficha (▸) traz a frase-síntese, os pares e as metas por variável.
+
+## Potencial de melhoria `r A` {#potencial}
+
+`r texto_potencial(M, A)`
+
+```{r}
+tabela_potencial(M, A)
+```
+
+Soma dos valores absolutos de `r A` dos municípios com potencial de melhoria frente aos pares plausíveis (só metas publicáveis). *Meta intermediária*: `r pct_ef(100 * FRACAO_META, 0)` da distância entre o observado e a meta plena. Nos recursos, valores negativos indicam folga que poderia ser redirecionada a outras ações, mantida a produção.
+
+## Pares de referência mais usados {#pares}
+
+```{r}
+pares_mais_usados(M, A)
+```
+
+Municípios de registro plausível que mais aparecem como referência para os demais em `r A` (número de municípios para os quais são par plausível). São bons interlocutores para a troca de experiências de organização da atenção básica.
+
+## Evolução 2020–`r A` {#evolucao}
+
+```{r}
+HTML(svg_evolucao(M))
+```
+
+```{r}
+tabela_janelas(M)
+```
+
+Na média do estado, a aproximação às melhores práticas (EC) foi de `r var_ano(j$ec)` em 2022–2025 (`r var_ano(j0$ec)` em 2020–2022), com `r j$n_melhora_ec` municípios em melhora consistente e `r j$n_piora_ec` em piora consistente. O índice de Malmquist soma a esse movimento o deslocamento das melhores práticas (TC), que pode refletir o crescimento do registro no CNES após 2022 — por isso o destaque é o componente de gestão. Detalhes por modelo e região em [Produtividade](produtividade.qmd).
+
+```{r}
+ec_por_regiao(M)
+```
+
+Média geométrica anual da aproximação às melhores práticas por região de saúde, 2022–2025 (entre parênteses, o número de municípios); a linha tracejada marca Mato Grosso.
+
+## Ressalvas deste modelo {#ressalvas}
+
+::: {.ef-ressalva}
+- A produção do SISAB depende do registro das equipes: meses faltantes são anualizados, e municípios com SISAB incompleto ou implausível são sinalizados (*registro a verificar*) e não servem de par.
+- A classificação da despesa por subfunção é pouco confiável em alguns municípios (gasto de atenção básica lançado em outras subfunções); nesses casos a meta financeira não é publicada.
+- Visitas domiciliares muito baixas recebem apenas um sinal informativo (piso de trabalho homologado em 08/10/2026), sem efeito sobre pares e metas.
+- Doses de vacina são as aplicadas no município (sem COVID-19), o que favorece municípios que vacinam moradores de vizinhos.
+- Eficiência não é qualidade: indicadores de resultado (mortalidade infantil, pré-natal) estão nas fichas, ao lado do escore.
+:::
+
+```{r}
+fonte_eficiencia("../")
+```

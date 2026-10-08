@@ -1,0 +1,18 @@
+item,valor
+versao_resultados,v2
+data_resultados,08/10/2026
+gerado_em,08/10/2026 10:00
+especificacao_principal_H,principal
+especificacao_principal_M0,principal
+especificacao_principal_M1,principal
+especificacao_principal_M2,principal
+especificacao_principal_M2A,d2_acesso_hospitalar
+especificacao_principal_M3,p_pooled
+especificacao_malmquist_M1,c_absoluto_crs
+especificacao_malmquist_M0,c_absoluto_crs
+especificacao_malmquist_M2,c_absoluto_crs
+especificacao_malmquist_M2A,d2_acesso_hospitalar_c_absoluto_crs
+especificacao_malmquist_H,c_absoluto_crs
+municipios_2025,142
+hospitais_2025,92
+hospitais_avaliados_2025,89

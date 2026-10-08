@@ -1,6 +1,6 @@
 ---
 title: "Confresa"
-description: "Perfil de Confresa (MT), região de saúde Araguaia Xingu: indicadores de saúde 2020–2025, deslocamento para internação e hospitais SUS — Observatório PPSUS-MT"
+description: "Perfil de Confresa (MT), região de saúde Araguaia Xingu: indicadores de saúde 2020–2025, eficiência (DEA) e produtividade (Malmquist), deslocamento para internação e hospitais SUS — Observatório PPSUS-MT"
 toc: false
 page-layout: full
 ---

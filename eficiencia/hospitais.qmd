@@ -1,0 +1,178 @@
+---
+title: "Eficiência dos hospitais SUS"
+description: "Escores de eficiência (DEA) dos hospitais SUS de Mato Grosso, 2020–2025: faixas com intervalo de confiança, hospitais de referência, potencial de melhoria e evolução (Malmquist)"
+page-layout: full
+toc: false
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_eficiencia_extra.R"))
+A   <- EFX_ANO
+H   <- efx_h_ano(A)
+RH  <- EFX_RES[EFX_RES$modelo == "H" & EFX_RES$grupo == "todos" & EFX_RES$ano == A, ]
+RH0 <- EFX_RES[EFX_RES$modelo == "H" & EFX_RES$grupo == "todos" & EFX_RES$ano == min(EFX_ANOS), ]
+ins <- efx_nomes_insumos("H"); pro <- efx_nomes_produtos("H")
+aval <- H[H$situacao == "avaliado", ]
+n_bal  <- sum(aval$especificacao_escore == "principal")
+n_fora <- sum(aval$especificacao_escore != "principal")
+n_mun  <- n_distinct(H$cod_mun6)
+n_pub  <- sum(H$grupo2_ano == "publico", na.rm = TRUE); n_priv <- sum(H$grupo2_ano != "publico", na.rm = TRUE)
+n_sem_uti <- sum(!grepl("com_uti", H$perfil_oferta)); n_sem_ac <- sum(!grepl("com_ac", H$perfil_oferta))
+n_eleg <- sum(H$elegivel_par == 1, na.rm = TRUE)
+PH  <- EFX_PH[EFX_PH$ano == A, ]
+n_com_pares <- n_distinct(PH$cnes)
+MQ  <- efx_mq("H", "estado", "todos", "janela")
+ec22 <- MQ[MQ$periodo == "2022-2025", ]; ec20 <- MQ[MQ$periodo == "2020-2022", ]
+tend <- table(H$tendencia_ec_2022_2025)
+n_mel <- if ("melhora consistente" %in% names(tend)) tend[["melhora consistente"]] else 0L
+n_pio <- if ("piora consistente" %in% names(tend)) tend[["piora consistente"]] else 0L
+G <- efx_h_metas_agregadas(A)
+Gp <- if (is.null(G)) NULL else G[G$tipo == "produto", ]
+frase_metas <- if (is.null(Gp) || nrow(Gp) == 0) "" else paste(sprintf("%s, +%s até a meta plena (+%s até a intermediária)",
+  paste0(tolower(substr(Gp$nome_gerencial, 1, 1)), substring(Gp$nome_gerencial, 2)), efx_pct(Gp$var_pct), efx_pct(Gp$var_inter)), collapse = "; ")
+n_reg <- sum(H$registro_a_verificar == 1, na.rm = TRUE)
+n_mud <- sum(H$esfera_mudou == 1, na.rm = TRUE)
+rmp_ok <- sum(is.finite(H$rmp) & H$flag_rmp_base_pequena != 1, na.rm = TRUE)
+```
+
+```{r}
+efx_css()
+efx_nav("hospitais.html")
+efx_faixa()
+efx_atalhos(c(modelo = "O que o modelo compara", panorama = "Panorama", mapa = "Mapa", distribuicao = "Distribuição",
+              tabela = "Todos os hospitais", potencial = "Potencial de melhoria", pares = "Referências", evolucao = "Evolução",
+              ressalvas = "Ressalvas", arquivos = "Arquivos"))
+```
+
+Esta página compara os **hospitais SUS de Mato Grosso** pelo volume de atendimento hospitalar que obtêm com os recursos que têm. Em `r A` foram considerados `r num(nrow(H))` hospitais em `r num(n_mun)` municípios (`r num(n_pub)` públicos e `r num(n_priv)` privados ou filantrópicos que atendem pelo SUS). O resultado de cada hospital é lido por **faixa** — fronteira de melhores práticas ou quartil — com o **intervalo de confiança** do escore, e não por uma posição exata em um ranking. Eficiência, aqui, não mede qualidade do cuidado: a mortalidade hospitalar padronizada aparece ao lado, como informação complementar.
+
+```{r}
+efx_h_aviso_reprocessamento()
+```
+
+## O que o modelo compara {#modelo}
+
+O modelo pergunta: **com os mesmos recursos, quanto a mais o hospital poderia produzir se operasse como os hospitais de melhor prática do mesmo ano?** Os recursos (insumos) e a produção (produtos) da especificação principal são:
+
+```{r}
+efx_bloco_spec("H")
+```
+
+- **Escore de 0 a 1.** Escore 1 = o hospital está na fronteira de melhores práticas do ano; escore 0,70 indica que, com os mesmos recursos, os hospitais de referência produziriam cerca de 1 ÷ 0,70 ≈ 1,43 vez mais. O escore publicado é **corrigido pelo viés** de amostra pequena (bootstrap), e por isso tem um intervalo de confiança de 95%.
+- **Faixas.** Os hospitais com escore original igual a 1 formam a *fronteira*; os demais são divididos em quatro *quartis* do escore corrigido no ano. Quando o intervalo de confiança alcança a faixa vizinha, a faixa é provisória e a tabela indica isso.
+- **Grupos e perfil de oferta.** A posição também é lida dentro do grupo (público ou privado/filantrópico). O perfil de oferta (com ou sem UTI, com ou sem alta complexidade) é usado para escolher hospitais de referência comparáveis e para não cobrar metas de serviços que o hospital não oferece: em `r A`, `r num(n_sem_uti)` hospitais não têm UTI e `r num(n_sem_ac)` não ofertam alta complexidade.
+- **Painel completo.** `r num(n_bal)` hospitais avaliados têm série completa de 2020 a 2025 e entram em todas as leituras (escore esperado pelo contexto e evolução); `r num(n_fora)` têm série incompleta e recebem só o escore do ano.
+- **Escore esperado pelo contexto.** É o escore que se esperaria do hospital dadas as condições do município-sede (porte, riqueza, distância à capital) e a esfera; ajuda a separar o que é contexto do que é gestão.
+
+## Panorama `r A` {#panorama}
+
+```{r}
+efx_h_kpis(A)
+```
+
+Fonte: resultados da estimação DEA v2 (`r EFX_DATA`), com dados de CNES e SIH/SUS de `r A`. As fronteiras são anuais: o nível do escore não é comparável entre anos — a evolução no tempo é lida pelo índice de Malmquist (seção [Evolução](#evolucao)).
+
+## Mapa `r A` por faixa {#mapa}
+
+Cada ponto é um hospital, posicionado na sede do município (quando há mais de um hospital no município, os pontos são afastados em espiral em torno da sede). A cor indica a faixa — quanto mais escura, mais próxima das melhores práticas — e o tamanho, o número de leitos SUS. Passe o cursor para ver o hospital, a faixa e o escore com o intervalo de confiança; clique para abrir o perfil do município.
+
+```{r}
+efx_mapa_hospitais(A, altura = 600)
+```
+
+::: {.nota-fonte}
+Posição aproximada (sede municipal do IBGE), não o endereço do hospital. Boa Esperança do Norte não consta na malha municipal usada no mapa.
+:::
+
+## Distribuição por faixa {#distribuicao}
+
+```{r}
+tagList(h4(sprintf("Por região de saúde, %d", A)), efx_h_distribuicao_regioes(A),
+        h4(sprintf("Por grupo e perfil de oferta, %d", A)), efx_h_distribuicao_grupos(A))
+```
+
+Regiões ordenadas pela parcela de hospitais na fronteira ou no quartil superior. Regiões e grupos com poucos hospitais devem ser lidos com cautela: um único hospital muda a distribuição.
+
+## Todos os hospitais em `r A` {#tabela}
+
+A tabela traz, para cada hospital, a faixa e o escore corrigido com o intervalo de confiança, o escore esperado pelo contexto, a tendência 2022–2025 do componente de gestão, a mortalidade hospitalar padronizada (1 = o esperado para o perfil de pacientes) e a produção do ano nos produtos da especificação principal. Use a busca (nome, CNES, município ou região), ordene pelas colunas e baixe o recorte em CSV.
+
+```{r}
+efx_h_tabela(A)
+```
+
+::: {.nota-fonte}
+*Sinalizações*: **registro a verificar** — algum valor de origem (CNES ou SIH) parece implausível e será conferido: a lista de verificações será encaminhada pela coordenação do projeto à SES-MT e ao COSEMS-MT (`r num(n_reg)` hospitais em `r A`); **perfil não comparável** — hospital especializado ou com perfil muito diferente dos demais; **sem comparável em algum insumo** — nenhum hospital de referência tem nível semelhante de algum recurso; **referência com alavancagem** — o hospital pesa muito na fronteira (supereficiência alta); **diagnóstico ordem-m** — o hospital fica acima das melhores práticas de amostras de hospitais comparáveis num teste de robustez. Hospitais com registro a verificar, perfil não comparável ou referência com alavancagem continuam com escore publicado, mas não servem de referência; sem comparável em algum insumo e diagnóstico ordem-m são sinais informativos e não impedem o uso como referência. Mortalidade padronizada com "base pequena" (menos de `r num(efx_param('rmp_min_esperados', 30))` óbitos esperados) não permite leitura comparativa.
+:::
+
+## Potencial de melhoria {#potencial}
+
+A **meta plena** é a produção (e o uso de recursos) que o hospital teria se operasse como a combinação dos seus hospitais de referência; a **meta intermediária** — referência de curto prazo — fecha `r ifelse(abs(efx_param('meta_intermediaria_fracao', 0.5) - 0.5) < 1e-9, 'metade', efx_pct(100 * efx_param('meta_intermediaria_fracao', 0.5), 0))` da distância entre o observado e a meta plena. Metas de serviços que o hospital não oferece (UTI, alta complexidade) não são publicadas. A soma para os hospitais com meta publicada em `r A`:
+
+```{r}
+efx_h_tabela_metas(A)
+```
+
+Somados os hospitais com meta publicada, a produção poderia crescer, com os recursos atuais: `r frase_metas`. Nos recursos, a diferença negativa indica folga — recursos que, pela comparação com as referências, poderiam ser **reorganizados** para ampliar a oferta, e não cortados. As metas de cada hospital, variável a variável, estão no arquivo `metas_hospital.csv` (seção [Arquivos](#arquivos)).
+
+## Hospitais de referência mais usados {#pares}
+
+Para cada hospital fora da fronteira, o modelo indica até três **hospitais de referência plausíveis** — do mesmo grupo e, sempre que possível, do mesmo perfil de oferta — cujas práticas definem a meta. Em `r A`, `r num(n_eleg)` hospitais eram elegíveis como referência e `r num(n_com_pares)` hospitais receberam referências. Os mais usados:
+
+```{r}
+efx_h_pares_top(A, n = 12)
+```
+
+::: {.nota-fonte}
+*Peso médio na meta*: participação média do hospital de referência na combinação que define a meta dos hospitais que o usam. *Par mais semelhante*: a referência de maior peso entre as de porte semelhante (de um terço a três vezes os leitos SUS do hospital avaliado).
+:::
+
+## Evolução 2020–2025 {#evolucao}
+
+Como cada ano tem a sua fronteira, a evolução é medida pelo **índice de Malmquist**, que compara cada hospital consigo mesmo entre anos consecutivos e separa dois componentes: a **aproximação às melhores práticas** (EC, o componente de gestão, publicado nas fichas) e o **deslocamento das próprias melhores práticas** (TC). Valores acima de 1 indicam melhora. Na média anual de 2022–2025, a aproximação às melhores práticas foi de `r efx_var(ec22$ec)` (`r num(ec22$n_ec_maior_1)` de `r num(ec22$n)` hospitais com melhora); em 2020–2022, `r efx_var(ec20$ec)`.
+
+```{r}
+efx_mq_tabela_janelas("H", grupos = list(H = c("todos", "publico", "privado_filantropico")), com_modelo = FALSE)
+```
+
+```{r}
+HTML(efx_mq_serie(list(
+  list(modelo = "H", grupo = "todos", nome = "Todos os hospitais", cor = COR[["mun"]], larg = 3),
+  list(modelo = "H", grupo = "publico", nome = "Hospitais públicos", cor = COR[["sec"]], dash = "6,4"),
+  list(modelo = "H", grupo = "privado_filantropico", nome = "Hospitais privados e filantrópicos", cor = "#b45309", dash = "2,3")),
+  titulo = "Aproximação às melhores práticas (EC) dos hospitais, média por transição anual"))
+```
+
+O gráfico mostra a média (geométrica) de cada transição anual, marcada no ano de chegada (2021 = transição 2020–2021). Transições com quebra de registro ficam fora das médias.
+
+**Tendência por hospital (2022–2025).** `r num(n_mel)` hospitais têm melhora consistente e `r num(n_pio)` piora consistente da aproximação às melhores práticas; os demais não têm tendência definida (variação pequena ou incerta) ou não têm série suficiente. Regra: pelo menos duas transições com intervalo de confiança inteiramente acima (abaixo) de 1, nenhuma no sentido oposto, e média do período de pelo menos +`r num(100 * efx_param('tendencia_limiar', 0.02), 0)`% (−`r num(100 * efx_param('tendencia_limiar', 0.02), 0)`%) ao ano.
+
+```{r}
+efx_h_tendencias(A)
+```
+
+\* O deslocamento das melhores práticas (TC) é mostrado só como agregado e com reserva: o TC abaixo de 1 após 2022 pode refletir o crescimento do registro de profissionais e equipamentos no CNES sem aumento proporcional da produção, e não uma piora real das melhores práticas. Por isso as fichas publicam apenas a aproximação às melhores práticas (EC) e o índice de Malmquist. Veja também a página [Produtividade](produtividade.html).
+
+## Ressalvas {#ressalvas}
+
+::: {.callout-warning title="Leia antes de interpretar"}
+- **Resultados da versão 2, em validação.** Os escores são da estimação de `r EFX_DATA` e estão em validação com a SES-MT e o COSEMS-MT; os `r num(n_reg)` hospitais com registro a verificar em `r A` dependem de conferência na origem (CNES e SIH).
+- **Faixa, não ranking.** Com `r num(n_bal)` hospitais no painel completo e `r length(ins) + length(pro)` variáveis, os intervalos de confiança são largos; dois hospitais em faixas vizinhas podem não ser estatisticamente diferentes. A correção de viés reduz mais o escore de quem está na fronteira, por isso um hospital da fronteira pode ter escore corrigido menor que um do quartil superior.
+- **Eficiência não é qualidade.** O modelo mede volume de atendimento (internações e diárias) por recurso; não mede resolutividade, segurança do paciente nem adequação clínica. Hospitais que internam por mais tempo por necessidade clínica podem parecer mais "produtivos" em diárias. A mortalidade padronizada é mostrada ao lado e não altera o escore.
+- **Complexidade dos casos.** Internações e diárias são contadas sem ponderação pela complexidade de cada caso: hospitais de referência regional que concentram casos graves podem ficar em desvantagem.
+- **Registro de recursos no CNES.** Leitos, profissionais (em equivalente a 40 horas semanais) e equipamentos vêm do cadastro; subregistro ou cadastro desatualizado distorcem o escore. `r num(n_mud)` hospitais mudaram de esfera administrativa no período.
+- **Só SUS e só Mato Grosso.** A produção considerada é a paga pelo SUS (SIH); atendimentos da saúde suplementar não entram. A COVID-19 alterou volume e composição das internações em 2020 e 2021.
+- **Hospitais com série incompleta** (`r num(n_fora)` em `r A`) têm escore do ano, mas não têm escore esperado pelo contexto nem evolução.
+:::
+
+## Arquivos {#arquivos}
+
+```{r}
+efx_arquivos(c("fichas_hospital", "metas_hospital", "pares_hospital", "insumos_produtos_hospital", "malmquist_regiao", "especificacoes_modelos"))
+```
+
+```{r}
+fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Eficiência: Resultados DEA v2 (%s), Projeto PPSUS-MT — DEA orientada ao produto com retornos variáveis de escala, escore corrigido por bootstrap, índice de Malmquist; dados de CNES e SIH/SUS, 2020–2025. ", EFX_DATA))
+```

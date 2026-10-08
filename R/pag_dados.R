@@ -181,3 +181,72 @@ tabela_dicionario <- function(prefixo_ind = "../indicadores/") {
               if (nzchar(d$Nota[i])) p(class = "nota-fonte", strong("Nota: "), d$Nota[i]),
               p(class = "nota-fonte", a(href = paste0(prefixo_ind, d$id[i], ".html"), "Ver mapa, ranking e série deste indicador →"))))
 }
+
+# ---- Eficiência (DEA/Malmquist): downloads e dicionário ---------------------------------------
+# Catálogo arquivos/dados/eficiencia/catalogo_eficiencia.csv (scripts/06_preparar_eficiencia.py),
+# conferido com o disco; dicionário arquivos/dados/eficiencia/dicionario_eficiencia.csv.
+catalogo_eficiencia <- function() {
+  f <- ARQ("dados", "eficiencia", "catalogo_eficiencia.csv")
+  if (!file.exists(f)) { aviso("arquivos/dados/eficiencia/catalogo_eficiencia.csv ausente: rode scripts/06_preparar_eficiencia.py"); return(NULL) }
+  cat_e <- tibble::as_tibble(data.table::fread(f, encoding = "UTF-8", na.strings = "",
+                                               colClasses = list(character = c("arquivo", "descricao", "chave", "periodo", "fonte"))))
+  cat_e$caminho <- ARQ(cat_e$arquivo)
+  cat_e$existe <- file.exists(cat_e$caminho)
+  if (any(!cat_e$existe)) aviso("arquivos de eficiência ausentes: %s", paste(cat_e$arquivo[!cat_e$existe], collapse = ", "))
+  cat_e$bytes <- ifelse(cat_e$existe, file.size(cat_e$caminho), NA_real_)
+  cat_e
+}
+
+# Ordem de leitura sugerida dos arquivos de eficiência (os demais vêm depois, em ordem alfabética)
+ORDEM_EF <- c("fichas_municipio.csv", "metas_municipio.csv", "pares_municipio.csv", "fichas_hospital.csv",
+              "metas_hospital.csv", "pares_hospital.csv", "insumos_produtos_hospital.csv", "painel_ac_regiao.csv",
+              "quadrantes_ac.csv", "painel_ac_macro.csv", "fichas_regiao.csv", "resumo_modelos.csv",
+              "malmquist_regiao.csv", "especificacoes_modelos.csv", "sensibilidade.csv", "parametros.csv",
+              "metadados.csv", "dicionario_eficiencia.csv")
+TEMA_EF <- function(a) ifelse(grepl("municipio", a), "Municípios",
+                       ifelse(grepl("hospital", a), "Hospitais",
+                       ifelse(grepl("_ac_|regiao|quadrantes", a) & !grepl("malmquist", a), "Alta complexidade (regiões e macrorregiões)",
+                       ifelse(grepl("resumo|malmquist", a), "Resumos e produtividade",
+                              "Método, parâmetros e dicionário"))))
+JS_GRUPO_EF <- "function(cellInfo) { return cellInfo.value + ' (' + cellInfo.subRows.length + ')' }"
+JS_GRUPO_CAMPOS <- "function(cellInfo) { return cellInfo.value + ' (' + cellInfo.subRows.length + ' campos)' }"
+
+tabela_downloads_eficiencia <- function(prefixo = "../arquivos/", cat_e = catalogo_eficiencia()) {
+  if (is.null(cat_e)) return(p(class = "nota-fonte", "Arquivos de eficiência ainda não gerados (scripts/06_preparar_eficiencia.py)."))
+  ordem_temas <- c("Municípios", "Hospitais", "Alta complexidade (regiões e macrorregiões)", "Resumos e produtividade", "Método, parâmetros e dicionário")
+  d <- cat_e |>
+    mutate(nome = basename(arquivo), Tema = TEMA_EF(nome), o = match(nome, ORDEM_EF)) |>
+    arrange(match(Tema, ordem_temas), o, nome) |>
+    transmute(Tema, Arquivo = nome, href = paste0(prefixo, arquivo), existe, Descrição = descricao, Chave = chave,
+              Período = periodo, Linhas = num(linhas), Colunas = num(colunas), Tamanho = fmt_bytes(bytes))
+  reactable(d, compact = TRUE, pagination = FALSE, wrap = TRUE, groupBy = "Tema", defaultExpanded = TRUE,
+            columns = list(
+              Tema = colDef(minWidth = 190, grouped = JS(JS_GRUPO_EF)),
+              # atributo download com valor (nome do arquivo): download = NA quebra a hidratação do reactable
+              Arquivo = colDef(minWidth = 230, cell = function(v, i) if (isTRUE(d$existe[i])) tagList(a(href = d$href[i], download = v, v)) else tagList(v, span(class = "sub", " (indisponível)"))),
+              href = colDef(show = FALSE), existe = colDef(show = FALSE),
+              Descrição = colDef(minWidth = 380, style = list(fontSize = "0.85em")),
+              Chave = colDef(minWidth = 150, style = list(fontSize = "0.82em", fontFamily = "monospace")),
+              Período = colDef(minWidth = 80, align = "center"),
+              Linhas = colDef(minWidth = 70, align = "right"), Colunas = colDef(minWidth = 70, align = "right"),
+              Tamanho = colDef(minWidth = 75, align = "right")))
+}
+
+tabela_dicionario_eficiencia <- function() {
+  f <- ARQ("dados", "eficiencia", "dicionario_eficiencia.csv")
+  if (!file.exists(f)) return(p(class = "nota-fonte", "Dicionário de eficiência ainda não gerado."))
+  d <- tibble::as_tibble(data.table::fread(f, encoding = "UTF-8", na.strings = "", colClasses = "character"))
+  d <- d |> mutate(o = match(arquivo, ORDEM_EF)) |> arrange(o, arquivo) |>
+    transmute(Arquivo = arquivo, Campo = campo, `Nome gerencial` = nome_gerencial,
+              Unidade = ifelse(is.na(unidade), "", unidade), Definição = ifelse(is.na(definicao), "", definicao),
+              Fonte = ifelse(is.na(fonte), "", fonte))
+  reactable(d, compact = TRUE, wrap = TRUE, groupBy = "Arquivo", defaultExpanded = FALSE, searchable = TRUE,
+            pagination = FALSE,
+            columns = list(
+              Arquivo = colDef(minWidth = 200, grouped = JS(JS_GRUPO_CAMPOS)),
+              Campo = colDef(minWidth = 170, style = list(fontFamily = "monospace", fontSize = "0.8em")),
+              `Nome gerencial` = colDef(minWidth = 180),
+              Unidade = colDef(minWidth = 110, style = list(fontSize = "0.85em", color = "#4b5563")),
+              Definição = colDef(minWidth = 320, style = list(fontSize = "0.85em")),
+              Fonte = colDef(minWidth = 120, style = list(fontSize = "0.82em", color = "#4b5563"))))
+}

@@ -1,0 +1,223 @@
+---
+title: "Eficiência na média complexidade"
+description: "Escores de eficiência (DEA) da média complexidade nos municípios de Mato Grosso, 2020–2025: produção local de internações e procedimentos e, para todos os municípios, a ótica do acesso dos moradores em duas fronteiras (com e sem leito SUS)"
+page-layout: full
+toc: false
+---
+
+```{r}
+#| include: false
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_eficiencia.R"))
+M <- "M2"; MA <- "M2A"; A <- ANO_EF
+F  <- fichas_modelo(M, A); AV <- avaliados(F); FORA <- fora_do_modelo(M, A)
+r  <- resumo_mod(M, A); j <- mq_janela(M, "2022-2025"); j0 <- mq_janela(M, "2020-2022")
+n_esp_acima <- sum(AV$residuo_escore > 0, na.rm = TRUE); n_esp <- sum(!is.na(AV$residuo_escore))
+n_polo <- sum(AV$flag_polo_ac == 1, na.rm = TRUE)
+lim_polo <- param_ef("limiar_polo_ac", NA)
+b_boot <- param_ef(paste0("b_bootstrap_", M), NA)
+FA  <- fichas_modelo(MA, A); AVA <- avaliados(FA)
+rc  <- resumo_mod(MA, A, "com_leito"); rs <- resumo_mod(MA, A, "sem_leito")
+jc  <- mq_janela(MA, "2022-2025", "com_leito"); js <- mq_janela(MA, "2022-2025", "sem_leito")
+FORA_A <- fora_do_modelo(MA, A)
+```
+
+```{r}
+css_eficiencia()
+faixa_versao_ef()
+nav_eficiencia("media-complexidade.html")
+secoes_pagina(c(modelo = "Produção local", panorama = paste("Panorama", A), mapa = "Mapa", regioes = "Por região",
+                municipios = "Municípios", potencial = "Potencial de melhoria", pares = "Pares mais usados",
+                evolucao = "Evolução", acesso = "Ótica do acesso", ressalvas = "Ressalvas"))
+```
+
+A média complexidade reúne consultas especializadas, exames, pequenas cirurgias e a maior parte das internações. Ela é lida de duas maneiras complementares. A **produção local** pergunta: **com a despesa, os leitos, os médicos e os equipamentos que mantém, quanto o município produz em internações e procedimentos de média complexidade nos seus próprios estabelecimentos?** — e só faz sentido para quem tem hospital. A **ótica do acesso** pergunta, para todos os municípios: **com esses recursos, quanto os moradores conseguem se internar, onde quer que a internação ocorra?** — comparando municípios com leito SUS entre si e municípios sem leito entre si. Valores por mil habitantes. Para interpretar faixas, intervalos, pares e metas, veja [Como ler](index.qmd#como-ler).
+
+## Produção local: o que o modelo compara {#modelo}
+
+```{r}
+bloco_especificacao(M)
+```
+
+DEA com retornos variáveis de escala, orientada à produção, uma fronteira por ano, 2020–`r A`; escore corrigido por bootstrap`r if (is.numeric(b_boot)) paste0(" (", num(b_boot), " réplicas)") else ""`. Despesa da subfunção 302 (assistência hospitalar e ambulatorial, SIOPS) atribuída à média complexidade pela proporção do valor aprovado no SIA e no SIH, em R$ de 2025; leitos gerais SUS (leitos SUS menos leitos de UTI). Avalia os `r nrow(AV)` municípios com internações de média complexidade em seus estabelecimentos em todos os anos de 2020 a `r A`; os outros `r nrow(FORA)` estão **fora deste modelo** e são avaliados na [ótica do acesso](#acesso).
+
+## Panorama `r A` — produção local {#panorama}
+
+```{r}
+kpis_modelo(M)
+```
+
+Em `r A`, `r r$n_fronteira` dos `r r$n_avaliados` municípios com produção hospitalar local estão na fronteira. Fora dela, a mediana do potencial de expansão é de `r pct_ef(median(AV$potencial_expansao_pct, na.rm = TRUE))`. Considerado o contexto, `r n_esp_acima` dos `r n_esp` municípios estão **acima** do que o contexto prevê. `r n_polo` municípios são **polos de alta complexidade** (ao menos `r if (is.numeric(lim_polo)) pct_ef(100 * lim_polo, 0) else "um quarto"` da produção hospitalar em alta complexidade): parte dos seus recursos atende a alta complexidade, e o escore de média complexidade deles tende a ser conservador.
+
+## Mapa por faixa, `r A` — produção local {#mapa}
+
+```{r}
+mapa_faixas(M, A)
+```
+
+Cor = faixa do escore corrigido entre os municípios avaliados (escuro = mais próximo das melhores práticas); cinza = fora do modelo (sem internações de média complexidade locais em algum ano — ver [ótica do acesso](#acesso)). Contorno tracejado: o IC alcança a faixa vizinha. Círculo branco na sede: registro a verificar. Clique para abrir o perfil.
+
+## Distribuição por região de saúde {#regioes}
+
+```{r}
+faixas_por_regiao(M, A)
+```
+
+Número de municípios de cada região de saúde em cada faixa, `r A`; *fora do modelo* = sem produção hospitalar de média complexidade local em todos os anos.
+
+## Municípios avaliados — produção local {#municipios}
+
+```{r}
+tabela_eficiencia(M, A)
+```
+
+*Escore corrigido* com IC de `r num(100 * IC_NIVEL, 0)`% (régua: traço = IC, ponto = escore). *Faixa* com **±**: o IC alcança a faixa vizinha. *Escore esperado* e diferença no segundo estágio. *Tendência*: componente de gestão do Malmquist (EC), 2022–2025. A ficha (▸) traz a frase-síntese, os pares e as metas.
+
+```{r}
+tags$details(tags$summary(sprintf("Municípios fora do modelo de produção local em %d (%d)", A, nrow(FORA))),
+  p(class = "sub", "Avaliados na ótica do acesso, mais abaixo nesta página."),
+  p(HTML(paste(sprintf('<a href="../municipios/%s.html">%s</a>', FORA$slug[ordem_nome(FORA$municipio)], esc(FORA$municipio[ordem_nome(FORA$municipio)])), collapse = " · "))))
+```
+
+## Potencial de melhoria `r A` — produção local {#potencial}
+
+`r texto_potencial(M, A)`
+
+```{r}
+tabela_potencial(M, A)
+```
+
+Soma dos valores absolutos de `r A` dos municípios com potencial de melhoria frente aos pares plausíveis (só metas publicáveis; metas financeiras não são publicadas quando a despesa de média complexidade tem registro nulo, baixo ou inconsistente).
+
+## Pares de referência mais usados {#pares}
+
+```{r}
+pares_mais_usados(M, A)
+```
+
+## Evolução 2020–`r A` — produção local {#evolucao}
+
+```{r}
+HTML(svg_evolucao(M))
+```
+
+```{r}
+tabela_janelas(M)
+```
+
+Na média do estado, a aproximação às melhores práticas (EC) foi de `r var_ano(j$ec)` em 2022–2025 (`r var_ano(j0$ec)` em 2020–2022), com `r j$n_melhora_ec` municípios em melhora consistente e `r j$n_piora_ec` em piora consistente.
+
+```{r}
+ec_por_regiao(M)
+```
+
+## Ótica do acesso: duas fronteiras {#acesso}
+
+```{r}
+div(class = "ef-ler", HTML(sprintf(paste0(
+  "A ótica do acesso avalia <b>%d municípios</b> pelo número de internações de média complexidade dos seus <b>moradores</b>, ",
+  "realizadas no próprio município ou fora dele. Como ter ou não leito SUS muda a natureza do problema, há <b>duas fronteiras</b>: ",
+  "<b>%d municípios com leito SUS</b> comparados entre si e <b>%d sem leito SUS</b> comparados entre si (neste grupo, leitos saem dos recursos). ",
+  "As faixas são calculadas <b>dentro de cada grupo</b>; não há comparação direta entre os dois grupos. Não há escore esperado pelo contexto nesta ótica."),
+  nrow(AVA), as.integer(rc$n_avaliados), as.integer(rs$n_avaliados))))
+```
+
+```{r}
+mapa_faixas(MA, A, titulo = paste0("Faixa dentro do grupo (com ou sem leito SUS), ", A))
+```
+
+Cor = faixa do escore corrigido **dentro do grupo** do município (passe o cursor para ver o grupo). Contorno tracejado: IC alcança a faixa vizinha; círculo branco: registro a verificar. `r if (nrow(FORA_A)) paste0(lista_e_ef(FORA_A$municipio), " fica fora desta ótica em ", A, " (sem série própria de internações de residentes).") else ""`
+
+::: {.panel-tabset}
+
+### Com leito SUS
+
+```{r}
+bloco_especificacao(MA, "com_leito")
+```
+
+```{r}
+kpis_modelo(MA, "com_leito")
+```
+
+```{r}
+faixas_por_regiao(MA, A, "com_leito", com_fora = FALSE)
+```
+
+```{r}
+tabela_eficiencia(MA, A, "com_leito")
+```
+
+#### Potencial de melhoria — com leito SUS
+
+`r texto_potencial(MA, A, "com_leito")`
+
+```{r}
+tabela_potencial(MA, A, "com_leito")
+```
+
+#### Evolução — com leito SUS
+
+```{r}
+HTML(svg_evolucao(MA, "com_leito"))
+```
+
+```{r}
+tabela_janelas(MA, "com_leito")
+```
+
+Aproximação às melhores práticas (EC) de `r var_ano(jc$ec)` em 2022–2025 entre os municípios com leito SUS.
+
+### Sem leito SUS
+
+```{r}
+bloco_especificacao(MA, "sem_leito")
+```
+
+```{r}
+kpis_modelo(MA, "sem_leito")
+```
+
+```{r}
+faixas_por_regiao(MA, A, "sem_leito", com_fora = FALSE)
+```
+
+```{r}
+tabela_eficiencia(MA, A, "sem_leito")
+```
+
+#### Potencial de melhoria — sem leito SUS
+
+`r texto_potencial(MA, A, "sem_leito")`
+
+```{r}
+tabela_potencial(MA, A, "sem_leito")
+```
+
+#### Evolução — sem leito SUS
+
+```{r}
+HTML(svg_evolucao(MA, "sem_leito"))
+```
+
+```{r}
+tabela_janelas(MA, "sem_leito")
+```
+
+Aproximação às melhores práticas (EC) de `r var_ano(js$ec)` em 2022–2025 entre os municípios sem leito SUS. Nesse grupo o acesso depende da regulação e da oferta dos polos vizinhos, e não só da gestão local.
+
+:::
+
+## Ressalvas deste modelo {#ressalvas}
+
+::: {.ef-ressalva}
+- **Despesa de média complexidade estimada**: a subfunção 302 do SIOPS não separa média e alta complexidade; a parcela de média complexidade é atribuída pelo valor aprovado no SIA e no SIH. Despesa nula, baixa ou inconsistente é sinalizada e a meta financeira não é publicada.
+- **Produção local × acesso**: na produção local, municípios-polo atendem moradores de vizinhos (o que eleva a produção por habitante); na ótica do acesso, conta a internação do morador onde quer que ocorra. As duas leituras se completam — veja também [Deslocamento](../deslocamento/index.qmd).
+- **Fuga para outros estados não é observada**: só há internações em hospitais de Mato Grosso; moradores de municípios de fronteira que se internam em outra UF não entram no acesso.
+- **Polos de alta complexidade** (limiar de trabalho homologado em 08/10/2026) têm escore de média complexidade conservador: parte dos recursos atende a alta complexidade.
+- Leitos de UTI saem dos leitos gerais; a alta complexidade é tratada por [região de saúde](alta-complexidade.qmd).
+:::
+
+```{r}
+fonte_eficiencia("../")
+```

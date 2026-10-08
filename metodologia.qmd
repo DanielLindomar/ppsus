@@ -34,7 +34,7 @@ Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DA
 ## Definições que valem em todo o site
 
 - **Local × residência.** Indicadores com sufixo *local* (ou "realizados no município") contam o que foi feito nos estabelecimentos do município, inclusive para pacientes de fora. Indicadores por *residência* contam o que aconteceu com os moradores do município, onde quer que tenham sido atendidos em Mato Grosso. A diferença entre os dois é a base da análise de [deslocamento](deslocamento/index.html).
-- **Despesa liquidada.** Valor do SIOPS na fase de liquidação (serviço prestado e reconhecido), acumulado no ano, em reais correntes — sem correção pela inflação. Comparações entre anos devem considerar a inflação do período; o DEA será calculado com valores deflacionados.
+- **Despesa liquidada.** Valor do SIOPS na fase de liquidação (serviço prestado e reconhecido), acumulado no ano, em reais correntes — sem correção pela inflação. Comparações entre anos devem considerar a inflação do período; nos modelos de eficiência (DEA), os valores são deflacionados para reais de 2025 pelo IPCA.
 - **FTE (equivalente de 40 horas).** Profissionais contados pela carga horária semanal contratada dividida por 40, somente vínculos com atendimento SUS, na média das competências do ano. Um médico com 20 horas conta como 0,5.
 - **Complexidade.** Média complexidade (MC) e alta complexidade (AC) seguem a classificação dos procedimentos no SIA e no SIH. A atenção básica é medida pelo SISAB, não pelo SIA.
 - **Ano da alta.** As internações são atribuídas ao ano em que o paciente recebeu alta, e cada AIH de tipo 1 conta uma internação, sem duplicar as continuidades.
@@ -61,6 +61,57 @@ Os problemas abaixo foram identificados na validação dos painéis e estão em 
 8. **O crescimento dos registros do CNES pode ser melhoria de cadastro, não só expansão real.** Os médicos SUS em equivalente de 40 horas cresceram 96% entre 2019 e 2025 e os equipamentos em uso dobraram. Parte desse crescimento é atualização do cadastro; a leitura de tendências de capacidade e do Malmquist deve considerar isso.
 9. **Muitos municípios não têm hospital SUS.** Em 2025, 53 municípios não tinham hospital SUS e 61 não tiveram internação local (60 com internações de residentes, mais Boa Esperança do Norte, ainda sem registros no SIH). Para eles, os indicadores "locais" de internação ficam vazios ou zerados, e a leitura relevante é a de acesso: quantas internações os moradores tiveram, onde e a que distância.
 10. **Cobertura das bordas da janela.** Boa Esperança do Norte só existe a partir de 2025 e não entra na malha do IBGE usada nos mapas (tem, porém, a coordenada da sede nas Localidades 2022, usada nas distâncias); 2026 é parcial em todas as fontes e não é publicado; SIM e SINASC param em 2024.
+
+## Eficiência e produtividade (DEA e Malmquist) {#eficiencia}
+
+```{r}
+#| include: false
+# Números desta seção lidos dos arquivos de eficiência (scripts/06_preparar_eficiencia.py)
+ef_csv <- function(n) tibble::as_tibble(data.table::fread(file.path(RAIZ, "dados_site", "eficiencia", n), encoding = "UTF-8", na.strings = ""))
+ef_ok <- file.exists(file.path(RAIZ, "dados_site", "eficiencia", "resumo_modelos.csv"))
+if (ef_ok) {
+  EFP <- ef_csv("parametros.csv"); EFR <- ef_csv("resumo_modelos.csv"); EFE <- ef_csv("especificacoes_modelos.csv")
+  EFM <- ef_csv("metadados.csv"); EFG <- ef_csv("fichas_regiao.csv")
+} 
+par_ef <- function(ch) { if (!ef_ok) return(NA); v <- EFP$valor_parametro[EFP$chave == ch]; if (length(v)) suppressWarnings(as.numeric(v[1])) else NA }
+meta_ef <- function(it) { if (!ef_ok) return(""); v <- EFM$valor[EFM$item == it]; if (length(v)) v[1] else "" }
+n25 <- function(mo) { if (!ef_ok) return(NA); v <- EFR$n_avaliados[EFR$modelo == mo & EFR$ano == 2025 & EFR$grupo == "todos"]; if (length(v)) v[1] else NA }
+reg_m3 <- if (ef_ok) sort(unique(EFG$regiao_saude[EFG$ano == 2025 & EFG$publicavel_m3 %in% 1])) else character(0)
+lista_pt <- function(x) if (length(x) <= 1) paste(x) else paste0(paste(x[-length(x)], collapse = ", "), " e ", x[length(x)])
+tab_modelos <- function() {
+  if (!ef_ok) return(p(class = "nota-fonte", "Arquivos de eficiência ainda não gerados."))
+  ordem <- c("M1", "M0", "M2", "M2A", "H", "M3")
+  lin <- lapply(ordem, function(mo) {
+    e <- EFE[EFE$modelo == mo, ]; if (nrow(e) == 0) return(NULL)
+    ins <- unique(e$nome_gerencial[e$tipo == "insumo"]); pro <- unique(e$nome_gerencial[e$tipo == "produto"])
+    un <- EFR$n_avaliados[EFR$modelo == mo & EFR$ano == 2025 & EFR$grupo == "todos"]
+    tags$tr(tags$td(strong(e$nome_modelo[1])), tags$td(class = "num", if (length(un)) num(un[1]) else "—"),
+            tags$td(paste(ins, collapse = "; ")), tags$td(paste(pro, collapse = "; ")))
+  })
+  div(class = "tabela-rolagem", tags$table(class = "table table-sm",
+    tags$thead(tags$tr(tags$th("Modelo"), tags$th("Avaliados em 2025"), tags$th("Recursos (insumos)"), tags$th("Produção (produtos)"))),
+    tags$tbody(lin)))
+}
+```
+
+A seção [Eficiência](eficiencia/index.html) publica os escores de eficiência técnica e a evolução da produtividade dos municípios, dos hospitais SUS e das regiões de saúde, calculados pelo projeto a partir dos mesmos painéis deste site. Os números vêm da versão `r sub("^v", "", meta_ef("versao_resultados"))` da estimação (relatório técnico *Resultados DEA v2*, `r meta_ef("data_resultados")`), aprovada pelo coordenador e em validação com a SES-MT e o COSEMS-MT.
+
+- **O que o escore mede.** A Análise Envoltória de Dados (DEA) compara o que cada unidade produz com os recursos que usa, frente às melhores práticas observadas no mesmo ano em Mato Grosso, que formam a fronteira de eficiência. Usa-se o modelo BCC orientado ao produto: a pergunta é quanto a produção poderia crescer com os mesmos recursos, comparando unidades de porte semelhante. O escore vai de 0 a 1 (1 = fronteira). Ele mede eficiência técnica, **não a qualidade do cuidado**: os resultados em saúde ficam ao lado, sem alterar o escore.
+- **Faixas com intervalo de confiança, não ranking.** O escore é corrigido do viés da estimação por reamostragem (bootstrap, `r num(par_ef("b_bootstrap"))` réplicas), com intervalo de confiança de 95%. A leitura é por faixa: fronteira ou quartil do escore corrigido entre as unidades avaliadas; quando o intervalo alcança a faixa vizinha, a posição é incerta. As fronteiras são anuais, por isso o nível do escore não se compara entre anos — a evolução é lida pelo Malmquist.
+- **Pares e metas.** Pares de referência e metas vêm de uma fronteira formada só por unidades com registro plausível. A meta plena é o que as melhores práticas comparáveis alcançam com os mesmos recursos; a meta intermediária cobre `r num(100 * par_ef("meta_intermediaria_fracao"))`% da distância até ela; o potencial de melhoria é a diferença em unidades, em % e, nos recursos financeiros, em R$ de `r as.integer(par_ef("ano_base_precos"))` (IPCA).
+- **Contexto.** Um segundo estágio estima o escore esperado pelo contexto — porte, riqueza, densidade, distância e finanças, fatores fora do controle do gestor —, e a diferença entre o observado e o esperado indica se o desempenho está acima, abaixo ou dentro do previsto. A eficiência condicional (comparação só entre unidades semelhantes) entra como informação complementar.
+- **Produtividade (Malmquist).** Mede a variação entre dois anos e se divide em mudança de eficiência (aproximação às melhores práticas, componente atribuível à gestão, publicado por unidade) e deslocamento tecnológico (movimento da própria fronteira, publicado só de forma agregada e com ressalva, porque após 2022 pode refletir o crescimento do registro no CNES). Tendências só são rotuladas quando a variação supera ±`r num(100 * par_ef("tendencia_limiar"))`% ao ano de forma consistente.
+- **Alta complexidade.** O produto gerencial é o painel das 16 regiões de saúde (acesso dos moradores, produção realizada na região e autossuficiência). O escore DEA de alta complexidade é diagnóstico e só é publicado para as regiões com oferta contínua e registro plausível: `r lista_pt(reg_m3)`.
+
+```{r}
+tab_modelos()
+```
+
+::: {.nota-fonte}
+Modelos e variáveis da especificação principal vigente (arquivo `especificacoes_modelos.csv` em [Dados](dados/index.html#eficiencia)). Municípios: valores por mil habitantes; hospitais: valores absolutos. Despesas em R$ de 2025 (IPCA).
+:::
+
+**Ressalvas da eficiência.** Unidades com dados de registro atípicos recebem o sinal "registro a verificar": continuam avaliadas, mas não servem de referência a outras e podem ter a meta financeira omitida; a lista de verificações será encaminhada à SES-MT e ao COSEMS-MT. Valem também as limitações acima: a fuga de moradores para outros estados não é observada; 2020–2021 foram afetados pela COVID-19; a classificação da despesa por subfunção é frágil em alguns municípios; o pré-natal de 2025 ainda não está disponível. Internações por condições sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.
 
 ## Pipeline: do dado bruto ao site
 
@@ -105,6 +156,13 @@ As siglas também são explicadas ao passar o cursor sobre elas em qualquer pág
 | CIR | Comissão Intergestores Regional (região de saúde) |
 | PDR | Plano Diretor de Regionalização |
 | DEA | Análise Envoltória de Dados |
+| BCC | Modelo DEA de Banker, Charnes e Cooper (retornos variáveis de escala) |
+| IC | Intervalo de confiança (de 95%, nos escores de eficiência) |
+| EC | Mudança de eficiência (componente do índice de Malmquist) |
+| TC | Deslocamento tecnológico (componente do índice de Malmquist) |
+| MI | Índice de Malmquist (variação da produtividade entre dois anos) |
+| IPCA | Índice Nacional de Preços ao Consumidor Amplo (IBGE), usado para levar valores a reais de 2025 |
+| COSEMS-MT | Conselho de Secretarias Municipais de Saúde de Mato Grosso |
 | TMI | Taxa de mortalidade infantil (óbitos de menores de 1 ano por mil nascidos vivos) |
 | PPSUS | Programa Pesquisa para o SUS: gestão compartilhada em saúde |
 | FAPEMAT | Fundação de Amparo à Pesquisa do Estado de Mato Grosso |

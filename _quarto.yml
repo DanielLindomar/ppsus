@@ -6,6 +6,8 @@ project:
     - "!dados_site/"
   resources:
     - arquivos/
+  # Windows grava alguns caminhos com barra invertida (rodapé, redirecionamentos): normaliza para '/'
+  post-render: scripts/07_pos_render.py
 
 website:
   title: "Observatório PPSUS-MT"
@@ -31,8 +33,22 @@ website:
         text: Indicadores
       - href: deslocamento/index.qmd
         text: Deslocamento
-      - href: eficiencia.qmd
-        text: "Eficiência (em construção)"
+      - text: Eficiência
+        menu:
+          - href: eficiencia/index.qmd
+            text: "Como ler e visão geral"
+          - href: eficiencia/atencao-basica.qmd
+            text: "Atenção básica"
+          - href: eficiencia/consolidado.qmd
+            text: "Consolidado municipal"
+          - href: eficiencia/media-complexidade.qmd
+            text: "Média complexidade (produção e acesso)"
+          - href: eficiencia/hospitais.qmd
+            text: "Hospitais SUS"
+          - href: eficiencia/alta-complexidade.qmd
+            text: "Alta complexidade (regiões de saúde)"
+          - href: eficiencia/produtividade.qmd
+            text: "Produtividade (Malmquist)"
       - href: dados/index.qmd
         text: Dados
       - href: metodologia.qmd
@@ -54,7 +70,7 @@ website:
       :::
       [Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.]{.rodape-citacao}
 
-      [Versão 0.1 · atualizado em 01/10/2026 · Conteúdo sob licença CC BY 4.0 · [Código-fonte](https://github.com/daniellindomar/ppsus)]{.rodape-versao}
+      [Versão 0.2 · atualizado em 08/10/2026 · Conteúdo sob licença CC BY 4.0 · [Código-fonte](https://github.com/daniellindomar/ppsus)]{.rodape-versao}
       ::::
 
 format:
