@@ -1,0 +1,97 @@
+co_regsaud,regiao_saude,ano,acesso_p1000,autossuficiencia_pct,acesso_alto,autossuf_alta,quadrante,prioridade_anexo_i,mediana_acesso_estadual,escore_m3_pooled,publicavel_m3
+51001,Alto Tapajós,2020,1.334597,0.0,1,0,dependente com acesso adequado,0,0.809259,,0
+51002,Baixada Cuiabana,2020,1.831012,176.476907,1,1,polo,0,0.809259,0.567637,1
+51003,Araguaia Xingu,2020,0.27135,0.0,0,0,dependente com baixo acesso,1,0.809259,,0
+51004,Centro Norte,2020,0.874066,0.0,1,0,dependente com acesso adequado,0,0.809259,,0
+51005,Garças Araguaia,2020,0.448822,1.754386,0,0,dependente com baixo acesso,1,0.809259,,0
+51006,Médio Araguaia,2020,0.308725,0.0,0,0,dependente com baixo acesso,1,0.809259,,0
+51007,Médio Norte Matogrossense,2020,0.814893,0.0,1,0,dependente com acesso adequado,0,0.809259,,0
+51008,Noroeste Matogrossense,2020,0.579409,2.040816,0,0,dependente com baixo acesso,1,0.809259,,0
+51009,Norte Araguaia Karajá,2020,0.237906,0.0,0,0,dependente com baixo acesso,1,0.809259,,0
+51010,Norte Matogrossense,2020,1.485019,0.0,1,0,dependente com acesso adequado,0,0.809259,,0
+51011,Oeste Matogrossense,2020,0.803624,8.75,0,0,dependente com baixo acesso,1,0.809259,,0
+51012,Sudoeste Matogrossense,2020,0.665718,0.0,0,0,dependente com baixo acesso,1,0.809259,,0
+51013,Sul Matogrossense,2020,2.656624,86.173184,1,1,em transição,0,0.809259,0.592698,1
+51014,Teles Pires,2020,1.481702,94.072948,1,1,em transição,0,0.809259,0.788844,1
+51015,Vale do Peixoto,2020,1.027106,0.909091,1,0,dependente com acesso adequado,0,0.809259,,0
+51016,Vale dos Arinos,2020,0.611519,0.0,0,0,dependente com baixo acesso,1,0.809259,,0
+51001,Alto Tapajós,2021,1.124849,0.0,1,0,dependente com acesso adequado,0,1.045797,,0
+51002,Baixada Cuiabana,2021,2.058594,182.050071,1,1,polo,0,1.045797,0.596279,1
+51003,Araguaia Xingu,2021,0.320941,6.666667,0,0,dependente com baixo acesso,1,1.045797,,0
+51004,Centro Norte,2021,1.131774,0.0,1,0,dependente com acesso adequado,0,1.045797,,0
+51005,Garças Araguaia,2021,0.516958,1.515152,0,0,dependente com baixo acesso,1,1.045797,,0
+51006,Médio Araguaia,2021,0.391819,0.0,0,0,dependente com baixo acesso,1,1.045797,,0
+51007,Médio Norte Matogrossense,2021,1.066937,0.0,1,0,dependente com acesso adequado,0,1.045797,,0
+51008,Noroeste Matogrossense,2021,0.638588,0.0,0,0,dependente com baixo acesso,1,1.045797,,0
+51009,Norte Araguaia Karajá,2021,0.352444,0.0,0,0,dependente com baixo acesso,1,1.045797,,0
+51010,Norte Matogrossense,2021,1.865644,0.78125,1,0,dependente com acesso adequado,0,1.045797,,0
+51011,Oeste Matogrossense,2021,0.965232,5.699482,0,0,dependente com baixo acesso,1,1.045797,,0
+51012,Sudoeste Matogrossense,2021,1.024658,1.612903,0,0,dependente com baixo acesso,1,1.045797,,0
+51013,Sul Matogrossense,2021,2.910889,88.741303,1,1,em transição,0,1.045797,0.648939,1
+51014,Teles Pires,2021,1.711956,88.560411,1,1,em transição,0,1.045797,0.815965,1
+51015,Vale do Peixoto,2021,1.509539,0.0,1,0,dependente com acesso adequado,0,1.045797,,0
+51016,Vale dos Arinos,2021,0.814136,4.545455,0,0,dependente com baixo acesso,1,1.045797,,0
+51001,Alto Tapajós,2022,1.439444,0.625,1,0,dependente com acesso adequado,0,1.149811,,0
+51002,Baixada Cuiabana,2022,2.281897,178.755187,1,1,polo,0,1.149811,0.603879,1
+51003,Araguaia Xingu,2022,0.364481,3.125,0,0,dependente com baixo acesso,1,1.149811,,0
+51004,Centro Norte,2022,1.346909,1.694915,1,0,dependente com acesso adequado,0,1.149811,,0
+51005,Garças Araguaia,2022,0.48815,0.0,0,0,dependente com baixo acesso,1,1.149811,,0
+51006,Médio Araguaia,2022,0.600286,35.211268,0,0,dependente com baixo acesso,1,1.149811,,0
+51007,Médio Norte Matogrossense,2022,1.181595,0.333333,1,0,dependente com acesso adequado,0,1.149811,,0
+51008,Noroeste Matogrossense,2022,1.105673,3.821656,0,0,dependente com baixo acesso,1,1.149811,,0
+51009,Norte Araguaia Karajá,2022,0.584567,6.666667,0,0,dependente com baixo acesso,1,1.149811,,0
+51010,Norte Matogrossense,2022,3.322502,0.0,1,0,dependente com acesso adequado,0,1.149811,,0
+51011,Oeste Matogrossense,2022,1.100557,10.837438,0,0,dependente com baixo acesso,1,1.149811,,0
+51012,Sudoeste Matogrossense,2022,1.030223,2.34375,0,0,dependente com baixo acesso,1,1.149811,,0
+51013,Sul Matogrossense,2022,3.5007,92.631579,1,1,em transição,0,1.149811,0.770874,1
+51014,Teles Pires,2022,1.974721,101.424501,1,1,polo,0,1.149811,0.873408,1
+51015,Vale do Peixoto,2022,1.941267,0.510204,1,0,dependente com acesso adequado,0,1.149811,,0
+51016,Vale dos Arinos,2022,1.118026,0.0,0,0,dependente com baixo acesso,1,1.149811,,0
+51001,Alto Tapajós,2023,1.769724,0.0,1,0,dependente com acesso adequado,0,1.709057,,0
+51002,Baixada Cuiabana,2023,2.671681,194.001387,1,1,polo,0,1.709057,0.711884,1
+51003,Araguaia Xingu,2023,0.749281,5.970149,0,0,dependente com baixo acesso,1,1.709057,,0
+51004,Centro Norte,2023,2.078171,0.0,1,0,dependente com acesso adequado,0,1.709057,,0
+51005,Garças Araguaia,2023,0.727056,6.666667,0,0,dependente com baixo acesso,1,1.709057,,0
+51006,Médio Araguaia,2023,0.660874,4.938272,0,0,dependente com baixo acesso,1,1.709057,,0
+51007,Médio Norte Matogrossense,2023,1.64839,0.0,0,0,dependente com baixo acesso,1,1.709057,,0
+51008,Noroeste Matogrossense,2023,2.018487,2.068966,1,0,dependente com acesso adequado,0,1.709057,,0
+51009,Norte Araguaia Karajá,2023,0.839919,0.0,0,0,dependente com baixo acesso,1,1.709057,,0
+51010,Norte Matogrossense,2023,3.38466,0.429185,1,0,dependente com acesso adequado,0,1.709057,,0
+51011,Oeste Matogrossense,2023,1.125362,7.655502,0,0,dependente com baixo acesso,1,1.709057,,0
+51012,Sudoeste Matogrossense,2023,1.573832,1.005025,0,0,dependente com baixo acesso,1,1.709057,,0
+51013,Sul Matogrossense,2023,4.803916,89.655172,1,1,em transição,0,1.709057,0.986251,1
+51014,Teles Pires,2023,2.645322,95.855978,1,1,em transição,0,1.709057,0.848882,1
+51015,Vale do Peixoto,2023,1.90836,0.0,1,0,dependente com acesso adequado,0,1.709057,,0
+51016,Vale dos Arinos,2023,1.124818,0.0,0,0,dependente com baixo acesso,1,1.709057,,0
+51001,Alto Tapajós,2024,2.506375,0.694444,1,0,dependente com acesso adequado,0,2.084448,,0
+51002,Baixada Cuiabana,2024,3.480039,181.145833,1,1,polo,0,2.084448,0.926898,1
+51003,Araguaia Xingu,2024,0.867236,6.329114,0,0,dependente com baixo acesso,1,2.084448,,0
+51004,Centro Norte,2024,2.638281,0.0,1,0,dependente com acesso adequado,0,2.084448,,0
+51005,Garças Araguaia,2024,1.003016,2.027027,0,0,dependente com baixo acesso,1,2.084448,,0
+51006,Médio Araguaia,2024,1.039133,1.515152,0,0,dependente com baixo acesso,1,2.084448,,0
+51007,Médio Norte Matogrossense,2024,1.892449,0.39604,0,0,dependente com baixo acesso,1,2.084448,,0
+51008,Noroeste Matogrossense,2024,2.276447,3.927492,1,0,dependente com acesso adequado,0,2.084448,,0
+51009,Norte Araguaia Karajá,2024,0.860167,0.0,0,0,dependente com baixo acesso,1,2.084448,,0
+51010,Norte Matogrossense,2024,3.935646,0.3663,1,0,dependente com acesso adequado,0,2.084448,,0
+51011,Oeste Matogrossense,2024,1.711212,16.25,0,0,dependente com baixo acesso,1,2.084448,,0
+51012,Sudoeste Matogrossense,2024,1.59274,0.0,0,0,dependente com baixo acesso,1,2.084448,,0
+51013,Sul Matogrossense,2024,4.790907,89.212626,1,1,em transição,0,2.084448,1.0,1
+51014,Teles Pires,2024,2.682706,109.691913,1,1,polo,0,2.084448,0.91065,1
+51015,Vale do Peixoto,2024,3.103638,20.560748,1,0,dependente com acesso adequado,0,2.084448,,0
+51016,Vale dos Arinos,2024,1.514488,1.204819,0,0,dependente com baixo acesso,1,2.084448,,0
+51001,Alto Tapajós,2025,2.577586,0.0,1,0,dependente com acesso adequado,0,2.448869,,0
+51002,Baixada Cuiabana,2025,3.902122,191.668579,1,1,polo,0,2.448869,1.0,1
+51003,Araguaia Xingu,2025,1.259213,2.586207,0,0,dependente com baixo acesso,1,2.448869,,0
+51004,Centro Norte,2025,3.331993,0.0,1,0,dependente com acesso adequado,0,2.448869,,0
+51005,Garças Araguaia,2025,1.516629,21.145374,0,0,dependente com baixo acesso,1,2.448869,,0
+51006,Médio Araguaia,2025,1.433576,6.417112,0,0,dependente com baixo acesso,1,2.448869,,0
+51007,Médio Norte Matogrossense,2025,2.363735,0.468019,0,0,dependente com baixo acesso,1,2.448869,,0
+51008,Noroeste Matogrossense,2025,3.011553,1.363636,1,0,dependente com acesso adequado,0,2.448869,,0
+51009,Norte Araguaia Karajá,2025,1.179854,0.0,0,0,dependente com baixo acesso,1,2.448869,,0
+51010,Norte Matogrossense,2025,4.481785,0.321543,1,0,dependente com acesso adequado,0,2.448869,,0
+51011,Oeste Matogrossense,2025,2.414127,13.968958,0,0,dependente com baixo acesso,1,2.448869,,0
+51012,Sudoeste Matogrossense,2025,2.390542,0.643087,0,0,dependente com baixo acesso,1,2.448869,,0
+51013,Sul Matogrossense,2025,4.690107,85.624782,1,1,em transição,0,2.448869,0.9985,1
+51014,Teles Pires,2025,2.642206,107.903123,1,1,polo,0,2.448869,0.900152,1
+51015,Vale do Peixoto,2025,2.483611,8.914729,1,0,dependente com acesso adequado,0,2.448869,,0
+51016,Vale dos Arinos,2025,2.019798,0.0,0,0,dependente com baixo acesso,1,2.448869,,0

@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Evolução da produtividade e da aproximação às melhores práticas dos municípios e hospitais SUS de Mato Grosso, 2020–2025, por modelo e região de saúde (índice de Malmquist)">
+
+<title>Produtividade: evolução 2020–2025 (índice de Malmquist) – Observatório PPSUS-MT</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-3f3c2766e82e7a818a36b889e02efff9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/core-js-2.5.3/shim.min.js"></script>
+
+<script src="../site_libs/react-18.2.0/react.min.js"></script>
+
+<script src="../site_libs/react-18.2.0/react-dom.min.js"></script>
+
+<script src="../site_libs/reactwidget-2.0.0/react-tools.js"></script>
+
+<link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="../site_libs/reactable-0.4.5/reactable.css" rel="stylesheet">
+
+<script src="../site_libs/reactable-binding-0.4.5/reactable.js"></script>
+
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logos/unemat-branco.png" alt="UNEMAT — Universidade do Estado de Mato Grosso" class="navbar-logo light-content">
+    <img src="../assets/logos/unemat-branco.png" alt="UNEMAT — Universidade do Estado de Mato Grosso" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Observatório PPSUS-MT</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../municipios/index.html"> 
+<span class="menu-text">Municípios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../indicadores/index.html"> 
+<span class="menu-text">Indicadores</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../deslocamento/index.html"> 
+<span class="menu-text">Deslocamento</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-eficiência" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Eficiência</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-eficiência">    
+        <li>
+    <a class="dropdown-item" href="../eficiencia/index.html">
+ <span class="dropdown-text">Como ler e visão geral</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/atencao-basica.html">
+ <span class="dropdown-text">Atenção básica</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/consolidado.html">
+ <span class="dropdown-text">Consolidado municipal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/media-complexidade.html">
+ <span class="dropdown-text">Média complexidade (produção e acesso)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/hospitais.html">
+ <span class="dropdown-text">Hospitais SUS</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/alta-complexidade.html">
+ <span class="dropdown-text">Alta complexidade (regiões de saúde)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/produtividade.html">
+ <span class="dropdown-text">Produtividade (Malmquist)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../dados/index.html"> 
+<span class="menu-text">Dados</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../metodologia.html"> 
+<span class="menu-text">Metodologia</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sobre.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/daniellindomar/ppsus"> <i class="bi bi-github" role="img" aria-label="Código-fonte no GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Produtividade: evolução 2020–2025 (índice de Malmquist)</h1>
+</div>
+
+<div>
+  <div class="description">
+    Evolução da produtividade e da aproximação às melhores práticas dos municípios e hospitais SUS de Mato Grosso, 2020–2025, por modelo e região de saúde (índice de Malmquist)
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output-display">
+<style>
+.chip-faixa { display:inline-block; padding:1px 8px; border-radius:10px; font-size:.76rem; font-weight:600;
+  border:1px solid #9cbcba; white-space:nowrap; line-height:1.5; }
+.chip-quad { display:inline-block; padding:1px 8px; border-radius:10px; font-size:.76rem; font-weight:600; white-space:nowrap; }
+.efx-cruza { font-size:.72rem; color:#6b7280; display:block; }
+.efx-spec { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; margin:.6rem 0 1.2rem; }
+.efx-spec ul { margin:.2rem 0 0 1.1rem; padding:0; } .efx-spec li { margin:.15rem 0; }
+.efx-seta { font-size:1.6rem; color:#0E5A5E; align-self:center; text-align:center; }
+.efx-quad-grade { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap:.6rem; margin:.6rem 0 1rem; }
+@media (max-width: 640px) { .efx-quad-grade { grid-template-columns: minmax(0,1fr); } }
+.efx-quad { border:1px solid #d9e4e4; border-radius:8px; padding:.6rem .8rem; background:#fff; }
+.efx-quad h5 { font-size:.9rem; margin:0 0 .3rem; color:#0E5A5E; }
+.efx-quad p { font-size:.8rem; color:#4b5563; margin:.1rem 0 .4rem; }
+.efx-quad ul { margin:0 0 0 1rem; padding:0; font-size:.86rem; }
+.efx-ficha { border-left:4px solid #0E5A5E; background:#f8fbfb; padding:.6rem .9rem; margin:.6rem 0; border-radius:4px; font-size:.9rem; }
+.efx-ficha h5 { font-size:.95rem; margin:0 0 .3rem; }
+body.fullcontent main.content { min-width:0; }
+.rolagem-x { max-width:100%; overflow-x:auto; contain:inline-size; }
+.rolagem-x .reactable { max-width:100%; }
+.efx-nav { display:flex; flex-wrap:wrap; gap:.4rem; margin:0 0 1rem; }
+.efx-nav a.ativo { background:#0E5A5E; color:#fff; }
+</style>
+</div>
+<div class="cell-output-display">
+<nav class="efx-nav" aria-label="Páginas da seção Eficiência">
+<a class="btn btn-sm btn-outline-primary " href="index.html">Como ler</a>
+<a class="btn btn-sm btn-outline-primary " href="atencao-basica.html">Atenção básica</a>
+<a class="btn btn-sm btn-outline-primary " href="consolidado.html">Consolidado</a>
+<a class="btn btn-sm btn-outline-primary " href="media-complexidade.html">Média complexidade</a>
+<a class="btn btn-sm btn-outline-primary " href="hospitais.html">Hospitais</a>
+<a class="btn btn-sm btn-outline-primary " href="alta-complexidade.html">Alta complexidade</a>
+<a class="btn btn-sm btn-outline-primary ativo" href="produtividade.html" aria-current="page">Produtividade</a>
+</nav>
+</div>
+<div class="cell-output-display">
+<div class="faixa-construcao"><b>Resultados da versão 2 da estimação</b> (Resultados DEA v2, 08/10/2026), em validação com a SES-MT e o COSEMS-MT. Leia os escores por <b>faixa e intervalo de confiança</b>, não como ranking; eficiência mede o volume de produção obtido com os recursos disponíveis e <b>não</b> a qualidade do cuidado.</div>
+</div>
+<div class="cell-output-display">
+<nav class="nav-mun" aria-label="Seções desta página">
+<a class="btn btn-sm btn-outline-secondary" href="#como">Como ler</a>
+<a class="btn btn-sm btn-outline-secondary" href="#panorama">Panorama 2022–2025</a>
+<a class="btn btn-sm btn-outline-secondary" href="#modelos">Por modelo e janela</a>
+<a class="btn btn-sm btn-outline-secondary" href="#serie">Ano a ano</a>
+<a class="btn btn-sm btn-outline-secondary" href="#regioes">Por região de saúde</a>
+<a class="btn btn-sm btn-outline-secondary" href="#ressalvas">Ressalvas</a>
+<a class="btn btn-sm btn-outline-secondary" href="#arquivos">Arquivos</a>
+</nav>
+</div>
+</div>
+<p>Os escores de eficiência de cada ano comparam as unidades com as <strong>melhores práticas daquele ano</strong>. Para saber se um município ou hospital <strong>melhorou ao longo do tempo</strong>, usa-se o <strong>índice de Malmquist</strong>, que compara cada unidade consigo mesma entre dois anos consecutivos. Esta página resume essa evolução por modelo, por período e por região de saúde, de 2020 a 2025.</p>
+<section id="como" class="level2">
+<h2 class="anchored" data-anchor-id="como">Como ler</h2>
+<p>O índice de Malmquist (MI) mede a variação da produtividade — produção obtida por unidade de recurso — e se decompõe em dois componentes:</p>
+<ul>
+<li><strong>Aproximação às melhores práticas (EC, mudança de eficiência)</strong> — se a unidade ficou mais perto (EC &gt; 1) ou mais longe (EC &lt; 1) das melhores práticas do seu tempo. É o <strong>componente de gestão</strong>, sobre o qual o gestor local tem mais influência, e por isso é o destaque desta página e das fichas.</li>
+<li><strong>Deslocamento das melhores práticas (TC, mudança tecnológica)</strong> — se as próprias melhores práticas avançaram ou recuaram. Depende de fatores comuns a todos (tecnologia, financiamento, regras de registro) e é mostrado só como agregado, com reserva (veja a nota abaixo).</li>
+</ul>
+<p>MI = EC × TC. Os valores são médias geométricas anuais: 1,050 significa +5,0% ao ano; 0,970, −3,0% ao ano. Os períodos são lidos em duas <strong>janelas</strong> — <strong>2020–2022</strong> (pandemia e recuperação) e <strong>2022–2025</strong> (período recente, o de maior interesse para a gestão) — e no período completo. A tendência de cada unidade é rotulada “melhora consistente” (ou “piora consistente”) quando pelo menos duas transições têm intervalo de confiança inteiramente acima (abaixo) de 1, nenhuma no sentido oposto, e a média da janela é de pelo menos +2% (−2%) ao ano.</p>
+</section>
+<section id="panorama" class="level2">
+<h2 class="anchored" data-anchor-id="panorama">Panorama 2022–2025</h2>
+<p>Aproximação às melhores práticas (EC), média anual 2022–2025, em cada modelo. Clique no nome do modelo para abrir a página correspondente.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kpi-grade">
+<div class="kpi">
+<div class="kpi-rotulo">
+<a href="atencao-basica.html">Atenção básica</a>
+</div>
+<div class="kpi-valor">+5,7% ao ano</div>
+<div class="kpi-meta">aproximação às melhores práticas · média anual 2022–2025 · 137 unidades</div>
+<div class="kpi-comp">69% com melhora (EC &gt; 1) · índice de Malmquist +2,5% ao ano</div>
+</div>
+<div class="kpi">
+<div class="kpi-rotulo">
+<a href="consolidado.html">Consolidado municipal</a>
+</div>
+<div class="kpi-valor">+4,4% ao ano</div>
+<div class="kpi-meta">aproximação às melhores práticas · média anual 2022–2025 · 137 unidades</div>
+<div class="kpi-comp">64% com melhora (EC &gt; 1) · índice de Malmquist +1,3% ao ano</div>
+</div>
+<div class="kpi">
+<div class="kpi-rotulo">
+<a href="media-complexidade.html">Média complexidade (produção local)</a>
+</div>
+<div class="kpi-valor">+2,6% ao ano</div>
+<div class="kpi-meta">aproximação às melhores práticas · média anual 2022–2025 · 74 unidades</div>
+<div class="kpi-comp">50% com melhora (EC &gt; 1) · índice de Malmquist +3,5% ao ano</div>
+</div>
+<div class="kpi">
+<div class="kpi-rotulo">
+<a href="media-complexidade.html">Média complexidade (ótica do acesso)</a>
+</div>
+<div class="kpi-valor">+0,9% ao ano</div>
+<div class="kpi-meta">aproximação às melhores práticas · média anual 2022–2025 · 120 unidades</div>
+<div class="kpi-comp">52% com melhora (EC &gt; 1) · índice de Malmquist +1,2% ao ano</div>
+</div>
+<div class="kpi">
+<div class="kpi-rotulo">
+<a href="hospitais.html">Hospitais</a>
+</div>
+<div class="kpi-valor">+7,7% ao ano</div>
+<div class="kpi-meta">aproximação às melhores práticas · média anual 2022–2025 · 55 unidades</div>
+<div class="kpi-comp">71% com melhora (EC &gt; 1) · índice de Malmquist +5,0% ao ano</div>
+</div>
+</div>
+</div>
+</div>
+<p>Em 2022–2025, a aproximação às melhores práticas foi positiva em 5 dos 5 modelos: atenção básica, +5,7% ao ano; consolidado municipal, +4,4% ao ano; média complexidade (produção local), +2,6% ao ano; média complexidade (ótica do acesso), +0,9% ao ano; hospitais, +7,7% ao ano. A maior aproximação ocorreu em hospitais e a menor em média complexidade (ótica do acesso). Fonte: índice de Malmquist da estimação DEA v2 (08/10/2026), especificação em níveis absolutos com retornos constantes de escala; dados de SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Nota sobre o deslocamento das melhores práticas (TC)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Nota sobre o deslocamento das melhores práticas (TC)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Em 2022–2025 o TC fica abaixo de 1 em 3 dos 5 modelos (atenção básica, consolidado municipal e hospitais). Isso pode refletir o <strong>crescimento do registro de profissionais e equipamentos no CNES após 2022</strong>, sem aumento proporcional da produção, e não uma piora real das melhores práticas: quando os recursos físicos são mantidos no nível de 2022, o TC desses modelos sobe. Por isso o TC aparece aqui em cinza, como informação técnica, e as fichas municipais e hospitalares publicam apenas a aproximação às melhores práticas (EC) e o índice de Malmquist.</p>
+</div>
+</div>
+</section>
+<section id="modelos" class="level2">
+<h2 class="anchored" data-anchor-id="modelos">Por modelo e janela</h2>
+<p>Mato Grosso (média geométrica das unidades avaliadas). Na média complexidade pela ótica do acesso há duas fronteiras — municípios com e sem leito SUS — e nos hospitais, dois grupos (públicos e privados/filantrópicos), mostrados separadamente.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="rolagem-x">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-1516d33cb41ae4e4e41b" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1516d33cb41ae4e4e41b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Modelo":["Atenção básica","Atenção básica","Atenção básica","Consolidado municipal","Consolidado municipal","Consolidado municipal","Média complexidade (produção local)","Média complexidade (produção local)","Média complexidade (produção local)","Média complexidade (ótica do acesso)","Média complexidade (ótica do acesso)","Média complexidade (ótica do acesso)","Média complexidade (ótica do acesso)","Média complexidade (ótica do acesso)","Média complexidade (ótica do acesso)","Média complexidade (ótica do acesso)","Média complexidade (ótica do acesso)","Média complexidade (ótica do acesso)","Hospitais","Hospitais","Hospitais","Hospitais","Hospitais","Hospitais","Hospitais","Hospitais","Hospitais"],"cod":["M1","M1","M1","M0","M0","M0","M2","M2","M2","M2A","M2A","M2A","M2A","M2A","M2A","M2A","M2A","M2A","H","H","H","H","H","H","H","H","H"],"Grupo":["Todos","Todos","Todos","Todos","Todos","Todos","Todos","Todos","Todos","Todos","Todos","Todos","Municípios com leito SUS","Municípios com leito SUS","Municípios com leito SUS","Municípios sem leito SUS","Municípios sem leito SUS","Municípios sem leito SUS","Todos","Todos","Todos","Hospitais públicos","Hospitais públicos","Hospitais públicos","Hospitais privados e filantrópicos","Hospitais privados e filantrópicos","Hospitais privados e filantrópicos"],"Janela":["2020–2022","2022–2025","2020–2025","2020–2022","2022–2025","2020–2025","2020–2022","2022–2025","2020–2025","2020–2022","2022–2025","2020–2025","2020–2022","2022–2025","2020–2025","2020–2022","2022–2025","2020–2025","2020–2022","2022–2025","2020–2025","2020–2022","2022–2025","2020–2025","2020–2022","2022–2025","2020–2025"],"n":[126,137,124,126,137,124,70,74,68,113,120,111,81,85,79,32,35,32,52,55,43,38,42,31,14,13,12],"EC":[1.06159,1.057042,1.058086,0.999205,1.044246,1.024723,1.094943,1.025569,1.054223,0.997492,1.008863,1.003147,1.012676,1.04578,1.031886,0.960068,0.924542,0.935576,1.119672,1.077198,1.0944,1.145072,1.084595,1.107315,1.053533,1.053642,1.061729],"pct_ec":[62.6984126984127,69.3430656934307,77.4193548387097,41.2698412698413,63.5036496350365,57.258064516129,67.1428571428571,50,70.5882352941177,53.0973451327434,52.5,56.7567567567568,59.2592592592593,63.5294117647059,73.4177215189873,37.5,25.7142857142857,15.625,73.0769230769231,70.9090909090909,86.046511627907,78.9473684210526,73.8095238095238,87.0967741935484,57.1428571428571,61.5384615384615,83.3333333333333],"MI":[1.070804,1.025472,1.043906,1.064971,1.013173,1.031926,1.077608,1.035298,1.054324,1.028492,1.012275,1.01916,1.025277,1.020645,1.0234,1.036674,0.992233,1.008766,1.099168,1.050325,1.067482,1.127088,1.06283,1.08628,1.026822,1.010921,1.020414],"TC":[1.008679,0.970133,0.986598,1.065818,0.970243,1.007029,0.984168,1.009486,1.000096,1.031077,1.003382,1.015963,1.012443,0.975965,0.991776,1.079792,1.073215,1.07823,0.981688,0.975053,0.975404,0.984295,0.979932,0.981003,0.974646,0.959454,0.961086],"melhora":[19,26,21,3,22,17,8,10,12,3,9,5,3,7,5,0,2,0,4,8,11,4,8,10,0,0,1],"piora":[6,1,0,8,2,4,2,1,1,4,6,6,1,0,0,3,6,6,0,0,0,0,0,0,0,0,0]},"columns":[{"id":"Modelo","name":"Modelo","type":"character","minWidth":170},{"id":"cod","name":"cod","type":"character","show":false},{"id":"Grupo","name":"Grupo","type":"character","minWidth":150},{"id":"Janela","name":"Janela","type":"character","minWidth":90},{"id":"n","name":"Unidades","type":"numeric","minWidth":70,"align":"right"},{"id":"EC","name":"Aproximação às melhores práticas (EC)","type":"numeric","cell":["<b>+6,2% ao ano<\/b><div class=\"sub\">índice 1,062<\/div>","<b>+5,7% ao ano<\/b><div class=\"sub\">índice 1,057<\/div>","<b>+5,8% ao ano<\/b><div class=\"sub\">índice 1,058<\/div>","<b>−0,1% ao ano<\/b><div class=\"sub\">índice 0,999<\/div>","<b>+4,4% ao ano<\/b><div class=\"sub\">índice 1,044<\/div>","<b>+2,5% ao ano<\/b><div class=\"sub\">índice 1,025<\/div>","<b>+9,5% ao ano<\/b><div class=\"sub\">índice 1,095<\/div>","<b>+2,6% ao ano<\/b><div class=\"sub\">índice 1,026<\/div>","<b>+5,4% ao ano<\/b><div class=\"sub\">índice 1,054<\/div>","<b>−0,3% ao ano<\/b><div class=\"sub\">índice 0,997<\/div>","<b>+0,9% ao ano<\/b><div class=\"sub\">índice 1,009<\/div>","<b>+0,3% ao ano<\/b><div class=\"sub\">índice 1,003<\/div>","<b>+1,3% ao ano<\/b><div class=\"sub\">índice 1,013<\/div>","<b>+4,6% ao ano<\/b><div class=\"sub\">índice 1,046<\/div>","<b>+3,2% ao ano<\/b><div class=\"sub\">índice 1,032<\/div>","<b>−4,0% ao ano<\/b><div class=\"sub\">índice 0,960<\/div>","<b>−7,5% ao ano<\/b><div class=\"sub\">índice 0,925<\/div>","<b>−6,4% ao ano<\/b><div class=\"sub\">índice 0,936<\/div>","<b>+12,0% ao ano<\/b><div class=\"sub\">índice 1,120<\/div>","<b>+7,7% ao ano<\/b><div class=\"sub\">índice 1,077<\/div>","<b>+9,4% ao ano<\/b><div class=\"sub\">índice 1,094<\/div>","<b>+14,5% ao ano<\/b><div class=\"sub\">índice 1,145<\/div>","<b>+8,5% ao ano<\/b><div class=\"sub\">índice 1,085<\/div>","<b>+10,7% ao ano<\/b><div class=\"sub\">índice 1,107<\/div>","<b>+5,4% ao ano<\/b><div class=\"sub\">índice 1,054<\/div>","<b>+5,4% ao ano<\/b><div class=\"sub\">índice 1,054<\/div>","<b>+6,2% ao ano<\/b><div class=\"sub\">índice 1,062<\/div>"],"html":true,"minWidth":150,"align":"right"},{"id":"pct_ec","name":"Unidades com EC > 1","type":"numeric","cell":["62,7%","69,3%","77,4%","41,3%","63,5%","57,3%","67,1%","50,0%","70,6%","53,1%","52,5%","56,8%","59,3%","63,5%","73,4%","37,5%","25,7%","15,6%","73,1%","70,9%","86,0%","78,9%","73,8%","87,1%","57,1%","61,5%","83,3%"],"minWidth":90,"align":"right"},{"id":"MI","name":"Índice de Malmquist (MI)","type":"numeric","cell":["+7,1% ao ano<div class=\"sub\">índice 1,071<\/div>","+2,5% ao ano<div class=\"sub\">índice 1,025<\/div>","+4,4% ao ano<div class=\"sub\">índice 1,044<\/div>","+6,5% ao ano<div class=\"sub\">índice 1,065<\/div>","+1,3% ao ano<div class=\"sub\">índice 1,013<\/div>","+3,2% ao ano<div class=\"sub\">índice 1,032<\/div>","+7,8% ao ano<div class=\"sub\">índice 1,078<\/div>","+3,5% ao ano<div class=\"sub\">índice 1,035<\/div>","+5,4% ao ano<div class=\"sub\">índice 1,054<\/div>","+2,8% ao ano<div class=\"sub\">índice 1,028<\/div>","+1,2% ao ano<div class=\"sub\">índice 1,012<\/div>","+1,9% ao ano<div class=\"sub\">índice 1,019<\/div>","+2,5% ao ano<div class=\"sub\">índice 1,025<\/div>","+2,1% ao ano<div class=\"sub\">índice 1,021<\/div>","+2,3% ao ano<div class=\"sub\">índice 1,023<\/div>","+3,7% ao ano<div class=\"sub\">índice 1,037<\/div>","−0,8% ao ano<div class=\"sub\">índice 0,992<\/div>","+0,9% ao ano<div class=\"sub\">índice 1,009<\/div>","+9,9% ao ano<div class=\"sub\">índice 1,099<\/div>","+5,0% ao ano<div class=\"sub\">índice 1,050<\/div>","+6,7% ao ano<div class=\"sub\">índice 1,067<\/div>","+12,7% ao ano<div class=\"sub\">índice 1,127<\/div>","+6,3% ao ano<div class=\"sub\">índice 1,063<\/div>","+8,6% ao ano<div class=\"sub\">índice 1,086<\/div>","+2,7% ao ano<div class=\"sub\">índice 1,027<\/div>","+1,1% ao ano<div class=\"sub\">índice 1,011<\/div>","+2,0% ao ano<div class=\"sub\">índice 1,020<\/div>"],"html":true,"minWidth":120,"align":"right"},{"id":"TC","name":"Deslocamento das melhores práticas (TC)*","type":"numeric","cell":["<span style=\"color:#6b7280\">1,009<\/span>","<span style=\"color:#6b7280\">0,970<\/span>","<span style=\"color:#6b7280\">0,987<\/span>","<span style=\"color:#6b7280\">1,066<\/span>","<span style=\"color:#6b7280\">0,970<\/span>","<span style=\"color:#6b7280\">1,007<\/span>","<span style=\"color:#6b7280\">0,984<\/span>","<span style=\"color:#6b7280\">1,009<\/span>","<span style=\"color:#6b7280\">1,000<\/span>","<span style=\"color:#6b7280\">1,031<\/span>","<span style=\"color:#6b7280\">1,003<\/span>","<span style=\"color:#6b7280\">1,016<\/span>","<span style=\"color:#6b7280\">1,012<\/span>","<span style=\"color:#6b7280\">0,976<\/span>","<span style=\"color:#6b7280\">0,992<\/span>","<span style=\"color:#6b7280\">1,080<\/span>","<span style=\"color:#6b7280\">1,073<\/span>","<span style=\"color:#6b7280\">1,078<\/span>","<span style=\"color:#6b7280\">0,982<\/span>","<span style=\"color:#6b7280\">0,975<\/span>","<span style=\"color:#6b7280\">0,975<\/span>","<span style=\"color:#6b7280\">0,984<\/span>","<span style=\"color:#6b7280\">0,980<\/span>","<span style=\"color:#6b7280\">0,981<\/span>","<span style=\"color:#6b7280\">0,975<\/span>","<span style=\"color:#6b7280\">0,959<\/span>","<span style=\"color:#6b7280\">0,961<\/span>"],"html":true,"minWidth":130,"align":"right"},{"id":"melhora","name":"Melhora consistente (EC)","type":"numeric","cell":["19","26","21","3","22","17","8","10","12","3","9","5","3","7","5","0","2","0","4","8","11","4","8","10","0","0","1"],"minWidth":90,"align":"right"},{"id":"piora","name":"Piora consistente (EC)","type":"numeric","cell":["6","1","0","8","2","4","2","1","1","4","6","6","1","0","0","3","6","6","0","0","0","0","0","0","0","0","0"],"minWidth":90,"align":"right"}],"pagination":false,"striped":true,"compact":true,"language":{"sortLabel":"Ordenar por {name}","filterPlaceholder":"Filtrar","filterLabel":"Filtrar {name}","searchPlaceholder":"Buscar","searchLabel":"Buscar na tabela","noData":"Nenhum registro encontrado","pageNext":"Próxima","pagePrevious":"Anterior","pageNumbers":"{page} de {pages}","pageInfo":"{rowStart}–{rowEnd} de {rows} linhas","pageSizeOptions":"Mostrar {rows}","pageNextLabel":"Próxima página","pagePreviousLabel":"Página anterior","pageNumberLabel":"Página {page}","pageJumpLabel":"Ir para a página","pageSizeOptionsLabel":"Linhas por página","groupExpandLabel":"Expandir grupo","detailsExpandLabel":"Mostrar detalhes","selectAllRowsLabel":"Selecionar todas as linhas","selectAllSubRowsLabel":"Selecionar todas as linhas do grupo","selectRowLabel":"Selecionar linha"},"dataKey":"56deccddd8cd9104240f875e83f1e975"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div class="nota-fonte">
+<p><em>Unidades</em>: municípios ou hospitais com ao menos uma transição publicável na janela. <em>Unidades com EC &gt; 1</em>: parcela das unidades que se aproximaram das melhores práticas. <em>Melhora / piora consistente</em>: unidades com tendência estatisticamente definida na janela (“—” quando a contagem não está disponível no agregado do modelo; nas fichas de cada unidade a tendência é sempre informada). * TC: ver a nota acima. Transições com quebra de registro (por exemplo, produção ambulatorial ou da atenção básica com registro incompleto) ficam fora das médias.</p>
+</div>
+</section>
+<section id="serie" class="level2">
+<h2 class="anchored" data-anchor-id="serie">Ano a ano</h2>
+<p>Média geométrica de cada transição anual, marcada no ano de chegada (2021 = transição 2020–2021).</p>
+<div class="cell">
+<div class="cell-output-display">
+<h4 class="anchored">Aproximação às melhores práticas (EC)</h4>
+<figure class="grafico-svg figure"><svg viewbox="0 0 680 260" width="100%" role="img" aria-label="Aproximação às melhores práticas (EC) por transição anual, Mato Grosso"><title>Aproximação às melhores práticas (EC) por transição anual, Mato Grosso</title><line x1="62" x2="666" y1="234.0" y2="234.0" stroke="#eef0f4"></line><text x="56" y="238.0" text-anchor="end" font-size="11" fill="#6b7280">0,95</text><line x1="62" x2="666" y1="178.5" y2="178.5" stroke="#eef0f4"></line><text x="56" y="182.5" text-anchor="end" font-size="11" fill="#6b7280">1,00</text><line x1="62" x2="666" y1="123.0" y2="123.0" stroke="#eef0f4"></line><text x="56" y="127.0" text-anchor="end" font-size="11" fill="#6b7280">1,05</text><line x1="62" x2="666" y1="67.5" y2="67.5" stroke="#eef0f4"></line><text x="56" y="71.5" text-anchor="end" font-size="11" fill="#6b7280">1,10</text><line x1="62" x2="666" y1="12.0" y2="12.0" stroke="#eef0f4"></line><text x="56" y="16.0" text-anchor="end" font-size="11" fill="#6b7280">1,15</text><text x="62.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2021</text><text x="213.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2022</text><text x="364.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2023</text><text x="515.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2024</text><text x="666.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2025</text><g class="serie"><path class="linha" d="M62.0 116.1 L213.0 103.8 L364.0 113.8 L515.0 119.0 L666.0 117.0" fill="none" stroke="#0E5A5E" stroke-width="2.4" data-tip="Atenção básica"></path><circle class="pt" cx="62.0" cy="116.1" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2021: 1,056"></circle><circle class="pt" cx="213.0" cy="103.8" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2022: 1,067"></circle><circle class="pt" cx="364.0" cy="113.8" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2023: 1,058"></circle><circle class="pt" cx="515.0" cy="119.0" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2024: 1,054"></circle><circle class="pt" cx="666.0" cy="117.0" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2025: 1,055"></circle></g><g class="serie"><path class="linha" d="M62.0 205.8 L213.0 144.3 L364.0 140.3 L515.0 105.8 L666.0 145.1" fill="none" stroke="#2E86AB" stroke-width="2.4" data-tip="Consolidado municipal"></path><circle class="pt" cx="62.0" cy="205.8" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2021: 0,975"></circle><circle class="pt" cx="213.0" cy="144.3" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2022: 1,031"></circle><circle class="pt" cx="364.0" cy="140.3" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2023: 1,034"></circle><circle class="pt" cx="515.0" cy="105.8" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2024: 1,066"></circle><circle class="pt" cx="666.0" cy="145.1" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2025: 1,030"></circle></g><g class="serie"><path class="linha" d="M62.0 114.5 L213.0 26.5 L364.0 172.5 L515.0 112.7 L666.0 181.0" fill="none" stroke="#b45309" stroke-width="2.4" data-tip="Média complexidade (produção local)"></path><circle class="pt" cx="62.0" cy="114.5" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2021: 1,058"></circle><circle class="pt" cx="213.0" cy="26.5" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2022: 1,137"></circle><circle class="pt" cx="364.0" cy="172.5" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2023: 1,005"></circle><circle class="pt" cx="515.0" cy="112.7" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2024: 1,059"></circle><circle class="pt" cx="666.0" cy="181.0" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2025: 0,998"></circle></g><g class="serie"><path class="linha" d="M62.0 199.9 L213.0 162.0 L364.0 171.9 L515.0 200.6 L666.0 130.4" fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-dasharray="6,4" data-tip="Média complexidade (ótica do acesso)"></path><circle class="pt" cx="62.0" cy="199.9" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2021: 0,981"></circle><circle class="pt" cx="213.0" cy="162.0" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2022: 1,015"></circle><circle class="pt" cx="364.0" cy="171.9" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2023: 1,006"></circle><circle class="pt" cx="515.0" cy="200.6" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2024: 0,980"></circle><circle class="pt" cx="666.0" cy="130.4" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2025: 1,043"></circle></g><g class="serie"><path class="linha" d="M62.0 43.2 L213.0 42.1 L364.0 66.4 L515.0 104.7 L666.0 137.2" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="6,4" data-tip="Hospitais"></path><circle class="pt" cx="62.0" cy="43.2" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2021: 1,122"></circle><circle class="pt" cx="213.0" cy="42.1" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2022: 1,123"></circle><circle class="pt" cx="364.0" cy="66.4" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2023: 1,101"></circle><circle class="pt" cx="515.0" cy="104.7" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2024: 1,066"></circle><circle class="pt" cx="666.0" cy="137.2" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2025: 1,037"></circle></g></svg><figcaption class="legenda-svg"><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#0E5A5E" stroke-width="2.4"></line></svg>Atenção básica</span><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#2E86AB" stroke-width="2.4"></line></svg>Consolidado municipal</span><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#b45309" stroke-width="2.4"></line></svg>Média complexidade (produção local)</span><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#7c3aed" stroke-width="2.4" stroke-dasharray="6,4"></line></svg>Média complexidade (ótica do acesso)</span><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="6,4"></line></svg>Hospitais</span></figcaption></figure>
+<h4 class="anchored">Índice de Malmquist (MI)</h4>
+<figure class="grafico-svg figure"><svg viewbox="0 0 680 260" width="100%" role="img" aria-label="Índice de Malmquist (MI) por transição anual, Mato Grosso"><title>Índice de Malmquist (MI) por transição anual, Mato Grosso</title><line x1="62" x2="666" y1="234.0" y2="234.0" stroke="#eef0f4"></line><text x="56" y="238.0" text-anchor="end" font-size="11" fill="#6b7280">0,95</text><line x1="62" x2="666" y1="189.6" y2="189.6" stroke="#eef0f4"></line><text x="56" y="193.6" text-anchor="end" font-size="11" fill="#6b7280">1,00</text><line x1="62" x2="666" y1="145.2" y2="145.2" stroke="#eef0f4"></line><text x="56" y="149.2" text-anchor="end" font-size="11" fill="#6b7280">1,05</text><line x1="62" x2="666" y1="100.8" y2="100.8" stroke="#eef0f4"></line><text x="56" y="104.8" text-anchor="end" font-size="11" fill="#6b7280">1,10</text><line x1="62" x2="666" y1="56.4" y2="56.4" stroke="#eef0f4"></line><text x="56" y="60.4" text-anchor="end" font-size="11" fill="#6b7280">1,15</text><line x1="62" x2="666" y1="12.0" y2="12.0" stroke="#eef0f4"></line><text x="56" y="16.0" text-anchor="end" font-size="11" fill="#6b7280">1,20</text><text x="62.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2021</text><text x="213.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2022</text><text x="364.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2023</text><text x="515.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2024</text><text x="666.0" y="252" text-anchor="middle" font-size="11" fill="#6b7280">2025</text><g class="serie"><path class="linha" d="M62.0 229.4 L213.0 13.9 L364.0 179.3 L515.0 155.8 L666.0 170.2" fill="none" stroke="#0E5A5E" stroke-width="2.4" data-tip="Atenção básica"></path><circle class="pt" cx="62.0" cy="229.4" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2021: 0,955"></circle><circle class="pt" cx="213.0" cy="13.9" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2022: 1,198"></circle><circle class="pt" cx="364.0" cy="179.3" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2023: 1,012"></circle><circle class="pt" cx="515.0" cy="155.8" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2024: 1,038"></circle><circle class="pt" cx="666.0" cy="170.2" r="2.2" fill="#0E5A5E" stroke="transparent" stroke-width="9" data-tip="Atenção básica · 2025: 1,022"></circle></g><g class="serie"><path class="linha" d="M62.0 209.7 L213.0 41.3 L364.0 173.3 L515.0 171.3 L666.0 192.9" fill="none" stroke="#2E86AB" stroke-width="2.4" data-tip="Consolidado municipal"></path><circle class="pt" cx="62.0" cy="209.7" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2021: 0,977"></circle><circle class="pt" cx="213.0" cy="41.3" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2022: 1,167"></circle><circle class="pt" cx="364.0" cy="173.3" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2023: 1,018"></circle><circle class="pt" cx="515.0" cy="171.3" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2024: 1,021"></circle><circle class="pt" cx="666.0" cy="192.9" r="2.2" fill="#2E86AB" stroke="transparent" stroke-width="9" data-tip="Consolidado municipal · 2025: 0,996"></circle></g><g class="serie"><path class="linha" d="M62.0 155.2 L213.0 83.5 L364.0 125.0 L515.0 217.9 L666.0 146.8" fill="none" stroke="#b45309" stroke-width="2.4" data-tip="Média complexidade (produção local)"></path><circle class="pt" cx="62.0" cy="155.2" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2021: 1,039"></circle><circle class="pt" cx="213.0" cy="83.5" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2022: 1,119"></circle><circle class="pt" cx="364.0" cy="125.0" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2023: 1,073"></circle><circle class="pt" cx="515.0" cy="217.9" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2024: 0,968"></circle><circle class="pt" cx="666.0" cy="146.8" r="2.2" fill="#b45309" stroke="transparent" stroke-width="9" data-tip="Média complexidade (produção local) · 2025: 1,048"></circle></g><g class="serie"><path class="linha" d="M62.0 157.3 L213.0 174.8 L364.0 138.4 L515.0 211.7 L666.0 181.5" fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-dasharray="6,4" data-tip="Média complexidade (ótica do acesso)"></path><circle class="pt" cx="62.0" cy="157.3" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2021: 1,036"></circle><circle class="pt" cx="213.0" cy="174.8" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2022: 1,017"></circle><circle class="pt" cx="364.0" cy="138.4" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2023: 1,058"></circle><circle class="pt" cx="515.0" cy="211.7" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2024: 0,975"></circle><circle class="pt" cx="666.0" cy="181.5" r="2.2" fill="#7c3aed" stroke="transparent" stroke-width="9" data-tip="Média complexidade (ótica do acesso) · 2025: 1,009"></circle></g><g class="serie"><path class="linha" d="M62.0 95.6 L213.0 98.5 L364.0 153.4 L515.0 170.6 L666.0 143.2" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="6,4" data-tip="Hospitais"></path><circle class="pt" cx="62.0" cy="95.6" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2021: 1,106"></circle><circle class="pt" cx="213.0" cy="98.5" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2022: 1,103"></circle><circle class="pt" cx="364.0" cy="153.4" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2023: 1,041"></circle><circle class="pt" cx="515.0" cy="170.6" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2024: 1,021"></circle><circle class="pt" cx="666.0" cy="143.2" r="2.2" fill="#6b7280" stroke="transparent" stroke-width="9" data-tip="Hospitais · 2025: 1,052"></circle></g></svg><figcaption class="legenda-svg"><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#0E5A5E" stroke-width="2.4"></line></svg>Atenção básica</span><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#2E86AB" stroke-width="2.4"></line></svg>Consolidado municipal</span><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#b45309" stroke-width="2.4"></line></svg>Média complexidade (produção local)</span><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#7c3aed" stroke-width="2.4" stroke-dasharray="6,4"></line></svg>Média complexidade (ótica do acesso)</span><span class="leg-item"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="6,4"></line></svg>Hospitais</span></figcaption></figure>
+</div>
+</div>
+<p>A transição 2021–2022 concentra variações grandes em vários modelos (retomada da produção após a pandemia e mudanças de registro); por isso a leitura gerencial privilegia as janelas, e não uma transição isolada.</p>
+</section>
+<section id="regioes" class="level2">
+<h2 class="anchored" data-anchor-id="regioes">Por região de saúde</h2>
+<p>Em cada aba, a aproximação às melhores práticas (EC) dos municípios ou hospitais de cada região de saúde, nas três janelas, com o índice de Malmquist de 2022–2025. As barras mostram a variação anual média de 2022–2025 (a linha tracejada é Mato Grosso). Regiões com poucas unidades oscilam mais; confira a coluna <em>Unidades</em>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Atenção básica</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Consolidado</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Média complexidade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Ótica do acesso</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Hospitais</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<figure class="grafico-svg figure"><svg viewbox="0 0 680 428" width="100%" role="img" aria-label="Atenção básica — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde"><title>Atenção básica — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde</title><text x="182" y="17.0" text-anchor="end" font-size="12" fill="#1f2937">Garças Araguaia</text><rect x="239.4" y="5.0" width="330.6" height="16" fill="#0E5A5E" data-tip="Garças Araguaia: +14,5% ao ano (índice 1,145; 10 unidades)"></rect><text x="575.0" y="17.0" font-size="11" fill="#374151">14,5%</text><text x="182" y="41.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Matogrossense</text><rect x="239.4" y="29.0" width="226.0" height="16" fill="#0E5A5E" data-tip="Norte Matogrossense: +9,9% ao ano (índice 1,099; 6 unidades)"></rect><text x="470.4" y="41.0" font-size="11" fill="#374151">9,9%</text><text x="182" y="65.0" text-anchor="end" font-size="12" fill="#1f2937">Baixada Cuiabana</text><rect x="239.4" y="53.0" width="206.0" height="16" fill="#0E5A5E" data-tip="Baixada Cuiabana: +9,0% ao ano (índice 1,090; 10 unidades)"></rect><text x="450.3" y="65.0" font-size="11" fill="#374151">9,0%</text><text x="182" y="89.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Araguaia Karajá</text><rect x="239.4" y="77.0" width="203.4" height="16" fill="#0E5A5E" data-tip="Norte Araguaia Karajá: +8,9% ao ano (índice 1,089; 5 unidades)"></rect><text x="447.8" y="89.0" font-size="11" fill="#374151">8,9%</text><text x="182" y="113.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Araguaia</text><rect x="239.4" y="101.0" width="152.0" height="16" fill="#0E5A5E" data-tip="Médio Araguaia: +6,7% ao ano (índice 1,067; 8 unidades)"></rect><text x="396.3" y="113.0" font-size="11" fill="#374151">6,7%</text><text x="182" y="137.0" text-anchor="end" font-size="12" fill="#1f2937">Araguaia Xingu</text><rect x="239.4" y="125.0" width="147.1" height="16" fill="#0E5A5E" data-tip="Araguaia Xingu: +6,4% ao ano (índice 1,064; 7 unidades)"></rect><text x="391.5" y="137.0" font-size="11" fill="#374151">6,4%</text><text x="182" y="161.0" text-anchor="end" font-size="12" fill="#1f2937">Sul Matogrossense</text><rect x="239.4" y="149.0" width="142.0" height="16" fill="#0E5A5E" data-tip="Sul Matogrossense: +6,2% ao ano (índice 1,062; 19 unidades)"></rect><text x="386.4" y="161.0" font-size="11" fill="#374151">6,2%</text><text x="182" y="185.0" text-anchor="end" font-size="12" fill="#1f2937">Sudoeste Matogrossense</text><rect x="239.4" y="173.0" width="135.5" height="16" fill="#0E5A5E" data-tip="Sudoeste Matogrossense: +5,9% ao ano (índice 1,059; 10 unidades)"></rect><text x="379.9" y="185.0" font-size="11" fill="#374151">5,9%</text><text x="182" y="209.0" text-anchor="end" font-size="12" fill="#1f2937">Alto Tapajós</text><rect x="239.4" y="197.0" width="121.3" height="16" fill="#0E5A5E" data-tip="Alto Tapajós: +5,3% ao ano (índice 1,053; 6 unidades)"></rect><text x="365.7" y="209.0" font-size="11" fill="#374151">5,3%</text><text x="182" y="233.0" text-anchor="end" font-size="12" fill="#1f2937">Noroeste Matogrossense</text><rect x="239.4" y="221.0" width="107.3" height="16" fill="#0E5A5E" data-tip="Noroeste Matogrossense: +4,7% ao ano (índice 1,047; 6 unidades)"></rect><text x="351.6" y="233.0" font-size="11" fill="#374151">4,7%</text><text x="182" y="257.0" text-anchor="end" font-size="12" fill="#1f2937">Oeste Matogrossense</text><rect x="239.4" y="245.0" width="77.6" height="16" fill="#0E5A5E" data-tip="Oeste Matogrossense: +3,4% ao ano (índice 1,034; 12 unidades)"></rect><text x="322.0" y="257.0" font-size="11" fill="#374151">3,4%</text><text x="182" y="281.0" text-anchor="end" font-size="12" fill="#1f2937">Teles Pires</text><rect x="239.4" y="269.0" width="67.0" height="16" fill="#0E5A5E" data-tip="Teles Pires: +2,9% ao ano (índice 1,029; 14 unidades)"></rect><text x="311.3" y="281.0" font-size="11" fill="#374151">2,9%</text><text x="182" y="305.0" text-anchor="end" font-size="12" fill="#1f2937">Vale do Peixoto</text><rect x="239.4" y="293.0" width="57.1" height="16" fill="#0E5A5E" data-tip="Vale do Peixoto: +2,5% ao ano (índice 1,025; 5 unidades)"></rect><text x="301.5" y="305.0" font-size="11" fill="#374151">2,5%</text><text x="182" y="329.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Norte Matogrossense</text><rect x="239.4" y="317.0" width="39.2" height="16" fill="#0E5A5E" data-tip="Médio Norte Matogrossense: +1,7% ao ano (índice 1,017; 9 unidades)"></rect><text x="283.6" y="329.0" font-size="11" fill="#374151">1,7%</text><text x="182" y="353.0" text-anchor="end" font-size="12" fill="#1f2937">Centro Norte</text><rect x="239.4" y="341.0" width="34.8" height="16" fill="#0E5A5E" data-tip="Centro Norte: +1,5% ao ano (índice 1,015; 7 unidades)"></rect><text x="279.2" y="353.0" font-size="11" fill="#374151">1,5%</text><text x="182" y="377.0" text-anchor="end" font-size="12" fill="#1f2937">Vale dos Arinos</text><rect x="190.0" y="365.0" width="49.4" height="16" fill="#0E5A5E" data-tip="Vale dos Arinos: −2,2% ao ano (índice 0,978; 3 unidades)"></rect><text x="244.4" y="377.0" font-size="11" fill="#374151">-2,2%</text><line x1="369.5" x2="369.5" y1="0" y2="388" stroke="#111827" stroke-dasharray="4,3" stroke-width="1.5"></line><text x="369.5" y="400" font-size="11" fill="#111827" text-anchor="middle">Mato Grosso: +5,7%</text></svg></figure>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<button class="btn btn-sm btn-outline-primary mb-2" type="button" onclick="Reactable.downloadDataCSV('tab-mq-m1-todos', 'ppsus-mt_malmquist_m1_regioes.csv')">Baixar a tabela (CSV)</button>
+<div class="rolagem-x">
+<div class="reactable html-widget html-fill-item" id="tab-mq-m1-todos" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="tab-mq-m1-todos">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Região":["Alto Tapajós","Araguaia Xingu","Baixada Cuiabana","Centro Norte","Garças Araguaia","Médio Araguaia","Médio Norte Matogrossense","Noroeste Matogrossense","Norte Araguaia Karajá","Norte Matogrossense","Oeste Matogrossense","Sudoeste Matogrossense","Sul Matogrossense","Teles Pires","Vale do Peixoto","Vale dos Arinos"],"n":[6,7,10,7,10,8,9,6,5,6,12,10,19,14,5,3],"EC2022":[1.064956,1.024611,0.992273,1.178476,1.092401,1.020383,1.017761,1.007335,1.176398,1.067466,1.09888,1.040122,1.09337,1.049205,1.046283,1.036937],"EC2225":[1.053181,1.064489,1.090279,1.015276,1.144927,1.066608,1.017203,1.04702,1.08916,1.09908,1.034013,1.059394,1.062254,1.029355,1.025047,0.978354],"EC2025":[1.061488,1.048355,1.038926,1.077652,1.12362,1.042055,1.012444,1.030962,1.123251,1.086324,1.055417,1.055696,1.071754,1.037249,1.033489,1.009342],"MI2225":[1.025785,0.990203,1.068227,0.968491,1.130835,1.031968,0.979222,1.019266,1.035588,1.078766,1.008306,1.021388,1.037813,0.995237,1.011208,0.96228],"TC2225":[0.973987,0.930214,0.979774,0.95392,0.987692,0.967524,0.962661,0.973492,0.950813,0.981517,0.975139,0.964124,0.976991,0.966855,0.9865,0.98357],"melhora":[1,2,3,1,2,2,2,1,3,2,1,2,1,1,2,0],"piora":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]},"columns":[{"id":"Região","name":"Região","type":"character","minWidth":170,"sticky":"left"},{"id":"n","name":"Unidades (2022–2025)","type":"numeric","minWidth":85,"align":"right"},{"id":"EC2022","name":"2020–2022","type":"numeric","cell":["+6,5%<div class=\"sub\">1,065<\/div>","+2,5%<div class=\"sub\">1,025<\/div>","−0,8%<div class=\"sub\">0,992<\/div>","+17,8%<div class=\"sub\">1,178<\/div>","+9,2%<div class=\"sub\">1,092<\/div>","+2,0%<div class=\"sub\">1,020<\/div>","+1,8%<div class=\"sub\">1,018<\/div>","+0,7%<div class=\"sub\">1,007<\/div>","+17,6%<div class=\"sub\">1,176<\/div>","+6,7%<div class=\"sub\">1,067<\/div>","+9,9%<div class=\"sub\">1,099<\/div>","+4,0%<div class=\"sub\">1,040<\/div>","+9,3%<div class=\"sub\">1,093<\/div>","+4,9%<div class=\"sub\">1,049<\/div>","+4,6%<div class=\"sub\">1,046<\/div>","+3,7%<div class=\"sub\">1,037<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2225","name":"2022–2025","type":"numeric","cell":["+5,3%<div class=\"sub\">1,053<\/div>","+6,4%<div class=\"sub\">1,064<\/div>","+9,0%<div class=\"sub\">1,090<\/div>","+1,5%<div class=\"sub\">1,015<\/div>","+14,5%<div class=\"sub\">1,145<\/div>","+6,7%<div class=\"sub\">1,067<\/div>","+1,7%<div class=\"sub\">1,017<\/div>","+4,7%<div class=\"sub\">1,047<\/div>","+8,9%<div class=\"sub\">1,089<\/div>","+9,9%<div class=\"sub\">1,099<\/div>","+3,4%<div class=\"sub\">1,034<\/div>","+5,9%<div class=\"sub\">1,059<\/div>","+6,2%<div class=\"sub\">1,062<\/div>","+2,9%<div class=\"sub\">1,029<\/div>","+2,5%<div class=\"sub\">1,025<\/div>","−2,2%<div class=\"sub\">0,978<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2025","name":"2020–2025","type":"numeric","cell":["+6,1%<div class=\"sub\">1,061<\/div>","+4,8%<div class=\"sub\">1,048<\/div>","+3,9%<div class=\"sub\">1,039<\/div>","+7,8%<div class=\"sub\">1,078<\/div>","+12,4%<div class=\"sub\">1,124<\/div>","+4,2%<div class=\"sub\">1,042<\/div>","+1,2%<div class=\"sub\">1,012<\/div>","+3,1%<div class=\"sub\">1,031<\/div>","+12,3%<div class=\"sub\">1,123<\/div>","+8,6%<div class=\"sub\">1,086<\/div>","+5,5%<div class=\"sub\">1,055<\/div>","+5,6%<div class=\"sub\">1,056<\/div>","+7,2%<div class=\"sub\">1,072<\/div>","+3,7%<div class=\"sub\">1,037<\/div>","+3,3%<div class=\"sub\">1,033<\/div>","+0,9%<div class=\"sub\">1,009<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"MI2225","name":"Índice de Malmquist 2022–2025","type":"numeric","cell":["+2,6%<div class=\"sub\">1,026<\/div>","−1,0%<div class=\"sub\">0,990<\/div>","+6,8%<div class=\"sub\">1,068<\/div>","−3,2%<div class=\"sub\">0,968<\/div>","+13,1%<div class=\"sub\">1,131<\/div>","+3,2%<div class=\"sub\">1,032<\/div>","−2,1%<div class=\"sub\">0,979<\/div>","+1,9%<div class=\"sub\">1,019<\/div>","+3,6%<div class=\"sub\">1,036<\/div>","+7,9%<div class=\"sub\">1,079<\/div>","+0,8%<div class=\"sub\">1,008<\/div>","+2,1%<div class=\"sub\">1,021<\/div>","+3,8%<div class=\"sub\">1,038<\/div>","−0,5%<div class=\"sub\">0,995<\/div>","+1,1%<div class=\"sub\">1,011<\/div>","−3,8%<div class=\"sub\">0,962<\/div>"],"html":true,"minWidth":110,"align":"right"},{"id":"TC2225","name":"TC 2022–2025*","type":"numeric","cell":["0,974","0,930","0,980","0,954","0,988","0,968","0,963","0,973","0,951","0,982","0,975","0,964","0,977","0,967","0,987","0,984"],"minWidth":80,"align":"right","style":{"color":"#6b7280"}},{"id":"melhora","name":"Melhora consistente","type":"numeric","minWidth":85,"align":"right"},{"id":"piora","name":"Piora consistente","type":"numeric","minWidth":85,"align":"right"}],"columnGroups":[{"name":"Aproximação às melhores práticas (EC), média anual","columns":["EC2022","EC2225","EC2025"]}],"pagination":false,"striped":true,"compact":true,"language":{"sortLabel":"Ordenar por {name}","filterPlaceholder":"Filtrar","filterLabel":"Filtrar {name}","searchPlaceholder":"Buscar","searchLabel":"Buscar na tabela","noData":"Nenhum registro encontrado","pageNext":"Próxima","pagePrevious":"Anterior","pageNumbers":"{page} de {pages}","pageInfo":"{rowStart}–{rowEnd} de {rows} linhas","pageSizeOptions":"Mostrar {rows}","pageNextLabel":"Próxima página","pagePreviousLabel":"Página anterior","pageNumberLabel":"Página {page}","pageJumpLabel":"Ir para a página","pageSizeOptionsLabel":"Linhas por página","groupExpandLabel":"Expandir grupo","detailsExpandLabel":"Mostrar detalhes","selectAllRowsLabel":"Selecionar todas as linhas","selectAllSubRowsLabel":"Selecionar todas as linhas do grupo","selectRowLabel":"Selecionar linha"},"elementId":"tab-mq-m1-todos","dataKey":"8afcf3e58cbf9f5ccb18e625ed909c6e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<figure class="grafico-svg figure"><svg viewbox="0 0 680 428" width="100%" role="img" aria-label="Consolidado municipal — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde"><title>Consolidado municipal — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde</title><text x="182" y="17.0" text-anchor="end" font-size="12" fill="#1f2937">Garças Araguaia</text><rect x="190.0" y="5.0" width="380.0" height="16" fill="#2E86AB" data-tip="Garças Araguaia: +9,3% ao ano (índice 1,093; 10 unidades)"></rect><text x="575.0" y="17.0" font-size="11" fill="#374151">9,3%</text><text x="182" y="41.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Araguaia Karajá</text><rect x="190.0" y="29.0" width="321.8" height="16" fill="#2E86AB" data-tip="Norte Araguaia Karajá: +7,9% ao ano (índice 1,079; 5 unidades)"></rect><text x="516.8" y="41.0" font-size="11" fill="#374151">7,9%</text><text x="182" y="65.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Araguaia</text><rect x="190.0" y="53.0" width="313.1" height="16" fill="#2E86AB" data-tip="Médio Araguaia: +7,7% ao ano (índice 1,077; 8 unidades)"></rect><text x="508.1" y="65.0" font-size="11" fill="#374151">7,7%</text><text x="182" y="89.0" text-anchor="end" font-size="12" fill="#1f2937">Alto Tapajós</text><rect x="190.0" y="77.0" width="262.4" height="16" fill="#2E86AB" data-tip="Alto Tapajós: +6,4% ao ano (índice 1,064; 6 unidades)"></rect><text x="457.4" y="89.0" font-size="11" fill="#374151">6,4%</text><text x="182" y="113.0" text-anchor="end" font-size="12" fill="#1f2937">Baixada Cuiabana</text><rect x="190.0" y="101.0" width="249.6" height="16" fill="#2E86AB" data-tip="Baixada Cuiabana: +6,1% ao ano (índice 1,061; 10 unidades)"></rect><text x="444.6" y="113.0" font-size="11" fill="#374151">6,1%</text><text x="182" y="137.0" text-anchor="end" font-size="12" fill="#1f2937">Araguaia Xingu</text><rect x="190.0" y="125.0" width="234.3" height="16" fill="#2E86AB" data-tip="Araguaia Xingu: +5,7% ao ano (índice 1,057; 7 unidades)"></rect><text x="429.3" y="137.0" font-size="11" fill="#374151">5,7%</text><text x="182" y="161.0" text-anchor="end" font-size="12" fill="#1f2937">Sul Matogrossense</text><rect x="190.0" y="149.0" width="193.9" height="16" fill="#2E86AB" data-tip="Sul Matogrossense: +4,8% ao ano (índice 1,048; 19 unidades)"></rect><text x="388.9" y="161.0" font-size="11" fill="#374151">4,8%</text><text x="182" y="185.0" text-anchor="end" font-size="12" fill="#1f2937">Oeste Matogrossense</text><rect x="190.0" y="173.0" width="175.9" height="16" fill="#2E86AB" data-tip="Oeste Matogrossense: +4,3% ao ano (índice 1,043; 12 unidades)"></rect><text x="370.9" y="185.0" font-size="11" fill="#374151">4,3%</text><text x="182" y="209.0" text-anchor="end" font-size="12" fill="#1f2937">Sudoeste Matogrossense</text><rect x="190.0" y="197.0" width="175.6" height="16" fill="#2E86AB" data-tip="Sudoeste Matogrossense: +4,3% ao ano (índice 1,043; 10 unidades)"></rect><text x="370.6" y="209.0" font-size="11" fill="#374151">4,3%</text><text x="182" y="233.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Matogrossense</text><rect x="190.0" y="221.0" width="142.4" height="16" fill="#2E86AB" data-tip="Norte Matogrossense: +3,5% ao ano (índice 1,035; 6 unidades)"></rect><text x="337.4" y="233.0" font-size="11" fill="#374151">3,5%</text><text x="182" y="257.0" text-anchor="end" font-size="12" fill="#1f2937">Noroeste Matogrossense</text><rect x="190.0" y="245.0" width="142.0" height="16" fill="#2E86AB" data-tip="Noroeste Matogrossense: +3,5% ao ano (índice 1,035; 6 unidades)"></rect><text x="337.0" y="257.0" font-size="11" fill="#374151">3,5%</text><text x="182" y="281.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Norte Matogrossense</text><rect x="190.0" y="269.0" width="88.7" height="16" fill="#2E86AB" data-tip="Médio Norte Matogrossense: +2,2% ao ano (índice 1,022; 9 unidades)"></rect><text x="283.7" y="281.0" font-size="11" fill="#374151">2,2%</text><text x="182" y="305.0" text-anchor="end" font-size="12" fill="#1f2937">Teles Pires</text><rect x="190.0" y="293.0" width="60.8" height="16" fill="#2E86AB" data-tip="Teles Pires: +1,5% ao ano (índice 1,015; 14 unidades)"></rect><text x="255.8" y="305.0" font-size="11" fill="#374151">1,5%</text><text x="182" y="329.0" text-anchor="end" font-size="12" fill="#1f2937">Vale dos Arinos</text><rect x="190.0" y="317.0" width="41.0" height="16" fill="#2E86AB" data-tip="Vale dos Arinos: +1,0% ao ano (índice 1,010; 3 unidades)"></rect><text x="236.0" y="329.0" font-size="11" fill="#374151">1,0%</text><text x="182" y="353.0" text-anchor="end" font-size="12" fill="#1f2937">Centro Norte</text><rect x="190.0" y="341.0" width="25.7" height="16" fill="#2E86AB" data-tip="Centro Norte: +0,6% ao ano (índice 1,006; 7 unidades)"></rect><text x="220.7" y="353.0" font-size="11" fill="#374151">0,6%</text><text x="182" y="377.0" text-anchor="end" font-size="12" fill="#1f2937">Vale do Peixoto</text><rect x="190.0" y="365.0" width="15.6" height="16" fill="#2E86AB" data-tip="Vale do Peixoto: +0,4% ao ano (índice 1,004; 5 unidades)"></rect><text x="210.6" y="377.0" font-size="11" fill="#374151">0,4%</text><line x1="370.6" x2="370.6" y1="0" y2="388" stroke="#111827" stroke-dasharray="4,3" stroke-width="1.5"></line><text x="370.6" y="400" font-size="11" fill="#111827" text-anchor="middle">Mato Grosso: +4,4%</text></svg></figure>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<button class="btn btn-sm btn-outline-primary mb-2" type="button" onclick="Reactable.downloadDataCSV('tab-mq-m0-todos', 'ppsus-mt_malmquist_m0_regioes.csv')">Baixar a tabela (CSV)</button>
+<div class="rolagem-x">
+<div class="reactable html-widget html-fill-item" id="tab-mq-m0-todos" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="tab-mq-m0-todos">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Região":["Alto Tapajós","Araguaia Xingu","Baixada Cuiabana","Centro Norte","Garças Araguaia","Médio Araguaia","Médio Norte Matogrossense","Noroeste Matogrossense","Norte Araguaia Karajá","Norte Matogrossense","Oeste Matogrossense","Sudoeste Matogrossense","Sul Matogrossense","Teles Pires","Vale do Peixoto","Vale dos Arinos"],"n":[6,7,10,7,10,8,9,6,5,6,12,10,19,14,5,3],"EC2022":[0.97822,0.924766,0.983052,1.06553,1.070146,0.974066,1.017561,0.941184,1.111948,1.002739,0.969598,0.940158,1.03829,1.006525,0.960152,0.940492],"EC2225":[1.064282,1.057379,1.061139,1.006305,1.09308,1.076693,1.021716,1.034777,1.078821,1.03487,1.043079,1.043018,1.047503,1.014893,1.003811,1.01004],"EC2025":[1.032677,1.002192,1.01431,1.029589,1.083848,1.041716,1.026516,0.996272,1.091951,1.021896,1.019138,1.007754,1.027983,1.011538,0.986114,0.986673],"MI2225":[1.032715,1.001094,1.038698,0.98419,1.06274,1.043457,0.975914,1.01959,1.0564,1.008106,1.010728,1.006086,1.025914,0.968165,0.992402,0.990587],"TC2225":[0.97034,0.946769,0.978852,0.978023,0.972243,0.969131,0.955172,0.985324,0.979217,0.974137,0.968986,0.964591,0.97939,0.953958,0.988635,0.980741],"melhora":[2,2,3,1,1,1,1,1,1,0,3,1,3,2,0,0],"piora":[0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0]},"columns":[{"id":"Região","name":"Região","type":"character","minWidth":170,"sticky":"left"},{"id":"n","name":"Unidades (2022–2025)","type":"numeric","minWidth":85,"align":"right"},{"id":"EC2022","name":"2020–2022","type":"numeric","cell":["−2,2%<div class=\"sub\">0,978<\/div>","−7,5%<div class=\"sub\">0,925<\/div>","−1,7%<div class=\"sub\">0,983<\/div>","+6,6%<div class=\"sub\">1,066<\/div>","+7,0%<div class=\"sub\">1,070<\/div>","−2,6%<div class=\"sub\">0,974<\/div>","+1,8%<div class=\"sub\">1,018<\/div>","−5,9%<div class=\"sub\">0,941<\/div>","+11,2%<div class=\"sub\">1,112<\/div>","+0,3%<div class=\"sub\">1,003<\/div>","−3,0%<div class=\"sub\">0,970<\/div>","−6,0%<div class=\"sub\">0,940<\/div>","+3,8%<div class=\"sub\">1,038<\/div>","+0,7%<div class=\"sub\">1,007<\/div>","−4,0%<div class=\"sub\">0,960<\/div>","−6,0%<div class=\"sub\">0,940<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2225","name":"2022–2025","type":"numeric","cell":["+6,4%<div class=\"sub\">1,064<\/div>","+5,7%<div class=\"sub\">1,057<\/div>","+6,1%<div class=\"sub\">1,061<\/div>","+0,6%<div class=\"sub\">1,006<\/div>","+9,3%<div class=\"sub\">1,093<\/div>","+7,7%<div class=\"sub\">1,077<\/div>","+2,2%<div class=\"sub\">1,022<\/div>","+3,5%<div class=\"sub\">1,035<\/div>","+7,9%<div class=\"sub\">1,079<\/div>","+3,5%<div class=\"sub\">1,035<\/div>","+4,3%<div class=\"sub\">1,043<\/div>","+4,3%<div class=\"sub\">1,043<\/div>","+4,8%<div class=\"sub\">1,048<\/div>","+1,5%<div class=\"sub\">1,015<\/div>","+0,4%<div class=\"sub\">1,004<\/div>","+1,0%<div class=\"sub\">1,010<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2025","name":"2020–2025","type":"numeric","cell":["+3,3%<div class=\"sub\">1,033<\/div>","+0,2%<div class=\"sub\">1,002<\/div>","+1,4%<div class=\"sub\">1,014<\/div>","+3,0%<div class=\"sub\">1,030<\/div>","+8,4%<div class=\"sub\">1,084<\/div>","+4,2%<div class=\"sub\">1,042<\/div>","+2,7%<div class=\"sub\">1,027<\/div>","−0,4%<div class=\"sub\">0,996<\/div>","+9,2%<div class=\"sub\">1,092<\/div>","+2,2%<div class=\"sub\">1,022<\/div>","+1,9%<div class=\"sub\">1,019<\/div>","+0,8%<div class=\"sub\">1,008<\/div>","+2,8%<div class=\"sub\">1,028<\/div>","+1,2%<div class=\"sub\">1,012<\/div>","−1,4%<div class=\"sub\">0,986<\/div>","−1,3%<div class=\"sub\">0,987<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"MI2225","name":"Índice de Malmquist 2022–2025","type":"numeric","cell":["+3,3%<div class=\"sub\">1,033<\/div>","+0,1%<div class=\"sub\">1,001<\/div>","+3,9%<div class=\"sub\">1,039<\/div>","−1,6%<div class=\"sub\">0,984<\/div>","+6,3%<div class=\"sub\">1,063<\/div>","+4,3%<div class=\"sub\">1,043<\/div>","−2,4%<div class=\"sub\">0,976<\/div>","+2,0%<div class=\"sub\">1,020<\/div>","+5,6%<div class=\"sub\">1,056<\/div>","+0,8%<div class=\"sub\">1,008<\/div>","+1,1%<div class=\"sub\">1,011<\/div>","+0,6%<div class=\"sub\">1,006<\/div>","+2,6%<div class=\"sub\">1,026<\/div>","−3,2%<div class=\"sub\">0,968<\/div>","−0,8%<div class=\"sub\">0,992<\/div>","−0,9%<div class=\"sub\">0,991<\/div>"],"html":true,"minWidth":110,"align":"right"},{"id":"TC2225","name":"TC 2022–2025*","type":"numeric","cell":["0,970","0,947","0,979","0,978","0,972","0,969","0,955","0,985","0,979","0,974","0,969","0,965","0,979","0,954","0,989","0,981"],"minWidth":80,"align":"right","style":{"color":"#6b7280"}},{"id":"melhora","name":"Melhora consistente","type":"numeric","minWidth":85,"align":"right"},{"id":"piora","name":"Piora consistente","type":"numeric","minWidth":85,"align":"right"}],"columnGroups":[{"name":"Aproximação às melhores práticas (EC), média anual","columns":["EC2022","EC2225","EC2025"]}],"pagination":false,"striped":true,"compact":true,"language":{"sortLabel":"Ordenar por {name}","filterPlaceholder":"Filtrar","filterLabel":"Filtrar {name}","searchPlaceholder":"Buscar","searchLabel":"Buscar na tabela","noData":"Nenhum registro encontrado","pageNext":"Próxima","pagePrevious":"Anterior","pageNumbers":"{page} de {pages}","pageInfo":"{rowStart}–{rowEnd} de {rows} linhas","pageSizeOptions":"Mostrar {rows}","pageNextLabel":"Próxima página","pagePreviousLabel":"Página anterior","pageNumberLabel":"Página {page}","pageJumpLabel":"Ir para a página","pageSizeOptionsLabel":"Linhas por página","groupExpandLabel":"Expandir grupo","detailsExpandLabel":"Mostrar detalhes","selectAllRowsLabel":"Selecionar todas as linhas","selectAllSubRowsLabel":"Selecionar todas as linhas do grupo","selectRowLabel":"Selecionar linha"},"elementId":"tab-mq-m0-todos","dataKey":"5496ea2e4574d8a9f507d75ec90ebcea"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Produção local de média complexidade (municípios com produção hospitalar e ambulatorial avaliável).</p>
+<div class="cell">
+<div class="cell-output-display">
+<figure class="grafico-svg figure"><svg viewbox="0 0 680 428" width="100%" role="img" aria-label="Média complexidade (produção local) — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde"><title>Média complexidade (produção local) — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde</title><text x="182" y="17.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Araguaia</text><rect x="240.8" y="5.0" width="329.2" height="16" fill="#b45309" data-tip="Médio Araguaia: +16,7% ao ano (índice 1,167; 3 unidades)"></rect><text x="575.0" y="17.0" font-size="11" fill="#374151">16,7%</text><text x="182" y="41.0" text-anchor="end" font-size="12" fill="#1f2937">Araguaia Xingu</text><rect x="240.8" y="29.0" width="166.4" height="16" fill="#b45309" data-tip="Araguaia Xingu: +8,4% ao ano (índice 1,084; 3 unidades)"></rect><text x="412.2" y="41.0" font-size="11" fill="#374151">8,4%</text><text x="182" y="65.0" text-anchor="end" font-size="12" fill="#1f2937">Vale dos Arinos</text><rect x="240.8" y="53.0" width="134.7" height="16" fill="#b45309" data-tip="Vale dos Arinos: +6,8% ao ano (índice 1,068; 3 unidades)"></rect><text x="380.4" y="65.0" font-size="11" fill="#374151">6,8%</text><text x="182" y="89.0" text-anchor="end" font-size="12" fill="#1f2937">Vale do Peixoto</text><rect x="240.8" y="77.0" width="125.6" height="16" fill="#b45309" data-tip="Vale do Peixoto: +6,4% ao ano (índice 1,064; 4 unidades)"></rect><text x="371.3" y="89.0" font-size="11" fill="#374151">6,4%</text><text x="182" y="113.0" text-anchor="end" font-size="12" fill="#1f2937">Baixada Cuiabana</text><rect x="240.8" y="101.0" width="106.2" height="16" fill="#b45309" data-tip="Baixada Cuiabana: +5,4% ao ano (índice 1,054; 3 unidades)"></rect><text x="352.0" y="113.0" font-size="11" fill="#374151">5,4%</text><text x="182" y="137.0" text-anchor="end" font-size="12" fill="#1f2937">Sul Matogrossense</text><rect x="240.8" y="125.0" width="63.2" height="16" fill="#b45309" data-tip="Sul Matogrossense: +3,2% ao ano (índice 1,032; 14 unidades)"></rect><text x="309.0" y="137.0" font-size="11" fill="#374151">3,2%</text><text x="182" y="161.0" text-anchor="end" font-size="12" fill="#1f2937">Noroeste Matogrossense</text><rect x="240.8" y="149.0" width="52.4" height="16" fill="#b45309" data-tip="Noroeste Matogrossense: +2,7% ao ano (índice 1,027; 5 unidades)"></rect><text x="298.2" y="161.0" font-size="11" fill="#374151">2,7%</text><text x="182" y="185.0" text-anchor="end" font-size="12" fill="#1f2937">Sudoeste Matogrossense</text><rect x="240.8" y="173.0" width="48.5" height="16" fill="#b45309" data-tip="Sudoeste Matogrossense: +2,5% ao ano (índice 1,025; 5 unidades)"></rect><text x="294.3" y="185.0" font-size="11" fill="#374151">2,5%</text><text x="182" y="209.0" text-anchor="end" font-size="12" fill="#1f2937">Alto Tapajós</text><rect x="240.8" y="197.0" width="41.2" height="16" fill="#b45309" data-tip="Alto Tapajós: +2,1% ao ano (índice 1,021; 3 unidades)"></rect><text x="286.9" y="209.0" font-size="11" fill="#374151">2,1%</text><text x="182" y="233.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Matogrossense</text><rect x="240.8" y="221.0" width="33.8" height="16" fill="#b45309" data-tip="Norte Matogrossense: +1,7% ao ano (índice 1,017; 2 unidades)"></rect><text x="279.5" y="233.0" font-size="11" fill="#374151">1,7%</text><text x="182" y="257.0" text-anchor="end" font-size="12" fill="#1f2937">Oeste Matogrossense</text><rect x="240.8" y="245.0" width="28.4" height="16" fill="#b45309" data-tip="Oeste Matogrossense: +1,4% ao ano (índice 1,014; 5 unidades)"></rect><text x="274.2" y="257.0" font-size="11" fill="#374151">1,4%</text><text x="182" y="281.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Araguaia Karajá</text><rect x="240.8" y="269.0" width="0.0" height="16" fill="#b45309" data-tip="Norte Araguaia Karajá: +0,0% ao ano (índice 1,000; 1 unidades)"></rect><text x="245.8" y="281.0" font-size="11" fill="#374151">0,0%</text><text x="182" y="305.0" text-anchor="end" font-size="12" fill="#1f2937">Centro Norte</text><rect x="228.7" y="293.0" width="12.1" height="16" fill="#b45309" data-tip="Centro Norte: −0,6% ao ano (índice 0,994; 4 unidades)"></rect><text x="245.8" y="305.0" font-size="11" fill="#374151">-0,6%</text><text x="182" y="329.0" text-anchor="end" font-size="12" fill="#1f2937">Garças Araguaia</text><rect x="226.6" y="317.0" width="14.2" height="16" fill="#b45309" data-tip="Garças Araguaia: −0,7% ao ano (índice 0,993; 8 unidades)"></rect><text x="245.8" y="329.0" font-size="11" fill="#374151">-0,7%</text><text x="182" y="353.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Norte Matogrossense</text><rect x="215.2" y="341.0" width="25.6" height="16" fill="#b45309" data-tip="Médio Norte Matogrossense: −1,3% ao ano (índice 0,987; 5 unidades)"></rect><text x="245.8" y="353.0" font-size="11" fill="#374151">-1,3%</text><text x="182" y="377.0" text-anchor="end" font-size="12" fill="#1f2937">Teles Pires</text><rect x="190.0" y="365.0" width="50.8" height="16" fill="#b45309" data-tip="Teles Pires: −2,6% ao ano (índice 0,974; 6 unidades)"></rect><text x="245.8" y="377.0" font-size="11" fill="#374151">-2,6%</text><line x1="291.1" x2="291.1" y1="0" y2="388" stroke="#111827" stroke-dasharray="4,3" stroke-width="1.5"></line><text x="291.1" y="400" font-size="11" fill="#111827" text-anchor="middle">Mato Grosso: +2,6%</text></svg></figure>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<button class="btn btn-sm btn-outline-primary mb-2" type="button" onclick="Reactable.downloadDataCSV('tab-mq-m2-todos', 'ppsus-mt_malmquist_m2_regioes.csv')">Baixar a tabela (CSV)</button>
+<div class="rolagem-x">
+<div class="reactable html-widget html-fill-item" id="tab-mq-m2-todos" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="tab-mq-m2-todos">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Região":["Alto Tapajós","Araguaia Xingu","Baixada Cuiabana","Centro Norte","Garças Araguaia","Médio Araguaia","Médio Norte Matogrossense","Noroeste Matogrossense","Norte Araguaia Karajá","Norte Matogrossense","Oeste Matogrossense","Sudoeste Matogrossense","Sul Matogrossense","Teles Pires","Vale do Peixoto","Vale dos Arinos"],"n":[3,3,3,4,8,3,5,5,1,2,5,5,14,6,4,3],"EC2022":[1,1.208242,1.089875,0.97124,1.215877,1.034356,1.15961,1.055669,1,1.030876,1.173629,1.012297,1.150017,1.03991,1.022665,1.042881],"EC2225":[1.020898,1.084486,1.053919,0.993871,0.992812,1.167162,0.986983,1.026618,1,1.017139,1.014426,1.024621,1.032081,0.974211,1.063754,1.068374],"EC2025":[1,1.13239,1.060693,0.984756,1.076654,1.084922,1.061398,1.038141,1,1.022612,1.089443,1.023401,1.088716,0.999978,1.047124,1.05268],"MI2225":[1.036262,1.03108,1.044064,0.998095,0.996274,1.169913,1.010231,0.993475,1.08218,1.05071,1.050094,1.034968,1.056625,0.981123,1.083444,1.074643],"TC2225":[1.01505,0.950754,0.99065,1.00425,1.003487,1.002357,1.023554,0.967717,1.08218,1.033005,1.035161,1.010098,1.023781,1.007095,1.018509,1.005867],"melhora":[0,1,1,0,1,2,0,0,0,0,0,1,1,1,1,1],"piora":[0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0]},"columns":[{"id":"Região","name":"Região","type":"character","minWidth":170,"sticky":"left"},{"id":"n","name":"Unidades (2022–2025)","type":"numeric","minWidth":85,"align":"right"},{"id":"EC2022","name":"2020–2022","type":"numeric","cell":["+0,0%<div class=\"sub\">1,000<\/div>","+20,8%<div class=\"sub\">1,208<\/div>","+9,0%<div class=\"sub\">1,090<\/div>","−2,9%<div class=\"sub\">0,971<\/div>","+21,6%<div class=\"sub\">1,216<\/div>","+3,4%<div class=\"sub\">1,034<\/div>","+16,0%<div class=\"sub\">1,160<\/div>","+5,6%<div class=\"sub\">1,056<\/div>","+0,0%<div class=\"sub\">1,000<\/div>","+3,1%<div class=\"sub\">1,031<\/div>","+17,4%<div class=\"sub\">1,174<\/div>","+1,2%<div class=\"sub\">1,012<\/div>","+15,0%<div class=\"sub\">1,150<\/div>","+4,0%<div class=\"sub\">1,040<\/div>","+2,3%<div class=\"sub\">1,023<\/div>","+4,3%<div class=\"sub\">1,043<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2225","name":"2022–2025","type":"numeric","cell":["+2,1%<div class=\"sub\">1,021<\/div>","+8,4%<div class=\"sub\">1,084<\/div>","+5,4%<div class=\"sub\">1,054<\/div>","−0,6%<div class=\"sub\">0,994<\/div>","−0,7%<div class=\"sub\">0,993<\/div>","+16,7%<div class=\"sub\">1,167<\/div>","−1,3%<div class=\"sub\">0,987<\/div>","+2,7%<div class=\"sub\">1,027<\/div>","+0,0%<div class=\"sub\">1,000<\/div>","+1,7%<div class=\"sub\">1,017<\/div>","+1,4%<div class=\"sub\">1,014<\/div>","+2,5%<div class=\"sub\">1,025<\/div>","+3,2%<div class=\"sub\">1,032<\/div>","−2,6%<div class=\"sub\">0,974<\/div>","+6,4%<div class=\"sub\">1,064<\/div>","+6,8%<div class=\"sub\">1,068<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2025","name":"2020–2025","type":"numeric","cell":["+0,0%<div class=\"sub\">1,000<\/div>","+13,2%<div class=\"sub\">1,132<\/div>","+6,1%<div class=\"sub\">1,061<\/div>","−1,5%<div class=\"sub\">0,985<\/div>","+7,7%<div class=\"sub\">1,077<\/div>","+8,5%<div class=\"sub\">1,085<\/div>","+6,1%<div class=\"sub\">1,061<\/div>","+3,8%<div class=\"sub\">1,038<\/div>","+0,0%<div class=\"sub\">1,000<\/div>","+2,3%<div class=\"sub\">1,023<\/div>","+8,9%<div class=\"sub\">1,089<\/div>","+2,3%<div class=\"sub\">1,023<\/div>","+8,9%<div class=\"sub\">1,089<\/div>","−0,0%<div class=\"sub\">1,000<\/div>","+4,7%<div class=\"sub\">1,047<\/div>","+5,3%<div class=\"sub\">1,053<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"MI2225","name":"Índice de Malmquist 2022–2025","type":"numeric","cell":["+3,6%<div class=\"sub\">1,036<\/div>","+3,1%<div class=\"sub\">1,031<\/div>","+4,4%<div class=\"sub\">1,044<\/div>","−0,2%<div class=\"sub\">0,998<\/div>","−0,4%<div class=\"sub\">0,996<\/div>","+17,0%<div class=\"sub\">1,170<\/div>","+1,0%<div class=\"sub\">1,010<\/div>","−0,7%<div class=\"sub\">0,993<\/div>","+8,2%<div class=\"sub\">1,082<\/div>","+5,1%<div class=\"sub\">1,051<\/div>","+5,0%<div class=\"sub\">1,050<\/div>","+3,5%<div class=\"sub\">1,035<\/div>","+5,7%<div class=\"sub\">1,057<\/div>","−1,9%<div class=\"sub\">0,981<\/div>","+8,3%<div class=\"sub\">1,083<\/div>","+7,5%<div class=\"sub\">1,075<\/div>"],"html":true,"minWidth":110,"align":"right"},{"id":"TC2225","name":"TC 2022–2025*","type":"numeric","cell":["1,015","0,951","0,991","1,004","1,003","1,002","1,024","0,968","1,082","1,033","1,035","1,010","1,024","1,007","1,019","1,006"],"minWidth":80,"align":"right","style":{"color":"#6b7280"}},{"id":"melhora","name":"Melhora consistente","type":"numeric","minWidth":85,"align":"right"},{"id":"piora","name":"Piora consistente","type":"numeric","minWidth":85,"align":"right"}],"columnGroups":[{"name":"Aproximação às melhores práticas (EC), média anual","columns":["EC2022","EC2225","EC2025"]}],"pagination":false,"striped":true,"compact":true,"language":{"sortLabel":"Ordenar por {name}","filterPlaceholder":"Filtrar","filterLabel":"Filtrar {name}","searchPlaceholder":"Buscar","searchLabel":"Buscar na tabela","noData":"Nenhum registro encontrado","pageNext":"Próxima","pagePrevious":"Anterior","pageNumbers":"{page} de {pages}","pageInfo":"{rowStart}–{rowEnd} de {rows} linhas","pageSizeOptions":"Mostrar {rows}","pageNextLabel":"Próxima página","pagePreviousLabel":"Página anterior","pageNumberLabel":"Página {page}","pageJumpLabel":"Ir para a página","pageSizeOptionsLabel":"Linhas por página","groupExpandLabel":"Expandir grupo","detailsExpandLabel":"Mostrar detalhes","selectAllRowsLabel":"Selecionar todas as linhas","selectAllSubRowsLabel":"Selecionar todas as linhas do grupo","selectRowLabel":"Selecionar linha"},"elementId":"tab-mq-m2-todos","dataKey":"b4ed2c20b188c85b9d612b02f6240486"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>Média complexidade pela ótica do acesso (internações de residentes), com as duas fronteiras — municípios com e sem leito SUS — reunidas na média da região.</p>
+<div class="cell">
+<div class="cell-output-display">
+<figure class="grafico-svg figure"><svg viewbox="0 0 680 428" width="100%" role="img" aria-label="Média complexidade (ótica do acesso) — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde"><title>Média complexidade (ótica do acesso) — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde</title><text x="182" y="17.0" text-anchor="end" font-size="12" fill="#1f2937">Oeste Matogrossense</text><rect x="371.9" y="5.0" width="198.1" height="16" fill="#7c3aed" data-tip="Oeste Matogrossense: +9,3% ao ano (índice 1,093; 10 unidades)"></rect><text x="575.0" y="17.0" font-size="11" fill="#374151">9,3%</text><text x="182" y="41.0" text-anchor="end" font-size="12" fill="#1f2937">Alto Tapajós</text><rect x="371.9" y="29.0" width="158.8" height="16" fill="#7c3aed" data-tip="Alto Tapajós: +7,4% ao ano (índice 1,074; 5 unidades)"></rect><text x="535.7" y="41.0" font-size="11" fill="#374151">7,4%</text><text x="182" y="65.0" text-anchor="end" font-size="12" fill="#1f2937">Araguaia Xingu</text><rect x="371.9" y="53.0" width="143.9" height="16" fill="#7c3aed" data-tip="Araguaia Xingu: +6,7% ao ano (índice 1,067; 6 unidades)"></rect><text x="520.8" y="65.0" font-size="11" fill="#374151">6,7%</text><text x="182" y="89.0" text-anchor="end" font-size="12" fill="#1f2937">Vale dos Arinos</text><rect x="371.9" y="77.0" width="138.2" height="16" fill="#7c3aed" data-tip="Vale dos Arinos: +6,5% ao ano (índice 1,065; 3 unidades)"></rect><text x="515.2" y="89.0" font-size="11" fill="#374151">6,5%</text><text x="182" y="113.0" text-anchor="end" font-size="12" fill="#1f2937">Baixada Cuiabana</text><rect x="371.9" y="101.0" width="81.4" height="16" fill="#7c3aed" data-tip="Baixada Cuiabana: +3,8% ao ano (índice 1,038; 8 unidades)"></rect><text x="458.3" y="113.0" font-size="11" fill="#374151">3,8%</text><text x="182" y="137.0" text-anchor="end" font-size="12" fill="#1f2937">Sudoeste Matogrossense</text><rect x="371.9" y="125.0" width="69.7" height="16" fill="#7c3aed" data-tip="Sudoeste Matogrossense: +3,3% ao ano (índice 1,033; 8 unidades)"></rect><text x="446.7" y="137.0" font-size="11" fill="#374151">3,3%</text><text x="182" y="161.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Araguaia Karajá</text><rect x="371.9" y="149.0" width="52.9" height="16" fill="#7c3aed" data-tip="Norte Araguaia Karajá: +2,5% ao ano (índice 1,025; 3 unidades)"></rect><text x="429.8" y="161.0" font-size="11" fill="#374151">2,5%</text><text x="182" y="185.0" text-anchor="end" font-size="12" fill="#1f2937">Sul Matogrossense</text><rect x="371.9" y="173.0" width="35.0" height="16" fill="#7c3aed" data-tip="Sul Matogrossense: +1,6% ao ano (índice 1,016; 19 unidades)"></rect><text x="411.9" y="185.0" font-size="11" fill="#374151">1,6%</text><text x="182" y="209.0" text-anchor="end" font-size="12" fill="#1f2937">Garças Araguaia</text><rect x="371.9" y="197.0" width="27.5" height="16" fill="#7c3aed" data-tip="Garças Araguaia: +1,3% ao ano (índice 1,013; 10 unidades)"></rect><text x="404.4" y="209.0" font-size="11" fill="#374151">1,3%</text><text x="182" y="233.0" text-anchor="end" font-size="12" fill="#1f2937">Vale do Peixoto</text><rect x="371.9" y="221.0" width="3.7" height="16" fill="#7c3aed" data-tip="Vale do Peixoto: +0,2% ao ano (índice 1,002; 5 unidades)"></rect><text x="380.7" y="233.0" font-size="11" fill="#374151">0,2%</text><text x="182" y="257.0" text-anchor="end" font-size="12" fill="#1f2937">Noroeste Matogrossense</text><rect x="346.7" y="245.0" width="25.2" height="16" fill="#7c3aed" data-tip="Noroeste Matogrossense: −1,2% ao ano (índice 0,988; 6 unidades)"></rect><text x="376.9" y="257.0" font-size="11" fill="#374151">-1,2%</text><text x="182" y="281.0" text-anchor="end" font-size="12" fill="#1f2937">Centro Norte</text><rect x="344.0" y="269.0" width="27.9" height="16" fill="#7c3aed" data-tip="Centro Norte: −1,3% ao ano (índice 0,987; 6 unidades)"></rect><text x="376.9" y="281.0" font-size="11" fill="#374151">-1,3%</text><text x="182" y="305.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Araguaia</text><rect x="340.7" y="293.0" width="31.2" height="16" fill="#7c3aed" data-tip="Médio Araguaia: −1,5% ao ano (índice 0,985; 4 unidades)"></rect><text x="376.9" y="305.0" font-size="11" fill="#374151">-1,5%</text><text x="182" y="329.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Matogrossense</text><rect x="323.5" y="317.0" width="48.5" height="16" fill="#7c3aed" data-tip="Norte Matogrossense: −2,3% ao ano (índice 0,977; 5 unidades)"></rect><text x="376.9" y="329.0" font-size="11" fill="#374151">-2,3%</text><text x="182" y="353.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Norte Matogrossense</text><rect x="300.6" y="341.0" width="71.3" height="16" fill="#7c3aed" data-tip="Médio Norte Matogrossense: −3,3% ao ano (índice 0,967; 8 unidades)"></rect><text x="376.9" y="353.0" font-size="11" fill="#374151">-3,3%</text><text x="182" y="377.0" text-anchor="end" font-size="12" fill="#1f2937">Teles Pires</text><rect x="190.0" y="365.0" width="181.9" height="16" fill="#7c3aed" data-tip="Teles Pires: −8,5% ao ano (índice 0,915; 14 unidades)"></rect><text x="376.9" y="377.0" font-size="11" fill="#374151">-8,5%</text><line x1="390.8" x2="390.8" y1="0" y2="388" stroke="#111827" stroke-dasharray="4,3" stroke-width="1.5"></line><text x="390.8" y="400" font-size="11" fill="#111827" text-anchor="middle">Mato Grosso: +0,9%</text></svg></figure>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<button class="btn btn-sm btn-outline-primary mb-2" type="button" onclick="Reactable.downloadDataCSV('tab-mq-m2a-todos', 'ppsus-mt_malmquist_m2a_regioes.csv')">Baixar a tabela (CSV)</button>
+<div class="rolagem-x">
+<div class="reactable html-widget html-fill-item" id="tab-mq-m2a-todos" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="tab-mq-m2a-todos">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Região":["Alto Tapajós","Araguaia Xingu","Baixada Cuiabana","Centro Norte","Garças Araguaia","Médio Araguaia","Médio Norte Matogrossense","Noroeste Matogrossense","Norte Araguaia Karajá","Norte Matogrossense","Oeste Matogrossense","Sudoeste Matogrossense","Sul Matogrossense","Teles Pires","Vale do Peixoto","Vale dos Arinos"],"n":[5,6,8,6,10,4,8,6,3,5,10,8,19,14,5,3],"EC2022":[0.986705,1.043335,0.980005,0.912433,1.084809,1.186956,0.997639,0.981555,1.092721,1.065235,0.905772,0.914163,1.059551,0.927888,0.933442,1.123319],"EC2225":[1.074429,1.067433,1.038158,0.986922,1.012882,0.985366,0.966573,0.988167,1.024807,0.977292,1.092832,1.032685,1.016392,0.914748,1.001755,1.064785],"EC2025":[1.037999,1.057728,1.016954,0.956423,1.041062,1.05379,0.965429,0.985517,1.051451,1.011563,1.027743,0.986251,1.034627,0.919982,0.97385,1.07382],"MI2225":[1.048291,1.127643,1.025393,0.962955,1.01518,1.019976,1.005963,1.012053,1.013727,0.909573,1.055152,1.028704,1.027344,0.938068,1.007353,1.06884],"TC2225":[0.975673,1.056407,0.987704,0.975716,1.002269,1.035124,1.040752,1.024171,0.989189,0.930707,0.965521,0.996144,1.010776,1.025494,1.005588,1.003809],"melhora":[0,1,1,0,1,0,1,0,0,0,1,1,2,0,0,1],"piora":[0,0,1,1,0,0,0,0,0,0,0,1,0,3,0,0]},"columns":[{"id":"Região","name":"Região","type":"character","minWidth":170,"sticky":"left"},{"id":"n","name":"Unidades (2022–2025)","type":"numeric","minWidth":85,"align":"right"},{"id":"EC2022","name":"2020–2022","type":"numeric","cell":["−1,3%<div class=\"sub\">0,987<\/div>","+4,3%<div class=\"sub\">1,043<\/div>","−2,0%<div class=\"sub\">0,980<\/div>","−8,8%<div class=\"sub\">0,912<\/div>","+8,5%<div class=\"sub\">1,085<\/div>","+18,7%<div class=\"sub\">1,187<\/div>","−0,2%<div class=\"sub\">0,998<\/div>","−1,8%<div class=\"sub\">0,982<\/div>","+9,3%<div class=\"sub\">1,093<\/div>","+6,5%<div class=\"sub\">1,065<\/div>","−9,4%<div class=\"sub\">0,906<\/div>","−8,6%<div class=\"sub\">0,914<\/div>","+6,0%<div class=\"sub\">1,060<\/div>","−7,2%<div class=\"sub\">0,928<\/div>","−6,7%<div class=\"sub\">0,933<\/div>","+12,3%<div class=\"sub\">1,123<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2225","name":"2022–2025","type":"numeric","cell":["+7,4%<div class=\"sub\">1,074<\/div>","+6,7%<div class=\"sub\">1,067<\/div>","+3,8%<div class=\"sub\">1,038<\/div>","−1,3%<div class=\"sub\">0,987<\/div>","+1,3%<div class=\"sub\">1,013<\/div>","−1,5%<div class=\"sub\">0,985<\/div>","−3,3%<div class=\"sub\">0,967<\/div>","−1,2%<div class=\"sub\">0,988<\/div>","+2,5%<div class=\"sub\">1,025<\/div>","−2,3%<div class=\"sub\">0,977<\/div>","+9,3%<div class=\"sub\">1,093<\/div>","+3,3%<div class=\"sub\">1,033<\/div>","+1,6%<div class=\"sub\">1,016<\/div>","−8,5%<div class=\"sub\">0,915<\/div>","+0,2%<div class=\"sub\">1,002<\/div>","+6,5%<div class=\"sub\">1,065<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2025","name":"2020–2025","type":"numeric","cell":["+3,8%<div class=\"sub\">1,038<\/div>","+5,8%<div class=\"sub\">1,058<\/div>","+1,7%<div class=\"sub\">1,017<\/div>","−4,4%<div class=\"sub\">0,956<\/div>","+4,1%<div class=\"sub\">1,041<\/div>","+5,4%<div class=\"sub\">1,054<\/div>","−3,5%<div class=\"sub\">0,965<\/div>","−1,4%<div class=\"sub\">0,986<\/div>","+5,1%<div class=\"sub\">1,051<\/div>","+1,2%<div class=\"sub\">1,012<\/div>","+2,8%<div class=\"sub\">1,028<\/div>","−1,4%<div class=\"sub\">0,986<\/div>","+3,5%<div class=\"sub\">1,035<\/div>","−8,0%<div class=\"sub\">0,920<\/div>","−2,6%<div class=\"sub\">0,974<\/div>","+7,4%<div class=\"sub\">1,074<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"MI2225","name":"Índice de Malmquist 2022–2025","type":"numeric","cell":["+4,8%<div class=\"sub\">1,048<\/div>","+12,8%<div class=\"sub\">1,128<\/div>","+2,5%<div class=\"sub\">1,025<\/div>","−3,7%<div class=\"sub\">0,963<\/div>","+1,5%<div class=\"sub\">1,015<\/div>","+2,0%<div class=\"sub\">1,020<\/div>","+0,6%<div class=\"sub\">1,006<\/div>","+1,2%<div class=\"sub\">1,012<\/div>","+1,4%<div class=\"sub\">1,014<\/div>","−9,0%<div class=\"sub\">0,910<\/div>","+5,5%<div class=\"sub\">1,055<\/div>","+2,9%<div class=\"sub\">1,029<\/div>","+2,7%<div class=\"sub\">1,027<\/div>","−6,2%<div class=\"sub\">0,938<\/div>","+0,7%<div class=\"sub\">1,007<\/div>","+6,9%<div class=\"sub\">1,069<\/div>"],"html":true,"minWidth":110,"align":"right"},{"id":"TC2225","name":"TC 2022–2025*","type":"numeric","cell":["0,976","1,056","0,988","0,976","1,002","1,035","1,041","1,024","0,989","0,931","0,966","0,996","1,011","1,025","1,006","1,004"],"minWidth":80,"align":"right","style":{"color":"#6b7280"}},{"id":"melhora","name":"Melhora consistente","type":"numeric","minWidth":85,"align":"right"},{"id":"piora","name":"Piora consistente","type":"numeric","minWidth":85,"align":"right"}],"columnGroups":[{"name":"Aproximação às melhores práticas (EC), média anual","columns":["EC2022","EC2225","EC2025"]}],"pagination":false,"striped":true,"compact":true,"language":{"sortLabel":"Ordenar por {name}","filterPlaceholder":"Filtrar","filterLabel":"Filtrar {name}","searchPlaceholder":"Buscar","searchLabel":"Buscar na tabela","noData":"Nenhum registro encontrado","pageNext":"Próxima","pagePrevious":"Anterior","pageNumbers":"{page} de {pages}","pageInfo":"{rowStart}–{rowEnd} de {rows} linhas","pageSizeOptions":"Mostrar {rows}","pageNextLabel":"Próxima página","pagePreviousLabel":"Página anterior","pageNumberLabel":"Página {page}","pageJumpLabel":"Ir para a página","pageSizeOptionsLabel":"Linhas por página","groupExpandLabel":"Expandir grupo","detailsExpandLabel":"Mostrar detalhes","selectAllRowsLabel":"Selecionar todas as linhas","selectAllSubRowsLabel":"Selecionar todas as linhas do grupo","selectRowLabel":"Selecionar linha"},"elementId":"tab-mq-m2a-todos","dataKey":"fdddc6ba80d9edea9a8c367792125117"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>Hospitais do painel completo 2020–2025, agregados pela região de saúde do município-sede.</p>
+<div class="cell">
+<div class="cell-output-display">
+<figure class="grafico-svg figure"><svg viewbox="0 0 680 428" width="100%" role="img" aria-label="Hospitais — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde"><title>Hospitais — variação anual média da aproximação às melhores práticas (EC), 2022–2025, por região de saúde</title><text x="182" y="17.0" text-anchor="end" font-size="12" fill="#1f2937">Sudoeste Matogrossense</text><rect x="251.8" y="5.0" width="318.2" height="16" fill="#6b7280" data-tip="Sudoeste Matogrossense: +23,2% ao ano (índice 1,232; 1 unidades)"></rect><text x="575.0" y="17.0" font-size="11" fill="#374151">23,2%</text><text x="182" y="41.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Araguaia</text><rect x="251.8" y="29.0" width="259.0" height="16" fill="#6b7280" data-tip="Médio Araguaia: +18,9% ao ano (índice 1,189; 4 unidades)"></rect><text x="515.8" y="41.0" font-size="11" fill="#374151">18,9%</text><text x="182" y="65.0" text-anchor="end" font-size="12" fill="#1f2937">Oeste Matogrossense</text><rect x="251.8" y="53.0" width="218.3" height="16" fill="#6b7280" data-tip="Oeste Matogrossense: +15,9% ao ano (índice 1,159; 1 unidades)"></rect><text x="475.1" y="65.0" font-size="11" fill="#374151">15,9%</text><text x="182" y="89.0" text-anchor="end" font-size="12" fill="#1f2937">Vale do Peixoto</text><rect x="251.8" y="77.0" width="200.1" height="16" fill="#6b7280" data-tip="Vale do Peixoto: +14,6% ao ano (índice 1,146; 2 unidades)"></rect><text x="456.8" y="89.0" font-size="11" fill="#374151">14,6%</text><text x="182" y="113.0" text-anchor="end" font-size="12" fill="#1f2937">Vale dos Arinos</text><rect x="251.8" y="101.0" width="169.8" height="16" fill="#6b7280" data-tip="Vale dos Arinos: +12,4% ao ano (índice 1,124; 2 unidades)"></rect><text x="426.5" y="113.0" font-size="11" fill="#374151">12,4%</text><text x="182" y="137.0" text-anchor="end" font-size="12" fill="#1f2937">Baixada Cuiabana</text><rect x="251.8" y="125.0" width="153.3" height="16" fill="#6b7280" data-tip="Baixada Cuiabana: +11,2% ao ano (índice 1,112; 9 unidades)"></rect><text x="410.1" y="137.0" font-size="11" fill="#374151">11,2%</text><text x="182" y="161.0" text-anchor="end" font-size="12" fill="#1f2937">Centro Norte</text><rect x="251.8" y="149.0" width="138.3" height="16" fill="#6b7280" data-tip="Centro Norte: +10,1% ao ano (índice 1,101; 3 unidades)"></rect><text x="395.0" y="161.0" font-size="11" fill="#374151">10,1%</text><text x="182" y="185.0" text-anchor="end" font-size="12" fill="#1f2937">Garças Araguaia</text><rect x="251.8" y="173.0" width="122.2" height="16" fill="#6b7280" data-tip="Garças Araguaia: +8,9% ao ano (índice 1,089; 2 unidades)"></rect><text x="378.9" y="185.0" font-size="11" fill="#374151">8,9%</text><text x="182" y="209.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Araguaia Karajá</text><rect x="251.8" y="197.0" width="114.0" height="16" fill="#6b7280" data-tip="Norte Araguaia Karajá: +8,3% ao ano (índice 1,083; 1 unidades)"></rect><text x="370.8" y="209.0" font-size="11" fill="#374151">8,3%</text><text x="182" y="233.0" text-anchor="end" font-size="12" fill="#1f2937">Médio Norte Matogrossense</text><rect x="251.8" y="221.0" width="91.4" height="16" fill="#6b7280" data-tip="Médio Norte Matogrossense: +6,7% ao ano (índice 1,067; 3 unidades)"></rect><text x="348.2" y="233.0" font-size="11" fill="#374151">6,7%</text><text x="182" y="257.0" text-anchor="end" font-size="12" fill="#1f2937">Alto Tapajós</text><rect x="251.8" y="245.0" width="85.9" height="16" fill="#6b7280" data-tip="Alto Tapajós: +6,3% ao ano (índice 1,063; 3 unidades)"></rect><text x="342.7" y="257.0" font-size="11" fill="#374151">6,3%</text><text x="182" y="281.0" text-anchor="end" font-size="12" fill="#1f2937">Sul Matogrossense</text><rect x="251.8" y="269.0" width="71.0" height="16" fill="#6b7280" data-tip="Sul Matogrossense: +5,2% ao ano (índice 1,052; 10 unidades)"></rect><text x="327.8" y="281.0" font-size="11" fill="#374151">5,2%</text><text x="182" y="305.0" text-anchor="end" font-size="12" fill="#1f2937">Araguaia Xingu</text><rect x="251.8" y="293.0" width="51.2" height="16" fill="#6b7280" data-tip="Araguaia Xingu: +3,7% ao ano (índice 1,037; 3 unidades)"></rect><text x="307.9" y="305.0" font-size="11" fill="#374151">3,7%</text><text x="182" y="329.0" text-anchor="end" font-size="12" fill="#1f2937">Noroeste Matogrossense</text><rect x="251.8" y="317.0" width="32.7" height="16" fill="#6b7280" data-tip="Noroeste Matogrossense: +2,4% ao ano (índice 1,024; 5 unidades)"></rect><text x="289.4" y="329.0" font-size="11" fill="#374151">2,4%</text><text x="182" y="353.0" text-anchor="end" font-size="12" fill="#1f2937">Teles Pires</text><rect x="251.8" y="341.0" width="8.5" height="16" fill="#6b7280" data-tip="Teles Pires: +0,6% ao ano (índice 1,006; 4 unidades)"></rect><text x="265.3" y="353.0" font-size="11" fill="#374151">0,6%</text><text x="182" y="377.0" text-anchor="end" font-size="12" fill="#1f2937">Norte Matogrossense</text><rect x="190.0" y="365.0" width="61.8" height="16" fill="#6b7280" data-tip="Norte Matogrossense: −4,5% ao ano (índice 0,955; 2 unidades)"></rect><text x="256.8" y="377.0" font-size="11" fill="#374151">-4,5%</text><line x1="357.6" x2="357.6" y1="0" y2="388" stroke="#111827" stroke-dasharray="4,3" stroke-width="1.5"></line><text x="357.6" y="400" font-size="11" fill="#111827" text-anchor="middle">Mato Grosso: +7,7%</text></svg></figure>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<button class="btn btn-sm btn-outline-primary mb-2" type="button" onclick="Reactable.downloadDataCSV('tab-mq-h-todos', 'ppsus-mt_malmquist_h_regioes.csv')">Baixar a tabela (CSV)</button>
+<div class="rolagem-x">
+<div class="reactable html-widget html-fill-item" id="tab-mq-h-todos" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="tab-mq-h-todos">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Região":["Alto Tapajós","Araguaia Xingu","Baixada Cuiabana","Centro Norte","Garças Araguaia","Médio Araguaia","Médio Norte Matogrossense","Noroeste Matogrossense","Norte Araguaia Karajá","Norte Matogrossense","Oeste Matogrossense","Sudoeste Matogrossense","Sul Matogrossense","Teles Pires","Vale do Peixoto","Vale dos Arinos"],"n":[3,3,9,3,2,4,3,5,1,2,1,1,10,4,2,2],"EC2022":[1.365625,1.126776,1.138812,1.093035,0.933946,1.16208,1.090102,1.076198,1.178653,1.17282,0.948734,1.026273,1.154246,1.068406,1.164763,1.128641],"EC2225":[1.062694,1.03733,1.11186,1.100898,1.089125,1.188977,1.066699,1.02384,1.083208,0.954937,1.159278,1.232195,1.051811,1.006214,1.145979,1.123871],"EC2025":[1.174837,1.084077,1.11392,1.100653,1.044343,1.085346,1.08331,1.030141,1.120422,1.036758,1.069967,1.157225,1.108044,1.039911,1.158969,1.125776],"MI2225":[1.024655,0.996935,1.113989,1.019374,1.058735,1.136816,1.044677,1.000625,1.058564,0.946788,1.139015,1.234073,1.013895,0.995449,1.128972,1.102847],"TC2225":[0.964205,0.961059,1.001915,0.925948,0.972097,0.956129,0.979355,0.977326,0.977249,0.991466,0.982521,1.001525,0.963952,0.989302,0.985159,0.981294],"melhora":[1,0,1,0,0,1,0,0,1,1,0,1,0,0,1,1],"piora":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"columns":[{"id":"Região","name":"Região","type":"character","minWidth":170,"sticky":"left"},{"id":"n","name":"Unidades (2022–2025)","type":"numeric","minWidth":85,"align":"right"},{"id":"EC2022","name":"2020–2022","type":"numeric","cell":["+36,6%<div class=\"sub\">1,366<\/div>","+12,7%<div class=\"sub\">1,127<\/div>","+13,9%<div class=\"sub\">1,139<\/div>","+9,3%<div class=\"sub\">1,093<\/div>","−6,6%<div class=\"sub\">0,934<\/div>","+16,2%<div class=\"sub\">1,162<\/div>","+9,0%<div class=\"sub\">1,090<\/div>","+7,6%<div class=\"sub\">1,076<\/div>","+17,9%<div class=\"sub\">1,179<\/div>","+17,3%<div class=\"sub\">1,173<\/div>","−5,1%<div class=\"sub\">0,949<\/div>","+2,6%<div class=\"sub\">1,026<\/div>","+15,4%<div class=\"sub\">1,154<\/div>","+6,8%<div class=\"sub\">1,068<\/div>","+16,5%<div class=\"sub\">1,165<\/div>","+12,9%<div class=\"sub\">1,129<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2225","name":"2022–2025","type":"numeric","cell":["+6,3%<div class=\"sub\">1,063<\/div>","+3,7%<div class=\"sub\">1,037<\/div>","+11,2%<div class=\"sub\">1,112<\/div>","+10,1%<div class=\"sub\">1,101<\/div>","+8,9%<div class=\"sub\">1,089<\/div>","+18,9%<div class=\"sub\">1,189<\/div>","+6,7%<div class=\"sub\">1,067<\/div>","+2,4%<div class=\"sub\">1,024<\/div>","+8,3%<div class=\"sub\">1,083<\/div>","−4,5%<div class=\"sub\">0,955<\/div>","+15,9%<div class=\"sub\">1,159<\/div>","+23,2%<div class=\"sub\">1,232<\/div>","+5,2%<div class=\"sub\">1,052<\/div>","+0,6%<div class=\"sub\">1,006<\/div>","+14,6%<div class=\"sub\">1,146<\/div>","+12,4%<div class=\"sub\">1,124<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"EC2025","name":"2020–2025","type":"numeric","cell":["+17,5%<div class=\"sub\">1,175<\/div>","+8,4%<div class=\"sub\">1,084<\/div>","+11,4%<div class=\"sub\">1,114<\/div>","+10,1%<div class=\"sub\">1,101<\/div>","+4,4%<div class=\"sub\">1,044<\/div>","+8,5%<div class=\"sub\">1,085<\/div>","+8,3%<div class=\"sub\">1,083<\/div>","+3,0%<div class=\"sub\">1,030<\/div>","+12,0%<div class=\"sub\">1,120<\/div>","+3,7%<div class=\"sub\">1,037<\/div>","+7,0%<div class=\"sub\">1,070<\/div>","+15,7%<div class=\"sub\">1,157<\/div>","+10,8%<div class=\"sub\">1,108<\/div>","+4,0%<div class=\"sub\">1,040<\/div>","+15,9%<div class=\"sub\">1,159<\/div>","+12,6%<div class=\"sub\">1,126<\/div>"],"html":true,"minWidth":105,"align":"right"},{"id":"MI2225","name":"Índice de Malmquist 2022–2025","type":"numeric","cell":["+2,5%<div class=\"sub\">1,025<\/div>","−0,3%<div class=\"sub\">0,997<\/div>","+11,4%<div class=\"sub\">1,114<\/div>","+1,9%<div class=\"sub\">1,019<\/div>","+5,9%<div class=\"sub\">1,059<\/div>","+13,7%<div class=\"sub\">1,137<\/div>","+4,5%<div class=\"sub\">1,045<\/div>","+0,1%<div class=\"sub\">1,001<\/div>","+5,9%<div class=\"sub\">1,059<\/div>","−5,3%<div class=\"sub\">0,947<\/div>","+13,9%<div class=\"sub\">1,139<\/div>","+23,4%<div class=\"sub\">1,234<\/div>","+1,4%<div class=\"sub\">1,014<\/div>","−0,5%<div class=\"sub\">0,995<\/div>","+12,9%<div class=\"sub\">1,129<\/div>","+10,3%<div class=\"sub\">1,103<\/div>"],"html":true,"minWidth":110,"align":"right"},{"id":"TC2225","name":"TC 2022–2025*","type":"numeric","cell":["0,964","0,961","1,002","0,926","0,972","0,956","0,979","0,977","0,977","0,991","0,983","1,002","0,964","0,989","0,985","0,981"],"minWidth":80,"align":"right","style":{"color":"#6b7280"}},{"id":"melhora","name":"Melhora consistente","type":"numeric","minWidth":85,"align":"right"},{"id":"piora","name":"Piora consistente","type":"numeric","minWidth":85,"align":"right"}],"columnGroups":[{"name":"Aproximação às melhores práticas (EC), média anual","columns":["EC2022","EC2225","EC2025"]}],"pagination":false,"striped":true,"compact":true,"language":{"sortLabel":"Ordenar por {name}","filterPlaceholder":"Filtrar","filterLabel":"Filtrar {name}","searchPlaceholder":"Buscar","searchLabel":"Buscar na tabela","noData":"Nenhum registro encontrado","pageNext":"Próxima","pagePrevious":"Anterior","pageNumbers":"{page} de {pages}","pageInfo":"{rowStart}–{rowEnd} de {rows} linhas","pageSizeOptions":"Mostrar {rows}","pageNextLabel":"Próxima página","pagePreviousLabel":"Página anterior","pageNumberLabel":"Página {page}","pageJumpLabel":"Ir para a página","pageSizeOptionsLabel":"Linhas por página","groupExpandLabel":"Expandir grupo","detailsExpandLabel":"Mostrar detalhes","selectAllRowsLabel":"Selecionar todas as linhas","selectAllSubRowsLabel":"Selecionar todas as linhas do grupo","selectRowLabel":"Selecionar linha"},"elementId":"tab-mq-h-todos","dataKey":"8b1b744058bb4a189c6f9c12f764a55c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="nota-fonte">
+<p>A alta complexidade não tem índice de Malmquist publicado: o modelo regional é só diagnóstico e usa fronteira única para 2020–2025 (veja <a href="alta-complexidade.html">Alta complexidade</a>). A evolução de cada município e hospital, com a tendência rotulada, está nas fichas dos <a href="../municipios/index.html">perfis municipais</a> e na página de <a href="hospitais.html">hospitais</a>.</p>
+</div>
+</section>
+<section id="ressalvas" class="level2">
+<h2 class="anchored" data-anchor-id="ressalvas">Ressalvas</h2>
+<div class="callout callout-style-default callout-warning callout-titled" title="Leia antes de interpretar">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Aviso</span>Leia antes de interpretar
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Resultados da versão 2, em validação</strong> com a SES-MT e o COSEMS-MT (Resultados DEA v2, 08/10/2026).</li>
+<li><strong>Produtividade não é qualidade.</strong> O índice mede a variação da produção por recurso; não mede resultado em saúde.</li>
+<li><strong>COVID-19.</strong> 2020 e 2021 tiveram produção deprimida e recursos realocados; a janela 2020–2022 mistura queda e recuperação.</li>
+<li><strong>Registro.</strong> Mudanças de registro (CNES após 2022, SISAB incompleto, quebras na produção ambulatorial) afetam o deslocamento das melhores práticas e algumas transições, que ficam fora das médias.</li>
+<li><strong>Especificação usada.</strong> O índice é calculado com as variáveis em níveis absolutos e retornos constantes de escala (necessário para a comparação entre anos); os escores anuais usam retornos variáveis. A aproximação às melhores práticas publicada nas fichas é a mesma desta página.</li>
+<li><strong>Média geométrica.</strong> As médias regionais e estaduais dão o mesmo peso a cada unidade, independentemente do porte.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="arquivos" class="level2">
+<h2 class="anchored" data-anchor-id="arquivos">Arquivos</h2>
+<div class="cell">
+<div class="cell-output-display">
+<ul>
+<li>
+<a href="../arquivos/dados/eficiencia/malmquist_regiao.csv" download="malmquist_regiao.csv">malmquist_regiao.csv</a>
+ — Malmquist agregado (média geométrica) por modelo, região de saúde e estado: transições anuais e janelas 2020–2022, 2022–2025 e 2020–2025.
+</li>
+<li>
+<a href="../arquivos/dados/eficiencia/resumo_modelos.csv" download="resumo_modelos.csv">resumo_modelos.csv</a>
+ — Resumo por modelo, grupo e ano: unidades avaliadas, escore médio e mediano, distribuição por faixa e Malmquist médio da transição.
+</li>
+<li>
+<a href="../arquivos/dados/eficiencia/fichas_municipio.csv" download="fichas_municipio.csv">fichas_municipio.csv</a>
+ — Fichas municipais de eficiência: uma linha por município, modelo (M1 atenção básica, M0 consolidado, M2 média complexidade, M2A média complexidade pela ótica do acesso) e ano: escore corrigido com intervalo de confiança, faixa, posição na região/macrorregião/estado, escore esperado pelo contexto, pares, evolução (Malmquist), indicadores de resultado, equidade, sinais de registro e frase-síntese.
+</li>
+<li>
+<a href="../arquivos/dados/eficiencia/fichas_hospital.csv" download="fichas_hospital.csv">fichas_hospital.csv</a>
+ — Fichas dos hospitais SUS (CNES): escore com IC, faixa, posição no grupo/região/estado, escore esperado, evolução, mortalidade hospitalar padronizada, perfil de oferta e sinais.
+</li>
+<li>
+<a href="../arquivos/dados/eficiencia/dicionario_eficiencia.csv" download="dicionario_eficiencia.csv">dicionario_eficiencia.csv</a>
+ — dicionário de todos os campos: nome gerencial, unidade, definição e fonte.
+</li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p class="nota-fonte">
+Fontes: DATASUS/Ministério da Saúde (CNES, SIA, SIH, SISAB, SI-PNI, SIM, SINASC), SIOPS e IBGE, tratados pelo 
+Projeto PPSUS-MT (Data Lake do SUS-MT). 
+Indicadores em R$ correntes (despesa liquidada); valores de eficiência em R$ de 2025 (IPCA); 
+produção hospitalar pelo ano da alta; 
+medianas calculadas entre os municípios de Mato Grosso no ano indicado. 
+Produtividade: Resultados DEA v2 (08/10/2026), Projeto PPSUS-MT — índice de Malmquist com intervalo de confiança por bootstrap, médias geométricas por região e estado; dados de SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025. 
+Definições, ressalvas e anomalias conhecidas em 
+<a href="../metodologia.html">Metodologia</a>; arquivos completos em 
+<a href="../dados/index.html">Dados</a>.
+</p>
+</div>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
+<script>
+// Siglas explicadas ao passar o cursor (ou tocar, no celular). Aplica-se a parágrafos, listas,
+// legendas e rótulos dos cartões. A primeira ocorrência de cada sigla em cada bloco recebe <abbr title>.
+(function () {
+  var G = {
+    "SUS": "Sistema Único de Saúde",
+    "SIOPS": "Sistema de Informações sobre Orçamentos Públicos em Saúde: despesas declaradas pelos municípios (Ministério da Saúde)",
+    "CNES": "Cadastro Nacional de Estabelecimentos de Saúde: estabelecimentos, leitos, equipamentos e profissionais",
+    "SIA": "Sistema de Informações Ambulatoriais do SUS: procedimentos ambulatoriais aprovados",
+    "SIH": "Sistema de Informações Hospitalares do SUS: internações pagas por AIH",
+    "AIH": "Autorização de Internação Hospitalar: registro de cada internação no SUS",
+    "SISAB": "Sistema de Informação em Saúde para a Atenção Básica: produção das equipes de atenção primária",
+    "SI-PNI": "Sistema de Informação do Programa Nacional de Imunizações: doses de vacina aplicadas",
+    "SIM": "Sistema de Informações sobre Mortalidade: óbitos por residência",
+    "SINASC": "Sistema de Informações sobre Nascidos Vivos",
+    "APS": "Atenção Primária à Saúde (atenção básica): unidades básicas e equipes de saúde da família",
+    "ESF": "Estratégia Saúde da Família",
+    "eSF": "Equipe de Saúde da Família (médico, enfermeiro, técnico e agentes comunitários)",
+    "eAP": "Equipe de Atenção Primária (formato reduzido, sem agentes comunitários)",
+    "eSB": "Equipe de Saúde Bucal",
+    "ACS": "Agente Comunitário de Saúde",
+    "FTE": "Equivalente em tempo integral: horas semanais contratadas divididas por 40",
+    "MC": "Média complexidade: procedimentos e internações de nível intermediário (SIA/SIH)",
+    "AC": "Alta complexidade: procedimentos e internações de alto custo ou tecnologia (SIA/SIH)",
+    "UTI": "Unidade de Terapia Intensiva",
+    "CIR": "Comissão Intergestores Regional: instância das 16 regiões de saúde de Mato Grosso",
+    "PDR": "Plano Diretor de Regionalização: define regiões e macrorregiões de saúde",
+    "DEA": "Análise Envoltória de Dados: compara municípios, hospitais ou regiões pelo que produzem com os recursos que usam; as melhores práticas observadas formam a fronteira de eficiência",
+    "BCC": "Modelo DEA de Banker, Charnes e Cooper, com retornos variáveis de escala: cada unidade é comparada com unidades de porte semelhante",
+    "IC": "Intervalo de confiança de 95%: faixa de valores plausíveis do escore, estimada por reamostragem (bootstrap); quanto mais largo, mais incerta a posição",
+    "COSEMS-MT": "Conselho de Secretarias Municipais de Saúde de Mato Grosso",
+    "fronteira de eficiência": "Conjunto das melhores práticas observadas no ano: unidades que nenhuma outra supera produzindo mais com os mesmos recursos (escore original = 1)",
+    "Fronteira (melhores práticas)": "Faixa das unidades que formam a fronteira de eficiência no ano (escore original = 1)",
+    "escore de eficiência": "Razão entre a produção observada e a que as melhores práticas comparáveis alcançariam com os mesmos recursos (0 a 1; 1 = fronteira)",
+    "Escore corrigido": "Escore de eficiência corrigido do viés da estimação por bootstrap; é a base das faixas e vem com intervalo de confiança",
+    "escore corrigido": "Escore de eficiência corrigido do viés da estimação por bootstrap; é a base das faixas e vem com intervalo de confiança",
+    "faixa de eficiência": "Grupo de posição no ano: fronteira ou quartil (superior, terceiro, segundo, inferior) do escore corrigido entre as unidades avaliadas; substitui o ranking pontual",
+    "Faixa no estado": "Fronteira ou quartil do escore corrigido entre as unidades avaliadas no estado no ano; substitui o ranking pontual",
+    "par de referência": "Unidade da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, e as fichas mostram os 3 de maior peso",
+    "pares de referência": "Unidades da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, e as fichas mostram os 3 de maior peso",
+    "Municípios de referência plausíveis": "Pares de referência: municípios da fronteira, com registro plausível, cujas práticas compõem a meta; o peso indica a participação de cada um",
+    "meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
+    "Meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
+    "meta intermediária": "Metade do caminho entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
+    "Meta intermediária": "Metade do caminho entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
+    "potencial de melhoria": "Diferença entre a meta plena e o observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
+    "Potencial de melhoria": "Diferença entre a meta plena e o observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
+    "mudança de eficiência": "Componente do Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; leitura de gestão",
+    "Mudança de eficiência": "Componente do Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; leitura de gestão",
+    "deslocamento tecnológico": "Componente do Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
+    "Deslocamento tecnológico": "Componente do Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
+    "escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças); comparar o observado com ele isola a parte atribuível à gestão",
+    "Escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças); comparar o observado com ele isola a parte atribuível à gestão",
+    "escore esperado": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças)",
+    "eficiência condicional": "Eficiência medida só entre unidades de contexto semelhante (ordem-m condicional); informação complementar, não ranking",
+    "EC": "Mudança de eficiência (índice de Malmquist): aproximação (> 1) ou afastamento (< 1) das melhores práticas entre dois anos; o site mostra a variação em % ao ano",
+    "TC": "Deslocamento das melhores práticas (deslocamento tecnológico do índice de Malmquist): movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
+    "MI": "Índice de Malmquist: variação da produtividade total entre dois anos (MI = EC × TC); acima de 1 = aumento",
+    "APAC": "Autorização de Procedimento Ambulatorial de Alta Complexidade: registro do SIA para procedimentos como diálise, quimioterapia e radioterapia",
+    "supereficiência": "Escore DEA calculado sem a própria unidade na fronteira; acima de 1 indica o quanto a unidade supera as demais; infactível quando nenhuma outra unidade usa tão pouco de algum recurso",
+    "referência com alavancagem": "Unidade da fronteira com supereficiência muito alta (acima de 2): pesa demais na fronteira e, por isso, não é usada como par de outras",
+    "Referência com grande peso na fronteira": "Unidade da fronteira com supereficiência muito alta (acima de 2): pesa demais na fronteira e, por isso, não é usada como par de outras",
+    "diagnóstico ordem-m": "Teste de robustez: a unidade fica acima das melhores práticas de amostras de unidades comparáveis; sinal informativo, que não impede o uso como referência",
+    "ordem-m": "Fronteira parcial de ordem m: compara a unidade com amostras de m unidades comparáveis, reduzindo a influência de valores extremos",
+    "TMI": "Taxa de mortalidade infantil: óbitos de menores de 1 ano por mil nascidos vivos",
+    "PPSUS": "Programa Pesquisa para o SUS: gestão compartilhada em saúde",
+    "FAPEMAT": "Fundação de Amparo à Pesquisa do Estado de Mato Grosso",
+    "CNPq": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
+    "Decit": "Departamento de Ciência e Tecnologia do Ministério da Saúde",
+    "SES-MT": "Secretaria de Estado de Saúde de Mato Grosso",
+    "UNEMAT": "Universidade do Estado de Mato Grosso",
+    "IBGE": "Instituto Brasileiro de Geografia e Estatística",
+    "UBS": "Unidade Básica de Saúde",
+    "UPA": "Unidade de Pronto Atendimento",
+    "Malmquist": "Índice de Malmquist: variação da produtividade entre dois anos, decomposta em mudança de eficiência (gestão) e deslocamento tecnológico (fronteira)",
+    "RREO": "Relatório Resumido da Execução Orçamentária: demonstrativo bimestral que alimenta o SIOPS",
+    "OMS": "Organização Mundial da Saúde",
+    "BPA-C": "Boletim de Produção Ambulatorial consolidado: registro do SIA sem identificação do paciente",
+    "e-SUS APS": "Estratégia e-SUS Atenção Primária à Saúde: sistema de registro das equipes, que alimenta o SISAB",
+    "UFs": "Unidades da Federação (estados e Distrito Federal)",
+    "UF": "Unidade da Federação (estado ou Distrito Federal)",
+    "p.p.": "Pontos percentuais: diferença entre dois percentuais",
+    "WGS84": "Sistema de referência geodésico mundial usado nas malhas (latitude e longitude em graus)",
+    "EPSG:4326": "Código do sistema de coordenadas WGS84 (latitude e longitude em graus)",
+    "SECTICS": "Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (Ministério da Saúde)",
+    "SECITECI": "Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso"
+  };
+  var chaves = Object.keys(G).sort(function (a, b) { return b.length - a.length; });
+  var re = new RegExp("(^|[^\\wÀ-ú-])(" + chaves.map(function (k) { return k.replace(/[.*+?^${}()|[\]\\-]/g, "\\$&"); }).join("|") + ")(?![\\wÀ-ú-])");
+  function marcar(el) {
+    var usados = {};
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        var p = n.parentNode;
+        while (p && p !== el) { if (/^(A|ABBR|CODE|SCRIPT|STYLE|SVG|BUTTON|SELECT|OPTION|H1|H2|H3)$/i.test(p.nodeName)) return NodeFilter.FILTER_REJECT; p = p.parentNode; }
+        return re.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+      }
+    });
+    var nos = []; while (w.nextNode()) nos.push(w.currentNode);
+    nos.forEach(function (n) {
+      var m = n.nodeValue.match(re); if (!m || usados[m[2]]) return;
+      usados[m[2]] = true;
+      var i = m.index + m[1].length, depois = n.splitText(i); depois.splitText(m[2].length);
+      var ab = document.createElement("abbr"); ab.title = G[m[2]]; ab.tabIndex = 0; ab.textContent = m[2];
+      depois.parentNode.replaceChild(ab, depois);
+    });
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("main p, main li, main figcaption, main td, main th, main .kpi-rotulo, main .kpi-meta, main .kpi-comp, main .kpi-nota, main .ficha-ind > div, main .ressalva-ind, main .faixa-versao, main .definicao-ind, main .ef-linha, main .ef-sintese, footer .nav-footer-left").forEach(marcar);
+  });
+})();
+</script>
+<div id="dica-grafico" role="tooltip" aria-hidden="true"></div>
+<script>
+// Dica imediata para elementos com data-tip (pontos, barras e linhas dos gráficos SVG).
+(function () {
+  var dica = document.getElementById("dica-grafico");
+  function mostrar(el, x, y) {
+    dica.textContent = el.getAttribute("data-tip");
+    dica.style.display = "block";
+    var w = dica.offsetWidth, h = dica.offsetHeight;
+    var left = Math.min(x + 12, window.innerWidth - w - 8), top = y - h - 12;
+    if (top < 4) top = y + 16;
+    dica.style.left = left + "px"; dica.style.top = top + "px";
+  }
+  function esconder() { dica.style.display = "none"; }
+  document.addEventListener("mouseover", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); if (el) mostrar(el, e.clientX, e.clientY);
+  });
+  document.addEventListener("mousemove", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); if (el && dica.style.display === "block") mostrar(el, e.clientX, e.clientY);
+  });
+  document.addEventListener("mouseout", function (e) {
+    if (e.target.closest && e.target.closest("[data-tip]")) esconder();
+  });
+  document.addEventListener("touchstart", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); var t = e.touches[0];
+    if (el) mostrar(el, t.clientX, t.clientY); else esconder();
+  }, { passive: true });
+  window.addEventListener("scroll", esconder, { passive: true });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/daniellindomar\.github\.io\/ppsus\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<div class="rodape">
+<div class="rodape-logos">
+<p><span class="rodape-rotulo">Realização</span> <img src="../assets/logos/unemat.png" class="rodape-logo img-fluid" alt="UNEMAT — Universidade do Estado de Mato Grosso"></p>
+</div>
+<div class="rodape-logos">
+<p><span class="rodape-rotulo">Financiamento</span> <img src="../assets/logos/ppsus-mt.png" class="rodape-logo img-fluid" alt="PPSUS — Programa Pesquisa para o SUS: Mato Grosso"> <img src="../assets/logos/fapemat.png" class="rodape-logo img-fluid" alt="FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso"> <img src="../assets/logos/ses-mt.png" class="rodape-logo img-fluid" alt="SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso"> <img src="../assets/logos/cnpq.png" class="rodape-logo img-fluid" alt="CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico"> <img src="../assets/logos/ministerio-saude-sus.png" class="rodape-logo img-fluid" alt="SUS · Ministério da Saúde · Governo do Brasil"></p>
+</div>
+<p><span class="rodape-citacao">Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.</span></p>
+<p><span class="rodape-versao">Versão 0.2 · atualizado em 08/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
+</div>
+<div class="toc-actions"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

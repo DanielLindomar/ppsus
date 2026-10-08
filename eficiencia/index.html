@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Escores de eficiência (DEA) e produtividade (Malmquist) do SUS nos municípios, hospitais e regiões de saúde de Mato Grosso, 2020–2025: como ler faixas, intervalos de confiança, pares, metas e evolução, e o panorama de 2025 por modelo">
+
+<title>Eficiência: como ler e visão geral – Observatório PPSUS-MT</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-3f3c2766e82e7a818a36b889e02efff9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/core-js-2.5.3/shim.min.js"></script>
+
+<script src="../site_libs/react-18.2.0/react.min.js"></script>
+
+<script src="../site_libs/react-18.2.0/react-dom.min.js"></script>
+
+<script src="../site_libs/reactwidget-2.0.0/react-tools.js"></script>
+
+<link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="../site_libs/reactable-0.4.5/reactable.css" rel="stylesheet">
+
+<script src="../site_libs/reactable-binding-0.4.5/reactable.js"></script>
+
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logos/unemat-branco.png" alt="UNEMAT — Universidade do Estado de Mato Grosso" class="navbar-logo light-content">
+    <img src="../assets/logos/unemat-branco.png" alt="UNEMAT — Universidade do Estado de Mato Grosso" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Observatório PPSUS-MT</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../municipios/index.html"> 
+<span class="menu-text">Municípios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../indicadores/index.html"> 
+<span class="menu-text">Indicadores</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../deslocamento/index.html"> 
+<span class="menu-text">Deslocamento</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-eficiência" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Eficiência</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-eficiência">    
+        <li>
+    <a class="dropdown-item" href="../eficiencia/index.html">
+ <span class="dropdown-text">Como ler e visão geral</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/atencao-basica.html">
+ <span class="dropdown-text">Atenção básica</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/consolidado.html">
+ <span class="dropdown-text">Consolidado municipal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/media-complexidade.html">
+ <span class="dropdown-text">Média complexidade (produção e acesso)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/hospitais.html">
+ <span class="dropdown-text">Hospitais SUS</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/alta-complexidade.html">
+ <span class="dropdown-text">Alta complexidade (regiões de saúde)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/produtividade.html">
+ <span class="dropdown-text">Produtividade (Malmquist)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../dados/index.html"> 
+<span class="menu-text">Dados</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../metodologia.html"> 
+<span class="menu-text">Metodologia</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sobre.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/daniellindomar/ppsus"> <i class="bi bi-github" role="img" aria-label="Código-fonte no GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Eficiência: como ler e visão geral</h1>
+</div>
+
+<div>
+  <div class="description">
+    Escores de eficiência (DEA) e produtividade (Malmquist) do SUS nos municípios, hospitais e regiões de saúde de Mato Grosso, 2020–2025: como ler faixas, intervalos de confiança, pares, metas e evolução, e o panorama de 2025 por modelo
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output-display">
+<style>
+.selo-faixa { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: .76rem; font-weight: 600; white-space: nowrap; border: 1px solid rgba(0,0,0,.08); }
+.selo-faixa.selo-fora { background: #EEF0F2; color: #4b5563; }
+.selo-inc { font-weight: 700; }
+svg.mini-ic { display: block; margin: 2px 0 0 auto; }
+.ef-espec { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: .6rem; align-items: stretch; margin: .6rem 0 1.2rem; }
+.ef-espec .bloco ul { margin: 0; padding-left: 1.1rem; font-size: .9rem; }
+.ef-espec .bloco li { margin-bottom: .25rem; }
+.ef-espec .seta { align-self: center; font-size: 1.8rem; color: #0E5A5E; }
+@media (max-width: 760px) { .ef-espec { grid-template-columns: minmax(0, 1fr); } .ef-espec .seta { transform: rotate(90deg); justify-self: center; } }
+.leg-faixas { background: rgba(255,255,255,.94); padding: 6px 9px; border-radius: 6px; font-size: .76rem; line-height: 1.45; box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+.leg-faixas i { display: inline-block; width: 13px; height: 13px; margin: 1px 5px 1px 0; vertical-align: -2px; border: 1px solid rgba(0,0,0,.12); }
+.leg-faixas .leg-tit { font-weight: 600; margin-bottom: 2px; }
+.ef-ficha { padding: .7rem 1rem .9rem; background: #f8fbfb; font-size: .88rem; }
+.ef-ficha .sintese { font-size: .92rem; margin-bottom: .5rem; }
+.ef-ficha table { font-size: .82rem; margin: .3rem 0 .4rem; border-collapse: collapse; }
+.ef-ficha th, .ef-ficha td { padding: 2px 8px; border-bottom: 1px solid #e5e7eb; text-align: right; }
+.ef-ficha th:first-child, .ef-ficha td:first-child { text-align: left; }
+.ef-ficha h5 { font-size: .86rem; margin: .6rem 0 .2rem; color: #0E5A5E; }
+.ef-botoes { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: .4rem 0 .6rem; }
+.ef-ler { border-left: 4px solid #0E5A5E; background: #f3f8f8; padding: .6rem 1rem; margin: .4rem 0 1rem; border-radius: 4px; }
+.ef-ressalva { background: #fff4d6; border-left: 4px solid #d4a017; padding: .5rem .9rem; font-size: .9rem; margin: .4rem 0 1rem; border-radius: 4px; }
+.cartoes-ef .cartao h4 { font-size: 1rem; }
+.cartoes-ef .cartao .kpi-valor { font-size: 1.35rem; font-weight: 700; color: #0E5A5E; line-height: 1.2; margin: .2rem 0; }
+.cartoes-ef .cartao .sub { margin-top: .15rem; }
+.rolagem-x { max-width: 100%; overflow-x: auto; }
+</style>
+</div>
+<div class="cell-output-display">
+<div class="faixa-versao"><b>Resultados da versão 2 da estimação DEA/Malmquist (08/10/2026), em validação com a SES-MT e o COSEMS-MT.</b> Leia por <b>faixas com intervalo de confiança</b>, não por posição pontual; dados de registro a verificar estão sinalizados. Janela 2020–2025; os anos de 2020–2021 refletem a pandemia de COVID-19.</div>
+</div>
+<div class="cell-output-display">
+<nav class="nav-mun" aria-label="Páginas da seção Eficiência">
+<a class="btn btn-sm btn-primary" href="index.html" aria-current="page">Como ler e visão geral</a>
+<a class="btn btn-sm btn-outline-primary" href="atencao-basica.html">Atenção básica</a>
+<a class="btn btn-sm btn-outline-primary" href="consolidado.html">Consolidado</a>
+<a class="btn btn-sm btn-outline-primary" href="media-complexidade.html">Média complexidade</a>
+<a class="btn btn-sm btn-outline-primary" href="hospitais.html">Hospitais</a>
+<a class="btn btn-sm btn-outline-primary" href="alta-complexidade.html">Alta complexidade</a>
+<a class="btn btn-sm btn-outline-primary" href="produtividade.html">Produtividade (Malmquist)</a>
+</nav>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<nav class="nav-mun" aria-label="Seções desta página">
+<span class="sub">Nesta página:</span>
+<a class="btn btn-sm btn-outline-secondary" href="#como-ler">Como ler</a>
+<a class="btn btn-sm btn-outline-secondary" href="#visao-geral">Visão geral 2025</a>
+<a class="btn btn-sm btn-outline-secondary" href="#distribuicao">Faixas por modelo</a>
+<a class="btn btn-sm btn-outline-secondary" href="#resumo">Tabela-resumo</a>
+<a class="btn btn-sm btn-outline-secondary" href="#ressalvas">Ressalvas</a>
+<a class="btn btn-sm btn-outline-secondary" href="#arquivos">Arquivos e método</a>
+</nav>
+</div>
+</div>
+<p>Esta seção mostra <strong>quanto cada município, hospital e região de saúde de Mato Grosso produz com os recursos de que dispõe, comparado às melhores práticas observadas no próprio estado</strong>. Os resultados vêm da versão 2 da estimação por Análise Envoltória de Dados (DEA) e índice de Malmquist do Projeto PPSUS-MT (Resultados DEA v2, 08/10/2026), para 2020–2025, e estão em validação com a SES-MT e o COSEMS-MT. São cinco leituras complementares — <strong>atenção básica</strong>, <strong>sistema municipal consolidado</strong>, <strong>média complexidade</strong> (pela produção local e pela ótica do acesso dos moradores), <strong>hospitais SUS</strong> e <strong>alta complexidade por região de saúde</strong> — além da <strong>evolução da produtividade</strong> ao longo do período. Antes dos números, vale ler como interpretá-los.</p>
+<section id="como-ler" class="level2">
+<h2 class="anchored" data-anchor-id="como-ler">Como ler os resultados</h2>
+<div class="dois-blocos">
+<section id="o-que-o-escore-mede-e-o-que-não-mede" class="level4 bloco">
+<h4 class="anchored" data-anchor-id="o-que-o-escore-mede-e-o-que-não-mede">O que o escore mede — e o que não mede</h4>
+<p>O <strong>escore de eficiência</strong> compara cada unidade com as que, usando recursos semelhantes (despesa, profissionais, leitos, equipamentos, equipes), produziram mais (atendimentos, visitas, vacinas, procedimentos, internações). As melhores práticas formam a <strong>fronteira</strong> (escore 1); um escore de 0,80 indica que a unidade produz cerca de 80% do que as melhores práticas obtêm com recursos semelhantes — mantidos os recursos, a produção poderia crescer cerca de 25% (1/0,80 − 1).</p>
+<p>O escore <strong>não mede a qualidade do cuidado</strong> nem o resultado em saúde: mortalidade infantil, pré-natal e mortalidade hospitalar aparecem ao lado do escore, nas fichas, e não o modificam. Também não diz <em>por que</em> uma unidade está longe da fronteira — registro incompleto, perfil da rede ou decisões de gestão podem explicar a distância. É um ponto de partida para a conversa, não um veredito.</p>
+</section>
+<section id="faixas-com-intervalo-de-confiança-não-ranking" class="level4 bloco">
+<h4 class="anchored" data-anchor-id="faixas-com-intervalo-de-confiança-não-ranking">Faixas com intervalo de confiança, não ranking</h4>
+<p>Cada escore é estimado com incerteza: o <strong>escore corrigido</strong> (por bootstrap, 2.000 réplicas) vem acompanhado de um <strong>intervalo de confiança (IC) de 95%</strong>. Por isso o site publica <strong>faixas</strong> — fronteira e quartis do escore corrigido entre as unidades do ano — em vez de posições pontuais (1º, 2º, 3º…). Quando o IC alcança a faixa vizinha, a faixa aparece com o sinal <strong>±</strong> e deve ser lida como provisória.</p>
+<p>A faixa <em>fronteira</em> reúne as unidades com escore original igual a 1. A correção do viés reduz mais o escore delas, que pode ficar abaixo do de unidades do quartil superior: a comparação entre ambas deve usar o IC. As fronteiras são <strong>anuais</strong>: o nível do escore não é comparável entre anos — a evolução é lida pelo índice de Malmquist.</p>
+</section>
+<section id="pares-de-referência" class="level4 bloco">
+<h4 class="anchored" data-anchor-id="pares-de-referência">Pares de referência</h4>
+<p>Para cada unidade fora da fronteira, o modelo indica até cinco <strong>pares de referência</strong> (as fichas mostram os três de maior peso): unidades eficientes cuja combinação de recursos e produção é a mais próxima. Só entram como pares as unidades com <strong>registro plausível</strong> (sem sinal de registro a verificar e sem supereficiência extrema); as demais continuam com escore publicado, mas não servem de modelo para terceiros. O <strong>par mais semelhante</strong> é o de maior peso entre os de porte parecido (de um terço a três vezes o tamanho da unidade). Os pares são o melhor ponto de partida para a troca de experiências entre gestores.</p>
+</section>
+<section id="meta-meta-intermediária-e-potencial-de-melhoria" class="level4 bloco">
+<h4 class="anchored" data-anchor-id="meta-meta-intermediária-e-potencial-de-melhoria">Meta, meta intermediária e potencial de melhoria</h4>
+<p>A <strong>meta plena</strong> é o ponto da fronteira de pares que a unidade alcançaria produzindo como eles, com os mesmos recursos. A <strong>meta intermediária</strong> cobre 50% da distância entre o valor observado e a meta plena (limiar homologado pelo coordenador em 08/10/2026) e é a referência de curto prazo. O <strong>potencial de melhoria</strong> é essa diferença em unidades e em %: produção adicional possível nos produtos e, nos recursos, a folga frente aos pares. A folga financeira, em R$ de 2025, indica <strong>espaço de realocação, não corte</strong>. Metas financeiras não são publicadas quando a classificação orçamentária do município é inconsistente.</p>
+</section>
+<section id="escore-esperado-pelo-contexto" class="level4 bloco">
+<h4 class="anchored" data-anchor-id="escore-esperado-pelo-contexto">Escore esperado pelo contexto</h4>
+<p>Porte, riqueza, densidade, distância aos polos e finanças municipais influenciam o que é possível produzir. O <strong>escore esperado pelo contexto</strong> estima o escore típico de um município com aquelas características; a <strong>diferença</strong> (observado − esperado, no segundo estágio) mostra se o município está <strong>acima</strong> ou <strong>abaixo</strong> do que o contexto prevê. Um município pequeno e isolado com escore modesto pode estar acima do esperado. A diferença usa o escore corrigido do segundo estágio, por isso não é a subtração direta das duas colunas publicadas. Não há escore esperado na média complexidade pela ótica do acesso nem para os hospitais fora do painel balanceado.</p>
+</section>
+<section id="evolução-índice-de-malmquist" class="level4 bloco">
+<h4 class="anchored" data-anchor-id="evolução-índice-de-malmquist">Evolução: índice de Malmquist</h4>
+<p>O <strong>índice de Malmquist</strong> compara anos consecutivos e mede a mudança da produtividade, separada em dois movimentos: a <strong>aproximação às melhores práticas</strong> (mudança de eficiência, EC — o componente de gestão, publicado nas fichas) e o <strong>deslocamento das melhores práticas</strong> (TC — o estado como um todo produzindo mais ou menos com os mesmos recursos). Valores acima de 1 indicam melhora; o site os mostra como variação % ao ano. O TC só é publicado como agregado: em 2022–2025 (atenção básica −3,0% ao ano, consolidado municipal −3,0% ao ano, média complexidade +0,9% ao ano e hospitais SUS −2,5% ao ano), ele pode refletir o <strong>crescimento do registro de profissionais e equipamentos no CNES após 2022</strong>, e não uma mudança real das melhores práticas. A tendência de cada município é rotulada como <em>melhora</em> ou <em>piora consistente</em> só quando ao menos duas transições têm IC inteiramente acima (abaixo) de 1 e a média da janela passa de ±2% ao ano.</p>
+</section>
+</div>
+<p><strong>Sinalizações.</strong> Nenhuma unidade é excluída por ser atípica. As fichas trazem sinais: <em>registro a verificar</em> (valor de origem implausível, a verificar com a SES-MT e o COSEMS-MT — a unidade não serve de par), <em>referência com alavancagem</em> (supereficiência muito alta — também não serve de par), <em>sem comparável em algum insumo</em> e <em>diagnóstico ordem-m</em> (informativos). Faixas e escores das unidades sinalizadas são publicados e devem ser lidos com essa ressalva.</p>
+</section>
+<section id="visao-geral" class="level2">
+<h2 class="anchored" data-anchor-id="visao-geral">Visão geral 2025</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="cartoes cartoes-ef">
+<a class="cartao" href="atencao-basica.html">
+<h4 class="anchored">Atenção básica</h4>
+<div class="kpi-valor">69 na fronteira</div>
+<p>de 142 municípios avaliados · mediana do escore corrigido 0,902</p>
+<p class="sub">EC 2022–2025: +5,7% ao ano · IC cruza a faixa vizinha: 53</p>
+</a>
+<a class="cartao" href="consolidado.html">
+<h4 class="anchored">Consolidado municipal</h4>
+<div class="kpi-valor">39 na fronteira</div>
+<p>de 142 municípios avaliados · mediana do escore corrigido 0,770</p>
+<p class="sub">EC 2022–2025: +4,4% ao ano · IC cruza a faixa vizinha: 73</p>
+</a>
+<a class="cartao" href="media-complexidade.html">
+<h4 class="anchored">Média complexidade</h4>
+<div class="kpi-valor">27 na fronteira</div>
+<p>de 80 municípios avaliados · mediana do escore corrigido 0,815</p>
+<p class="sub">EC 2022–2025: +2,6% ao ano · IC cruza a faixa vizinha: 35</p>
+</a>
+<a class="cartao" href="media-complexidade.html#acesso">
+<h4 class="anchored">Média complexidade — acesso</h4>
+<div class="kpi-valor">30 na fronteira</div>
+<p>de 141 municípios avaliados · mediana do escore corrigido 0,622</p>
+<p class="sub">EC 2022–2025: +0,9% ao ano · IC cruza a faixa vizinha: 64</p>
+</a>
+<a class="cartao" href="hospitais.html">
+<h4 class="anchored">Hospitais SUS</h4>
+<div class="kpi-valor">28 na fronteira</div>
+<p>de 89 hospitais avaliados · mediana do escore corrigido 0,695</p>
+<p class="sub">EC 2022–2025: +7,7% ao ano · IC cruza a faixa vizinha: 33</p>
+</a>
+<a class="cartao" href="alta-complexidade.html">
+<h4 class="anchored">Alta complexidade (regiões)</h4>
+<div class="kpi-valor">3 de 16</div>
+<p>regiões de saúde com escore diagnóstico publicável</p>
+<p class="sub">o produto gerencial é o painel regional de acesso e produção</p>
+</a>
+</div>
+</div>
+</div>
+<p>Em 2025, na <strong>atenção básica</strong>, 69 dos 142 municípios avaliados estão na fronteira e a mediana do escore corrigido é 0,902; no <strong>sistema municipal consolidado</strong>, 39 de 142 (mediana 0,770). A <strong>média complexidade pela produção local</strong> avalia 80 municípios com produção hospitalar de média complexidade em todos os anos; os demais são lidos pela <strong>ótica do acesso</strong> (141 municípios em duas fronteiras: com e sem leito SUS). Nos <strong>hospitais SUS</strong>, 28 de 89 estão na fronteira (produtos da especificação principal: internações (MC + AC) e diárias de internação (todas), por decisão do coordenador de 08/10/2026). Na <strong>alta complexidade</strong>, o produto gerencial é o painel regional de acesso e produção das 16 regiões de saúde; o escore diagnóstico é publicado para 3 regiões. Clique em um cartão para abrir a página do modelo.</p>
+</section>
+<section id="distribuicao" class="level2">
+<h2 class="anchored" data-anchor-id="distribuicao">Distribuição por faixa em cada modelo</h2>
+<div class="cell">
+<div class="cell-output-display">
+<figure class="grafico-svg figure"><svg viewbox="0 0 720 138" width="100%" role="img" aria-label="Unidades avaliadas por faixa, por modelo, 2025"><title>Unidades avaliadas por faixa, por modelo, 2025</title><g class="svg-link" role="link" tabindex="0" style="cursor:pointer" onclick="window.location='atencao-basica.html'" onkeydown="if(event.key==='Enter')window.location='atencao-basica.html'"><text x="212" y="17.0" text-anchor="end" font-size="12" fill="#1f2937">Atenção básica</text></g><rect x="220.0" y="4.0" width="208.9" height="18" fill="#0B4A4D" stroke="#fff" stroke-width=".8" data-tip="Atenção básica · Fronteira (melhores práticas): 69 (48,6%)"></rect><text x="324.5" y="17.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">69</text><rect x="428.9" y="4.0" width="57.5" height="18" fill="#3D7C7F" stroke="#fff" stroke-width=".8" data-tip="Atenção básica · Quartil superior: 19 (13,4%)"></rect><text x="457.7" y="17.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">19</text><rect x="486.5" y="4.0" width="54.5" height="18" fill="#6FA3A4" stroke="#fff" stroke-width=".8" data-tip="Atenção básica · 3º quartil: 18 (12,7%)"></rect><text x="513.7" y="17.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">18</text><rect x="541.0" y="4.0" width="54.5" height="18" fill="#A9CACA" stroke="#fff" stroke-width=".8" data-tip="Atenção básica · 2º quartil: 18 (12,7%)"></rect><text x="568.2" y="17.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">18</text><rect x="595.5" y="4.0" width="54.5" height="18" fill="#DCEBEA" stroke="#fff" stroke-width=".8" data-tip="Atenção básica · Quartil inferior: 18 (12,7%)"></rect><text x="622.7" y="17.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">18</text><text x="656" y="17.0" font-size="11" fill="#4b5563">n = 142</text><g class="svg-link" role="link" tabindex="0" style="cursor:pointer" onclick="window.location='consolidado.html'" onkeydown="if(event.key==='Enter')window.location='consolidado.html'"><text x="212" y="43.0" text-anchor="end" font-size="12" fill="#1f2937">Consolidado municipal</text></g><rect x="220.0" y="30.0" width="118.1" height="18" fill="#0B4A4D" stroke="#fff" stroke-width=".8" data-tip="Consolidado municipal · Fronteira (melhores práticas): 39 (27,5%)"></rect><text x="279.0" y="43.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">39</text><rect x="338.1" y="30.0" width="78.7" height="18" fill="#3D7C7F" stroke="#fff" stroke-width=".8" data-tip="Consolidado municipal · Quartil superior: 26 (18,3%)"></rect><text x="377.5" y="43.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">26</text><rect x="416.8" y="30.0" width="78.7" height="18" fill="#6FA3A4" stroke="#fff" stroke-width=".8" data-tip="Consolidado municipal · 3º quartil: 26 (18,3%)"></rect><text x="456.2" y="43.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">26</text><rect x="495.6" y="30.0" width="75.7" height="18" fill="#A9CACA" stroke="#fff" stroke-width=".8" data-tip="Consolidado municipal · 2º quartil: 25 (17,6%)"></rect><text x="533.4" y="43.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">25</text><rect x="571.3" y="30.0" width="78.7" height="18" fill="#DCEBEA" stroke="#fff" stroke-width=".8" data-tip="Consolidado municipal · Quartil inferior: 26 (18,3%)"></rect><text x="610.6" y="43.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">26</text><text x="656" y="43.0" font-size="11" fill="#4b5563">n = 142</text><g class="svg-link" role="link" tabindex="0" style="cursor:pointer" onclick="window.location='media-complexidade.html'" onkeydown="if(event.key==='Enter')window.location='media-complexidade.html'"><text x="212" y="69.0" text-anchor="end" font-size="12" fill="#1f2937">Média complexidade</text></g><rect x="220.0" y="56.0" width="145.1" height="18" fill="#0B4A4D" stroke="#fff" stroke-width=".8" data-tip="Média complexidade · Fronteira (melhores práticas): 27 (33,8%)"></rect><text x="292.6" y="69.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">27</text><rect x="365.1" y="56.0" width="75.2" height="18" fill="#3D7C7F" stroke="#fff" stroke-width=".8" data-tip="Média complexidade · Quartil superior: 14 (17,5%)"></rect><text x="402.8" y="69.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">14</text><rect x="440.4" y="56.0" width="69.9" height="18" fill="#6FA3A4" stroke="#fff" stroke-width=".8" data-tip="Média complexidade · 3º quartil: 13 (16,2%)"></rect><text x="475.3" y="69.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">13</text><rect x="510.2" y="56.0" width="69.9" height="18" fill="#A9CACA" stroke="#fff" stroke-width=".8" data-tip="Média complexidade · 2º quartil: 13 (16,2%)"></rect><text x="545.2" y="69.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">13</text><rect x="580.1" y="56.0" width="69.9" height="18" fill="#DCEBEA" stroke="#fff" stroke-width=".8" data-tip="Média complexidade · Quartil inferior: 13 (16,2%)"></rect><text x="615.1" y="69.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">13</text><text x="656" y="69.0" font-size="11" fill="#4b5563">n = 80</text><g class="svg-link" role="link" tabindex="0" style="cursor:pointer" onclick="window.location='media-complexidade.html#acesso'" onkeydown="if(event.key==='Enter')window.location='media-complexidade.html#acesso'"><text x="212" y="95.0" text-anchor="end" font-size="12" fill="#1f2937">Média complexidade — acesso</text></g><rect x="220.0" y="82.0" width="91.5" height="18" fill="#0B4A4D" stroke="#fff" stroke-width=".8" data-tip="Média complexidade — acesso · Fronteira (melhores práticas): 30 (21,3%)"></rect><text x="265.7" y="95.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">30</text><rect x="311.5" y="82.0" width="85.4" height="18" fill="#3D7C7F" stroke="#fff" stroke-width=".8" data-tip="Média complexidade — acesso · Quartil superior: 28 (19,9%)"></rect><text x="354.2" y="95.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">28</text><rect x="396.9" y="82.0" width="85.4" height="18" fill="#6FA3A4" stroke="#fff" stroke-width=".8" data-tip="Média complexidade — acesso · 3º quartil: 28 (19,9%)"></rect><text x="439.6" y="95.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">28</text><rect x="482.3" y="82.0" width="82.3" height="18" fill="#A9CACA" stroke="#fff" stroke-width=".8" data-tip="Média complexidade — acesso · 2º quartil: 27 (19,1%)"></rect><text x="523.4" y="95.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">27</text><rect x="564.6" y="82.0" width="85.4" height="18" fill="#DCEBEA" stroke="#fff" stroke-width=".8" data-tip="Média complexidade — acesso · Quartil inferior: 28 (19,9%)"></rect><text x="607.3" y="95.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">28</text><text x="656" y="95.0" font-size="11" fill="#4b5563">n = 141</text><g class="svg-link" role="link" tabindex="0" style="cursor:pointer" onclick="window.location='hospitais.html'" onkeydown="if(event.key==='Enter')window.location='hospitais.html'"><text x="212" y="121.0" text-anchor="end" font-size="12" fill="#1f2937">Hospitais SUS</text></g><rect x="220.0" y="108.0" width="135.3" height="18" fill="#0B4A4D" stroke="#fff" stroke-width=".8" data-tip="Hospitais SUS · Fronteira (melhores práticas): 28 (31,5%)"></rect><text x="287.6" y="121.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">28</text><rect x="355.3" y="108.0" width="62.8" height="18" fill="#3D7C7F" stroke="#fff" stroke-width=".8" data-tip="Hospitais SUS · Quartil superior: 13 (14,6%)"></rect><text x="386.7" y="121.0" text-anchor="middle" font-size="11" fill="#ffffff" pointer-events="none">13</text><rect x="418.1" y="108.0" width="77.3" height="18" fill="#6FA3A4" stroke="#fff" stroke-width=".8" data-tip="Hospitais SUS · 3º quartil: 16 (18,0%)"></rect><text x="456.7" y="121.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">16</text><rect x="495.4" y="108.0" width="82.1" height="18" fill="#A9CACA" stroke="#fff" stroke-width=".8" data-tip="Hospitais SUS · 2º quartil: 17 (19,1%)"></rect><text x="536.5" y="121.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">17</text><rect x="577.5" y="108.0" width="72.5" height="18" fill="#DCEBEA" stroke="#fff" stroke-width=".8" data-tip="Hospitais SUS · Quartil inferior: 15 (16,9%)"></rect><text x="613.8" y="121.0" text-anchor="middle" font-size="11" fill="#0b2f31" pointer-events="none">15</text><text x="656" y="121.0" font-size="11" fill="#4b5563">n = 89</text></svg><figcaption class="legenda-svg"><span class="leg-item"><svg width="14" height="14" aria-hidden="true"><rect width="14" height="14" fill="#0B4A4D" stroke="#d1d5db"></rect></svg>Fronteira (melhores práticas)</span><span class="leg-item"><svg width="14" height="14" aria-hidden="true"><rect width="14" height="14" fill="#3D7C7F" stroke="#d1d5db"></rect></svg>Quartil superior</span><span class="leg-item"><svg width="14" height="14" aria-hidden="true"><rect width="14" height="14" fill="#6FA3A4" stroke="#d1d5db"></rect></svg>3º quartil</span><span class="leg-item"><svg width="14" height="14" aria-hidden="true"><rect width="14" height="14" fill="#A9CACA" stroke="#d1d5db"></rect></svg>2º quartil</span><span class="leg-item"><svg width="14" height="14" aria-hidden="true"><rect width="14" height="14" fill="#DCEBEA" stroke="#d1d5db"></rect></svg>Quartil inferior</span></figcaption></figure>
+</div>
+</div>
+<p>Unidades avaliadas em 2025 por faixa do escore corrigido, em cada modelo (os rótulos levam à página do modelo). Como as faixas são quartis das unidades fora da fronteira, cada quartil reúne cerca de um quarto delas; a diferença entre modelos está sobretudo no <strong>tamanho da fronteira</strong>. Na média complexidade pela ótica do acesso, as faixas são calculadas dentro de cada fronteira (com e sem leito SUS) e somadas aqui.</p>
+</section>
+<section id="resumo" class="level2">
+<h2 class="anchored" data-anchor-id="resumo">Tabela-resumo por modelo e ano</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-32e32a0b4c8035d4d249" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-32e32a0b4c8035d4d249">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Modelo":["Atenção básica","Atenção básica","Atenção básica","Atenção básica","Atenção básica","Atenção básica","Consolidado municipal","Consolidado municipal","Consolidado municipal","Consolidado municipal","Consolidado municipal","Consolidado municipal","Média complexidade","Média complexidade","Média complexidade","Média complexidade","Média complexidade","Média complexidade","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Média complexidade — acesso","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS","Hospitais SUS"],"Grupo":["todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","todos","municípios com leito SUS","municípios com leito SUS","municípios com leito SUS","municípios com leito SUS","municípios com leito SUS","municípios com leito SUS","municípios sem leito SUS","municípios sem leito SUS","municípios sem leito SUS","municípios sem leito SUS","municípios sem leito SUS","municípios sem leito SUS","todos","todos","todos","todos","todos","todos","hospitais privados e filantrópicos","hospitais privados e filantrópicos","hospitais privados e filantrópicos","hospitais privados e filantrópicos","hospitais privados e filantrópicos","hospitais privados e filantrópicos","hospitais públicos","hospitais públicos","hospitais públicos","hospitais públicos","hospitais públicos","hospitais públicos"],"Ano":[2025,2024,2023,2022,2021,2020,2025,2024,2023,2022,2021,2020,2025,2024,2023,2022,2021,2020,2025,2024,2023,2022,2021,2020,2025,2024,2023,2022,2021,2020,2025,2024,2023,2022,2021,2020,2025,2024,2023,2022,2021,2020,2025,2024,2023,2022,2021,2020,2025,2024,2023,2022,2021,2020],"Unidades":[142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,142,97,97,98,100,100,101,45,44,43,41,41,40,92,91,92,92,92,87,22,24,26,27,29,31,70,67,66,65,63,56],"Avaliados":[142,141,141,141,140,138,142,140,140,139,135,130,80,77,76,76,77,71,141,136,135,133,132,127,97,94,94,95,96,92,44,42,41,38,36,35,89,87,88,88,88,83,20,21,23,24,26,28,69,66,65,64,62,55],"Fronteira":[69,57,51,45,43,30,39,30,31,33,30,31,27,28,32,27,22,16,30,27,27,23,24,18,21,17,18,11,14,10,9,10,9,12,10,8,28,24,23,22,17,16,9,9,7,10,6,7,19,15,16,12,11,9],"Mediana":[0.901902,0.880041,0.819495,0.77117,0.723164,0.660424,0.770261,0.756577,0.705514,0.685427,0.65777,0.701496,0.815266,0.78699,0.797007,0.714435,0.610389,0.580585,0.621775,0.636941,0.680316,0.649686,0.67226,0.639567,0.640428,0.638184,0.671804,0.639608,0.656886,0.595531,0.589994,0.593042,0.700253,0.655216,0.68983,0.720602,0.695181,0.672479,0.668334,0.609312,0.508592,0.468652,0.748205,0.774984,0.727118,0.711342,0.545675,0.608769,0.682896,0.632096,0.64198,0.567385,0.504549,0.42295],"Media":[0.849668,0.817034,0.766526,0.731583,0.694442,0.643515,0.758394,0.752793,0.695361,0.674265,0.658895,0.666752,0.722813,0.709885,0.707788,0.65938,0.581365,0.577886,0.610627,0.627156,0.650936,0.622734,0.652441,0.618468,0.63112,0.640211,0.638352,0.62535,0.643267,0.591074,0.565452,0.597939,0.679786,0.616195,0.676906,0.690475,0.639794,0.640334,0.623797,0.558183,0.506949,0.501439,0.665768,0.722033,0.635712,0.612648,0.539313,0.567497,0.632265,0.614339,0.619581,0.537759,0.493377,0.46781],"IC":[53,58,70,63,57,74,73,66,78,69,63,64,35,37,28,28,33,32,64,65,60,69,65,69,43,44,43,50,49,49,21,21,17,19,16,20,33,30,34,31,45,40,7,9,10,7,16,13,26,21,24,24,29,27],"Registro":[9,10,8,9,15,19,5,5,5,6,10,17,7,5,7,8,12,18,12,8,10,11,15,21,7,5,7,9,13,18,5,3,3,2,2,3,24,32,28,38,48,43,7,8,10,10,15,13,17,24,18,28,33,30],"EC":[1.055371,1.053594,1.058244,1.067306,1.056244,"NA",1.030129,1.065537,1.034408,1.030777,0.975405,"NA",0.997767,1.059322,1.005429,1.136944,1.057653,"NA",1.043357,0.980125,1.00593,1.014857,0.980718,"NA",1.117009,1.018499,1.00582,1.075017,0.951456,"NA",0.880637,0.891866,1.006199,0.875806,1.058871,"NA",1.037224,1.066477,1.100984,1.122863,1.121902,"NA",1.076544,1.026946,1.037052,1.035256,1.062231,"NA",1.026684,1.079446,1.123159,1.156976,1.143497,"NA"],"MI":[1.021832,1.03802,1.01161,1.197875,0.95521,"NA",0.996295,1.020604,1.018401,1.166976,0.977323,"NA",1.048146,0.96811,1.072799,1.1195,1.038745,"NA",1.009118,0.975123,1.057683,1.016686,1.036379,"NA",1.042384,0.965939,1.060263,1.051454,0.997314,"NA",0.930955,0.998061,1.05137,0.932866,1.142237,"NA",1.052289,1.021423,1.040747,1.102536,1.105906,"NA",1.050346,0.955948,0.990449,0.980275,1.072196,"NA",1.052823,1.043307,1.058074,1.151328,1.117912,"NA"]},"columns":[{"id":"Modelo","name":"Modelo","type":"character","minWidth":150},{"id":"Grupo","name":"Grupo","type":"character","minWidth":140},{"id":"Ano","name":"Ano","type":"numeric","minWidth":60,"align":"center"},{"id":"Unidades","name":"Unidades","type":"numeric","filterable":false,"minWidth":75,"align":"center"},{"id":"Avaliados","name":"Avaliados","type":"numeric","filterable":false,"minWidth":75,"align":"center"},{"id":"Fronteira","name":"Na fronteira","type":"numeric","filterable":false,"minWidth":75,"align":"center"},{"id":"Mediana","name":"Mediana do escore corrigido","type":"numeric","filterable":false,"cell":["0,902","0,880","0,819","0,771","0,723","0,660","0,770","0,757","0,706","0,685","0,658","0,701","0,815","0,787","0,797","0,714","0,610","0,581","0,622","0,637","0,680","0,650","0,672","0,640","0,640","0,638","0,672","0,640","0,657","0,596","0,590","0,593","0,700","0,655","0,690","0,721","0,695","0,672","0,668","0,609","0,509","0,469","0,748","0,775","0,727","0,711","0,546","0,609","0,683","0,632","0,642","0,567","0,505","0,423"],"minWidth":95,"align":"right"},{"id":"Media","name":"Média do escore corrigido","type":"numeric","filterable":false,"cell":["0,850","0,817","0,767","0,732","0,694","0,644","0,758","0,753","0,695","0,674","0,659","0,667","0,723","0,710","0,708","0,659","0,581","0,578","0,611","0,627","0,651","0,623","0,652","0,618","0,631","0,640","0,638","0,625","0,643","0,591","0,565","0,598","0,680","0,616","0,677","0,690","0,640","0,640","0,624","0,558","0,507","0,501","0,666","0,722","0,636","0,613","0,539","0,567","0,632","0,614","0,620","0,538","0,493","0,468"],"minWidth":95,"align":"right"},{"id":"IC","name":"IC cruza a faixa vizinha","type":"numeric","filterable":false,"minWidth":85,"align":"center"},{"id":"Registro","name":"Registro a verificar","type":"numeric","filterable":false,"minWidth":85,"align":"center"},{"id":"EC","name":"EC na transição do ano anterior","type":"numeric","filterable":false,"cell":["+5,5%","+5,4%","+5,8%","+6,7%","+5,6%","—","+3,0%","+6,6%","+3,4%","+3,1%","−2,5%","—","−0,2%","+5,9%","+0,5%","+13,7%","+5,8%","—","+4,3%","−2,0%","+0,6%","+1,5%","−1,9%","—","+11,7%","+1,8%","+0,6%","+7,5%","−4,9%","—","−11,9%","−10,8%","+0,6%","−12,4%","+5,9%","—","+3,7%","+6,6%","+10,1%","+12,3%","+12,2%","—","+7,7%","+2,7%","+3,7%","+3,5%","+6,2%","—","+2,7%","+7,9%","+12,3%","+15,7%","+14,3%","—"],"minWidth":105,"align":"right"},{"id":"MI","name":"Malmquist na transição do ano anterior","type":"numeric","filterable":false,"cell":["+2,2%","+3,8%","+1,2%","+19,8%","−4,5%","—","−0,4%","+2,1%","+1,8%","+16,7%","−2,3%","—","+4,8%","−3,2%","+7,3%","+11,9%","+3,9%","—","+0,9%","−2,5%","+5,8%","+1,7%","+3,6%","—","+4,2%","−3,4%","+6,0%","+5,1%","−0,3%","—","−6,9%","−0,2%","+5,1%","−6,7%","+14,2%","—","+5,2%","+2,1%","+4,1%","+10,3%","+10,6%","—","+5,0%","−4,4%","−1,0%","−2,0%","+7,2%","—","+5,3%","+4,3%","+5,8%","+15,1%","+11,8%","—"],"minWidth":110,"align":"right"}],"filterable":true,"defaultPageSize":12,"showPageSizeOptions":true,"pageSizeOptions":[12,30,54],"striped":true,"compact":true,"language":{"sortLabel":"Ordenar por {name}","filterPlaceholder":"Filtrar","filterLabel":"Filtrar {name}","searchPlaceholder":"Buscar","searchLabel":"Buscar na tabela","noData":"Nenhum registro encontrado","pageNext":"Próxima","pagePrevious":"Anterior","pageNumbers":"{page} de {pages}","pageInfo":"{rowStart}–{rowEnd} de {rows} linhas","pageSizeOptions":"Mostrar {rows}","pageNextLabel":"Próxima página","pagePreviousLabel":"Página anterior","pageNumberLabel":"Página {page}","pageJumpLabel":"Ir para a página","pageSizeOptionsLabel":"Linhas por página","groupExpandLabel":"Expandir grupo","detailsExpandLabel":"Mostrar detalhes","selectAllRowsLabel":"Selecionar todas as linhas","selectAllSubRowsLabel":"Selecionar todas as linhas do grupo","selectRowLabel":"Selecionar linha"},"dataKey":"fa275216cecb5183afe9366562eea9b4"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Escore corrigido: mediana e média entre as unidades avaliadas do ano (as fronteiras são anuais; a diferença entre anos não mede melhora). <em>EC</em> e <em>Malmquist</em>: média geométrica da transição do ano anterior para o ano indicado, em % (transições com registro marcado ficam fora). Use os filtros do cabeçalho para escolher modelo, grupo ou ano.</p>
+</section>
+<section id="ressalvas" class="level2">
+<h2 class="anchored" data-anchor-id="ressalvas">Ressalvas principais</h2>
+<div class="ef-ressalva">
+<ul>
+<li><strong>Resultados da versão 2 (08/10/2026), em validação.</strong> A lista de verificações de registro na origem (CNES, SIOPS, SISAB, SIA/SIH, IBGE) será encaminhada pela coordenação do projeto à SES-MT e ao COSEMS-MT; faixas e metas podem mudar após essa validação.</li>
+<li><strong>Dados de registro a verificar estão sinalizados</strong>, nunca escondidos: a unidade mantém escore e faixa, mas não serve de par de referência, e metas financeiras com classificação orçamentária inconsistente não são publicadas.</li>
+<li><strong>COVID-19 (2020–2021).</strong> A produção desses anos foi afetada pela pandemia; transições com quebra de registro ficam fora das médias de evolução.</li>
+<li><strong>Fuga para outros estados não é observada.</strong> Só há internações registradas em hospitais de Mato Grosso: atendimentos de residentes em outras UF não entram na ótica do acesso.</li>
+<li><strong>Pré-natal de 2025 indisponível</strong> (SINASC ainda não consolidado para o ano); os indicadores de resultado das fichas usam o último período disponível.</li>
+<li><strong>Eficiência não é qualidade</strong>, e o escore não explica sozinho a distância até a fronteira: perfil da rede, porte e registro importam. Internações sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.</li>
+<li><strong>Boa Esperança do Norte</strong> (instalado em 2025) tem só o primeiro exercício, com marca de resultado parcial, e não aparece na malha municipal dos mapas.</li>
+<li><strong>Hospitais:</strong> com poucas unidades por variável, os intervalos de confiança são largos; a leitura por faixas substitui o ranking. <strong>Alta complexidade:</strong> só 3 regiões têm escore diagnóstico publicável.</li>
+</ul>
+</div>
+</section>
+<section id="arquivos" class="level2">
+<h2 class="anchored" data-anchor-id="arquivos">Arquivos e método</h2>
+<p>As fichas completas, as metas por variável, os pares, o Malmquist por região e o dicionário de campos estão disponíveis em CSV (UTF-8, vírgula, ponto decimal): <a href="../arquivos/dados/eficiencia/fichas_municipio.csv">fichas dos municípios</a> · <a href="../arquivos/dados/eficiencia/metas_municipio.csv">metas dos municípios</a> · <a href="../arquivos/dados/eficiencia/pares_municipio.csv">pares dos municípios</a> · <a href="../arquivos/dados/eficiencia/resumo_modelos.csv">resumo por modelo</a> · <a href="../arquivos/dados/eficiencia/malmquist_regiao.csv">Malmquist por região</a> · <a href="../arquivos/dados/eficiencia/especificacoes_modelos.csv">especificações dos modelos</a> · <a href="../arquivos/dados/eficiencia/dicionario_eficiencia.csv">dicionário</a>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p class="nota-fonte">
+Fonte: Resultados DEA v2, 08/10/2026 — estimação DEA (BCC orientado ao produto, escore corrigido por bootstrap, IC de 95%) e índice de Malmquist, Projeto PPSUS-MT, a partir de SIOPS, CNES, SISAB, SI-PNI, SIA, SIH e IBGE, 2020–2025. Monetários em R$ de 2025 (IPCA). 
+Método em 
+<a href="../metodologia.html">Metodologia</a>; arquivos completos (fichas, metas, pares, dicionário) em 
+<a href="../arquivos/dados/eficiencia/fichas_municipio.csv">fichas_municipio.csv</a> e nos demais arquivos de 
+<a href="../dados/index.html">Dados</a>.
+</p>
+</div>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
+<script>
+// Siglas explicadas ao passar o cursor (ou tocar, no celular). Aplica-se a parágrafos, listas,
+// legendas e rótulos dos cartões. A primeira ocorrência de cada sigla em cada bloco recebe <abbr title>.
+(function () {
+  var G = {
+    "SUS": "Sistema Único de Saúde",
+    "SIOPS": "Sistema de Informações sobre Orçamentos Públicos em Saúde: despesas declaradas pelos municípios (Ministério da Saúde)",
+    "CNES": "Cadastro Nacional de Estabelecimentos de Saúde: estabelecimentos, leitos, equipamentos e profissionais",
+    "SIA": "Sistema de Informações Ambulatoriais do SUS: procedimentos ambulatoriais aprovados",
+    "SIH": "Sistema de Informações Hospitalares do SUS: internações pagas por AIH",
+    "AIH": "Autorização de Internação Hospitalar: registro de cada internação no SUS",
+    "SISAB": "Sistema de Informação em Saúde para a Atenção Básica: produção das equipes de atenção primária",
+    "SI-PNI": "Sistema de Informação do Programa Nacional de Imunizações: doses de vacina aplicadas",
+    "SIM": "Sistema de Informações sobre Mortalidade: óbitos por residência",
+    "SINASC": "Sistema de Informações sobre Nascidos Vivos",
+    "APS": "Atenção Primária à Saúde (atenção básica): unidades básicas e equipes de saúde da família",
+    "ESF": "Estratégia Saúde da Família",
+    "eSF": "Equipe de Saúde da Família (médico, enfermeiro, técnico e agentes comunitários)",
+    "eAP": "Equipe de Atenção Primária (formato reduzido, sem agentes comunitários)",
+    "eSB": "Equipe de Saúde Bucal",
+    "ACS": "Agente Comunitário de Saúde",
+    "FTE": "Equivalente em tempo integral: horas semanais contratadas divididas por 40",
+    "MC": "Média complexidade: procedimentos e internações de nível intermediário (SIA/SIH)",
+    "AC": "Alta complexidade: procedimentos e internações de alto custo ou tecnologia (SIA/SIH)",
+    "UTI": "Unidade de Terapia Intensiva",
+    "CIR": "Comissão Intergestores Regional: instância das 16 regiões de saúde de Mato Grosso",
+    "PDR": "Plano Diretor de Regionalização: define regiões e macrorregiões de saúde",
+    "DEA": "Análise Envoltória de Dados: compara municípios, hospitais ou regiões pelo que produzem com os recursos que usam; as melhores práticas observadas formam a fronteira de eficiência",
+    "BCC": "Modelo DEA de Banker, Charnes e Cooper, com retornos variáveis de escala: cada unidade é comparada com unidades de porte semelhante",
+    "IC": "Intervalo de confiança de 95%: faixa de valores plausíveis do escore, estimada por reamostragem (bootstrap); quanto mais largo, mais incerta a posição",
+    "COSEMS-MT": "Conselho de Secretarias Municipais de Saúde de Mato Grosso",
+    "fronteira de eficiência": "Conjunto das melhores práticas observadas no ano: unidades que nenhuma outra supera produzindo mais com os mesmos recursos (escore original = 1)",
+    "Fronteira (melhores práticas)": "Faixa das unidades que formam a fronteira de eficiência no ano (escore original = 1)",
+    "escore de eficiência": "Razão entre a produção observada e a que as melhores práticas comparáveis alcançariam com os mesmos recursos (0 a 1; 1 = fronteira)",
+    "Escore corrigido": "Escore de eficiência corrigido do viés da estimação por bootstrap; é a base das faixas e vem com intervalo de confiança",
+    "escore corrigido": "Escore de eficiência corrigido do viés da estimação por bootstrap; é a base das faixas e vem com intervalo de confiança",
+    "faixa de eficiência": "Grupo de posição no ano: fronteira ou quartil (superior, terceiro, segundo, inferior) do escore corrigido entre as unidades avaliadas; substitui o ranking pontual",
+    "Faixa no estado": "Fronteira ou quartil do escore corrigido entre as unidades avaliadas no estado no ano; substitui o ranking pontual",
+    "par de referência": "Unidade da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, e as fichas mostram os 3 de maior peso",
+    "pares de referência": "Unidades da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, e as fichas mostram os 3 de maior peso",
+    "Municípios de referência plausíveis": "Pares de referência: municípios da fronteira, com registro plausível, cujas práticas compõem a meta; o peso indica a participação de cada um",
+    "meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
+    "Meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
+    "meta intermediária": "Metade do caminho entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
+    "Meta intermediária": "Metade do caminho entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
+    "potencial de melhoria": "Diferença entre a meta plena e o observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
+    "Potencial de melhoria": "Diferença entre a meta plena e o observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
+    "mudança de eficiência": "Componente do Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; leitura de gestão",
+    "Mudança de eficiência": "Componente do Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; leitura de gestão",
+    "deslocamento tecnológico": "Componente do Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
+    "Deslocamento tecnológico": "Componente do Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
+    "escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças); comparar o observado com ele isola a parte atribuível à gestão",
+    "Escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças); comparar o observado com ele isola a parte atribuível à gestão",
+    "escore esperado": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças)",
+    "eficiência condicional": "Eficiência medida só entre unidades de contexto semelhante (ordem-m condicional); informação complementar, não ranking",
+    "EC": "Mudança de eficiência (índice de Malmquist): aproximação (> 1) ou afastamento (< 1) das melhores práticas entre dois anos; o site mostra a variação em % ao ano",
+    "TC": "Deslocamento das melhores práticas (deslocamento tecnológico do índice de Malmquist): movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
+    "MI": "Índice de Malmquist: variação da produtividade total entre dois anos (MI = EC × TC); acima de 1 = aumento",
+    "APAC": "Autorização de Procedimento Ambulatorial de Alta Complexidade: registro do SIA para procedimentos como diálise, quimioterapia e radioterapia",
+    "supereficiência": "Escore DEA calculado sem a própria unidade na fronteira; acima de 1 indica o quanto a unidade supera as demais; infactível quando nenhuma outra unidade usa tão pouco de algum recurso",
+    "referência com alavancagem": "Unidade da fronteira com supereficiência muito alta (acima de 2): pesa demais na fronteira e, por isso, não é usada como par de outras",
+    "Referência com grande peso na fronteira": "Unidade da fronteira com supereficiência muito alta (acima de 2): pesa demais na fronteira e, por isso, não é usada como par de outras",
+    "diagnóstico ordem-m": "Teste de robustez: a unidade fica acima das melhores práticas de amostras de unidades comparáveis; sinal informativo, que não impede o uso como referência",
+    "ordem-m": "Fronteira parcial de ordem m: compara a unidade com amostras de m unidades comparáveis, reduzindo a influência de valores extremos",
+    "TMI": "Taxa de mortalidade infantil: óbitos de menores de 1 ano por mil nascidos vivos",
+    "PPSUS": "Programa Pesquisa para o SUS: gestão compartilhada em saúde",
+    "FAPEMAT": "Fundação de Amparo à Pesquisa do Estado de Mato Grosso",
+    "CNPq": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
+    "Decit": "Departamento de Ciência e Tecnologia do Ministério da Saúde",
+    "SES-MT": "Secretaria de Estado de Saúde de Mato Grosso",
+    "UNEMAT": "Universidade do Estado de Mato Grosso",
+    "IBGE": "Instituto Brasileiro de Geografia e Estatística",
+    "UBS": "Unidade Básica de Saúde",
+    "UPA": "Unidade de Pronto Atendimento",
+    "Malmquist": "Índice de Malmquist: variação da produtividade entre dois anos, decomposta em mudança de eficiência (gestão) e deslocamento tecnológico (fronteira)",
+    "RREO": "Relatório Resumido da Execução Orçamentária: demonstrativo bimestral que alimenta o SIOPS",
+    "OMS": "Organização Mundial da Saúde",
+    "BPA-C": "Boletim de Produção Ambulatorial consolidado: registro do SIA sem identificação do paciente",
+    "e-SUS APS": "Estratégia e-SUS Atenção Primária à Saúde: sistema de registro das equipes, que alimenta o SISAB",
+    "UFs": "Unidades da Federação (estados e Distrito Federal)",
+    "UF": "Unidade da Federação (estado ou Distrito Federal)",
+    "p.p.": "Pontos percentuais: diferença entre dois percentuais",
+    "WGS84": "Sistema de referência geodésico mundial usado nas malhas (latitude e longitude em graus)",
+    "EPSG:4326": "Código do sistema de coordenadas WGS84 (latitude e longitude em graus)",
+    "SECTICS": "Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (Ministério da Saúde)",
+    "SECITECI": "Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso"
+  };
+  var chaves = Object.keys(G).sort(function (a, b) { return b.length - a.length; });
+  var re = new RegExp("(^|[^\\wÀ-ú-])(" + chaves.map(function (k) { return k.replace(/[.*+?^${}()|[\]\\-]/g, "\\$&"); }).join("|") + ")(?![\\wÀ-ú-])");
+  function marcar(el) {
+    var usados = {};
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        var p = n.parentNode;
+        while (p && p !== el) { if (/^(A|ABBR|CODE|SCRIPT|STYLE|SVG|BUTTON|SELECT|OPTION|H1|H2|H3)$/i.test(p.nodeName)) return NodeFilter.FILTER_REJECT; p = p.parentNode; }
+        return re.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+      }
+    });
+    var nos = []; while (w.nextNode()) nos.push(w.currentNode);
+    nos.forEach(function (n) {
+      var m = n.nodeValue.match(re); if (!m || usados[m[2]]) return;
+      usados[m[2]] = true;
+      var i = m.index + m[1].length, depois = n.splitText(i); depois.splitText(m[2].length);
+      var ab = document.createElement("abbr"); ab.title = G[m[2]]; ab.tabIndex = 0; ab.textContent = m[2];
+      depois.parentNode.replaceChild(ab, depois);
+    });
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("main p, main li, main figcaption, main td, main th, main .kpi-rotulo, main .kpi-meta, main .kpi-comp, main .kpi-nota, main .ficha-ind > div, main .ressalva-ind, main .faixa-versao, main .definicao-ind, main .ef-linha, main .ef-sintese, footer .nav-footer-left").forEach(marcar);
+  });
+})();
+</script>
+<div id="dica-grafico" role="tooltip" aria-hidden="true"></div>
+<script>
+// Dica imediata para elementos com data-tip (pontos, barras e linhas dos gráficos SVG).
+(function () {
+  var dica = document.getElementById("dica-grafico");
+  function mostrar(el, x, y) {
+    dica.textContent = el.getAttribute("data-tip");
+    dica.style.display = "block";
+    var w = dica.offsetWidth, h = dica.offsetHeight;
+    var left = Math.min(x + 12, window.innerWidth - w - 8), top = y - h - 12;
+    if (top < 4) top = y + 16;
+    dica.style.left = left + "px"; dica.style.top = top + "px";
+  }
+  function esconder() { dica.style.display = "none"; }
+  document.addEventListener("mouseover", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); if (el) mostrar(el, e.clientX, e.clientY);
+  });
+  document.addEventListener("mousemove", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); if (el && dica.style.display === "block") mostrar(el, e.clientX, e.clientY);
+  });
+  document.addEventListener("mouseout", function (e) {
+    if (e.target.closest && e.target.closest("[data-tip]")) esconder();
+  });
+  document.addEventListener("touchstart", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); var t = e.touches[0];
+    if (el) mostrar(el, t.clientX, t.clientY); else esconder();
+  }, { passive: true });
+  window.addEventListener("scroll", esconder, { passive: true });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/daniellindomar\.github\.io\/ppsus\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<div class="rodape">
+<div class="rodape-logos">
+<p><span class="rodape-rotulo">Realização</span> <img src="../assets/logos/unemat.png" class="rodape-logo img-fluid" alt="UNEMAT — Universidade do Estado de Mato Grosso"></p>
+</div>
+<div class="rodape-logos">
+<p><span class="rodape-rotulo">Financiamento</span> <img src="../assets/logos/ppsus-mt.png" class="rodape-logo img-fluid" alt="PPSUS — Programa Pesquisa para o SUS: Mato Grosso"> <img src="../assets/logos/fapemat.png" class="rodape-logo img-fluid" alt="FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso"> <img src="../assets/logos/ses-mt.png" class="rodape-logo img-fluid" alt="SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso"> <img src="../assets/logos/cnpq.png" class="rodape-logo img-fluid" alt="CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico"> <img src="../assets/logos/ministerio-saude-sus.png" class="rodape-logo img-fluid" alt="SUS · Ministério da Saúde · Governo do Brasil"></p>
+</div>
+<p><span class="rodape-citacao">Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.</span></p>
+<p><span class="rodape-versao">Versão 0.2 · atualizado em 08/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
+</div>
+<div class="toc-actions"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
