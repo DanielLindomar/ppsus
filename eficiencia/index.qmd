@@ -116,7 +116,7 @@ Escore corrigido: mediana e média entre as unidades avaliadas do ano (as fronte
 - **Resultados da versão `r sub("^v", "", VERSAO_EF)` (`r DATA_EF`), em validação.** A lista de verificações de registro na origem (CNES, SIOPS, SISAB, SIA/SIH, IBGE) será encaminhada pela coordenação do projeto à SES-MT e ao COSEMS-MT; faixas e metas podem mudar após essa validação.
 - **Dados de registro a verificar estão sinalizados**, nunca escondidos: a unidade mantém escore e faixa, mas não serve de par de referência, e metas financeiras com classificação orçamentária inconsistente não são publicadas.
 - **COVID-19 (2020–2021).** A produção desses anos foi afetada pela pandemia; transições com quebra de registro ficam fora das médias de evolução.
-- **Fuga para outros estados não é observada.** Só há internações registradas em hospitais de Mato Grosso: atendimentos de residentes em outras UF não entram na ótica do acesso.
+- **Internações em outros estados não entram nos modelos.** A ótica do acesso usa só internações em hospitais de Mato Grosso; as internações de residentes em hospitais de outras UF são medidas à parte, na página [Deslocamento](../deslocamento/index.html#fuga), e não alteram os escores.
 - **Pré-natal de `r A` indisponível** (SINASC ainda não consolidado para o ano); os indicadores de resultado das fichas usam o último período disponível.
 - **Eficiência não é qualidade**, e o escore não explica sozinho a distância até a fronteira: perfil da rede, porte e registro importam. Internações sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.
 - **Boa Esperança do Norte** (instalado em 2025) tem só o primeiro exercício, com marca de resultado parcial, e não aparece na malha municipal dos mapas.

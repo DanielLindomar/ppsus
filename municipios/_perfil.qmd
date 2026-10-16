@@ -94,7 +94,7 @@ secao_eficiencia(MUN_ID)
 
 ## Deslocamento para internação
 
-Internações SUS (AIH tipo 1, pelo ano da alta) de residentes de Mato Grosso, cruzando o município de residência com o município do hospital. Só há SIH de Mato Grosso: internações de moradores em outros estados não são observadas. A análise completa está em [Deslocamento](../deslocamento/index.html).
+Internações SUS (AIH tipo 1, pelo ano da alta) de residentes de Mato Grosso em hospitais de Mato Grosso, cruzando o município de residência com o município do hospital. `r texto_fuga_mun(MUN_ID)` A análise completa está em [Deslocamento](../deslocamento/index.html).
 
 ```{r}
 kpis_deslocamento(MUN_ID)

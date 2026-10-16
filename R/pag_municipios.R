@@ -262,3 +262,29 @@ nota_malha <- function(cod) {
   if (nrow(GEO) == 0 || cod %in% GEO$cod_mun6) return(invisible(NULL))
   p(class = "nota-fonte", sprintf("%s ainda não consta na malha municipal do IBGE usada no site; o mapa destaca apenas a região de saúde.", nome_mun(cod)))
 }
+
+# Internações de moradores em hospitais de OUTROS estados, 2020–2025 somado (versão 0.3):
+# dados_site/fuga_mun_periodo.csv (script 02), com supressão de contagens de 1 a 4 já aplicada.
+# O valor suprimido nunca é reconstruído aqui.
+if (!exists("em_uf")) {
+  PREP_UF <- c("Acre" = "no", "Alagoas" = "em", "Amapá" = "no", "Amazonas" = "no", "Bahia" = "na", "Ceará" = "no", "Distrito Federal" = "no", "Espírito Santo" = "no", "Goiás" = "em", "Maranhão" = "no", "Mato Grosso do Sul" = "em", "Minas Gerais" = "em", "Pará" = "no", "Paraíba" = "na", "Paraná" = "no", "Pernambuco" = "em", "Piauí" = "no", "Rio de Janeiro" = "no", "Rio Grande do Norte" = "no", "Rio Grande do Sul" = "no", "Rondônia" = "em", "Roraima" = "em", "Santa Catarina" = "em", "São Paulo" = "em", "Sergipe" = "em", "Tocantins" = "no", "Mato Grosso" = "em")
+  em_uf <- function(nome) paste(ifelse(is.na(PREP_UF[nome]), "em", PREP_UF[nome]), nome)
+}
+texto_fuga_mun <- function(cod) {
+  f <- ds("fuga_mun_periodo.csv")
+  base <- "Os números abaixo não incluem internações em hospitais de outros estados."
+  if (!file.exists(f)) return(base)
+  d <- data.table::fread(f, encoding = "UTF-8", na.strings = "", colClasses = list(character = c("uf_principal", "nome_uf_principal", "nota_supressao")))
+  r <- d[d$cod_mun6 == cod, ]
+  if (nrow(r) == 0) return(base)
+  per <- r$periodo[1]; lnk <- "(SIH/SUS das outras 26 UF; ver [Internações em outros estados](../deslocamento/index.html#fuga))"
+  if (isTRUE(r$total_suprimido[1] == 1))
+    return(sprintf("Em %s, a contagem de internações de moradores em hospitais de outros estados não é mostrada: a regra de divulgação do projeto suprime contagens de 1 a 4 e as que permitiriam deduzi-las %s. Os números abaixo não incluem essas internações.", per, lnk))
+  tot <- r$internacoes_total_res[1]; fora <- r$internacoes_outra_uf[1]
+  if (is.na(tot) || tot == 0) return(sprintf("Não há internações de moradores registradas em %s, nem em Mato Grosso nem em outros estados.", per))
+  if (fora == 0) return(sprintf("Em %s, nenhuma internação de moradores ocorreu em hospitais de outros estados %s.", per, lnk))
+  uf <- if (!is.na(r$nome_uf_principal[1]) && !is.na(r$pct_uf_principal[1])) sprintf(", %s delas %s", paste0(num(r$pct_uf_principal[1], 1), "%"), em_uf(r$nome_uf_principal[1]))
+        else if (!is.na(r$nome_uf_principal[1])) sprintf(", principalmente %s", em_uf(r$nome_uf_principal[1])) else ""
+  sprintf("Em %s, %s das %s internações de moradores (%s) ocorreram em hospitais de outros estados%s %s; elas não entram nos números abaixo.",
+          per, num(fora), num(tot), paste0(num(r$pct_outra_uf[1], 1), "%"), uf, lnk)
+}
