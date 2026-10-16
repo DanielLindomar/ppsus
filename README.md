@@ -4,7 +4,7 @@ Site público do projeto **Gestão integrada no SUS: avaliação da eficiência 
 
 Publicado em: https://daniellindomar.github.io/ppsus/
 
-Versão 0.2.1 (16/10/2026): dados e indicadores 2020–2025 dos 142 municípios, análise de deslocamento residência × atendimento (internações) e seção Eficiência — escores DEA e produtividade Malmquist (versão 2.1 da estimação: atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS, CBO 515105; demais modelos da versão 2, de 08/10/2026) de municípios, hospitais SUS e regiões de saúde, com fichas no perfil de cada município.
+Versão 0.3 (16/10/2026): dados e indicadores 2020–2025 dos 142 municípios, análise de deslocamento residência × atendimento (internações), com as internações de residentes de MT em hospitais de outros estados (SIH/SUS das outras 26 UF), e seção Eficiência — escores DEA e produtividade Malmquist (versão 2.1 da estimação: atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS, CBO 515105; demais modelos da versão 2, de 08/10/2026) de municípios, hospitais SUS e regiões de saúde, com fichas no perfil de cada município.
 
 ## Como atualizar
 
