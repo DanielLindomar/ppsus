@@ -1,9 +1,11 @@
 # =============================================================================
 # Observatório PPSUS-MT — funções da página deslocamento/index.qmd
 #
-# Carregar DEPOIS de R/funcoes.R (que não deve ser editado). Usa somente os
-# objetos já lidos por funcoes.R: DESL, FLUXO, FLUXOREG, POLOS, RESDESL, CENT,
-# GEO, MUN, REG (contratos de dados_site/, BRIEF seção 3).
+# Carregar DEPOIS de R/funcoes.R (que não deve ser editado). Usa os objetos já
+# lidos por funcoes.R: DESL, FLUXO, FLUXOREG, POLOS, RESDESL, CENT, GEO, MUN, REG
+# (contratos de dados_site/, BRIEF seção 3) e, na seção 7, lê os arquivos fuga_*.csv
+# (internações de residentes de MT em outros estados, versão 0.3), com os contratos
+# acrescentados a CONTRATOS aqui mesmo.
 #
 # Índice
 #   1. Constantes e formatação
@@ -12,6 +14,8 @@
 #   4. Matriz região × região (tabela-calor)
 #   5. Mapa de fluxos com seletor de nível (um só mapa, grupos de camadas)
 #   6. Tabelas: ranking dos polos, municípios dependentes, todos os municípios
+#   7. Internações em outros estados: KPIs, barras por UF, série, saldo, regiões,
+#      municípios e principais destinos (com supressão de células < 5)
 # =============================================================================
 
 ANO_DESL    <- 2025L
@@ -327,4 +331,223 @@ lista_sem_local <- function(ano = ANO_DESL, prefixo = "../municipios/") {
   tags$details(class = "nota-fonte",
     tags$summary(sprintf("Ver os %d municípios sem internação em estabelecimento próprio em %d (internações de residentes entre parênteses)", nrow(d), ano)),
     p(HTML(paste(sprintf('<a href="%s">%s</a> (%s)', url_mun(d$cod_mun6, prefixo), esc(d$municipio), num(d$internacoes_res)), collapse = " · "))))
+}
+
+# ---- 7. Internações de residentes de MT em outros estados (versão 0.3) ------------------------
+# Arquivos fuga_*.csv (scripts/02_preparar_deslocamento.py, passo 7): SIH/SUS RD de MT e das 26
+# outras UF, residentes de MT, AIH tipo 1, ano da alta, 2020–2025. Nos recortes por região e por
+# município, contagens de 1 a 4 chegam vazias (supressão do Termo de Uso, com supressão
+# complementar): as funções abaixo mostram "suprimido" e nunca recalculam o valor escondido.
+CONTRATOS$fuga_resumo_ano <- c(ano = "integer", nivel = "character", internacoes_mt = "numeric",
+  internacoes_outra_uf = "numeric", internacoes_total = "numeric", pct_outra_uf = "numeric", valor_mt = "numeric",
+  valor_outra_uf = "numeric", pct_valor_outra_uf = "numeric", pct_eletivas_mt = "numeric", pct_eletivas_outra_uf = "numeric",
+  uf_principal = "character", nome_uf_principal = "character", pct_uf_principal = "numeric", n_uf_destino = "integer",
+  n_mun_destino = "integer", entrada_outra_uf = "numeric", saldo_outra_uf = "numeric")
+CONTRATOS$fuga_uf_ano <- c(ano = "integer", cod_uf = "character", uf = "character", nome_uf = "character", nivel = "character",
+  internacoes = "numeric", internacoes_urgencia = "numeric", diarias = "numeric", valor_total = "numeric")
+CONTRATOS$fuga_saldo_uf_ano <- c(ano = "integer", cod_uf = "character", uf = "character", nome_uf = "character",
+  entrada = "numeric", saida = "numeric", saldo = "numeric")
+CONTRATOS$fuga_regiao_ano <- c(co_regsaud = "character", regiao_saude = "character", ano = "integer",
+  internacoes_total_res = "numeric", internacoes_outra_uf = "numeric", pct_outra_uf = "numeric",
+  internacoes_ac_total_res = "numeric", internacoes_ac_outra_uf = "numeric", pct_ac_outra_uf = "numeric",
+  uf_principal = "character", nome_uf_principal = "character", pct_uf_principal = "numeric",
+  total_suprimido = "integer", ac_suprimida = "integer", nota_supressao = "character")
+CONTRATOS$fuga_mun_periodo <- c(cod_mun6 = "integer", municipio = "character", co_regsaud = "character",
+  regiao_saude = "character", periodo = "character", internacoes_total_res = "numeric", internacoes_outra_uf = "numeric",
+  pct_outra_uf = "numeric", uf_principal = "character", nome_uf_principal = "character", pct_uf_principal = "numeric",
+  total_suprimido = "integer", nota_supressao = "character")
+CONTRATOS$fuga_destinos_mun <- c(posicao = "integer", cod_mun6 = "integer", municipio = "character", uf = "character",
+  nome_uf = "character", periodo = "character", internacoes = "numeric", pct_do_total_fora = "numeric",
+  internacoes_ac = "numeric", pct_ac = "numeric", ac_suprimida = "integer", nota_supressao = "character")
+FUGARES  <- ler_contrato("fuga_resumo_ano")
+FUGAUF   <- ler_contrato("fuga_uf_ano")
+FUGASAL  <- ler_contrato("fuga_saldo_uf_ano")
+FUGAREG  <- ler_contrato("fuga_regiao_ano")
+FUGAMUN  <- ler_contrato("fuga_mun_periodo")
+FUGADEST <- ler_contrato("fuga_destinos_mun")
+COR_FUGA <- c(MC = COR[["sec"]], AC = "#b45309")
+PERIODO_FUGA <- sprintf("%d–%d", min(ANOS), max(ANOS))
+TXT_SUPR <- "suprimido"
+NOTA_SUPR <- paste0("“Suprimido”: célula com menos de 5 internações, ou escondida para que outra célula pequena não ",
+                    "possa ser deduzida por diferença (regra de divulgação do projeto: nenhum recorte por região de saúde ou ",
+                    "por município mostra contagens de 1 a 4).")
+
+lista_e_pt <- function(x) if (length(x) <= 1) paste(x, collapse = "") else paste(paste(x[-length(x)], collapse = ", "), x[length(x)], sep = " e ")
+supr_num <- function(v, f = num) ifelse(is.na(v), TXT_SUPR, f(v))
+brl_mi <- function(v) ifelse(is.na(v), "—", paste0("R$ ", num(v / 1e6, 1), " mi"))
+
+# Linha do resumo estadual (ano, nível total | MC | AC)
+fuga_res <- function(ano, nivel = "total") {
+  d <- FUGARES[FUGARES$ano == ano & tolower(FUGARES$nivel) == tolower(nivel), ]
+  if (nrow(d) == 0) NULL else d[1, ]
+}
+
+# Internações por UF de destino (ano único ou período somado), com MC, AC e total em colunas
+fuga_por_uf <- function(anos = ANO_DESL) {
+  FUGAUF[FUGAUF$ano %in% anos, ] |> group_by(cod_uf, uf, nome_uf, nivel) |>
+    summarise(internacoes = sum(internacoes), .groups = "drop") |>
+    tidyr::pivot_wider(id_cols = c(cod_uf, uf, nome_uf), names_from = nivel, values_from = internacoes,
+                       names_prefix = "internacoes_", values_fill = 0) |>
+    arrange(desc(internacoes_total), uf)
+}
+
+# Saldo por UF (entrada − saída) no ano ou no período
+fuga_saldo <- function(anos = ANO_DESL) {
+  FUGASAL[FUGASAL$ano %in% anos, ] |> group_by(cod_uf, uf, nome_uf) |>
+    summarise(entrada = sum(entrada), saida = sum(saida), saldo = sum(saldo), .groups = "drop")
+}
+
+# Cartões da seção
+kpis_fuga <- function(ano = ANO_DESL) {
+  t <- fuga_res(ano, "total"); ac <- fuga_res(ano, "AC"); t0 <- fuga_res(min(ANOS), "total"); ac0 <- fuga_res(min(ANOS), "AC")
+  if (is.null(t)) return(p(class = "nota-fonte", "Dados de internações em outros estados indisponíveis."))
+  sp <- fuga_saldo(ANOS); u <- fuga_por_uf(ano); u23 <- u[2:3, ]
+  div(class = "kpi-grade",
+    kpi_simples("Internações de residentes de MT em outros estados", num(t$internacoes_outra_uf),
+                paste0("hospitais das outras 26 UF · ", ano),
+                sprintf("%s das internações dos residentes · %s em %d", pct_txt(t$pct_outra_uf), num(t0$internacoes_outra_uf), t0$ano)),
+    kpi_simples("Parcela na alta complexidade", pct_txt(ac$pct_outra_uf),
+                paste0("das internações de alta complexidade dos residentes · ", ano),
+                sprintf("%s internações · %s em %d", num(ac$internacoes_outra_uf), pct_txt(ac0$pct_outra_uf), ac0$ano)),
+    kpi_simples("Principal estado de destino", t$nome_uf_principal,
+                paste0(pct_txt(t$pct_uf_principal), " das internações em outros estados · ", ano),
+                sprintf("seguido de %s", lista_e_pt(sprintf("%s (%s)", u23$nome_uf, pct_txt(100 * u23$internacoes_total / t$internacoes_outra_uf))))),
+    kpi_simples("Valor das internações em outros estados", brl_mi(t$valor_outra_uf),
+                paste0("valor aprovado das AIH, R$ correntes · ", ano),
+                sprintf("%s do valor das internações dos residentes · %s na alta complexidade", pct_txt(t$pct_valor_outra_uf), pct_txt(ac$pct_valor_outra_uf))),
+    kpi_simples("Saldo com os outros estados", saldo_txt(t$saldo_outra_uf),
+                paste0("internações recebidas − enviadas · ", ano),
+                sprintf("%s em %s (%s recebidas; %s enviadas)", saldo_txt(sum(sp$entrada) - sum(sp$saida)), PERIODO_FUGA,
+                        num(sum(sp$entrada)), num(sum(sp$saida)))))
+}
+
+# Barras horizontais empilhadas (MC + AC) por UF de destino, SVG
+svg_barras_pilha_uf <- function(d, titulo, w = 680, lh = 22, pl = 150, pr = 60) {
+  d <- d[d$internacoes_total > 0, ]
+  n <- nrow(d); if (n == 0) return("")
+  vmax <- max(d$internacoes_total); h <- n * lh + 8
+  sx <- function(v) v / vmax * (w - pl - pr)
+  y0 <- (seq_len(n) - 1) * lh
+  dica <- sprintf("%s: %s internações (média complexidade %s; alta complexidade %s)", d$nome_uf, num(d$internacoes_total),
+                  num(d$internacoes_MC), num(d$internacoes_AC))
+  barras <- paste(sprintf(paste0('<text x="%d" y="%.1f" text-anchor="end" font-size="12" fill="#1f2937">%s</text>',
+                                 '<rect x="%d" y="%.1f" width="%.1f" height="%d" fill="%s" data-tip="%s"/>',
+                                 '<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="%s" data-tip="%s"/>',
+                                 '<text x="%.1f" y="%.1f" font-size="11" fill="#374151">%s</text>'),
+                          pl - 8, y0 + 15, esc(d$nome_uf),
+                          pl, y0 + 4, sx(d$internacoes_MC), lh - 7, COR_FUGA[["MC"]], esc(dica),
+                          pl + sx(d$internacoes_MC), y0 + 4, sx(d$internacoes_AC), lh - 7, COR_FUGA[["AC"]], esc(dica),
+                          pl + sx(d$internacoes_total) + 5, y0 + 15, num(d$internacoes_total)), collapse = "")
+  leg <- paste(sprintf('<span class="leg-item"><svg width="14" height="14" aria-hidden="true"><rect width="14" height="14" fill="%s"/></svg>%s</span>',
+                       COR_FUGA, c("Média complexidade", "Alta complexidade")), collapse = "")
+  sprintf('<figure class="grafico-svg"><svg viewBox="0 0 %d %d" width="100%%" role="img" aria-label="%s"><title>%s</title>%s</svg><figcaption class="legenda-svg">%s</figcaption></figure>',
+          w, h, esc(titulo), esc(titulo), barras, leg)
+}
+
+grafico_fuga_uf <- function(anos = ANO_DESL) {
+  d <- fuga_por_uf(anos)
+  rot <- if (length(anos) == 1) as.character(anos) else sprintf("%d–%d", min(anos), max(anos))
+  HTML(svg_barras_pilha_uf(d, sprintf("Internações de residentes de Mato Grosso em hospitais de outros estados, por estado de destino e complexidade — %s", rot)))
+}
+
+# Série 2020–2025: parcela das internações dos residentes realizada em outros estados, por nível
+serie_fuga_pct <- function() {
+  series <- lapply(c("total", "MC", "AC"), function(nv) {
+    r <- FUGARES[tolower(FUGARES$nivel) == tolower(nv) & FUGARES$ano %in% ANOS, ] |> arrange(ano)
+    if (nrow(r) == 0) return(NULL)
+    list(nome = NIVEIS_DESL[[nv]], cor = COR_NIVEIS[[nv]], larg = if (nv == "total") 2.8 else 2, dash = if (nv == "AC") "6,4" else "",
+         x = r$ano, y = r$pct_outra_uf)
+  })
+  series <- Filter(Negate(is.null), series)
+  if (length(series) == 0) return("")
+  HTML(svg_linhas(series, fmt = "pct1", titulo = "Internações de residentes de MT realizadas em outros estados (% das internações dos residentes), por nível, 2020–2025", h = 250))
+}
+
+# Saldo por UF: ano e período, com totais no rodapé
+tabela_fuga_saldo <- function(ano = ANO_DESL) {
+  a <- fuga_saldo(ano); p_ <- fuga_saldo(ANOS)
+  d <- p_ |> select(cod_uf, nome_uf, uf, ent_p = entrada, sai_p = saida, sal_p = saldo) |>
+    left_join(select(a, cod_uf, ent_a = entrada, sai_a = saida, sal_a = saldo), by = "cod_uf") |>
+    arrange(desc(sai_p), uf) |> transmute(UF = sprintf("%s (%s)", nome_uf, uf), ent_a, sai_a, sal_a, ent_p, sai_p, sal_p)
+  rod <- function(col) if (grepl("^sal", col)) saldo_txt(sum(d[[col]])) else num(sum(d[[col]]))
+  nc <- function(nome, col, f = num, ...) colDef(name = nome, align = "right", minWidth = 85, cell = function(v) f(v), footer = rod(col), ...)
+  div(class = "rolagem-x", reactable(d, compact = TRUE, striped = TRUE, highlight = TRUE, pagination = FALSE,
+    defaultColDef = colDef(footerStyle = list(fontWeight = 600)),
+    columnGroups = list(colGroup(name = as.character(ano), columns = c("ent_a", "sai_a", "sal_a")),
+                        colGroup(name = PERIODO_FUGA, columns = c("ent_p", "sai_p", "sal_p"))),
+    columns = list(UF = colDef(name = "Estado", minWidth = 170, sticky = "left", footer = "Total"),
+      ent_a = nc("Recebidas (residentes da UF internados em MT)", "ent_a"), sai_a = nc("Enviadas (residentes de MT internados na UF)", "sai_a"),
+      sal_a = nc("Saldo (recebidas − enviadas)", "sal_a", saldo_txt, style = list(fontWeight = 600)),
+      ent_p = nc("Recebidas", "ent_p"), sai_p = nc("Enviadas", "sai_p"),
+      sal_p = nc("Saldo", "sal_p", saldo_txt, style = list(fontWeight = 600)))))
+}
+
+# Regiões de saúde de residência no ano (supressão já aplicada no arquivo; o período só é
+# somado quando nenhum ano da região está suprimido)
+tabela_fuga_regioes <- function(ano = ANO_DESL) {
+  r <- FUGAREG[FUGAREG$ano == ano, ]
+  if (nrow(r) == 0) return(p(class = "nota-fonte", "Sem dados por região."))
+  per <- FUGAREG[FUGAREG$ano %in% ANOS, ] |> group_by(co_regsaud) |>
+    summarise(fora_p = if (any(is.na(internacoes_outra_uf))) NA_real_ else sum(internacoes_outra_uf),
+              tot_p = if (any(is.na(internacoes_total_res))) NA_real_ else sum(internacoes_total_res), .groups = "drop")
+  d <- r |> left_join(per, by = "co_regsaud") |>
+    transmute(Região = nome_regiao(co_regsaud), tot = internacoes_total_res, fora = internacoes_outra_uf, pct = pct_outra_uf,
+              fora_ac = internacoes_ac_outra_uf, pct_ac = pct_ac_outra_uf,
+              uf = ifelse(is.na(nome_uf_principal), "—", ifelse(is.na(pct_uf_principal), nome_uf_principal,
+                          sprintf("%s (%s)", nome_uf_principal, pct_txt(pct_uf_principal)))),
+              fora_p, pct_p = 100 * fora_p / tot_p) |> arrange(desc(pct))
+  nc <- function(nome, f = num, ...) colDef(name = nome, align = "right", minWidth = 85, cell = function(v) supr_num(v, f), ...)
+  div(class = "rolagem-x", reactable(d, compact = TRUE, striped = TRUE, highlight = TRUE, pagination = FALSE,
+    columnGroups = list(colGroup(name = as.character(ano), columns = c("tot", "fora", "pct", "fora_ac", "pct_ac", "uf")),
+                        colGroup(name = PERIODO_FUGA, columns = c("fora_p", "pct_p"))),
+    columns = list(Região = colDef(name = "Região de saúde de residência", minWidth = 160, sticky = "left"),
+      tot = nc("Internações de residentes (MT e outros estados)"), fora = nc("Em outros estados"),
+      pct = nc("% em outros estados", pct_txt, style = list(fontWeight = 600)),
+      fora_ac = nc("Alta complexidade em outros estados"), pct_ac = nc("% da alta complexidade em outros estados", pct_txt),
+      uf = colDef(name = "Principal estado de destino", minWidth = 150),
+      fora_p = nc("Em outros estados"), pct_p = nc("% em outros estados", pct_txt))))
+}
+
+# Municípios de residência, 2020–2025 somado (supressão já aplicada no arquivo)
+tabela_fuga_municipios <- function(prefixo = "../municipios/", id_html = "tab-fuga-mun") {
+  if (nrow(FUGAMUN) == 0) return(p(class = "nota-fonte", "Sem dados por município."))
+  d <- FUGAMUN |> left_join(select(MUN, cod_mun6, populacao_2025), by = "cod_mun6") |>
+    transmute(cod = cod_mun6, Município = municipio, Região = nome_regiao(co_regsaud), pop = populacao_2025,
+              tot = internacoes_total_res, fora = internacoes_outra_uf, pct = pct_outra_uf,
+              uf = ifelse(total_suprimido == 1, TXT_SUPR, ifelse(is.na(nome_uf_principal), "—",
+                          ifelse(is.na(pct_uf_principal), nome_uf_principal, sprintf("%s (%s)", nome_uf_principal, pct_txt(pct_uf_principal))))))
+  d <- d[order(-ifelse(is.na(d$pct), -1, d$pct), ordem_nome(d$Município)), ]
+  nc <- function(nome, f = num, ...) colDef(name = nome, align = "right", minWidth = 90, cell = function(v) supr_num(v, f), ...)
+  tagList(
+    tags$button(class = "btn btn-sm btn-outline-primary mb-2",
+                onclick = sprintf("Reactable.downloadDataCSV('%s', 'ppsus-mt_internacoes_outros_estados_municipios_%d_%d.csv')", id_html, min(ANOS), max(ANOS)),
+                sprintf("Baixar a tabela (CSV, %s)", PERIODO_FUGA)),
+    div(class = "rolagem-x", reactable(d, elementId = id_html, compact = TRUE, striped = TRUE, highlight = TRUE, searchable = TRUE,
+      defaultPageSize = 15, showPageSizeOptions = TRUE, pageSizeOptions = c(15, 50, nrow(d)),
+      columns = list(cod = colDef(show = FALSE),
+        Município = colDef(minWidth = 150, sticky = "left", cell = function(v, i) a(href = url_mun(d$cod[i], prefixo), v)),
+        Região = colDef(name = "Região de saúde", minWidth = 130),
+        pop = colDef(name = "População 2025", align = "right", minWidth = 85, cell = function(v) num(v)),
+        tot = nc(sprintf("Internações de residentes, %s (MT e outros estados)", PERIODO_FUGA)),
+        fora = nc("Em outros estados"), pct = nc("% em outros estados", pct_txt, style = list(fontWeight = 600)),
+        uf = colDef(name = "Principal estado de destino", minWidth = 150)))))
+}
+
+# Municípios de residência com maior parcela de internações em outros estados (para o texto)
+fuga_mun_top <- function(n = 5, min_tot = 500) {
+  FUGAMUN |> filter(!is.na(pct_outra_uf), internacoes_total_res >= min_tot) |> arrange(desc(pct_outra_uf)) |> head(n)
+}
+
+# Principais municípios de destino fora de MT (2020–2025)
+tabela_fuga_destinos <- function() {
+  if (nrow(FUGADEST) == 0) return(p(class = "nota-fonte", "Sem dados de destinos."))
+  d <- FUGADEST |> arrange(posicao) |>
+    transmute(Posição = posicao, Município = sprintf("%s (%s)", municipio, uf), int = internacoes, pct = pct_do_total_fora,
+              ac = internacoes_ac, pct_ac = pct_ac)
+  nc <- function(nome, f = num, ...) colDef(name = nome, align = "right", minWidth = 90, cell = function(v) supr_num(v, f), ...)
+  div(class = "rolagem-x", reactable(d, compact = TRUE, striped = TRUE, highlight = TRUE, pagination = FALSE, sortable = FALSE,
+    columns = list(Posição = colDef(align = "center", minWidth = 55, cell = function(v) ordinal(v)),
+      Município = colDef(name = "Município de destino", minWidth = 190),
+      int = nc(sprintf("Internações, %s", PERIODO_FUGA)), pct = nc("% das internações em outros estados", pct_txt),
+      ac = nc("Alta complexidade"), pct_ac = nc("% de alta complexidade", pct_txt, style = list(fontWeight = 600)))))
 }

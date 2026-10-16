@@ -1,0 +1,157 @@
+ano,cod_uf,uf,nome_uf,entrada,saida,saldo
+2020,35,SP,São Paulo,155,1045,-890
+2020,11,RO,Rondônia,130,509,-379
+2020,21,MA,Maranhão,70,397,-327
+2020,52,GO,Goiás,419,364,55
+2020,41,PR,Paraná,166,239,-73
+2020,15,PA,Pará,345,164,181
+2020,53,DF,Distrito Federal,9,141,-132
+2020,50,MS,Mato Grosso do Sul,145,129,16
+2020,31,MG,Minas Gerais,62,100,-38
+2020,17,TO,Tocantins,313,94,219
+2020,27,AL,Alagoas,32,50,-18
+2020,12,AC,Acre,4,43,-39
+2020,29,BA,Bahia,26,42,-16
+2020,22,PI,Piauí,20,31,-11
+2020,42,SC,Santa Catarina,42,30,12
+2020,26,PE,Pernambuco,6,27,-21
+2020,43,RS,Rio Grande do Sul,45,23,22
+2020,32,ES,Espírito Santo,3,21,-18
+2020,23,CE,Ceará,15,20,-5
+2020,33,RJ,Rio de Janeiro,9,14,-5
+2020,13,AM,Amazonas,10,11,-1
+2020,25,PB,Paraíba,5,10,-5
+2020,24,RN,Rio Grande do Norte,25,5,20
+2020,28,SE,Sergipe,5,5,0
+2020,16,AP,Amapá,5,1,4
+2020,14,RR,Roraima,8,0,8
+2021,35,SP,São Paulo,223,1008,-785
+2021,52,GO,Goiás,424,342,82
+2021,41,PR,Paraná,221,339,-118
+2021,11,RO,Rondônia,213,252,-39
+2021,53,DF,Distrito Federal,14,219,-205
+2021,50,MS,Mato Grosso do Sul,153,164,-11
+2021,21,MA,Maranhão,119,160,-41
+2021,31,MG,Minas Gerais,83,124,-41
+2021,15,PA,Pará,244,81,163
+2021,17,TO,Tocantins,254,68,186
+2021,29,BA,Bahia,46,41,5
+2021,42,SC,Santa Catarina,71,39,32
+2021,12,AC,Acre,21,32,-11
+2021,23,CE,Ceará,16,28,-12
+2021,26,PE,Pernambuco,16,19,-3
+2021,32,ES,Espírito Santo,12,17,-5
+2021,43,RS,Rio Grande do Sul,56,15,41
+2021,13,AM,Amazonas,10,12,-2
+2021,22,PI,Piauí,30,12,18
+2021,33,RJ,Rio de Janeiro,12,12,0
+2021,24,RN,Rio Grande do Norte,35,12,23
+2021,16,AP,Amapá,6,6,0
+2021,27,AL,Alagoas,29,4,25
+2021,25,PB,Paraíba,21,2,19
+2021,28,SE,Sergipe,18,2,16
+2021,14,RR,Roraima,13,1,12
+2022,35,SP,São Paulo,186,1093,-907
+2022,53,DF,Distrito Federal,14,362,-348
+2022,41,PR,Paraná,178,330,-152
+2022,52,GO,Goiás,396,318,78
+2022,11,RO,Rondônia,188,274,-86
+2022,50,MS,Mato Grosso do Sul,169,176,-7
+2022,31,MG,Minas Gerais,65,86,-21
+2022,15,PA,Pará,225,54,171
+2022,17,TO,Tocantins,290,47,243
+2022,29,BA,Bahia,45,38,7
+2022,42,SC,Santa Catarina,74,29,45
+2022,26,PE,Pernambuco,30,23,7
+2022,21,MA,Maranhão,136,18,118
+2022,43,RS,Rio Grande do Sul,50,17,33
+2022,23,CE,Ceará,12,16,-4
+2022,33,RJ,Rio de Janeiro,12,16,-4
+2022,27,AL,Alagoas,35,15,20
+2022,32,ES,Espírito Santo,17,11,6
+2022,13,AM,Amazonas,20,10,10
+2022,12,AC,Acre,24,9,15
+2022,22,PI,Piauí,18,7,11
+2022,25,PB,Paraíba,4,4,0
+2022,24,RN,Rio Grande do Norte,47,4,43
+2022,28,SE,Sergipe,12,3,9
+2022,16,AP,Amapá,2,1,1
+2022,14,RR,Roraima,8,0,8
+2023,35,SP,São Paulo,253,1189,-936
+2023,53,DF,Distrito Federal,25,441,-416
+2023,41,PR,Paraná,231,372,-141
+2023,11,RO,Rondônia,241,340,-99
+2023,52,GO,Goiás,565,290,275
+2023,50,MS,Mato Grosso do Sul,213,158,55
+2023,15,PA,Pará,291,92,199
+2023,31,MG,Minas Gerais,77,72,5
+2023,29,BA,Bahia,60,57,3
+2023,17,TO,Tocantins,352,51,301
+2023,42,SC,Santa Catarina,72,35,37
+2023,43,RS,Rio Grande do Sul,70,33,37
+2023,21,MA,Maranhão,220,23,197
+2023,26,PE,Pernambuco,34,20,14
+2023,12,AC,Acre,26,19,7
+2023,32,ES,Espírito Santo,11,17,-6
+2023,33,RJ,Rio de Janeiro,23,16,7
+2023,27,AL,Alagoas,37,15,22
+2023,25,PB,Paraíba,15,8,7
+2023,13,AM,Amazonas,34,7,27
+2023,23,CE,Ceará,22,5,17
+2023,16,AP,Amapá,7,4,3
+2023,22,PI,Piauí,32,3,29
+2023,24,RN,Rio Grande do Norte,28,3,25
+2023,28,SE,Sergipe,11,2,9
+2023,14,RR,Roraima,44,0,44
+2024,35,SP,São Paulo,257,1445,-1188
+2024,53,DF,Distrito Federal,33,423,-390
+2024,41,PR,Paraná,288,415,-127
+2024,52,GO,Goiás,779,372,407
+2024,11,RO,Rondônia,289,354,-65
+2024,31,MG,Minas Gerais,146,149,-3
+2024,50,MS,Mato Grosso do Sul,220,144,76
+2024,15,PA,Pará,385,106,279
+2024,17,TO,Tocantins,346,67,279
+2024,29,BA,Bahia,80,50,30
+2024,42,SC,Santa Catarina,112,45,67
+2024,12,AC,Acre,34,32,2
+2024,21,MA,Maranhão,304,30,274
+2024,43,RS,Rio Grande do Sul,103,23,80
+2024,13,AM,Amazonas,54,18,36
+2024,26,PE,Pernambuco,41,15,26
+2024,33,RJ,Rio de Janeiro,32,14,18
+2024,32,ES,Espírito Santo,5,12,-7
+2024,23,CE,Ceará,28,7,21
+2024,24,RN,Rio Grande do Norte,39,7,32
+2024,27,AL,Alagoas,71,6,65
+2024,22,PI,Piauí,32,6,26
+2024,16,AP,Amapá,15,4,11
+2024,25,PB,Paraíba,18,3,15
+2024,14,RR,Roraima,81,2,79
+2024,28,SE,Sergipe,10,2,8
+2025,35,SP,São Paulo,300,1388,-1088
+2025,52,GO,Goiás,888,541,347
+2025,41,PR,Paraná,275,503,-228
+2025,53,DF,Distrito Federal,52,489,-437
+2025,11,RO,Rondônia,359,410,-51
+2025,50,MS,Mato Grosso do Sul,314,147,167
+2025,15,PA,Pará,398,123,275
+2025,31,MG,Minas Gerais,140,92,48
+2025,42,SC,Santa Catarina,146,54,92
+2025,29,BA,Bahia,87,51,36
+2025,17,TO,Tocantins,365,49,316
+2025,12,AC,Acre,51,38,13
+2025,26,PE,Pernambuco,48,32,16
+2025,32,ES,Espírito Santo,17,30,-13
+2025,21,MA,Maranhão,283,29,254
+2025,43,RS,Rio Grande do Sul,104,27,77
+2025,13,AM,Amazonas,56,24,32
+2025,33,RJ,Rio de Janeiro,36,22,14
+2025,27,AL,Alagoas,67,14,53
+2025,24,RN,Rio Grande do Norte,43,11,32
+2025,23,CE,Ceará,36,8,28
+2025,25,PB,Paraíba,28,8,20
+2025,22,PI,Piauí,43,6,37
+2025,28,SE,Sergipe,19,5,14
+2025,16,AP,Amapá,13,4,9
+2025,14,RR,Roraima,100,0,100

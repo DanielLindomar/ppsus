@@ -16,6 +16,17 @@ e grava, conforme o contrato do briefing (_planejamento/BRIEF_SITE.md, seção 3
   arquivos/dados/fluxos_internacoes_municipios.csv  cópia com nomes (download)
   arquivos/dados/fluxos_internacoes_regioes.csv     cópia com nomes (download)
 
+Internações de residentes de MT em OUTRAS UF (versão 0.3 do site), lidas de
+mart.fluxo_internacao_od_ano (matriz origem-destino: SIH/SUS RD de MT + RD das 26 outras UF,
+filtrado a residentes de MT):
+
+  dados_site/fuga_resumo_ano.csv          estado: por ano e nível, em MT × em outras UF, valor, eletivas, saldo
+  dados_site/fuga_uf_ano.csv              estado: por ano, UF de destino e nível (MC, AC, total)
+  dados_site/fuga_saldo_uf_ano.csv        estado: por ano e UF, entrada (residentes da UF em MT) × saída × saldo
+  dados_site/fuga_regiao_ano.csv          região de saúde de residência × ano (com supressão de células < 5)
+  dados_site/fuga_mun_periodo.csv         município de residência, 2020–2025 somado (com supressão de células < 5)
+  dados_site/fuga_destinos_mun.csv        20 principais municípios de destino fora de MT, 2020–2025 (supressão < 5)
+
 Regras:
   - tipo_aih = '1' (uma linha por internação); ano = ano de data_saida; 2020–2025.
   - nivel: complexidade '02' = MC, '03' = AC, demais = 'outro'.
@@ -27,7 +38,19 @@ Regras:
     0 no próprio município. Todos os 142 municípios têm coordenada, inclusive Boa
     Esperança do Norte (510183): o km_medio fica vazio apenas quando o município não
     tem internação de residentes no ano, não por falta de coordenada.
-  - Só há SIH de MT: a fuga para outras UFs não é observada.
+  - Fluxos, polos, matriz e distâncias usam só o SIH de MT (internações em hospitais de MT).
+    As internações de residentes de MT em hospitais de outras UF entram apenas nos arquivos
+    fuga_*.csv, com as regras do mart (internação = AIH tipo 1 distinta; valores e diárias em
+    todas as linhas da AIH, inclusive continuações; ano de data_saida). O script confere que,
+    com destino em MT, o mart reproduz exatamente as internações dos fluxos (por ano e nível).
+  - Supressão (Termo de Uso do pacote de dados da equipe, item 6: "suprimindo células com menos
+    de 5 casos"): nos recortes SUBESTADUAIS (região de saúde, município de residência, município de
+    destino) contagens de 1 a 4 não são publicadas. Zero é publicado (não singulariza ninguém).
+    Supressão complementar: a célula suprimida não pode ser deduzida por diferença — total e
+    percentual da linha também saem; por ano (região) e por região (município) nunca fica uma só
+    célula suprimida diante de um total publicado. Os recortes estaduais (MT × UF de destino,
+    saldo por UF) não têm supressão, como os demais arquivos estaduais do site.
+  - Janela 2020–2025; 2026 é parcial e não entra.
 
 Uso (a partir da raiz do repositório):  python scripts/02_preparar_deslocamento.py
 """
@@ -70,13 +93,22 @@ UF_SIGLA = {
     "43": ("RS", "Rio Grande do Sul"), "50": ("MS", "Mato Grosso do Sul"), "51": ("MT", "Mato Grosso"),
     "52": ("GO", "Goiás"), "53": ("DF", "Distrito Federal"),
 }
+SIGLA_NOME = {s: n for s, n in UF_SIGLA.values()}
+# Internações em outras UF (versão 0.3)
+LIMIAR_SUPRESSAO = 5     # Termo de Uso do pacote, item 6: células com menos de 5 casos (1 a 4) não são publicadas
+N_DESTINOS = 20          # principais municípios de destino fora de MT, 2020–2025
+NIVEIS_FUGA = ["MC", "AC", "total"]
 
 
 # ----------------------------------------------------------------------------
 # utilidades
 # ----------------------------------------------------------------------------
 def log(msg: str) -> None:
-    print(msg, flush=True)
+    try:
+        print(msg, flush=True)
+    except UnicodeEncodeError:  # console em cp1252 (Windows): troca o que não couber
+        enc = sys.stdout.encoding or "ascii"
+        print(msg.encode(enc, errors="replace").decode(enc), flush=True)
 
 
 def fmt_int(x) -> str:
@@ -96,6 +128,11 @@ def fmt_dec(x, nd: int = 1) -> str:
 
 def fmt_pct(x, nd: int = 1) -> str:
     return fmt_dec(x, nd) + "%"
+
+
+def fmt_saldo(v: int) -> str:
+    """Saldo com sinal: +1.234 / −1.234 / 0 (pt-BR)."""
+    return ("+" if v > 0 else "−" if v < 0 else "") + fmt_int(abs(v))
 
 
 def haversine_km(lon1, lat1, lon2, lat2):
@@ -199,6 +236,27 @@ order  by cod_mun6
 """
 
 
+# Matriz origem-destino do mart (residentes de MT; destino em MT ou em outra UF)
+SQL_OD = f"""
+select ano, cod_mun6_res, co_regsaud_res, cod_mun6_destino, municipio_destino,
+       cod_uf_destino, uf_destino, tipo_destino, nivel,
+       internacoes, internacoes_urgencia, diarias, valor_total
+from   mart.fluxo_internacao_od_ano
+where  ano between {ANO_INI} and {ANO_FIM}
+"""
+
+# Conferência independente: AIH tipo 1 distintas de residentes de MT nos RD das outras UF
+SQL_FORA_CONF = f"""
+select extract(year from t.data_saida)::int as ano, count(distinct t.numero_aih)::bigint as internacoes
+from   trusted.aih_reduzida_fora_mt t
+join   mart.dim_municipio d on d.cod_mun6 = left(t.codigo_municipio_residencia_paciente, 6)
+where  t.tipo_aih = '1'
+  and  t.data_saida >= date '{ANO_INI}-01-01'
+  and  t.data_saida <  date '{ANO_FIM + 1}-01-01'
+group by 1
+"""
+
+
 def ler_sql(con, sql: str) -> pd.DataFrame:
     with con.cursor() as cur:
         cur.execute(sql)
@@ -206,7 +264,7 @@ def ler_sql(con, sql: str) -> pd.DataFrame:
         return pd.DataFrame(cur.fetchall(), columns=cols)
 
 
-def extrair() -> tuple[pd.DataFrame, pd.DataFrame]:
+def extrair() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     pw = PGPASS.read_text(encoding="utf-8").strip()
     con = psycopg2.connect(host="localhost", port=5432, dbname="airflow",
                            user="airflow", password=pw)
@@ -215,6 +273,9 @@ def extrair() -> tuple[pd.DataFrame, pd.DataFrame]:
         dim = ler_sql(con, SQL_DIM)
         log("consultando trusted.aih_reduzida (agregação) ...")
         fl = ler_sql(con, SQL_FLUXO)
+        log("consultando mart.fluxo_internacao_od_ano (residentes de MT em MT e em outras UF) ...")
+        od = ler_sql(con, SQL_OD)
+        conf = ler_sql(con, SQL_FORA_CONF)
     finally:
         con.close()
     dim["cod_mun6"] = dim["cod_mun6"].str.zfill(6)
@@ -223,9 +284,17 @@ def extrair() -> tuple[pd.DataFrame, pd.DataFrame]:
     fl["valor_total"] = fl["valor_total"].astype(float)
     for c in ("internacoes", "diarias", "obitos", "eletivas"):
         fl[c] = fl[c].astype("int64")
+    for c in ("cod_mun6_res", "co_regsaud_res", "cod_mun6_destino", "cod_uf_destino"):
+        od[c] = od[c].fillna("").astype(str).str.strip()
+    od["nivel"] = od["nivel"].replace({"outra": "outro"})
+    od["valor_total"] = od["valor_total"].astype(float)
+    for c in ("ano", "internacoes", "internacoes_urgencia", "diarias"):
+        od[c] = od[c].astype("int64")
+    conf = conf.astype("int64")
     log(f"dim_municipio: {len(dim)} municípios; agregados AIH: {len(fl)} linhas, "
-        f"{fl['internacoes'].sum():,} internações")
-    return fl, dim
+        f"{fl['internacoes'].sum():,} internações; matriz origem-destino: {len(od)} linhas, "
+        f"{int(od.loc[od['tipo_destino'] == 'outra_uf', 'internacoes'].sum()):,} internações em outras UF")
+    return fl, dim, od, conf
 
 
 # ----------------------------------------------------------------------------
@@ -246,7 +315,7 @@ def main() -> int:
     DADOS.mkdir(parents=True, exist_ok=True)
     ARQ_DADOS.mkdir(parents=True, exist_ok=True)
 
-    fl, dim = extrair()
+    fl, dim, od, conf = extrair()
     cent = carregar_centroides()
     cods_mt = set(dim["cod_mun6"])
     nome = dim.set_index("cod_mun6")["nome_municipio"]
@@ -445,6 +514,9 @@ def main() -> int:
                  .sort_values(["ano", "internacoes", "uf"], ascending=[True, False, True]).reset_index(drop=True))
     outras_uf.to_csv(DADOS / "outras_uf_ano.csv", **CSV_KW)
 
+    # 7) internações de residentes de MT em outras UF (fuga_*.csv) — versão 0.3
+    fuga = preparar_fuga(od, conf, fl, mt, dim)
+
     # --- cópias para download, com nomes ---------------------------------------------
     fm = fluxo_mun.copy()
     fm.insert(2, "municipio_origem", fm["cod_origem"].map(nome))
@@ -499,7 +571,7 @@ def main() -> int:
     # ----------------------------------------------------------------------------
     # achados (pt-BR, quantificados)
     # ----------------------------------------------------------------------------
-    escrever_achados(mt, fl, des, polos, resumo, fluxo_reg, nome, nome_reg, reg, sem_coord, sem_internacao)
+    escrever_achados(mt, fl, des, polos, resumo, fluxo_reg, nome, nome_reg, reg, sem_coord, sem_internacao, fuga)
 
     r25 = tot.loc[ANO_FIM]
     log("\n=== números-chave 2025 ===")
@@ -508,11 +580,337 @@ def main() -> int:
         f"% outra região: {fmt_pct(r25['pct_outra_regiao'])}; "
         f"km médio: {fmt_dec(r25['km_medio'])}; outra UF: {fmt_int(r25['n_outra_uf'])}; "
         f"residência ignorada: {fmt_int(r25['n_res_ignorada'])}")
+    f25 = fuga["resumo"].set_index(["ano", "nivel"])
+    log(f"residentes de MT internados em outras UF em {ANO_FIM}: {fmt_int(f25.loc[(ANO_FIM, 'total'), 'internacoes_outra_uf'])} "
+        f"({fmt_pct(f25.loc[(ANO_FIM, 'total'), 'pct_outra_uf'])} do total; "
+        f"{fmt_pct(f25.loc[(ANO_FIM, 'AC'), 'pct_outra_uf'])} na alta complexidade); "
+        f"saldo {ANO_INI}–{ANO_FIM} (entrada − saída) = {fmt_saldo(fuga['saldo_periodo'])}")
     log("\nconcluído.")
     return 0
 
 
-def escrever_achados(mt, fl, des, polos, resumo, fluxo_reg, nome, nome_reg, reg, sem_coord, sem_internacao):
+# ----------------------------------------------------------------------------
+# internações de residentes de MT em outras UF (versão 0.3)
+# ----------------------------------------------------------------------------
+def _pequena(s: pd.Series) -> pd.Series:
+    """Contagem publicável só se 0 ou >= LIMIAR_SUPRESSAO (Termo de Uso, item 6)."""
+    return (s >= 1) & (s < LIMIAR_SUPRESSAO)
+
+
+def _complementar(df: pd.DataFrame, grupo: str, flag: str, valor: str, flag_comp: str) -> int:
+    """Supressão complementar: em cada grupo (ex.: ano, região) com exatamente uma célula
+    suprimida diante de um total publicado, suprime também a menor célula positiva ainda
+    publicada do grupo (desempate pela ordem do DataFrame). Repete até estabilizar."""
+    n = 0
+    for _ in range(len(df) + 1):
+        alvo = []
+        for _, sub in df.groupby(grupo, sort=True):
+            if int(sub[flag].sum()) == 1:
+                cand = sub[(~sub[flag]) & (sub[valor] > 0)]
+                if len(cand):
+                    alvo.append(cand.sort_values(valor, kind="stable").index[0])
+        if not alvo:
+            break
+        df.loc[alvo, flag] = True
+        df.loc[alvo, flag_comp] = True
+        n += len(alvo)
+    return n
+
+
+def _uf_principal(base_fora: pd.DataFrame, chaves: list[str]) -> pd.DataFrame:
+    """UF de destino com mais internações em cada grupo (desempate pela sigla)."""
+    g = (base_fora.groupby(chaves + ["uf_destino"], as_index=False)["internacoes"].sum()
+                  .sort_values(chaves + ["internacoes", "uf_destino"],
+                               ascending=[True] * len(chaves) + [False, True]))
+    return (g.drop_duplicates(chaves).set_index(chaves)
+             .rename(columns={"uf_destino": "uf_principal", "internacoes": "n_uf_principal"}))
+
+
+def _recorte_subestadual(base: pd.DataFrame, chaves: list[str], grade: pd.DataFrame,
+                         grupo_comp: str, com_ac: bool) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
+    """Totais de residentes (MT + outras UF), internações em outras UF e, opcionalmente, alta
+    complexidade, com supressão primária (1 a 4) e complementar. Devolve o DataFrame publicável
+    (sem os valores suprimidos), o DataFrame interno (com todos os valores, só para conferência)
+    e as contagens de supressão."""
+    fora = base[base["tipo_destino"] == "outra_uf"]
+    d = grade.set_index(chaves)
+    d["internacoes_total_res"] = base.groupby(chaves)["internacoes"].sum()
+    d["internacoes_outra_uf"] = fora.groupby(chaves)["internacoes"].sum()
+    if com_ac:
+        d["internacoes_ac_total_res"] = base[base["nivel"] == "AC"].groupby(chaves)["internacoes"].sum()
+        d["internacoes_ac_outra_uf"] = fora[fora["nivel"] == "AC"].groupby(chaves)["internacoes"].sum()
+    up = _uf_principal(fora, chaves)
+    d = d.join(up, how="left")
+    for c in [c for c in d.columns if c.startswith("internacoes")] + ["n_uf_principal"]:
+        d[c] = d[c].fillna(0).astype("int64")
+    d = d.reset_index()
+
+    F = d["internacoes_outra_uf"]
+    d["supr_total"] = _pequena(F)
+    d["supr_total_comp"] = False
+    n_prim = int(d["supr_total"].sum())
+    n_comp = _complementar(d, grupo_comp, "supr_total", "internacoes_outra_uf", "supr_total_comp")
+    stats = {"total_primaria": n_prim, "total_complementar": n_comp}
+    if com_ac:
+        A = d["internacoes_ac_outra_uf"]
+        # AC sai quando ela própria é pequena, quando a média complexidade (F − A) seria pequena
+        # e dedutível, ou quando o total da linha saiu por ser pequeno
+        d["supr_ac"] = _pequena(A) | _pequena(F - A) | (d["supr_total"] & ~d["supr_total_comp"])
+        d["supr_ac_comp"] = False
+        stats["ac_primaria"] = int(d["supr_ac"].sum())
+        stats["ac_complementar"] = _complementar(d, grupo_comp, "supr_ac", "internacoes_ac_outra_uf", "supr_ac_comp")
+
+    # percentuais e UF principal (calculados antes de apagar os valores suprimidos)
+    d["pct_outra_uf"] = (100 * F / d["internacoes_total_res"].where(d["internacoes_total_res"] > 0)).round(1)
+    if com_ac:
+        d["pct_ac_outra_uf"] = (100 * d["internacoes_ac_outra_uf"]
+                                / d["internacoes_ac_total_res"].where(d["internacoes_ac_total_res"] > 0)).round(1)
+    n1 = d["n_uf_principal"]
+    resto = F - n1
+    d["nome_uf_principal"] = d["uf_principal"].map(SIGLA_NOME)
+    d["pct_uf_principal"] = (100 * n1 / F.where(F > 0)).round(1)
+    pct_ok = (n1 >= LIMIAR_SUPRESSAO) & ~_pequena(resto) & ~d["supr_total"]
+    d.loc[~pct_ok, "pct_uf_principal"] = np.nan
+    sem_uf = d["supr_total"] | (F == 0)
+    d.loc[sem_uf, ["uf_principal", "nome_uf_principal"]] = None
+
+    # apaga os valores suprimidos (o total e o percentual da linha permitiriam deduzi-los)
+    pub = d.copy()
+    for c in ("internacoes_total_res", "internacoes_outra_uf"):
+        pub[c] = pub[c].astype("Int64")
+    pub.loc[pub["supr_total"], ["internacoes_total_res", "internacoes_outra_uf", "pct_outra_uf"]] = pd.NA
+    if com_ac:
+        for c in ("internacoes_ac_total_res", "internacoes_ac_outra_uf"):
+            pub[c] = pub[c].astype("Int64")
+        pub.loc[pub["supr_ac"], ["internacoes_ac_total_res", "internacoes_ac_outra_uf", "pct_ac_outra_uf"]] = pd.NA
+
+    def nota(r) -> str:
+        p = []
+        if r["supr_total"]:
+            p.append("internações em outras UF e total suprimidos: " +
+                     ("complementar (evita deduzir outra célula suprimida pela soma)" if r["supr_total_comp"]
+                      else f"menos de {LIMIAR_SUPRESSAO} internações"))
+        if com_ac and r["supr_ac"] and not (r["supr_total"] and not r["supr_total_comp"]):
+            p.append("alta complexidade suprimida: " +
+                     ("complementar (evita deduzir outra célula suprimida pela soma)" if r["supr_ac_comp"]
+                      else f"menos de {LIMIAR_SUPRESSAO} internações na alta ou na média complexidade"))
+        return "; ".join(p)
+
+    pub["nota_supressao"] = d.apply(nota, axis=1)
+    pub["total_suprimido"] = d["supr_total"].astype(int)
+    if com_ac:
+        pub["ac_suprimida"] = d["supr_ac"].astype(int)
+    return pub, d, stats
+
+
+def preparar_fuga(od: pd.DataFrame, conf: pd.DataFrame, fl: pd.DataFrame, mt: pd.DataFrame,
+                  dim: pd.DataFrame) -> dict:
+    """Arquivos fuga_*.csv: residentes de MT internados em hospitais de outras UF (2020–2025)."""
+    anos = list(range(ANO_INI, ANO_FIM + 1))
+    ufs = sorted(k for k in UF_SIGLA if k != UF_MT)
+    od = od[od["ano"].between(ANO_INI, ANO_FIM)].copy()
+    fora = od[od["tipo_destino"] == "outra_uf"].copy()
+    em_mt = od[od["tipo_destino"] != "outra_uf"]
+
+    # --- conferências de consistência -------------------------------------------------
+    a = em_mt.groupby(["ano", "nivel"])["internacoes"].sum()
+    b = mt.groupby(["ano", "nivel"])["internacoes"].sum()
+    assert a.sort_index().equals(b.reindex(a.index).sort_index()) and a.sum() == b.sum(), \
+        "matriz origem-destino (destino em MT) ≠ fluxos do site por ano e nível"
+    c1 = fora.groupby("ano")["internacoes"].sum()
+    c2 = conf.set_index("ano")["internacoes"].reindex(c1.index)
+    assert c1.equals(c2), f"internações em outras UF: mart {c1.to_dict()} ≠ AIH distintas {c2.to_dict()}"
+    assert (fora["cod_uf_destino"] != UF_MT).all() and fora["uf_destino"].notna().all()
+    assert set(fora["cod_uf_destino"]) <= set(ufs), "UF de destino desconhecida"
+    assert set(od["cod_mun6_res"]) <= set(dim["cod_mun6"]), "residência fora de mart.dim_municipio"
+    log(f"fuga: destino em MT = fluxos do site ({fmt_int(a.sum())} internações, por ano e nível)  OK")
+    log(f"fuga: internações em outras UF = AIH tipo 1 distintas dos RD das outras UF ({fmt_int(c1.sum())})  OK")
+
+    # --- 1) por ano, UF de destino e nível (estadual) ------------------------------------
+    fora["eletivas"] = fora["internacoes"] - fora["internacoes_urgencia"]
+    vals = ["internacoes", "internacoes_urgencia", "diarias", "valor_total"]
+    porn = fora.groupby(["ano", "cod_uf_destino", "nivel"])[vals].sum()
+    tot = fora.groupby(["ano", "cod_uf_destino"])[vals].sum()
+    tot["nivel"] = "total"
+    tot = tot.set_index("nivel", append=True)
+    grade = pd.MultiIndex.from_product([anos, ufs, NIVEIS_FUGA], names=["ano", "cod_uf_destino", "nivel"])
+    uf = pd.concat([porn, tot]).reindex(grade, fill_value=0).reset_index()
+    uf = uf.rename(columns={"cod_uf_destino": "cod_uf"})
+    uf.insert(2, "uf", uf["cod_uf"].map(lambda k: UF_SIGLA[k][0]))
+    uf.insert(3, "nome_uf", uf["cod_uf"].map(lambda k: UF_SIGLA[k][1]))
+    uf["valor_total"] = uf["valor_total"].round(2)
+    for c in ("internacoes", "internacoes_urgencia", "diarias"):
+        uf[c] = uf[c].astype("int64")
+    uf["_o"] = uf["nivel"].map({n: i for i, n in enumerate(NIVEIS_FUGA)})
+    uf = uf.sort_values(["ano", "_o", "internacoes", "uf"], ascending=[True, True, False, True]).drop(columns="_o")
+    uf.to_csv(DADOS / "fuga_uf_ano.csv", **CSV_KW)
+
+    # --- 2) saldo por UF: entrada (residentes da UF internados em MT) × saída -------------
+    ent = (fl[fl["classe_res"] == "outra_uf"].assign(cod_uf=lambda x: x["cod_res"].str[:2])
+             .groupby(["ano", "cod_uf"])["internacoes"].sum())
+    sai = fora.groupby(["ano", "cod_uf_destino"])["internacoes"].sum().rename_axis(["ano", "cod_uf"])
+    g2 = pd.MultiIndex.from_product([anos, ufs], names=["ano", "cod_uf"])
+    sal = pd.DataFrame({"entrada": ent.reindex(g2, fill_value=0), "saida": sai.reindex(g2, fill_value=0)}).reset_index()
+    fora_desc = sorted(set(ent.index.get_level_values(1)) - set(ufs))
+    if fora_desc:
+        log(f"AVISO: residentes de código de UF desconhecido atendidos em MT (fora do saldo): {fora_desc}")
+    sal["saldo"] = sal["entrada"] - sal["saida"]
+    sal.insert(2, "uf", sal["cod_uf"].map(lambda k: UF_SIGLA[k][0]))
+    sal.insert(3, "nome_uf", sal["cod_uf"].map(lambda k: UF_SIGLA[k][1]))
+    for c in ("entrada", "saida", "saldo"):
+        sal[c] = sal[c].astype("int64")
+    sal = sal.sort_values(["ano", "saida", "uf"], ascending=[True, False, True])
+    sal.to_csv(DADOS / "fuga_saldo_uf_ano.csv", **CSV_KW)
+    outras = fl[fl["classe_res"] == "outra_uf"].groupby("ano")["internacoes"].sum()
+    assert sal.groupby("ano")["entrada"].sum().equals(outras.reindex(anos, fill_value=0).astype("int64")), \
+        "entrada do saldo ≠ residentes de outras UF atendidos em MT (outras_uf_ano.csv)"
+
+    # --- 3) resumo estadual por ano e nível ---------------------------------------------
+    linhas = []
+    for nv in NIVEIS_FUGA:
+        sub_mt = em_mt if nv == "total" else em_mt[em_mt["nivel"] == nv]
+        sub_f = fora if nv == "total" else fora[fora["nivel"] == nv]
+        sub_e = fl[fl["classe_res"] == "outra_uf"]
+        if nv != "total":
+            sub_e = sub_e[sub_e["nivel"] == nv]
+        upr = _uf_principal(sub_f, ["ano"])
+        for ano in anos:
+            m_ = sub_mt[sub_mt["ano"] == ano]
+            f_ = sub_f[sub_f["ano"] == ano]
+            i_mt, i_f = int(m_["internacoes"].sum()), int(f_["internacoes"].sum())
+            v_mt, v_f = float(m_["valor_total"].sum()), float(f_["valor_total"].sum())
+            e_f = i_f - int(f_["internacoes_urgencia"].sum())
+            e_mt = i_mt - int(m_["internacoes_urgencia"].sum())
+            ent_ = int(sub_e.loc[sub_e["ano"] == ano, "internacoes"].sum())
+            sg = upr.loc[ano, "uf_principal"] if ano in upr.index else None
+            linhas.append(dict(
+                ano=ano, nivel=nv, internacoes_mt=i_mt, internacoes_outra_uf=i_f,
+                internacoes_total=i_mt + i_f,
+                pct_outra_uf=round(100 * i_f / (i_mt + i_f), 2) if i_mt + i_f else np.nan,
+                valor_mt=round(v_mt, 2), valor_outra_uf=round(v_f, 2),
+                pct_valor_outra_uf=round(100 * v_f / (v_mt + v_f), 2) if v_mt + v_f else np.nan,
+                pct_eletivas_mt=round(100 * e_mt / i_mt, 1) if i_mt else np.nan,
+                pct_eletivas_outra_uf=round(100 * e_f / i_f, 1) if i_f else np.nan,
+                uf_principal=sg, nome_uf_principal=SIGLA_NOME.get(sg) if sg else None,
+                pct_uf_principal=round(100 * upr.loc[ano, "n_uf_principal"] / i_f, 1) if sg and i_f else np.nan,
+                n_uf_destino=int(f_.loc[f_["internacoes"] > 0, "cod_uf_destino"].nunique()),
+                n_mun_destino=int(f_.loc[f_["internacoes"] > 0, "cod_mun6_destino"].nunique()),
+                entrada_outra_uf=ent_, saldo_outra_uf=ent_ - i_f))
+    res = pd.DataFrame(linhas)
+    res["_o"] = res["nivel"].map({n: i for i, n in enumerate(NIVEIS_FUGA)})
+    res = res.sort_values(["ano", "_o"]).drop(columns="_o").reset_index(drop=True)
+    res.to_csv(DADOS / "fuga_resumo_ano.csv", **CSV_KW)
+    rt = res[res["nivel"] == "total"].set_index("ano")
+    assert (rt["internacoes_outra_uf"] == uf[uf["nivel"] == "total"].groupby("ano")["internacoes"].sum()).all()
+    assert (rt["internacoes_mt"] == mt.groupby("ano")["internacoes"].sum()).all()
+    assert (res[res["nivel"] != "total"].groupby("ano")["internacoes_outra_uf"].sum() == rt["internacoes_outra_uf"]).all(), \
+        "MC + AC ≠ total nas internações em outras UF (há nível 'outro'?)"
+
+    # --- 4) região de saúde de residência × ano (com supressão) --------------------------
+    dimr = dim.drop_duplicates("co_regsaud")[["co_regsaud", "nome_regsaud"]].sort_values("co_regsaud")
+    base = od.rename(columns={"co_regsaud_res": "co_regsaud"})
+    grade_r = pd.DataFrame([(r, a_) for r in dimr["co_regsaud"] for a_ in anos], columns=["co_regsaud", "ano"])
+    reg_pub, reg_int, st_reg = _recorte_subestadual(base, ["co_regsaud", "ano"], grade_r, "ano", com_ac=True)
+    reg_pub.insert(1, "regiao_saude", reg_pub["co_regsaud"].map(dimr.set_index("co_regsaud")["nome_regsaud"])
+                   .str.replace(r"\s*-\s*MT$", "", regex=True))
+    cols_r = ["co_regsaud", "regiao_saude", "ano", "internacoes_total_res", "internacoes_outra_uf", "pct_outra_uf",
+              "internacoes_ac_total_res", "internacoes_ac_outra_uf", "pct_ac_outra_uf",
+              "uf_principal", "nome_uf_principal", "pct_uf_principal", "total_suprimido", "ac_suprimida", "nota_supressao"]
+    reg_pub = reg_pub[cols_r].sort_values(["co_regsaud", "ano"])
+    # soma das regiões = estado (antes da supressão)
+    assert (reg_int.groupby("ano")["internacoes_outra_uf"].sum() == rt["internacoes_outra_uf"]).all()
+
+    # --- 5) município de residência, 2020–2025 somado (com supressão) ---------------------
+    dimm = dim[["cod_mun6", "nome_municipio", "co_regsaud"]].copy()
+    grade_m = dimm[["cod_mun6", "co_regsaud"]].rename(columns={"cod_mun6": "cod_mun6_res"})
+    bm = od.copy()
+    bm["co_regsaud"] = bm["cod_mun6_res"].map(dimm.set_index("cod_mun6")["co_regsaud"])
+    mun_pub, mun_int, st_mun = _recorte_subestadual(bm, ["cod_mun6_res"], grade_m, "co_regsaud", com_ac=False)
+    mun_pub = mun_pub.rename(columns={"cod_mun6_res": "cod_mun6"})
+    mun_pub.insert(1, "municipio", mun_pub["cod_mun6"].map(dimm.set_index("cod_mun6")["nome_municipio"]))
+    mun_pub.insert(3, "regiao_saude", mun_pub["co_regsaud"].map(dimr.set_index("co_regsaud")["nome_regsaud"])
+                   .str.replace(r"\s*-\s*MT$", "", regex=True))
+    mun_pub.insert(4, "periodo", f"{ANO_INI}–{ANO_FIM}")
+    cols_m = ["cod_mun6", "municipio", "co_regsaud", "regiao_saude", "periodo", "internacoes_total_res",
+              "internacoes_outra_uf", "pct_outra_uf", "uf_principal", "nome_uf_principal", "pct_uf_principal",
+              "total_suprimido", "nota_supressao"]
+    mun_pub = mun_pub[cols_m].sort_values("cod_mun6")
+    assert len(mun_pub) == len(dim) and int(mun_int["internacoes_outra_uf"].sum()) == int(c1.sum())
+
+    # --- 6) principais municípios de destino fora de MT, 2020–2025 (com supressão) -------
+    dg = (fora.groupby(["cod_mun6_destino", "municipio_destino", "cod_uf_destino", "uf_destino"], as_index=False)
+              .agg(internacoes=("internacoes", "sum")))
+    dac = fora[fora["nivel"] == "AC"].groupby("cod_mun6_destino")["internacoes"].sum()
+    dg["internacoes_ac"] = dg["cod_mun6_destino"].map(dac).fillna(0).astype("int64")
+    dg = dg.sort_values(["internacoes", "cod_mun6_destino"], ascending=[False, True]).reset_index(drop=True)
+    top = dg.head(N_DESTINOS).copy()
+    assert (top["internacoes"] >= LIMIAR_SUPRESSAO).all()
+    top["supr_ac"] = _pequena(top["internacoes_ac"]) | _pequena(top["internacoes"] - top["internacoes_ac"])
+    top["supr_ac_comp"] = False
+    # complementar por UF só quando a UF não tem outros destinos (fora da lista) com alta complexidade:
+    # aí o total estadual da UF permitiria deduzir a célula suprimida
+    resto_ac = dg.iloc[N_DESTINOS:].groupby("cod_uf_destino")["internacoes_ac"].sum()
+    n_comp_d = 0
+    for ufc, sub in top.groupby("cod_uf_destino"):
+        if int(sub["supr_ac"].sum()) == 1 and int(resto_ac.get(ufc, 0)) == 0:
+            cand = sub[(~sub["supr_ac"]) & (sub["internacoes_ac"] > 0)].sort_values("internacoes_ac")
+            if len(cand):
+                top.loc[cand.index[0], ["supr_ac", "supr_ac_comp"]] = True
+                n_comp_d += 1
+    top["pct_ac"] = (100 * top["internacoes_ac"] / top["internacoes"]).round(1)
+    top["posicao"] = range(1, len(top) + 1)
+    top["nome_uf"] = top["uf_destino"].map(SIGLA_NOME)
+    top["pct_do_total_fora"] = (100 * top["internacoes"] / int(c1.sum())).round(1)
+    dpub = top.rename(columns={"cod_mun6_destino": "cod_mun6", "municipio_destino": "municipio", "uf_destino": "uf"})
+    dpub["internacoes_ac"] = dpub["internacoes_ac"].astype("Int64")
+    dpub.loc[top["supr_ac"].values, ["internacoes_ac", "pct_ac"]] = pd.NA
+    dpub["ac_suprimida"] = top["supr_ac"].astype(int).values
+    dpub["nota_supressao"] = np.where(top["supr_ac_comp"], "alta complexidade suprimida: complementar",
+                                      np.where(top["supr_ac"], f"alta complexidade suprimida: menos de {LIMIAR_SUPRESSAO} "
+                                               "internações na alta ou na média complexidade", ""))
+    dpub["periodo"] = f"{ANO_INI}–{ANO_FIM}"
+    dpub = dpub[["posicao", "cod_mun6", "municipio", "uf", "nome_uf", "periodo", "internacoes", "pct_do_total_fora",
+                 "internacoes_ac", "pct_ac", "ac_suprimida", "nota_supressao"]]
+
+    # --- verificação da supressão nos recortes subestaduais publicados -------------------
+    def _sem_pequenas(df: pd.DataFrame, cols: list[str], nome_arq: str) -> None:
+        for c in cols:
+            v = pd.to_numeric(df[c], errors="coerce")
+            ruins = df[(v >= 1) & (v < LIMIAR_SUPRESSAO)]
+            assert ruins.empty, f"{nome_arq}: {len(ruins)} células entre 1 e {LIMIAR_SUPRESSAO - 1} em {c}"
+
+    _sem_pequenas(reg_pub, ["internacoes_total_res", "internacoes_outra_uf", "internacoes_ac_total_res",
+                            "internacoes_ac_outra_uf"], "fuga_regiao_ano.csv")
+    _sem_pequenas(mun_pub, ["internacoes_total_res", "internacoes_outra_uf"], "fuga_mun_periodo.csv")
+    _sem_pequenas(dpub, ["internacoes", "internacoes_ac"], "fuga_destinos_mun.csv")
+    # média complexidade dedutível (F − A) e contagem da UF principal dedutível (pct × F) também ≥ 5 ou 0
+    ok = reg_pub.dropna(subset=["internacoes_outra_uf", "internacoes_ac_outra_uf"])
+    assert not _pequena(ok["internacoes_outra_uf"] - ok["internacoes_ac_outra_uf"]).any()
+    for df_, nome_arq in ((reg_pub, "fuga_regiao_ano.csv"), (mun_pub, "fuga_mun_periodo.csv")):
+        ok = df_.dropna(subset=["pct_uf_principal"])
+        n1 = (ok["pct_uf_principal"] * ok["internacoes_outra_uf"] / 100).round()
+        assert not _pequena(n1).any() and not _pequena(ok["internacoes_outra_uf"] - n1).any(), nome_arq
+    # nenhuma célula suprimida sozinha diante de um total publicado
+    for flag, grp, df_ in (("total_suprimido", "ano", reg_pub), ("ac_suprimida", "ano", reg_pub),
+                           ("total_suprimido", "co_regsaud", mun_pub)):
+        cont = df_.groupby(grp)[flag].sum()
+        assert not (cont == 1).any(), f"supressão isolada em {flag} por {grp}: {cont[cont == 1].to_dict()}"
+    log(f"fuga: supressão (< {LIMIAR_SUPRESSAO}) — regiões × ano: AC {st_reg['ac_primaria']} primária(s) + "
+        f"{st_reg['ac_complementar']} complementar(es), total {st_reg['total_primaria']} + {st_reg['total_complementar']}; "
+        f"municípios (2020–2025): {st_mun['total_primaria']} primária(s) + {st_mun['total_complementar']} complementar(es); "
+        f"destinos: {int(top['supr_ac'].sum())} AC suprimida(s) ({n_comp_d} complementar)  OK")
+
+    # só agora, conferida a supressão, os recortes subestaduais são gravados
+    reg_pub.to_csv(DADOS / "fuga_regiao_ano.csv", **CSV_KW)
+    mun_pub.to_csv(DADOS / "fuga_mun_periodo.csv", **CSV_KW)
+    dpub.to_csv(DADOS / "fuga_destinos_mun.csv", **CSV_KW)
+
+    ent_p, sai_p = int(sal["entrada"].sum()), int(sal["saida"].sum())
+    return {"resumo": res, "uf": uf, "saldo": sal, "regiao": reg_pub, "mun": mun_pub, "destinos": dpub,
+            "saldo_periodo": ent_p - sai_p, "entrada_periodo": ent_p, "saida_periodo": sai_p}
+
+
+def escrever_achados(mt, fl, des, polos, resumo, fluxo_reg, nome, nome_reg, reg, sem_coord, sem_internacao, fuga):
     A = []
     tot = resumo[resumo["nivel"] == "total"].set_index("ano")
     mc = resumo[resumo["nivel"] == "MC"].set_index("ano")
@@ -656,11 +1054,20 @@ def escrever_achados(mt, fl, des, polos, resumo, fluxo_reg, nome, nome_reg, reg,
     else:
         frase_ign = (f"Outras {fmt_int(r1['n_res_ignorada'])} AIH tiveram município de residência ignorado "
                      f"em {a1} ({fmt_int(n_ign_total)} no período).")
+    fr = fuga["resumo"].set_index(["ano", "nivel"])
+    f1, fac1 = fr.loc[(a1, "total")], fr.loc[(a1, "AC")]
+    sal = fuga["saldo"]
+    s1 = sal[sal["ano"] == a1]
     A.append(
         f"Hospitais de MT também atenderam {fmt_int(r1['n_outra_uf'])} internações de residentes de "
         f"outras unidades da federação em {a1} ({fmt_int(n_uf_total)} no período {a0}–{a1}), "
         f"principalmente de {itens}. {frase_ign} Esses registros ficam fora dos fluxos. "
-        f"A fuga de residentes de MT para outros estados não é observada, pois só há SIH de MT.")
+        f"No sentido inverso (SIH/SUS das 26 outras UF), {fmt_int(f1['internacoes_outra_uf'])} internações de "
+        f"residentes de MT ocorreram em hospitais de outros estados em {a1} "
+        f"({fmt_pct(f1['pct_outra_uf'])} das internações dos residentes; {fmt_pct(fac1['pct_outra_uf'])} na alta "
+        f"complexidade), {fmt_pct(f1['pct_uf_principal'])} delas em {f1['nome_uf_principal']}. O saldo com os outros "
+        f"estados (recebidas − enviadas) foi de {fmt_saldo(int(s1['saldo'].sum()))} em {a1} e de "
+        f"{fmt_saldo(fuga['saldo_periodo'])} em {a0}–{a1}.")
 
     cab = [
         "# Achados — deslocamento residência × atendimento (internações SIH, 2020–2025)",

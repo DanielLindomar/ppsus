@@ -7,6 +7,14 @@ toc-depth: 3
 ```{r}
 #| include: false
 source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "funcoes.R"))
+# Internações de residentes de MT em outras UF (dados_site/fuga_resumo_ano.csv, script 02; versão 0.3)
+arq_fuga <- file.path(RAIZ, "dados_site", "fuga_resumo_ano.csv")
+FUGA_R <- if (file.exists(arq_fuga)) data.table::fread(arq_fuga, encoding = "UTF-8") else NULL
+fuga_pct <- function(nivel, ano = 2025L) {
+  if (is.null(FUGA_R)) return("—")
+  v <- FUGA_R$pct_outra_uf[FUGA_R$nivel == nivel & FUGA_R$ano == ano]
+  if (length(v) == 0 || is.na(v[1])) "—" else paste0(num(v[1], 1), "%")
+}
 ```
 
 ```{r}
@@ -25,6 +33,7 @@ Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DA
 | **CNES** | Cadastro de estabelecimentos, leitos, equipamentos e profissionais | 2020–2025 (média das competências mensais) | Profissionais SUS em equivalente de 40 h (médicos, enfermeiros, técnicos, dentistas, agentes comunitários de saúde — CBO 515105), leitos SUS e de UTI, equipamentos em uso, unidades básicas, hospitais, UPA, equipes de saúde da família, de atenção primária e de saúde bucal |
 | **SIA** | Produção ambulatorial aprovada | 2020–2025 (competência de realização) | Quantidade e valor de procedimentos de média e alta complexidade, pelo município do estabelecimento e pelo de residência |
 | **SIH** | Internações pagas por AIH | 2020–2025 (ano da alta) | Internações por complexidade, diárias, diárias de UTI, óbitos, urgência, valor; pelo município do hospital e pelo de residência; fluxos entre municípios |
+| **SIH (outras UF)** | Internações pagas por AIH em hospitais das outras 26 unidades da federação (arquivos RD de cada estado), filtradas a residentes de Mato Grosso | 2020–2025 (ano da alta) | Internações de residentes de Mato Grosso fora do estado, por estado e município de destino e por complexidade; saldo de internações com cada estado (página [Deslocamento](deslocamento/index.html#fuga)) |
 | **SISAB** | Produção das equipes de atenção básica | 2020–2025 | Atendimentos individuais, odontológicos, procedimentos, visitas domiciliares; atendimentos por médico e por enfermeiro |
 | **SI-PNI** | Doses de vacina aplicadas | 2020–2025 (sem COVID-19) | Doses aplicadas no município, doses em menores de 1 ano |
 | **SIM** | Óbitos por residência | 2020–2024 | Óbitos totais e de menores de 1 ano; taxas de mortalidade geral e infantil |
@@ -54,7 +63,7 @@ Os problemas abaixo foram identificados na validação dos painéis e estão em 
 1. **A divisão da despesa por subfunção não é confiável em alguns municípios.** Várzea Grande lança cerca de 83% da despesa em "outras subfunções" (menos de 1% em atenção básica); Cuiabá, cerca de 40%; Rondolândia, Alto Boa Vista e Planalto da Serra, mais da metade. Nesses casos, a despesa em atenção básica e em média e alta complexidade por habitante está subestimada. **Use a despesa total em saúde como referência**; a quebra por subfunção serve para os demais municípios e será tratada com análise de sensibilidade no DEA.
 2. **A atenção básica migrou do SIA para o SISAB.** A parcela da atenção básica na produção do SIA caiu de 40% para 20% entre 2019 e 2025, porque o registro passou a ser feito no SISAB. Por isso a produção da atenção básica é medida pelo SISAB; o SIA fica restrito à média e alta complexidade.
 3. **A residência do paciente no SIA melhorou ao longo do tempo.** A parcela de procedimentos ambulatoriais com residência ignorada caiu de 79% (2019) para 49% (2025) com a mudança do registro consolidado para o individualizado. Os indicadores ambulatoriais por residência não são comparáveis entre anos e por isso não são publicados; a análise de deslocamento usa somente as internações (SIH), em que a residência é bem preenchida.
-4. **A saída para outros estados não é observada.** O repositório contém apenas a produção realizada em Mato Grosso. Moradores internados em Goiás, Rondônia, Mato Grosso do Sul, Pará ou no Distrito Federal não aparecem; os indicadores por residência subestimam a demanda, sobretudo na alta complexidade e nos municípios de fronteira. Uma correção com o SIH dos estados vizinhos está prevista.
+4. **As internações em outros estados ficam fora dos indicadores municipais.** Os indicadores por residência, os fluxos entre municípios e os modelos de eficiência usam a produção realizada em Mato Grosso. Desde a versão 0.3, as internações de residentes de Mato Grosso em hospitais das outras 26 unidades da federação são medidas com o SIH desses estados e aparecem na página [Deslocamento](deslocamento/index.html#fuga): `r fuga_pct("total")` das internações dos residentes em 2025, mas `r fuga_pct("AC")` das de alta complexidade. Os indicadores por residência subestimam, portanto, a demanda hospitalar, sobretudo na alta complexidade e nos municípios de fronteira (Rondolândia é o caso extremo). A AIH não traz o Cartão Nacional de Saúde: a contagem é de internações, não de pessoas. Atendimentos ambulatoriais em outros estados não estão no site.
 5. **COVID-19 em 2020 e 2021.** A mortalidade hospitalar chegou a 5,8% em 2021, os leitos de UTI foram ampliados temporariamente, a mortalidade geral subiu e a produção da atenção básica caiu em 2020. Comparações que envolvem esses anos devem ser lidas com essa lente; o índice de Malmquist será calculado com e sem 2020–2021.
 6. **Leitos de UTI SUS sub-registrados no CNES.** O cadastro informa cerca de 490 leitos de UTI SUS para um parque de mais de 1.300 leitos existentes, e há hospitais com UTI em funcionamento e zero leitos SUS declarados. O número de leitos de UTI aparece como contexto; as diárias de UTI do SIH são a medida mais confiável do uso.
 7. **Municípios pequenos oscilam muito.** Em 2019–2024, em 308 dos 846 município-anos (141 municípios × 6 anos) houve menos de 100 nascidos vivos, o que torna a taxa de mortalidade infantil instável (um óbito a mais muda a taxa em vários pontos). Há também valores per capita extremos (Araguainha, R$ 7.748 por habitante em despesa; Nova Nazaré, 113 procedimentos por habitante por registro consolidado). Nos perfis esses valores aparecem como estão, com nota; nos modelos serão suavizados ou limitados.
@@ -111,7 +120,7 @@ tab_modelos()
 Modelos e variáveis da especificação principal vigente (arquivo `especificacoes_modelos.csv` em [Dados](dados/index.html#eficiencia)). Municípios: valores por mil habitantes; hospitais: valores absolutos. Despesas em R$ de 2025 (IPCA).
 :::
 
-**Ressalvas da eficiência.** Unidades com dados de registro atípicos recebem o sinal "registro a verificar": continuam avaliadas, mas não servem de referência a outras e podem ter a meta financeira omitida; a lista de verificações será encaminhada à SES-MT e ao COSEMS-MT. Valem também as limitações acima: a fuga de moradores para outros estados não é observada; 2020–2021 foram afetados pela COVID-19; a classificação da despesa por subfunção é frágil em alguns municípios; o pré-natal de 2025 ainda não está disponível. Internações por condições sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.
+**Ressalvas da eficiência.** Unidades com dados de registro atípicos recebem o sinal "registro a verificar": continuam avaliadas, mas não servem de referência a outras e podem ter a meta financeira omitida; a lista de verificações será encaminhada à SES-MT e ao COSEMS-MT. Valem também as limitações acima: as internações de moradores em outros estados não entram nos modelos (são medidas à parte, na página [Deslocamento](deslocamento/index.html#fuga)); 2020–2021 foram afetados pela COVID-19; a classificação da despesa por subfunção é frágil em alguns municípios; o pré-natal de 2025 ainda não está disponível. Internações por condições sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.
 
 ## Pipeline: do dado bruto ao site
 
@@ -141,6 +150,8 @@ As siglas também são explicadas ao passar o cursor sobre elas em qualquer pág
 | SIA | Sistema de Informações Ambulatoriais do SUS |
 | SIH | Sistema de Informações Hospitalares do SUS |
 | AIH | Autorização de Internação Hospitalar |
+| RD | Arquivo de AIH reduzida do SIH/SUS: uma linha por AIH, publicado pelo DATASUS para cada estado e mês |
+| CNS | Cartão Nacional de Saúde (identificador do usuário do SUS; não consta da AIH reduzida) |
 | SISAB | Sistema de Informação em Saúde para a Atenção Básica |
 | SI-PNI | Sistema de Informação do Programa Nacional de Imunizações |
 | SIM | Sistema de Informações sobre Mortalidade |

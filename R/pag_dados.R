@@ -130,7 +130,7 @@ catalogo_downloads <- function() {
 
 tabela_downloads <- function(prefixo = "../arquivos/", cat_b = catalogo_downloads()) {
   if (is.null(cat_b)) return(p(class = "nota-fonte", "Catálogo de arquivos ainda não gerado (scripts/05_downloads.py)."))
-  ordem_grupos <- c("Painéis e indicadores", "Deslocamento residência × atendimento", "Hospitais", "Dicionários e referências", "Malhas (GeoJSON)")
+  ordem_grupos <- c("Painéis e indicadores", "Deslocamento residência × atendimento", "Internações de residentes de MT em outros estados", "Hospitais", "Dicionários e referências", "Malhas (GeoJSON)")
   d <- cat_b |>
     mutate(nome = basename(arquivo), Tipo = ifelse(grepl("\\.geojson$", arquivo), "GeoJSON", "CSV"),
            `Linhas` = ifelse(Tipo == "GeoJSON", paste0(num(linhas), " polígonos"), num(linhas)),

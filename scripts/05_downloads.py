@@ -10,6 +10,8 @@ Complementa os downloads de arquivos/ a partir de dados_site/ (sem acesso ao ban
   arquivos/dados/polos_internacao_2020_2025.csv          municípios de atendimento (polos) por ano
   arquivos/dados/resumo_deslocamento_mt_2020_2025.csv    resumo estadual do deslocamento por ano e nível
   arquivos/dados/sedes_municipais.csv                    sede municipal (lon, lat; IBGE Localidades 2022) de cada município
+  arquivos/dados/residentes_mt_outras_uf_*.csv           internações de residentes de MT em hospitais de outras UF (v0.3)
+  arquivos/dados/saldo_internacoes_mt_outras_uf_2020_2025.csv  entrada × saída × saldo por UF (v0.3)
   arquivos/dados/painel_municipal_dicionario.csv         dicionário das colunas de painel_municipal_2020_2025.csv
   arquivos/dados/catalogo_arquivos.csv                   catálogo de todos os downloads (descrição, chave, período, tamanho)
   arquivos/geo/mt_municipios_regioes_saude.geojson       malha mínima com cod_mun6, município e região de saúde
@@ -34,6 +36,15 @@ RAIZ = Path(__file__).resolve().parents[1]
 DS = RAIZ / "dados_site"
 DOWN = RAIZ / "arquivos" / "dados"
 GEO = RAIZ / "arquivos" / "geo"
+GRUPO_FUGA = "Internações de residentes de MT em outros estados"
+FONTE_FUGA = "SIH/SUS (AIH reduzida, RD) de MT e das 26 outras UF"
+# Internações de residentes de MT em outras UF (versão 0.3): dados_site/ → arquivos/dados/
+FUGA = [("fuga_resumo_ano.csv", "residentes_mt_outras_uf_resumo_2020_2025.csv"),
+        ("fuga_uf_ano.csv", "residentes_mt_outras_uf_por_uf_2020_2025.csv"),
+        ("fuga_saldo_uf_ano.csv", "saldo_internacoes_mt_outras_uf_2020_2025.csv"),
+        ("fuga_regiao_ano.csv", "residentes_mt_outras_uf_regioes_2020_2025.csv"),
+        ("fuga_mun_periodo.csv", "residentes_mt_outras_uf_municipios_2020_2025.csv"),
+        ("fuga_destinos_mun.csv", "residentes_mt_outras_uf_destinos_2020_2025.csv")]
 CSV_KW = dict(index=False, encoding="utf-8", lineterminator="\n", na_rep="")
 PERIODO = "2020–2025"
 
@@ -201,6 +212,24 @@ CATALOGO = [
     ("dados/internacoes_outras_uf_2020_2025.csv", "Deslocamento residência × atendimento",
      "Internações realizadas em hospitais de MT de residentes de outras unidades da federação, por ano e UF de residência (sigla e nome). Esses registros não entram nos fluxos.",
      "ano + uf", PERIODO, "SIH/SUS (AIH reduzida)", "02_preparar_deslocamento.py + 05_downloads.py"),
+    ("dados/residentes_mt_outras_uf_resumo_2020_2025.csv", GRUPO_FUGA,
+     "Resumo estadual por ano e nível (MC, AC, total): internações de residentes de MT em hospitais de MT e de outras UF, parcela em outras UF, valor aprovado (todas as linhas da AIH, inclusive continuações) e parcela em outras UF, parcela de internações eletivas, UF principal de destino, número de UF e de municípios de destino, residentes de outras UF atendidos em MT (entrada) e saldo (entrada − saída).",
+     "ano + nivel", PERIODO, FONTE_FUGA, "02_preparar_deslocamento.py + 05_downloads.py"),
+    ("dados/residentes_mt_outras_uf_por_uf_2020_2025.csv", GRUPO_FUGA,
+     "Internações de residentes de MT em hospitais de outras UF por ano, UF de destino (código, sigla e nome) e nível (MC, AC, total): internações, internações de urgência (caráter não eletivo), diárias e valor aprovado. Grade completa (26 UF × anos × níveis), com zero onde não houve internação.",
+     "ano + cod_uf + nivel", PERIODO, FONTE_FUGA, "02_preparar_deslocamento.py + 05_downloads.py"),
+    ("dados/saldo_internacoes_mt_outras_uf_2020_2025.csv", GRUPO_FUGA,
+     "Saldo das internações entre MT e cada UF, por ano: entrada (residentes da UF internados em hospitais de MT), saída (residentes de MT internados em hospitais da UF) e saldo (entrada − saída; negativo = MT envia mais do que recebe).",
+     "ano + cod_uf", PERIODO, FONTE_FUGA, "02_preparar_deslocamento.py + 05_downloads.py"),
+    ("dados/residentes_mt_outras_uf_regioes_2020_2025.csv", GRUPO_FUGA,
+     "Por região de saúde de residência e ano: internações dos residentes (em MT e em outras UF), internações em outras UF e parcela; o mesmo para a alta complexidade; UF principal de destino. Células com 1 a 4 internações suprimidas (vazias), com supressão complementar; as colunas total_suprimido, ac_suprimida e nota_supressao indicam o motivo.",
+     "co_regsaud + ano", PERIODO, FONTE_FUGA, "02_preparar_deslocamento.py + 05_downloads.py"),
+    ("dados/residentes_mt_outras_uf_municipios_2020_2025.csv", GRUPO_FUGA,
+     "Por município de residência, período 2020–2025 somado: internações dos residentes (em MT e em outras UF), internações em outras UF, parcela e UF principal de destino. Células com 1 a 4 internações suprimidas (vazias), com supressão complementar dentro da região de saúde; as colunas total_suprimido e nota_supressao indicam o motivo.",
+     "cod_mun6", PERIODO, FONTE_FUGA, "02_preparar_deslocamento.py + 05_downloads.py"),
+    ("dados/residentes_mt_outras_uf_destinos_2020_2025.csv", GRUPO_FUGA,
+     "Os 20 municípios fora de MT que mais internaram residentes de MT em 2020–2025: internações, parcela do total em outras UF e internações de alta complexidade (suprimidas quando a alta ou a média complexidade tem de 1 a 4 internações).",
+     "cod_mun6", PERIODO, FONTE_FUGA, "02_preparar_deslocamento.py + 05_downloads.py"),
     ("geo/mt_municipios_regioes_saude.geojson", "Malhas (GeoJSON)",
      "Malha municipal mínima do IBGE (141 polígonos, simplificada para a web) com as propriedades cod_mun6, municipio, co_regsaud, regiao_saude e codarea (código IBGE de 7 dígitos). É a malha usada nos mapas do site.",
      "cod_mun6", "malha 2022", "IBGE + SES-MT (PDR)", "01_preparar_dados.py + 05_downloads.py"),
@@ -261,6 +290,13 @@ def main() -> None:
         gravar(u.sort_values(["ano", "internacoes"], ascending=[True, False]), DOWN / "internacoes_outras_uf_2020_2025.csv")
     else:
         msg("  AVISO: dados_site/outras_uf_ano.csv não existe (rode o script 02); download de outras UFs não gerado")
+
+    # 3b. internações de residentes de MT em outras UF (arquivos já com nomes e supressão, script 02)
+    for src, dst in FUGA:
+        if (DS / src).exists():
+            gravar(ler(src), DOWN / dst)
+        else:
+            msg("  AVISO: dados_site/%s não existe (rode o script 02); %s não gerado", src, dst)
 
     # 4. sedes municipais (coordenadas usadas nas distâncias), com região de saúde
     if (DS / "sedes_municipais.csv").exists():
