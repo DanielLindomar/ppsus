@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510180,Barra do Garças,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.8597,1.845,1.6498,1.6823,1.6924,1.5286
 510180,Barra do Garças,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.1385,2.5615,2.318,2.226,2.2383,2.2453
 510180,Barra do Garças,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.1742,4.1525,3.7596,3.8175,4.3543,4.2053
-510180,Barra do Garças,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.7772,3.5237,2.9487,2.9031,2.8487,3.0094
+510180,Barra do Garças,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.4326,1.41,1.2751,1.2336,1.2037,1.2227
 510180,Barra do Garças,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5249,0.6779,0.629,0.604,0.5899,0.5598
 510180,Barra do Garças,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.5716,1.5802,1.3221,1.1008,1.1177,1.1279
 510180,Barra do Garças,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),14,18,12,10,10,10

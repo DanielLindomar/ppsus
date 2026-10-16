@@ -1,217 +1,238 @@
 cod_mun6,municipio,modelo,ano,ordem,par_cod_mun6,par_municipio,par_slug,par_regiao_saude,par_populacao,peso,mais_semelhante,n_pares_plausiveis,pares_fonte
-510050,Alto Paraguai,M1,2025,1,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.543257,1,5,f_pares_plausiveis
-510050,Alto Paraguai,M1,2025,2,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.176199,0,5,f_pares_plausiveis
-510050,Alto Paraguai,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.150574,0,5,f_pares_plausiveis
+510030,Alto Araguaia,M1,2025,1,510480,Jaciara,jaciara,Sul Matogrossense,29803,0.465379,1,3,f_pares_plausiveis
+510030,Alto Araguaia,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.430887,0,3,f_pares_plausiveis
+510030,Alto Araguaia,M1,2025,3,510740,São Pedro da Cipa,sao-pedro-da-cipa,Sul Matogrossense,4250,0.103734,0,3,f_pares_plausiveis
+510050,Alto Paraguai,M1,2025,1,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.516868,1,5,f_pares_plausiveis
+510050,Alto Paraguai,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.290479,0,5,f_pares_plausiveis
+510050,Alto Paraguai,M1,2025,3,510729,São José do Povo,sao-jose-do-povo,Sul Matogrossense,2716,0.072286,0,5,f_pares_plausiveis
 510100,Araguaiana,M1,2025,1,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.621775,0,3,f_pares_plausiveis
 510100,Araguaiana,M1,2025,2,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.338224,1,3,f_pares_plausiveis
 510100,Araguaiana,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.040001,0,3,f_pares_plausiveis
-510130,Arenápolis,M1,2025,1,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.247366,1,6,f_pares_plausiveis
-510130,Arenápolis,M1,2025,2,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.212466,0,6,f_pares_plausiveis
-510130,Arenápolis,M1,2025,3,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.163553,0,6,f_pares_plausiveis
-510170,Barra do Bugres,M1,2025,1,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.77868,1,4,f_pares_plausiveis
-510170,Barra do Bugres,M1,2025,2,510250,Cáceres,caceres,Oeste Matogrossense,91767,0.10595,0,4,f_pares_plausiveis
-510170,Barra do Bugres,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.097712,0,4,f_pares_plausiveis
-510190,Brasnorte,M1,2025,1,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.593619,1,5,f_pares_plausiveis
-510190,Brasnorte,M1,2025,2,510704,Primavera do Leste,primavera-do-leste,Sul Matogrossense,96006,0.16675,0,5,f_pares_plausiveis
-510190,Brasnorte,M1,2025,3,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.164328,0,5,f_pares_plausiveis
-510267,Campo Verde,M1,2025,1,510040,Alto Garças,alto-garcas,Sul Matogrossense,13956,0.317281,0,8,f_pares_plausiveis
-510267,Campo Verde,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.195165,1,8,f_pares_plausiveis
-510267,Campo Verde,M1,2025,3,510628,Novo São Joaquim,novo-sao-joaquim,Garças Araguaia,7239,0.149138,0,8,f_pares_plausiveis
-510268,Campos de Júlio,M1,2025,1,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.263904,1,7,f_pares_plausiveis
-510268,Campos de Júlio,M1,2025,2,510625,Nova Xavantina,nova-xavantina,Garças Araguaia,25915,0.23843,0,7,f_pares_plausiveis
-510268,Campos de Júlio,M1,2025,3,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.200676,0,7,f_pares_plausiveis
-510269,Canabrava do Norte,M1,2025,1,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.4581,1,4,f_pares_plausiveis
-510269,Canabrava do Norte,M1,2025,2,510682,Porto Esperidião,porto-esperidiao,Oeste Matogrossense,10088,0.438282,0,4,f_pares_plausiveis
-510269,Canabrava do Norte,M1,2025,3,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.065659,0,4,f_pares_plausiveis
-510270,Canarana,M1,2025,1,510625,Nova Xavantina,nova-xavantina,Garças Araguaia,25915,0.404724,1,6,f_pares_plausiveis
-510270,Canarana,M1,2025,2,510263,Campo Novo do Parecis,campo-novo-do-parecis,Médio Norte Matogrossense,51722,0.253113,0,6,f_pares_plausiveis
-510270,Canarana,M1,2025,3,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.168368,0,6,f_pares_plausiveis
-510300,Chapada dos Guimarães,M1,2025,1,510610,Nossa Senhora do Livramento,nossa-senhora-do-livramento,Baixada Cuiabana,11658,0.321856,1,6,f_pares_plausiveis
-510300,Chapada dos Guimarães,M1,2025,2,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.188021,0,6,f_pares_plausiveis
-510300,Chapada dos Guimarães,M1,2025,3,510628,Novo São Joaquim,novo-sao-joaquim,Garças Araguaia,7239,0.175187,0,6,f_pares_plausiveis
-510305,Cláudia,M1,2025,1,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.269364,1,6,f_pares_plausiveis
-510305,Cláudia,M1,2025,2,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.249768,0,6,f_pares_plausiveis
-510305,Cláudia,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.243275,0,6,f_pares_plausiveis
-510310,Cocalinho,M1,2025,1,510279,Carlinda,carlinda,Alto Tapajós,10260,0.315808,1,6,f_pares_plausiveis
-510310,Cocalinho,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.182072,0,6,f_pares_plausiveis
-510310,Cocalinho,M1,2025,3,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.149221,0,6,f_pares_plausiveis
-510320,Colíder,M1,2025,1,510704,Primavera do Leste,primavera-do-leste,Sul Matogrossense,96006,0.431597,1,4,f_pares_plausiveis
-510320,Colíder,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.242633,0,4,f_pares_plausiveis
-510320,Colíder,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.23602,0,4,f_pares_plausiveis
-510335,Confresa,M1,2025,1,510040,Alto Garças,alto-garcas,Sul Matogrossense,13956,0.32174,1,7,f_pares_plausiveis
-510335,Confresa,M1,2025,2,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.245816,0,7,f_pares_plausiveis
-510335,Confresa,M1,2025,3,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.126292,0,7,f_pares_plausiveis
-510336,Conquista D'Oeste,M1,2025,1,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.280221,0,7,f_pares_plausiveis
-510336,Conquista D'Oeste,M1,2025,2,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.229802,1,7,f_pares_plausiveis
-510336,Conquista D'Oeste,M1,2025,3,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.223165,0,7,f_pares_plausiveis
-510337,Cotriguaçu,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.497704,1,7,f_pares_plausiveis
-510337,Cotriguaçu,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.251167,0,7,f_pares_plausiveis
-510337,Cotriguaçu,M1,2025,3,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.06919,0,7,f_pares_plausiveis
-510340,Cuiabá,M1,2025,1,510790,Sinop,sinop,Teles Pires,223780,0.713807,1,4,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
-510340,Cuiabá,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.14767,0,4,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
-510340,Cuiabá,M1,2025,3,510704,Primavera do Leste,primavera-do-leste,Sul Matogrossense,96006,0.076973,0,4,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
+510130,Arenápolis,M1,2025,1,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.342164,1,8,f_pares_plausiveis
+510130,Arenápolis,M1,2025,2,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.226598,0,8,f_pares_plausiveis
+510130,Arenápolis,M1,2025,3,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.180285,0,8,f_pares_plausiveis
+510170,Barra do Bugres,M1,2025,1,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.580017,0,5,f_pares_plausiveis
+510170,Barra do Bugres,M1,2025,2,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.26417,1,5,f_pares_plausiveis
+510170,Barra do Bugres,M1,2025,3,510740,São Pedro da Cipa,sao-pedro-da-cipa,Sul Matogrossense,4250,0.080036,0,5,f_pares_plausiveis
+510190,Brasnorte,M1,2025,1,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.621904,0,4,f_pares_plausiveis
+510190,Brasnorte,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.196364,1,4,f_pares_plausiveis
+510190,Brasnorte,M1,2025,3,510336,Conquista D'Oeste,conquista-d-oeste,Sudoeste Matogrossense,3908,0.154445,0,4,f_pares_plausiveis
+510267,Campo Verde,M1,2025,1,510777,Santa Terezinha,santa-terezinha,Araguaia Xingu,7737,0.260079,0,7,f_pares_plausiveis
+510267,Campo Verde,M1,2025,2,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.219986,0,7,f_pares_plausiveis
+510267,Campo Verde,M1,2025,3,510625,Nova Xavantina,nova-xavantina,Garças Araguaia,25915,0.197169,1,7,f_pares_plausiveis
+510268,Campos de Júlio,M1,2025,1,510625,Nova Xavantina,nova-xavantina,Garças Araguaia,25915,0.35304,1,6,f_pares_plausiveis
+510268,Campos de Júlio,M1,2025,2,510558,Marcelândia,marcelandia,Norte Matogrossense,11355,0.256767,0,6,f_pares_plausiveis
+510268,Campos de Júlio,M1,2025,3,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.209074,0,6,f_pares_plausiveis
+510269,Canabrava do Norte,M1,2025,1,510682,Porto Esperidião,porto-esperidiao,Oeste Matogrossense,10088,0.773684,1,4,f_pares_plausiveis
+510269,Canabrava do Norte,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.102334,0,4,f_pares_plausiveis
+510269,Canabrava do Norte,M1,2025,3,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.078874,0,4,f_pares_plausiveis
+510270,Canarana,M1,2025,1,510625,Nova Xavantina,nova-xavantina,Garças Araguaia,25915,0.298341,1,6,f_pares_plausiveis
+510270,Canarana,M1,2025,2,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.232087,0,6,f_pares_plausiveis
+510270,Canarana,M1,2025,3,510180,Barra do Garças,barra-do-garcas,Garças Araguaia,73878,0.204421,0,6,f_pares_plausiveis
+510300,Chapada dos Guimarães,M1,2025,1,510628,Novo São Joaquim,novo-sao-joaquim,Garças Araguaia,7239,0.375956,1,6,f_pares_plausiveis
+510300,Chapada dos Guimarães,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.266961,0,6,f_pares_plausiveis
+510300,Chapada dos Guimarães,M1,2025,3,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.181817,0,6,f_pares_plausiveis
+510305,Cláudia,M1,2025,1,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.347526,1,6,f_pares_plausiveis
+510305,Cláudia,M1,2025,2,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.219922,0,6,f_pares_plausiveis
+510305,Cláudia,M1,2025,3,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.1579,0,6,f_pares_plausiveis
+510310,Cocalinho,M1,2025,1,510558,Marcelândia,marcelandia,Norte Matogrossense,11355,0.49013,1,6,f_pares_plausiveis
+510310,Cocalinho,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.320313,0,6,f_pares_plausiveis
+510310,Cocalinho,M1,2025,3,510279,Carlinda,carlinda,Alto Tapajós,10260,0.073456,0,6,f_pares_plausiveis
+510320,Colíder,M1,2025,1,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.299554,0,5,f_pares_plausiveis
+510320,Colíder,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.286122,1,5,f_pares_plausiveis
+510320,Colíder,M1,2025,3,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.198187,0,5,f_pares_plausiveis
+510335,Confresa,M1,2025,1,510625,Nova Xavantina,nova-xavantina,Garças Araguaia,25915,0.347369,1,6,f_pares_plausiveis
+510335,Confresa,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.18742,0,6,f_pares_plausiveis
+510335,Confresa,M1,2025,3,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.183621,0,6,f_pares_plausiveis
+510337,Cotriguaçu,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.436516,1,7,f_pares_plausiveis
+510337,Cotriguaçu,M1,2025,2,510010,Acorizal,acorizal,Baixada Cuiabana,4948,0.269371,0,7,f_pares_plausiveis
+510337,Cotriguaçu,M1,2025,3,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.145702,0,7,f_pares_plausiveis
+510340,Cuiabá,M1,2025,1,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.484702,1,4,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
+510340,Cuiabá,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.131804,0,4,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
+510340,Cuiabá,M1,2025,3,510790,Sinop,sinop,Teles Pires,223780,0.035236,0,4,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
 510345,Denise,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.275161,1,6,f_pares_plausiveis
 510345,Denise,M1,2025,2,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.183051,0,6,f_pares_plausiveis
 510345,Denise,M1,2025,3,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.181712,0,6,f_pares_plausiveis
-510350,Diamantino,M1,2025,1,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.470897,1,7,f_pares_plausiveis
-510350,Diamantino,M1,2025,2,510730,São José do Rio Claro,sao-jose-do-rio-claro,Centro Norte,14455,0.240861,0,7,f_pares_plausiveis
-510350,Diamantino,M1,2025,3,510628,Novo São Joaquim,novo-sao-joaquim,Garças Araguaia,7239,0.107676,0,7,f_pares_plausiveis
+510350,Diamantino,M1,2025,1,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.352513,1,5,f_pares_plausiveis
+510350,Diamantino,M1,2025,2,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.322045,0,5,f_pares_plausiveis
+510350,Diamantino,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.268854,0,5,f_pares_plausiveis
 510360,Dom Aquino,M1,2025,1,510454,Itanhangá,itanhanga,Teles Pires,8257,0.390735,1,4,f_pares_plausiveis
 510360,Dom Aquino,M1,2025,2,510610,Nossa Senhora do Livramento,nossa-senhora-do-livramento,Baixada Cuiabana,11658,0.241447,0,4,f_pares_plausiveis
 510360,Dom Aquino,M1,2025,3,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.203979,0,4,f_pares_plausiveis
-510390,General Carneiro,M1,2025,1,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.619467,1,4,f_pares_plausiveis
-510390,General Carneiro,M1,2025,2,510735,São José do Xingu,sao-jose-do-xingu,Araguaia Xingu,6234,0.136395,0,4,f_pares_plausiveis
-510390,General Carneiro,M1,2025,3,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.135681,0,4,f_pares_plausiveis
-510410,Guarantã do Norte,M1,2025,1,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.349236,1,7,f_pares_plausiveis
-510410,Guarantã do Norte,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.224946,0,7,f_pares_plausiveis
-510410,Guarantã do Norte,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.182773,0,7,f_pares_plausiveis
+510390,General Carneiro,M1,2025,1,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.465469,1,4,f_pares_plausiveis
+510390,General Carneiro,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.298954,0,4,f_pares_plausiveis
+510390,General Carneiro,M1,2025,3,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.202173,0,4,f_pares_plausiveis
+510410,Guarantã do Norte,M1,2025,1,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.437144,1,6,f_pares_plausiveis
+510410,Guarantã do Norte,M1,2025,2,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.225213,0,6,f_pares_plausiveis
+510410,Guarantã do Norte,M1,2025,3,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.161616,0,6,f_pares_plausiveis
 510420,Guiratinga,M1,2025,1,510775,Salto do Céu,salto-do-ceu,Oeste Matogrossense,3657,0.501384,1,6,f_pares_plausiveis
 510420,Guiratinga,M1,2025,2,510480,Jaciara,jaciara,Sul Matogrossense,29803,0.180368,0,6,f_pares_plausiveis
 510420,Guiratinga,M1,2025,3,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.156229,0,6,f_pares_plausiveis
-510450,Indiavaí,M1,2025,1,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.463305,1,4,f_pares_plausiveis
-510450,Indiavaí,M1,2025,2,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.370903,0,4,f_pares_plausiveis
-510450,Indiavaí,M1,2025,3,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.161743,0,4,f_pares_plausiveis
+510450,Indiavaí,M1,2025,1,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.496511,1,4,f_pares_plausiveis
+510450,Indiavaí,M1,2025,2,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.307543,0,4,f_pares_plausiveis
+510450,Indiavaí,M1,2025,3,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.118525,0,4,f_pares_plausiveis
 510460,Itiquira,M1,2025,1,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.857777,1,3,f_pares_plausiveis
 510460,Itiquira,M1,2025,2,510729,São José do Povo,sao-jose-do-povo,Sul Matogrossense,2716,0.079632,0,3,f_pares_plausiveis
 510460,Itiquira,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.062592,0,3,f_pares_plausiveis
 510500,Jauru,M1,2025,1,510775,Salto do Céu,salto-do-ceu,Oeste Matogrossense,3657,0.33223,1,6,f_pares_plausiveis
 510500,Jauru,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.260851,0,6,f_pares_plausiveis
 510500,Jauru,M1,2025,3,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.223978,0,6,f_pares_plausiveis
-510515,Juína,M1,2025,1,510704,Primavera do Leste,primavera-do-leste,Sul Matogrossense,96006,0.268843,1,6,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
-510515,Juína,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.250495,0,6,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
-510515,Juína,M1,2025,3,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.203233,0,6,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
-510525,Lucas do Rio Verde,M1,2025,1,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.661636,1,4,f_pares_plausiveis
-510525,Lucas do Rio Verde,M1,2025,2,510250,Cáceres,caceres,Oeste Matogrossense,91767,0.147491,0,4,f_pares_plausiveis
-510525,Lucas do Rio Verde,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.102689,0,4,f_pares_plausiveis
+510515,Juína,M1,2025,1,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.345435,1,5,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
+510515,Juína,M1,2025,2,510336,Conquista D'Oeste,conquista-d-oeste,Sudoeste Matogrossense,3908,0.064077,0,5,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
+510515,Juína,M1,2025,3,510250,Cáceres,caceres,Oeste Matogrossense,91767,0.057188,0,5,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
+510520,Juscimeira,M1,2025,1,510777,Santa Terezinha,santa-terezinha,Araguaia Xingu,7737,0.501263,1,7,f_pares_plausiveis
+510520,Juscimeira,M1,2025,2,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.167058,0,7,f_pares_plausiveis
+510520,Juscimeira,M1,2025,3,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.150903,0,7,f_pares_plausiveis
+510525,Lucas do Rio Verde,M1,2025,1,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.478747,0,5,f_pares_plausiveis
+510525,Lucas do Rio Verde,M1,2025,2,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.365495,1,5,f_pares_plausiveis
+510525,Lucas do Rio Verde,M1,2025,3,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.102268,0,5,f_pares_plausiveis
 510550,Vila Bela da Santíssima Trindade,M1,2025,1,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.350058,1,5,f_pares_plausiveis
 510550,Vila Bela da Santíssima Trindade,M1,2025,2,510060,Alto Taquari,alto-taquari,Sul Matogrossense,11877,0.211833,0,5,f_pares_plausiveis
 510550,Vila Bela da Santíssima Trindade,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.159977,0,5,f_pares_plausiveis
-510562,Mirassol d'Oeste,M1,2025,1,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.594094,1,7,f_pares_plausiveis
-510562,Mirassol d'Oeste,M1,2025,2,510263,Campo Novo do Parecis,campo-novo-do-parecis,Médio Norte Matogrossense,51722,0.235062,0,7,f_pares_plausiveis
-510562,Mirassol d'Oeste,M1,2025,3,510618,Nova Lacerda,nova-lacerda,Sudoeste Matogrossense,7072,0.107968,0,7,f_pares_plausiveis
-510590,Nobres,M1,2025,1,510610,Nossa Senhora do Livramento,nossa-senhora-do-livramento,Baixada Cuiabana,11658,0.303078,1,7,f_pares_plausiveis
-510590,Nobres,M1,2025,2,510285,Castanheira,castanheira,Noroeste Matogrossense,7392,0.283551,0,7,f_pares_plausiveis
-510590,Nobres,M1,2025,3,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.181151,0,7,f_pares_plausiveis
-510600,Nortelândia,M1,2025,1,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.406997,1,6,f_pares_plausiveis
-510600,Nortelândia,M1,2025,2,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.385656,0,6,f_pares_plausiveis
-510600,Nortelândia,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.097085,0,6,f_pares_plausiveis
-510617,Nova Nazaré,M1,2025,1,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.35762,1,6,f_pares_plausiveis
-510617,Nova Nazaré,M1,2025,2,510523,Lambari D'Oeste,lambari-d-oeste,Oeste Matogrossense,4662,0.23967,0,6,f_pares_plausiveis
-510617,Nova Nazaré,M1,2025,3,510454,Itanhangá,itanhanga,Teles Pires,8257,0.206707,0,6,f_pares_plausiveis
-510619,Nova Santa Helena,M1,2025,1,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.681693,1,4,f_pares_plausiveis
-510619,Nova Santa Helena,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.232604,0,4,f_pares_plausiveis
-510619,Nova Santa Helena,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.053839,0,4,f_pares_plausiveis
+510560,Matupá,M1,2025,1,510263,Campo Novo do Parecis,campo-novo-do-parecis,Médio Norte Matogrossense,51722,0.562332,1,7,f_pares_plausiveis
+510560,Matupá,M1,2025,2,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.152922,0,7,f_pares_plausiveis
+510560,Matupá,M1,2025,3,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.078812,0,7,f_pares_plausiveis
+510562,Mirassol d'Oeste,M1,2025,1,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.593626,1,7,f_pares_plausiveis
+510562,Mirassol d'Oeste,M1,2025,2,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.096171,0,7,f_pares_plausiveis
+510562,Mirassol d'Oeste,M1,2025,3,510263,Campo Novo do Parecis,campo-novo-do-parecis,Médio Norte Matogrossense,51722,0.085745,0,7,f_pares_plausiveis
+510590,Nobres,M1,2025,1,510610,Nossa Senhora do Livramento,nossa-senhora-do-livramento,Baixada Cuiabana,11658,0.359012,1,7,f_pares_plausiveis
+510590,Nobres,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.204659,0,7,f_pares_plausiveis
+510590,Nobres,M1,2025,3,510010,Acorizal,acorizal,Baixada Cuiabana,4948,0.148017,0,7,f_pares_plausiveis
+510600,Nortelândia,M1,2025,1,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.360371,0,6,f_pares_plausiveis
+510600,Nortelândia,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.222206,1,6,f_pares_plausiveis
+510600,Nortelândia,M1,2025,3,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.176322,0,6,f_pares_plausiveis
+510617,Nova Nazaré,M1,2025,1,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.314653,1,5,f_pares_plausiveis
+510617,Nova Nazaré,M1,2025,2,510523,Lambari D'Oeste,lambari-d-oeste,Oeste Matogrossense,4662,0.288022,0,5,f_pares_plausiveis
+510617,Nova Nazaré,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.244457,0,5,f_pares_plausiveis
+510619,Nova Santa Helena,M1,2025,1,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.616035,1,3,f_pares_plausiveis
+510619,Nova Santa Helena,M1,2025,2,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.266005,0,3,f_pares_plausiveis
+510619,Nova Santa Helena,M1,2025,3,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.11796,0,3,f_pares_plausiveis
+510620,Nova Brasilândia,M1,2025,1,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.376881,1,4,f_pares_plausiveis
+510620,Nova Brasilândia,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.346447,0,4,f_pares_plausiveis
+510620,Nova Brasilândia,M1,2025,3,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.149054,0,4,f_pares_plausiveis
 510621,Nova Canaã do Norte,M1,2025,1,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.769353,1,4,f_pares_plausiveis
 510621,Nova Canaã do Norte,M1,2025,2,510185,Bom Jesus do Araguaia,bom-jesus-do-araguaia,Médio Araguaia,7912,0.112005,0,4,f_pares_plausiveis
 510621,Nova Canaã do Norte,M1,2025,3,510285,Castanheira,castanheira,Noroeste Matogrossense,7392,0.099499,0,4,f_pares_plausiveis
-510623,Nova Olímpia,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.427803,1,6,f_pares_plausiveis
-510623,Nova Olímpia,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.237546,0,6,f_pares_plausiveis
-510623,Nova Olímpia,M1,2025,3,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.231047,0,6,f_pares_plausiveis
-510624,Nova Ubiratã,M1,2025,1,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.451682,1,4,f_pares_plausiveis
-510624,Nova Ubiratã,M1,2025,2,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.412608,0,4,f_pares_plausiveis
-510624,Nova Ubiratã,M1,2025,3,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.128001,0,4,f_pares_plausiveis
+510622,Nova Mutum,M1,2025,1,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.357839,1,6,f_pares_plausiveis
+510622,Nova Mutum,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.194563,0,6,f_pares_plausiveis
+510622,Nova Mutum,M1,2025,3,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.137827,0,6,f_pares_plausiveis
+510623,Nova Olímpia,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.37023,1,4,f_pares_plausiveis
+510623,Nova Olímpia,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.322252,0,4,f_pares_plausiveis
+510623,Nova Olímpia,M1,2025,3,510625,Nova Xavantina,nova-xavantina,Garças Araguaia,25915,0.227505,0,4,f_pares_plausiveis
+510624,Nova Ubiratã,M1,2025,1,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.748652,1,3,f_pares_plausiveis
+510624,Nova Ubiratã,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.240036,0,3,f_pares_plausiveis
+510624,Nova Ubiratã,M1,2025,3,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.011312,0,3,f_pares_plausiveis
 510627,Novo Horizonte do Norte,M1,2025,1,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.392661,1,5,f_pares_plausiveis
 510627,Novo Horizonte do Norte,M1,2025,2,510775,Salto do Céu,salto-do-ceu,Oeste Matogrossense,3657,0.228595,0,5,f_pares_plausiveis
 510627,Novo Horizonte do Norte,M1,2025,3,510729,São José do Povo,sao-jose-do-povo,Sul Matogrossense,2716,0.174241,0,5,f_pares_plausiveis
-510629,Paranaíta,M1,2025,1,510030,Alto Araguaia,alto-araguaia,Sul Matogrossense,17751,0.451085,1,6,f_pares_plausiveis
-510629,Paranaíta,M1,2025,2,510454,Itanhangá,itanhanga,Teles Pires,8257,0.225258,0,6,f_pares_plausiveis
-510629,Paranaíta,M1,2025,3,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.185006,0,6,f_pares_plausiveis
-510630,Paranatinga,M1,2025,1,510140,Aripuanã,aripuana,Noroeste Matogrossense,26558,0.528555,1,6,f_pares_plausiveis
-510630,Paranatinga,M1,2025,2,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.235143,0,6,f_pares_plausiveis
-510630,Paranatinga,M1,2025,3,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.133612,0,6,f_pares_plausiveis
+510629,Paranaíta,M1,2025,1,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.491542,1,5,f_pares_plausiveis
+510629,Paranaíta,M1,2025,2,510775,Salto do Céu,salto-do-ceu,Oeste Matogrossense,3657,0.179979,0,5,f_pares_plausiveis
+510629,Paranaíta,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.172338,0,5,f_pares_plausiveis
+510630,Paranatinga,M1,2025,1,510140,Aripuanã,aripuana,Noroeste Matogrossense,26558,0.710715,1,6,f_pares_plausiveis
+510630,Paranatinga,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.088727,0,6,f_pares_plausiveis
+510630,Paranatinga,M1,2025,3,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.066945,0,6,f_pares_plausiveis
 510631,Novo Santo Antônio,M1,2025,1,510523,Lambari D'Oeste,lambari-d-oeste,Oeste Matogrossense,4662,0.363375,1,4,f_pares_plausiveis
 510631,Novo Santo Antônio,M1,2025,2,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.315431,0,4,f_pares_plausiveis
 510631,Novo Santo Antônio,M1,2025,3,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.190307,0,4,f_pares_plausiveis
-510642,Peixoto de Azevedo,M1,2025,1,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.463508,1,6,f_pares_plausiveis
-510642,Peixoto de Azevedo,M1,2025,2,510180,Barra do Garças,barra-do-garcas,Garças Araguaia,73878,0.243029,0,6,f_pares_plausiveis
-510642,Peixoto de Azevedo,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.181304,0,6,f_pares_plausiveis
-510650,Poconé,M1,2025,1,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.371775,1,6,f_pares_plausiveis
-510650,Poconé,M1,2025,2,510325,Colniza,colniza,Noroeste Matogrossense,26026,0.264048,0,6,f_pares_plausiveis
-510650,Poconé,M1,2025,3,510700,Poxoréo,poxoreo,Sul Matogrossense,25103,0.231262,0,6,f_pares_plausiveis
-510665,Pontal do Araguaia,M1,2025,1,510279,Carlinda,carlinda,Alto Tapajós,10260,0.633808,1,5,f_pares_plausiveis
-510665,Pontal do Araguaia,M1,2025,2,510454,Itanhangá,itanhanga,Teles Pires,8257,0.165036,0,5,f_pares_plausiveis
-510665,Pontal do Araguaia,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.11471,0,5,f_pares_plausiveis
-510670,Ponte Branca,M1,2025,1,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.503071,0,3,f_pares_plausiveis
-510670,Ponte Branca,M1,2025,2,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.397514,1,3,f_pares_plausiveis
-510670,Ponte Branca,M1,2025,3,510628,Novo São Joaquim,novo-sao-joaquim,Garças Araguaia,7239,0.099415,0,3,f_pares_plausiveis
-510677,Porto Alegre do Norte,M1,2025,1,510618,Nova Lacerda,nova-lacerda,Sudoeste Matogrossense,7072,0.494031,1,6,f_pares_plausiveis
-510677,Porto Alegre do Norte,M1,2025,2,510777,Santa Terezinha,santa-terezinha,Araguaia Xingu,7737,0.184492,0,6,f_pares_plausiveis
-510677,Porto Alegre do Norte,M1,2025,3,510370,Feliz Natal,feliz-natal,Teles Pires,10523,0.171331,0,6,f_pares_plausiveis
+510637,Pedra Preta,M1,2025,1,510263,Campo Novo do Parecis,campo-novo-do-parecis,Médio Norte Matogrossense,51722,0.74225,1,4,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
+510637,Pedra Preta,M1,2025,2,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.169974,0,4,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
+510637,Pedra Preta,M1,2025,3,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.057305,0,4,a_desp_total (fronteira comum: programa com pares restritos infactível; só pares plausíveis listados)
+510642,Peixoto de Azevedo,M1,2025,1,510625,Nova Xavantina,nova-xavantina,Garças Araguaia,25915,0.322056,1,6,f_pares_plausiveis
+510642,Peixoto de Azevedo,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.284322,0,6,f_pares_plausiveis
+510642,Peixoto de Azevedo,M1,2025,3,510180,Barra do Garças,barra-do-garcas,Garças Araguaia,73878,0.19374,0,6,f_pares_plausiveis
+510650,Poconé,M1,2025,1,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.319063,1,6,f_pares_plausiveis
+510650,Poconé,M1,2025,2,510700,Poxoréo,poxoreo,Sul Matogrossense,25103,0.248269,0,6,f_pares_plausiveis
+510650,Poconé,M1,2025,3,510325,Colniza,colniza,Noroeste Matogrossense,26026,0.230655,0,6,f_pares_plausiveis
+510665,Pontal do Araguaia,M1,2025,1,510263,Campo Novo do Parecis,campo-novo-do-parecis,Médio Norte Matogrossense,51722,0.482738,0,4,f_pares_plausiveis
+510665,Pontal do Araguaia,M1,2025,2,510454,Itanhangá,itanhanga,Teles Pires,8257,0.266966,1,4,f_pares_plausiveis
+510665,Pontal do Araguaia,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.143978,0,4,f_pares_plausiveis
+510670,Ponte Branca,M1,2025,1,510380,Figueirópolis D'Oeste,figueiropolis-d-oeste,Sudoeste Matogrossense,3056,0.577391,1,4,f_pares_plausiveis
+510670,Ponte Branca,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.209832,0,4,f_pares_plausiveis
+510670,Ponte Branca,M1,2025,3,510880,Nova Guarita,nova-guarita,Norte Matogrossense,4546,0.1836,0,4,f_pares_plausiveis
+510677,Porto Alegre do Norte,M1,2025,1,510777,Santa Terezinha,santa-terezinha,Araguaia Xingu,7737,0.439247,1,7,f_pares_plausiveis
+510677,Porto Alegre do Norte,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.22346,0,7,f_pares_plausiveis
+510677,Porto Alegre do Norte,M1,2025,3,510830,União do Sul,uniao-do-sul,Teles Pires,3904,0.140113,0,7,f_pares_plausiveis
 510685,Porto Estrela,M1,2025,1,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.514268,1,3,f_pares_plausiveis
 510685,Porto Estrela,M1,2025,2,510682,Porto Esperidião,porto-esperidiao,Oeste Matogrossense,10088,0.417225,0,3,f_pares_plausiveis
 510685,Porto Estrela,M1,2025,3,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.068507,0,3,f_pares_plausiveis
-510706,Querência,M1,2025,1,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.466627,1,5,f_pares_plausiveis
-510706,Querência,M1,2025,2,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.257534,0,5,f_pares_plausiveis
-510706,Querência,M1,2025,3,510785,São Félix do Araguaia,sao-felix-do-araguaia,Norte Araguaia Karajá,14604,0.165087,0,5,f_pares_plausiveis
+510706,Querência,M1,2025,1,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.49989,1,6,f_pares_plausiveis
+510706,Querência,M1,2025,2,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.258275,0,6,f_pares_plausiveis
+510706,Querência,M1,2025,3,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.167838,0,6,f_pares_plausiveis
 510715,Reserva do Cabaçal,M1,2025,1,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.714312,1,3,f_pares_plausiveis
 510715,Reserva do Cabaçal,M1,2025,2,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.185065,0,3,f_pares_plausiveis
 510715,Reserva do Cabaçal,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.100623,0,3,f_pares_plausiveis
-510718,Ribeirão Cascalheira,M1,2025,1,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.39491,1,5,f_pares_plausiveis
-510718,Ribeirão Cascalheira,M1,2025,2,510185,Bom Jesus do Araguaia,bom-jesus-do-araguaia,Médio Araguaia,7912,0.308823,0,5,f_pares_plausiveis
-510718,Ribeirão Cascalheira,M1,2025,3,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.187666,0,5,f_pares_plausiveis
-510719,Ribeirãozinho,M1,2025,1,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.528918,1,5,f_pares_plausiveis
-510719,Ribeirãozinho,M1,2025,2,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.320376,0,5,f_pares_plausiveis
-510719,Ribeirãozinho,M1,2025,3,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.10441,0,5,f_pares_plausiveis
-510720,Rio Branco,M1,2025,1,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.210694,1,7,f_pares_plausiveis
-510720,Rio Branco,M1,2025,2,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.183792,0,7,f_pares_plausiveis
-510720,Rio Branco,M1,2025,3,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.16085,0,7,f_pares_plausiveis
-510724,Santa Carmem,M1,2025,1,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.276569,1,7,f_pares_plausiveis
-510724,Santa Carmem,M1,2025,2,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.252232,0,7,f_pares_plausiveis
-510724,Santa Carmem,M1,2025,3,510279,Carlinda,carlinda,Alto Tapajós,10260,0.129694,0,7,f_pares_plausiveis
+510718,Ribeirão Cascalheira,M1,2025,1,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.402161,1,6,f_pares_plausiveis
+510718,Ribeirão Cascalheira,M1,2025,2,510740,São Pedro da Cipa,sao-pedro-da-cipa,Sul Matogrossense,4250,0.307655,0,6,f_pares_plausiveis
+510718,Ribeirão Cascalheira,M1,2025,3,510185,Bom Jesus do Araguaia,bom-jesus-do-araguaia,Médio Araguaia,7912,0.183994,0,6,f_pares_plausiveis
+510719,Ribeirãozinho,M1,2025,1,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.306223,1,6,f_pares_plausiveis
+510719,Ribeirãozinho,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.250137,0,6,f_pares_plausiveis
+510719,Ribeirãozinho,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.198035,0,6,f_pares_plausiveis
+510720,Rio Branco,M1,2025,1,510895,Nova Monte Verde,nova-monte-verde,Alto Tapajós,8470,0.273363,1,7,f_pares_plausiveis
+510720,Rio Branco,M1,2025,2,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.176267,0,7,f_pares_plausiveis
+510720,Rio Branco,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.170877,0,7,f_pares_plausiveis
+510724,Santa Carmem,M1,2025,1,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.485861,0,7,f_pares_plausiveis
+510724,Santa Carmem,M1,2025,2,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.23272,0,7,f_pares_plausiveis
+510724,Santa Carmem,M1,2025,3,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.125397,0,7,f_pares_plausiveis
 510726,Santo Afonso,M1,2025,1,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.58518,1,3,f_pares_plausiveis
 510726,Santo Afonso,M1,2025,2,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.310306,0,3,f_pares_plausiveis
 510726,Santo Afonso,M1,2025,3,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.104514,0,3,f_pares_plausiveis
-510757,Rondolândia,M1,2025,1,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.817995,1,2,f_pares_plausiveis
-510757,Rondolândia,M1,2025,2,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.182005,0,2,f_pares_plausiveis
-510760,Rondonópolis,M1,2025,1,510700,Poxoréo,poxoreo,Sul Matogrossense,25103,0.293545,0,5,f_pares_plausiveis
-510760,Rondonópolis,M1,2025,2,510790,Sinop,sinop,Teles Pires,223780,0.274956,1,5,f_pares_plausiveis
-510760,Rondonópolis,M1,2025,3,510180,Barra do Garças,barra-do-garcas,Garças Araguaia,73878,0.236483,0,5,f_pares_plausiveis
+510757,Rondolândia,M1,2025,1,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.426143,1,3,f_pares_plausiveis
+510757,Rondolândia,M1,2025,2,510628,Novo São Joaquim,novo-sao-joaquim,Garças Araguaia,7239,0.349233,0,3,f_pares_plausiveis
+510757,Rondolândia,M1,2025,3,510395,Glória D'Oeste,gloria-d-oeste,Oeste Matogrossense,2878,0.224624,0,3,f_pares_plausiveis
+510760,Rondonópolis,M1,2025,1,510700,Poxoréo,poxoreo,Sul Matogrossense,25103,0.309146,0,5,f_pares_plausiveis
+510760,Rondonópolis,M1,2025,2,510790,Sinop,sinop,Teles Pires,223780,0.257616,1,5,f_pares_plausiveis
+510760,Rondonópolis,M1,2025,3,510180,Barra do Garças,barra-do-garcas,Garças Araguaia,73878,0.225385,0,5,f_pares_plausiveis
 510770,Rosário Oeste,M1,2025,1,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.477705,1,4,f_pares_plausiveis
 510770,Rosário Oeste,M1,2025,2,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.329979,0,4,f_pares_plausiveis
 510770,Rosário Oeste,M1,2025,3,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.09699,0,4,f_pares_plausiveis
-510774,Santa Cruz do Xingu,M1,2025,1,510735,São José do Xingu,sao-jose-do-xingu,Araguaia Xingu,6234,0.392141,1,5,f_pares_plausiveis
-510774,Santa Cruz do Xingu,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.372831,0,5,f_pares_plausiveis
-510774,Santa Cruz do Xingu,M1,2025,3,510682,Porto Esperidião,porto-esperidiao,Oeste Matogrossense,10088,0.112588,0,5,f_pares_plausiveis
-510779,Santo Antônio do Leste,M1,2025,1,510517,Juruena,juruena,Noroeste Matogrossense,10057,0.604291,1,7,f_pares_plausiveis
-510779,Santo Antônio do Leste,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.115531,0,7,f_pares_plausiveis
-510779,Santo Antônio do Leste,M1,2025,3,510785,São Félix do Araguaia,sao-felix-do-araguaia,Norte Araguaia Karajá,14604,0.104698,0,7,f_pares_plausiveis
-510780,Santo Antônio do Leverger,M1,2025,1,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.633305,1,3,f_pares_plausiveis
-510780,Santo Antônio do Leverger,M1,2025,2,510125,Araputanga,araputanga,Oeste Matogrossense,14805,0.321105,0,3,f_pares_plausiveis
-510780,Santo Antônio do Leverger,M1,2025,3,510682,Porto Esperidião,porto-esperidiao,Oeste Matogrossense,10088,0.04559,0,3,f_pares_plausiveis
+510774,Santa Cruz do Xingu,M1,2025,1,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.507735,0,4,f_pares_plausiveis
+510774,Santa Cruz do Xingu,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.316139,1,4,f_pares_plausiveis
+510774,Santa Cruz do Xingu,M1,2025,3,510682,Porto Esperidião,porto-esperidiao,Oeste Matogrossense,10088,0.146365,0,4,f_pares_plausiveis
+510776,Santa Rita do Trivelato,M1,2025,1,510336,Conquista D'Oeste,conquista-d-oeste,Sudoeste Matogrossense,3908,0.422888,1,4,f_pares_plausiveis
+510776,Santa Rita do Trivelato,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.285596,0,4,f_pares_plausiveis
+510776,Santa Rita do Trivelato,M1,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.156853,0,4,f_pares_plausiveis
+510779,Santo Antônio do Leste,M1,2025,1,510517,Juruena,juruena,Noroeste Matogrossense,10057,0.520994,1,5,f_pares_plausiveis
+510779,Santo Antônio do Leste,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.287497,0,5,f_pares_plausiveis
+510779,Santo Antônio do Leste,M1,2025,3,510682,Porto Esperidião,porto-esperidiao,Oeste Matogrossense,10088,0.120887,0,5,f_pares_plausiveis
+510780,Santo Antônio do Leverger,M1,2025,1,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.426455,1,5,f_pares_plausiveis
+510780,Santo Antônio do Leverger,M1,2025,2,510125,Araputanga,araputanga,Oeste Matogrossense,14805,0.413623,0,5,f_pares_plausiveis
+510780,Santo Antônio do Leverger,M1,2025,3,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.077087,0,5,f_pares_plausiveis
+510785,São Félix do Araguaia,M1,2025,1,510370,Feliz Natal,feliz-natal,Teles Pires,10523,0.323598,1,6,f_pares_plausiveis
+510785,São Félix do Araguaia,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.266269,0,6,f_pares_plausiveis
+510785,São Félix do Araguaia,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.255017,0,6,f_pares_plausiveis
 510788,Serra Nova Dourada,M1,2025,1,510775,Salto do Céu,salto-do-ceu,Oeste Matogrossense,3657,0.289792,1,4,f_pares_plausiveis
 510788,Serra Nova Dourada,M1,2025,2,510682,Porto Esperidião,porto-esperidiao,Oeste Matogrossense,10088,0.269397,0,4,f_pares_plausiveis
 510788,Serra Nova Dourada,M1,2025,3,510343,Curvelândia,curvelandia,Oeste Matogrossense,4970,0.237911,0,4,f_pares_plausiveis
-510792,Sorriso,M1,2025,1,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.339884,0,6,f_pares_plausiveis
-510792,Sorriso,M1,2025,2,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.265087,1,6,f_pares_plausiveis
-510792,Sorriso,M1,2025,3,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.176361,0,6,f_pares_plausiveis
-510794,Tabaporã,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.528361,1,7,f_pares_plausiveis
-510794,Tabaporã,M1,2025,2,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.155575,0,7,f_pares_plausiveis
-510794,Tabaporã,M1,2025,3,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.149282,0,7,f_pares_plausiveis
-510800,Tapurah,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.472898,1,5,f_pares_plausiveis
-510800,Tapurah,M1,2025,2,510452,Ipiranga do Norte,ipiranga-do-norte,Teles Pires,8658,0.19908,0,5,f_pares_plausiveis
-510800,Tapurah,M1,2025,3,510285,Castanheira,castanheira,Noroeste Matogrossense,7392,0.148807,0,5,f_pares_plausiveis
+510792,Sorriso,M1,2025,1,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.341544,1,5,f_pares_plausiveis
+510792,Sorriso,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.333417,0,5,f_pares_plausiveis
+510792,Sorriso,M1,2025,3,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.273231,0,5,f_pares_plausiveis
+510794,Tabaporã,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.310975,1,7,f_pares_plausiveis
+510794,Tabaporã,M1,2025,2,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.265504,0,7,f_pares_plausiveis
+510794,Tabaporã,M1,2025,3,510775,Salto do Céu,salto-do-ceu,Oeste Matogrossense,3657,0.204309,0,7,f_pares_plausiveis
+510800,Tapurah,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.639247,1,5,f_pares_plausiveis
+510800,Tapurah,M1,2025,2,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.208217,0,5,f_pares_plausiveis
+510800,Tapurah,M1,2025,3,510285,Castanheira,castanheira,Noroeste Matogrossense,7392,0.074179,0,5,f_pares_plausiveis
 510805,Terra Nova do Norte,M1,2025,1,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.410041,1,6,f_pares_plausiveis
 510805,Terra Nova do Norte,M1,2025,2,510775,Salto do Céu,salto-do-ceu,Oeste Matogrossense,3657,0.191225,0,6,f_pares_plausiveis
 510805,Terra Nova do Norte,M1,2025,3,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.182491,0,6,f_pares_plausiveis
-510810,Tesouro,M1,2025,1,510730,São José do Rio Claro,sao-jose-do-rio-claro,Centro Norte,14455,0.412496,0,5,f_pares_plausiveis
-510810,Tesouro,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.158741,1,5,f_pares_plausiveis
-510810,Tesouro,M1,2025,3,510395,Glória D'Oeste,gloria-d-oeste,Oeste Matogrossense,2878,0.152335,0,5,f_pares_plausiveis
-510820,Torixoréu,M1,2025,1,510020,Água Boa,agua-boa,Médio Araguaia,32099,0.514419,0,5,f_pares_plausiveis
-510820,Torixoréu,M1,2025,2,510395,Glória D'Oeste,gloria-d-oeste,Oeste Matogrossense,2878,0.195112,1,5,f_pares_plausiveis
-510820,Torixoréu,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.184794,0,5,f_pares_plausiveis
-510835,Vale de São Domingos,M1,2025,1,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,1.0,1,1,f_pares_plausiveis
-510850,Vera,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.34205,1,7,f_pares_plausiveis
-510850,Vera,M1,2025,2,510675,Pontes e Lacerda,pontes-e-lacerda,Sudoeste Matogrossense,55762,0.252782,0,7,f_pares_plausiveis
-510850,Vera,M1,2025,3,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.200692,0,7,f_pares_plausiveis
-510880,Nova Guarita,M1,2025,1,510628,Novo São Joaquim,novo-sao-joaquim,Garças Araguaia,7239,0.371035,1,6,f_pares_plausiveis
-510880,Nova Guarita,M1,2025,2,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.322221,0,6,f_pares_plausiveis
-510880,Nova Guarita,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.164096,0,6,f_pares_plausiveis
-510885,Nova Marilândia,M1,2025,1,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.585988,1,3,f_pares_plausiveis
-510885,Nova Marilândia,M1,2025,2,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.33208,0,3,f_pares_plausiveis
-510885,Nova Marilândia,M1,2025,3,510480,Jaciara,jaciara,Sul Matogrossense,29803,0.081932,0,3,f_pares_plausiveis
-510890,Nova Maringá,M1,2025,1,510610,Nossa Senhora do Livramento,nossa-senhora-do-livramento,Baixada Cuiabana,11658,0.506051,1,5,f_pares_plausiveis
-510890,Nova Maringá,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.21021,0,5,f_pares_plausiveis
-510890,Nova Maringá,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.167122,0,5,f_pares_plausiveis
+510810,Tesouro,M1,2025,1,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.527029,0,5,f_pares_plausiveis
+510810,Tesouro,M1,2025,2,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.243149,1,5,f_pares_plausiveis
+510810,Tesouro,M1,2025,3,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.100239,0,5,f_pares_plausiveis
+510820,Torixoréu,M1,2025,1,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.510876,1,5,f_pares_plausiveis
+510820,Torixoréu,M1,2025,2,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.153755,0,5,f_pares_plausiveis
+510820,Torixoréu,M1,2025,3,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.13877,0,5,f_pares_plausiveis
+510835,Vale de São Domingos,M1,2025,1,510626,Novo Mundo,novo-mundo,Vale do Peixoto,6368,0.622217,1,4,f_pares_plausiveis
+510835,Vale de São Domingos,M1,2025,2,510395,Glória D'Oeste,gloria-d-oeste,Oeste Matogrossense,2878,0.204398,0,4,f_pares_plausiveis
+510835,Vale de São Domingos,M1,2025,3,510628,Novo São Joaquim,novo-sao-joaquim,Garças Araguaia,7239,0.140321,0,4,f_pares_plausiveis
+510850,Vera,M1,2025,1,510860,Vila Rica,vila-rica,Araguaia Xingu,19686,0.468485,1,5,f_pares_plausiveis
+510850,Vera,M1,2025,2,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.291792,0,5,f_pares_plausiveis
+510850,Vera,M1,2025,3,510260,Campinápolis,campinapolis,Garças Araguaia,15808,0.19544,0,5,f_pares_plausiveis
+510885,Nova Marilândia,M1,2025,1,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.584572,1,4,f_pares_plausiveis
+510885,Nova Marilândia,M1,2025,2,510787,Sapezal,sapezal,Médio Norte Matogrossense,32514,0.341699,0,4,f_pares_plausiveis
+510885,Nova Marilândia,M1,2025,3,510330,Comodoro,comodoro,Sudoeste Matogrossense,18469,0.041774,0,4,f_pares_plausiveis
+510890,Nova Maringá,M1,2025,1,510610,Nossa Senhora do Livramento,nossa-senhora-do-livramento,Baixada Cuiabana,11658,0.568664,1,4,f_pares_plausiveis
+510890,Nova Maringá,M1,2025,2,510035,Alto Boa Vista,alto-boa-vista,Norte Araguaia Karajá,5920,0.18271,0,4,f_pares_plausiveis
+510890,Nova Maringá,M1,2025,3,510645,Planalto da Serra,planalto-da-serra,Baixada Cuiabana,3328,0.159384,0,4,f_pares_plausiveis
 510010,Acorizal,M0,2025,1,510682,Porto Esperidião,porto-esperidiao,Oeste Matogrossense,10088,0.590304,1,4,f_pares_plausiveis
 510010,Acorizal,M0,2025,2,510729,São José do Povo,sao-jose-do-povo,Sul Matogrossense,2716,0.299361,0,4,f_pares_plausiveis
 510010,Acorizal,M0,2025,3,510680,Porto dos Gaúchos,porto-dos-gauchos,Vale dos Arinos,5705,0.08126,0,4,f_pares_plausiveis

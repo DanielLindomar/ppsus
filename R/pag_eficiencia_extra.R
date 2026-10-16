@@ -7,7 +7,8 @@
 # EFX_/efx_ para não colidir com aquele arquivo, se os dois forem carregados juntos.
 #
 # Lê somente dados_site/eficiencia/ (gerado por scripts/06_preparar_eficiencia.py a partir
-# do schema dea, versao = 'v2'). Nenhum número é digitado nas páginas: tudo vem dos CSVs.
+# do schema dea, na versão registrada em metadados.csv — v2.1 desde 16/10/2026). Nenhum
+# número é digitado nas páginas: tudo vem dos CSVs.
 # A especificação principal de cada modelo (inclusive a dos hospitais, em reprocessamento
 # para "internações totais + diárias totais") é lida de especificacoes_modelos.csv.
 #
@@ -54,6 +55,14 @@ efx_param <- function(chave, padrao = NA_real_) {
   if (length(v) && is.finite(v[1])) v[1] else padrao }
 
 EFX_DATA <- efx_meta("data_resultados", "08/10/2026")
+EFX_VERSAO   <- efx_meta("versao_resultados", "v2")          # ex.: "v2.1"
+EFX_VERSAO_N <- sub("^v", "", EFX_VERSAO)                    # ex.: "2.1"
+EFX_ROTULO   <- paste0("Resultados DEA ", EFX_VERSAO)        # rótulo de fonte das páginas
+EFX_VERSAO_ANT   <- sub("^v", "", efx_meta("versao_anterior", ""))
+EFX_DATA_ANT     <- efx_meta("data_versao_anterior", "")
+EFX_REESTIMADOS  <- strsplit(efx_meta("modelos_reestimados", ""), ",\\s*")[[1]]
+# Data da estimação de um modelo: na v2.1, os modelos não reestimados são cópia exata da versão anterior
+efx_data_modelo <- function(m) if (nzchar(EFX_VERSAO_ANT) && length(EFX_REESTIMADOS) && !m %in% EFX_REESTIMADOS) EFX_DATA_ANT else EFX_DATA
 EFX_ANO  <- 2025L
 EFX_ANOS <- 2020:2025
 
@@ -123,10 +132,18 @@ body.fullcontent main.content { min-width:0; }
 "))
 
 # Aviso da seção: versão dos resultados e leitura por faixas
+# Frase curta sobre a versão: só o(s) modelo(s) reestimado(s) mudou(aram) frente à versão anterior
+efx_frase_versao <- function() {
+  if (!nzchar(efx_meta("nota_versao", "")) || !length(EFX_REESTIMADOS) || !all(EFX_REESTIMADOS %in% names(MODELOS_MQ))) return("")
+  nomes <- efx_lista_e(tolower(MODELOS_MQ[EFX_REESTIMADOS]))
+  sprintf(paste0("Na versão %s, só o modelo de %s foi reestimado; os demais resultados são os da versão %s (%s) — ",
+                 "<a href=\"index.html#versao\">nota de versão</a>. "), EFX_VERSAO_N, nomes, EFX_VERSAO_ANT, EFX_DATA_ANT)
+}
+
 efx_faixa <- function() faixa_construcao(sprintf(paste0(
-  "<b>Resultados da versão 2 da estimação</b> (Resultados DEA v2, %s), em validação com a SES-MT e o COSEMS-MT. ",
+  "<b>Resultados da versão %s da estimação</b> (%s, %s), em validação com a SES-MT e o COSEMS-MT. %s",
   "Leia os escores por <b>faixa e intervalo de confiança</b>, não como ranking; eficiência mede o volume de produção ",
-  "obtido com os recursos disponíveis e <b>não</b> a qualidade do cuidado."), EFX_DATA))
+  "obtido com os recursos disponíveis e <b>não</b> a qualidade do cuidado."), EFX_VERSAO_N, EFX_ROTULO, EFX_DATA, efx_frase_versao()))
 
 # Navegação entre as páginas da seção Eficiência (prefixo relativo à página que chama)
 efx_nav <- function(atual = "") {

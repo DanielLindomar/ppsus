@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510628,Novo São Joaquim,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.0612,1.0668,1.2487,1.2504,1.1383,1.4519
 510628,Novo São Joaquim,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.207,1.6808,1.373,1.1964,1.0936,1.1991
 510628,Novo São Joaquim,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.2058,3.8081,3.2606,3.3717,2.8869,2.9148
-510628,Novo São Joaquim,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,5.2491,5.1685,3.6855,3.4044,3.236,3.2587
+510628,Novo São Joaquim,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.8477,3.9281,2.7461,2.7181,2.6885,2.6026
 510628,Novo São Joaquim,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.6075,0.6368,0.5059,0.4362,0.4609,0.4517
 510628,Novo São Joaquim,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,5.2653,6.9092,5.865,4.5936,4.2835,4.444
 510628,Novo São Joaquim,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

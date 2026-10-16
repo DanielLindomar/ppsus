@@ -181,9 +181,12 @@ CATALOGO = [
          formula="1000 × fte_tec_enfermagem_sus / populacao", nota=NOTA_FTE, kpi=0, ano_max=2025,
          descricao="Técnicos de enfermagem com atendimento SUS (FTE 40 h) por mil habitantes."),
     dict(id="fte_acs_p1000", rotulo="Agentes comunitários de saúde por mil habitantes", grupo="capacidade", unidade="FTE por mil hab.", fmt="dec2", sentido=1,
-         fonte="CNES", num="fte_acs", den="populacao", mult=1000, agg="razao",
-         formula="1000 × fte_acs / populacao", nota=NOTA_FTE, kpi=0, ano_max=2025,
-         descricao="Agentes comunitários de saúde (FTE 40 h) por mil habitantes."),
+         fonte="CNES (CBO 515105)", num="fte_acs", den="populacao", mult=1000, agg="razao",
+         formula="1000 × fte_acs / populacao", kpi=0, ano_max=2025,
+         nota=NOTA_FTE + " Conta só o agente comunitário de saúde (CBO 515105). Até a versão 0.2 do site (08/10/2026), o indicador "
+              "somava toda a família CBO 5151, que inclui agentes de combate às endemias e agentes indígenas; o painel para download "
+              "traz as duas medidas (fte_acs e fte_5151_familia).",
+         descricao="Agentes comunitários de saúde (CBO 515105, FTE 40 h) por mil habitantes."),
     dict(id="fte_dentistas_p1000", rotulo="Dentistas SUS por mil habitantes", grupo="capacidade", unidade="FTE por mil hab.", fmt="dec2", sentido=1,
          fonte="CNES", num="fte_dentistas_sus", den="populacao", mult=1000, agg="razao",
          formula="1000 × fte_dentistas_sus / populacao", nota=NOTA_FTE, kpi=0, ano_max=2025,

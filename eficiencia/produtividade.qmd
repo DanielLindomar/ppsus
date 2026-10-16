@@ -46,7 +46,7 @@ Aproximação às melhores práticas (EC), média anual 2022–2025, em cada mod
 efx_mq_kpis()
 ```
 
-Em 2022–2025, a aproximação às melhores práticas foi positiva em `r n_ec_pos` dos `r nrow(j22)` modelos: `r frase_ec`. A maior aproximação ocorreu em `r tolower(MODELOS_MQ[[melhor$cod]])` e a menor em `r tolower(MODELOS_MQ[[pior$cod]])`. Fonte: índice de Malmquist da estimação DEA v2 (`r EFX_DATA`), especificação em níveis absolutos com retornos constantes de escala; dados de SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025.
+Em 2022–2025, a aproximação às melhores práticas foi positiva em `r n_ec_pos` dos `r nrow(j22)` modelos: `r frase_ec`. A maior aproximação ocorreu em `r tolower(MODELOS_MQ[[melhor$cod]])` e a menor em `r tolower(MODELOS_MQ[[pior$cod]])`. Fonte: índice de Malmquist da estimação DEA `r EFX_VERSAO` (`r EFX_DATA`), especificação em níveis absolutos com retornos constantes de escala; dados de SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025.
 
 ::: {.callout-note title="Nota sobre o deslocamento das melhores práticas (TC)"}
 Em 2022–2025 o TC fica abaixo de 1 em `r length(tc_baixo)` dos `r nrow(j22)` modelos (`r efx_lista_e(tolower(MODELOS_MQ[tc_baixo]))`). Isso pode refletir o **crescimento do registro de profissionais e equipamentos no CNES após 2022**, sem aumento proporcional da produção, e não uma piora real das melhores práticas: quando os recursos físicos são mantidos no nível de 2022, o TC desses modelos sobe. Por isso o TC aparece aqui em cinza, como informação técnica, e as fichas municipais e hospitalares publicam apenas a aproximação às melhores práticas (EC) e o índice de Malmquist.
@@ -154,7 +154,7 @@ A alta complexidade não tem índice de Malmquist publicado: o modelo regional �
 ## Ressalvas {#ressalvas}
 
 ::: {.callout-warning title="Leia antes de interpretar"}
-- **Resultados da versão 2, em validação** com a SES-MT e o COSEMS-MT (Resultados DEA v2, `r EFX_DATA`).
+- **Resultados da versão `r EFX_VERSAO_N`, em validação** com a SES-MT e o COSEMS-MT (`r EFX_ROTULO`, `r EFX_DATA`).
 - **Produtividade não é qualidade.** O índice mede a variação da produção por recurso; não mede resultado em saúde.
 - **COVID-19.** 2020 e 2021 tiveram produção deprimida e recursos realocados; a janela 2020–2022 mistura queda e recuperação.
 - **Registro.** Mudanças de registro (CNES após 2022, SISAB incompleto, quebras na produção ambulatorial) afetam o deslocamento das melhores práticas e algumas transições, que ficam fora das médias.
@@ -169,5 +169,5 @@ efx_arquivos(c("malmquist_regiao", "resumo_modelos", "fichas_municipio", "fichas
 ```
 
 ```{r}
-fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Produtividade: Resultados DEA v2 (%s), Projeto PPSUS-MT — índice de Malmquist com intervalo de confiança por bootstrap, médias geométricas por região e estado; dados de SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025. ", EFX_DATA))
+fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Produtividade: %s (%s), Projeto PPSUS-MT — índice de Malmquist com intervalo de confiança por bootstrap, médias geométricas por região e estado; dados de SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025. ", EFX_ROTULO, EFX_DATA))
 ```

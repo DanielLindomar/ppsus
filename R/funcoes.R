@@ -38,8 +38,8 @@ ds    <- function(...) file.path(RAIZ, "dados_site", ...)
 aviso <- function(...) message("[funcoes.R] ", sprintf(...))
 
 # ---- 0. Constantes ------------------------------------------------------------
-VERSAO_SITE <- "0.2"
-DATA_VERSAO <- "08/10/2026"
+VERSAO_SITE <- "0.2.1"
+DATA_VERSAO <- "16/10/2026"
 ANOS        <- 2020:2025           # janela analítica publicada
 ANO_REF     <- 2025L               # ano de referência dos KPIs (resultados: 2024)
 
@@ -337,7 +337,8 @@ span_sit <- function(sit) span(class = paste("sit", sit$cls), sit$txt)
 # ---- 4. Componentes htmltools --------------------------------------------------------
 TEXTO_VERSAO <- paste0("<b>Versão ", VERSAO_SITE, "</b> (", DATA_VERSAO, ") — dados e indicadores 2020–2025, escores de eficiência (DEA) ",
                        "e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da ",
-                       "versão 2 da estimação, em validação com a SES-MT e o COSEMS-MT. Cada valor mostra a fonte e o ano a que se refere.")
+                       "versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT. ",
+                       "Cada valor mostra a fonte e o ano a que se refere.")
 faixa_versao <- function(texto = TEXTO_VERSAO) div(class = "faixa-versao", HTML(texto))
 faixa_construcao <- function(texto) div(class = "faixa-construcao", HTML(texto))
 

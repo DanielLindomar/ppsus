@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510268,Campos de Júlio,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.2107,1.4396,1.3274,1.3175,1.378,1.1965
 510268,Campos de Júlio,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.3734,1.0738,1.0859,1.2697,1.249,1.1231
 510268,Campos de Júlio,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.082,3.0835,2.6706,2.4101,2.3678,2.2391
-510268,Campos de Júlio,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.5601,3.4051,2.9755,2.8869,2.8705,2.782
+510268,Campos de Júlio,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.546,2.5535,2.2954,2.1907,2.142,2.1617
 510268,Campos de Júlio,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2829,0.2761,0.246,0.3617,0.3362,0.3308
 510268,Campos de Júlio,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.4045,2.3464,1.927,1.8464,1.7694,1.7092
 510268,Campos de Júlio,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

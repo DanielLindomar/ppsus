@@ -95,7 +95,10 @@ BRUTAS = {
     "fte_enfermeiros_sus": ("Enfermeiros com atendimento SUS, em equivalentes de 40 h semanais (média anual)", "FTE", "CNES", "capacidade"),
     "fte_tec_enfermagem_sus": ("Técnicos e auxiliares de enfermagem com atendimento SUS (FTE 40 h, média anual)", "FTE", "CNES", "capacidade"),
     "fte_dentistas_sus": ("Cirurgiões-dentistas com atendimento SUS (FTE 40 h, média anual)", "FTE", "CNES", "capacidade"),
-    "fte_acs": ("Agentes comunitários de saúde (FTE 40 h, média anual)", "FTE", "CNES", "capacidade"),
+    "fte_acs": ("Agentes comunitários de saúde — só o CBO 515105 (FTE 40 h, média anual); até a versão 0.2 do site somava a família CBO 5151 (ver fte_5151_familia)", "FTE", "CNES", "capacidade"),
+    "fte_ace": ("Agentes de combate às endemias — CBO 515140 (FTE 40 h, média anual)", "FTE", "CNES", "capacidade"),
+    "fte_5151_outros": ("Demais ocupações da família CBO 5151, exceto ACS e agentes de combate às endemias (atendente de enfermagem, visitador sanitário, agentes indígenas de saúde e de saneamento, socorrista e outras), FTE 40 h, média anual", "FTE", "CNES", "capacidade"),
+    "fte_5151_familia": ("Família CBO 5151 inteira (fte_acs + fte_ace + fte_5151_outros), FTE 40 h, média anual — valor publicado como agentes comunitários de saúde até a versão 0.2 do site", "FTE", "CNES", "capacidade"),
     "fte_total_sus": ("Total de profissionais com atendimento SUS (FTE 40 h, média anual)", "FTE", "CNES", "capacidade"),
     "leitos_sus": ("Leitos de internação disponíveis ao SUS (média das competências do ano)", "leitos", "CNES", "capacidade"),
     "leitos_uti_sus": ("Leitos de UTI disponíveis ao SUS (média anual; sub-registro conhecido)", "leitos", "CNES", "capacidade"),
@@ -166,7 +169,7 @@ CATALOGO = [
      "Catálogo dos indicadores publicados: identificador, rótulo, grupo, unidade, formato, sentido (+1 maior é melhor; −1 menor é melhor; 0 contexto), fonte, fórmula, nota, último ano disponível e descrição curta.",
      "id", "—", "Projeto PPSUS-MT", "01_preparar_dados.py"),
     ("dados/painel_municipal_dicionario.csv", "Dicionários e referências",
-     "Dicionário das 114 colunas de painel_municipal_2020_2025.csv: descrição, unidade, fonte e bloco temático; indica o identificador do indicador do site quando a coluna é um deles.",
+     "Dicionário das {n_colunas_painel} colunas de painel_municipal_2020_2025.csv: descrição, unidade, fonte e bloco temático; indica o identificador do indicador do site quando a coluna é um deles.",
      "coluna", "—", "Projeto PPSUS-MT", "05_downloads.py"),
     ("dados/municipios_mt.csv", "Dicionários e referências",
      "Os 142 municípios de Mato Grosso: códigos IBGE de 6 e 7 dígitos, nome, slug usado nas páginas, região de saúde, macrorregião, população 2025 e existência de hospital SUS em 2025.",
@@ -326,6 +329,7 @@ def main() -> None:
             with open(f, encoding="utf-8") as fh:
                 nlin = sum(1 for _ in fh) - 1
             ncol, nbytes = len(hdr), f.stat().st_size
+        desc = desc.replace("{n_colunas_painel}", str(len(colunas)))  # número de colunas lido do painel gravado pelo script 01
         cat.append(dict(arquivo=arq, grupo=grupo, descricao=desc, chave=chave, periodo=periodo, fonte=fonte,
                         linhas=nlin, colunas=ncol, bytes=nbytes, gerado_por=script))
     cat = pd.DataFrame(cat)

@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510795,Tangará da Serra,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.928,1.056,1.1563,0.9987,1.0263,1.1098
 510795,Tangará da Serra,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8749,1.055,1.0584,1.0237,0.9732,0.9416
 510795,Tangará da Serra,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.5866,3.0028,3.0632,3.1665,3.2274,3.086
-510795,Tangará da Serra,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.8182,1.8009,1.6896,1.8658,1.7857,1.7397
+510795,Tangará da Serra,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,0.8348,0.8021,0.7579,0.7218,0.7019,0.6893
 510795,Tangará da Serra,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1923,0.198,0.2029,0.2062,0.2021,0.2079
 510795,Tangará da Serra,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.2423,1.1614,0.8698,0.8885,1.3335,1.5212
 510795,Tangará da Serra,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),5,12,2,0,0,0

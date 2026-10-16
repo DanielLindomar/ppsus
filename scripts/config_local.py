@@ -10,6 +10,8 @@ Se nenhum dos dois existir, o script para com uma mensagem explicando o que conf
 Chaves usadas
   PPSUS_PGPASS   arquivo de uma linha com a senha do PostgreSQL local (usuário airflow)
   PPSUS_DIC_V2   dicionário das tabelas-base da estimação DEA v2 (Markdown; opcional)
+  PPSUS_DIC_V21  dicionário das tabelas-base da estimação DEA v2.1 (Markdown; opcional; na falta dele,
+                 o script 06 usa PPSUS_DIC_V2)
 """
 from __future__ import annotations
 

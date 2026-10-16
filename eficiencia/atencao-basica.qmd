@@ -19,7 +19,7 @@ b_boot <- param_ef(paste0("b_bootstrap_", M), NA)
 
 ```{r}
 css_eficiencia()
-faixa_versao_ef()
+faixa_versao_ef(nota_curta = FALSE)
 nav_eficiencia("atencao-basica.html")
 secoes_pagina(c(modelo = "O que compara", panorama = paste("Panorama", A), mapa = "Mapa", regioes = "Por região",
                 municipios = "Municípios", potencial = "Potencial de melhoria", pares = "Pares mais usados",
@@ -28,13 +28,19 @@ secoes_pagina(c(modelo = "O que compara", panorama = paste("Panorama", A), mapa 
 
 A atenção básica é a porta de entrada do SUS e a parte do sistema mais diretamente sob gestão municipal. Este modelo pergunta: **com o gasto, os profissionais e as equipes de atenção primária que mantém, quanto cada município produz em atendimentos, visitas domiciliares e vacinação, comparado aos municípios que mais produzem com recursos semelhantes?** Todos os valores estão por mil habitantes, o que permite comparar municípios de portes diferentes. Para interpretar faixas, intervalos, pares e metas, veja [Como ler](index.qmd#como-ler).
 
+```{r}
+nota_versao_ef(extra = if (nzchar(VERSAO_ANT_EF)) sprintf(
+  "Por isso, escores, faixas, pares e metas desta página podem diferir dos publicados na versão %s (%s).",
+  sub("^v", "", VERSAO_ANT_EF), DATA_ANT_EF))
+```
+
 ## O que o modelo compara {#modelo}
 
 ```{r}
 bloco_especificacao(M)
 ```
 
-DEA com retornos variáveis de escala, orientada à produção (quanto a mais se poderia produzir com os mesmos recursos), uma fronteira por ano, 2020–`r A`; escore corrigido por bootstrap`r if (is.numeric(b_boot)) paste0(" (", num(b_boot), " réplicas)") else ""`. Despesa liquidada nas subfunções de atenção básica (301) e suporte profilático e terapêutico (303) do SIOPS, em R$ de 2025 (IPCA); profissionais em equivalente de 40 horas semanais (CNES); produção do SISAB anualizada quando há meses faltantes; doses sem as vacinas contra a COVID-19.
+DEA com retornos variáveis de escala, orientada à produção (quanto a mais se poderia produzir com os mesmos recursos), uma fronteira por ano, 2020–`r A`; escore corrigido por bootstrap`r if (is.numeric(b_boot)) paste0(" (", num(b_boot), " réplicas)") else ""`. Despesa liquidada nas subfunções de atenção básica (301) e suporte profilático e terapêutico (303) do SIOPS, em R$ de 2025 (IPCA); profissionais em equivalente de 40 horas semanais (CNES), com os agentes comunitários de saúde contados só no CBO 515105 (sem os agentes de combate às endemias, os agentes indígenas e as demais ocupações da família 5151); produção do SISAB anualizada quando há meses faltantes; doses sem as vacinas contra a COVID-19.
 
 ## Panorama `r A` {#panorama}
 
@@ -107,6 +113,7 @@ Média geométrica anual da aproximação às melhores práticas por região de 
 ## Ressalvas deste modelo {#ressalvas}
 
 ::: {.ef-ressalva}
+`r ressalva_versao_m1()`
 - A produção do SISAB depende do registro das equipes: meses faltantes são anualizados, e municípios com SISAB incompleto ou implausível são sinalizados (*registro a verificar*) e não servem de par.
 - A classificação da despesa por subfunção é pouco confiável em alguns municípios (gasto de atenção básica lançado em outras subfunções); nesses casos a meta financeira não é publicada.
 - Visitas domiciliares muito baixas recebem apenas um sinal informativo (piso de trabalho homologado em 08/10/2026), sem efeito sobre pares e metas.

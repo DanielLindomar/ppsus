@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510060,Alto Taquari,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7644,0.9121,0.9409,1.0273,1.0933,1.0314
 510060,Alto Taquari,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.1605,1.5263,1.2913,1.387,1.3949,1.2175
 510060,Alto Taquari,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.4641,1.5211,1.6352,1.825,2.1035,2.0561
-510060,Alto Taquari,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.9866,3.2051,2.9806,2.8114,2.9021,2.6732
+510060,Alto Taquari,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.1261,2.1029,2.1249,2.0404,1.973,1.6982
 510060,Alto Taquari,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4338,0.3873,0.2825,0.2671,0.2593,0.2644
 510060,Alto Taquari,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.2456,1.8549,1.8342,1.7805,1.7285,1.7403
 510060,Alto Taquari,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

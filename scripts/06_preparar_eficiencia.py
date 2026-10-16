@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-06_preparar_eficiencia.py — Observatório PPSUS-MT, seção "Eficiência" (versão 0.2 do site)
+06_preparar_eficiencia.py — Observatório PPSUS-MT, seção "Eficiência" (versão 0.2.1 do site)
 
-Lê os resultados da versão 2 da estimação DEA/Malmquist no PostgreSQL local (schema `dea`,
-SEMPRE versao = 'v2'; somente leitura) e grava o contrato de dados da seção 2 de
-_planejamento/BRIEF_EFICIENCIA.md em dados_site/eficiencia/ (CSV UTF-8, vírgula, decimal
-ponto, vazio = indisponível) e uma cópia para download em arquivos/dados/eficiencia/.
+Lê os resultados de UMA versão da estimação DEA/Malmquist no PostgreSQL local (schema `dea`,
+somente leitura; padrão versao = 'v2.1', escolhida por --versao) e grava o contrato de dados da
+seção 2 de _planejamento/BRIEF_EFICIENCIA.md em dados_site/eficiencia/ (CSV UTF-8, vírgula,
+decimal ponto, vazio = indisponível) e uma cópia para download em arquivos/dados/eficiencia/.
+
+Versões conhecidas (VERSOES, abaixo): 'v2' (08/10/2026, publicada na versão 0.2 do site) e
+'v2.1' (16/10/2026, decisão 13 do coordenador = opção (c): o modelo M1 reestimado com o insumo
+de agentes comunitários restrito ao CBO 515105; M0, M2, M2A, M3, H e o painel de alta
+complexidade são cópia exata da v2). A v2 continua no banco e pode ser regerada com --versao v2.
 
 Arquivos do contrato
   fichas_municipio.csv   município × modelo (M1, M0, M2, M2A) × ano 2020–2025
@@ -29,12 +34,17 @@ A especificação principal de cada modelo é lida do banco no momento da execu�
 (dea.especificacoes, principal = TRUE); nenhum nome de produto do modelo de hospitais é fixado
 aqui. O script é reexecutável: basta rodar de novo depois de qualquer reprocessamento do DEA.
 
-Uso (a partir da raiz do repositório):  python scripts/06_preparar_eficiencia.py
+Uso (a partir da raiz do repositório):
+    python scripts/06_preparar_eficiencia.py                 # versão padrão (v2.1)
+    python scripts/06_preparar_eficiencia.py --versao v2     # regera a partir da v2 (08/10/2026)
+    (alternativa: variável de ambiente PPSUS_VERSAO_DEA)
 Requisitos: Python 3.12, psycopg2, pandas.
 """
 from __future__ import annotations
 
+import argparse
 import datetime as dt
+import os
 import hashlib
 import re
 import shutil
@@ -61,10 +71,30 @@ SAIDA = DS / "eficiencia"
 DOWN = RAIZ / "arquivos" / "dados" / "eficiencia"
 from config_local import caminho  # noqa: E402  (caminhos locais fora do repositório: .env.local ou variáveis de ambiente)
 SENHA = caminho("PPSUS_PGPASS")
-DIC_MD = caminho("PPSUS_DIC_V2", obrigatorio=False) or RAIZ / "_sem_dicionario_v2.md"
 
-VERSAO = "v2"
-DATA_RESULTADOS = "08/10/2026"
+# Versões da estimação que o site sabe publicar. `dic` = chave do .env.local com o DICIONARIO_V2.md da pasta de código
+# da versão (a v2.1 tem cópia própria, com a descrição corrigida do insumo de ACS); `nota_versao` aparece no site.
+VERSOES = {
+    "v2": dict(
+        data="08/10/2026", dic="PPSUS_DIC_V2", versao_anterior="", data_versao_anterior="",
+        relatorio_tecnico="Resultados DEA v2 (08/10/2026)", modelos_reestimados="todos", nota_versao=""),
+    "v2.1": dict(
+        data="16/10/2026", dic="PPSUS_DIC_V21", versao_anterior="v2", data_versao_anterior="08/10/2026",
+        relatorio_tecnico="Resultados DEA v2 (08/10/2026)", modelos_reestimados="M1",
+        nota_versao=("Versão 2.1 (16/10/2026): o insumo de agentes comunitários de saúde do modelo de atenção básica passou a "
+                     "contar apenas o ACS (CBO 515105); a versão 2 somava toda a família 5151, que inclui agentes de combate às "
+                     "endemias e agentes indígenas, e isso penalizava municípios com esses profissionais. Os demais modelos não mudaram.")),
+}
+_ap = argparse.ArgumentParser(description="Prepara dados_site/eficiencia/ a partir de uma versão da estimação DEA (schema dea).")
+_ap.add_argument("--versao", default=os.environ.get("PPSUS_VERSAO_DEA", "v2.1"), choices=sorted(VERSOES),
+                 help="versão dos resultados no schema dea (padrão: v2.1)")
+_ARGS, _ = _ap.parse_known_args()
+VERSAO = _ARGS.versao
+INFO_VERSAO = VERSOES[VERSAO]
+DATA_RESULTADOS = INFO_VERSAO["data"]
+DIC_MD = (caminho(INFO_VERSAO["dic"], obrigatorio=False) or caminho("PPSUS_DIC_V2", obrigatorio=False)
+          or RAIZ / "_sem_dicionario_v2.md")
+ROTULO_RESULTADOS = f"Resultados DEA {VERSAO} ({DATA_RESULTADOS})"
 ANOS = list(range(2020, 2026))
 ANO_META = 2025
 MODELOS_MUN = ["M1", "M0", "M2", "M2A"]
@@ -199,7 +229,8 @@ def limpar_regiao(nome) -> str | None:
 # ----------------------------------------------------------------------------
 # Textos públicos: sem nomes de tabelas, colunas ou scripts internos
 # ----------------------------------------------------------------------------
-PADRAO_INTERNO = re.compile(r"\b(?:dea|mart|trusted|raw|externo)\.[a-z_*]+|\b\w+\.py\b")
+PADRAO_INTERNO = re.compile(r"\b(?:dea|mart|trusted|raw|externo)\.[a-z_*]+|\b\w+\.py\b|\b\w+\.sql\b")
+PADRAO_CAMINHO_LOCAL = re.compile(r"\b[A-Za-z]:\\|ppsus_repo|ppsus_db")
 FLAG_GESTOR = {
     "flag_quebra_registro": "quebra de registro na série",
     "flag_sisab_nao_publicavel": "SISAB com meses insuficientes",
@@ -236,6 +267,7 @@ SUBST_INTERNOS = [
     (r" ?\(dea\.[a-z_]+\)", ""),
     (r"documentada em dea\.parametros", "documentada em parametros.csv"),
     (r"\b\w+\.py\b", "scripts do projeto"),
+    (r"\b[\w./-]+\.sql\b", "scripts do projeto"),
     (r"\b(?:dea|mart|trusted|raw|externo)\.[a-z_*]+", "base do projeto"),
 ]
 
@@ -257,14 +289,22 @@ def texto_publico(x):
     return sem_nomes_internos(x)
 
 
-FONTE_DEA = f"Projeto PPSUS-MT — estimação DEA v2 ({DATA_RESULTADOS})"
+FONTE_DEA = f"Projeto PPSUS-MT — estimação DEA {VERSAO} ({DATA_RESULTADOS})"
+
+
+def sem_versao_na_fonte(f):
+    """'CNES (CBO 515105; v2.1)' → 'CNES (CBO 515105)': a versão da estimação fica nos metadados e na nota de versão,
+    não no rótulo da fonte do sistema de origem."""
+    if not isinstance(f, str):
+        return f
+    return re.sub(r";\s*v\d+(?:\.\d+)?\)", ")", f)
 
 
 def fonte_publica(f):
     """Fonte do dicionário em rótulo público (sistema de origem ou o projeto), nunca o nome da tabela ou do script."""
     if not isinstance(f, str) or not f.strip():
         return f
-    s = f.strip()
+    s = sem_versao_na_fonte(f.strip())
     m = re.match(r"^mart\.[a-z_]+ \((.*)\)$", s)
     if m:
         return m.group(1)
@@ -277,7 +317,7 @@ def fonte_publica(f):
     if re.search(r"\.py\b", s) or s in ("calculado", "derivado", "fichas"):
         return "Projeto PPSUS-MT (calculado)"
     if s.startswith("ESPEC"):
-        return "Projeto PPSUS-MT — especificação v2"
+        return f"Projeto PPSUS-MT — especificação {VERSAO}"
     if s.startswith("dea."):
         return FONTE_DEA + ("; SIH" if "SIH" in s else "")
     return sem_nomes_internos(s)
@@ -406,7 +446,7 @@ def tabela_especificacoes(con, princ: pd.DataFrame) -> pd.DataFrame:
                     modelo=p.modelo, nome_modelo=NOME_MODELO.get(p.modelo, p.modelo), especificacao=p.variante,
                     grupo=grupo, rotulo_grupo=ROTULO_GRUPO.get(grupo) if grupo else None, tipo=tipo, ordem=ordem,
                     variavel=var, nome_gerencial=(r.nome_gerencial if r is not None else var),
-                    unidade=(r.unidade if r is not None else None), fonte=(r.fonte if r is not None else None),
+                    unidade=(r.unidade if r is not None else None), fonte=(sem_versao_na_fonte(r.fonte) if r is not None else None),
                     orientacao=p.orientacao, retornos=p.rts, b_bootstrap=p.b_bootstrap, anos=p.anos,
                     descricao_especificacao=p.descricao,
                 ))
@@ -572,7 +612,7 @@ def preparar_metas_mun(con, mun: pd.DataFrame) -> pd.DataFrame:
         "modelo": t.modelo, "ano": t.ano.astype(int), "variavel": t.variavel, "tipo": t.tipo,
         "nome_gerencial": t.nome_gerencial, "unidade": t.unidade,
         "unidade_abs": t.unidade.map(lambda u: re.sub(r"\s*por mil hab\.?$", "", u).strip() if isinstance(u, str) else u),
-        "fonte": t.fonte, "populacao": t.populacao,
+        "fonte": t.fonte.map(sem_versao_na_fonte), "populacao": t.populacao,
         "observado": t.observado, "meta_radial": t.meta_radial, "meta_intermediaria": t.meta_intermediaria,
         "observado_abs": t.observado_abs, "meta_radial_abs": t.meta_radial_abs, "meta_intermediaria_abs": t.meta_intermediaria_abs,
         "potencial_unidades": t.potencial_unidades, "potencial_pct": t.potencial_pct, "potencial_reais_2025": t.potencial_reais_2025,
@@ -1138,7 +1178,7 @@ def preparar_dicionario(dic: pd.DataFrame, arquivos: dict[str, pd.DataFrame]) ->
                 n = (n[:1].upper() + n[1:]) if n else c.replace("_", " ")
                 origem = "DICIONARIO_V2.md"
             else:
-                n, u, d, f = c.replace("_", " "), "—", "ver relatório técnico Resultados DEA v2 (08/10/2026)", "dea.*"
+                n, u, d, f = c.replace("_", " "), "—", f"ver relatório técnico {INFO_VERSAO['relatorio_tecnico']}", "dea.*"
                 origem = "sem definição"
                 n_fallback += 1
             linhas.append(dict(arquivo=arq, campo=c, nome_gerencial=n, unidade=u, definicao=d, fonte=f, origem_definicao=origem))
@@ -1272,8 +1312,8 @@ DESCR = {
     "malmquist_regiao.csv": ("Malmquist agregado (média geométrica) por modelo, região de saúde e estado: transições anuais e janelas 2020–2022, 2022–2025 e 2020–2025.", "modelo + grupo + nivel + co_regsaud + periodo", "2020–2025"),
     "especificacoes_modelos.csv": ("Recursos (insumos) e produção (produtos) de cada modelo na especificação principal vigente, com nomes gerenciais, unidades e fontes.", "modelo + grupo + tipo + variavel", "—"),
     "sensibilidade.csv": ("Robustez: correlação de Spearman e mudança de tercil entre cada variante e a especificação principal.", "modelo + variante + ano/periodo", "2020–2025"),
-    "parametros.csv": ("Parâmetros e limiares de trabalho da estimação v2 (ex.: fração da meta intermediária, limiares de comparabilidade).", "chave + modelo", "—"),
-    "metadados.csv": ("Metadados da geração: versão dos resultados, data, especificações principais e contagens.", "item", "—"),
+    "parametros.csv": (f"Parâmetros e limiares de trabalho da estimação {VERSAO} (ex.: fração da meta intermediária, limiares de comparabilidade).", "chave + modelo", "—"),
+    "metadados.csv": ("Metadados da geração: versão dos resultados, data, nota de versão, especificações principais e contagens.", "item", "—"),
     "dicionario_eficiencia.csv": ("Dicionário de todos os campos dos arquivos de eficiência: nome gerencial, unidade, definição e fonte.", "arquivo + campo", "—"),
 }
 
@@ -1283,8 +1323,11 @@ def escrever_readme(arqs: dict[str, pd.DataFrame], cont: dict, espec: pd.DataFra
     L = [
         "# dados_site/eficiencia/ — dicionário curto",
         "",
-        f"Arquivos gerados por `scripts/06_preparar_eficiencia.py` a partir dos resultados da **versão 2** da estimação DEA/Malmquist "
-        f"(schema `dea` do PostgreSQL local, `versao = 'v2'`, somente leitura; Resultados DEA v2, {DATA_RESULTADOS}). "
+        f"Arquivos gerados por `scripts/06_preparar_eficiencia.py` a partir dos resultados da **versão {VERSAO.lstrip('v')}** da estimação DEA/Malmquist "
+        f"(schema `dea` do PostgreSQL local, `versao = '{VERSAO}'`, somente leitura; {ROTULO_RESULTADOS}). "
+        + (f"{INFO_VERSAO['nota_versao']} A versão anterior ({INFO_VERSAO['versao_anterior']}, {INFO_VERSAO['data_versao_anterior']}) "
+           f"continua no banco e pode ser regerada com `--versao {INFO_VERSAO['versao_anterior']}`. " if INFO_VERSAO["nota_versao"] else "")
+        +
         "CSV em UTF-8, separador vírgula, decimal ponto, vazio = indisponível ou não publicável. Booleanos em 0/1. "
         "`cnes` é texto de 7 dígitos (ler com `colClasses = list(character = 'cnes')` no `data.table::fread`). "
         "Uma cópia de cada arquivo fica em `arquivos/dados/eficiencia/` para download, com `catalogo_eficiencia.csv`.",
@@ -1350,7 +1393,7 @@ def copiar_downloads(arqs: dict[str, pd.DataFrame]) -> None:
         shutil.copyfile(SAIDA / nome, DOWN / nome)
         d, k, p = DESCR.get(nome, ("", "", ""))
         linhas.append(dict(arquivo=f"dados/eficiencia/{nome}", descricao=d, chave=k, periodo=p,
-                           fonte="Resultados DEA v2 (08/10/2026) — PPSUS-MT; SIOPS, CNES, SISAB, SI-PNI, SIA, SIH, SIM, SINASC, IBGE",
+                           fonte=f"{ROTULO_RESULTADOS} — PPSUS-MT; SIOPS, CNES, SISAB, SI-PNI, SIA, SIH, SIM, SINASC, IBGE",
                            linhas=len(df), colunas=df.shape[1], bytes=(DOWN / nome).stat().st_size, gerado_por="Observatório PPSUS-MT"))
     cat = pd.DataFrame(linhas)
     cat.to_csv(DOWN / "catalogo_eficiencia.csv", index=False, encoding="utf-8", lineterminator="\n", na_rep="")
@@ -1393,14 +1436,31 @@ def main() -> int:
 
         msg("[6] sensibilidade, parâmetros, metadados")
         sen = ler_tabela(con, "sensibilidade").drop(columns=["versao"])
-        sen = normalizar(sen.sort_values(["modelo", "variante", "ano"]).reset_index(drop=True))
+        # desempate pelo conteúdo da linha: a ordem de retorno do banco não é fixa e não deve sujar o diff entre execuções
+        sen["_desempate"] = sen.apply(lambda s: s.map(lambda v: "" if pd.isna(v) else str(v))).agg("|".join, axis=1)
+        sen = sen.sort_values(["modelo", "variante", "ano", "_desempate"]).drop(columns="_desempate")
+        sen = normalizar(sen.reset_index(drop=True))
         par = ler_tabela(con, "parametros").drop(columns=["versao"]).rename(columns={"valor": "valor_parametro"})
+        # a nota de versão diz quais modelos foram reestimados: confere com o registro do banco (dea.parametros, v21_*)
+        if VERSAO == "v2.1":
+            reest = par.loc[par.chave == "v21_modelos_reestimados", "valor_parametro"]
+            esperado = '["' + '", "'.join(INFO_VERSAO["modelos_reestimados"].split(",")) + '"]'
+            if not len(reest) or reest.iloc[0].strip() != esperado:
+                erro(f"v21_modelos_reestimados no banco ({reest.iloc[0] if len(reest) else 'ausente'}) difere da nota de versão ({esperado})")
+        # parâmetros de documentação interna com caminho da máquina (ex.: pasta do código da v2.1) não são publicados
+        local = par.valor_parametro.astype(str).str.contains(PADRAO_CAMINHO_LOCAL)
+        if local.any():
+            msg("  parâmetros com caminho local fora do arquivo público: %s", ", ".join(sorted(par.chave[local])))
+        par = par[~local]
         par = normalizar(par.sort_values(["modelo", "chave"], na_position="first").reset_index(drop=True))
         dic_db = ler_tabela(con, "dicionario")
     finally:
         con.close()
 
-    meta = [("versao_resultados", VERSAO), ("data_resultados", DATA_RESULTADOS), ("gerado_em", "")]
+    meta = [("versao_resultados", VERSAO), ("data_resultados", DATA_RESULTADOS), ("gerado_em", ""),
+            ("versao_anterior", INFO_VERSAO["versao_anterior"]), ("data_versao_anterior", INFO_VERSAO["data_versao_anterior"]),
+            ("modelos_reestimados", INFO_VERSAO["modelos_reestimados"]), ("relatorio_tecnico", INFO_VERSAO["relatorio_tecnico"]),
+            ("nota_versao", INFO_VERSAO["nota_versao"])]
     for r in princ.itertuples():
         meta.append((f"especificacao_principal_{r.modelo}", r.variante))
     for k, v in specs_mq.items():
@@ -1458,6 +1518,8 @@ def main() -> int:
             achados = sorted(set(m.group(0) for m in PADRAO_INTERNO.finditer(txt)))
             if achados:
                 erro(f"{arq.relative_to(RAIZ).as_posix()}: nomes internos no texto publicado: {', '.join(achados[:8])}")
+            if PADRAO_CAMINHO_LOCAL.search(txt):
+                erro(f"{arq.relative_to(RAIZ).as_posix()}: caminho local da máquina no texto publicado")
 
     msg("Resumo da validação:")
     for k, v in cont.items():

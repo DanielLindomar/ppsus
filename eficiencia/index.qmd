@@ -23,7 +23,7 @@ b_boot <- param_ef("b_bootstrap", NA)
 
 ```{r}
 css_eficiencia()
-faixa_versao_ef()
+faixa_versao_ef(nota_curta = FALSE)
 nav_eficiencia("index.html")
 ```
 
@@ -33,6 +33,10 @@ secoes_pagina(c(`como-ler` = "Como ler", `visao-geral` = paste("Visão geral", A
 ```
 
 Esta seção mostra **quanto cada município, hospital e região de saúde de Mato Grosso produz com os recursos de que dispõe, comparado às melhores práticas observadas no próprio estado**. Os resultados vêm da versão `r sub("^v", "", VERSAO_EF)` da estimação por Análise Envoltória de Dados (DEA) e índice de Malmquist do Projeto PPSUS-MT (`r CITACAO_EF`), para 2020–`r A`, e estão em validação com a SES-MT e o COSEMS-MT. São cinco leituras complementares — **atenção básica**, **sistema municipal consolidado**, **média complexidade** (pela produção local e pela ótica do acesso dos moradores), **hospitais SUS** e **alta complexidade por região de saúde** — além da **evolução da produtividade** ao longo do período. Antes dos números, vale ler como interpretá-los.
+
+```{r}
+nota_versao_ef(extra = '<a href="atencao-basica.html">Ver a atenção básica</a>.')
+```
 
 ## Como ler os resultados {#como-ler}
 

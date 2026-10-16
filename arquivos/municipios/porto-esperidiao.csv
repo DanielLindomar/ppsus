@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510682,Porto Esperidião,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7018,0.6332,0.5664,0.5744,0.7141,1.0161
 510682,Porto Esperidião,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0408,0.9527,1.2828,1.3913,1.3819,1.5117
 510682,Porto Esperidião,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.607,1.7814,2.1766,2.269,2.4393,2.6011
-510682,Porto Esperidião,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.4366,4.7224,5.6027,5.5798,5.3113,5.5839
+510682,Porto Esperidião,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.37,2.6692,3.1115,3.027,3.0491,3.4278
 510682,Porto Esperidião,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.386,0.3852,0.6635,0.758,0.7426,0.7355
 510682,Porto Esperidião,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.1653,0.3285,0.392,0.3927,0.3934,0.3965
 510682,Porto Esperidião,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

@@ -172,7 +172,7 @@ efx_fichas_regioes(A)
 ## Ressalvas {#ressalvas}
 
 ::: {.callout-warning title="Leia antes de interpretar"}
-- **Resultados da versão 2, em validação** com a SES-MT e o COSEMS-MT (Resultados DEA v2, `r EFX_DATA`).
+- **Resultados da versão `r EFX_VERSAO_N`, em validação** com a SES-MT e o COSEMS-MT (`r EFX_ROTULO`, `r EFX_DATA`).
 - **A fuga para outros estados não é observada.** Só há SIH de Mato Grosso: moradores atendidos em Goiás, Rondônia, Pará ou outros estados não entram no acesso, o que o subestima nas regiões de fronteira.
 - **Despesa atribuída à alta complexidade.** A despesa é a municipal (SIOPS, subfunção 302) rateada pelo valor aprovado de alta complexidade; não inclui o gasto estadual e federal direto e, em algumas regiões, é ínfima ou mal classificada.
 - **Registro de UTI no CNES.** Há subregistro de leitos de UTI; o painel usa os leitos validados pelas diárias de UTI do SIH.
@@ -188,5 +188,5 @@ efx_arquivos(c("painel_ac_regiao", "quadrantes_ac", "painel_ac_macro", "fichas_r
 ```
 
 ```{r}
-fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Alta complexidade: Resultados DEA v2 (%s), Projeto PPSUS-MT — painel regional de acesso e produção (SIH/SUS por residência e por local de atendimento, SIA/SUS-APAC, CNES, SIOPS), 2020–2025; escore diagnóstico por DEA orientada ao produto com fronteira única 2020–2025 e intervalo de confiança por subamostragem. ", EFX_DATA))
+fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Alta complexidade: %s (%s), Projeto PPSUS-MT — painel regional de acesso e produção (SIH/SUS por residência e por local de atendimento, SIA/SUS-APAC, CNES, SIOPS), 2020–2025; escore diagnóstico por DEA orientada ao produto com fronteira única 2020–2025 e intervalo de confiança por subamostragem. ", EFX_ROTULO, EFX_DATA))
 ```

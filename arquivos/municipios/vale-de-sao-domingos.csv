@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510835,Vale de São Domingos,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8093,0.8195,0.8884,0.9088,1.0836,2.0954
 510835,Vale de São Domingos,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9725,1.2004,1.4842,1.6351,1.4757,1.5422
 510835,Vale de São Domingos,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.4536,2.8937,3.0992,3.0981,3.354,3.1708
-510835,Vale de São Domingos,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.5841,6.6165,7.4036,7.7453,7.7675,7.2614
+510835,Vale de São Domingos,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.2534,2.9353,3.4435,3.7866,3.8115,3.8036
 510835,Vale de São Domingos,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,1.3852,0.8547,0.8609,1.0327,1.204,0.778
 510835,Vale de São Domingos,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.5995,1.6005,0.8609,0,0,0
 510835,Vale de São Domingos,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

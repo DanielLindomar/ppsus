@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510620,Nova Brasilândia,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.5322,1.9612,1.5387,1.4851,1.7649,1.9942
 510620,Nova Brasilândia,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0512,1.4442,1.4827,1.8088,1.674,1.7911
 510620,Nova Brasilândia,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.3955,3.5914,3.3672,3.7898,4.0021,5.1042
-510620,Nova Brasilândia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.9277,5.1067,4.6846,4.5606,4.0176,3.2762
+510620,Nova Brasilândia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.9422,4.1247,3.7309,3.5971,3.2235,2.374
 510620,Nova Brasilândia,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5256,0.7522,0.763,1.0072,0.7994,0.7913
 510620,Nova Brasilândia,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.4166,3.5558,3.3062,3.3402,1.1238,0
 510620,Nova Brasilândia,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

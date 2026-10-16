@@ -97,9 +97,13 @@ tam_ef <- if (is.null(cat_e)) NA_real_ else sum(cat_e$bytes, na.rm = TRUE)
 md_ef <- file.path(RAIZ, "arquivos", "dados", "eficiencia", "metadados.csv")
 meta_ef <- if (file.exists(md_ef)) data.table::fread(md_ef, encoding = "UTF-8", colClasses = "character") else NULL
 data_ef <- if (is.null(meta_ef)) "" else meta_ef$valor[meta_ef$item == "data_resultados"][1]
+versao_ef <- if (is.null(meta_ef)) "v2" else meta_ef$valor[meta_ef$item == "versao_resultados"][1]
+nota_ef <- if (is.null(meta_ef) || !any(meta_ef$item == "nota_versao")) "" else meta_ef$valor[meta_ef$item == "nota_versao"][1]
+nota_ef <- if (is.na(nota_ef) || !nzchar(nota_ef)) "" else paste0(" ", nota_ef, " A nota completa está em [Eficiência](../eficiencia/index.html#versao).")
+n_col_painel <- length(names(data.table::fread(file.path(RAIZ, "arquivos", "dados", "painel_municipal_2020_2025.csv"), nrows = 0, encoding = "UTF-8")))
 ```
 
-Resultados da versão 2 da estimação de eficiência (Resultados DEA v2, `r data_ef`), publicados na seção [Eficiência](../eficiencia/index.html) e nos perfis municipais: `r n_ef` arquivos (`r fmt_bytes(tam_ef)` no total), no mesmo formato dos demais (CSV UTF-8, separador vírgula, decimal ponto, célula vazia = indisponível ou não publicável; booleanos em 0/1). Chaves de junção: `cod_mun6` + `modelo` + `ano` nos municípios (modelos M1 atenção básica, M0 consolidado, M2 média complexidade e M2A média complexidade pela ótica do acesso), `cnes` + `ano` nos hospitais (CNES como texto de 7 dígitos) e `co_regsaud` + `ano` nas regiões de saúde. Valores monetários em R$ de 2025 (IPCA).
+Resultados da versão `r sub("^v", "", versao_ef)` da estimação de eficiência (Resultados DEA `r versao_ef`, `r data_ef`), publicados na seção [Eficiência](../eficiencia/index.html) e nos perfis municipais: `r n_ef` arquivos (`r fmt_bytes(tam_ef)` no total), no mesmo formato dos demais (CSV UTF-8, separador vírgula, decimal ponto, célula vazia = indisponível ou não publicável; booleanos em 0/1). Chaves de junção: `cod_mun6` + `modelo` + `ano` nos municípios (modelos M1 atenção básica, M0 consolidado, M2 média complexidade e M2A média complexidade pela ótica do acesso), `cnes` + `ano` nos hospitais (CNES como texto de 7 dígitos) e `co_regsaud` + `ano` nas regiões de saúde. Valores monetários em R$ de 2025 (IPCA).`r nota_ef`
 
 ```{r}
 tabela_downloads_eficiencia()
@@ -126,7 +130,7 @@ tabela_dicionario_eficiencia()
 
 ## Dicionário dos indicadores {#dicionario}
 
-Os `r n_ind` indicadores do site, por grupo: identificador usado nos arquivos, descrição, unidade, fonte, sentido de leitura (▲ maior é melhor, ▼ menor é melhor, ou contexto) e último ano disponível. Clique em ▶ para ver a fórmula e a nota de cada um, e no nome para abrir a página do indicador. O mesmo conteúdo está em [`indicadores_dicionario.csv`](../arquivos/dados/indicadores_dicionario.csv); as 114 colunas do painel largo estão descritas em [`painel_municipal_dicionario.csv`](../arquivos/dados/painel_municipal_dicionario.csv).
+Os `r n_ind` indicadores do site, por grupo: identificador usado nos arquivos, descrição, unidade, fonte, sentido de leitura (▲ maior é melhor, ▼ menor é melhor, ou contexto) e último ano disponível. Clique em ▶ para ver a fórmula e a nota de cada um, e no nome para abrir a página do indicador. O mesmo conteúdo está em [`indicadores_dicionario.csv`](../arquivos/dados/indicadores_dicionario.csv); as `r n_col_painel` colunas do painel largo estão descritas em [`painel_municipal_dicionario.csv`](../arquivos/dados/painel_municipal_dicionario.csv).
 
 ```{r}
 tabela_dicionario()

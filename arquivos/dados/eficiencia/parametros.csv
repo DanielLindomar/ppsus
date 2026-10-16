@@ -25,6 +25,9 @@ cbo_medicos_aps,"""[""""2251""""]""",json,—,M1,ESPEC §1.1,família CBO dos m�
 limiar_301_303,0.1841,float,proporção,M1,item 2; D009; T02,"P5 de desp_301_303/desp_total no painel balanceado (recalculado; abort se |P5 − 0,184| > 0,005)",2026-10-07 17:17:36,aprovado com a ESPEC_V2 (revisão; item 11),
 limiar_301_303_tolerancia,0.005,float,proporção,M1,ESPEC §1.1,tolerância do recálculo do P5,2026-10-07 17:17:33,aprovado com a ESPEC_V2 (revisão; item 11),
 tipo_unidade_aps,"""[""""01"""", """"02"""", """"71"""", """"72""""]""",json,—,M1,ESPEC §1.1,"tipos de unidade CNES da APS (posto, centro de saúde/UBS, centro de apoio, unidade móvel)",2026-10-07 17:17:33,aprovado com a ESPEC_V2 (revisão; item 11),
+v21_decisao,"decisão 13 do coordenador = opção (c), definição (i), 16/10/2026: reestimar o M1 com o insumo de agentes comunitários restrito ao CBO 515105 e publicar como v2.1; a v2 continua no banco",text,—,M1,scripts do projeto,documentação da versão v2.1 (decisão 13),2026-10-16 08:36:47,decisão do coordenador de 16/10/2026,opção (c) aprovada pelo coordenador em 16/10/2026
+v21_insumo_fte_acs,fte_acs = FTE SUS (média anual) do CBO 515105 (agente comunitário de saúde); na v2 era a família CBO 5151 (hoje em fte_5151_familia). Mart corrigido por scripts do projeto em 16/10/2026,text,—,M1,scripts do projeto,documentação da versão v2.1 (decisão 13),2026-10-16 08:36:47,decisão do coordenador de 16/10/2026,opção (c) aprovada pelo coordenador em 16/10/2026
+v21_modelos_reestimados,"[""M1""]",json,—,M1,scripts do projeto,documentação da versão v2.1 (decisão 13),2026-10-16 08:36:47,decisão do coordenador de 16/10/2026,opção (c) aprovada pelo coordenador em 16/10/2026
 limiar_sisab_implausivel,0.1,float,fração da mediana do ano,"M1, M0",item 11; T03 §4.3,"atendimentos individuais anualizados por mil hab. < 0,10 × mediana do ano ⇒ implausível",2026-10-07 17:17:33,aprovado com a ESPEC_V2 (revisão; item 11),
 limiar_sisab_nao_publicavel_meses,9,int,meses,"M1, M0",D011,SISAB com < 9 meses ⇒ não publicável,2026-10-07 17:17:33,aprovado com a ESPEC_V2 (revisão; item 11),
 piso_visitas_domiciliares,informativo,text,—,"M1, M0",item 3; T03; ESPEC §1.1 (limiar de trabalho),"piso de visitas domiciliares só informativo: flag_visitas_baixas = visitas por mil hab. < limiar_sisab_implausivel × mediana do ano; sem efeito sobre pares, metas ou publicação",2026-10-08 08:03:17,homologado pelo coordenador em 08/10/2026,limiar de trabalho 2/4: piso de visitas domiciliares só informativo (flag_visitas_baixas) — homologado como recomendado (decisão do coordenador de 08/10/2026)
@@ -67,27 +70,29 @@ meta_intermediaria_fracao,0.5,float,fração,todos,item 11 (limiar de trabalho),
 meta_intermediaria_regra,fracao_lacuna,text,—,todos,item 11; 6.11; T14 §4.1 (ii),meta intermediária = observado + fração × (meta − observado); alternativa (i) mediana dos pares na banda gravada como registro,2026-10-07 17:17:33,homologado pelo coordenador em 08/10/2026,limiar de trabalho 1/4: regra da fração da lacuna (revisão 6.11) — homologada como recomendada (decisão do coordenador de 08/10/2026)
 semente,20261007,int,—,todos,BRIEF_V2 §4,semente única de todos os sorteios da v2 (numpy.random.default_rng),2026-10-07 17:17:33,aprovado com a ESPEC_V2 (revisão; item 11),
 taxonomia_versao,v2-2026-10,text,—,todos,T05,versão da taxonomia de sinais,2026-10-07 17:17:33,aprovado com a ESPEC_V2 (revisão; item 11),
+v21_modelos_copiados_da_v2,"[""M0"", ""M2"", ""M2A"", ""M3"", ""H"", ""AC""]",json,—,todos,scripts do projeto,documentação da versão v2.1 (decisão 13),2026-10-16 08:36:47,decisão do coordenador de 16/10/2026,opção (c) aprovada pelo coordenador em 16/10/2026
+v21_regra_copia,"modelos que não usam fte_acs: linhas v2.1 = cópia exata das linhas v2 (scripts do projeto); bases v2.1 = cópia da v2 com fte_acs/fte_acs_p1000/zero_fte_acs do CBO 515105 e as colunas de auditoria fte_ace, fte_5151_outros, fte_5151_familia (scripts do projeto)",text,—,todos,scripts do projeto,documentação da versão v2.1 (decisão 13),2026-10-16 08:36:47,decisão do coordenador de 16/10/2026,opção (c) aprovada pelo coordenador em 16/10/2026
 b_bootstrap_H,2000,text,—,—,calculado,parâmetro calculado (b_bootstrap_H),2026-10-08 08:26:10,calculado por script,
 b_bootstrap_M0,2000,text,—,—,calculado,parâmetro calculado (b_bootstrap_M0),2026-10-07 19:52:29,calculado por script,
-b_bootstrap_M1,2000,text,—,—,calculado,parâmetro calculado (b_bootstrap_M1),2026-10-07 17:47:49,calculado por script,
+b_bootstrap_M1,2000,text,—,—,calculado,parâmetro calculado (b_bootstrap_M1),2026-10-16 08:37:05,calculado por script,
 b_bootstrap_M2,2000,text,—,—,calculado,parâmetro calculado (b_bootstrap_M2),2026-10-07 20:19:59,calculado por script,
 b_bootstrap_M2A,2000,text,—,—,calculado,parâmetro calculado (b_bootstrap_M2A),2026-10-07 20:44:18,calculado por script,
 b_bootstrap_M3,2000,text,—,—,calculado,parâmetro calculado (b_bootstrap_M3),2026-10-07 20:07:14,calculado por script,
 indice_capacidade_ac_v2_medias_pool,"{""leitos_uti_sus_validado"": 32.7762, ""equip_ac_sus"": 41.7717, ""n_habilitacoes_ac"": 6.3576}",json,—,—,calculado,parâmetro calculado (indice_capacidade_ac_v2_medias_pool),2026-10-07 20:07:14,calculado por script,
 m_ordem_m_H,30,text,—,—,calculado,parâmetro calculado (m_ordem_m_H),2026-10-08 08:26:10,calculado por script,
 m_ordem_m_M0,30,text,—,—,calculado,parâmetro calculado (m_ordem_m_M0),2026-10-07 19:52:19,calculado por script,
-m_ordem_m_M1,30,text,—,—,calculado,parâmetro calculado (m_ordem_m_M1),2026-10-07 17:47:44,calculado por script,
+m_ordem_m_M1,30,text,—,—,calculado,parâmetro calculado (m_ordem_m_M1),2026-10-16 08:36:59,calculado por script,
 m_ordem_m_M2,30,text,—,—,calculado,parâmetro calculado (m_ordem_m_M2),2026-10-07 20:19:59,calculado por script,
 m_ordem_m_M2A_com_leito,30,text,—,—,calculado,parâmetro calculado (m_ordem_m_M2A_com_leito),2026-10-07 20:44:18,calculado por script,
 m_ordem_m_M2A_sem_leito,10,text,—,—,calculado,parâmetro calculado (m_ordem_m_M2A_sem_leito),2026-10-07 20:44:18,calculado por script,
 m_ordem_m_M3,30,text,—,—,calculado,parâmetro calculado (m_ordem_m_M3),2026-10-07 20:07:14,calculado por script,
 sep_n_splits_perm_H,5,text,—,—,calculado,parâmetro calculado (sep_n_splits_perm_H),2026-10-08 09:00:16,calculado por script,
 sep_n_splits_perm_M0,2,text,—,—,calculado,parâmetro calculado (sep_n_splits_perm_M0),2026-10-07 22:45:28,calculado por script,
-sep_n_splits_perm_M1,2,text,—,—,calculado,parâmetro calculado (sep_n_splits_perm_M1),2026-10-08 00:22:53,calculado por script,
+sep_n_splits_perm_M1,2,text,—,—,calculado,parâmetro calculado (sep_n_splits_perm_M1),2026-10-16 10:00:15,calculado por script,
 sep_n_splits_perm_M2,5,text,—,—,calculado,parâmetro calculado (sep_n_splits_perm_M2),2026-10-07 22:02:52,calculado por script,
 sep_n_splits_perm_M3,5,text,—,—,calculado,parâmetro calculado (sep_n_splits_perm_M3),2026-10-07 20:48:26,calculado por script,
 sep_r_perm_H,99,text,—,—,calculado,parâmetro calculado (sep_r_perm_H),2026-10-08 09:00:14,calculado por script,
 sep_r_perm_M0,19,text,—,—,calculado,parâmetro calculado (sep_r_perm_M0),2026-10-07 22:45:28,calculado por script,
-sep_r_perm_M1,19,text,—,—,calculado,parâmetro calculado (sep_r_perm_M1),2026-10-08 00:22:50,calculado por script,
+sep_r_perm_M1,19,text,—,—,calculado,parâmetro calculado (sep_r_perm_M1),2026-10-16 10:00:13,calculado por script,
 sep_r_perm_M2,99,text,—,—,calculado,parâmetro calculado (sep_r_perm_M2),2026-10-07 22:02:52,calculado por script,
 sep_r_perm_M3,99,text,—,—,calculado,parâmetro calculado (sep_r_perm_M3),2026-10-07 20:48:26,calculado por script,

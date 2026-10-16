@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510618,Nova Lacerda,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5673,0.5101,0.7316,0.7394,0.8758,0.6745
 510618,Nova Lacerda,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8769,1.0203,0.937,0.7482,0.85,1.0789
 510618,Nova Lacerda,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.0856,2.1746,2.4363,1.963,2.178,4.1954
-510618,Nova Lacerda,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.8883,3.5345,3.7481,3.3495,3.5535,1.8623
+510618,Nova Lacerda,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.9996,2.66,2.8486,2.6042,2.8356,1.2019
 510618,Nova Lacerda,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3703,0.2915,0.2999,0.3301,0.4307,0.4242
 510618,Nova Lacerda,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.8888,0.8745,0.3748,0,0,0
 510618,Nova Lacerda,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

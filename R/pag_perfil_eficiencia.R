@@ -3,7 +3,7 @@
 # (municipios/_perfil.qmd, gerado em municipios/<slug>.qmd por scripts/03_gerar_paginas.py)
 #
 # Carregar SEMPRE depois de R/funcoes.R. Lê somente dados_site/eficiencia/ (gerado por
-# scripts/06_preparar_eficiencia.py a partir dos resultados DEA/Malmquist versão 2): nenhum
+# scripts/06_preparar_eficiencia.py a partir dos resultados DEA/Malmquist; versão em metadados.csv, v2.1 desde 16/10/2026): nenhum
 # número é digitado aqui. Saída em HTML simples (sem widgets) para manter o perfil leve.
 #
 # Índice
@@ -67,8 +67,12 @@ EF_HOSP <- ef_ler("fichas_hospital.csv",
                             "especificacao_escore", "faixa", "tendencia_ec_2022_2025", "sinal"))
 EF_META <- ef_ler("metadados.csv", c("item", "valor"), texto = c("item", "valor"))
 ef_meta <- function(item) { v <- EF_META$valor[EF_META$item == item]; if (length(v)) v[1] else NA_character_ }
-EF_DATA <- ef_meta("data_resultados")   # data dos resultados (08/10/2026 na v2)
+EF_DATA <- ef_meta("data_resultados")   # data dos resultados (08/10/2026 na v2; 16/10/2026 na v2.1)
 EF_VERSAO <- ef_meta("versao_resultados")
+# Frase curta da nota de versão (vazia quando não há versão anterior): o que mudou frente à versão anterior
+EF_NOTA_CURTA <- if (!is.na(ef_meta("nota_versao")) && nzchar(ef_meta("nota_versao")) && identical(ef_meta("modelos_reestimados"), "M1"))
+  sprintf(" Na versão %s, só a atenção básica foi reestimada, com o insumo de agentes comunitários restrito ao ACS (CBO 515105) — [nota de versão](%sindex.html#versao).",
+          sub("^v", "", EF_VERSAO), EF_PREFIXO) else ""
 
 # Modelos municipais na ordem da ficha: rótulo curto (aba) e página da seção Eficiência
 EF_MODELOS <- c(M1 = "Atenção básica", M0 = "Consolidado", M2 = "Média complexidade",
@@ -473,8 +477,8 @@ secao_eficiencia <- function(cod) {
   sem_m2 <- !is.null(r2) && !r2$situacao %in% "avaliado"
   html <- function(x) cat("\n```{=html}\n", x, "\n```\n\n", sep = "")
   html(as.character(ef_estilo()))
-  cat(sprintf("Os escores comparam o que %s produz com os recursos que usa, frente às **melhores práticas observadas em municípios de Mato Grosso** no mesmo ano (DEA, orientação ao produto). A leitura é por **faixa com intervalo de confiança**, não por posição exata. O escore mede eficiência técnica, **não a qualidade do cuidado**; os resultados em saúde estão nas abas acima. Resultados da versão %s da estimação (%s), em validação com a SES-MT e o COSEMS-MT. Como ler: [Eficiência — visão geral](%sindex.html).\n\n",
-              nome, ifelse(is.na(EF_VERSAO), "2", sub("^v", "", EF_VERSAO)), ifelse(is.na(EF_DATA), "", EF_DATA), EF_PREFIXO))
+  cat(sprintf("Os escores comparam o que %s produz com os recursos que usa, frente às **melhores práticas observadas em municípios de Mato Grosso** no mesmo ano (DEA, orientação ao produto). A leitura é por **faixa com intervalo de confiança**, não por posição exata. O escore mede eficiência técnica, **não a qualidade do cuidado**; os resultados em saúde estão nas abas acima. Resultados da versão %s da estimação (%s), em validação com a SES-MT e o COSEMS-MT.%s Como ler: [Eficiência — visão geral](%sindex.html).\n\n",
+              nome, ifelse(is.na(EF_VERSAO), "2", sub("^v", "", EF_VERSAO)), ifelse(is.na(EF_DATA), "", EF_DATA), EF_NOTA_CURTA, EF_PREFIXO))
   if (primeiro) cat(sprintf("::: {.callout-note}\n**Primeiro exercício.** %s foi instalado em 1º/01/2025: só há resultado para 2025, marcado como parcial (produção da atenção básica anualizada e registro possivelmente incompleto). O município ainda não serve de referência a outros e não tem evolução (Malmquist) nem escore esperado pelo contexto.\n:::\n\n", nome))
   if (sem_m2 && !primeiro) cat(sprintf("Sem hospital SUS com produção de média complexidade em todos os anos, %s não entra no modelo de média complexidade pela produção local; a média complexidade é lida **pela ótica do acesso** (internações de média complexidade dos moradores, onde quer que tenham ocorrido em Mato Grosso).\n\n", nome))
   html(resumo_ef(cod))
@@ -488,8 +492,8 @@ secao_eficiencia <- function(cod) {
     html(ficha_modelo(cod, mo, nome, m$regiao_saude))
   }
   cat("::::\n\n")
-  cat(sprintf('<p class="nota-fonte">Fonte: Projeto PPSUS-MT, Resultados DEA v2 (%s), com dados de SIOPS, CNES, SISAB, SI-PNI, SIA, SIH e IBGE, 2020–2025; valores monetários em R$ de 2025 (IPCA). Escore corrigido do viés por bootstrap; faixas = quartis entre os municípios avaliados fora da fronteira. Arquivos completos em <a href="../dados/index.html#eficiencia">Dados</a>.</p>\n\n',
-              ifelse(is.na(EF_DATA), "", EF_DATA)))
+  cat(sprintf('<p class="nota-fonte">Fonte: Projeto PPSUS-MT, Resultados DEA %s (%s), com dados de SIOPS, CNES, SISAB, SI-PNI, SIA, SIH e IBGE, 2020–2025; valores monetários em R$ de 2025 (IPCA). Escore corrigido do viés por bootstrap; faixas = quartis entre os municípios avaliados fora da fronteira. Arquivos completos em <a href="../dados/index.html#eficiencia">Dados</a>.</p>\n\n',
+              ifelse(is.na(EF_VERSAO), "v2", EF_VERSAO), ifelse(is.na(EF_DATA), "", EF_DATA)))
   invisible()
 }
 
@@ -519,7 +523,7 @@ bloco_hospitais_ef <- function(cod, ano = EF_ANO) {
               num(n_aval), texto_espec("H"))),
     HTML(sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><thead><tr><th>Hospital</th><th>Faixa no estado</th><th class="num">Escore corrigido (IC 95%%)</th><th>Mudança de eficiência 2022–2025</th></tr></thead><tbody>%s</tbody></table></div>',
                  paste(linhas, collapse = ""))),
-    p(class = "nota-fonte", sprintf("Fonte: Projeto PPSUS-MT, Resultados DEA v2 (%s); CNES e SIH/SUS. Hospitais do município fora desta tabela não entram no modelo de hospitais. ",
-                                    ifelse(is.na(EF_DATA), "", EF_DATA)),
+    p(class = "nota-fonte", sprintf("Fonte: Projeto PPSUS-MT, Resultados DEA %s (%s); CNES e SIH/SUS. Hospitais do município fora desta tabela não entram no modelo de hospitais. ",
+                                    ifelse(is.na(EF_VERSAO), "v2", EF_VERSAO), ifelse(is.na(EF_DATA), "", EF_DATA)),
       a(href = paste0(EF_PREFIXO, "hospitais.html"), "Ver todos os hospitais avaliados →")))
 }

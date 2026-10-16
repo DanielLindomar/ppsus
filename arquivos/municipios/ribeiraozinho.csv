@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510719,Ribeirãozinho,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,2.1594,1.8696,1.693,1.6377,2.9626,1.7344
 510719,Ribeirãozinho,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.4855,2.1033,1.9476,2.2617,2.1876,1.9429
 510719,Ribeirãozinho,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.0215,3.7392,3.656,3.7443,4.7015,5.2067
-510719,Ribeirãozinho,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.0586,4.305,4.4042,4.9168,4.8498,4.6359
+510719,Ribeirãozinho,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.0974,2.2878,2.3139,2.6475,2.5955,2.1954
 510719,Ribeirãozinho,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4129,0.41,0.3857,0.3782,0.5413,0.6696
 510719,Ribeirãozinho,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,6.1932,6.1501,5.7848,5.6732,5.5617,5.0018
 510719,Ribeirãozinho,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

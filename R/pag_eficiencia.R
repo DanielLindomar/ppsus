@@ -3,8 +3,9 @@
 #
 # Carregar DEPOIS de R/funcoes.R (não redefine nada de lá). Lê somente
 # dados_site/eficiencia/ (gerado por scripts/06_preparar_eficiencia.py a partir
-# dos resultados da versão 2 da estimação DEA/Malmquist). Nenhum número é
-# digitado: contagens, médias, limiares e datas vêm dos CSVs.
+# da versão da estimação DEA/Malmquist registrada em metadados.csv — v2.1 desde
+# 16/10/2026). Nenhum número é digitado: contagens, médias, limiares, datas e a
+# nota de versão vêm dos CSVs.
 #
 # Índice
 #   1. Leitura dos arquivos e constantes (modelos, faixas, parâmetros)
@@ -57,6 +58,12 @@ FRACAO_META <- param_ef("meta_intermediaria_fracao", 0.5)
 IC_NIVEL    <- param_ef("ic_nivel", 0.95)
 LIM_TEND    <- param_ef("tendencia_limiar", 0.02)
 CITACAO_EF  <- paste0("Resultados DEA ", VERSAO_EF, ", ", DATA_EF)
+# Nota de versão (vazia na v2): o que mudou frente à versão anterior da estimação
+NOTA_VERSAO_EF   <- meta_ef("nota_versao", "")
+VERSAO_ANT_EF    <- meta_ef("versao_anterior", "")
+DATA_ANT_EF      <- meta_ef("data_versao_anterior", "")
+REESTIMADOS_EF   <- strsplit(meta_ef("modelos_reestimados", ""), ",\\s*")[[1]]
+RELATORIO_EF     <- meta_ef("relatorio_tecnico", "")
 
 # Modelos da seção: página, nome curto e unidade de análise
 MODELOS_EF <- tibble::tribble(
@@ -149,6 +156,7 @@ svg.mini-ic { display: block; margin: 2px 0 0 auto; }
 .ef-botoes { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: .4rem 0 .6rem; }
 .ef-ler { border-left: 4px solid #0E5A5E; background: #f3f8f8; padding: .6rem 1rem; margin: .4rem 0 1rem; border-radius: 4px; }
 .ef-ressalva { background: #fff4d6; border-left: 4px solid #d4a017; padding: .5rem .9rem; font-size: .9rem; margin: .4rem 0 1rem; border-radius: 4px; }
+.ef-versao { background: #eef4fb; border-left: 4px solid #2f6db5; padding: .55rem 1rem; font-size: .92rem; margin: .5rem 0 1.1rem; border-radius: 4px; }
 .cartoes-ef .cartao h4 { font-size: 1rem; }
 .cartoes-ef .cartao .kpi-valor { font-size: 1.35rem; font-weight: 700; color: #0E5A5E; line-height: 1.2; margin: .2rem 0; }
 .cartoes-ef .cartao .sub { margin-top: .15rem; }
@@ -184,10 +192,38 @@ nav_eficiencia <- function(atual = "index.html") {
                                                   href = h, `aria-current` = if (h == atual) "page" else NULL, PAGINAS_EF[[h]])))
 }
 
-faixa_versao_ef <- function() faixa_versao(sprintf(paste0(
-  "<b>Resultados da versão %s da estimação DEA/Malmquist (%s), em validação com a SES-MT e o COSEMS-MT.</b> ",
+# Frase curta sobre a versão (para a faixa do topo): só o(s) modelo(s) reestimado(s) mudou(aram)
+frase_versao_curta_ef <- function(href = "index.html#versao") {
+  if (!nzchar(NOTA_VERSAO_EF) || !length(REESTIMADOS_EF) || !all(REESTIMADOS_EF %in% MODELOS_EF$modelo)) return("")
+  nomes <- lista_e_ef(inicial_min(MODELOS_EF$curto[match(REESTIMADOS_EF, MODELOS_EF$modelo)]))
+  sprintf(paste0("Na versão %s, só o modelo de %s foi reestimado; os demais resultados são os da versão %s (%s) — ",
+                 "<a href=\"%s\">nota de versão</a>. "),
+          sub("^v", "", VERSAO_EF), nomes, sub("^v", "", VERSAO_ANT_EF), DATA_ANT_EF, href)
+}
+
+faixa_versao_ef <- function(nota_curta = TRUE) faixa_versao(sprintf(paste0(
+  "<b>Resultados da versão %s da estimação DEA/Malmquist (%s), em validação com a SES-MT e o COSEMS-MT.</b> %s",
   "Leia por <b>faixas com intervalo de confiança</b>, não por posição pontual; dados de registro a verificar estão sinalizados. ",
-  "Janela 2020–%d; os anos de 2020–2021 refletem a pandemia de COVID-19."), sub("^v", "", VERSAO_EF), DATA_EF, ANO_EF))
+  "Janela 2020–%d; os anos de 2020–2021 refletem a pandemia de COVID-19."), sub("^v", "", VERSAO_EF), DATA_EF,
+  if (isTRUE(nota_curta)) frase_versao_curta_ef() else "", ANO_EF))
+
+# Item de ressalva da atenção básica sobre a versão (Markdown "- ..."; vazio quando não há versão anterior)
+ressalva_versao_m1 <- function() {
+  if (!nzchar(NOTA_VERSAO_EF) || !"M1" %in% REESTIMADOS_EF) return("")
+  sprintf(paste0("- Resultados da versão %s (%s): o insumo de agentes comunitários de saúde conta só o ACS (CBO 515105). ",
+                 "As visitas domiciliares, um dos produtos do modelo, são registradas sobretudo pelos ACS; os agentes de combate ",
+                 "às endemias e os agentes indígenas, que a versão %s somava ao insumo, deixaram de ser contados como recurso deste modelo."),
+          sub("^v", "", VERSAO_EF), DATA_EF, sub("^v", "", VERSAO_ANT_EF))
+}
+
+# Nota de versão visível (caixa): o texto vem de metadados.csv (nota_versao); `extra` acrescenta uma frase da página
+nota_versao_ef <- function(extra = NULL) {
+  if (!nzchar(NOTA_VERSAO_EF)) return(NULL)
+  partes <- regmatches(NOTA_VERSAO_EF, regexpr("^[^:]+:", NOTA_VERSAO_EF))
+  corpo <- if (length(partes)) sub("^[^:]+:\\s*", "", NOTA_VERSAO_EF) else NOTA_VERSAO_EF
+  div(id = "versao", class = "ef-versao", role = "note",
+      if (length(partes)) strong(partes), " ", corpo, if (!is.null(extra)) tagList(" ", HTML(extra)))
+}
 
 # KPIs de um modelo (municipal) no ano de referência
 kpis_modelo <- function(modelo, grupo = NULL, ano = ANO_EF) {

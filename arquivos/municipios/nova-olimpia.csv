@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510623,Nova Olímpia,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6132,0.7709,1.0048,0.9925,1.1843,1.3423
 510623,Nova Olímpia,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.5753,0.7123,0.9461,0.9796,1.1132,1.1843
 510623,Nova Olímpia,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.5844,1.9803,2.4003,2.449,2.656,2.5253
-510623,Nova Olímpia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.2158,1.3967,1.8652,2.7809,2.6817,2.695
+510623,Nova Olímpia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.0213,0.9524,1.1619,2.0664,2.0841,2.0625
 510623,Nova Olímpia,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.0729,0.1042,0.2648,0.2755,0.2758,0.3394
 510623,Nova Olímpia,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.7021,1.6811,2.1404,2.3113,2.3293,2.3451
 510623,Nova Olímpia,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

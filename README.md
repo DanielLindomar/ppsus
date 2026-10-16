@@ -4,13 +4,13 @@ Site público do projeto **Gestão integrada no SUS: avaliação da eficiência 
 
 Publicado em: https://daniellindomar.github.io/ppsus/
 
-Versão 0.2 (08/10/2026): dados e indicadores 2020–2025 dos 142 municípios, análise de deslocamento residência × atendimento (internações) e seção Eficiência — escores DEA e produtividade Malmquist (versão 2 da estimação) de municípios, hospitais SUS e regiões de saúde, com fichas no perfil de cada município.
+Versão 0.2.1 (16/10/2026): dados e indicadores 2020–2025 dos 142 municípios, análise de deslocamento residência × atendimento (internações) e seção Eficiência — escores DEA e produtividade Malmquist (versão 2.1 da estimação: atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS, CBO 515105; demais modelos da versão 2, de 08/10/2026) de municípios, hospitais SUS e regiões de saúde, com fichas no perfil de cada município.
 
 ## Como atualizar
 
 Todos os comandos rodam pelo PowerShell, na raiz do repositório. Os scripts leem o PostgreSQL local (somente leitura) e gravam `dados_site/` e `arquivos/dados/`.
 
-**Configuração local (uma vez por máquina).** Os scripts 01, 02 e 06 não fixam caminhos da máquina: o arquivo com a senha do PostgreSQL e o dicionário técnico da estimação v2 são lidos das variáveis de ambiente `PPSUS_PGPASS` e `PPSUS_DIC_V2` ou, na falta delas, do arquivo `.env.local` na raiz (linhas `CHAVE=caminho`; fora do controle de versão — ver `scripts/config_local.py`).
+**Configuração local (uma vez por máquina).** Os scripts 01, 02 e 06 não fixam caminhos da máquina: o arquivo com a senha do PostgreSQL e os dicionários técnicos da estimação (v2 e v2.1) são lidos das variáveis de ambiente `PPSUS_PGPASS`, `PPSUS_DIC_V2` e `PPSUS_DIC_V21` ou, na falta delas, do arquivo `.env.local` na raiz (linhas `CHAVE=caminho`; fora do controle de versão — ver `scripts/config_local.py`).
 
 1. **Preparar os dados e gerar as páginas** (nesta ordem):
 
@@ -19,7 +19,7 @@ Todos os comandos rodam pelo PowerShell, na raiz do repositório. Os scripts lee
    python scripts/01_preparar_dados.py          # municipios, indicadores, series, hospitais, geo, centroides.csv (= sedes), downloads do contrato
    python scripts/02_preparar_deslocamento.py   # fluxos de internação, deslocamento por município, polos, resumo, outras UFs, achados
    python scripts/01_preparar_dados.py          # de novo: incorpora pct_internacoes_fora_regiao e km_medio_internacao à serie.csv
-   python scripts/06_preparar_eficiencia.py     # resultados DEA/Malmquist v2 (schema dea, versao='v2') → dados_site/eficiencia/ e arquivos/dados/eficiencia/
+   python scripts/06_preparar_eficiencia.py     # resultados DEA/Malmquist v2.1 (schema dea, versao='v2.1'; --versao v2 regera a anterior) → dados_site/eficiencia/ e arquivos/dados/eficiencia/
    python scripts/03_gerar_paginas.py           # municipios/<slug>.qmd, indicadores/<id>.qmd e arquivos/municipios/<slug>.csv
    python scripts/04_gerar_indicadores.py       # regrava indicadores/<id>.qmd só a partir do catálogo (remove ids que saíram dele)
    python scripts/05_downloads.py               # downloads complementares e catálogo (arquivos/dados/catalogo_arquivos.csv)

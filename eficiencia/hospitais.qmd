@@ -72,7 +72,7 @@ efx_bloco_spec("H")
 efx_h_kpis(A)
 ```
 
-Fonte: resultados da estimação DEA v2 (`r EFX_DATA`), com dados de CNES e SIH/SUS de `r A`. As fronteiras são anuais: o nível do escore não é comparável entre anos — a evolução no tempo é lida pelo índice de Malmquist (seção [Evolução](#evolucao)).
+Fonte: resultados da estimação DEA `r EFX_VERSAO` (`r EFX_DATA`), com dados de CNES e SIH/SUS de `r A`. As fronteiras são anuais: o nível do escore não é comparável entre anos — a evolução no tempo é lida pelo índice de Malmquist (seção [Evolução](#evolucao)).
 
 ## Mapa `r A` por faixa {#mapa}
 
@@ -158,7 +158,7 @@ efx_h_tendencias(A)
 ## Ressalvas {#ressalvas}
 
 ::: {.callout-warning title="Leia antes de interpretar"}
-- **Resultados da versão 2, em validação.** Os escores são da estimação de `r EFX_DATA` e estão em validação com a SES-MT e o COSEMS-MT; os `r num(n_reg)` hospitais com registro a verificar em `r A` dependem de conferência na origem (CNES e SIH).
+- **Resultados da versão `r EFX_VERSAO_N`, em validação.** Os escores são da estimação de `r efx_data_modelo("H")` e estão em validação com a SES-MT e o COSEMS-MT; os `r num(n_reg)` hospitais com registro a verificar em `r A` dependem de conferência na origem (CNES e SIH).
 - **Faixa, não ranking.** Com `r num(n_bal)` hospitais no painel completo e `r length(ins) + length(pro)` variáveis, os intervalos de confiança são largos; dois hospitais em faixas vizinhas podem não ser estatisticamente diferentes. A correção de viés reduz mais o escore de quem está na fronteira, por isso um hospital da fronteira pode ter escore corrigido menor que um do quartil superior.
 - **Eficiência não é qualidade.** O modelo mede volume de atendimento (internações e diárias) por recurso; não mede resolutividade, segurança do paciente nem adequação clínica. Hospitais que internam por mais tempo por necessidade clínica podem parecer mais "produtivos" em diárias. A mortalidade padronizada é mostrada ao lado e não altera o escore.
 - **Complexidade dos casos.** Internações e diárias são contadas sem ponderação pela complexidade de cada caso: hospitais de referência regional que concentram casos graves podem ficar em desvantagem.
@@ -174,5 +174,5 @@ efx_arquivos(c("fichas_hospital", "metas_hospital", "pares_hospital", "insumos_p
 ```
 
 ```{r}
-fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Eficiência: Resultados DEA v2 (%s), Projeto PPSUS-MT — DEA orientada ao produto com retornos variáveis de escala, escore corrigido por bootstrap, índice de Malmquist; dados de CNES e SIH/SUS, 2020–2025. ", EFX_DATA))
+fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Eficiência: %s (%s), Projeto PPSUS-MT — DEA orientada ao produto com retornos variáveis de escala, escore corrigido por bootstrap, índice de Malmquist; dados de CNES e SIH/SUS, 2020–2025. ", EFX_ROTULO, EFX_DATA))
 ```

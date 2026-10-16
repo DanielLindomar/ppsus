@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510622,Nova Mutum,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.0196,1.1144,1.1804,1.07,1.2997,1.5219
 510622,Nova Mutum,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.1817,1.3859,1.3254,1.5164,2.0582,2.0889
 510622,Nova Mutum,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.6102,2.8124,2.4678,3.1793,3.8335,4.061
-510622,Nova Mutum,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.1058,2.0099,1.7984,1.7163,1.6959,2.1448
+510622,Nova Mutum,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.5096,1.3963,1.2984,1.1873,1.0957,1.3028
 510622,Nova Mutum,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2982,0.2843,0.2727,0.2596,0.2961,0.2884
 510622,Nova Mutum,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.3137,3.6913,2.0133,2.3474,2.7958,2.6409
 510622,Nova Mutum,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),5,26,18,20,20,20

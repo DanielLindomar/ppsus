@@ -456,142 +456,142 @@ M0,Consolidado (sistema municipal de saúde),todos,todos,regiao,51013,Sul Matogr
 M0,Consolidado (sistema municipal de saúde),todos,todos,regiao,51014,Teles Pires,2024-2025,transicao,14,0.926302,0.991705,0.93405,5,8,0,0,c_absoluto_crs
 M0,Consolidado (sistema municipal de saúde),todos,todos,regiao,51015,Vale do Peixoto,2024-2025,transicao,5,0.995505,1.010969,0.984704,4,1,0,0,c_absoluto_crs
 M0,Consolidado (sistema municipal de saúde),todos,todos,regiao,51016,Vale dos Arinos,2024-2025,transicao,4,1.00758,1.090309,0.924123,2,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,estado,,Mato Grosso,2020-2021,transicao,126,0.95521,1.056244,0.904346,72,42,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2020-2021,transicao,5,0.951675,1.051912,0.90471,3,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2020-2021,transicao,10,0.819572,0.95737,0.856066,4,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2020-2021,transicao,7,0.799178,0.918737,0.869866,2,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2020-2021,transicao,7,1.068905,1.18782,0.899888,4,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2020-2021,transicao,10,0.857342,1.009037,0.849663,4,6,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2020-2021,transicao,6,0.945608,1.051067,0.899665,4,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2020-2021,transicao,8,0.986084,1.062738,0.927871,3,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2020-2021,transicao,6,1.042751,1.102996,0.945381,5,0,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2020-2021,transicao,5,1.040899,1.119736,0.929594,3,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2020-2021,transicao,6,0.895204,0.991848,0.902562,4,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2020-2021,transicao,8,1.052076,1.135986,0.926134,7,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2020-2021,transicao,9,0.967715,1.047273,0.924034,5,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2020-2021,transicao,16,0.999011,1.117984,0.893583,11,5,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2020-2021,transicao,14,0.998056,1.06525,0.936922,8,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2020-2021,transicao,5,0.953945,1.026518,0.929302,3,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2020-2021,transicao,4,0.9836,1.064381,0.924105,2,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,estado,,Mato Grosso,2020-2022,janela,126,1.070804,1.06159,1.008679,79,39,19,6,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2020-2022,janela,5,1.070623,1.064956,1.005322,4,1,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2020-2022,janela,10,0.944739,0.992273,0.952095,3,5,0,1,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2020-2022,janela,7,1.01384,1.024611,0.989488,3,3,2,2,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2020-2022,janela,7,1.203873,1.178476,1.021551,6,1,3,1,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2020-2022,janela,10,1.052658,1.092401,0.963618,8,2,1,1,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2020-2022,janela,6,1.034806,1.020383,1.014135,5,1,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2020-2022,janela,8,1.01627,1.017761,0.998535,2,4,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2020-2022,janela,6,1.046617,1.007335,1.038996,3,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2020-2022,janela,5,1.282726,1.176398,1.090384,5,0,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2020-2022,janela,6,1.081968,1.067466,1.013586,4,2,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2020-2022,janela,8,1.155258,1.09888,1.051304,7,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2020-2022,janela,9,1.042386,1.040122,1.002177,4,5,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2020-2022,janela,16,1.081423,1.09337,0.989073,13,3,3,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2020-2022,janela,14,1.097233,1.049205,1.045775,6,5,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2020-2022,janela,5,1.0577,1.046283,1.010912,4,1,0,1,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2020-2022,janela,4,1.065321,1.036937,1.027373,2,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,estado,,Mato Grosso,2020-2025,janela,124,1.043906,1.058086,0.986598,96,18,21,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2020-2025,janela,5,1.042704,1.061488,0.982304,5,0,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2020-2025,janela,9,1.019507,1.038926,0.981308,8,0,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2020-2025,janela,7,0.999591,1.048355,0.953485,5,1,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2020-2025,janela,7,1.056549,1.077652,0.980418,6,1,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2020-2025,janela,10,1.09889,1.12362,0.977991,9,0,3,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2020-2025,janela,6,1.031712,1.042055,0.990075,5,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2020-2025,janela,8,0.989602,1.012444,0.977438,2,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2020-2025,janela,6,1.030119,1.030962,0.999183,5,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2020-2025,janela,5,1.128147,1.123251,1.004359,5,0,3,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2020-2025,janela,6,1.080046,1.086324,0.994221,6,0,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2020-2025,janela,8,1.061122,1.055417,1.005405,6,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2020-2025,janela,9,1.037196,1.055696,0.982476,7,2,3,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2020-2025,janela,16,1.050727,1.071754,0.98038,16,0,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2020-2025,janela,14,1.034845,1.037249,0.997682,6,5,3,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2020-2025,janela,5,1.029554,1.033489,0.996193,4,1,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2020-2025,janela,3,1.017922,1.009342,1.008501,1,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,estado,,Mato Grosso,2021-2022,transicao,135,1.197875,1.067306,1.122335,75,47,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2021-2022,transicao,6,1.193978,1.068317,1.117626,5,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2021-2022,transicao,10,1.089021,1.028449,1.058896,3,5,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2021-2022,transicao,7,1.28616,1.142685,1.12556,4,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2021-2022,transicao,7,1.355883,1.169205,1.159663,6,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2021-2022,transicao,10,1.292471,1.182653,1.092857,7,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2021-2022,transicao,8,1.099127,0.956036,1.149671,2,6,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2021-2022,transicao,9,1.050434,0.966292,1.087077,1,6,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2021-2022,transicao,6,1.050497,0.919971,1.14188,1,5,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2021-2022,transicao,5,1.580735,1.235928,1.278987,4,0,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2021-2022,transicao,6,1.307697,1.14885,1.138267,5,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2021-2022,transicao,9,1.245585,1.05661,1.178851,6,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2021-2022,transicao,10,1.129895,1.02967,1.097338,5,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2021-2022,transicao,19,1.196804,1.11557,1.072818,15,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2021-2022,transicao,14,1.206264,1.033402,1.167275,6,5,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2021-2022,transicao,5,1.17274,1.066428,1.099689,3,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2021-2022,transicao,4,1.153831,1.010201,1.142181,2,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,estado,,Mato Grosso,2022-2023,transicao,138,1.01161,1.058244,0.955933,72,46,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2022-2023,transicao,6,1.099632,1.121239,0.980729,5,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2022-2023,transicao,11,1.045239,1.096213,0.9535,5,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2022-2023,transicao,7,1.020024,1.037338,0.98331,3,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2022-2023,transicao,7,0.828517,0.913639,0.906832,0,7,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2022-2023,transicao,10,1.207506,1.264298,0.95508,8,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2022-2023,transicao,8,0.973489,1.036009,0.939653,6,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2022-2023,transicao,9,0.924175,0.984878,0.938364,3,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2022-2023,transicao,6,1.044054,1.079345,0.967304,3,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2022-2023,transicao,5,0.985919,1.062431,0.927983,4,0,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2022-2023,transicao,6,1.076458,1.125673,0.956279,4,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2022-2023,transicao,12,1.031633,1.031791,0.999847,6,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2022-2023,transicao,10,0.985554,1.076769,0.915288,6,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2022-2023,transicao,19,1.01836,1.050997,0.968946,9,9,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2022-2023,transicao,14,1.009942,1.054223,0.957996,7,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2022-2023,transicao,5,0.923222,0.950057,0.971755,3,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2022-2023,transicao,3,0.938856,0.99509,0.943488,0,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,estado,,Mato Grosso,2022-2025,janela,137,1.025472,1.057042,0.970133,95,24,26,1,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2022-2025,janela,6,1.025785,1.053181,0.973987,6,0,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2022-2025,janela,10,1.068227,1.090279,0.979774,7,1,3,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2022-2025,janela,7,0.990203,1.064489,0.930214,5,1,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2022-2025,janela,7,0.968491,1.015276,0.95392,3,3,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2022-2025,janela,10,1.130835,1.144927,0.987692,10,0,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2022-2025,janela,8,1.031968,1.066608,0.967524,7,1,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2022-2025,janela,9,0.979222,1.017203,0.962661,5,2,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2022-2025,janela,6,1.019266,1.04702,0.973492,5,1,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2022-2025,janela,5,1.035588,1.08916,0.950813,4,0,3,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2022-2025,janela,6,1.078766,1.09908,0.981517,4,1,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2022-2025,janela,12,1.008306,1.034013,0.975139,9,1,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2022-2025,janela,10,1.021388,1.059394,0.964124,5,3,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2022-2025,janela,19,1.037813,1.062254,0.976991,14,4,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2022-2025,janela,14,0.995237,1.029355,0.966855,8,3,1,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2022-2025,janela,5,1.011208,1.025047,0.9865,3,1,2,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2022-2025,janela,3,0.96228,0.978354,0.98357,0,2,0,1,c_absoluto_crs
-M1,Atenção básica,todos,todos,estado,,Mato Grosso,2023-2024,transicao,139,1.03802,1.053594,0.985218,78,39,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2023-2024,transicao,6,0.956063,1.003116,0.953093,2,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2023-2024,transicao,10,1.075378,1.068558,1.006382,5,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2023-2024,transicao,7,0.99137,1.103628,0.898283,5,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2023-2024,transicao,7,0.973911,1.019876,0.954931,5,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2023-2024,transicao,10,1.022235,1.012831,1.009285,5,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2023-2024,transicao,8,1.049561,1.026797,1.02217,5,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2023-2024,transicao,10,1.033392,1.035122,0.998328,6,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2023-2024,transicao,7,1.096453,1.098905,0.997768,5,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2023-2024,transicao,5,1.095081,1.04585,1.047073,2,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2023-2024,transicao,6,1.195595,1.178701,1.014333,4,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2023-2024,transicao,12,0.997164,1.036021,0.962494,6,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2023-2024,transicao,10,1.003078,1.027041,0.976668,6,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2023-2024,transicao,19,1.071411,1.089015,0.983835,12,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2023-2024,transicao,14,1.016345,1.040629,0.976664,7,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2023-2024,transicao,5,1.099777,1.085397,1.013248,3,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2023-2024,transicao,3,0.954324,0.971432,0.982388,0,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,estado,,Mato Grosso,2024-2025,transicao,140,1.021832,1.055371,0.968221,75,34,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2024-2025,transicao,6,1.02668,1.038627,0.988498,3,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2024-2025,transicao,10,1.075418,1.096303,0.98095,4,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2024-2025,transicao,7,0.960122,1.053612,0.911267,5,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2024-2025,transicao,7,1.125812,1.123128,1.00239,4,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2024-2025,transicao,10,1.17154,1.172051,0.999564,8,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2024-2025,transicao,8,1.075623,1.140685,0.942963,7,0,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2024-2025,transicao,10,0.99584,1.036206,0.961045,5,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2024-2025,transicao,7,0.874199,0.942075,0.927951,1,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2024-2025,transicao,5,1.028664,1.1628,0.884644,4,0,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2024-2025,transicao,6,0.97544,1.000627,0.974829,3,3,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2024-2025,transicao,12,0.996518,1.034231,0.963536,6,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2024-2025,transicao,10,1.077846,1.075134,1.002522,7,2,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2024-2025,transicao,19,1.024471,1.047249,0.978249,10,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2024-2025,transicao,14,0.960376,0.994183,0.965995,4,4,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2024-2025,transicao,5,1.018383,1.044462,0.97503,3,1,0,0,c_absoluto_crs
-M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2024-2025,transicao,4,0.933803,0.937519,0.996036,1,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,estado,,Mato Grosso,2020-2021,transicao,126,0.962723,1.045481,0.920842,68,44,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2020-2021,transicao,5,0.955974,1.042626,0.916891,3,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2020-2021,transicao,10,0.825557,0.967641,0.853165,2,5,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2020-2021,transicao,7,0.800258,0.914525,0.875053,2,4,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2020-2021,transicao,7,1.077909,1.188977,0.906585,4,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2020-2021,transicao,10,0.855285,0.990789,0.863237,3,7,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2020-2021,transicao,6,0.942774,1.029854,0.915444,4,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2020-2021,transicao,8,1.032738,1.073867,0.9617,4,0,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2020-2021,transicao,6,1.042025,1.104975,0.943031,5,0,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2020-2021,transicao,5,1.048826,1.115933,0.939865,3,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2020-2021,transicao,6,0.896852,0.984889,0.910612,4,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2020-2021,transicao,8,1.044859,1.103339,0.946997,6,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2020-2021,transicao,9,0.973232,1.05542,0.922128,5,4,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2020-2021,transicao,16,1.009387,1.111011,0.908529,11,5,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2020-2021,transicao,14,1.014832,1.007895,1.006883,7,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2020-2021,transicao,5,0.956381,1.025459,0.932637,3,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2020-2021,transicao,4,0.994356,1.06069,0.937462,2,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,estado,,Mato Grosso,2020-2022,janela,126,1.072255,1.060511,1.011074,79,37,21,7,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2020-2022,janela,5,1.066941,1.051721,1.014472,3,2,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2020-2022,janela,10,0.942901,0.995703,0.94697,3,5,0,1,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2020-2022,janela,7,1.016415,1.027048,0.989647,3,3,2,2,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2020-2022,janela,7,1.203534,1.180525,1.01949,6,1,3,1,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2020-2022,janela,10,1.046073,1.083356,0.965586,8,2,1,1,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2020-2022,janela,6,1.042641,1.024138,1.018067,5,1,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2020-2022,janela,8,1.025623,1.026868,0.998787,2,3,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2020-2022,janela,6,1.04584,1.012,1.033438,4,2,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2020-2022,janela,5,1.279096,1.168856,1.094315,5,0,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2020-2022,janela,6,1.076056,1.060143,1.015011,4,2,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2020-2022,janela,8,1.157346,1.108121,1.044422,7,1,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2020-2022,janela,9,1.043349,1.04186,1.001429,4,5,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2020-2022,janela,16,1.085332,1.088044,0.997508,12,3,3,1,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2020-2022,janela,14,1.102014,1.042754,1.056831,7,4,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2020-2022,janela,5,1.059217,1.045952,1.012683,4,1,0,1,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2020-2022,janela,4,1.075679,1.034514,1.039791,2,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,estado,,Mato Grosso,2020-2025,janela,124,1.049947,1.052193,0.997865,93,21,21,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2020-2025,janela,5,1.047599,1.059658,0.98862,5,0,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2020-2025,janela,9,1.014141,1.035224,0.979635,6,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2020-2025,janela,7,0.993688,1.04372,0.952064,5,1,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2020-2025,janela,7,1.05613,1.068899,0.988054,6,1,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2020-2025,janela,10,1.106711,1.112543,0.994758,9,0,4,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2020-2025,janela,6,1.037502,1.038293,0.999238,5,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2020-2025,janela,8,0.995707,1.012842,0.983082,2,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2020-2025,janela,6,1.042467,1.035015,1.0072,5,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2020-2025,janela,5,1.128004,1.118475,1.00852,5,0,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2020-2025,janela,6,1.083997,1.081233,1.002557,6,0,3,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2020-2025,janela,8,1.063621,1.05174,1.011297,6,1,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2020-2025,janela,9,1.067222,1.060802,1.006052,7,2,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2020-2025,janela,16,1.058881,1.061943,0.997117,14,2,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2020-2025,janela,14,1.038307,1.018629,1.019318,6,6,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2020-2025,janela,5,1.028939,1.026615,1.002263,4,1,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2020-2025,janela,3,1.050371,1.00881,1.041199,2,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,estado,,Mato Grosso,2021-2022,transicao,135,1.192005,1.075472,1.108355,77,44,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2021-2022,transicao,6,1.18325,1.057066,1.119372,5,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2021-2022,transicao,10,1.076924,1.024578,1.05109,3,5,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2021-2022,transicao,7,1.290958,1.153417,1.119247,4,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2021-2022,transicao,7,1.343801,1.172134,1.146457,6,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2021-2022,transicao,10,1.27942,1.184571,1.08007,7,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2021-2022,transicao,8,1.112527,0.975893,1.14001,3,5,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2021-2022,transicao,9,1.025615,0.974181,1.052797,1,5,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2021-2022,transicao,6,1.049668,0.926849,1.132513,1,5,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2021-2022,transicao,5,1.559922,1.224289,1.274145,4,0,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2021-2022,transicao,6,1.291068,1.141146,1.131378,5,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2021-2022,transicao,9,1.255598,1.099947,1.141508,6,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2021-2022,transicao,10,1.125997,1.02559,1.097902,6,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2021-2022,transicao,19,1.193378,1.110592,1.074542,15,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2021-2022,transicao,14,1.196685,1.078819,1.109255,6,5,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2021-2022,transicao,5,1.17311,1.066854,1.099598,3,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2021-2022,transicao,4,1.163652,1.008984,1.153291,2,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,estado,,Mato Grosso,2022-2023,transicao,138,1.016475,1.052573,0.965705,70,47,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2022-2023,transicao,6,1.113897,1.141237,0.976044,5,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2022-2023,transicao,11,1.040061,1.092637,0.951881,5,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2022-2023,transicao,7,1.012189,1.021275,0.991104,3,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2022-2023,transicao,7,0.824121,0.909009,0.906615,0,7,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2022-2023,transicao,10,1.214609,1.25699,0.966283,8,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2022-2023,transicao,8,0.994388,1.03563,0.960177,6,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2022-2023,transicao,9,0.931189,0.983095,0.947202,3,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2022-2023,transicao,6,1.06459,1.071416,0.993629,4,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2022-2023,transicao,5,0.988357,1.064452,0.928512,4,0,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2022-2023,transicao,6,1.086151,1.129289,0.9618,4,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2022-2023,transicao,12,1.035243,1.018604,1.016335,6,4,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2022-2023,transicao,10,0.993608,1.077986,0.921726,6,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2022-2023,transicao,19,1.023456,1.042096,0.982113,8,9,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2022-2023,transicao,14,1.01182,1.034392,0.978178,6,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2022-2023,transicao,5,0.929878,0.95033,0.978479,2,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2022-2023,transicao,3,0.9298,0.993429,0.93595,0,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,estado,,Mato Grosso,2022-2025,janela,137,1.033788,1.047968,0.986469,89,31,23,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2022-2025,janela,6,1.026324,1.049033,0.978353,5,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2022-2025,janela,10,1.061404,1.081966,0.980995,7,1,3,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2022-2025,janela,7,0.97882,1.054985,0.927805,5,1,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2022-2025,janela,7,0.968033,1.000409,0.967636,2,5,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2022-2025,janela,10,1.149077,1.132436,1.014695,10,0,3,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2022-2025,janela,8,1.03512,1.059449,0.977037,7,1,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2022-2025,janela,9,0.983377,1.008439,0.975148,3,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2022-2025,janela,6,1.040225,1.050649,0.990078,5,1,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2022-2025,janela,5,1.037327,1.086099,0.955094,4,0,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2022-2025,janela,6,1.089324,1.095525,0.994339,4,1,3,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2022-2025,janela,12,1.008614,1.023504,0.985452,9,1,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2022-2025,janela,10,1.074088,1.066021,1.007567,5,3,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2022-2025,janela,19,1.046824,1.051526,0.995528,13,5,2,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2022-2025,janela,14,0.997895,1.002857,0.995053,7,5,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2022-2025,janela,5,1.009235,1.013923,0.995376,3,1,1,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2022-2025,janela,3,1.008802,0.982285,1.026995,0,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,estado,,Mato Grosso,2023-2024,transicao,139,1.034476,1.042406,0.992392,76,37,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2023-2024,transicao,6,0.950959,0.985686,0.964769,3,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2023-2024,transicao,10,1.066931,1.055282,1.011038,5,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2023-2024,transicao,7,0.979818,1.100494,0.890344,6,0,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2023-2024,transicao,7,0.963391,0.979108,0.983948,5,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2023-2024,transicao,10,1.034643,1.015219,1.019133,5,4,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2023-2024,transicao,8,1.036999,1.022926,1.013757,5,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2023-2024,transicao,10,1.026495,1.020172,1.006199,5,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2023-2024,transicao,7,1.099427,1.100262,0.999241,5,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2023-2024,transicao,5,1.093688,1.044695,1.046897,2,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2023-2024,transicao,6,1.178345,1.15924,1.016481,4,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2023-2024,transicao,12,0.993965,1.018396,0.976011,4,4,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2023-2024,transicao,10,1.013371,1.030191,0.983673,7,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2023-2024,transicao,19,1.06954,1.079522,0.990753,12,4,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2023-2024,transicao,14,1.008359,1.017772,0.990752,5,4,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2023-2024,transicao,5,1.097761,1.07349,1.022609,3,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2023-2024,transicao,3,0.954373,0.974141,0.979707,0,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,estado,,Mato Grosso,2024-2025,transicao,140,1.04471,1.044164,1.000524,73,41,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51001,Alto Tapajós,2024-2025,transicao,6,1.020577,1.026248,0.994474,4,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51002,Baixada Cuiabana,2024-2025,transicao,10,1.069084,1.088803,0.981889,4,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51003,Araguaia Xingu,2024-2025,transicao,7,0.945588,1.044742,0.905093,5,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51004,Centro Norte,2024-2025,transicao,7,1.142553,1.124953,1.015645,5,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51005,Garças Araguaia,2024-2025,transicao,10,1.207314,1.138019,1.060891,8,1,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51006,Médio Araguaia,2024-2025,transicao,8,1.07557,1.122512,0.958181,7,0,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51007,Médio Norte Matogrossense,2024-2025,transicao,10,1.003353,1.01397,0.98953,3,4,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51008,Noroeste Matogrossense,2024-2025,transicao,7,0.903254,0.95477,0.946044,1,4,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51009,Norte Araguaia Karajá,2024-2025,transicao,5,1.032619,1.152107,0.896287,4,0,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51010,Norte Matogrossense,2024-2025,transicao,6,1.00997,1.004359,1.005587,3,3,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51011,Oeste Matogrossense,2024-2025,transicao,12,0.997151,1.033585,0.96475,7,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51012,Sudoeste Matogrossense,2024-2025,transicao,10,1.230654,1.090854,1.128156,7,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51013,Sul Matogrossense,2024-2025,transicao,19,1.047985,1.033525,1.013991,10,6,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51014,Teles Pires,2024-2025,transicao,14,0.973949,0.958035,1.016612,2,7,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51015,Vale do Peixoto,2024-2025,transicao,5,1.007033,1.021745,0.985601,3,2,0,0,c_absoluto_crs
+M1,Atenção básica,todos,todos,regiao,51016,Vale dos Arinos,2024-2025,transicao,4,1.047827,0.938785,1.116152,0,3,0,0,c_absoluto_crs
 M2,Média complexidade (produção local),todos,todos,estado,,Mato Grosso,2020-2021,transicao,70,1.038745,1.057653,0.982123,38,22,0,0,c_absoluto_crs
 M2,Média complexidade (produção local),todos,todos,regiao,51001,Alto Tapajós,2020-2021,transicao,2,0.895547,0.875235,1.023207,0,1,0,0,c_absoluto_crs
 M2,Média complexidade (produção local),todos,todos,regiao,51002,Baixada Cuiabana,2020-2021,transicao,4,1.109834,1.062688,1.044365,2,1,0,0,c_absoluto_crs

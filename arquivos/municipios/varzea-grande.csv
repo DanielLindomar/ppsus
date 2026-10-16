@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510840,Várzea Grande,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.068,1.319,1.6328,1.7898,1.816,1.8661
 510840,Várzea Grande,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.097,1.5903,1.8734,2.1172,1.853,1.7821
 510840,Várzea Grande,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.8085,2.5779,2.9424,3.4565,3.3958,3.4795
-510840,Várzea Grande,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.0845,1.0518,0.987,0.9471,1.008,1.0542
+510840,Várzea Grande,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,0.5771,0.5556,0.5301,0.524,0.5975,0.6329
 510840,Várzea Grande,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1236,0.1195,0.119,0.1329,0.1577,0.1647
 510840,Várzea Grande,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.4561,1.851,1.601,1.5518,1.5381,1.7711
 510840,Várzea Grande,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),51,123,58,64,70,70

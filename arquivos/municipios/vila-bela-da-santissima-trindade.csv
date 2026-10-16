@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510550,Vila Bela da Santíssima Trindade,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6908,0.6702,0.7619,0.848,0.9883,1.2489
 510550,Vila Bela da Santíssima Trindade,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.1327,1.2661,1.2293,1.2649,1.2586,1.2722
 510550,Vila Bela da Santíssima Trindade,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.5531,2.001,2.1027,2.1633,2.1882,2.5483
-510550,Vila Bela da Santíssima Trindade,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.5375,4.7423,4.6053,4.3142,4.2999,4.273
+510550,Vila Bela da Santíssima Trindade,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.3753,3.2598,3.1847,3.0112,3.001,3.1168
 510550,Vila Bela da Santíssima Trindade,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2716,0.2029,0.2134,0.2928,0.2876,0.237
 510550,Vila Bela da Santíssima Trindade,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.5813,2.6097,2.638,2.8988,3.0965,3.1264
 510550,Vila Bela da Santíssima Trindade,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

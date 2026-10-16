@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510820,Torixoréu,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,2.1596,1.5371,1.501,1.9347,2.1418,2.8315
 510820,Torixoréu,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0798,1.4511,1.561,1.9204,1.7139,1.8971
 510820,Torixoréu,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.1359,4.5397,3.4486,3.605,3.5272,3.5984
-510820,Torixoréu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.7928,6.1887,4.2435,4.3293,3.6241,3.4804
+510820,Torixoréu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.3831,3.536,2.8818,2.8592,2.8369,2.8504
 510820,Torixoréu,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5639,0.5736,0.4803,0.4765,0.4728,0.4719
 510820,Torixoréu,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,6.2024,6.3091,5.4443,5.5587,5.6738,5.781
 510820,Torixoréu,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

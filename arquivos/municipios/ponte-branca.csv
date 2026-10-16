@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510670,Ponte Branca,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.9032,1.7967,1.4741,1.9589,2.264,1.7541
 510670,Ponte Branca,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.9355,1.8557,1.5339,1.9589,2.2495,2.3832
 510670,Ponte Branca,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,7.0968,7.5934,5.3536,6.3663,6.9846,7.469
-510670,Ponte Branca,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,7.7419,7.9803,6.5139,6.6944,6.421,5.3241
+510670,Ponte Branca,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.2258,3.7705,3.0279,2.571,2.0857,1.4299
 510670,Ponte Branca,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.9677,0.6557,0.5179,0.8178,0.9634,0.9533
 510670,Ponte Branca,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,13.5484,12.623,8.7151,8.9765,8.1888,8.103
 510670,Ponte Branca,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

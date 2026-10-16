@@ -22,7 +22,7 @@ Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DA
 | Fonte | O que é | Período usado | O que se extrai |
 |---|---|---|---|
 | **SIOPS** | Declarações orçamentárias dos municípios em saúde (RREO) | 2020–2025 | Despesa liquidada total e por subfunção (atenção básica, média e alta complexidade, outras), despesa corrente e de capital, parcela com recursos próprios |
-| **CNES** | Cadastro de estabelecimentos, leitos, equipamentos e profissionais | 2020–2025 (média das competências mensais) | Profissionais SUS em equivalente de 40 h (médicos, enfermeiros, técnicos, dentistas, agentes comunitários), leitos SUS e de UTI, equipamentos em uso, unidades básicas, hospitais, UPA, equipes de saúde da família, de atenção primária e de saúde bucal |
+| **CNES** | Cadastro de estabelecimentos, leitos, equipamentos e profissionais | 2020–2025 (média das competências mensais) | Profissionais SUS em equivalente de 40 h (médicos, enfermeiros, técnicos, dentistas, agentes comunitários de saúde — CBO 515105), leitos SUS e de UTI, equipamentos em uso, unidades básicas, hospitais, UPA, equipes de saúde da família, de atenção primária e de saúde bucal |
 | **SIA** | Produção ambulatorial aprovada | 2020–2025 (competência de realização) | Quantidade e valor de procedimentos de média e alta complexidade, pelo município do estabelecimento e pelo de residência |
 | **SIH** | Internações pagas por AIH | 2020–2025 (ano da alta) | Internações por complexidade, diárias, diárias de UTI, óbitos, urgência, valor; pelo município do hospital e pelo de residência; fluxos entre municípios |
 | **SISAB** | Produção das equipes de atenção básica | 2020–2025 | Atendimentos individuais, odontológicos, procedimentos, visitas domiciliares; atendimentos por médico e por enfermeiro |
@@ -94,7 +94,7 @@ tab_modelos <- function() {
 }
 ```
 
-A seção [Eficiência](eficiencia/index.html) publica os escores de eficiência técnica e a evolução da produtividade dos municípios, dos hospitais SUS e das regiões de saúde, calculados pelo projeto a partir dos mesmos painéis deste site. Os números vêm da versão `r sub("^v", "", meta_ef("versao_resultados"))` da estimação (relatório técnico *Resultados DEA v2*, `r meta_ef("data_resultados")`), aprovada pelo coordenador e em validação com a SES-MT e o COSEMS-MT.
+A seção [Eficiência](eficiencia/index.html) publica os escores de eficiência técnica e a evolução da produtividade dos municípios, dos hospitais SUS e das regiões de saúde, calculados pelo projeto a partir dos mesmos painéis deste site. Os números vêm da versão `r sub("^v", "", meta_ef("versao_resultados"))` da estimação (`r meta_ef("data_resultados")`), aprovada pelo coordenador e em validação com a SES-MT e o COSEMS-MT.`r if (!is.na(meta_ef("versao_anterior")) && nzchar(meta_ef("versao_anterior"))) sprintf(" Na versão %s, o modelo de atenção básica foi reestimado com o insumo de agentes comunitários de saúde restrito ao ACS (CBO 515105), em vez de toda a família 5151 (que inclui agentes de combate às endemias e agentes indígenas), usada na versão %s. Os demais modelos são os da versão %s, descritos no relatório técnico *%s*.", sub("^v", "", meta_ef("versao_resultados")), sub("^v", "", meta_ef("versao_anterior")), sub("^v", "", meta_ef("versao_anterior")), meta_ef("relatorio_tecnico")) else ""`
 
 - **O que o escore mede.** A Análise Envoltória de Dados (DEA) compara o que cada unidade produz com os recursos que usa, frente às melhores práticas observadas no mesmo ano em Mato Grosso, que formam a fronteira de eficiência. Usa-se o modelo BCC orientado ao produto: a pergunta é quanto a produção poderia crescer com os mesmos recursos, comparando unidades de porte semelhante. O escore vai de 0 a 1 (1 = fronteira). Ele mede eficiência técnica, **não a qualidade do cuidado**: os resultados em saúde ficam ao lado, sem alterar o escore.
 - **Faixas com intervalo de confiança, não ranking.** O escore é corrigido do viés da estimação por reamostragem (bootstrap, `r num(par_ef("b_bootstrap"))` réplicas), com intervalo de confiança de 95%. A leitura é por faixa: fronteira ou quartil do escore corrigido entre as unidades avaliadas; quando o intervalo alcança a faixa vizinha, a posição é incerta. As fronteiras são anuais, por isso o nível do escore não se compara entre anos — a evolução é lida pelo Malmquist.
@@ -149,7 +149,8 @@ As siglas também são explicadas ao passar o cursor sobre elas em qualquer pág
 | ESF / eSF | Estratégia Saúde da Família / equipe de Saúde da Família |
 | eAP | Equipe de Atenção Primária |
 | eSB | Equipe de Saúde Bucal |
-| ACS | Agente Comunitário de Saúde |
+| ACS | Agente Comunitário de Saúde (CBO 515105; não inclui os agentes de combate às endemias nem as demais ocupações da família 5151) |
+| CBO | Classificação Brasileira de Ocupações (código da ocupação do profissional no CNES) |
 | FTE | Equivalente em tempo integral (40 horas semanais) |
 | MC / AC | Média complexidade / alta complexidade |
 | UTI | Unidade de Terapia Intensiva |

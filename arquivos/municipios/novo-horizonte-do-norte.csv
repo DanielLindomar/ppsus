@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510627,Novo Horizonte do Norte,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.5576,1.5262,1.9946,2.2416,1.7932,2.4395
 510627,Novo Horizonte do Norte,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9454,1.2362,1.7199,1.866,1.7478,1.9682
 510627,Novo Horizonte do Norte,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.7028,3.7675,4.5775,4.8107,5.1557,5.4545
-510627,Novo Horizonte do Norte,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.9371,5.0504,5.4046,5.4627,5.6789,5.1791
+510627,Novo Horizonte do Norte,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.4559,3.3989,3.8818,3.9062,4.1578,3.5966
 510627,Novo Horizonte do Norte,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.864,0.6144,0.5972,0.601,0.6048,0.6122
 510627,Novo Horizonte do Norte,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.9496,4.0133,4.7775,3.9062,3.8555,3.9792
 510627,Novo Horizonte do Norte,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

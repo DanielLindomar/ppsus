@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510792,Sorriso,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.5925,1.711,1.5689,1.631,2.0071,2.3711
 510792,Sorriso,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.438,1.519,1.2533,1.2093,1.3476,1.296
 510792,Sorriso,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.2085,3.193,2.6079,2.649,2.6838,2.5526
-510792,Sorriso,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.482,2.2795,1.9652,2.1954,2.4824,2.3878
+510792,Sorriso,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.4291,1.3332,1.111,1.3088,1.5533,1.49
 510792,Sorriso,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4388,0.4287,0.3622,0.3731,0.4261,0.4239
 510792,Sorriso,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.4211,1.6818,1.4824,1.6459,2.0203,2.0809
 510792,Sorriso,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),17,16,16,16,16,16

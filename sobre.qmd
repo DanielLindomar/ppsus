@@ -22,10 +22,10 @@ A pergunta central é simples de enunciar e difícil de responder: **com os recu
 | Produto | Conteúdo | Situação |
 |---|---|---|
 | P1 · Data Lake do SUS-MT | Bases do SIOPS, CNES, SIA, SIH, SISAB, SI-PNI, SIM, SINASC e IBGE, tratadas e integradas | Em uso: alimenta as versões 0.1 e 0.2 deste site |
-| P2 · Escores de eficiência (DEA) | Municípios × níveis de atenção, hospitais e regiões de saúde, 2020–2025 | Versão 2 publicada em 08/10/2026 (seção [Eficiência](eficiencia/index.qmd)); em validação com a SES-MT e o COSEMS-MT |
-| P3 · Índice de Malmquist | Variação da produtividade 2020–2025 | Versão 2 publicada em 08/10/2026 ([Produtividade](eficiencia/produtividade.qmd)); em validação |
+| P2 · Escores de eficiência (DEA) | Municípios × níveis de atenção, hospitais e regiões de saúde, 2020–2025 | Versão 2.1, de 16/10/2026 (atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS; demais modelos da versão 2, de 08/10/2026), na seção [Eficiência](eficiencia/index.qmd); em validação com a SES-MT e o COSEMS-MT |
+| P3 · Índice de Malmquist | Variação da produtividade 2020–2025 | Versão 2.1, de 16/10/2026 ([Produtividade](eficiencia/produtividade.qmd)); em validação |
 | P4 · Previsão de demanda | Modelos por município e nível de atenção | Previsto |
-| P5 · Aplicativo web | Este observatório, ampliado com os escores e as previsões | Versão 0.2 publicada (08/10/2026) |
+| P5 · Aplicativo web | Este observatório, ampliado com os escores e as previsões | Versão 0.2.1 (16/10/2026) |
 | P6 · Artigos e relatórios | Publicações científicas e relatórios técnicos | Previsto |
 
 ## Recorte
@@ -51,6 +51,7 @@ Os **142 municípios** de Mato Grosso (Boa Esperança do Norte foi instalado em 
 | Vigência do projeto: 27/11/2025 a 26/11/2027 | Em andamento |
 | Versão 0.1 do observatório: dados e indicadores 2020–2025 e análise de deslocamento | Publicada em 30/09/2026 |
 | Versão 0.2: escores de eficiência (DEA) e índice de Malmquist (resultados da versão 2 da estimação) | Publicada em 08/10/2026; em validação com a SES-MT e o COSEMS-MT |
+| Versão 0.2.1: resultados da versão 2.1 da estimação de eficiência (atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS, CBO 515105) | 16/10/2026; em validação com a SES-MT e o COSEMS-MT |
 | Modelos de previsão de demanda; ampliação do aplicativo | Previsto |
 | Artigos, relatórios e devolutiva aos gestores | Previsto |
 
@@ -76,7 +77,7 @@ O projeto é executado pela UNEMAT — Universidade do Estado de Mato Grosso, Ca
 
 ## Sobre este site
 
-Este site é atualizado a cada etapa concluída do projeto. A versão 0.1 publicou os dados e indicadores de 2020–2025 e a análise de deslocamento entre residência e atendimento nas internações. A versão 0.2 acrescenta os escores de eficiência (DEA) e a produtividade (Malmquist) dos municípios, dos hospitais SUS e das regiões de saúde, com fichas para o gestor — resultados da versão 2 da estimação, em validação com a SES-MT e o COSEMS-MT. As previsões de demanda entrarão nas versões seguintes.
+Este site é atualizado a cada etapa concluída do projeto. A versão 0.1 publicou os dados e indicadores de 2020–2025 e a análise de deslocamento entre residência e atendimento nas internações. A versão 0.2 acrescenta os escores de eficiência (DEA) e a produtividade (Malmquist) dos municípios, dos hospitais SUS e das regiões de saúde, com fichas para o gestor — resultados da versão 2 da estimação, em validação com a SES-MT e o COSEMS-MT. A versão 0.2.1 traz a versão 2.1 da estimação: o modelo de atenção básica foi reestimado com o insumo de agentes comunitários de saúde restrito ao ACS (CBO 515105); os demais modelos não mudaram. As previsões de demanda entrarão nas versões seguintes.
 
 - Só são publicados agregados por município, região de saúde ou estabelecimento (hospitais identificados por nome fantasia e código CNES, dado público). Nenhum microdado é divulgado.
 - O site é gerado com [Quarto](https://quarto.org) e R a partir dos painéis do Data Lake do projeto e publicado no GitHub Pages. O código-fonte está em [github.com/daniellindomar/ppsus](https://github.com/daniellindomar/ppsus).
@@ -84,6 +85,6 @@ Este site é atualizado a cada etapa concluída do projeto. A versão 0.1 public
 
 **Contato:** lindomar.pegorini@unemat.br
 
-**Como citar:** DANIEL, L. P. et al. *Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso*. Versão 0.2. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.
+**Como citar:** DANIEL, L. P. et al. *Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso*. Versão 0.2.1. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.
 
 Conteúdo, indicadores e arquivos derivados sob licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br): uso livre com citação do projeto. Os dados de origem são públicos (DATASUS, SIOPS, IBGE).

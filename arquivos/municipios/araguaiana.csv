@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510100,Araguaiana,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8588,1.0052,0.7457,0.7102,0.6962,2.0424
 510100,Araguaiana,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.8948,3.1005,2.5244,2.7324,2.7848,2.7466
 510100,Araguaiana,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.6989,3.6978,3.1621,3.7655,3.9671,4.5768
-510100,Araguaiana,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,5.1463,5.7376,4.9407,4.9923,5.0633,4.7441
+510100,Araguaiana,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.2165,4.0535,3.4256,3.4427,3.5443,3.2459
 510100,Araguaiana,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3216,0.3264,0.3636,0.3874,0.5063,0.4994
 510100,Araguaiana,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.8598,3.9164,3.1621,3.0992,3.038,1.7678
 510100,Araguaiana,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510337,Cotriguaçu,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.3721,0.3784,0.762,0.786,0.8463,0.99
 510337,Cotriguaçu,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.7041,0.851,1.2379,1.1523,1.156,1.3021
 510337,Cotriguaçu,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.1775,1.2801,2.1914,2.3692,2.4562,2.5932
-510337,Cotriguaçu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.2235,2.1157,3.4357,3.2944,3.366,3.3988
+510337,Cotriguaçu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.8777,1.6653,2.7473,2.6327,2.6928,2.7916
 510337,Cotriguaçu,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1813,0.1689,0.3633,0.3738,0.3847,0.3988
 510337,Cotriguaçu,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.6761,1.6412,3.0878,3.1776,3.2699,3.3898
 510337,Cotriguaçu,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

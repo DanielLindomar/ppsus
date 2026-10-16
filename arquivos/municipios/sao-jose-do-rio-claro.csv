@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510730,São José do Rio Claro,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5673,0.6098,0.7927,0.913,1.2174,1.3255
 510730,São José do Rio Claro,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9124,1.1288,1.8429,1.941,2.2166,2.1896
 510730,São José do Rio Claro,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.6815,1.9301,2.6812,2.9379,3.5711,4.8149
-510730,São José do Rio Claro,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.0546,1.94,2.6605,2.6545,2.825,1.7468
+510730,São José do Rio Claro,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.5744,1.5067,2.0569,2.1135,2.1771,1.1242
 510730,São José do Rio Claro,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3175,0.2815,0.3984,0.4085,0.3901,0.384
 510730,São José do Rio Claro,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.0471,1.0304,1.4754,1.4879,1.5005,1.522
 510730,São José do Rio Claro,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

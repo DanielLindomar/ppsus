@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510704,Primavera do Leste,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.765,1.9535,1.6435,1.6193,1.7245,1.8244
 510704,Primavera do Leste,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.2428,1.6169,1.3222,1.4762,1.8419,1.8362
 510704,Primavera do Leste,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.9222,3.6493,2.9622,3.0676,3.3548,3.6229
-510704,Primavera do Leste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.4149,2.676,2.5095,2.499,2.3912,2.3136
+510704,Primavera do Leste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.5374,1.7208,1.5884,1.5655,1.4573,1.4105
 510704,Primavera do Leste,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3568,0.3386,0.281,0.2864,0.2932,0.3064
 510704,Primavera do Leste,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.7883,2.167,1.4113,1.0418,1.3954,1.4027
 510704,Primavera do Leste,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),10,30,10,8,8,8

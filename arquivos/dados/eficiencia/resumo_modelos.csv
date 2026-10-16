@@ -1,10 +1,10 @@
 modelo,nome_modelo,grupo,rotulo_grupo,ano,n_unidades,n_avaliados,n_nao_publicavel,n_fora_modelo,media_escore,mediana_escore,media_escore_original,n_fronteira,n_quartil_superior,n_terceiro_quartil,n_segundo_quartil,n_quartil_inferior,n_ic_cruza_faixa,n_registro_a_verificar,mq_n,mq_mi,mq_ec,mq_tc,mq_n_ec_maior_1,mq_especificacao,mq_tc_publicavel
-M1,Atenção básica,todos,todos,2020,142,138,3,1,0.643515,0.660424,0.746221,30,27,27,27,27,74,19,0,,,,,,0
-M1,Atenção básica,todos,todos,2021,142,140,1,1,0.694442,0.723164,0.78723,43,25,24,24,24,57,15,126,0.95521,1.056244,0.904346,72,c_absoluto_crs,0
-M1,Atenção básica,todos,todos,2022,142,141,0,1,0.731583,0.77117,0.818289,45,24,24,24,24,63,9,135,1.197875,1.067306,1.122335,75,c_absoluto_crs,0
-M1,Atenção básica,todos,todos,2023,142,141,0,1,0.766526,0.819495,0.846353,51,23,22,22,23,70,8,138,1.01161,1.058244,0.955933,72,c_absoluto_crs,0
-M1,Atenção básica,todos,todos,2024,142,141,0,1,0.817034,0.880041,0.885536,57,21,21,21,21,58,10,139,1.03802,1.053594,0.985218,78,c_absoluto_crs,0
-M1,Atenção básica,todos,todos,2025,142,142,0,0,0.849668,0.901902,0.910425,69,19,18,18,18,53,9,140,1.021832,1.055371,0.968221,75,c_absoluto_crs,0
+M1,Atenção básica,todos,todos,2020,142,138,3,1,0.648935,0.665764,0.750774,28,28,27,27,28,74,19,0,,,,,,0
+M1,Atenção básica,todos,todos,2021,142,140,1,1,0.692532,0.713686,0.786441,42,25,24,24,25,62,15,126,0.962723,1.045481,0.920842,68,c_absoluto_crs,0
+M1,Atenção básica,todos,todos,2022,142,141,0,1,0.729488,0.769348,0.816205,44,25,24,24,24,68,9,135,1.192005,1.075472,1.108355,77,c_absoluto_crs,0
+M1,Atenção básica,todos,todos,2023,142,141,0,1,0.766121,0.81602,0.845992,51,23,22,22,23,66,8,138,1.016475,1.052573,0.965705,70,c_absoluto_crs,0
+M1,Atenção básica,todos,todos,2024,142,141,0,1,0.810367,0.871979,0.879308,53,22,22,22,22,65,10,139,1.034476,1.042406,0.992392,76,c_absoluto_crs,0
+M1,Atenção básica,todos,todos,2025,142,142,0,0,0.839689,0.895971,0.90284,64,20,19,19,20,56,9,140,1.04471,1.044164,1.000524,73,c_absoluto_crs,0
 M0,Consolidado (sistema municipal de saúde),todos,todos,2020,142,130,11,1,0.666752,0.701496,0.752869,31,25,25,24,25,64,17,0,,,,,,0
 M0,Consolidado (sistema municipal de saúde),todos,todos,2021,142,135,6,1,0.658895,0.65777,0.747203,30,27,26,26,26,63,10,126,0.977323,0.975405,1.001966,46,c_absoluto_crs,0
 M0,Consolidado (sistema municipal de saúde),todos,todos,2022,142,139,2,1,0.674265,0.685427,0.760873,33,27,26,26,27,69,6,135,1.166976,1.030777,1.132132,70,c_absoluto_crs,0

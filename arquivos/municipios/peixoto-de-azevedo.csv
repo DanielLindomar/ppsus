@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510642,Peixoto de Azevedo,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8894,1.1147,1.3279,1.3492,1.3096,1.321
 510642,Peixoto de Azevedo,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0329,1.3274,1.8087,2.1608,2.1382,2.1645
 510642,Peixoto de Azevedo,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.2096,3.684,4.4999,5.2941,4.5722,4.7713
-510642,Peixoto de Azevedo,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.653,2.5914,2.741,2.5991,2.5578,2.5553
+510642,Peixoto de Azevedo,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.1246,2.0591,2.1703,2.0812,2.0337,1.8072
 510642,Peixoto de Azevedo,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1305,0.1143,0.1706,0.1659,0.1586,0.168
 510642,Peixoto de Azevedo,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.7664,1.5688,1.7959,1.9304,1.823,1.9405
 510642,Peixoto de Azevedo,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,7,2,0,0,0

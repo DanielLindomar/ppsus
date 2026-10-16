@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510775,Salto do Céu,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.3657,1.5375,1.4243,1.3808,1.5629,1.4876
 510775,Salto do Céu,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8801,0.9299,1.0193,1.2232,1.0873,1.0938
 510775,Salto do Céu,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.1487,4.5722,4.0092,3.1938,2.8758,3.0818
-510775,Salto do Céu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,5.4628,6.0198,5.4363,5.4363,5.3004,5.3322
+510775,Salto do Céu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,4.2489,4.3397,3.8054,3.8054,3.8054,3.965
 510775,Salto do Céu,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.607,0.62,0.5219,0.4757,0.5219,0.6153
 510775,Salto do Céu,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,4.2489,4.3397,3.8054,3.8054,3.8054,3.8283
 510775,Salto do Céu,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

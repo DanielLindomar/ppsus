@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510300,Chapada dos Guimarães,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.0199,0.7566,0.9405,0.9374,1.1392,1.2612
 510300,Chapada dos Guimarães,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9998,0.8681,1.0037,1.1126,1.1247,1.2822
 510300,Chapada dos Guimarães,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.0516,1.805,2.3607,2.5942,2.7769,2.9376
-510300,Chapada dos Guimarães,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.9815,2.5532,3.1596,3.0718,2.9251,2.9124
+510300,Chapada dos Guimarães,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.4675,2.0168,2.326,2.32,2.2541,2.2099
 510300,Chapada dos Guimarães,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1501,0.1479,0.1885,0.1783,0.1936,0.2842
 510300,Chapada dos Guimarães,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.0344,0,0,0,0,0
 510300,Chapada dos Guimarães,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0
