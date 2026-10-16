@@ -1,0 +1,21 @@
+posicao,cod_mun6,municipio,uf,nome_uf,periodo,internacoes,pct_do_total_fora,internacoes_ac,pct_ac,ac_suprimida,nota_supressao
+1,350550,Barretos,SP,São Paulo,2020–2025,3958,19.2,2008,50.7,0,
+2,530010,Brasília,DF,Distrito Federal,2020–2025,2075,10.1,371,17.9,0,
+3,355030,São Paulo,SP,São Paulo,2020–2025,1501,7.3,872,58.1,0,
+4,520870,Goiânia,GO,Goiás,2020–2025,1105,5.4,289,26.2,0,
+5,354980,São José do Rio Preto,SP,São Paulo,2020–2025,727,3.5,528,72.6,0,
+6,110030,Vilhena,RO,Rondônia,2020–2025,718,3.5,,,1,alta complexidade suprimida: menos de 5 internações na alta ou na média complexidade
+7,410420,Campo Largo,PR,Paraná,2020–2025,686,3.3,402,58.6,0,
+8,500270,Campo Grande,MS,Mato Grosso do Sul,2020–2025,588,2.9,84,14.3,0,
+9,110004,Cacoal,RO,Rondônia,2020–2025,503,2.4,7,1.4,0,
+10,410690,Curitiba,PR,Paraná,2020–2025,492,2.4,263,53.5,0,
+11,410400,Campina Grande do Sul,PR,Paraná,2020–2025,471,2.3,285,60.5,0,
+12,110020,Porto Velho,RO,Rondônia,2020–2025,324,1.6,70,21.6,0,
+13,172100,Palmas,TO,Tocantins,2020–2025,297,1.4,46,15.5,0,
+14,310620,Belo Horizonte,MG,Minas Gerais,2020–2025,248,1.2,42,16.9,0,
+15,350600,Bauru,SP,São Paulo,2020–2025,228,1.1,121,53.1,0,
+16,150503,Novo Progresso,PA,Pará,2020–2025,173,0.8,0,0.0,0,
+17,354340,Ribeirão Preto,SP,São Paulo,2020–2025,167,0.8,60,35.9,0,
+18,110012,Ji-Paraná,RO,Rondônia,2020–2025,154,0.7,,,1,alta complexidade suprimida: menos de 5 internações na alta ou na média complexidade
+19,352480,Jales,SP,São Paulo,2020–2025,145,0.7,57,39.3,0,
+20,520140,Aparecida de Goiânia,GO,Goiás,2020–2025,140,0.7,31,22.1,0,

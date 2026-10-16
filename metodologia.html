@@ -223,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="faixa-versao"><b>Versão 0.2.1</b> (16/10/2026) — dados e indicadores 2020–2025, escores de eficiência (DEA) e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT. Cada valor mostra a fonte e o ano a que se refere.</div>
+<div class="faixa-versao"><b>Versão 0.3</b> (16/10/2026) — dados e indicadores 2020–2025, deslocamento nas internações (inclusive as de residentes de Mato Grosso em hospitais de outros estados), escores de eficiência (DEA) e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT. Cada valor mostra a fonte e o ano a que se refere.</div>
 </div>
 </div>
 <p>Esta página explica de onde vêm os números do site, o que cada um significa, por que a janela é 2020–2025 e quais problemas conhecidos dos dados exigem cautela na leitura. É a referência para todas as demais páginas; o dicionário completo dos indicadores está em <a href="dados/index.html">Dados</a>.</p>
@@ -231,12 +231,6 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="fontes-de-dados">Fontes de dados</h2>
 <p>Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DATASUS/Ministério da Saúde), do SIOPS e do IBGE. Os arquivos brutos foram carregados em um repositório único do projeto (Data Lake do SUS-MT), validados e reorganizados em painéis por município e ano.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Fonte</th>
@@ -271,30 +265,36 @@ ul.task-list li input[type="checkbox"] {
 <td>Internações por complexidade, diárias, diárias de UTI, óbitos, urgência, valor; pelo município do hospital e pelo de residência; fluxos entre municípios</td>
 </tr>
 <tr class="odd">
+<td><strong>SIH (outras UF)</strong></td>
+<td>Internações pagas por AIH em hospitais das outras 26 unidades da federação (arquivos RD de cada estado), filtradas a residentes de Mato Grosso</td>
+<td>2020–2025 (ano da alta)</td>
+<td>Internações de residentes de Mato Grosso fora do estado, por estado e município de destino e por complexidade; saldo de internações com cada estado (página <a href="deslocamento/index.html#fuga">Deslocamento</a>)</td>
+</tr>
+<tr class="even">
 <td><strong>SISAB</strong></td>
 <td>Produção das equipes de atenção básica</td>
 <td>2020–2025</td>
 <td>Atendimentos individuais, odontológicos, procedimentos, visitas domiciliares; atendimentos por médico e por enfermeiro</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>SI-PNI</strong></td>
 <td>Doses de vacina aplicadas</td>
 <td>2020–2025 (sem COVID-19)</td>
 <td>Doses aplicadas no município, doses em menores de 1 ano</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>SIM</strong></td>
 <td>Óbitos por residência</td>
 <td>2020–2024</td>
 <td>Óbitos totais e de menores de 1 ano; taxas de mortalidade geral e infantil</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>SINASC</strong></td>
 <td>Nascidos vivos por residência da mãe</td>
 <td>2020–2024</td>
 <td>Nascidos vivos, pré-natal com 7+ consultas, baixo peso, cesáreas, mães adolescentes</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>IBGE</strong></td>
 <td>População, malha e sedes municipais</td>
 <td>2020–2025</td>
@@ -328,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>A divisão da despesa por subfunção não é confiável em alguns municípios.</strong> Várzea Grande lança cerca de 83% da despesa em “outras subfunções” (menos de 1% em atenção básica); Cuiabá, cerca de 40%; Rondolândia, Alto Boa Vista e Planalto da Serra, mais da metade. Nesses casos, a despesa em atenção básica e em média e alta complexidade por habitante está subestimada. <strong>Use a despesa total em saúde como referência</strong>; a quebra por subfunção serve para os demais municípios e será tratada com análise de sensibilidade no DEA.</li>
 <li><strong>A atenção básica migrou do SIA para o SISAB.</strong> A parcela da atenção básica na produção do SIA caiu de 40% para 20% entre 2019 e 2025, porque o registro passou a ser feito no SISAB. Por isso a produção da atenção básica é medida pelo SISAB; o SIA fica restrito à média e alta complexidade.</li>
 <li><strong>A residência do paciente no SIA melhorou ao longo do tempo.</strong> A parcela de procedimentos ambulatoriais com residência ignorada caiu de 79% (2019) para 49% (2025) com a mudança do registro consolidado para o individualizado. Os indicadores ambulatoriais por residência não são comparáveis entre anos e por isso não são publicados; a análise de deslocamento usa somente as internações (SIH), em que a residência é bem preenchida.</li>
-<li><strong>A saída para outros estados não é observada.</strong> O repositório contém apenas a produção realizada em Mato Grosso. Moradores internados em Goiás, Rondônia, Mato Grosso do Sul, Pará ou no Distrito Federal não aparecem; os indicadores por residência subestimam a demanda, sobretudo na alta complexidade e nos municípios de fronteira. Uma correção com o SIH dos estados vizinhos está prevista.</li>
+<li><strong>As internações em outros estados ficam fora dos indicadores municipais.</strong> Os indicadores por residência, os fluxos entre municípios e os modelos de eficiência usam a produção realizada em Mato Grosso. Desde a versão 0.3, as internações de residentes de Mato Grosso em hospitais das outras 26 unidades da federação são medidas com o SIH desses estados e aparecem na página <a href="deslocamento/index.html#fuga">Deslocamento</a>: 1,6% das internações dos residentes em 2025, mas 9,2% das de alta complexidade. Os indicadores por residência subestimam, portanto, a demanda hospitalar, sobretudo na alta complexidade e nos municípios de fronteira (Rondolândia é o caso extremo). A AIH não traz o Cartão Nacional de Saúde: a contagem é de internações, não de pessoas. Atendimentos ambulatoriais em outros estados não estão no site.</li>
 <li><strong>COVID-19 em 2020 e 2021.</strong> A mortalidade hospitalar chegou a 5,8% em 2021, os leitos de UTI foram ampliados temporariamente, a mortalidade geral subiu e a produção da atenção básica caiu em 2020. Comparações que envolvem esses anos devem ser lidas com essa lente; o índice de Malmquist será calculado com e sem 2020–2021.</li>
 <li><strong>Leitos de UTI SUS sub-registrados no CNES.</strong> O cadastro informa cerca de 490 leitos de UTI SUS para um parque de mais de 1.300 leitos existentes, e há hospitais com UTI em funcionamento e zero leitos SUS declarados. O número de leitos de UTI aparece como contexto; as diárias de UTI do SIH são a medida mais confiável do uso.</li>
 <li><strong>Municípios pequenos oscilam muito.</strong> Em 2019–2024, em 308 dos 846 município-anos (141 municípios × 6 anos) houve menos de 100 nascidos vivos, o que torna a taxa de mortalidade infantil instável (um óbito a mais muda a taxa em vários pontos). Há também valores per capita extremos (Araguainha, R$ 7.748 por habitante em despesa; Nova Nazaré, 113 procedimentos por habitante por registro consolidado). Nos perfis esses valores aparecem como estão, com nota; nos modelos serão suavizados ou limitados.</li>
@@ -407,7 +407,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="nota-fonte">
 <p>Modelos e variáveis da especificação principal vigente (arquivo <code>especificacoes_modelos.csv</code> em <a href="dados/index.html#eficiencia">Dados</a>). Municípios: valores por mil habitantes; hospitais: valores absolutos. Despesas em R$ de 2025 (IPCA).</p>
 </div>
-<p><strong>Ressalvas da eficiência.</strong> Unidades com dados de registro atípicos recebem o sinal “registro a verificar”: continuam avaliadas, mas não servem de referência a outras e podem ter a meta financeira omitida; a lista de verificações será encaminhada à SES-MT e ao COSEMS-MT. Valem também as limitações acima: a fuga de moradores para outros estados não é observada; 2020–2021 foram afetados pela COVID-19; a classificação da despesa por subfunção é frágil em alguns municípios; o pré-natal de 2025 ainda não está disponível. Internações por condições sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.</p>
+<p><strong>Ressalvas da eficiência.</strong> Unidades com dados de registro atípicos recebem o sinal “registro a verificar”: continuam avaliadas, mas não servem de referência a outras e podem ter a meta financeira omitida; a lista de verificações será encaminhada à SES-MT e ao COSEMS-MT. Valem também as limitações acima: as internações de moradores em outros estados não entram nos modelos (são medidas à parte, na página <a href="deslocamento/index.html#fuga">Deslocamento</a>); 2020–2021 foram afetados pela COVID-19; a classificação da despesa por subfunção é frágil em alguns municípios; o pré-natal de 2025 ainda não está disponível. Internações por condições sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.</p>
 </section>
 <section id="pipeline-do-dado-bruto-ao-site" class="level2">
 <h2 class="anchored" data-anchor-id="pipeline-do-dado-bruto-ao-site">Pipeline: do dado bruto ao site</h2>
@@ -485,6 +485,14 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>AIH</td>
 <td>Autorização de Internação Hospitalar</td>
+</tr>
+<tr class="even">
+<td>RD</td>
+<td>Arquivo de AIH reduzida do SIH/SUS: uma linha por AIH, publicado pelo DATASUS para cada estado e mês</td>
+</tr>
+<tr class="odd">
+<td>CNS</td>
+<td>Cartão Nacional de Saúde (identificador do usuário do SUS; não consta da AIH reduzida)</td>
 </tr>
 <tr class="even">
 <td>SISAB</td>
@@ -1202,7 +1210,7 @@ Definições, ressalvas e anomalias conhecidas em
 <p><span class="rodape-rotulo">Financiamento</span> <img src="./assets/logos/ppsus-mt.png" class="rodape-logo img-fluid" alt="PPSUS — Programa Pesquisa para o SUS: Mato Grosso"> <img src="./assets/logos/fapemat.png" class="rodape-logo img-fluid" alt="FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso"> <img src="./assets/logos/ses-mt.png" class="rodape-logo img-fluid" alt="SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso"> <img src="./assets/logos/cnpq.png" class="rodape-logo img-fluid" alt="CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico"> <img src="./assets/logos/ministerio-saude-sus.png" class="rodape-logo img-fluid" alt="SUS · Ministério da Saúde · Governo do Brasil"></p>
 </div>
 <p><span class="rodape-citacao">Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.</span></p>
-<p><span class="rodape-versao">Versão 0.2.1 · atualizado em 16/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
+<p><span class="rodape-versao">Versão 0.3 · atualizado em 16/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
 </div>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div>
     <div class="nav-footer-right">
