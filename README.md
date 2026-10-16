@@ -17,7 +17,7 @@ Todos os comandos rodam pelo PowerShell, na raiz do repositório. Os scripts lee
    ```powershell
    python scripts/00_sedes_ibge.py              # sedes municipais (IBGE, Localidades 2022) → dados_site/sedes_municipais.csv (Python puro)
    python scripts/01_preparar_dados.py          # municipios, indicadores, series, hospitais, geo, centroides.csv (= sedes), downloads do contrato
-   python scripts/02_preparar_deslocamento.py   # fluxos de internação, deslocamento por município, polos, resumo, outras UFs, achados
+   python scripts/02_preparar_deslocamento.py   # fluxos de internação, deslocamento por município, polos, resumo, outras UFs, achados e internações de residentes de MT em outras UF (fuga_*.csv, de mart.fluxo_internacao_od_ano)
    python scripts/01_preparar_dados.py          # de novo: incorpora pct_internacoes_fora_regiao e km_medio_internacao à serie.csv
    python scripts/06_preparar_eficiencia.py     # resultados DEA/Malmquist v2.1 (schema dea, versao='v2.1'; --versao v2 regera a anterior) → dados_site/eficiencia/ e arquivos/dados/eficiencia/
    python scripts/03_gerar_paginas.py           # municipios/<slug>.qmd, indicadores/<id>.qmd e arquivos/municipios/<slug>.csv
@@ -53,6 +53,7 @@ Todos os comandos rodam pelo PowerShell, na raiz do repositório. Os scripts lee
 ## Regras de conteúdo
 
 - Só agregados por município, região de saúde ou estabelecimento; nunca microdados.
+- Internações em outros estados: nos recortes por região de saúde e por município, contagens de 1 a 4 não são publicadas (supressão complementar no script 02; regra em `dados_site/README_dados.md`).
 - Cada número com fonte e ano; ressalvas visíveis.
 - Textos em português do Brasil, registro gerencial, siglas explicadas pelo glossário.
 
