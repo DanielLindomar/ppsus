@@ -372,6 +372,9 @@ NOTA_SUPR <- paste0("“Suprimido”: célula com menos de 5 internações, ou e
                     "possa ser deduzida por diferença (regra de divulgação do projeto: nenhum recorte por região de saúde ou ",
                     "por município mostra contagens de 1 a 4).")
 
+# preposição contraída antes do nome da UF ("no Paraná", "na Bahia", "em São Paulo")
+PREP_UF <- c("Acre" = "no", "Alagoas" = "em", "Amapá" = "no", "Amazonas" = "no", "Bahia" = "na", "Ceará" = "no", "Distrito Federal" = "no", "Espírito Santo" = "no", "Goiás" = "em", "Maranhão" = "no", "Mato Grosso do Sul" = "em", "Minas Gerais" = "em", "Pará" = "no", "Paraíba" = "na", "Paraná" = "no", "Pernambuco" = "em", "Piauí" = "no", "Rio de Janeiro" = "no", "Rio Grande do Norte" = "no", "Rio Grande do Sul" = "no", "Rondônia" = "em", "Roraima" = "em", "Santa Catarina" = "em", "São Paulo" = "em", "Sergipe" = "em", "Tocantins" = "no", "Mato Grosso" = "em")
+em_uf <- function(nome) paste(ifelse(is.na(PREP_UF[nome]), "em", PREP_UF[nome]), nome)
 lista_e_pt <- function(x) if (length(x) <= 1) paste(x, collapse = "") else paste(paste(x[-length(x)], collapse = ", "), x[length(x)], sep = " e ")
 supr_num <- function(v, f = num) ifelse(is.na(v), TXT_SUPR, f(v))
 brl_mi <- function(v) ifelse(is.na(v), "—", paste0("R$ ", num(v / 1e6, 1), " mi"))

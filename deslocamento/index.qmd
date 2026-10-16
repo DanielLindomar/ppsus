@@ -71,7 +71,7 @@ top20_share <- sum(DEST$internacoes) / sum(FS$internacoes_outra_uf[FS$nivel == "
 frase_rond <- if (nrow(rond_f) == 1 && !is.na(rond_f$internacoes_outra_uf)) sprintf(
   "o SIH dos outros estados confirma que a maior parte dos moradores se interna fora de Mato Grosso: em %s, %s das %s internações de residentes de Rondolândia (%s) ocorreram em outros estados%s.",
   PERIODO_FUGA, num(rond_f$internacoes_outra_uf), num(rond_f$internacoes_total_res), pct_txt(rond_f$pct_outra_uf),
-  if (!is.na(rond_f$pct_uf_principal)) sprintf(", %s delas em %s", pct_txt(rond_f$pct_uf_principal), rond_f$nome_uf_principal) else "") else
+  if (!is.na(rond_f$pct_uf_principal)) sprintf(", %s delas %s", pct_txt(rond_f$pct_uf_principal), em_uf(rond_f$nome_uf_principal)) else "") else
   "o número reduzido de registros sugere que a maior parte dos moradores é atendida fora do estado (ver Internações em outros estados)."
 ```
 
@@ -131,7 +131,7 @@ Internações de residentes de Mato Grosso em hospitais do estado (SIH/SUS, AIH 
 - **Maiores fluxos.** Os maiores fluxos intermunicipais de internação em `r A` foram `r lista_txt(sprintf("%s → %s (%s)", nome_mun(top_fluxos$cod_origem), nome_mun(top_fluxos$cod_destino), num(top_fluxos$internacoes)))`.
 - **Internações programadas.** Em `r A`, `r pct_txt(T25$pct_eletivas_fora)` das internações realizadas fora do município de residência foram eletivas, contra `r pct_txt(T25$pct_eletivas_proprio)` das realizadas no próprio município: parte do deslocamento corresponde a procedimentos programados pela regulação, e não a urgências (SIH/SUS, caráter da internação — eletivo × urgência —, `r A`).
 - **Pacientes de outros estados.** Hospitais de Mato Grosso também atenderam `r num(T25$n_outra_uf)` internações de residentes de outras unidades da federação em `r A` (`r num(uf_per)` em 2020–2025), principalmente de `r lista_uf`. Esses registros ficam fora dos fluxos. `r frase_ign`
-- **Internações em outros estados.** No sentido inverso, `r num(F25$internacoes_outra_uf)` internações de residentes de Mato Grosso ocorreram em hospitais de outros estados em `r A` (`r pct_txt(F25$pct_outra_uf)` das internações dos residentes, mas `r pct_txt(FAC25$pct_outra_uf)` na alta complexidade), `r pct_txt(F25$pct_uf_principal)` delas em `r F25$nome_uf_principal`. Em 2020–2025, o estado enviou `r num(sai_p)` internações a outras unidades da federação e recebeu `r num(ent_p)`: saldo de `r saldo_txt(ent_p - sai_p)` (SIH/SUS das 26 outras UF; detalhes em [Internações em outros estados](#fuga)).
+- **Internações em outros estados.** No sentido inverso, `r num(F25$internacoes_outra_uf)` internações de residentes de Mato Grosso ocorreram em hospitais de outros estados em `r A` (`r pct_txt(F25$pct_outra_uf)` das internações dos residentes, mas `r pct_txt(FAC25$pct_outra_uf)` na alta complexidade), `r pct_txt(F25$pct_uf_principal)` delas `r em_uf(F25$nome_uf_principal)`. Em 2020–2025, o estado enviou `r num(sai_p)` internações a outras unidades da federação e recebeu `r num(ent_p)`: saldo de `r saldo_txt(ent_p - sai_p)` (SIH/SUS das 26 outras UF; detalhes em [Internações em outros estados](#fuga)).
 
 ## Por nível de complexidade {#niveis}
 
@@ -333,7 +333,7 @@ tabela_fuga_regioes(A)
 
 ### Por município de residência
 
-Somado o período 2020–2025, Rondolândia é o caso extremo: `r num(rond_f$internacoes_outra_uf)` das `r num(rond_f$internacoes_total_res)` internações de seus residentes (`r pct_txt(rond_f$pct_outra_uf)`) ocorreram em outros estados, `r pct_txt(rond_f$pct_uf_principal)` delas em `r rond_f$nome_uf_principal`. Entre os municípios com ao menos 500 internações de residentes no período, as maiores parcelas em outros estados foram `r lista_txt(sprintf("%s (%s, principalmente %s)", top_f$municipio, pct_txt(top_f$pct_outra_uf), top_f$nome_uf_principal))`. A tabela traz os `r nrow(FUGAMUN)` municípios, ordenados pela parcela em outros estados; em `r n_supr_mun` deles a contagem aparece como suprimida.
+Somado o período 2020–2025, Rondolândia é o caso extremo: `r num(rond_f$internacoes_outra_uf)` das `r num(rond_f$internacoes_total_res)` internações de seus residentes (`r pct_txt(rond_f$pct_outra_uf)`) ocorreram em outros estados, `r pct_txt(rond_f$pct_uf_principal)` delas `r em_uf(rond_f$nome_uf_principal)`. Entre os municípios com ao menos 500 internações de residentes no período, as maiores parcelas em outros estados foram `r lista_txt(sprintf("%s (%s, principalmente %s)", top_f$municipio, pct_txt(top_f$pct_outra_uf), top_f$nome_uf_principal))`. A tabela traz os `r nrow(FUGAMUN)` municípios, ordenados pela parcela em outros estados; em `r n_supr_mun` deles a contagem aparece como suprimida.
 
 ```{r}
 tabela_fuga_municipios()

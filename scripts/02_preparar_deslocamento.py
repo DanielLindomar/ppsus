@@ -94,6 +94,14 @@ UF_SIGLA = {
     "52": ("GO", "Goiás"), "53": ("DF", "Distrito Federal"),
 }
 SIGLA_NOME = {s: n for s, n in UF_SIGLA.values()}
+# preposição contraída antes do nome da UF ("no Paraná", "na Bahia", "em São Paulo")
+PREP_UF = {"Acre": "no", "Alagoas": "em", "Amapá": "no", "Amazonas": "no", "Bahia": "na", "Ceará": "no", "Distrito Federal": "no", "Espírito Santo": "no", "Goiás": "em", "Maranhão": "no", "Mato Grosso do Sul": "em", "Minas Gerais": "em", "Pará": "no", "Paraíba": "na", "Paraná": "no", "Pernambuco": "em", "Piauí": "no", "Rio de Janeiro": "no", "Rio Grande do Norte": "no", "Rio Grande do Sul": "no", "Rondônia": "em", "Roraima": "em", "Santa Catarina": "em", "São Paulo": "em", "Sergipe": "em", "Tocantins": "no", "Mato Grosso": "em"}
+
+
+def em_uf(nome: str) -> str:
+    return f"{PREP_UF.get(nome, 'em')} {nome}"
+
+
 # Internações em outras UF (versão 0.3)
 LIMIAR_SUPRESSAO = 5     # Termo de Uso do pacote, item 6: células com menos de 5 casos (1 a 4) não são publicadas
 N_DESTINOS = 20          # principais municípios de destino fora de MT, 2020–2025
@@ -1065,7 +1073,7 @@ def escrever_achados(mt, fl, des, polos, resumo, fluxo_reg, nome, nome_reg, reg,
         f"No sentido inverso (SIH/SUS das 26 outras UF), {fmt_int(f1['internacoes_outra_uf'])} internações de "
         f"residentes de MT ocorreram em hospitais de outros estados em {a1} "
         f"({fmt_pct(f1['pct_outra_uf'])} das internações dos residentes; {fmt_pct(fac1['pct_outra_uf'])} na alta "
-        f"complexidade), {fmt_pct(f1['pct_uf_principal'])} delas em {f1['nome_uf_principal']}. O saldo com os outros "
+        f"complexidade), {fmt_pct(f1['pct_uf_principal'])} delas {em_uf(f1['nome_uf_principal'])}. O saldo com os outros "
         f"estados (recebidas − enviadas) foi de {fmt_saldo(int(s1['saldo'].sum()))} em {a1} e de "
         f"{fmt_saldo(fuga['saldo_periodo'])} em {a0}–{a1}.")
 
