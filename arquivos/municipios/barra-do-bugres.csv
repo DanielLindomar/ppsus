@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510170,Barra do Bugres,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8183,0.6251,0.8162,1.4992,1.4961,1.5966
 510170,Barra do Bugres,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6792,0.661,0.9387,1.255,1.2852,1.3756
 510170,Barra do Bugres,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.382,2.0192,2.8507,3.893,4.314,4.4025
-510170,Barra do Bugres,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.6334,1.2393,1.4305,1.4063,1.3795,1.4273
+510170,Barra do Bugres,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,0.9771,0.8815,0.955,0.8874,0.8791,0.941
 510170,Barra do Bugres,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1144,0.1414,0.1979,0.2147,0.2133,0.2448
 510170,Barra do Bugres,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.0904,0,0.3258,1.2886,1.082,1.0882
 510170,Barra do Bugres,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

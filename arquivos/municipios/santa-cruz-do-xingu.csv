@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510774,Santa Cruz do Xingu,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.3217,1.4741,1.3153,1.362,1.0162,1.0503
 510774,Santa Cruz do Xingu,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.109,1.1741,1.3416,1.2272,1.7043,2.0661
 510774,Santa Cruz do Xingu,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.512,5.7407,5.6069,5.2513,4.4989,4.5627
-510774,Santa Cruz do Xingu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,5.8223,5,4.3217,4.035,4.2343,4.2459
+510774,Santa Cruz do Xingu,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.9738,3.0259,2.6945,2.5492,2.8229,2.8685
 510774,Santa Cruz do Xingu,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.8545,0.4926,0.3758,0.6664,0.5575,0.3444
 510774,Santa Cruz do Xingu,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0,0.9889,1.5032,1.4567,1.4114,1.3774
 510774,Santa Cruz do Xingu,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

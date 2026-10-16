@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510525,Lucas do Rio Verde,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.4247,1.5923,1.4763,1.5446,1.5628,1.9387
 510525,Lucas do Rio Verde,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.0716,1.188,1.0559,1.1865,1.3934,1.4736
 510525,Lucas do Rio Verde,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.0899,3.5091,2.9122,3.2883,3.6634,4.0117
-510525,Lucas do Rio Verde,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.9564,2.0059,1.8178,1.6962,1.7744,1.5036
+510525,Lucas do Rio Verde,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.4882,1.6123,1.3673,1.2283,1.2384,0.9691
 510525,Lucas do Rio Verde,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2757,0.3089,0.2851,0.3011,0.2862,0.3261
 510525,Lucas do Rio Verde,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.9883,1.2104,0.7995,1.143,1.5013,1.1309
 510525,Lucas do Rio Verde,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,4,0,0,0,0

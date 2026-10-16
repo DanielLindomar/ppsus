@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510310,Cocalinho,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8097,1.4118,1.2685,0.9173,0.9521,0.9992
 510310,Cocalinho,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.5402,1.4661,1.3907,1.4471,1.5775,1.3364
 510310,Cocalinho,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.9803,2.3478,2.8264,2.8689,2.8002,2.9315
-510310,Cocalinho,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.1507,3.9223,3.537,3.3339,3.1238,3.1178
+510310,Cocalinho,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.9924,2.9741,2.7331,2.5431,2.4891,2.348
 510310,Cocalinho,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5281,0.5248,0.4823,0.4745,0.4667,0.4619
 510310,Cocalinho,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.8164,2.9006,2.7331,2.6886,2.6447,2.6174
 510310,Cocalinho,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

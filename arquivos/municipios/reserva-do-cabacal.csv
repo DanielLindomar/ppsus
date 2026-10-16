@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510715,Reserva do Cabaçal,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5031,0.7553,1.0697,1.1281,1.0718,1.5149
 510715,Reserva do Cabaçal,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.6697,1.2709,2.394,2.7868,3.356,4.495
 510715,Reserva do Cabaçal,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.9785,3.0247,4.1235,4.5793,5.7371,5.2277
-510715,Reserva do Cabaçal,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.7393,4.6587,6.8709,7.2514,8.3657,7.2624
+510715,Reserva do Cabaçal,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.6456,3.3297,4.3214,4.3834,5.4559,4.2921
 510715,Reserva do Cabaçal,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.6088,0.6354,0.9425,0.6358,0.485,0.495
 510715,Reserva do Cabaçal,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0,0,0,0,0,0
 510715,Reserva do Cabaçal,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

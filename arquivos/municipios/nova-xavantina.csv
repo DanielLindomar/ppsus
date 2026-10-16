@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510625,Nova Xavantina,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8141,1.0731,1.1152,1.2112,1.1963,1.2661
 510625,Nova Xavantina,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.847,0.9449,0.7164,0.8081,0.8416,0.8879
 510625,Nova Xavantina,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.1939,2.3835,2.2941,2.1984,2.1176,2.3018
-510625,Nova Xavantina,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.7535,2.6619,2.5332,2.8335,2.7572,2.788
+510625,Nova Xavantina,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.9657,1.9475,1.8349,1.8869,1.9038,1.9228
 510625,Nova Xavantina,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2258,0.2305,0.2374,0.2369,0.3029,0.3616
 510625,Nova Xavantina,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.6234,1.4787,1.075,1.0004,1.03,1.4054
 510625,Nova Xavantina,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510680,Porto dos Gaúchos,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.9043,1.018,1.0334,1.3934,1.5325,1.6196
 510680,Porto dos Gaúchos,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.1188,1.2032,1.0513,1.2799,1.6696,1.9071
 510680,Porto dos Gaúchos,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.3806,3.3645,3.1414,3.0704,3.0826,4.1332
-510680,Porto dos Gaúchos,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.5702,4.3975,4.157,3.9443,3.8805,3.1551
+510680,Porto dos Gaúchos,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.9517,2.8069,2.6819,2.6591,2.6362,1.9141
 510680,Porto dos Gaúchos,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,1.1132,0.7579,0.59,0.585,0.6819,0.7397
 510680,Porto dos Gaúchos,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,4.2886,4.1486,3.7547,3.9585,3.6028,3.5057
 510680,Porto dos Gaúchos,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

@@ -24,7 +24,7 @@ posicao,coluna,descricao,unidade,fonte,bloco,indicador_site
 23,fte_enfermeiros_sus,"Enfermeiros com atendimento SUS, em equivalentes de 40 h semanais (média anual)",FTE,CNES,capacidade,
 24,fte_tec_enfermagem_sus,"Técnicos e auxiliares de enfermagem com atendimento SUS (FTE 40 h, média anual)",FTE,CNES,capacidade,
 25,fte_dentistas_sus,"Cirurgiões-dentistas com atendimento SUS (FTE 40 h, média anual)",FTE,CNES,capacidade,
-26,fte_acs,"Agentes comunitários de saúde (FTE 40 h, média anual)",FTE,CNES,capacidade,
+26,fte_acs,"Agentes comunitários de saúde — só o CBO 515105 (FTE 40 h, média anual); até a versão 0.2 do site somava a família CBO 5151 (ver fte_5151_familia)",FTE,CNES,capacidade,
 27,fte_total_sus,"Total de profissionais com atendimento SUS (FTE 40 h, média anual)",FTE,CNES,capacidade,
 28,leitos_sus,Leitos de internação disponíveis ao SUS (média das competências do ano),leitos,CNES,capacidade,
 29,leitos_uti_sus,Leitos de UTI disponíveis ao SUS (média anual).,leitos,CNES,indicador do site (capacidade),leitos_uti_sus
@@ -83,7 +83,7 @@ posicao,coluna,descricao,unidade,fonte,bloco,indicador_site
 82,desp_302_pc,Despesa liquidada na subfunção 302 (Assistência Hospitalar e Ambulatorial) por habitante — igual a desp_mac_pc,R$ por habitante,SIOPS (RREO),indicador derivado,
 83,fte_medicos_p1000,"Médicos com atendimento SUS, em equivalentes de 40 h semanais, por mil habitantes.",FTE por mil hab.,CNES,indicador do site (capacidade),fte_medicos_p1000
 84,fte_enfermeiros_p1000,Enfermeiros com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_enfermeiros_p1000
-85,fte_acs_p1000,Agentes comunitários de saúde (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_acs_p1000
+85,fte_acs_p1000,"Agentes comunitários de saúde (CBO 515105, FTE 40 h) por mil habitantes.",FTE por mil hab.,CNES (CBO 515105),indicador do site (capacidade),fte_acs_p1000
 86,leitos_sus_p1000,Leitos de internação disponíveis ao SUS por mil habitantes.,leitos por mil hab.,CNES,indicador do site (capacidade),leitos_sus_p1000
 87,equipes_esf_p1000,Equipes de Saúde da Família por mil habitantes (o site publica a versão por 10 mil: equipes_esf_p10000),equipes por mil hab.,CNES,indicador derivado,
 88,atend_individual_pc,Atendimentos individuais da atenção básica por habitante no ano.,atendimentos por hab.,SISAB,indicador do site (atencao_basica),atend_individual_pc
@@ -93,23 +93,26 @@ posicao,coluna,descricao,unidade,fonte,bloco,indicador_site
 92,qtd_ac_local_pc,Procedimentos ambulatoriais de alta complexidade realizados no município por habitante.,procedimentos por hab.,SIA/SUS,indicador do site (media_alta),qtd_ac_local_pc
 93,internacoes_local_p1000,Internações SUS realizadas em hospitais do município por mil habitantes.,internações por mil hab.,SIH/SUS,indicador do site (media_alta),internacoes_local_p1000
 94,internacoes_res_p1000,Internações SUS de moradores do município por mil habitantes.,internações por mil hab.,SIH/SUS,indicador do site (media_alta),internacoes_res_p1000
-95,desp_ab_pc,"Despesa liquidada na subfunção Atenção Básica (301), por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_ab_pc
-96,desp_mac_pc,"Despesa liquidada na subfunção Assistência Hospitalar e Ambulatorial (302), por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_mac_pc
-97,pct_recursos_proprios,Parcela da despesa em saúde paga com receitas próprias do município.,% da despesa total,SIOPS (RREO),indicador do site (financiamento),pct_recursos_proprios
-98,pct_capital,Parcela da despesa em saúde destinada a investimentos.,% da despesa total,SIOPS (RREO),indicador do site (financiamento),pct_capital
-99,fte_tec_enfermagem_p1000,Técnicos de enfermagem com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_tec_enfermagem_p1000
-100,fte_dentistas_p1000,Cirurgiões-dentistas com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_dentistas_p1000
-101,equip_sus_p10000,Equipamentos em uso disponíveis ao SUS por 10 mil habitantes.,equipamentos por 10 mil hab.,CNES,indicador do site (capacidade),equip_sus_p10000
-102,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes.,equipes por 10 mil hab.,CNES,indicador do site (capacidade),equipes_esf_p10000
-103,atend_odonto_pc,Atendimentos odontológicos individuais na atenção básica por habitante.,atendimentos por hab.,SISAB,indicador do site (atencao_basica),atend_odonto_pc
-104,doses_menor1_por_nv,Doses aplicadas em menores de 1 ano por nascido vivo residente.,doses por nascido vivo,SI-PNI / SINASC,indicador do site (atencao_basica),doses_menor1_por_nv
-105,doses_pc,Doses de vacina de rotina aplicadas no município por habitante.,doses por hab.,SI-PNI,indicador do site (atencao_basica),doses_pc
-106,pct_urgencia,Parcela das internações realizadas no município com caráter de urgência.,% das internações locais,SIH/SUS,indicador do site (media_alta),pct_urgencia
-107,mortalidade_hosp_pct,Parcela das internações realizadas no município que terminaram em óbito.,% das internações locais,SIH/SUS,indicador do site (media_alta),mortalidade_hosp_pct
-108,permanencia_media,Média de dias por internação nos hospitais do município.,dias,SIH/SUS,indicador do site (media_alta),permanencia_media
-109,diarias_uti_p1000,Diárias de UTI pagas em hospitais do município por mil habitantes.,diárias por mil hab.,SIH/SUS,indicador do site (media_alta),diarias_uti_p1000
-110,valor_sih_local_pc,"Valor pago pelo SUS às internações realizadas no município, por habitante.",R$ por habitante,SIH/SUS,indicador do site (media_alta),valor_sih_local_pc
-111,valor_sih_res_pc,"Valor pago pelo SUS às internações de moradores do município, por habitante.",R$ por habitante,SIH/SUS,indicador do site (media_alta),valor_sih_res_pc
-112,pct_internacoes_fora_mun,Parcela das internações de moradores realizadas em outro município.,% das internações de residentes,SIH/SUS,indicador do site (deslocamento),pct_internacoes_fora_mun
-113,pct_internacoes_fora_regiao,Parcela das internações de moradores realizadas fora da própria região de saúde.,% das internações de residentes,SIH/SUS (AIH reduzida),indicador do site (deslocamento),pct_internacoes_fora_regiao
-114,km_medio_internacao,"Distância média, em linha reta, percorrida pelos moradores para se internar.",km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),indicador do site (deslocamento),km_medio_internacao
+95,fte_ace,"Agentes de combate às endemias — CBO 515140 (FTE 40 h, média anual)",FTE,CNES,capacidade,
+96,fte_5151_outros,"Demais ocupações da família CBO 5151, exceto ACS e agentes de combate às endemias (atendente de enfermagem, visitador sanitário, agentes indígenas de saúde e de saneamento, socorrista e outras), FTE 40 h, média anual",FTE,CNES,capacidade,
+97,fte_5151_familia,"Família CBO 5151 inteira (fte_acs + fte_ace + fte_5151_outros), FTE 40 h, média anual — valor publicado como agentes comunitários de saúde até a versão 0.2 do site",FTE,CNES,capacidade,
+98,desp_ab_pc,"Despesa liquidada na subfunção Atenção Básica (301), por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_ab_pc
+99,desp_mac_pc,"Despesa liquidada na subfunção Assistência Hospitalar e Ambulatorial (302), por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_mac_pc
+100,pct_recursos_proprios,Parcela da despesa em saúde paga com receitas próprias do município.,% da despesa total,SIOPS (RREO),indicador do site (financiamento),pct_recursos_proprios
+101,pct_capital,Parcela da despesa em saúde destinada a investimentos.,% da despesa total,SIOPS (RREO),indicador do site (financiamento),pct_capital
+102,fte_tec_enfermagem_p1000,Técnicos de enfermagem com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_tec_enfermagem_p1000
+103,fte_dentistas_p1000,Cirurgiões-dentistas com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_dentistas_p1000
+104,equip_sus_p10000,Equipamentos em uso disponíveis ao SUS por 10 mil habitantes.,equipamentos por 10 mil hab.,CNES,indicador do site (capacidade),equip_sus_p10000
+105,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes.,equipes por 10 mil hab.,CNES,indicador do site (capacidade),equipes_esf_p10000
+106,atend_odonto_pc,Atendimentos odontológicos individuais na atenção básica por habitante.,atendimentos por hab.,SISAB,indicador do site (atencao_basica),atend_odonto_pc
+107,doses_menor1_por_nv,Doses aplicadas em menores de 1 ano por nascido vivo residente.,doses por nascido vivo,SI-PNI / SINASC,indicador do site (atencao_basica),doses_menor1_por_nv
+108,doses_pc,Doses de vacina de rotina aplicadas no município por habitante.,doses por hab.,SI-PNI,indicador do site (atencao_basica),doses_pc
+109,pct_urgencia,Parcela das internações realizadas no município com caráter de urgência.,% das internações locais,SIH/SUS,indicador do site (media_alta),pct_urgencia
+110,mortalidade_hosp_pct,Parcela das internações realizadas no município que terminaram em óbito.,% das internações locais,SIH/SUS,indicador do site (media_alta),mortalidade_hosp_pct
+111,permanencia_media,Média de dias por internação nos hospitais do município.,dias,SIH/SUS,indicador do site (media_alta),permanencia_media
+112,diarias_uti_p1000,Diárias de UTI pagas em hospitais do município por mil habitantes.,diárias por mil hab.,SIH/SUS,indicador do site (media_alta),diarias_uti_p1000
+113,valor_sih_local_pc,"Valor pago pelo SUS às internações realizadas no município, por habitante.",R$ por habitante,SIH/SUS,indicador do site (media_alta),valor_sih_local_pc
+114,valor_sih_res_pc,"Valor pago pelo SUS às internações de moradores do município, por habitante.",R$ por habitante,SIH/SUS,indicador do site (media_alta),valor_sih_res_pc
+115,pct_internacoes_fora_mun,Parcela das internações de moradores realizadas em outro município.,% das internações de residentes,SIH/SUS,indicador do site (deslocamento),pct_internacoes_fora_mun
+116,pct_internacoes_fora_regiao,Parcela das internações de moradores realizadas fora da própria região de saúde.,% das internações de residentes,SIH/SUS (AIH reduzida),indicador do site (deslocamento),pct_internacoes_fora_regiao
+117,km_medio_internacao,"Distância média, em linha reta, percorrida pelos moradores para se internar.",km,SIH/SUS (AIH reduzida) + IBGE (Localidades 2022),indicador do site (deslocamento),km_medio_internacao

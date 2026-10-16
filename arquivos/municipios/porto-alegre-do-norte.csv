@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510677,Porto Alegre do Norte,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5794,0.6327,0.5912,0.6069,0.634,0.7194
 510677,Porto Alegre do Norte,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.7355,0.7884,0.9054,1.0549,1.038,1.291
 510677,Porto Alegre do Norte,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.7312,1.8033,1.9551,2.1032,2.1359,2.3488
-510677,Porto Alegre do Norte,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.1533,2.8796,3.4221,3.7326,3.839,3.3599
+510677,Porto Alegre do Norte,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.6015,2.3543,2.8243,2.9211,2.9607,2.9647
 510677,Porto Alegre do Norte,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1908,0.1751,0.254,0.2605,0.2659,0.3099
 510677,Porto Alegre do Norte,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.419,1.4009,1.4843,1.4606,1.4372,1.423
 510677,Porto Alegre do Norte,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

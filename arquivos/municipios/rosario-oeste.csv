@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510770,Rosário Oeste,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.601,0.7059,1.2671,1.3178,1.6756,1.8968
 510770,Rosário Oeste,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.7347,0.903,1.2367,1.3263,1.7984,1.9015
 510770,Rosário Oeste,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.4724,1.9278,2.0844,2.4837,3.1209,3.4772
-510770,Rosário Oeste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.0167,4.0691,4.383,4.4806,4.5025,4.388
+510770,Rosário Oeste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.1518,3.2455,3.6672,3.6333,3.5127,3.4572
 510770,Rosário Oeste,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3137,0.3612,0.3935,0.3839,0.5205,0.5385
 510770,Rosário Oeste,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.2837,3.5884,4.3034,5.2138,5.3872,5.6512
 510770,Rosário Oeste,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

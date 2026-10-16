@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510562,Mirassol d'Oeste,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6403,0.762,0.8176,0.9309,1.0679,1.1948
 510562,Mirassol d'Oeste,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.5658,0.6142,1.1626,1.034,0.9135,0.8601
 510562,Mirassol d'Oeste,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.442,1.6815,1.9511,1.6938,1.8073,1.8718
-510562,Mirassol d'Oeste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.879,1.8127,1.8977,1.8419,1.8175,1.8092
+510562,Mirassol d'Oeste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.3929,1.3506,1.4124,1.363,1.3449,1.3388
 510562,Mirassol d'Oeste,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1521,0.1272,0.1602,0.2103,0.1817,0.2504
 510562,Mirassol d'Oeste,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.8224,2.4169,2.8811,2.7382,2.5808,2.569
 510562,Mirassol d'Oeste,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

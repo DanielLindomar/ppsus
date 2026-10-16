@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510675,Pontes e Lacerda,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7981,0.9715,0.9351,0.9637,1.1563,1.0907
 510675,Pontes e Lacerda,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.001,1.3094,1.1794,1.0294,1.0351,1.1429
 510675,Pontes e Lacerda,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.4384,1.7898,1.7625,1.7056,2.1164,2.9631
-510675,Pontes e Lacerda,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.9711,2.8071,2.4736,2.3835,1.8936,1.2431
+510675,Pontes e Lacerda,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.8351,1.7135,1.5299,1.4455,0.9641,0.3601
 510675,Pontes e Lacerda,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2912,0.2603,0.234,0.2248,0.2433,0.2331
 510675,Pontes e Lacerda,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.6554,1.3411,1.2592,1.3205,1.3505,1.3271
 510675,Pontes e Lacerda,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

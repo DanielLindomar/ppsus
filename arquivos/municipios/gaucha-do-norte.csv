@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510385,Gaúcha do Norte,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6618,0.7785,0.5716,0.549,0.6023,0.9407
 510385,Gaúcha do Norte,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.191,2.4769,2.3409,2.2421,1.9889,2.3241
 510385,Gaúcha do Norte,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.8592,3.1303,3.6508,3.4905,3.7284,4.2237
-510385,Gaúcha do Norte,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,6.5112,6.6031,5.9975,5.8471,4.4657,4.6909
+510385,Gaúcha do Norte,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.542,1.7275,1.716,1.7032,1.5979,1.4898
 510385,Gaúcha do Norte,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.257,0.2742,0.3471,0.2335,0.2091,0.3012
 510385,Gaúcha do Norte,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.1845,2.1484,1.9671,1.9086,1.1524,0.9929
 510385,Gaúcha do Norte,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510700,Poxoréo,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.9211,0.9676,0.6941,0.6345,0.6569,0.7959
 510700,Poxoréo,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.1247,1.3981,0.9921,0.9337,1.0038,1.0071
 510700,Poxoréo,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.0043,2.3218,1.4418,1.4921,1.9327,2.0508
-510700,Poxoréo,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.7591,3.8906,2.8205,2.8245,2.6656,2.6284
+510700,Poxoréo,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.6439,2.7033,1.9723,1.9677,1.8168,1.8058
 510700,Poxoréo,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.1885,0.1883,0.1288,0.1254,0.1594,0.1625
 510700,Poxoréo,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,5.0264,5.0828,3.2642,2.5671,2.7116,2.6292
 510700,Poxoréo,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

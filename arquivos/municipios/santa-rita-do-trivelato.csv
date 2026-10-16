@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510776,Santa Rita do Trivelato,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.9298,1.0189,1.3858,1.6508,1.6344,1.7364
 510776,Santa Rita do Trivelato,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.2333,2.4875,3.0159,2.8741,3.7366,3.2862
 510776,Santa Rita do Trivelato,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.854,1.7129,2.5946,2.3248,2.5469,2.1691
-510776,Santa Rita do Trivelato,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.3303,2.221,2.3138,2.3011,2.1889,2.2624
+510776,Santa Rita do Trivelato,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.7114,1.6657,1.5781,1.4846,1.4438,1.414
 510776,Santa Rita do Trivelato,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.7616,0.9939,1.0501,1.0986,1.2359,1.3094
 510776,Santa Rita do Trivelato,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0,0,0,0,0,0
 510776,Santa Rita do Trivelato,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

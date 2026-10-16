@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510340,Cuiabá,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.914,2.1015,2.1361,2.2751,2.5772,2.8423
 510340,Cuiabá,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,2.0903,2.5254,2.5721,2.6219,2.6432,2.6079
 510340,Cuiabá,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,4.7667,5.3407,5.528,5.7521,5.5055,5.4762
-510340,Cuiabá,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.4616,1.4614,1.4706,1.327,1.2844,1.5315
+510340,Cuiabá,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,0.9298,0.9424,0.878,0.7373,0.7224,0.9746
 510340,Cuiabá,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.363,0.3485,0.341,0.3378,0.3493,0.3677
 510340,Cuiabá,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.4572,2.4337,2.2961,2.2642,2.3369,2.4285
 510340,Cuiabá,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),218,316,232,238,248,248

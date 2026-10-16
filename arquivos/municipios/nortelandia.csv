@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510600,Nortelândia,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5943,0.9252,2.0332,1.7292,1.3951,1.4312
 510600,Nortelândia,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.7272,2.0229,1.4204,1.778,2.1045,1.7827
 510600,Nortelândia,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.9939,2.7876,2.6108,2.7435,2.8526,2.3769
-510600,Nortelândia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,4.8253,4.6227,4.1974,4.1766,4.1567,3.9185
+510600,Nortelândia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,3.039,3.0727,3.0222,3.0278,3.0329,3.056
 510600,Nortelândia,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5065,0.5121,0.6061,0.6442,0.5476,0.6078
 510600,Nortelândia,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.8442,2.8457,4.3368,5.0463,5.0548,1.7827
 510600,Nortelândia,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

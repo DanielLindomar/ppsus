@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510780,Santo Antônio do Leverger,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7283,0.8471,1.1203,1.0905,1.2355,1.4045
 510780,Santo Antônio do Leverger,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9159,1.1182,1.2023,1.3405,1.5796,1.4508
 510780,Santo Antônio do Leverger,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.5695,2.02,2.4761,2.5528,2.9997,3.4693
-510780,Santo Antônio do Leverger,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.2267,2.9794,3.0401,2.7078,2.9181,2.3131
+510780,Santo Antônio do Leverger,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.4731,2.4034,2.6236,2.3797,2.203,1.6034
 510780,Santo Antônio do Leverger,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5194,0.5905,0.7215,0.4849,0.4674,0.5671
 510780,Santo Antônio do Leverger,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.2354,1.2218,1.3774,1.3123,1.1509,0.9502
 510780,Santo Antônio do Leverger,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

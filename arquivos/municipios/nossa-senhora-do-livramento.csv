@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510610,Nossa Senhora do Livramento,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.7387,1.0983,1.1739,0.9469,0.8792,0.8749
 510610,Nossa Senhora do Livramento,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.7624,0.9769,1.1236,0.986,1.1177,1.1434
 510610,Nossa Senhora do Livramento,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.656,1.7429,1.9575,1.8604,1.6658,1.5869
-510610,Nossa Senhora do Livramento,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.919,2.9535,3.1105,3.133,3.1378,3.2433
+510610,Nossa Senhora do Livramento,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.442,2.4761,2.5502,2.5379,2.5802,2.6231
 510610,Nossa Senhora do Livramento,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2099,0.1528,0.2767,0.2801,0.2505,0.1716
 510610,Nossa Senhora do Livramento,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.221,1.222,1.2365,1.1944,1.3724,1.3724
 510610,Nossa Senhora do Livramento,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

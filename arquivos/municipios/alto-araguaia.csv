@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510030,Alto Araguaia,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.8666,0.8608,1.0179,1.1112,1.1865,1.3396
 510030,Alto Araguaia,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9105,1.0764,1.2488,1.2644,1.2613,0.898
 510030,Alto Araguaia,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.9046,1.8789,2.2521,2.3618,2.2897,2.1559
-510030,Alto Araguaia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,1.8483,1.784,2.0357,2.022,1.9726,1.9154
+510030,Alto Araguaia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.4485,1.4163,1.6286,1.6071,1.5337,1.521
 510030,Alto Araguaia,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3998,0.4017,0.4589,0.5154,0.5148,0.5121
 510030,Alto Araguaia,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.7539,1.7247,1.895,1.3201,1.3026,1.2957
 510030,Alto Araguaia,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

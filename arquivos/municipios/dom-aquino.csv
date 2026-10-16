@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510360,Dom Aquino,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.5773,0.5416,0.564,0.6702,0.6734,1.0875
 510360,Dom Aquino,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6618,0.6838,0.8359,0.9375,1.0512,1.4068
 510360,Dom Aquino,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.722,1.8425,1.9334,3.0141,4.163,4.2674
-510360,Dom Aquino,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.1352,3.1532,3.4718,3.5474,3.5376,3.6439
+510360,Dom Aquino,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.4513,2.5349,2.6677,2.6606,2.6532,2.7567
 510360,Dom Aquino,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.4081,0.4328,0.5081,0.6651,0.7682,0.6337
 510360,Dom Aquino,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.8385,1.8548,1.9055,1.9004,1.8951,2.3866
 510360,Dom Aquino,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

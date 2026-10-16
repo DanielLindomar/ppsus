@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510885,Nova Marilândia,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.2863,1.5066,1.499,2.0122,1.8189,1.6671
 510885,Nova Marilândia,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.5254,1.5606,2.0346,1.9234,1.9386,1.9593
 510885,Nova Marilândia,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.7754,2.8151,2.998,3.9772,4.4182,5.6071
-510885,Nova Marilândia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.9104,3.5774,3.7319,3.8857,4.1463,3.8649
+510885,Nova Marilândia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.6998,2.377,2.5503,2.4979,2.6291,2.1442
 510885,Nova Marilândia,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3027,0.3001,0.2834,0.4385,0.5655,0.402
 510885,Nova Marilândia,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.4213,2.401,1.7002,0,0,0
 510885,Nova Marilândia,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

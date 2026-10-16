@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510020,Água Boa,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.1365,1.2549,1.4128,1.8421,1.9777,1.8907
 510020,Água Boa,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.8697,1.0375,1.2324,1.3512,1.4118,1.4574
 510020,Água Boa,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.5962,3.454,4.149,4.3332,4.2259,4.2877
-510020,Água Boa,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.945,2.7988,2.7407,2.7714,2.7758,2.7789
+510020,Água Boa,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.2039,2.0679,2.0049,2.0606,2.1211,2.1209
 510020,Água Boa,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5885,0.5866,0.539,0.529,0.5416,0.5495
 510020,Água Boa,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.2897,2.7051,2.4101,2.5622,2.459,2.3054
 510020,Água Boa,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),1,7,8,10,10,10

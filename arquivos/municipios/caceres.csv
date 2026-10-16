@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510250,Cáceres,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.1571,1.2727,1.5042,1.8605,1.6301,1.4926
 510250,Cáceres,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.3819,1.6686,2.0925,2.3035,2.4658,2.5496
 510250,Cáceres,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,5.1344,4.8578,5.046,5.154,6.0526,6.4258
-510250,Cáceres,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,0.8381,0.8435,0.9273,1.0048,0.9577,1.0398
+510250,Cáceres,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,0.4251,0.4248,0.4154,0.4082,0.3583,0.3814
 510250,Cáceres,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.2016,0.232,0.2614,0.2633,0.2508,0.2795
 510250,Cáceres,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.3552,2.4256,2.8091,3.2083,3.4188,3.2365
 510250,Cáceres,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),21,25,32,16,16,16

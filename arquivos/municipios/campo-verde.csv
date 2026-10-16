@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510267,Campo Verde,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.9742,0.9927,1.005,1.073,1.1378,1.1263
 510267,Campo Verde,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.84,1.0683,1.2163,1.3142,1.3462,1.4395
 510267,Campo Verde,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.5192,2.9387,3.086,3.5124,3.7189,3.747
-510267,Campo Verde,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.8295,3.0847,3.2589,3.2666,3.1935,3.1395
+510267,Campo Verde,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.2245,2.3637,2.5206,2.552,2.5124,2.4667
 510267,Campo Verde,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3662,0.3643,0.3369,0.3209,0.3142,0.3197
 510267,Campo Verde,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,0.8599,1.2302,1.1775,1.1964,1.2962,1.2639
 510267,Campo Verde,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),2,11,0,0,0,0

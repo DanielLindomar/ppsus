@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510395,Glória D'Oeste,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.4561,1.5853,1.5146,1.5162,1.0417,1.4038
 510395,Glória D'Oeste,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.8418,1.9933,2.0654,1.8884,1.6109,2.1994
 510395,Glória D'Oeste,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.5871,3.6923,3.9587,3.3873,3.3494,3.5615
-510395,Glória D'Oeste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.7666,3.4849,3.9002,3.7905,3.8462,3.8673
+510395,Glória D'Oeste,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.7693,2.7023,2.8675,2.7567,2.9596,2.8666
 510395,Glória D'Oeste,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.8311,0.5284,0.5164,0.5169,0.8348,0.8687
 510395,Glória D'Oeste,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.1636,0.0836,0,0,0,0
 510395,Glória D'Oeste,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

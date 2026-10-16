@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510420,Guiratinga,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6337,0.6258,0.9374,0.9621,1.2714,1.3675
 510420,Guiratinga,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.6153,0.6817,0.8873,0.9575,1.0758,0.9949
 510420,Guiratinga,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,1.0587,1.1671,1.6779,2.1922,2.612,2.2103
-510420,Guiratinga,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.9026,2.7878,4.3452,4.4822,4.7474,4.9142
+510420,Guiratinga,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.2466,2.1442,3.3057,3.2725,3.4894,3.6822
 510420,Guiratinga,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.41,0.425,0.5626,0.5425,0.4985,0.4799
 510420,Guiratinga,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,1.2463,1.2071,1.7326,1.7679,1.8591,0.4877
 510420,Guiratinga,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

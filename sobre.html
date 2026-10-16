@@ -256,12 +256,12 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>P2 · Escores de eficiência (DEA)</td>
 <td>Municípios × níveis de atenção, hospitais e regiões de saúde, 2020–2025</td>
-<td>Versão 2 publicada em 08/10/2026 (seção <a href="./eficiencia/index.html">Eficiência</a>); em validação com a SES-MT e o COSEMS-MT</td>
+<td>Versão 2.1, de 16/10/2026 (atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS; demais modelos da versão 2, de 08/10/2026), na seção <a href="./eficiencia/index.html">Eficiência</a>; em validação com a SES-MT e o COSEMS-MT</td>
 </tr>
 <tr class="odd">
 <td>P3 · Índice de Malmquist</td>
 <td>Variação da produtividade 2020–2025</td>
-<td>Versão 2 publicada em 08/10/2026 (<a href="./eficiencia/produtividade.html">Produtividade</a>); em validação</td>
+<td>Versão 2.1, de 16/10/2026 (<a href="./eficiencia/produtividade.html">Produtividade</a>); em validação</td>
 </tr>
 <tr class="even">
 <td>P4 · Previsão de demanda</td>
@@ -271,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>P5 · Aplicativo web</td>
 <td>Este observatório, ampliado com os escores e as previsões</td>
-<td>Versão 0.2 publicada (08/10/2026)</td>
+<td>Versão 0.2.1 (16/10/2026)</td>
 </tr>
 <tr class="even">
 <td>P6 · Artigos e relatórios</td>
@@ -326,10 +326,14 @@ ul.task-list li input[type="checkbox"] {
 <td>Publicada em 08/10/2026; em validação com a SES-MT e o COSEMS-MT</td>
 </tr>
 <tr class="even">
+<td>Versão 0.2.1: resultados da versão 2.1 da estimação de eficiência (atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS, CBO 515105)</td>
+<td>16/10/2026; em validação com a SES-MT e o COSEMS-MT</td>
+</tr>
+<tr class="odd">
 <td>Modelos de previsão de demanda; ampliação do aplicativo</td>
 <td>Previsto</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Artigos, relatórios e devolutiva aos gestores</td>
 <td>Previsto</td>
 </tr>
@@ -352,14 +356,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sobre-este-site" class="level2">
 <h2 class="anchored" data-anchor-id="sobre-este-site">Sobre este site</h2>
-<p>Este site é atualizado a cada etapa concluída do projeto. A versão 0.1 publicou os dados e indicadores de 2020–2025 e a análise de deslocamento entre residência e atendimento nas internações. A versão 0.2 acrescenta os escores de eficiência (DEA) e a produtividade (Malmquist) dos municípios, dos hospitais SUS e das regiões de saúde, com fichas para o gestor — resultados da versão 2 da estimação, em validação com a SES-MT e o COSEMS-MT. As previsões de demanda entrarão nas versões seguintes.</p>
+<p>Este site é atualizado a cada etapa concluída do projeto. A versão 0.1 publicou os dados e indicadores de 2020–2025 e a análise de deslocamento entre residência e atendimento nas internações. A versão 0.2 acrescenta os escores de eficiência (DEA) e a produtividade (Malmquist) dos municípios, dos hospitais SUS e das regiões de saúde, com fichas para o gestor — resultados da versão 2 da estimação, em validação com a SES-MT e o COSEMS-MT. A versão 0.2.1 traz a versão 2.1 da estimação: o modelo de atenção básica foi reestimado com o insumo de agentes comunitários de saúde restrito ao ACS (CBO 515105); os demais modelos não mudaram. As previsões de demanda entrarão nas versões seguintes.</p>
 <ul>
 <li>Só são publicados agregados por município, região de saúde ou estabelecimento (hospitais identificados por nome fantasia e código CNES, dado público). Nenhum microdado é divulgado.</li>
 <li>O site é gerado com <a href="https://quarto.org">Quarto</a> e R a partir dos painéis do Data Lake do projeto e publicado no GitHub Pages. O código-fonte está em <a href="https://github.com/daniellindomar/ppsus">github.com/daniellindomar/ppsus</a>.</li>
 <li>Encontrou um erro ou tem uma sugestão? Use o link “Criar uma issue” no menu do GitHub ou escreva à coordenação.</li>
 </ul>
 <p><strong>Contato:</strong> lindomar.pegorini@unemat.br</p>
-<p><strong>Como citar:</strong> DANIEL, L. P. et al.&nbsp;<em>Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso</em>. Versão 0.2. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.</p>
+<p><strong>Como citar:</strong> DANIEL, L. P. et al.&nbsp;<em>Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso</em>. Versão 0.2.1. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.</p>
 <p>Conteúdo, indicadores e arquivos derivados sob licença <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br">CC BY 4.0</a>: uso livre com citação do projeto. Os dados de origem são públicos (DATASUS, SIOPS, IBGE).</p>
 
 
@@ -386,7 +390,8 @@ ul.task-list li input[type="checkbox"] {
     "eSF": "Equipe de Saúde da Família (médico, enfermeiro, técnico e agentes comunitários)",
     "eAP": "Equipe de Atenção Primária (formato reduzido, sem agentes comunitários)",
     "eSB": "Equipe de Saúde Bucal",
-    "ACS": "Agente Comunitário de Saúde",
+    "ACS": "Agente Comunitário de Saúde (CBO 515105); não inclui os agentes de combate às endemias nem as demais ocupações da família CBO 5151",
+    "CBO": "Classificação Brasileira de Ocupações: código da ocupação do profissional no CNES",
     "FTE": "Equivalente em tempo integral: horas semanais contratadas divididas por 40",
     "MC": "Média complexidade: procedimentos e internações de nível intermediário (SIA/SIH)",
     "AC": "Alta complexidade: procedimentos e internações de alto custo ou tecnologia (SIA/SIH)",
@@ -928,7 +933,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="rodape-rotulo">Financiamento</span> <img src="./assets/logos/ppsus-mt.png" class="rodape-logo img-fluid" alt="PPSUS — Programa Pesquisa para o SUS: Mato Grosso"> <img src="./assets/logos/fapemat.png" class="rodape-logo img-fluid" alt="FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso"> <img src="./assets/logos/ses-mt.png" class="rodape-logo img-fluid" alt="SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso"> <img src="./assets/logos/cnpq.png" class="rodape-logo img-fluid" alt="CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico"> <img src="./assets/logos/ministerio-saude-sus.png" class="rodape-logo img-fluid" alt="SUS · Ministério da Saúde · Governo do Brasil"></p>
 </div>
 <p><span class="rodape-citacao">Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.</span></p>
-<p><span class="rodape-versao">Versão 0.2 · atualizado em 08/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
+<p><span class="rodape-versao">Versão 0.2.1 · atualizado em 16/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
 </div>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div>
     <div class="nav-footer-right">

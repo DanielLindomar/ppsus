@@ -223,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="faixa-versao"><b>Versão 0.2</b> (08/10/2026) — dados e indicadores 2020–2025, escores de eficiência (DEA) e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da versão 2 da estimação, em validação com a SES-MT e o COSEMS-MT. Cada valor mostra a fonte e o ano a que se refere.</div>
+<div class="faixa-versao"><b>Versão 0.2.1</b> (16/10/2026) — dados e indicadores 2020–2025, escores de eficiência (DEA) e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT. Cada valor mostra a fonte e o ano a que se refere.</div>
 </div>
 </div>
 <p>Esta página explica de onde vêm os números do site, o que cada um significa, por que a janela é 2020–2025 e quais problemas conhecidos dos dados exigem cautela na leitura. É a referência para todas as demais páginas; o dicionário completo dos indicadores está em <a href="dados/index.html">Dados</a>.</p>
@@ -256,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 <td><strong>CNES</strong></td>
 <td>Cadastro de estabelecimentos, leitos, equipamentos e profissionais</td>
 <td>2020–2025 (média das competências mensais)</td>
-<td>Profissionais SUS em equivalente de 40 h (médicos, enfermeiros, técnicos, dentistas, agentes comunitários), leitos SUS e de UTI, equipamentos em uso, unidades básicas, hospitais, UPA, equipes de saúde da família, de atenção primária e de saúde bucal</td>
+<td>Profissionais SUS em equivalente de 40 h (médicos, enfermeiros, técnicos, dentistas, agentes comunitários de saúde — CBO 515105), leitos SUS e de UTI, equipamentos em uso, unidades básicas, hospitais, UPA, equipes de saúde da família, de atenção primária e de saúde bucal</td>
 </tr>
 <tr class="odd">
 <td><strong>SIA</strong></td>
@@ -339,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="eficiencia" class="level2">
 <h2 class="anchored" data-anchor-id="eficiencia">Eficiência e produtividade (DEA e Malmquist)</h2>
-<p>A seção <a href="eficiencia/index.html">Eficiência</a> publica os escores de eficiência técnica e a evolução da produtividade dos municípios, dos hospitais SUS e das regiões de saúde, calculados pelo projeto a partir dos mesmos painéis deste site. Os números vêm da versão 2 da estimação (relatório técnico <em>Resultados DEA v2</em>, 08/10/2026), aprovada pelo coordenador e em validação com a SES-MT e o COSEMS-MT.</p>
+<p>A seção <a href="eficiencia/index.html">Eficiência</a> publica os escores de eficiência técnica e a evolução da produtividade dos municípios, dos hospitais SUS e das regiões de saúde, calculados pelo projeto a partir dos mesmos painéis deste site. Os números vêm da versão 2.1 da estimação (16/10/2026), aprovada pelo coordenador e em validação com a SES-MT e o COSEMS-MT. Na versão 2.1, o modelo de atenção básica foi reestimado com o insumo de agentes comunitários de saúde restrito ao ACS (CBO 515105), em vez de toda a família 5151 (que inclui agentes de combate às endemias e agentes indígenas), usada na versão 2. Os demais modelos são os da versão 2, descritos no relatório técnico <em>Resultados DEA v2 (08/10/2026)</em>.</p>
 <ul>
 <li><strong>O que o escore mede.</strong> A Análise Envoltória de Dados (DEA) compara o que cada unidade produz com os recursos que usa, frente às melhores práticas observadas no mesmo ano em Mato Grosso, que formam a fronteira de eficiência. Usa-se o modelo BCC orientado ao produto: a pergunta é quanto a produção poderia crescer com os mesmos recursos, comparando unidades de porte semelhante. O escore vai de 0 a 1 (1 = fronteira). Ele mede eficiência técnica, <strong>não a qualidade do cuidado</strong>: os resultados em saúde ficam ao lado, sem alterar o escore.</li>
 <li><strong>Faixas com intervalo de confiança, não ranking.</strong> O escore é corrigido do viés da estimação por reamostragem (bootstrap, 2.000 réplicas), com intervalo de confiança de 95%. A leitura é por faixa: fronteira ou quartil do escore corrigido entre as unidades avaliadas; quando o intervalo alcança a faixa vizinha, a posição é incerta. As fronteiras são anuais, por isso o nível do escore não se compara entre anos — a evolução é lida pelo Malmquist.</li>
@@ -520,97 +520,101 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>ACS</td>
-<td>Agente Comunitário de Saúde</td>
+<td>Agente Comunitário de Saúde (CBO 515105; não inclui os agentes de combate às endemias nem as demais ocupações da família 5151)</td>
 </tr>
 <tr class="odd">
+<td>CBO</td>
+<td>Classificação Brasileira de Ocupações (código da ocupação do profissional no CNES)</td>
+</tr>
+<tr class="even">
 <td>FTE</td>
 <td>Equivalente em tempo integral (40 horas semanais)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>MC / AC</td>
 <td>Média complexidade / alta complexidade</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>UTI</td>
 <td>Unidade de Terapia Intensiva</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>CIR</td>
 <td>Comissão Intergestores Regional (região de saúde)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>PDR</td>
 <td>Plano Diretor de Regionalização</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>DEA</td>
 <td>Análise Envoltória de Dados</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>BCC</td>
 <td>Modelo DEA de Banker, Charnes e Cooper (retornos variáveis de escala)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>IC</td>
 <td>Intervalo de confiança (de 95%, nos escores de eficiência)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>EC</td>
 <td>Mudança de eficiência (componente do índice de Malmquist)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>TC</td>
 <td>Deslocamento tecnológico (componente do índice de Malmquist)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>MI</td>
 <td>Índice de Malmquist (variação da produtividade entre dois anos)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>IPCA</td>
 <td>Índice Nacional de Preços ao Consumidor Amplo (IBGE), usado para levar valores a reais de 2025</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>COSEMS-MT</td>
 <td>Conselho de Secretarias Municipais de Saúde de Mato Grosso</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>TMI</td>
 <td>Taxa de mortalidade infantil (óbitos de menores de 1 ano por mil nascidos vivos)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>PPSUS</td>
 <td>Programa Pesquisa para o SUS: gestão compartilhada em saúde</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>FAPEMAT</td>
 <td>Fundação de Amparo à Pesquisa do Estado de Mato Grosso</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>CNPq</td>
 <td>Conselho Nacional de Desenvolvimento Científico e Tecnológico</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Decit</td>
 <td>Departamento de Ciência e Tecnologia do Ministério da Saúde</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SECTICS</td>
 <td>Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (Ministério da Saúde)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>SECITECI</td>
 <td>Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SES-MT</td>
 <td>Secretaria de Estado de Saúde de Mato Grosso</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>UNEMAT</td>
 <td>Universidade do Estado de Mato Grosso</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>IBGE</td>
 <td>Instituto Brasileiro de Geografia e Estatística</td>
 </tr>
@@ -655,7 +659,8 @@ Definições, ressalvas e anomalias conhecidas em
     "eSF": "Equipe de Saúde da Família (médico, enfermeiro, técnico e agentes comunitários)",
     "eAP": "Equipe de Atenção Primária (formato reduzido, sem agentes comunitários)",
     "eSB": "Equipe de Saúde Bucal",
-    "ACS": "Agente Comunitário de Saúde",
+    "ACS": "Agente Comunitário de Saúde (CBO 515105); não inclui os agentes de combate às endemias nem as demais ocupações da família CBO 5151",
+    "CBO": "Classificação Brasileira de Ocupações: código da ocupação do profissional no CNES",
     "FTE": "Equivalente em tempo integral: horas semanais contratadas divididas por 40",
     "MC": "Média complexidade: procedimentos e internações de nível intermediário (SIA/SIH)",
     "AC": "Alta complexidade: procedimentos e internações de alto custo ou tecnologia (SIA/SIH)",
@@ -1197,7 +1202,7 @@ Definições, ressalvas e anomalias conhecidas em
 <p><span class="rodape-rotulo">Financiamento</span> <img src="./assets/logos/ppsus-mt.png" class="rodape-logo img-fluid" alt="PPSUS — Programa Pesquisa para o SUS: Mato Grosso"> <img src="./assets/logos/fapemat.png" class="rodape-logo img-fluid" alt="FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso"> <img src="./assets/logos/ses-mt.png" class="rodape-logo img-fluid" alt="SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso"> <img src="./assets/logos/cnpq.png" class="rodape-logo img-fluid" alt="CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico"> <img src="./assets/logos/ministerio-saude-sus.png" class="rodape-logo img-fluid" alt="SUS · Ministério da Saúde · Governo do Brasil"></p>
 </div>
 <p><span class="rodape-citacao">Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.</span></p>
-<p><span class="rodape-versao">Versão 0.2 · atualizado em 08/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
+<p><span class="rodape-versao">Versão 0.2.1 · atualizado em 16/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
 </div>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div>
     <div class="nav-footer-right">

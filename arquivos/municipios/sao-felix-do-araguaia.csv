@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510785,São Félix do Araguaia,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.1813,1.1966,1.0822,1.0535,1.0068,1.1202
 510785,São Félix do Araguaia,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.5309,1.613,1.566,1.6046,1.743,1.9755
 510785,São Félix do Araguaia,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,3.7068,3.5344,3.2964,3.7654,4.1648,4.344
-510785,São Félix do Araguaia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,5.1229,5.6352,5.17,4.6042,4.2095,4.0626
+510785,São Félix do Araguaia,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.6742,2.8423,2.527,2.5351,2.5698,2.4767
 510785,São Félix do Araguaia,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.5632,0.538,0.5198,0.5132,0.4291,0.3869
 510785,São Félix do Araguaia,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.4341,3.4213,2.3493,2.2667,2.2097,2.1912
 510785,São Félix do Araguaia,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

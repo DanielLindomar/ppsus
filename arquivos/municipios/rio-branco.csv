@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510720,Rio Branco,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,0.6078,0.6645,0.7343,0.5829,0.6594,1.1194
 510720,Rio Branco,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,0.9709,1.2143,1.7464,1.5514,1.7643,2.1396
 510720,Rio Branco,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,2.7184,2.4772,3.29,3.0851,3.3794,3.5856
-510720,Rio Branco,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,3.1068,3.3184,3.7663,3.7855,3.787,3.6779
+510720,Rio Branco,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,2.3301,2.3315,2.6461,2.6596,2.6732,2.7027
 510720,Rio Branco,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3883,0.3886,0.441,0.4433,0.5747,0.4505
 510720,Rio Branco,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,3.4951,3.4972,3.9691,3.9894,4.0098,4.0541
 510720,Rio Branco,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),0,0,0,0,0,0

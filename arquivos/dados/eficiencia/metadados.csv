@@ -1,7 +1,12 @@
 item,valor
-versao_resultados,v2
-data_resultados,08/10/2026
-gerado_em,08/10/2026 10:00
+versao_resultados,v2.1
+data_resultados,16/10/2026
+gerado_em,16/10/2026 10:29
+versao_anterior,v2
+data_versao_anterior,08/10/2026
+modelos_reestimados,M1
+relatorio_tecnico,Resultados DEA v2 (08/10/2026)
+nota_versao,"Versão 2.1 (16/10/2026): o insumo de agentes comunitários de saúde do modelo de atenção básica passou a contar apenas o ACS (CBO 515105); a versão 2 somava toda a família 5151, que inclui agentes de combate às endemias e agentes indígenas, e isso penalizava municípios com esses profissionais. Os demais modelos não mudaram."
 especificacao_principal_H,principal
 especificacao_principal_M0,principal
 especificacao_principal_M1,principal

@@ -8,7 +8,7 @@ cod_mun6,municipio,indicador,rotulo,grupo,unidade,fonte,formula,2020,2021,2022,2
 510320,Colíder,fte_medicos_p1000,Médicos SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_medicos_sus / populacao,1.9552,2.1911,2.5273,3.3445,3.6998,3.5874
 510320,Colíder,fte_enfermeiros_p1000,Enfermeiros SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_enfermeiros_sus / populacao,1.9436,2.1314,2.2802,2.7452,2.4855,2.6717
 510320,Colíder,fte_tec_enfermagem_p1000,Técnicos de enfermagem SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_tec_enfermagem_sus / populacao,6.383,6.4085,6.8368,6.7789,6.5558,6.1368
-510320,Colíder,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_acs / populacao,2.806,2.7544,3.0166,2.956,3.0303,2.8287
+510320,Colíder,fte_acs_p1000,Agentes comunitários de saúde por mil habitantes,capacidade,FTE por mil hab.,CNES (CBO 515105),1000 × fte_acs / populacao,1.7237,1.6615,1.7109,1.6464,1.8822,1.8718
 510320,Colíder,fte_dentistas_p1000,Dentistas SUS por mil habitantes,capacidade,FTE por mil hab.,CNES,1000 × fte_dentistas_sus / populacao,0.3245,0.2954,0.3561,0.4393,0.4308,0.4355
 510320,Colíder,leitos_sus_p1000,Leitos SUS por mil habitantes,capacidade,leitos por mil hab.,CNES,1000 × leitos_sus / populacao,2.8628,3.0374,3.2037,2.5536,2.2571,1.8771
 510320,Colíder,leitos_uti_sus,Leitos de UTI SUS,capacidade,leitos,CNES,leitos_uti_sus (média das competências do ano),8,8,8,8,8,8
