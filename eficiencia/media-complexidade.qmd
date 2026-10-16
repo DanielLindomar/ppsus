@@ -212,7 +212,7 @@ Aproximação às melhores práticas (EC) de `r var_ano(js$ec)` em 2022–2025 e
 
 ::: {.ef-ressalva}
 - **Despesa de média complexidade estimada**: a subfunção 302 do SIOPS não separa média e alta complexidade; a parcela de média complexidade é atribuída pelo valor aprovado no SIA e no SIH. Despesa nula, baixa ou inconsistente é sinalizada e a meta financeira não é publicada.
-- **Produção local × acesso**: na produção local, municípios-polo atendem moradores de vizinhos (o que eleva a produção por habitante); na ótica do acesso, conta a internação do morador onde quer que ocorra. As duas leituras se completam — veja também [Deslocamento](../deslocamento/index.qmd).
+- **Produção local × acesso**: na produção local, municípios-polo atendem moradores de vizinhos (o que eleva a produção por habitante); na ótica do acesso, conta a internação do morador em qualquer hospital de Mato Grosso. As duas leituras se completam — veja também [Deslocamento](../deslocamento/index.qmd).
 - **Internações em outros estados não entram no acesso**: o modelo usa só internações em hospitais de Mato Grosso; moradores de municípios de fronteira que se internam em outra UF ficam de fora. Essas internações são medidas à parte, em [Deslocamento](../deslocamento/index.qmd#fuga).
 - **Polos de alta complexidade** (limiar de trabalho homologado em 08/10/2026) têm escore de média complexidade conservador: parte dos recursos atende a alta complexidade.
 - Leitos de UTI saem dos leitos gerais; a alta complexidade é tratada por [região de saúde](alta-complexidade.qmd).

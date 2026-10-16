@@ -161,7 +161,7 @@ matriz_regioes("total", A)
 
 #### Polos de atendimento — total, `r A`
 
-Municípios com internações registradas em seus estabelecimentos, ordenados pelo total recebido. *De outros municípios* conta os pacientes que não residem no município do hospital; o *saldo* é a diferença entre as internações recebidas e as internações dos próprios residentes (onde quer que tenham ocorrido): positivo indica que o município atende mais do que "exporta".
+Municípios com internações registradas em seus estabelecimentos, ordenados pelo total recebido. *De outros municípios* conta os pacientes que não residem no município do hospital; o *saldo* é a diferença entre as internações recebidas e as internações dos próprios residentes (em qualquer hospital de Mato Grosso): positivo indica que o município atende mais do que "exporta".
 
 ```{r}
 tabela_polos("total", A)
