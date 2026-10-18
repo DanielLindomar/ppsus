@@ -1,0 +1,8 @@
+ano,acoes_saude,publica,suplementar,pub_medicamentos,pub_tratamento,pub_internacao_uti,pub_insumos,pub_home_care,pub_saude_mental,atribuivel,pct_atribuivel,liminar_concedida,acoes_nucleo_sem_origem,ano_parcial,suprimido
+2020,3940,3693,292,730,1708,869,191,,112,845,21.4,2752,0,False,True
+2021,4715,4294,483,553,2113,1258,147,13,104,2520,53.4,3382,,False,True
+2022,5575,5116,531,756,3145,735,153,97,154,4237,76.0,3925,7,False,False
+2023,6944,6293,750,1020,3512,1020,196,252,204,5087,73.3,4912,18,False,False
+2024,8793,7825,1137,1238,3916,1784,225,276,189,5916,67.3,5774,385,False,False
+2025,11092,9427,1944,928,4485,2847,224,352,204,6658,60.0,7309,1784,False,False
+2026,8531,6944,1837,478,2986,2171,205,249,185,5157,60.5,4950,1782,True,False

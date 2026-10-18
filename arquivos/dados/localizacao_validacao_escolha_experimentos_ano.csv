@@ -1,0 +1,9 @@
+piloto,ano_evento,anos_ajuste,anos_teste,n_eventos,n_avaliaveis,tipos,cpc_medio_pivo_mnl,cpc_medio_persistencia,n_pivo_vence,n_pivo_vence_margem,n_empate_margem,n_pivo_perde_margem,dif_cpc_mediana
+parto,2021,2020-2020,2021-2022,7,5,"ampliacao 3, fechamento 1, reducao 1",0.8626,0.8734,3,3,0,2,0.0099
+parto,2022,2020-2021,2022-2023,1,1,abertura 1,0.8896,0.8682,1,1,0,0,0.0214
+parto,2023,2020-2022,2023-2024,5,5,"reducao 2, ampliacao 1, fechamento 1, abertura 1",0.8987,0.8959,3,2,1,2,0.0017
+parto,2024,2020-2023,2024-2025,5,4,"abertura 2, reducao 2",0.8683,0.9208,1,1,0,3,-0.0513
+parto,2025,2020-2024,2025,5,2,reducao 2,0.898,0.9489,0,0,0,2,-0.051
+uti,2021,2020-2020,2021-2022,12,12,"ampliacao 9, abertura 3",0.7798,0.6853,11,8,3,1,0.0303
+uti,2022,2020-2021,2022-2023,13,13,"reducao 11, fechamento 2",0.8345,0.7829,12,12,1,0,0.036
+uti,2023,2020-2022,2023-2024,6,6,"fechamento 5, reducao 1",0.7876,0.7844,3,1,3,2,0.0015

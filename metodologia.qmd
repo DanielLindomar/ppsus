@@ -25,8 +25,9 @@ Esta página explica de onde vêm os números do site, o que cada um significa, 
 
 ## Fontes de dados
 
-Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DATASUS/Ministério da Saúde), do SIOPS e do IBGE. Os arquivos brutos foram carregados em um repositório único do projeto (Data Lake do SUS-MT), validados e reorganizados em painéis por município e ano.
+Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DATASUS/Ministério da Saúde), do SIOPS e do IBGE. Os arquivos brutos foram carregados em um repositório único do projeto (Data Lake do SUS-MT), validados e reorganizados em painéis por município e ano. As seções da versão 0.4 usam também fontes de fora do SUS (SIVEP-Gripe, INMET, InfoDengue, OpenStreetMap e DataJud/CNJ), descritas adiante em [Previsão](#previsao), [Localização](#localizacao) e [Judicialização](#judicializacao).
 
+::: {.rolagem-x}
 | Fonte | O que é | Período usado | O que se extrai |
 |---|---|---|---|
 | **SIOPS** | Declarações orçamentárias dos municípios em saúde (RREO) | 2020–2025 | Despesa liquidada total e por subfunção (atenção básica, média e alta complexidade, outras), despesa corrente e de capital, parcela com recursos próprios |
@@ -39,6 +40,7 @@ Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DA
 | **SIM** | Óbitos por residência | 2020–2024 | Óbitos totais e de menores de 1 ano; taxas de mortalidade geral e infantil |
 | **SINASC** | Nascidos vivos por residência da mãe | 2020–2024 | Nascidos vivos, pré-natal com 7+ consultas, baixo peso, cesáreas, mães adolescentes |
 | **IBGE** | População, malha e sedes municipais | 2020–2025 | Estimativas anuais (Censo em 2022; 2023 interpolada entre o Censo e 2024), malha municipal (mapas) e coordenadas das sedes municipais (Localidades do Brasil 2022), usadas nas distâncias em linha reta do deslocamento |
+:::
 
 ## Definições que valem em todo o site
 
@@ -97,7 +99,7 @@ tab_modelos <- function() {
     tags$tr(tags$td(strong(e$nome_modelo[1])), tags$td(class = "num", if (length(un)) num(un[1]) else "—"),
             tags$td(paste(ins, collapse = "; ")), tags$td(paste(pro, collapse = "; ")))
   })
-  div(class = "tabela-rolagem", tags$table(class = "table table-sm",
+  div(class = "tabela-rolagem rolagem-x", tags$table(class = "table table-sm",
     tags$thead(tags$tr(tags$th("Modelo"), tags$th("Avaliados em 2025"), tags$th("Recursos (insumos)"), tags$th("Produção (produtos)"))),
     tags$tbody(lin)))
 }
@@ -122,12 +124,68 @@ Modelos e variáveis da especificação principal vigente (arquivo `especificaco
 
 **Ressalvas da eficiência.** Unidades com dados de registro atípicos recebem o sinal "registro a verificar": continuam avaliadas, mas não servem de referência a outras e podem ter a meta financeira omitida; a lista de verificações será encaminhada à SES-MT e ao COSEMS-MT. Valem também as limitações acima: as internações de moradores em outros estados não entram nos modelos (são medidas à parte, na página [Deslocamento](deslocamento/index.html#fuga)); 2020–2021 foram afetados pela COVID-19; a classificação da despesa por subfunção é frágil em alguns municípios; o pré-natal de 2025 ainda não está disponível. Internações por condições sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.
 
+## Previsão de demanda (preliminar) {#previsao}
+
+A seção [Previsão](previsao/index.html) aplica a previsão de demanda ao caso escolhido no Marco Zero do projeto (25/05/2026): as internações semanais por doenças do aparelho respiratório (CID-10 J00–J99, diagnóstico principal) nos hospitais de cada uma das 16 regiões de saúde, pela semana epidemiológica (SE) da internação, para todas as idades e, à parte, para menores de 5 anos. Os resultados são **preliminares**: a especificação do modelo (série-alvo, horizontes, variáveis e critério de escolha) ainda está em validação pela coordenação.
+
+::: {.rolagem-x}
+| Fonte | Período usado | O que se extrai |
+|---|---|---|
+| **SIH/SUS de Mato Grosso** (AIH reduzida) | Internações de 2020 a 2026; competência de processamento até 08/2026, carga de 17/10/2026 | Série semanal das internações J00–J99 (AIH tipo 1) e o atraso de registro de cada semana |
+| **SIVEP-Gripe** | 2020–2026 (arquivos de 2025 e 2026 na versão de 12/10/2026) | Hospitalizações por síndrome respiratória aguda grave (SRAG), por região de residência e semana de início dos sintomas, como sinal antecipado |
+| **INMET e InfoDengue** | 2010–2026 | Clima semanal por região de saúde: precipitação interpolada das estações do INMET; temperatura e umidade do InfoDengue; anomalias em relação a 2010–2021 |
+| **RIPSA/IBGE e CNES** | 2020–2025 | População das regiões; leitos pediátricos SUS, usados como contexto do alerta |
+:::
+
+- **Modelos.** Referências ingênuas (repetir a mesma semana do ano anterior ou a última semana conhecida), o modelo estatístico SARIMA e quatro modelos de aprendizado de máquina: *gradient boosting* (HGB e LightGBM), Random Forest e rede neural (perceptron multicamadas). Os modelos são treinados com as semanas a partir de 2022, porque 2020–2021 foram distorcidos pela COVID-19, e testados no passado com origem móvel, de 2024 a 2026, para horizontes de 1 a 4 semanas. O critério é o erro médio escalado (MASE), que compara o erro de cada modelo com o de uma previsão ingênua; o LightGBM é a referência desta versão por ter o menor MASE.
+- **Atraso do SIH.** Uma semana só fica praticamente completa no SIH cerca de quatro competências depois, e os arquivos mensais são republicados com mais registros. Por isso a previsão tem duas etapas: o *nowcast* estima as semanas ainda incompletas e a previsão encadeada projeta, a partir dele, as quatro semanas seguintes, com intervalos de 80% e 95%.
+- **Alerta.** Uma semana é de alta pressão quando as internações da região passam do percentil 90 das semanas de 2022–2023 (limiar P90). O alerta é avaliado como classificação, com sensibilidade, especificidade, valor preditivo positivo e F1. O ganho do alerta vem de ter algum *nowcast*: com o método atuarial chain-ladder no lugar do LightGBM, o desempenho é praticamente o mesmo. A regra do alerta não foi pactuada com a SES-MT e não é alerta operacional.
+- **Supressão.** Contagens observadas de 1 a 4 por região e semana não são publicadas. Para que não sejam deduzidas pelo total de Mato Grosso, outras regiões da mesma semana também ficam vazias até que nenhuma contagem pequena possa ser recalculada (supressão complementar conferida por programação inteira); na semana em que o próprio total do estado é suprimido, todas as regiões também são. As previsões dos modelos ingênuos que copiariam uma contagem suprimida ficam vazias, e os arquivos marcam só se a célula foi suprimida, não o motivo.
+
+## Localização de serviços (preliminar) {#localizacao}
+
+A seção [Localização](localizacao/index.html) organiza em cenários, para apoiar a discussão com a gestão, a pergunta sobre onde a abertura ou a ampliação de um serviço reduziria mais o deslocamento dos pacientes, considerando a demanda dos próximos anos, com dois pilotos: [atenção ao parto](localizacao/parto.html) e [UTI adulto](localizacao/uti-adulto.html). A resposta vem de uma cadeia de cinco modelos: demanda por município de residência em 2026–2030 (L1), escolha do estabelecimento pelo paciente (L2), acesso atual (L3), otimização da localização de unidades novas — p-mediana, cobertura máxima e, na UTI, uma versão com capacidade (L4) — e cenários que combinam a otimização com a escolha do paciente (L5).
+
+::: {.rolagem-x}
+| Fonte | Período usado | O que se extrai |
+|---|---|---|
+| **SINASC** | 2020–2025 (2025 preliminar); deslocamento em 2024–2025 | Nascidos vivos hospitalares de mães residentes em Mato Grosso, por município de residência e de nascimento |
+| **SIH/SUS de MT e das outras UF** | 2020–2025; deslocamento em 2024–2025 | Internações SUS com UTI adulto de residentes de Mato Grosso, por município de residência e do hospital |
+| **CNES** | Média mensal de 2025; aberturas e fechamentos de 2021–2025 | Leitos obstétricos e leitos SUS de UTI adulto por município; os experimentos naturais da validação |
+| **RIPSA/SVS e IBGE** | 2025 e projeção 2026–2030 | População-alvo (mulheres de 15 a 49 anos; adultos de 20 anos ou mais) e projeção do IBGE para Mato Grosso |
+| **OSRM / OpenStreetMap** | Consulta de 08/10/2026 | Tempo e distância rodoviários de automóvel entre as sedes municipais (© colaboradores do OpenStreetMap, licença ODbL) |
+:::
+
+- **Projeção populacional provisória.** A população municipal de 2026–2030 aplica a participação de cada município, por sexo e faixa etária, à projeção do IBGE para o estado (método de razão). A demanda de 2030 é, por isso, **provisória** e será refeita quando houver projeção municipal por idade e sexo.
+- **Parâmetros de cenário, não normas.** A ocupação-alvo de 85%, o módulo de 10 leitos de UTI, o filtro de candidatos pela captação esperada (com o desconto de 1,28 medido nas aberturas de UTI) e os limiares de 52 e 100 partos por ano são parâmetros de pesquisa para montar cenários, não critérios normativos de habilitação. Na UTI adulto, as soluções da p-mediana e da versão com capacidade aparecem lado a lado como cenários; no parto, várias soluções quase empatam e devem ser lidas como ordem de grandeza.
+- **Tempos em condições ideais.** Os tempos do OSRM não incluem balsas, estradas sazonais, transporte sanitário, regulação ou espera; servem para comparar alternativas.
+- **Divulgação.** Contagens são publicadas em números inteiros; percentuais municipais e regionais de deslocamento com contagem de 1 a 4 ficam vazios, assim como os que permitiriam deduzi-los por diferença (inclusive pelo total de Mato Grosso, publicado na linha do estado); a supressão é conferida por programação inteira. Os resultados não são recomendação oficial de abertura, habilitação ou fechamento de serviços.
+
+## Judicialização da saúde (preliminar) {#judicializacao}
+
+A seção [Judicialização](judicializacao/index.html) descreve as ações judiciais de saúde em Mato Grosso, compara as comarcas, prevê o volume dos meses seguintes e testa se a judicialização se associa à oferta e à eficiência dos serviços.
+
+::: {.rolagem-x}
+| Fonte | Período usado | O que se extrai |
+|---|---|---|
+| **DataJud (CNJ), API Pública** | Ações ajuizadas de 2020 a 11/09/2026 (coleta de 17/10/2026) | Metadados das ações com assuntos de saúde da Tabela Processual Unificada no TJMT e na Justiça Federal em Mato Grosso (TRF1): classe, assuntos, grau, mês de ajuizamento, unidade de origem e decisões liminares. Sem nomes das partes, sem texto e sem processos sigilosos |
+| **TJMT, Corregedoria-Geral da Justiça** | Jurisdição vigente das comarcas | Municípios abrangidos por cada comarca |
+| **IBGE** | 2020–2026 | População das comarcas, para as taxas por 100 mil habitantes |
+:::
+
+- **Unidade.** Ação nova de saúde no 1º grau e nos juizados, contada uma vez por processo, pelo ano de ajuizamento. A coleta reproduz de 87% a 97% dos casos novos de saúde do painel do CNJ, contados na unidade do painel.
+- **Atribuição territorial.** A comarca vem do código da unidade de origem no número do processo; o município herda a taxa da comarca. A regra é uma **proposta** do projeto, em validação.
+- **Período de comparação.** As comarcas são comparadas em 2022–2024. Em 2025 e 2026, a centralização de ações de saúde pública no Núcleo de Justiça 4.0 deixou parte das ações sem comarca de origem, e por isso esses anos são marcados como afetados pela centralização. As taxas de Cuiabá e Várzea Grande são limites inferiores.
+- **Taxas suavizadas e supressão.** As taxas por comarca são suavizadas (Bayes empírico) e publicadas arredondadas a 5 por 100 mil no período 2022–2024 e só em faixas por ano. Contagens de 1 a 4 não são publicadas, nem as que se deduzem por diferença (inclusive as ações mistas, que entram na saúde pública e na suplementar), e a supressão complementar foi auditada por programação linear para que nenhuma célula suprimida possa ser recalculada.
+- **Previsão e fatores associados.** A previsão mensal compara ETS, SARIMA, LightGBM e referências ingênuas pelo MASE. Os fatores associados vêm de um modelo de contagem (binomial negativo) por comarca e ano, com razões de taxas: são **associações, não causas**, e os dados não sustentam a hipótese de que oferta insuficiente ou ineficiência levem a mais judicialização.
+- **Uso dos dados.** A coleta seguiu o Termo de Uso da API Pública do DataJud (versão 1.2): uso não comercial, sem dados pessoais e dentro do limite de requisições.
+
 ## Pipeline: do dado bruto ao site
 
 1. **Data Lake (camada bruta):** arquivos originais do DATASUS (FTP), do SIOPS e do IBGE, carregados sem alteração em PostgreSQL, com registro de origem e data.
 2. **Camada tratada (`trusted`):** tipos corrigidos, datas validadas (fora de 1900–2027 anuladas), duplicidades removidas, chaves de município padronizadas; perdas inferiores a 0,001% dos registros.
 3. **Painéis analíticos (`mart`):** uma linha por município e ano (e por hospital e ano) com insumos, produção e resultados, per capita e sinalizadores de completude. É a base do DEA e deste site.
-4. **Site:** scripts em Python extraem dos painéis os arquivos públicos (CSV e GeoJSON) e geram as páginas; o Quarto renderiza tudo em HTML estático, publicado no GitHub Pages. Nenhum microdado sai do repositório.
+4. **Site:** scripts em Python extraem dos painéis os arquivos públicos (CSV e GeoJSON) e geram as páginas; o Quarto renderiza tudo em HTML estático, publicado no GitHub Pages. Nenhum microdado sai do repositório. Nas seções de previsão, localização e judicialização, os arquivos chegam já agregados e com supressão pelas frentes de pesquisa do projeto; os scripts do site conferem de novo a supressão (e a completam quando necessário) antes de copiá-los.
 
 Os dados são somente de leitura em todas as etapas posteriores à carga; a reprodução do site depende apenas dos arquivos publicados em [Dados](dados/index.html).
 
@@ -176,6 +234,24 @@ As siglas também são explicadas ao passar o cursor sobre elas em qualquer pág
 | IPCA | Índice Nacional de Preços ao Consumidor Amplo (IBGE), usado para levar valores a reais de 2025 |
 | COSEMS-MT | Conselho de Secretarias Municipais de Saúde de Mato Grosso |
 | TMI | Taxa de mortalidade infantil (óbitos de menores de 1 ano por mil nascidos vivos) |
+| SE | Semana epidemiológica (de domingo a sábado) |
+| SRAG | Síndrome respiratória aguda grave |
+| SIVEP-Gripe | Sistema de Informação de Vigilância Epidemiológica da Gripe (notificações de SRAG) |
+| INMET | Instituto Nacional de Meteorologia |
+| SARIMA | Modelo estatístico de série temporal com sazonalidade (autorregressivo integrado de médias móveis sazonal) |
+| HGB | *Histogram gradient boosting*, modelo de aprendizado de máquina por árvores de decisão em sequência (como o LightGBM) |
+| MLP | Perceptron multicamadas (rede neural) |
+| MASE | Erro absoluto médio escalado: erro do modelo dividido pelo de uma previsão ingênua (abaixo de 1, melhor que ela) |
+| P90 | Percentil 90: valor superado em 10% das semanas de referência |
+| VPP | Valor preditivo positivo: parcela dos alertas emitidos que se confirmaram |
+| OSRM | Open Source Routing Machine: cálculo de rotas sobre o mapa colaborativo OpenStreetMap |
+| E2SFCA | Índice de acesso por áreas de captação flutuantes em duas etapas, com peso que diminui com o tempo de viagem |
+| CNJ | Conselho Nacional de Justiça |
+| DataJud | Base Nacional de Dados do Poder Judiciário (CNJ) |
+| TJMT | Tribunal de Justiça do Estado de Mato Grosso |
+| TRF1 | Tribunal Regional Federal da 1ª Região (Justiça Federal, que abrange Mato Grosso) |
+| TPU | Tabelas Processuais Unificadas do Poder Judiciário (classes e assuntos) |
+| ETS | Modelo de suavização exponencial (erro, tendência e sazonalidade) |
 | PPSUS | Programa Pesquisa para o SUS: gestão compartilhada em saúde |
 | FAPEMAT | Fundação de Amparo à Pesquisa do Estado de Mato Grosso |
 | CNPq | Conselho Nacional de Desenvolvimento Científico e Tecnológico |

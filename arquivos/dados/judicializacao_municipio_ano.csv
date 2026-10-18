@@ -1,0 +1,990 @@
+cod_mun6,nome_municipio,nome_regsaud,comarca,ano,ano_parcial,taxa_limite_inferior,faixa_taxa_suavizada,quebra_centralizacao,taxa_eb_local_2022_2024_100mil
+510010,Acorizal,Baixada Cuiabana - MT,Cuiabá,2020,False,True,0 a 50,False,115.0
+510010,Acorizal,Baixada Cuiabana - MT,Cuiabá,2021,False,True,50 a 100,False,115.0
+510010,Acorizal,Baixada Cuiabana - MT,Cuiabá,2022,False,True,50 a 100,False,115.0
+510010,Acorizal,Baixada Cuiabana - MT,Cuiabá,2023,False,True,100 a 150,False,115.0
+510010,Acorizal,Baixada Cuiabana - MT,Cuiabá,2024,False,True,100 a 150,False,115.0
+510010,Acorizal,Baixada Cuiabana - MT,Cuiabá,2025,False,True,50 a 100,True,115.0
+510010,Acorizal,Baixada Cuiabana - MT,Cuiabá,2026,True,True,50 a 100,True,115.0
+510020,Água Boa,Médio Araguaia - MT,Água Boa,2020,False,False,,False,95.0
+510020,Água Boa,Médio Araguaia - MT,Água Boa,2021,False,False,0 a 50,False,95.0
+510020,Água Boa,Médio Araguaia - MT,Água Boa,2022,False,False,50 a 100,False,95.0
+510020,Água Boa,Médio Araguaia - MT,Água Boa,2023,False,False,100 a 150,False,95.0
+510020,Água Boa,Médio Araguaia - MT,Água Boa,2024,False,False,50 a 100,False,95.0
+510020,Água Boa,Médio Araguaia - MT,Água Boa,2025,False,False,100 a 150,True,95.0
+510020,Água Boa,Médio Araguaia - MT,Água Boa,2026,True,False,50 a 100,True,95.0
+510025,Alta Floresta,Alto Tapajós - MT,Alta Floresta,2020,False,False,0 a 50,False,275.0
+510025,Alta Floresta,Alto Tapajós - MT,Alta Floresta,2021,False,False,50 a 100,False,275.0
+510025,Alta Floresta,Alto Tapajós - MT,Alta Floresta,2022,False,False,200 a 300,False,275.0
+510025,Alta Floresta,Alto Tapajós - MT,Alta Floresta,2023,False,False,300 ou mais,False,275.0
+510025,Alta Floresta,Alto Tapajós - MT,Alta Floresta,2024,False,False,200 a 300,False,275.0
+510025,Alta Floresta,Alto Tapajós - MT,Alta Floresta,2025,False,False,300 ou mais,True,275.0
+510025,Alta Floresta,Alto Tapajós - MT,Alta Floresta,2026,True,False,150 a 200,True,275.0
+510030,Alto Araguaia,Sul Matogrossense - MT,Alto Araguaia,2020,False,False,,False,60.0
+510030,Alto Araguaia,Sul Matogrossense - MT,Alto Araguaia,2021,False,False,0 a 50,False,60.0
+510030,Alto Araguaia,Sul Matogrossense - MT,Alto Araguaia,2022,False,False,0 a 50,False,60.0
+510030,Alto Araguaia,Sul Matogrossense - MT,Alto Araguaia,2023,False,False,50 a 100,False,60.0
+510030,Alto Araguaia,Sul Matogrossense - MT,Alto Araguaia,2024,False,False,50 a 100,False,60.0
+510030,Alto Araguaia,Sul Matogrossense - MT,Alto Araguaia,2025,False,False,50 a 100,True,60.0
+510030,Alto Araguaia,Sul Matogrossense - MT,Alto Araguaia,2026,True,False,50 a 100,True,60.0
+510035,Alto Boa Vista,Norte Araguaia Karajá - MT,São Felix do Araguaia,2020,False,False,,False,70.0
+510035,Alto Boa Vista,Norte Araguaia Karajá - MT,São Felix do Araguaia,2021,False,False,0 a 50,False,70.0
+510035,Alto Boa Vista,Norte Araguaia Karajá - MT,São Felix do Araguaia,2022,False,False,0 a 50,False,70.0
+510035,Alto Boa Vista,Norte Araguaia Karajá - MT,São Felix do Araguaia,2023,False,False,50 a 100,False,70.0
+510035,Alto Boa Vista,Norte Araguaia Karajá - MT,São Felix do Araguaia,2024,False,False,100 a 150,False,70.0
+510035,Alto Boa Vista,Norte Araguaia Karajá - MT,São Felix do Araguaia,2025,False,False,100 a 150,True,70.0
+510035,Alto Boa Vista,Norte Araguaia Karajá - MT,São Felix do Araguaia,2026,True,False,200 a 300,True,70.0
+510040,Alto Garças,Sul Matogrossense - MT,Alto Garças,2020,False,False,,False,155.0
+510040,Alto Garças,Sul Matogrossense - MT,Alto Garças,2021,False,False,0 a 50,False,155.0
+510040,Alto Garças,Sul Matogrossense - MT,Alto Garças,2022,False,False,150 a 200,False,155.0
+510040,Alto Garças,Sul Matogrossense - MT,Alto Garças,2023,False,False,200 a 300,False,155.0
+510040,Alto Garças,Sul Matogrossense - MT,Alto Garças,2024,False,False,50 a 100,False,155.0
+510040,Alto Garças,Sul Matogrossense - MT,Alto Garças,2025,False,False,100 a 150,True,155.0
+510040,Alto Garças,Sul Matogrossense - MT,Alto Garças,2026,True,False,50 a 100,True,155.0
+510050,Alto Paraguai,Centro Norte - MT,Diamantino,2020,False,False,0 a 50,False,190.0
+510050,Alto Paraguai,Centro Norte - MT,Diamantino,2021,False,False,0 a 50,False,190.0
+510050,Alto Paraguai,Centro Norte - MT,Diamantino,2022,False,False,150 a 200,False,190.0
+510050,Alto Paraguai,Centro Norte - MT,Diamantino,2023,False,False,150 a 200,False,190.0
+510050,Alto Paraguai,Centro Norte - MT,Diamantino,2024,False,False,200 a 300,False,190.0
+510050,Alto Paraguai,Centro Norte - MT,Diamantino,2025,False,False,200 a 300,True,190.0
+510050,Alto Paraguai,Centro Norte - MT,Diamantino,2026,True,False,150 a 200,True,190.0
+510060,Alto Taquari,Sul Matogrossense - MT,Alto Taquari,2020,False,False,0 a 50,False,50.0
+510060,Alto Taquari,Sul Matogrossense - MT,Alto Taquari,2021,False,False,,False,50.0
+510060,Alto Taquari,Sul Matogrossense - MT,Alto Taquari,2022,False,False,,False,50.0
+510060,Alto Taquari,Sul Matogrossense - MT,Alto Taquari,2023,False,False,,False,50.0
+510060,Alto Taquari,Sul Matogrossense - MT,Alto Taquari,2024,False,False,50 a 100,False,50.0
+510060,Alto Taquari,Sul Matogrossense - MT,Alto Taquari,2025,False,False,,True,50.0
+510060,Alto Taquari,Sul Matogrossense - MT,Alto Taquari,2026,True,False,50 a 100,True,50.0
+510080,Apiacás,Alto Tapajós - MT,Apiacás,2020,False,False,,False,80.0
+510080,Apiacás,Alto Tapajós - MT,Apiacás,2021,False,False,,False,80.0
+510080,Apiacás,Alto Tapajós - MT,Apiacás,2022,False,False,,False,80.0
+510080,Apiacás,Alto Tapajós - MT,Apiacás,2023,False,False,100 a 150,False,80.0
+510080,Apiacás,Alto Tapajós - MT,Apiacás,2024,False,False,,False,80.0
+510080,Apiacás,Alto Tapajós - MT,Apiacás,2025,False,False,,True,80.0
+510080,Apiacás,Alto Tapajós - MT,Apiacás,2026,True,False,50 a 100,True,80.0
+510100,Araguaiana,Garças Araguaia - MT,Barra do Garças,2020,False,False,0 a 50,False,60.0
+510100,Araguaiana,Garças Araguaia - MT,Barra do Garças,2021,False,False,0 a 50,False,60.0
+510100,Araguaiana,Garças Araguaia - MT,Barra do Garças,2022,False,False,50 a 100,False,60.0
+510100,Araguaiana,Garças Araguaia - MT,Barra do Garças,2023,False,False,50 a 100,False,60.0
+510100,Araguaiana,Garças Araguaia - MT,Barra do Garças,2024,False,False,50 a 100,False,60.0
+510100,Araguaiana,Garças Araguaia - MT,Barra do Garças,2025,False,False,50 a 100,True,60.0
+510100,Araguaiana,Garças Araguaia - MT,Barra do Garças,2026,True,False,50 a 100,True,60.0
+510120,Araguainha,Sul Matogrossense - MT,Alto Araguaia,2020,False,False,,False,60.0
+510120,Araguainha,Sul Matogrossense - MT,Alto Araguaia,2021,False,False,0 a 50,False,60.0
+510120,Araguainha,Sul Matogrossense - MT,Alto Araguaia,2022,False,False,0 a 50,False,60.0
+510120,Araguainha,Sul Matogrossense - MT,Alto Araguaia,2023,False,False,50 a 100,False,60.0
+510120,Araguainha,Sul Matogrossense - MT,Alto Araguaia,2024,False,False,50 a 100,False,60.0
+510120,Araguainha,Sul Matogrossense - MT,Alto Araguaia,2025,False,False,50 a 100,True,60.0
+510120,Araguainha,Sul Matogrossense - MT,Alto Araguaia,2026,True,False,50 a 100,True,60.0
+510125,Araputanga,Oeste Matogrossense - MT,Araputanga,2020,False,False,,False,140.0
+510125,Araputanga,Oeste Matogrossense - MT,Araputanga,2021,False,False,,False,140.0
+510125,Araputanga,Oeste Matogrossense - MT,Araputanga,2022,False,False,50 a 100,False,140.0
+510125,Araputanga,Oeste Matogrossense - MT,Araputanga,2023,False,False,150 a 200,False,140.0
+510125,Araputanga,Oeste Matogrossense - MT,Araputanga,2024,False,False,150 a 200,False,140.0
+510125,Araputanga,Oeste Matogrossense - MT,Araputanga,2025,False,False,200 a 300,True,140.0
+510125,Araputanga,Oeste Matogrossense - MT,Araputanga,2026,True,False,200 a 300,True,140.0
+510130,Arenápolis,Médio Norte Matogrossense - MT,Arenápolis,2020,False,False,,False,135.0
+510130,Arenápolis,Médio Norte Matogrossense - MT,Arenápolis,2021,False,False,50 a 100,False,135.0
+510130,Arenápolis,Médio Norte Matogrossense - MT,Arenápolis,2022,False,False,150 a 200,False,135.0
+510130,Arenápolis,Médio Norte Matogrossense - MT,Arenápolis,2023,False,False,100 a 150,False,135.0
+510130,Arenápolis,Médio Norte Matogrossense - MT,Arenápolis,2024,False,False,150 a 200,False,135.0
+510130,Arenápolis,Médio Norte Matogrossense - MT,Arenápolis,2025,False,False,200 a 300,True,135.0
+510130,Arenápolis,Médio Norte Matogrossense - MT,Arenápolis,2026,True,False,200 a 300,True,135.0
+510140,Aripuanã,Noroeste Matogrossense - MT,Aripuanã,2020,False,False,,False,90.0
+510140,Aripuanã,Noroeste Matogrossense - MT,Aripuanã,2021,False,False,,False,90.0
+510140,Aripuanã,Noroeste Matogrossense - MT,Aripuanã,2022,False,False,50 a 100,False,90.0
+510140,Aripuanã,Noroeste Matogrossense - MT,Aripuanã,2023,False,False,50 a 100,False,90.0
+510140,Aripuanã,Noroeste Matogrossense - MT,Aripuanã,2024,False,False,100 a 150,False,90.0
+510140,Aripuanã,Noroeste Matogrossense - MT,Aripuanã,2025,False,False,100 a 150,True,90.0
+510140,Aripuanã,Noroeste Matogrossense - MT,Aripuanã,2026,True,False,100 a 150,True,90.0
+510160,Barão de Melgaço,Baixada Cuiabana - MT,Santo Antônio do Leverger,2020,False,False,,False,80.0
+510160,Barão de Melgaço,Baixada Cuiabana - MT,Santo Antônio do Leverger,2021,False,False,,False,80.0
+510160,Barão de Melgaço,Baixada Cuiabana - MT,Santo Antônio do Leverger,2022,False,False,50 a 100,False,80.0
+510160,Barão de Melgaço,Baixada Cuiabana - MT,Santo Antônio do Leverger,2023,False,False,100 a 150,False,80.0
+510160,Barão de Melgaço,Baixada Cuiabana - MT,Santo Antônio do Leverger,2024,False,False,50 a 100,False,80.0
+510160,Barão de Melgaço,Baixada Cuiabana - MT,Santo Antônio do Leverger,2025,False,False,,True,80.0
+510160,Barão de Melgaço,Baixada Cuiabana - MT,Santo Antônio do Leverger,2026,True,False,50 a 100,True,80.0
+510170,Barra do Bugres,Médio Norte Matogrossense - MT,Barra do Bugres,2020,False,False,,False,85.0
+510170,Barra do Bugres,Médio Norte Matogrossense - MT,Barra do Bugres,2021,False,False,0 a 50,False,85.0
+510170,Barra do Bugres,Médio Norte Matogrossense - MT,Barra do Bugres,2022,False,False,50 a 100,False,85.0
+510170,Barra do Bugres,Médio Norte Matogrossense - MT,Barra do Bugres,2023,False,False,50 a 100,False,85.0
+510170,Barra do Bugres,Médio Norte Matogrossense - MT,Barra do Bugres,2024,False,False,50 a 100,False,85.0
+510170,Barra do Bugres,Médio Norte Matogrossense - MT,Barra do Bugres,2025,False,False,150 a 200,True,85.0
+510170,Barra do Bugres,Médio Norte Matogrossense - MT,Barra do Bugres,2026,True,False,150 a 200,True,85.0
+510180,Barra do Garças,Garças Araguaia - MT,Barra do Garças,2020,False,False,0 a 50,False,60.0
+510180,Barra do Garças,Garças Araguaia - MT,Barra do Garças,2021,False,False,0 a 50,False,60.0
+510180,Barra do Garças,Garças Araguaia - MT,Barra do Garças,2022,False,False,50 a 100,False,60.0
+510180,Barra do Garças,Garças Araguaia - MT,Barra do Garças,2023,False,False,50 a 100,False,60.0
+510180,Barra do Garças,Garças Araguaia - MT,Barra do Garças,2024,False,False,50 a 100,False,60.0
+510180,Barra do Garças,Garças Araguaia - MT,Barra do Garças,2025,False,False,50 a 100,True,60.0
+510180,Barra do Garças,Garças Araguaia - MT,Barra do Garças,2026,True,False,50 a 100,True,60.0
+510183,Boa Esperança do Norte,Teles Pires - MT,Sorriso,2025,False,False,150 a 200,True,160.0
+510183,Boa Esperança do Norte,Teles Pires - MT,Sorriso,2026,True,False,50 a 100,True,160.0
+510185,Bom Jesus do Araguaia,Médio Araguaia - MT,Ribeirão Cascalheira,2020,False,False,0 a 50,False,45.0
+510185,Bom Jesus do Araguaia,Médio Araguaia - MT,Ribeirão Cascalheira,2021,False,False,,False,45.0
+510185,Bom Jesus do Araguaia,Médio Araguaia - MT,Ribeirão Cascalheira,2022,False,False,,False,45.0
+510185,Bom Jesus do Araguaia,Médio Araguaia - MT,Ribeirão Cascalheira,2023,False,False,50 a 100,False,45.0
+510185,Bom Jesus do Araguaia,Médio Araguaia - MT,Ribeirão Cascalheira,2024,False,False,,False,45.0
+510185,Bom Jesus do Araguaia,Médio Araguaia - MT,Ribeirão Cascalheira,2025,False,False,50 a 100,True,45.0
+510185,Bom Jesus do Araguaia,Médio Araguaia - MT,Ribeirão Cascalheira,2026,True,False,0 a 50,True,45.0
+510190,Brasnorte,Noroeste Matogrossense - MT,Brasnorte,2020,False,False,,False,150.0
+510190,Brasnorte,Noroeste Matogrossense - MT,Brasnorte,2021,False,False,50 a 100,False,150.0
+510190,Brasnorte,Noroeste Matogrossense - MT,Brasnorte,2022,False,False,50 a 100,False,150.0
+510190,Brasnorte,Noroeste Matogrossense - MT,Brasnorte,2023,False,False,100 a 150,False,150.0
+510190,Brasnorte,Noroeste Matogrossense - MT,Brasnorte,2024,False,False,200 a 300,False,150.0
+510190,Brasnorte,Noroeste Matogrossense - MT,Brasnorte,2025,False,False,200 a 300,True,150.0
+510190,Brasnorte,Noroeste Matogrossense - MT,Brasnorte,2026,True,False,150 a 200,True,150.0
+510250,Cáceres,Oeste Matogrossense - MT,Cáceres,2020,False,False,0 a 50,False,155.0
+510250,Cáceres,Oeste Matogrossense - MT,Cáceres,2021,False,False,0 a 50,False,155.0
+510250,Cáceres,Oeste Matogrossense - MT,Cáceres,2022,False,False,100 a 150,False,155.0
+510250,Cáceres,Oeste Matogrossense - MT,Cáceres,2023,False,False,100 a 150,False,155.0
+510250,Cáceres,Oeste Matogrossense - MT,Cáceres,2024,False,False,200 a 300,False,155.0
+510250,Cáceres,Oeste Matogrossense - MT,Cáceres,2025,False,False,200 a 300,True,155.0
+510250,Cáceres,Oeste Matogrossense - MT,Cáceres,2026,True,False,150 a 200,True,155.0
+510260,Campinápolis,Garças Araguaia - MT,Campinápolis,2020,False,False,0 a 50,False,60.0
+510260,Campinápolis,Garças Araguaia - MT,Campinápolis,2021,False,False,50 a 100,False,60.0
+510260,Campinápolis,Garças Araguaia - MT,Campinápolis,2022,False,False,0 a 50,False,60.0
+510260,Campinápolis,Garças Araguaia - MT,Campinápolis,2023,False,False,50 a 100,False,60.0
+510260,Campinápolis,Garças Araguaia - MT,Campinápolis,2024,False,False,50 a 100,False,60.0
+510260,Campinápolis,Garças Araguaia - MT,Campinápolis,2025,False,False,100 a 150,True,60.0
+510260,Campinápolis,Garças Araguaia - MT,Campinápolis,2026,True,False,50 a 100,True,60.0
+510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,Campo Novo do Parecis,2020,False,False,,False,65.0
+510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,Campo Novo do Parecis,2021,False,False,50 a 100,False,65.0
+510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,Campo Novo do Parecis,2022,False,False,0 a 50,False,65.0
+510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,Campo Novo do Parecis,2023,False,False,50 a 100,False,65.0
+510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,Campo Novo do Parecis,2024,False,False,100 a 150,False,65.0
+510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,Campo Novo do Parecis,2025,False,False,100 a 150,True,65.0
+510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,Campo Novo do Parecis,2026,True,False,50 a 100,True,65.0
+510267,Campo Verde,Sul Matogrossense - MT,Campo Verde,2020,False,False,0 a 50,False,85.0
+510267,Campo Verde,Sul Matogrossense - MT,Campo Verde,2021,False,False,50 a 100,False,85.0
+510267,Campo Verde,Sul Matogrossense - MT,Campo Verde,2022,False,False,50 a 100,False,85.0
+510267,Campo Verde,Sul Matogrossense - MT,Campo Verde,2023,False,False,50 a 100,False,85.0
+510267,Campo Verde,Sul Matogrossense - MT,Campo Verde,2024,False,False,50 a 100,False,85.0
+510267,Campo Verde,Sul Matogrossense - MT,Campo Verde,2025,False,False,50 a 100,True,85.0
+510267,Campo Verde,Sul Matogrossense - MT,Campo Verde,2026,True,False,0 a 50,True,85.0
+510268,Campos de Júlio,Sudoeste Matogrossense - MT,Comodoro,2020,False,False,,False,70.0
+510268,Campos de Júlio,Sudoeste Matogrossense - MT,Comodoro,2021,False,False,0 a 50,False,70.0
+510268,Campos de Júlio,Sudoeste Matogrossense - MT,Comodoro,2022,False,False,0 a 50,False,70.0
+510268,Campos de Júlio,Sudoeste Matogrossense - MT,Comodoro,2023,False,False,50 a 100,False,70.0
+510268,Campos de Júlio,Sudoeste Matogrossense - MT,Comodoro,2024,False,False,100 a 150,False,70.0
+510268,Campos de Júlio,Sudoeste Matogrossense - MT,Comodoro,2025,False,False,100 a 150,True,70.0
+510268,Campos de Júlio,Sudoeste Matogrossense - MT,Comodoro,2026,True,False,100 a 150,True,70.0
+510269,Canabrava do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2020,False,False,0 a 50,False,70.0
+510269,Canabrava do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2021,False,False,0 a 50,False,70.0
+510269,Canabrava do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2022,False,False,0 a 50,False,70.0
+510269,Canabrava do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2023,False,False,0 a 50,False,70.0
+510269,Canabrava do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2024,False,False,100 a 150,False,70.0
+510269,Canabrava do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2025,False,False,150 a 200,True,70.0
+510269,Canabrava do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2026,True,False,100 a 150,True,70.0
+510270,Canarana,Médio Araguaia - MT,Canarana,2020,False,False,,False,95.0
+510270,Canarana,Médio Araguaia - MT,Canarana,2021,False,False,0 a 50,False,95.0
+510270,Canarana,Médio Araguaia - MT,Canarana,2022,False,False,,False,95.0
+510270,Canarana,Médio Araguaia - MT,Canarana,2023,False,False,150 a 200,False,95.0
+510270,Canarana,Médio Araguaia - MT,Canarana,2024,False,False,,False,95.0
+510270,Canarana,Médio Araguaia - MT,Canarana,2025,False,False,100 a 150,True,95.0
+510270,Canarana,Médio Araguaia - MT,Canarana,2026,True,False,50 a 100,True,95.0
+510279,Carlinda,Alto Tapajós - MT,Alta Floresta,2020,False,False,0 a 50,False,275.0
+510279,Carlinda,Alto Tapajós - MT,Alta Floresta,2021,False,False,50 a 100,False,275.0
+510279,Carlinda,Alto Tapajós - MT,Alta Floresta,2022,False,False,200 a 300,False,275.0
+510279,Carlinda,Alto Tapajós - MT,Alta Floresta,2023,False,False,300 ou mais,False,275.0
+510279,Carlinda,Alto Tapajós - MT,Alta Floresta,2024,False,False,200 a 300,False,275.0
+510279,Carlinda,Alto Tapajós - MT,Alta Floresta,2025,False,False,300 ou mais,True,275.0
+510279,Carlinda,Alto Tapajós - MT,Alta Floresta,2026,True,False,150 a 200,True,275.0
+510285,Castanheira,Noroeste Matogrossense - MT,Juína,2020,False,False,0 a 50,False,90.0
+510285,Castanheira,Noroeste Matogrossense - MT,Juína,2021,False,False,50 a 100,False,90.0
+510285,Castanheira,Noroeste Matogrossense - MT,Juína,2022,False,False,0 a 50,False,90.0
+510285,Castanheira,Noroeste Matogrossense - MT,Juína,2023,False,False,50 a 100,False,90.0
+510285,Castanheira,Noroeste Matogrossense - MT,Juína,2024,False,False,100 a 150,False,90.0
+510285,Castanheira,Noroeste Matogrossense - MT,Juína,2025,False,False,150 a 200,True,90.0
+510285,Castanheira,Noroeste Matogrossense - MT,Juína,2026,True,False,100 a 150,True,90.0
+510300,Chapada dos Guimarães,Baixada Cuiabana - MT,Chapada dos Guimarães,2020,False,False,,False,75.0
+510300,Chapada dos Guimarães,Baixada Cuiabana - MT,Chapada dos Guimarães,2021,False,False,0 a 50,False,75.0
+510300,Chapada dos Guimarães,Baixada Cuiabana - MT,Chapada dos Guimarães,2022,False,False,50 a 100,False,75.0
+510300,Chapada dos Guimarães,Baixada Cuiabana - MT,Chapada dos Guimarães,2023,False,False,50 a 100,False,75.0
+510300,Chapada dos Guimarães,Baixada Cuiabana - MT,Chapada dos Guimarães,2024,False,False,50 a 100,False,75.0
+510300,Chapada dos Guimarães,Baixada Cuiabana - MT,Chapada dos Guimarães,2025,False,False,50 a 100,True,75.0
+510300,Chapada dos Guimarães,Baixada Cuiabana - MT,Chapada dos Guimarães,2026,True,False,50 a 100,True,75.0
+510305,Cláudia,Teles Pires - MT,Cláudia,2020,False,False,,False,215.0
+510305,Cláudia,Teles Pires - MT,Cláudia,2021,False,False,100 a 150,False,215.0
+510305,Cláudia,Teles Pires - MT,Cláudia,2022,False,False,200 a 300,False,215.0
+510305,Cláudia,Teles Pires - MT,Cláudia,2023,False,False,200 a 300,False,215.0
+510305,Cláudia,Teles Pires - MT,Cláudia,2024,False,False,200 a 300,False,215.0
+510305,Cláudia,Teles Pires - MT,Cláudia,2025,False,False,300 ou mais,True,215.0
+510305,Cláudia,Teles Pires - MT,Cláudia,2026,True,False,200 a 300,True,215.0
+510310,Cocalinho,Médio Araguaia - MT,Água Boa,2020,False,False,,False,95.0
+510310,Cocalinho,Médio Araguaia - MT,Água Boa,2021,False,False,0 a 50,False,95.0
+510310,Cocalinho,Médio Araguaia - MT,Água Boa,2022,False,False,50 a 100,False,95.0
+510310,Cocalinho,Médio Araguaia - MT,Água Boa,2023,False,False,100 a 150,False,95.0
+510310,Cocalinho,Médio Araguaia - MT,Água Boa,2024,False,False,50 a 100,False,95.0
+510310,Cocalinho,Médio Araguaia - MT,Água Boa,2025,False,False,100 a 150,True,95.0
+510310,Cocalinho,Médio Araguaia - MT,Água Boa,2026,True,False,50 a 100,True,95.0
+510320,Colíder,Norte Matogrossense - MT,Colíder,2020,False,False,0 a 50,False,220.0
+510320,Colíder,Norte Matogrossense - MT,Colíder,2021,False,False,150 a 200,False,220.0
+510320,Colíder,Norte Matogrossense - MT,Colíder,2022,False,False,150 a 200,False,220.0
+510320,Colíder,Norte Matogrossense - MT,Colíder,2023,False,False,200 a 300,False,220.0
+510320,Colíder,Norte Matogrossense - MT,Colíder,2024,False,False,200 a 300,False,220.0
+510320,Colíder,Norte Matogrossense - MT,Colíder,2025,False,False,300 ou mais,True,220.0
+510320,Colíder,Norte Matogrossense - MT,Colíder,2026,True,False,300 ou mais,True,220.0
+510325,Colniza,Noroeste Matogrossense - MT,Colniza,2020,False,False,,False,105.0
+510325,Colniza,Noroeste Matogrossense - MT,Colniza,2021,False,False,0 a 50,False,105.0
+510325,Colniza,Noroeste Matogrossense - MT,Colniza,2022,False,False,50 a 100,False,105.0
+510325,Colniza,Noroeste Matogrossense - MT,Colniza,2023,False,False,50 a 100,False,105.0
+510325,Colniza,Noroeste Matogrossense - MT,Colniza,2024,False,False,150 a 200,False,105.0
+510325,Colniza,Noroeste Matogrossense - MT,Colniza,2025,False,False,200 a 300,True,105.0
+510325,Colniza,Noroeste Matogrossense - MT,Colniza,2026,True,False,150 a 200,True,105.0
+510330,Comodoro,Sudoeste Matogrossense - MT,Comodoro,2020,False,False,,False,70.0
+510330,Comodoro,Sudoeste Matogrossense - MT,Comodoro,2021,False,False,0 a 50,False,70.0
+510330,Comodoro,Sudoeste Matogrossense - MT,Comodoro,2022,False,False,0 a 50,False,70.0
+510330,Comodoro,Sudoeste Matogrossense - MT,Comodoro,2023,False,False,50 a 100,False,70.0
+510330,Comodoro,Sudoeste Matogrossense - MT,Comodoro,2024,False,False,100 a 150,False,70.0
+510330,Comodoro,Sudoeste Matogrossense - MT,Comodoro,2025,False,False,100 a 150,True,70.0
+510330,Comodoro,Sudoeste Matogrossense - MT,Comodoro,2026,True,False,100 a 150,True,70.0
+510335,Confresa,Araguaia Xingu - MT,Porto Alegre do Norte,2020,False,False,0 a 50,False,70.0
+510335,Confresa,Araguaia Xingu - MT,Porto Alegre do Norte,2021,False,False,0 a 50,False,70.0
+510335,Confresa,Araguaia Xingu - MT,Porto Alegre do Norte,2022,False,False,0 a 50,False,70.0
+510335,Confresa,Araguaia Xingu - MT,Porto Alegre do Norte,2023,False,False,0 a 50,False,70.0
+510335,Confresa,Araguaia Xingu - MT,Porto Alegre do Norte,2024,False,False,100 a 150,False,70.0
+510335,Confresa,Araguaia Xingu - MT,Porto Alegre do Norte,2025,False,False,150 a 200,True,70.0
+510335,Confresa,Araguaia Xingu - MT,Porto Alegre do Norte,2026,True,False,100 a 150,True,70.0
+510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,Pontes e Lacerda,2020,False,False,,False,215.0
+510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,Pontes e Lacerda,2021,False,False,50 a 100,False,215.0
+510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,Pontes e Lacerda,2022,False,False,100 a 150,False,215.0
+510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,Pontes e Lacerda,2023,False,False,150 a 200,False,215.0
+510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,Pontes e Lacerda,2024,False,False,300 ou mais,False,215.0
+510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,Pontes e Lacerda,2025,False,False,300 ou mais,True,215.0
+510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,Pontes e Lacerda,2026,True,False,300 ou mais,True,215.0
+510337,Cotriguaçu,Noroeste Matogrossense - MT,Cotriguaçu,2020,False,False,,False,85.0
+510337,Cotriguaçu,Noroeste Matogrossense - MT,Cotriguaçu,2021,False,False,,False,85.0
+510337,Cotriguaçu,Noroeste Matogrossense - MT,Cotriguaçu,2022,False,False,0 a 50,False,85.0
+510337,Cotriguaçu,Noroeste Matogrossense - MT,Cotriguaçu,2023,False,False,50 a 100,False,85.0
+510337,Cotriguaçu,Noroeste Matogrossense - MT,Cotriguaçu,2024,False,False,100 a 150,False,85.0
+510337,Cotriguaçu,Noroeste Matogrossense - MT,Cotriguaçu,2025,False,False,150 a 200,True,85.0
+510337,Cotriguaçu,Noroeste Matogrossense - MT,Cotriguaçu,2026,True,False,150 a 200,True,85.0
+510340,Cuiabá,Baixada Cuiabana - MT,Cuiabá,2020,False,True,0 a 50,False,115.0
+510340,Cuiabá,Baixada Cuiabana - MT,Cuiabá,2021,False,True,50 a 100,False,115.0
+510340,Cuiabá,Baixada Cuiabana - MT,Cuiabá,2022,False,True,50 a 100,False,115.0
+510340,Cuiabá,Baixada Cuiabana - MT,Cuiabá,2023,False,True,100 a 150,False,115.0
+510340,Cuiabá,Baixada Cuiabana - MT,Cuiabá,2024,False,True,100 a 150,False,115.0
+510340,Cuiabá,Baixada Cuiabana - MT,Cuiabá,2025,False,True,50 a 100,True,115.0
+510340,Cuiabá,Baixada Cuiabana - MT,Cuiabá,2026,True,True,50 a 100,True,115.0
+510343,Curvelândia,Oeste Matogrossense - MT,Mirassol D'Oeste,2020,False,False,0 a 50,False,160.0
+510343,Curvelândia,Oeste Matogrossense - MT,Mirassol D'Oeste,2021,False,False,50 a 100,False,160.0
+510343,Curvelândia,Oeste Matogrossense - MT,Mirassol D'Oeste,2022,False,False,200 a 300,False,160.0
+510343,Curvelândia,Oeste Matogrossense - MT,Mirassol D'Oeste,2023,False,False,150 a 200,False,160.0
+510343,Curvelândia,Oeste Matogrossense - MT,Mirassol D'Oeste,2024,False,False,100 a 150,False,160.0
+510343,Curvelândia,Oeste Matogrossense - MT,Mirassol D'Oeste,2025,False,False,300 ou mais,True,160.0
+510343,Curvelândia,Oeste Matogrossense - MT,Mirassol D'Oeste,2026,True,False,150 a 200,True,160.0
+510345,Denise,Médio Norte Matogrossense - MT,Barra do Bugres,2020,False,False,,False,85.0
+510345,Denise,Médio Norte Matogrossense - MT,Barra do Bugres,2021,False,False,0 a 50,False,85.0
+510345,Denise,Médio Norte Matogrossense - MT,Barra do Bugres,2022,False,False,50 a 100,False,85.0
+510345,Denise,Médio Norte Matogrossense - MT,Barra do Bugres,2023,False,False,50 a 100,False,85.0
+510345,Denise,Médio Norte Matogrossense - MT,Barra do Bugres,2024,False,False,50 a 100,False,85.0
+510345,Denise,Médio Norte Matogrossense - MT,Barra do Bugres,2025,False,False,150 a 200,True,85.0
+510345,Denise,Médio Norte Matogrossense - MT,Barra do Bugres,2026,True,False,150 a 200,True,85.0
+510350,Diamantino,Centro Norte - MT,Diamantino,2020,False,False,0 a 50,False,190.0
+510350,Diamantino,Centro Norte - MT,Diamantino,2021,False,False,0 a 50,False,190.0
+510350,Diamantino,Centro Norte - MT,Diamantino,2022,False,False,150 a 200,False,190.0
+510350,Diamantino,Centro Norte - MT,Diamantino,2023,False,False,150 a 200,False,190.0
+510350,Diamantino,Centro Norte - MT,Diamantino,2024,False,False,200 a 300,False,190.0
+510350,Diamantino,Centro Norte - MT,Diamantino,2025,False,False,200 a 300,True,190.0
+510350,Diamantino,Centro Norte - MT,Diamantino,2026,True,False,150 a 200,True,190.0
+510360,Dom Aquino,Sul Matogrossense - MT,Dom Aquino,2020,False,False,,False,125.0
+510360,Dom Aquino,Sul Matogrossense - MT,Dom Aquino,2021,False,False,,False,125.0
+510360,Dom Aquino,Sul Matogrossense - MT,Dom Aquino,2022,False,False,,False,125.0
+510360,Dom Aquino,Sul Matogrossense - MT,Dom Aquino,2023,False,False,150 a 200,False,125.0
+510360,Dom Aquino,Sul Matogrossense - MT,Dom Aquino,2024,False,False,,False,125.0
+510360,Dom Aquino,Sul Matogrossense - MT,Dom Aquino,2025,False,False,100 a 150,True,125.0
+510360,Dom Aquino,Sul Matogrossense - MT,Dom Aquino,2026,True,False,,True,125.0
+510370,Feliz Natal,Teles Pires - MT,Feliz Natal,2020,False,False,,False,185.0
+510370,Feliz Natal,Teles Pires - MT,Feliz Natal,2021,False,False,100 a 150,False,185.0
+510370,Feliz Natal,Teles Pires - MT,Feliz Natal,2022,False,False,200 a 300,False,185.0
+510370,Feliz Natal,Teles Pires - MT,Feliz Natal,2023,False,False,100 a 150,False,185.0
+510370,Feliz Natal,Teles Pires - MT,Feliz Natal,2024,False,False,150 a 200,False,185.0
+510370,Feliz Natal,Teles Pires - MT,Feliz Natal,2025,False,False,150 a 200,True,185.0
+510370,Feliz Natal,Teles Pires - MT,Feliz Natal,2026,True,False,100 a 150,True,185.0
+510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,Jauru,2020,False,False,,False,100.0
+510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,Jauru,2021,False,False,,False,100.0
+510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,Jauru,2022,False,False,50 a 100,False,100.0
+510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,Jauru,2023,False,False,50 a 100,False,100.0
+510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,Jauru,2024,False,False,150 a 200,False,100.0
+510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,Jauru,2025,False,False,150 a 200,True,100.0
+510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,Jauru,2026,True,False,100 a 150,True,100.0
+510385,Gaúcha do Norte,Médio Araguaia - MT,Paranatinga,2020,False,False,0 a 50,False,95.0
+510385,Gaúcha do Norte,Médio Araguaia - MT,Paranatinga,2021,False,False,0 a 50,False,95.0
+510385,Gaúcha do Norte,Médio Araguaia - MT,Paranatinga,2022,False,False,50 a 100,False,95.0
+510385,Gaúcha do Norte,Médio Araguaia - MT,Paranatinga,2023,False,False,50 a 100,False,95.0
+510385,Gaúcha do Norte,Médio Araguaia - MT,Paranatinga,2024,False,False,100 a 150,False,95.0
+510385,Gaúcha do Norte,Médio Araguaia - MT,Paranatinga,2025,False,False,100 a 150,True,95.0
+510385,Gaúcha do Norte,Médio Araguaia - MT,Paranatinga,2026,True,False,50 a 100,True,95.0
+510390,General Carneiro,Garças Araguaia - MT,Barra do Garças,2020,False,False,0 a 50,False,60.0
+510390,General Carneiro,Garças Araguaia - MT,Barra do Garças,2021,False,False,0 a 50,False,60.0
+510390,General Carneiro,Garças Araguaia - MT,Barra do Garças,2022,False,False,50 a 100,False,60.0
+510390,General Carneiro,Garças Araguaia - MT,Barra do Garças,2023,False,False,50 a 100,False,60.0
+510390,General Carneiro,Garças Araguaia - MT,Barra do Garças,2024,False,False,50 a 100,False,60.0
+510390,General Carneiro,Garças Araguaia - MT,Barra do Garças,2025,False,False,50 a 100,True,60.0
+510390,General Carneiro,Garças Araguaia - MT,Barra do Garças,2026,True,False,50 a 100,True,60.0
+510395,Glória D'Oeste,Oeste Matogrossense - MT,Porto Esperidião,2020,False,False,,False,155.0
+510395,Glória D'Oeste,Oeste Matogrossense - MT,Porto Esperidião,2021,False,False,,False,155.0
+510395,Glória D'Oeste,Oeste Matogrossense - MT,Porto Esperidião,2022,False,False,50 a 100,False,155.0
+510395,Glória D'Oeste,Oeste Matogrossense - MT,Porto Esperidião,2023,False,False,100 a 150,False,155.0
+510395,Glória D'Oeste,Oeste Matogrossense - MT,Porto Esperidião,2024,False,False,200 a 300,False,155.0
+510395,Glória D'Oeste,Oeste Matogrossense - MT,Porto Esperidião,2025,False,False,300 ou mais,True,155.0
+510395,Glória D'Oeste,Oeste Matogrossense - MT,Porto Esperidião,2026,True,False,200 a 300,True,155.0
+510410,Guarantã do Norte,Vale do Peixoto - MT,Guarantã do Norte,2020,False,False,,False,270.0
+510410,Guarantã do Norte,Vale do Peixoto - MT,Guarantã do Norte,2021,False,False,100 a 150,False,270.0
+510410,Guarantã do Norte,Vale do Peixoto - MT,Guarantã do Norte,2022,False,False,200 a 300,False,270.0
+510410,Guarantã do Norte,Vale do Peixoto - MT,Guarantã do Norte,2023,False,False,200 a 300,False,270.0
+510410,Guarantã do Norte,Vale do Peixoto - MT,Guarantã do Norte,2024,False,False,200 a 300,False,270.0
+510410,Guarantã do Norte,Vale do Peixoto - MT,Guarantã do Norte,2025,False,False,200 a 300,True,270.0
+510410,Guarantã do Norte,Vale do Peixoto - MT,Guarantã do Norte,2026,True,False,150 a 200,True,270.0
+510420,Guiratinga,Sul Matogrossense - MT,Guiratinga,2020,False,False,0 a 50,False,105.0
+510420,Guiratinga,Sul Matogrossense - MT,Guiratinga,2021,False,False,0 a 50,False,105.0
+510420,Guiratinga,Sul Matogrossense - MT,Guiratinga,2022,False,False,50 a 100,False,105.0
+510420,Guiratinga,Sul Matogrossense - MT,Guiratinga,2023,False,False,100 a 150,False,105.0
+510420,Guiratinga,Sul Matogrossense - MT,Guiratinga,2024,False,False,100 a 150,False,105.0
+510420,Guiratinga,Sul Matogrossense - MT,Guiratinga,2025,False,False,100 a 150,True,105.0
+510420,Guiratinga,Sul Matogrossense - MT,Guiratinga,2026,True,False,100 a 150,True,105.0
+510450,Indiavaí,Oeste Matogrossense - MT,Araputanga,2020,False,False,,False,140.0
+510450,Indiavaí,Oeste Matogrossense - MT,Araputanga,2021,False,False,,False,140.0
+510450,Indiavaí,Oeste Matogrossense - MT,Araputanga,2022,False,False,50 a 100,False,140.0
+510450,Indiavaí,Oeste Matogrossense - MT,Araputanga,2023,False,False,150 a 200,False,140.0
+510450,Indiavaí,Oeste Matogrossense - MT,Araputanga,2024,False,False,150 a 200,False,140.0
+510450,Indiavaí,Oeste Matogrossense - MT,Araputanga,2025,False,False,200 a 300,True,140.0
+510450,Indiavaí,Oeste Matogrossense - MT,Araputanga,2026,True,False,200 a 300,True,140.0
+510452,Ipiranga do Norte,Teles Pires - MT,Sorriso,2020,False,False,0 a 50,False,160.0
+510452,Ipiranga do Norte,Teles Pires - MT,Sorriso,2021,False,False,50 a 100,False,160.0
+510452,Ipiranga do Norte,Teles Pires - MT,Sorriso,2022,False,False,150 a 200,False,160.0
+510452,Ipiranga do Norte,Teles Pires - MT,Sorriso,2023,False,False,100 a 150,False,160.0
+510452,Ipiranga do Norte,Teles Pires - MT,Sorriso,2024,False,False,100 a 150,False,160.0
+510452,Ipiranga do Norte,Teles Pires - MT,Sorriso,2025,False,False,150 a 200,True,160.0
+510452,Ipiranga do Norte,Teles Pires - MT,Sorriso,2026,True,False,50 a 100,True,160.0
+510454,Itanhangá,Teles Pires - MT,Tapurah,2020,False,False,,False,130.0
+510454,Itanhangá,Teles Pires - MT,Tapurah,2021,False,False,50 a 100,False,130.0
+510454,Itanhangá,Teles Pires - MT,Tapurah,2022,False,False,150 a 200,False,130.0
+510454,Itanhangá,Teles Pires - MT,Tapurah,2023,False,False,100 a 150,False,130.0
+510454,Itanhangá,Teles Pires - MT,Tapurah,2024,False,False,100 a 150,False,130.0
+510454,Itanhangá,Teles Pires - MT,Tapurah,2025,False,False,100 a 150,True,130.0
+510454,Itanhangá,Teles Pires - MT,Tapurah,2026,True,False,50 a 100,True,130.0
+510455,Itaúba,Norte Matogrossense - MT,Itaúba,2020,False,False,0 a 50,False,275.0
+510455,Itaúba,Norte Matogrossense - MT,Itaúba,2021,False,False,,False,275.0
+510455,Itaúba,Norte Matogrossense - MT,Itaúba,2022,False,False,150 a 200,False,275.0
+510455,Itaúba,Norte Matogrossense - MT,Itaúba,2023,False,False,200 a 300,False,275.0
+510455,Itaúba,Norte Matogrossense - MT,Itaúba,2024,False,False,300 ou mais,False,275.0
+510455,Itaúba,Norte Matogrossense - MT,Itaúba,2025,False,False,200 a 300,True,275.0
+510455,Itaúba,Norte Matogrossense - MT,Itaúba,2026,True,False,200 a 300,True,275.0
+510460,Itiquira,Sul Matogrossense - MT,Itiquira,2020,False,False,0 a 50,False,65.0
+510460,Itiquira,Sul Matogrossense - MT,Itiquira,2021,False,False,,False,65.0
+510460,Itiquira,Sul Matogrossense - MT,Itiquira,2022,False,False,50 a 100,False,65.0
+510460,Itiquira,Sul Matogrossense - MT,Itiquira,2023,False,False,50 a 100,False,65.0
+510460,Itiquira,Sul Matogrossense - MT,Itiquira,2024,False,False,50 a 100,False,65.0
+510460,Itiquira,Sul Matogrossense - MT,Itiquira,2025,False,False,,True,65.0
+510460,Itiquira,Sul Matogrossense - MT,Itiquira,2026,True,False,50 a 100,True,65.0
+510480,Jaciara,Sul Matogrossense - MT,Jaciara,2020,False,False,,False,105.0
+510480,Jaciara,Sul Matogrossense - MT,Jaciara,2021,False,False,100 a 150,False,105.0
+510480,Jaciara,Sul Matogrossense - MT,Jaciara,2022,False,False,50 a 100,False,105.0
+510480,Jaciara,Sul Matogrossense - MT,Jaciara,2023,False,False,100 a 150,False,105.0
+510480,Jaciara,Sul Matogrossense - MT,Jaciara,2024,False,False,100 a 150,False,105.0
+510480,Jaciara,Sul Matogrossense - MT,Jaciara,2025,False,False,100 a 150,True,105.0
+510480,Jaciara,Sul Matogrossense - MT,Jaciara,2026,True,False,50 a 100,True,105.0
+510490,Jangada,Baixada Cuiabana - MT,Rosário Oeste,2020,False,False,0 a 50,False,90.0
+510490,Jangada,Baixada Cuiabana - MT,Rosário Oeste,2021,False,False,0 a 50,False,90.0
+510490,Jangada,Baixada Cuiabana - MT,Rosário Oeste,2022,False,False,50 a 100,False,90.0
+510490,Jangada,Baixada Cuiabana - MT,Rosário Oeste,2023,False,False,100 a 150,False,90.0
+510490,Jangada,Baixada Cuiabana - MT,Rosário Oeste,2024,False,False,50 a 100,False,90.0
+510490,Jangada,Baixada Cuiabana - MT,Rosário Oeste,2025,False,False,50 a 100,True,90.0
+510490,Jangada,Baixada Cuiabana - MT,Rosário Oeste,2026,True,False,50 a 100,True,90.0
+510500,Jauru,Sudoeste Matogrossense - MT,Jauru,2020,False,False,,False,100.0
+510500,Jauru,Sudoeste Matogrossense - MT,Jauru,2021,False,False,,False,100.0
+510500,Jauru,Sudoeste Matogrossense - MT,Jauru,2022,False,False,50 a 100,False,100.0
+510500,Jauru,Sudoeste Matogrossense - MT,Jauru,2023,False,False,50 a 100,False,100.0
+510500,Jauru,Sudoeste Matogrossense - MT,Jauru,2024,False,False,150 a 200,False,100.0
+510500,Jauru,Sudoeste Matogrossense - MT,Jauru,2025,False,False,150 a 200,True,100.0
+510500,Jauru,Sudoeste Matogrossense - MT,Jauru,2026,True,False,100 a 150,True,100.0
+510510,Juara,Vale dos Arinos - MT,Juara,2020,False,False,,False,140.0
+510510,Juara,Vale dos Arinos - MT,Juara,2021,False,False,100 a 150,False,140.0
+510510,Juara,Vale dos Arinos - MT,Juara,2022,False,False,50 a 100,False,140.0
+510510,Juara,Vale dos Arinos - MT,Juara,2023,False,False,100 a 150,False,140.0
+510510,Juara,Vale dos Arinos - MT,Juara,2024,False,False,200 a 300,False,140.0
+510510,Juara,Vale dos Arinos - MT,Juara,2025,False,False,200 a 300,True,140.0
+510510,Juara,Vale dos Arinos - MT,Juara,2026,True,False,200 a 300,True,140.0
+510515,Juína,Noroeste Matogrossense - MT,Juína,2020,False,False,0 a 50,False,90.0
+510515,Juína,Noroeste Matogrossense - MT,Juína,2021,False,False,50 a 100,False,90.0
+510515,Juína,Noroeste Matogrossense - MT,Juína,2022,False,False,0 a 50,False,90.0
+510515,Juína,Noroeste Matogrossense - MT,Juína,2023,False,False,50 a 100,False,90.0
+510515,Juína,Noroeste Matogrossense - MT,Juína,2024,False,False,100 a 150,False,90.0
+510515,Juína,Noroeste Matogrossense - MT,Juína,2025,False,False,150 a 200,True,90.0
+510515,Juína,Noroeste Matogrossense - MT,Juína,2026,True,False,100 a 150,True,90.0
+510517,Juruena,Noroeste Matogrossense - MT,Cotriguaçu,2020,False,False,,False,85.0
+510517,Juruena,Noroeste Matogrossense - MT,Cotriguaçu,2021,False,False,,False,85.0
+510517,Juruena,Noroeste Matogrossense - MT,Cotriguaçu,2022,False,False,0 a 50,False,85.0
+510517,Juruena,Noroeste Matogrossense - MT,Cotriguaçu,2023,False,False,50 a 100,False,85.0
+510517,Juruena,Noroeste Matogrossense - MT,Cotriguaçu,2024,False,False,100 a 150,False,85.0
+510517,Juruena,Noroeste Matogrossense - MT,Cotriguaçu,2025,False,False,150 a 200,True,85.0
+510517,Juruena,Noroeste Matogrossense - MT,Cotriguaçu,2026,True,False,150 a 200,True,85.0
+510520,Juscimeira,Sul Matogrossense - MT,Juscimeira,2020,False,False,,False,125.0
+510520,Juscimeira,Sul Matogrossense - MT,Juscimeira,2021,False,False,,False,125.0
+510520,Juscimeira,Sul Matogrossense - MT,Juscimeira,2022,False,False,50 a 100,False,125.0
+510520,Juscimeira,Sul Matogrossense - MT,Juscimeira,2023,False,False,100 a 150,False,125.0
+510520,Juscimeira,Sul Matogrossense - MT,Juscimeira,2024,False,False,100 a 150,False,125.0
+510520,Juscimeira,Sul Matogrossense - MT,Juscimeira,2025,False,False,100 a 150,True,125.0
+510520,Juscimeira,Sul Matogrossense - MT,Juscimeira,2026,True,False,,True,125.0
+510523,Lambari D'Oeste,Oeste Matogrossense - MT,Rio Branco,2020,False,False,,False,165.0
+510523,Lambari D'Oeste,Oeste Matogrossense - MT,Rio Branco,2021,False,False,50 a 100,False,165.0
+510523,Lambari D'Oeste,Oeste Matogrossense - MT,Rio Branco,2022,False,False,150 a 200,False,165.0
+510523,Lambari D'Oeste,Oeste Matogrossense - MT,Rio Branco,2023,False,False,150 a 200,False,165.0
+510523,Lambari D'Oeste,Oeste Matogrossense - MT,Rio Branco,2024,False,False,100 a 150,False,165.0
+510523,Lambari D'Oeste,Oeste Matogrossense - MT,Rio Branco,2025,False,False,200 a 300,True,165.0
+510523,Lambari D'Oeste,Oeste Matogrossense - MT,Rio Branco,2026,True,False,200 a 300,True,165.0
+510525,Lucas do Rio Verde,Teles Pires - MT,Lucas do Rio Verde,2020,False,False,0 a 50,False,130.0
+510525,Lucas do Rio Verde,Teles Pires - MT,Lucas do Rio Verde,2021,False,False,50 a 100,False,130.0
+510525,Lucas do Rio Verde,Teles Pires - MT,Lucas do Rio Verde,2022,False,False,100 a 150,False,130.0
+510525,Lucas do Rio Verde,Teles Pires - MT,Lucas do Rio Verde,2023,False,False,100 a 150,False,130.0
+510525,Lucas do Rio Verde,Teles Pires - MT,Lucas do Rio Verde,2024,False,False,100 a 150,False,130.0
+510525,Lucas do Rio Verde,Teles Pires - MT,Lucas do Rio Verde,2025,False,False,100 a 150,True,130.0
+510525,Lucas do Rio Verde,Teles Pires - MT,Lucas do Rio Verde,2026,True,False,50 a 100,True,130.0
+510530,Luciára,Norte Araguaia Karajá - MT,São Felix do Araguaia,2020,False,False,,False,70.0
+510530,Luciára,Norte Araguaia Karajá - MT,São Felix do Araguaia,2021,False,False,0 a 50,False,70.0
+510530,Luciára,Norte Araguaia Karajá - MT,São Felix do Araguaia,2022,False,False,0 a 50,False,70.0
+510530,Luciára,Norte Araguaia Karajá - MT,São Felix do Araguaia,2023,False,False,50 a 100,False,70.0
+510530,Luciára,Norte Araguaia Karajá - MT,São Felix do Araguaia,2024,False,False,100 a 150,False,70.0
+510530,Luciára,Norte Araguaia Karajá - MT,São Felix do Araguaia,2025,False,False,100 a 150,True,70.0
+510530,Luciára,Norte Araguaia Karajá - MT,São Felix do Araguaia,2026,True,False,200 a 300,True,70.0
+510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,Vila Bela da Santíssima Trindade,2020,False,False,,False,120.0
+510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,Vila Bela da Santíssima Trindade,2021,False,False,50 a 100,False,120.0
+510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,Vila Bela da Santíssima Trindade,2022,False,False,50 a 100,False,120.0
+510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,Vila Bela da Santíssima Trindade,2023,False,False,100 a 150,False,120.0
+510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,Vila Bela da Santíssima Trindade,2024,False,False,100 a 150,False,120.0
+510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,Vila Bela da Santíssima Trindade,2025,False,False,200 a 300,True,120.0
+510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,Vila Bela da Santíssima Trindade,2026,True,False,50 a 100,True,120.0
+510558,Marcelândia,Norte Matogrossense - MT,Marcelândia,2020,False,False,,False,215.0
+510558,Marcelândia,Norte Matogrossense - MT,Marcelândia,2021,False,False,50 a 100,False,215.0
+510558,Marcelândia,Norte Matogrossense - MT,Marcelândia,2022,False,False,200 a 300,False,215.0
+510558,Marcelândia,Norte Matogrossense - MT,Marcelândia,2023,False,False,200 a 300,False,215.0
+510558,Marcelândia,Norte Matogrossense - MT,Marcelândia,2024,False,False,150 a 200,False,215.0
+510558,Marcelândia,Norte Matogrossense - MT,Marcelândia,2025,False,False,200 a 300,True,215.0
+510558,Marcelândia,Norte Matogrossense - MT,Marcelândia,2026,True,False,200 a 300,True,215.0
+510560,Matupá,Vale do Peixoto - MT,Matupá,2020,False,False,,False,120.0
+510560,Matupá,Vale do Peixoto - MT,Matupá,2021,False,False,100 a 150,False,120.0
+510560,Matupá,Vale do Peixoto - MT,Matupá,2022,False,False,100 a 150,False,120.0
+510560,Matupá,Vale do Peixoto - MT,Matupá,2023,False,False,50 a 100,False,120.0
+510560,Matupá,Vale do Peixoto - MT,Matupá,2024,False,False,150 a 200,False,120.0
+510560,Matupá,Vale do Peixoto - MT,Matupá,2025,False,False,200 a 300,True,120.0
+510560,Matupá,Vale do Peixoto - MT,Matupá,2026,True,False,200 a 300,True,120.0
+510562,Mirassol d'Oeste,Oeste Matogrossense - MT,Mirassol D'Oeste,2020,False,False,0 a 50,False,160.0
+510562,Mirassol d'Oeste,Oeste Matogrossense - MT,Mirassol D'Oeste,2021,False,False,50 a 100,False,160.0
+510562,Mirassol d'Oeste,Oeste Matogrossense - MT,Mirassol D'Oeste,2022,False,False,200 a 300,False,160.0
+510562,Mirassol d'Oeste,Oeste Matogrossense - MT,Mirassol D'Oeste,2023,False,False,150 a 200,False,160.0
+510562,Mirassol d'Oeste,Oeste Matogrossense - MT,Mirassol D'Oeste,2024,False,False,100 a 150,False,160.0
+510562,Mirassol d'Oeste,Oeste Matogrossense - MT,Mirassol D'Oeste,2025,False,False,300 ou mais,True,160.0
+510562,Mirassol d'Oeste,Oeste Matogrossense - MT,Mirassol D'Oeste,2026,True,False,150 a 200,True,160.0
+510590,Nobres,Centro Norte - MT,Nobres,2020,False,False,,False,200.0
+510590,Nobres,Centro Norte - MT,Nobres,2021,False,False,0 a 50,False,200.0
+510590,Nobres,Centro Norte - MT,Nobres,2022,False,False,50 a 100,False,200.0
+510590,Nobres,Centro Norte - MT,Nobres,2023,False,False,150 a 200,False,200.0
+510590,Nobres,Centro Norte - MT,Nobres,2024,False,False,300 ou mais,False,200.0
+510590,Nobres,Centro Norte - MT,Nobres,2025,False,False,200 a 300,True,200.0
+510590,Nobres,Centro Norte - MT,Nobres,2026,True,False,200 a 300,True,200.0
+510600,Nortelândia,Centro Norte - MT,Nortelândia,2020,False,False,0 a 50,False,260.0
+510600,Nortelândia,Centro Norte - MT,Nortelândia,2021,False,False,,False,260.0
+510600,Nortelândia,Centro Norte - MT,Nortelândia,2022,False,False,150 a 200,False,260.0
+510600,Nortelândia,Centro Norte - MT,Nortelândia,2023,False,False,150 a 200,False,260.0
+510600,Nortelândia,Centro Norte - MT,Nortelândia,2024,False,False,300 ou mais,False,260.0
+510600,Nortelândia,Centro Norte - MT,Nortelândia,2025,False,False,200 a 300,True,260.0
+510600,Nortelândia,Centro Norte - MT,Nortelândia,2026,True,False,150 a 200,True,260.0
+510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,Várzea Grande,2020,False,True,50 a 100,False,60.0
+510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,Várzea Grande,2021,False,True,50 a 100,False,60.0
+510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,Várzea Grande,2022,False,True,50 a 100,False,60.0
+510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,Várzea Grande,2023,False,True,50 a 100,False,60.0
+510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,Várzea Grande,2024,False,True,50 a 100,False,60.0
+510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,Várzea Grande,2025,False,True,50 a 100,True,60.0
+510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,Várzea Grande,2026,True,True,0 a 50,True,60.0
+510615,Nova Bandeirantes,Alto Tapajós - MT,Nova Monte Verde,2020,False,False,,False,40.0
+510615,Nova Bandeirantes,Alto Tapajós - MT,Nova Monte Verde,2021,False,False,,False,40.0
+510615,Nova Bandeirantes,Alto Tapajós - MT,Nova Monte Verde,2022,False,False,0 a 50,False,40.0
+510615,Nova Bandeirantes,Alto Tapajós - MT,Nova Monte Verde,2023,False,False,0 a 50,False,40.0
+510615,Nova Bandeirantes,Alto Tapajós - MT,Nova Monte Verde,2024,False,False,50 a 100,False,40.0
+510615,Nova Bandeirantes,Alto Tapajós - MT,Nova Monte Verde,2025,False,False,100 a 150,True,40.0
+510615,Nova Bandeirantes,Alto Tapajós - MT,Nova Monte Verde,2026,True,False,100 a 150,True,40.0
+510617,Nova Nazaré,Médio Araguaia - MT,Água Boa,2020,False,False,,False,95.0
+510617,Nova Nazaré,Médio Araguaia - MT,Água Boa,2021,False,False,0 a 50,False,95.0
+510617,Nova Nazaré,Médio Araguaia - MT,Água Boa,2022,False,False,50 a 100,False,95.0
+510617,Nova Nazaré,Médio Araguaia - MT,Água Boa,2023,False,False,100 a 150,False,95.0
+510617,Nova Nazaré,Médio Araguaia - MT,Água Boa,2024,False,False,50 a 100,False,95.0
+510617,Nova Nazaré,Médio Araguaia - MT,Água Boa,2025,False,False,100 a 150,True,95.0
+510617,Nova Nazaré,Médio Araguaia - MT,Água Boa,2026,True,False,50 a 100,True,95.0
+510618,Nova Lacerda,Sudoeste Matogrossense - MT,Comodoro,2020,False,False,,False,70.0
+510618,Nova Lacerda,Sudoeste Matogrossense - MT,Comodoro,2021,False,False,0 a 50,False,70.0
+510618,Nova Lacerda,Sudoeste Matogrossense - MT,Comodoro,2022,False,False,0 a 50,False,70.0
+510618,Nova Lacerda,Sudoeste Matogrossense - MT,Comodoro,2023,False,False,50 a 100,False,70.0
+510618,Nova Lacerda,Sudoeste Matogrossense - MT,Comodoro,2024,False,False,100 a 150,False,70.0
+510618,Nova Lacerda,Sudoeste Matogrossense - MT,Comodoro,2025,False,False,100 a 150,True,70.0
+510618,Nova Lacerda,Sudoeste Matogrossense - MT,Comodoro,2026,True,False,100 a 150,True,70.0
+510619,Nova Santa Helena,Norte Matogrossense - MT,Itaúba,2020,False,False,0 a 50,False,275.0
+510619,Nova Santa Helena,Norte Matogrossense - MT,Itaúba,2021,False,False,,False,275.0
+510619,Nova Santa Helena,Norte Matogrossense - MT,Itaúba,2022,False,False,150 a 200,False,275.0
+510619,Nova Santa Helena,Norte Matogrossense - MT,Itaúba,2023,False,False,200 a 300,False,275.0
+510619,Nova Santa Helena,Norte Matogrossense - MT,Itaúba,2024,False,False,300 ou mais,False,275.0
+510619,Nova Santa Helena,Norte Matogrossense - MT,Itaúba,2025,False,False,200 a 300,True,275.0
+510619,Nova Santa Helena,Norte Matogrossense - MT,Itaúba,2026,True,False,200 a 300,True,275.0
+510620,Nova Brasilândia,Baixada Cuiabana - MT,Chapada dos Guimarães,2020,False,False,,False,75.0
+510620,Nova Brasilândia,Baixada Cuiabana - MT,Chapada dos Guimarães,2021,False,False,0 a 50,False,75.0
+510620,Nova Brasilândia,Baixada Cuiabana - MT,Chapada dos Guimarães,2022,False,False,50 a 100,False,75.0
+510620,Nova Brasilândia,Baixada Cuiabana - MT,Chapada dos Guimarães,2023,False,False,50 a 100,False,75.0
+510620,Nova Brasilândia,Baixada Cuiabana - MT,Chapada dos Guimarães,2024,False,False,50 a 100,False,75.0
+510620,Nova Brasilândia,Baixada Cuiabana - MT,Chapada dos Guimarães,2025,False,False,50 a 100,True,75.0
+510620,Nova Brasilândia,Baixada Cuiabana - MT,Chapada dos Guimarães,2026,True,False,50 a 100,True,75.0
+510621,Nova Canaã do Norte,Norte Matogrossense - MT,Nova Canaã do Norte,2020,False,False,,False,215.0
+510621,Nova Canaã do Norte,Norte Matogrossense - MT,Nova Canaã do Norte,2021,False,False,50 a 100,False,215.0
+510621,Nova Canaã do Norte,Norte Matogrossense - MT,Nova Canaã do Norte,2022,False,False,100 a 150,False,215.0
+510621,Nova Canaã do Norte,Norte Matogrossense - MT,Nova Canaã do Norte,2023,False,False,200 a 300,False,215.0
+510621,Nova Canaã do Norte,Norte Matogrossense - MT,Nova Canaã do Norte,2024,False,False,300 ou mais,False,215.0
+510621,Nova Canaã do Norte,Norte Matogrossense - MT,Nova Canaã do Norte,2025,False,False,300 ou mais,True,215.0
+510621,Nova Canaã do Norte,Norte Matogrossense - MT,Nova Canaã do Norte,2026,True,False,300 ou mais,True,215.0
+510622,Nova Mutum,Teles Pires - MT,Nova Mutum,2020,False,False,0 a 50,False,50.0
+510622,Nova Mutum,Teles Pires - MT,Nova Mutum,2021,False,False,0 a 50,False,50.0
+510622,Nova Mutum,Teles Pires - MT,Nova Mutum,2022,False,False,50 a 100,False,50.0
+510622,Nova Mutum,Teles Pires - MT,Nova Mutum,2023,False,False,0 a 50,False,50.0
+510622,Nova Mutum,Teles Pires - MT,Nova Mutum,2024,False,False,0 a 50,False,50.0
+510622,Nova Mutum,Teles Pires - MT,Nova Mutum,2025,False,False,50 a 100,True,50.0
+510622,Nova Mutum,Teles Pires - MT,Nova Mutum,2026,True,False,0 a 50,True,50.0
+510623,Nova Olímpia,Médio Norte Matogrossense - MT,Barra do Bugres,2020,False,False,,False,85.0
+510623,Nova Olímpia,Médio Norte Matogrossense - MT,Barra do Bugres,2021,False,False,0 a 50,False,85.0
+510623,Nova Olímpia,Médio Norte Matogrossense - MT,Barra do Bugres,2022,False,False,50 a 100,False,85.0
+510623,Nova Olímpia,Médio Norte Matogrossense - MT,Barra do Bugres,2023,False,False,50 a 100,False,85.0
+510623,Nova Olímpia,Médio Norte Matogrossense - MT,Barra do Bugres,2024,False,False,50 a 100,False,85.0
+510623,Nova Olímpia,Médio Norte Matogrossense - MT,Barra do Bugres,2025,False,False,150 a 200,True,85.0
+510623,Nova Olímpia,Médio Norte Matogrossense - MT,Barra do Bugres,2026,True,False,150 a 200,True,85.0
+510624,Nova Ubiratã,Teles Pires - MT,Nova Ubiratã,2020,False,False,,False,40.0
+510624,Nova Ubiratã,Teles Pires - MT,Nova Ubiratã,2021,False,False,0 a 50,False,40.0
+510624,Nova Ubiratã,Teles Pires - MT,Nova Ubiratã,2022,False,False,,False,40.0
+510624,Nova Ubiratã,Teles Pires - MT,Nova Ubiratã,2023,False,False,0 a 50,False,40.0
+510624,Nova Ubiratã,Teles Pires - MT,Nova Ubiratã,2024,False,False,,False,40.0
+510624,Nova Ubiratã,Teles Pires - MT,Nova Ubiratã,2025,False,False,,True,40.0
+510624,Nova Ubiratã,Teles Pires - MT,Nova Ubiratã,2026,True,False,50 a 100,True,40.0
+510625,Nova Xavantina,Garças Araguaia - MT,Nova Xavantina,2020,False,False,0 a 50,False,60.0
+510625,Nova Xavantina,Garças Araguaia - MT,Nova Xavantina,2021,False,False,,False,60.0
+510625,Nova Xavantina,Garças Araguaia - MT,Nova Xavantina,2022,False,False,0 a 50,False,60.0
+510625,Nova Xavantina,Garças Araguaia - MT,Nova Xavantina,2023,False,False,50 a 100,False,60.0
+510625,Nova Xavantina,Garças Araguaia - MT,Nova Xavantina,2024,False,False,50 a 100,False,60.0
+510625,Nova Xavantina,Garças Araguaia - MT,Nova Xavantina,2025,False,False,0 a 50,True,60.0
+510625,Nova Xavantina,Garças Araguaia - MT,Nova Xavantina,2026,True,False,50 a 100,True,60.0
+510626,Novo Mundo,Vale do Peixoto - MT,Guarantã do Norte,2020,False,False,,False,270.0
+510626,Novo Mundo,Vale do Peixoto - MT,Guarantã do Norte,2021,False,False,100 a 150,False,270.0
+510626,Novo Mundo,Vale do Peixoto - MT,Guarantã do Norte,2022,False,False,200 a 300,False,270.0
+510626,Novo Mundo,Vale do Peixoto - MT,Guarantã do Norte,2023,False,False,200 a 300,False,270.0
+510626,Novo Mundo,Vale do Peixoto - MT,Guarantã do Norte,2024,False,False,200 a 300,False,270.0
+510626,Novo Mundo,Vale do Peixoto - MT,Guarantã do Norte,2025,False,False,200 a 300,True,270.0
+510626,Novo Mundo,Vale do Peixoto - MT,Guarantã do Norte,2026,True,False,150 a 200,True,270.0
+510627,Novo Horizonte do Norte,Vale dos Arinos - MT,Porto dos Gaúchos,2020,False,False,,False,175.0
+510627,Novo Horizonte do Norte,Vale dos Arinos - MT,Porto dos Gaúchos,2021,False,False,,False,175.0
+510627,Novo Horizonte do Norte,Vale dos Arinos - MT,Porto dos Gaúchos,2022,False,False,150 a 200,False,175.0
+510627,Novo Horizonte do Norte,Vale dos Arinos - MT,Porto dos Gaúchos,2023,False,False,150 a 200,False,175.0
+510627,Novo Horizonte do Norte,Vale dos Arinos - MT,Porto dos Gaúchos,2024,False,False,150 a 200,False,175.0
+510627,Novo Horizonte do Norte,Vale dos Arinos - MT,Porto dos Gaúchos,2025,False,False,300 ou mais,True,175.0
+510627,Novo Horizonte do Norte,Vale dos Arinos - MT,Porto dos Gaúchos,2026,True,False,300 ou mais,True,175.0
+510628,Novo São Joaquim,Garças Araguaia - MT,Novo São Joaquim,2020,False,False,0 a 50,False,50.0
+510628,Novo São Joaquim,Garças Araguaia - MT,Novo São Joaquim,2021,False,False,0 a 50,False,50.0
+510628,Novo São Joaquim,Garças Araguaia - MT,Novo São Joaquim,2022,False,False,,False,50.0
+510628,Novo São Joaquim,Garças Araguaia - MT,Novo São Joaquim,2023,False,False,,False,50.0
+510628,Novo São Joaquim,Garças Araguaia - MT,Novo São Joaquim,2024,False,False,,False,50.0
+510628,Novo São Joaquim,Garças Araguaia - MT,Novo São Joaquim,2025,False,False,,True,50.0
+510628,Novo São Joaquim,Garças Araguaia - MT,Novo São Joaquim,2026,True,False,50 a 100,True,50.0
+510629,Paranaíta,Alto Tapajós - MT,Paranaíta,2020,False,False,,False,175.0
+510629,Paranaíta,Alto Tapajós - MT,Paranaíta,2021,False,False,50 a 100,False,175.0
+510629,Paranaíta,Alto Tapajós - MT,Paranaíta,2022,False,False,50 a 100,False,175.0
+510629,Paranaíta,Alto Tapajós - MT,Paranaíta,2023,False,False,300 ou mais,False,175.0
+510629,Paranaíta,Alto Tapajós - MT,Paranaíta,2024,False,False,100 a 150,False,175.0
+510629,Paranaíta,Alto Tapajós - MT,Paranaíta,2025,False,False,100 a 150,True,175.0
+510629,Paranaíta,Alto Tapajós - MT,Paranaíta,2026,True,False,,True,175.0
+510630,Paranatinga,Sul Matogrossense - MT,Paranatinga,2020,False,False,0 a 50,False,95.0
+510630,Paranatinga,Sul Matogrossense - MT,Paranatinga,2021,False,False,0 a 50,False,95.0
+510630,Paranatinga,Sul Matogrossense - MT,Paranatinga,2022,False,False,50 a 100,False,95.0
+510630,Paranatinga,Sul Matogrossense - MT,Paranatinga,2023,False,False,50 a 100,False,95.0
+510630,Paranatinga,Sul Matogrossense - MT,Paranatinga,2024,False,False,100 a 150,False,95.0
+510630,Paranatinga,Sul Matogrossense - MT,Paranatinga,2025,False,False,100 a 150,True,95.0
+510630,Paranatinga,Sul Matogrossense - MT,Paranatinga,2026,True,False,50 a 100,True,95.0
+510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,São Felix do Araguaia,2020,False,False,,False,70.0
+510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,São Felix do Araguaia,2021,False,False,0 a 50,False,70.0
+510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,São Felix do Araguaia,2022,False,False,0 a 50,False,70.0
+510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,São Felix do Araguaia,2023,False,False,50 a 100,False,70.0
+510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,São Felix do Araguaia,2024,False,False,100 a 150,False,70.0
+510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,São Felix do Araguaia,2025,False,False,100 a 150,True,70.0
+510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,São Felix do Araguaia,2026,True,False,200 a 300,True,70.0
+510637,Pedra Preta,Sul Matogrossense - MT,Pedra Preta,2020,False,False,50 a 100,False,315.0
+510637,Pedra Preta,Sul Matogrossense - MT,Pedra Preta,2021,False,False,200 a 300,False,315.0
+510637,Pedra Preta,Sul Matogrossense - MT,Pedra Preta,2022,False,False,150 a 200,False,315.0
+510637,Pedra Preta,Sul Matogrossense - MT,Pedra Preta,2023,False,False,300 ou mais,False,315.0
+510637,Pedra Preta,Sul Matogrossense - MT,Pedra Preta,2024,False,False,300 ou mais,False,315.0
+510637,Pedra Preta,Sul Matogrossense - MT,Pedra Preta,2025,False,False,150 a 200,True,315.0
+510637,Pedra Preta,Sul Matogrossense - MT,Pedra Preta,2026,True,False,150 a 200,True,315.0
+510642,Peixoto de Azevedo,Vale do Peixoto - MT,Peixoto de Azevedo,2020,False,False,,False,135.0
+510642,Peixoto de Azevedo,Vale do Peixoto - MT,Peixoto de Azevedo,2021,False,False,50 a 100,False,135.0
+510642,Peixoto de Azevedo,Vale do Peixoto - MT,Peixoto de Azevedo,2022,False,False,50 a 100,False,135.0
+510642,Peixoto de Azevedo,Vale do Peixoto - MT,Peixoto de Azevedo,2023,False,False,100 a 150,False,135.0
+510642,Peixoto de Azevedo,Vale do Peixoto - MT,Peixoto de Azevedo,2024,False,False,150 a 200,False,135.0
+510642,Peixoto de Azevedo,Vale do Peixoto - MT,Peixoto de Azevedo,2025,False,False,150 a 200,True,135.0
+510642,Peixoto de Azevedo,Vale do Peixoto - MT,Peixoto de Azevedo,2026,True,False,100 a 150,True,135.0
+510645,Planalto da Serra,Baixada Cuiabana - MT,Chapada dos Guimarães,2020,False,False,,False,75.0
+510645,Planalto da Serra,Baixada Cuiabana - MT,Chapada dos Guimarães,2021,False,False,0 a 50,False,75.0
+510645,Planalto da Serra,Baixada Cuiabana - MT,Chapada dos Guimarães,2022,False,False,50 a 100,False,75.0
+510645,Planalto da Serra,Baixada Cuiabana - MT,Chapada dos Guimarães,2023,False,False,50 a 100,False,75.0
+510645,Planalto da Serra,Baixada Cuiabana - MT,Chapada dos Guimarães,2024,False,False,50 a 100,False,75.0
+510645,Planalto da Serra,Baixada Cuiabana - MT,Chapada dos Guimarães,2025,False,False,50 a 100,True,75.0
+510645,Planalto da Serra,Baixada Cuiabana - MT,Chapada dos Guimarães,2026,True,False,50 a 100,True,75.0
+510650,Poconé,Baixada Cuiabana - MT,Poconé,2020,False,False,0 a 50,False,190.0
+510650,Poconé,Baixada Cuiabana - MT,Poconé,2021,False,False,50 a 100,False,190.0
+510650,Poconé,Baixada Cuiabana - MT,Poconé,2022,False,False,100 a 150,False,190.0
+510650,Poconé,Baixada Cuiabana - MT,Poconé,2023,False,False,150 a 200,False,190.0
+510650,Poconé,Baixada Cuiabana - MT,Poconé,2024,False,False,200 a 300,False,190.0
+510650,Poconé,Baixada Cuiabana - MT,Poconé,2025,False,False,200 a 300,True,190.0
+510650,Poconé,Baixada Cuiabana - MT,Poconé,2026,True,False,100 a 150,True,190.0
+510665,Pontal do Araguaia,Garças Araguaia - MT,Barra do Garças,2020,False,False,0 a 50,False,60.0
+510665,Pontal do Araguaia,Garças Araguaia - MT,Barra do Garças,2021,False,False,0 a 50,False,60.0
+510665,Pontal do Araguaia,Garças Araguaia - MT,Barra do Garças,2022,False,False,50 a 100,False,60.0
+510665,Pontal do Araguaia,Garças Araguaia - MT,Barra do Garças,2023,False,False,50 a 100,False,60.0
+510665,Pontal do Araguaia,Garças Araguaia - MT,Barra do Garças,2024,False,False,50 a 100,False,60.0
+510665,Pontal do Araguaia,Garças Araguaia - MT,Barra do Garças,2025,False,False,50 a 100,True,60.0
+510665,Pontal do Araguaia,Garças Araguaia - MT,Barra do Garças,2026,True,False,50 a 100,True,60.0
+510670,Ponte Branca,Garças Araguaia - MT,Alto Araguaia,2020,False,False,,False,60.0
+510670,Ponte Branca,Garças Araguaia - MT,Alto Araguaia,2021,False,False,0 a 50,False,60.0
+510670,Ponte Branca,Garças Araguaia - MT,Alto Araguaia,2022,False,False,0 a 50,False,60.0
+510670,Ponte Branca,Garças Araguaia - MT,Alto Araguaia,2023,False,False,50 a 100,False,60.0
+510670,Ponte Branca,Garças Araguaia - MT,Alto Araguaia,2024,False,False,50 a 100,False,60.0
+510670,Ponte Branca,Garças Araguaia - MT,Alto Araguaia,2025,False,False,50 a 100,True,60.0
+510670,Ponte Branca,Garças Araguaia - MT,Alto Araguaia,2026,True,False,50 a 100,True,60.0
+510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,Pontes e Lacerda,2020,False,False,,False,215.0
+510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,Pontes e Lacerda,2021,False,False,50 a 100,False,215.0
+510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,Pontes e Lacerda,2022,False,False,100 a 150,False,215.0
+510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,Pontes e Lacerda,2023,False,False,150 a 200,False,215.0
+510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,Pontes e Lacerda,2024,False,False,300 ou mais,False,215.0
+510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,Pontes e Lacerda,2025,False,False,300 ou mais,True,215.0
+510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,Pontes e Lacerda,2026,True,False,300 ou mais,True,215.0
+510677,Porto Alegre do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2020,False,False,0 a 50,False,70.0
+510677,Porto Alegre do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2021,False,False,0 a 50,False,70.0
+510677,Porto Alegre do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2022,False,False,0 a 50,False,70.0
+510677,Porto Alegre do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2023,False,False,0 a 50,False,70.0
+510677,Porto Alegre do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2024,False,False,100 a 150,False,70.0
+510677,Porto Alegre do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2025,False,False,150 a 200,True,70.0
+510677,Porto Alegre do Norte,Araguaia Xingu - MT,Porto Alegre do Norte,2026,True,False,100 a 150,True,70.0
+510680,Porto dos Gaúchos,Vale dos Arinos - MT,Porto dos Gaúchos,2020,False,False,,False,175.0
+510680,Porto dos Gaúchos,Vale dos Arinos - MT,Porto dos Gaúchos,2021,False,False,,False,175.0
+510680,Porto dos Gaúchos,Vale dos Arinos - MT,Porto dos Gaúchos,2022,False,False,150 a 200,False,175.0
+510680,Porto dos Gaúchos,Vale dos Arinos - MT,Porto dos Gaúchos,2023,False,False,150 a 200,False,175.0
+510680,Porto dos Gaúchos,Vale dos Arinos - MT,Porto dos Gaúchos,2024,False,False,150 a 200,False,175.0
+510680,Porto dos Gaúchos,Vale dos Arinos - MT,Porto dos Gaúchos,2025,False,False,300 ou mais,True,175.0
+510680,Porto dos Gaúchos,Vale dos Arinos - MT,Porto dos Gaúchos,2026,True,False,300 ou mais,True,175.0
+510682,Porto Esperidião,Oeste Matogrossense - MT,Porto Esperidião,2020,False,False,,False,155.0
+510682,Porto Esperidião,Oeste Matogrossense - MT,Porto Esperidião,2021,False,False,,False,155.0
+510682,Porto Esperidião,Oeste Matogrossense - MT,Porto Esperidião,2022,False,False,50 a 100,False,155.0
+510682,Porto Esperidião,Oeste Matogrossense - MT,Porto Esperidião,2023,False,False,100 a 150,False,155.0
+510682,Porto Esperidião,Oeste Matogrossense - MT,Porto Esperidião,2024,False,False,200 a 300,False,155.0
+510682,Porto Esperidião,Oeste Matogrossense - MT,Porto Esperidião,2025,False,False,300 ou mais,True,155.0
+510682,Porto Esperidião,Oeste Matogrossense - MT,Porto Esperidião,2026,True,False,200 a 300,True,155.0
+510685,Porto Estrela,Médio Norte Matogrossense - MT,Barra do Bugres,2020,False,False,,False,85.0
+510685,Porto Estrela,Médio Norte Matogrossense - MT,Barra do Bugres,2021,False,False,0 a 50,False,85.0
+510685,Porto Estrela,Médio Norte Matogrossense - MT,Barra do Bugres,2022,False,False,50 a 100,False,85.0
+510685,Porto Estrela,Médio Norte Matogrossense - MT,Barra do Bugres,2023,False,False,50 a 100,False,85.0
+510685,Porto Estrela,Médio Norte Matogrossense - MT,Barra do Bugres,2024,False,False,50 a 100,False,85.0
+510685,Porto Estrela,Médio Norte Matogrossense - MT,Barra do Bugres,2025,False,False,150 a 200,True,85.0
+510685,Porto Estrela,Médio Norte Matogrossense - MT,Barra do Bugres,2026,True,False,150 a 200,True,85.0
+510700,Poxoréo,Sul Matogrossense - MT,Poxoréo,2020,False,False,0 a 50,False,100.0
+510700,Poxoréo,Sul Matogrossense - MT,Poxoréo,2021,False,False,50 a 100,False,100.0
+510700,Poxoréo,Sul Matogrossense - MT,Poxoréo,2022,False,False,50 a 100,False,100.0
+510700,Poxoréo,Sul Matogrossense - MT,Poxoréo,2023,False,False,150 a 200,False,100.0
+510700,Poxoréo,Sul Matogrossense - MT,Poxoréo,2024,False,False,50 a 100,False,100.0
+510700,Poxoréo,Sul Matogrossense - MT,Poxoréo,2025,False,False,50 a 100,True,100.0
+510700,Poxoréo,Sul Matogrossense - MT,Poxoréo,2026,True,False,50 a 100,True,100.0
+510704,Primavera do Leste,Sul Matogrossense - MT,Primavera do Leste,2020,False,False,0 a 50,False,150.0
+510704,Primavera do Leste,Sul Matogrossense - MT,Primavera do Leste,2021,False,False,100 a 150,False,150.0
+510704,Primavera do Leste,Sul Matogrossense - MT,Primavera do Leste,2022,False,False,100 a 150,False,150.0
+510704,Primavera do Leste,Sul Matogrossense - MT,Primavera do Leste,2023,False,False,150 a 200,False,150.0
+510704,Primavera do Leste,Sul Matogrossense - MT,Primavera do Leste,2024,False,False,150 a 200,False,150.0
+510704,Primavera do Leste,Sul Matogrossense - MT,Primavera do Leste,2025,False,False,100 a 150,True,150.0
+510704,Primavera do Leste,Sul Matogrossense - MT,Primavera do Leste,2026,True,False,150 a 200,True,150.0
+510706,Querência,Médio Araguaia - MT,Querência,2020,False,False,,False,55.0
+510706,Querência,Médio Araguaia - MT,Querência,2021,False,False,0 a 50,False,55.0
+510706,Querência,Médio Araguaia - MT,Querência,2022,False,False,0 a 50,False,55.0
+510706,Querência,Médio Araguaia - MT,Querência,2023,False,False,50 a 100,False,55.0
+510706,Querência,Médio Araguaia - MT,Querência,2024,False,False,50 a 100,False,55.0
+510706,Querência,Médio Araguaia - MT,Querência,2025,False,False,100 a 150,True,55.0
+510706,Querência,Médio Araguaia - MT,Querência,2026,True,False,50 a 100,True,55.0
+510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,São José dos Quatro Marcos,2020,False,False,0 a 50,False,150.0
+510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,São José dos Quatro Marcos,2021,False,False,0 a 50,False,150.0
+510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,São José dos Quatro Marcos,2022,False,False,150 a 200,False,150.0
+510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,São José dos Quatro Marcos,2023,False,False,150 a 200,False,150.0
+510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,São José dos Quatro Marcos,2024,False,False,100 a 150,False,150.0
+510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,São José dos Quatro Marcos,2025,False,False,300 ou mais,True,150.0
+510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,São José dos Quatro Marcos,2026,True,False,300 ou mais,True,150.0
+510715,Reserva do Cabaçal,Oeste Matogrossense - MT,Araputanga,2020,False,False,,False,140.0
+510715,Reserva do Cabaçal,Oeste Matogrossense - MT,Araputanga,2021,False,False,,False,140.0
+510715,Reserva do Cabaçal,Oeste Matogrossense - MT,Araputanga,2022,False,False,50 a 100,False,140.0
+510715,Reserva do Cabaçal,Oeste Matogrossense - MT,Araputanga,2023,False,False,150 a 200,False,140.0
+510715,Reserva do Cabaçal,Oeste Matogrossense - MT,Araputanga,2024,False,False,150 a 200,False,140.0
+510715,Reserva do Cabaçal,Oeste Matogrossense - MT,Araputanga,2025,False,False,200 a 300,True,140.0
+510715,Reserva do Cabaçal,Oeste Matogrossense - MT,Araputanga,2026,True,False,200 a 300,True,140.0
+510718,Ribeirão Cascalheira,Médio Araguaia - MT,Ribeirão Cascalheira,2020,False,False,0 a 50,False,45.0
+510718,Ribeirão Cascalheira,Médio Araguaia - MT,Ribeirão Cascalheira,2021,False,False,,False,45.0
+510718,Ribeirão Cascalheira,Médio Araguaia - MT,Ribeirão Cascalheira,2022,False,False,,False,45.0
+510718,Ribeirão Cascalheira,Médio Araguaia - MT,Ribeirão Cascalheira,2023,False,False,50 a 100,False,45.0
+510718,Ribeirão Cascalheira,Médio Araguaia - MT,Ribeirão Cascalheira,2024,False,False,,False,45.0
+510718,Ribeirão Cascalheira,Médio Araguaia - MT,Ribeirão Cascalheira,2025,False,False,50 a 100,True,45.0
+510718,Ribeirão Cascalheira,Médio Araguaia - MT,Ribeirão Cascalheira,2026,True,False,0 a 50,True,45.0
+510719,Ribeirãozinho,Garças Araguaia - MT,Barra do Garças,2020,False,False,0 a 50,False,60.0
+510719,Ribeirãozinho,Garças Araguaia - MT,Barra do Garças,2021,False,False,0 a 50,False,60.0
+510719,Ribeirãozinho,Garças Araguaia - MT,Barra do Garças,2022,False,False,50 a 100,False,60.0
+510719,Ribeirãozinho,Garças Araguaia - MT,Barra do Garças,2023,False,False,50 a 100,False,60.0
+510719,Ribeirãozinho,Garças Araguaia - MT,Barra do Garças,2024,False,False,50 a 100,False,60.0
+510719,Ribeirãozinho,Garças Araguaia - MT,Barra do Garças,2025,False,False,50 a 100,True,60.0
+510719,Ribeirãozinho,Garças Araguaia - MT,Barra do Garças,2026,True,False,50 a 100,True,60.0
+510720,Rio Branco,Oeste Matogrossense - MT,Rio Branco,2020,False,False,,False,165.0
+510720,Rio Branco,Oeste Matogrossense - MT,Rio Branco,2021,False,False,50 a 100,False,165.0
+510720,Rio Branco,Oeste Matogrossense - MT,Rio Branco,2022,False,False,150 a 200,False,165.0
+510720,Rio Branco,Oeste Matogrossense - MT,Rio Branco,2023,False,False,150 a 200,False,165.0
+510720,Rio Branco,Oeste Matogrossense - MT,Rio Branco,2024,False,False,100 a 150,False,165.0
+510720,Rio Branco,Oeste Matogrossense - MT,Rio Branco,2025,False,False,200 a 300,True,165.0
+510720,Rio Branco,Oeste Matogrossense - MT,Rio Branco,2026,True,False,200 a 300,True,165.0
+510724,Santa Carmem,Teles Pires - MT,Sinop,2020,False,False,0 a 50,False,305.0
+510724,Santa Carmem,Teles Pires - MT,Sinop,2021,False,False,100 a 150,False,305.0
+510724,Santa Carmem,Teles Pires - MT,Sinop,2022,False,False,200 a 300,False,305.0
+510724,Santa Carmem,Teles Pires - MT,Sinop,2023,False,False,200 a 300,False,305.0
+510724,Santa Carmem,Teles Pires - MT,Sinop,2024,False,False,300 ou mais,False,305.0
+510724,Santa Carmem,Teles Pires - MT,Sinop,2025,False,False,300 ou mais,True,305.0
+510724,Santa Carmem,Teles Pires - MT,Sinop,2026,True,False,200 a 300,True,305.0
+510726,Santo Afonso,Médio Norte Matogrossense - MT,Arenápolis,2020,False,False,,False,135.0
+510726,Santo Afonso,Médio Norte Matogrossense - MT,Arenápolis,2021,False,False,50 a 100,False,135.0
+510726,Santo Afonso,Médio Norte Matogrossense - MT,Arenápolis,2022,False,False,150 a 200,False,135.0
+510726,Santo Afonso,Médio Norte Matogrossense - MT,Arenápolis,2023,False,False,100 a 150,False,135.0
+510726,Santo Afonso,Médio Norte Matogrossense - MT,Arenápolis,2024,False,False,150 a 200,False,135.0
+510726,Santo Afonso,Médio Norte Matogrossense - MT,Arenápolis,2025,False,False,200 a 300,True,135.0
+510726,Santo Afonso,Médio Norte Matogrossense - MT,Arenápolis,2026,True,False,200 a 300,True,135.0
+510729,São José do Povo,Sul Matogrossense - MT,Rondonópolis,2020,False,False,0 a 50,False,105.0
+510729,São José do Povo,Sul Matogrossense - MT,Rondonópolis,2021,False,False,0 a 50,False,105.0
+510729,São José do Povo,Sul Matogrossense - MT,Rondonópolis,2022,False,False,50 a 100,False,105.0
+510729,São José do Povo,Sul Matogrossense - MT,Rondonópolis,2023,False,False,100 a 150,False,105.0
+510729,São José do Povo,Sul Matogrossense - MT,Rondonópolis,2024,False,False,100 a 150,False,105.0
+510729,São José do Povo,Sul Matogrossense - MT,Rondonópolis,2025,False,False,100 a 150,True,105.0
+510729,São José do Povo,Sul Matogrossense - MT,Rondonópolis,2026,True,False,100 a 150,True,105.0
+510730,São José do Rio Claro,Centro Norte - MT,São José do Rio Claro,2020,False,False,0 a 50,False,115.0
+510730,São José do Rio Claro,Centro Norte - MT,São José do Rio Claro,2021,False,False,50 a 100,False,115.0
+510730,São José do Rio Claro,Centro Norte - MT,São José do Rio Claro,2022,False,False,50 a 100,False,115.0
+510730,São José do Rio Claro,Centro Norte - MT,São José do Rio Claro,2023,False,False,50 a 100,False,115.0
+510730,São José do Rio Claro,Centro Norte - MT,São José do Rio Claro,2024,False,False,150 a 200,False,115.0
+510730,São José do Rio Claro,Centro Norte - MT,São José do Rio Claro,2025,False,False,300 ou mais,True,115.0
+510730,São José do Rio Claro,Centro Norte - MT,São José do Rio Claro,2026,True,False,300 ou mais,True,115.0
+510735,São José do Xingu,Araguaia Xingu - MT,Porto Alegre do Norte,2020,False,False,0 a 50,False,70.0
+510735,São José do Xingu,Araguaia Xingu - MT,Porto Alegre do Norte,2021,False,False,0 a 50,False,70.0
+510735,São José do Xingu,Araguaia Xingu - MT,Porto Alegre do Norte,2022,False,False,0 a 50,False,70.0
+510735,São José do Xingu,Araguaia Xingu - MT,Porto Alegre do Norte,2023,False,False,0 a 50,False,70.0
+510735,São José do Xingu,Araguaia Xingu - MT,Porto Alegre do Norte,2024,False,False,100 a 150,False,70.0
+510735,São José do Xingu,Araguaia Xingu - MT,Porto Alegre do Norte,2025,False,False,150 a 200,True,70.0
+510735,São José do Xingu,Araguaia Xingu - MT,Porto Alegre do Norte,2026,True,False,100 a 150,True,70.0
+510740,São Pedro da Cipa,Sul Matogrossense - MT,Jaciara,2020,False,False,,False,105.0
+510740,São Pedro da Cipa,Sul Matogrossense - MT,Jaciara,2021,False,False,100 a 150,False,105.0
+510740,São Pedro da Cipa,Sul Matogrossense - MT,Jaciara,2022,False,False,50 a 100,False,105.0
+510740,São Pedro da Cipa,Sul Matogrossense - MT,Jaciara,2023,False,False,100 a 150,False,105.0
+510740,São Pedro da Cipa,Sul Matogrossense - MT,Jaciara,2024,False,False,100 a 150,False,105.0
+510740,São Pedro da Cipa,Sul Matogrossense - MT,Jaciara,2025,False,False,100 a 150,True,105.0
+510740,São Pedro da Cipa,Sul Matogrossense - MT,Jaciara,2026,True,False,50 a 100,True,105.0
+510757,Rondolândia,Sudoeste Matogrossense - MT,Comodoro,2020,False,False,,False,70.0
+510757,Rondolândia,Sudoeste Matogrossense - MT,Comodoro,2021,False,False,0 a 50,False,70.0
+510757,Rondolândia,Sudoeste Matogrossense - MT,Comodoro,2022,False,False,0 a 50,False,70.0
+510757,Rondolândia,Sudoeste Matogrossense - MT,Comodoro,2023,False,False,50 a 100,False,70.0
+510757,Rondolândia,Sudoeste Matogrossense - MT,Comodoro,2024,False,False,100 a 150,False,70.0
+510757,Rondolândia,Sudoeste Matogrossense - MT,Comodoro,2025,False,False,100 a 150,True,70.0
+510757,Rondolândia,Sudoeste Matogrossense - MT,Comodoro,2026,True,False,100 a 150,True,70.0
+510760,Rondonópolis,Sul Matogrossense - MT,Rondonópolis,2020,False,False,0 a 50,False,105.0
+510760,Rondonópolis,Sul Matogrossense - MT,Rondonópolis,2021,False,False,0 a 50,False,105.0
+510760,Rondonópolis,Sul Matogrossense - MT,Rondonópolis,2022,False,False,50 a 100,False,105.0
+510760,Rondonópolis,Sul Matogrossense - MT,Rondonópolis,2023,False,False,100 a 150,False,105.0
+510760,Rondonópolis,Sul Matogrossense - MT,Rondonópolis,2024,False,False,100 a 150,False,105.0
+510760,Rondonópolis,Sul Matogrossense - MT,Rondonópolis,2025,False,False,100 a 150,True,105.0
+510760,Rondonópolis,Sul Matogrossense - MT,Rondonópolis,2026,True,False,100 a 150,True,105.0
+510770,Rosário Oeste,Centro Norte - MT,Rosário Oeste,2020,False,False,0 a 50,False,90.0
+510770,Rosário Oeste,Centro Norte - MT,Rosário Oeste,2021,False,False,0 a 50,False,90.0
+510770,Rosário Oeste,Centro Norte - MT,Rosário Oeste,2022,False,False,50 a 100,False,90.0
+510770,Rosário Oeste,Centro Norte - MT,Rosário Oeste,2023,False,False,100 a 150,False,90.0
+510770,Rosário Oeste,Centro Norte - MT,Rosário Oeste,2024,False,False,50 a 100,False,90.0
+510770,Rosário Oeste,Centro Norte - MT,Rosário Oeste,2025,False,False,50 a 100,True,90.0
+510770,Rosário Oeste,Centro Norte - MT,Rosário Oeste,2026,True,False,50 a 100,True,90.0
+510774,Santa Cruz do Xingu,Araguaia Xingu - MT,Vila Rica,2020,False,False,,False,35.0
+510774,Santa Cruz do Xingu,Araguaia Xingu - MT,Vila Rica,2021,False,False,0 a 50,False,35.0
+510774,Santa Cruz do Xingu,Araguaia Xingu - MT,Vila Rica,2022,False,False,,False,35.0
+510774,Santa Cruz do Xingu,Araguaia Xingu - MT,Vila Rica,2023,False,False,,False,35.0
+510774,Santa Cruz do Xingu,Araguaia Xingu - MT,Vila Rica,2024,False,False,50 a 100,False,35.0
+510774,Santa Cruz do Xingu,Araguaia Xingu - MT,Vila Rica,2025,False,False,100 a 150,True,35.0
+510774,Santa Cruz do Xingu,Araguaia Xingu - MT,Vila Rica,2026,True,False,150 a 200,True,35.0
+510775,Salto do Céu,Oeste Matogrossense - MT,Rio Branco,2020,False,False,,False,165.0
+510775,Salto do Céu,Oeste Matogrossense - MT,Rio Branco,2021,False,False,50 a 100,False,165.0
+510775,Salto do Céu,Oeste Matogrossense - MT,Rio Branco,2022,False,False,150 a 200,False,165.0
+510775,Salto do Céu,Oeste Matogrossense - MT,Rio Branco,2023,False,False,150 a 200,False,165.0
+510775,Salto do Céu,Oeste Matogrossense - MT,Rio Branco,2024,False,False,100 a 150,False,165.0
+510775,Salto do Céu,Oeste Matogrossense - MT,Rio Branco,2025,False,False,200 a 300,True,165.0
+510775,Salto do Céu,Oeste Matogrossense - MT,Rio Branco,2026,True,False,200 a 300,True,165.0
+510776,Santa Rita do Trivelato,Teles Pires - MT,Nova Mutum,2020,False,False,0 a 50,False,50.0
+510776,Santa Rita do Trivelato,Teles Pires - MT,Nova Mutum,2021,False,False,0 a 50,False,50.0
+510776,Santa Rita do Trivelato,Teles Pires - MT,Nova Mutum,2022,False,False,50 a 100,False,50.0
+510776,Santa Rita do Trivelato,Teles Pires - MT,Nova Mutum,2023,False,False,0 a 50,False,50.0
+510776,Santa Rita do Trivelato,Teles Pires - MT,Nova Mutum,2024,False,False,0 a 50,False,50.0
+510776,Santa Rita do Trivelato,Teles Pires - MT,Nova Mutum,2025,False,False,50 a 100,True,50.0
+510776,Santa Rita do Trivelato,Teles Pires - MT,Nova Mutum,2026,True,False,0 a 50,True,50.0
+510777,Santa Terezinha,Araguaia Xingu - MT,Vila Rica,2020,False,False,,False,35.0
+510777,Santa Terezinha,Araguaia Xingu - MT,Vila Rica,2021,False,False,0 a 50,False,35.0
+510777,Santa Terezinha,Araguaia Xingu - MT,Vila Rica,2022,False,False,,False,35.0
+510777,Santa Terezinha,Araguaia Xingu - MT,Vila Rica,2023,False,False,,False,35.0
+510777,Santa Terezinha,Araguaia Xingu - MT,Vila Rica,2024,False,False,50 a 100,False,35.0
+510777,Santa Terezinha,Araguaia Xingu - MT,Vila Rica,2025,False,False,100 a 150,True,35.0
+510777,Santa Terezinha,Araguaia Xingu - MT,Vila Rica,2026,True,False,150 a 200,True,35.0
+510779,Santo Antônio do Leste,Sul Matogrossense - MT,Primavera do Leste,2020,False,False,0 a 50,False,150.0
+510779,Santo Antônio do Leste,Sul Matogrossense - MT,Primavera do Leste,2021,False,False,100 a 150,False,150.0
+510779,Santo Antônio do Leste,Sul Matogrossense - MT,Primavera do Leste,2022,False,False,100 a 150,False,150.0
+510779,Santo Antônio do Leste,Sul Matogrossense - MT,Primavera do Leste,2023,False,False,150 a 200,False,150.0
+510779,Santo Antônio do Leste,Sul Matogrossense - MT,Primavera do Leste,2024,False,False,150 a 200,False,150.0
+510779,Santo Antônio do Leste,Sul Matogrossense - MT,Primavera do Leste,2025,False,False,100 a 150,True,150.0
+510779,Santo Antônio do Leste,Sul Matogrossense - MT,Primavera do Leste,2026,True,False,150 a 200,True,150.0
+510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,Santo Antônio do Leverger,2020,False,False,,False,80.0
+510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,Santo Antônio do Leverger,2021,False,False,,False,80.0
+510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,Santo Antônio do Leverger,2022,False,False,50 a 100,False,80.0
+510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,Santo Antônio do Leverger,2023,False,False,100 a 150,False,80.0
+510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,Santo Antônio do Leverger,2024,False,False,50 a 100,False,80.0
+510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,Santo Antônio do Leverger,2025,False,False,,True,80.0
+510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,Santo Antônio do Leverger,2026,True,False,50 a 100,True,80.0
+510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,São Felix do Araguaia,2020,False,False,,False,70.0
+510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,São Felix do Araguaia,2021,False,False,0 a 50,False,70.0
+510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,São Felix do Araguaia,2022,False,False,0 a 50,False,70.0
+510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,São Felix do Araguaia,2023,False,False,50 a 100,False,70.0
+510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,São Felix do Araguaia,2024,False,False,100 a 150,False,70.0
+510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,São Felix do Araguaia,2025,False,False,100 a 150,True,70.0
+510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,São Felix do Araguaia,2026,True,False,200 a 300,True,70.0
+510787,Sapezal,Médio Norte Matogrossense - MT,Sapezal,2020,False,False,,False,300.0
+510787,Sapezal,Médio Norte Matogrossense - MT,Sapezal,2021,False,False,200 a 300,False,300.0
+510787,Sapezal,Médio Norte Matogrossense - MT,Sapezal,2022,False,False,200 a 300,False,300.0
+510787,Sapezal,Médio Norte Matogrossense - MT,Sapezal,2023,False,False,200 a 300,False,300.0
+510787,Sapezal,Médio Norte Matogrossense - MT,Sapezal,2024,False,False,300 ou mais,False,300.0
+510787,Sapezal,Médio Norte Matogrossense - MT,Sapezal,2025,False,False,200 a 300,True,300.0
+510787,Sapezal,Médio Norte Matogrossense - MT,Sapezal,2026,True,False,200 a 300,True,300.0
+510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,Ribeirão Cascalheira,2020,False,False,0 a 50,False,45.0
+510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,Ribeirão Cascalheira,2021,False,False,,False,45.0
+510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,Ribeirão Cascalheira,2022,False,False,,False,45.0
+510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,Ribeirão Cascalheira,2023,False,False,50 a 100,False,45.0
+510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,Ribeirão Cascalheira,2024,False,False,,False,45.0
+510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,Ribeirão Cascalheira,2025,False,False,50 a 100,True,45.0
+510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,Ribeirão Cascalheira,2026,True,False,0 a 50,True,45.0
+510790,Sinop,Teles Pires - MT,Sinop,2020,False,False,0 a 50,False,305.0
+510790,Sinop,Teles Pires - MT,Sinop,2021,False,False,100 a 150,False,305.0
+510790,Sinop,Teles Pires - MT,Sinop,2022,False,False,200 a 300,False,305.0
+510790,Sinop,Teles Pires - MT,Sinop,2023,False,False,200 a 300,False,305.0
+510790,Sinop,Teles Pires - MT,Sinop,2024,False,False,300 ou mais,False,305.0
+510790,Sinop,Teles Pires - MT,Sinop,2025,False,False,300 ou mais,True,305.0
+510790,Sinop,Teles Pires - MT,Sinop,2026,True,False,200 a 300,True,305.0
+510792,Sorriso,Teles Pires - MT,Sorriso,2020,False,False,0 a 50,False,160.0
+510792,Sorriso,Teles Pires - MT,Sorriso,2021,False,False,50 a 100,False,160.0
+510792,Sorriso,Teles Pires - MT,Sorriso,2022,False,False,150 a 200,False,160.0
+510792,Sorriso,Teles Pires - MT,Sorriso,2023,False,False,100 a 150,False,160.0
+510792,Sorriso,Teles Pires - MT,Sorriso,2024,False,False,100 a 150,False,160.0
+510792,Sorriso,Teles Pires - MT,Sorriso,2025,False,False,150 a 200,True,160.0
+510792,Sorriso,Teles Pires - MT,Sorriso,2026,True,False,50 a 100,True,160.0
+510794,Tabaporã,Vale dos Arinos - MT,Tabaporã,2020,False,False,0 a 50,False,110.0
+510794,Tabaporã,Vale dos Arinos - MT,Tabaporã,2021,False,False,50 a 100,False,110.0
+510794,Tabaporã,Vale dos Arinos - MT,Tabaporã,2022,False,False,100 a 150,False,110.0
+510794,Tabaporã,Vale dos Arinos - MT,Tabaporã,2023,False,False,100 a 150,False,110.0
+510794,Tabaporã,Vale dos Arinos - MT,Tabaporã,2024,False,False,150 a 200,False,110.0
+510794,Tabaporã,Vale dos Arinos - MT,Tabaporã,2025,False,False,300 ou mais,True,110.0
+510794,Tabaporã,Vale dos Arinos - MT,Tabaporã,2026,True,False,150 a 200,True,110.0
+510795,Tangará da Serra,Médio Norte Matogrossense - MT,Tangará da Serra,2020,False,False,0 a 50,False,360.0
+510795,Tangará da Serra,Médio Norte Matogrossense - MT,Tangará da Serra,2021,False,False,150 a 200,False,360.0
+510795,Tangará da Serra,Médio Norte Matogrossense - MT,Tangará da Serra,2022,False,False,300 ou mais,False,360.0
+510795,Tangará da Serra,Médio Norte Matogrossense - MT,Tangará da Serra,2023,False,False,200 a 300,False,360.0
+510795,Tangará da Serra,Médio Norte Matogrossense - MT,Tangará da Serra,2024,False,False,300 ou mais,False,360.0
+510795,Tangará da Serra,Médio Norte Matogrossense - MT,Tangará da Serra,2025,False,False,100 a 150,True,360.0
+510795,Tangará da Serra,Médio Norte Matogrossense - MT,Tangará da Serra,2026,True,False,200 a 300,True,360.0
+510800,Tapurah,Teles Pires - MT,Tapurah,2020,False,False,,False,130.0
+510800,Tapurah,Teles Pires - MT,Tapurah,2021,False,False,50 a 100,False,130.0
+510800,Tapurah,Teles Pires - MT,Tapurah,2022,False,False,150 a 200,False,130.0
+510800,Tapurah,Teles Pires - MT,Tapurah,2023,False,False,100 a 150,False,130.0
+510800,Tapurah,Teles Pires - MT,Tapurah,2024,False,False,100 a 150,False,130.0
+510800,Tapurah,Teles Pires - MT,Tapurah,2025,False,False,100 a 150,True,130.0
+510800,Tapurah,Teles Pires - MT,Tapurah,2026,True,False,50 a 100,True,130.0
+510805,Terra Nova do Norte,Vale do Peixoto - MT,Terra Nova do Norte,2020,False,False,,False,100.0
+510805,Terra Nova do Norte,Vale do Peixoto - MT,Terra Nova do Norte,2021,False,False,50 a 100,False,100.0
+510805,Terra Nova do Norte,Vale do Peixoto - MT,Terra Nova do Norte,2022,False,False,50 a 100,False,100.0
+510805,Terra Nova do Norte,Vale do Peixoto - MT,Terra Nova do Norte,2023,False,False,100 a 150,False,100.0
+510805,Terra Nova do Norte,Vale do Peixoto - MT,Terra Nova do Norte,2024,False,False,150 a 200,False,100.0
+510805,Terra Nova do Norte,Vale do Peixoto - MT,Terra Nova do Norte,2025,False,False,200 a 300,True,100.0
+510805,Terra Nova do Norte,Vale do Peixoto - MT,Terra Nova do Norte,2026,True,False,300 ou mais,True,100.0
+510810,Tesouro,Sul Matogrossense - MT,Guiratinga,2020,False,False,0 a 50,False,105.0
+510810,Tesouro,Sul Matogrossense - MT,Guiratinga,2021,False,False,0 a 50,False,105.0
+510810,Tesouro,Sul Matogrossense - MT,Guiratinga,2022,False,False,50 a 100,False,105.0
+510810,Tesouro,Sul Matogrossense - MT,Guiratinga,2023,False,False,100 a 150,False,105.0
+510810,Tesouro,Sul Matogrossense - MT,Guiratinga,2024,False,False,100 a 150,False,105.0
+510810,Tesouro,Sul Matogrossense - MT,Guiratinga,2025,False,False,100 a 150,True,105.0
+510810,Tesouro,Sul Matogrossense - MT,Guiratinga,2026,True,False,100 a 150,True,105.0
+510820,Torixoréu,Garças Araguaia - MT,Barra do Garças,2020,False,False,0 a 50,False,60.0
+510820,Torixoréu,Garças Araguaia - MT,Barra do Garças,2021,False,False,0 a 50,False,60.0
+510820,Torixoréu,Garças Araguaia - MT,Barra do Garças,2022,False,False,50 a 100,False,60.0
+510820,Torixoréu,Garças Araguaia - MT,Barra do Garças,2023,False,False,50 a 100,False,60.0
+510820,Torixoréu,Garças Araguaia - MT,Barra do Garças,2024,False,False,50 a 100,False,60.0
+510820,Torixoréu,Garças Araguaia - MT,Barra do Garças,2025,False,False,50 a 100,True,60.0
+510820,Torixoréu,Garças Araguaia - MT,Barra do Garças,2026,True,False,50 a 100,True,60.0
+510830,União do Sul,Teles Pires - MT,Cláudia,2020,False,False,,False,215.0
+510830,União do Sul,Teles Pires - MT,Cláudia,2021,False,False,100 a 150,False,215.0
+510830,União do Sul,Teles Pires - MT,Cláudia,2022,False,False,200 a 300,False,215.0
+510830,União do Sul,Teles Pires - MT,Cláudia,2023,False,False,200 a 300,False,215.0
+510830,União do Sul,Teles Pires - MT,Cláudia,2024,False,False,200 a 300,False,215.0
+510830,União do Sul,Teles Pires - MT,Cláudia,2025,False,False,300 ou mais,True,215.0
+510830,União do Sul,Teles Pires - MT,Cláudia,2026,True,False,200 a 300,True,215.0
+510835,Vale de São Domingos,Sudoeste Matogrossense - MT,Pontes e Lacerda,2020,False,False,,False,215.0
+510835,Vale de São Domingos,Sudoeste Matogrossense - MT,Pontes e Lacerda,2021,False,False,50 a 100,False,215.0
+510835,Vale de São Domingos,Sudoeste Matogrossense - MT,Pontes e Lacerda,2022,False,False,100 a 150,False,215.0
+510835,Vale de São Domingos,Sudoeste Matogrossense - MT,Pontes e Lacerda,2023,False,False,150 a 200,False,215.0
+510835,Vale de São Domingos,Sudoeste Matogrossense - MT,Pontes e Lacerda,2024,False,False,300 ou mais,False,215.0
+510835,Vale de São Domingos,Sudoeste Matogrossense - MT,Pontes e Lacerda,2025,False,False,300 ou mais,True,215.0
+510835,Vale de São Domingos,Sudoeste Matogrossense - MT,Pontes e Lacerda,2026,True,False,300 ou mais,True,215.0
+510840,Várzea Grande,Baixada Cuiabana - MT,Várzea Grande,2020,False,True,50 a 100,False,60.0
+510840,Várzea Grande,Baixada Cuiabana - MT,Várzea Grande,2021,False,True,50 a 100,False,60.0
+510840,Várzea Grande,Baixada Cuiabana - MT,Várzea Grande,2022,False,True,50 a 100,False,60.0
+510840,Várzea Grande,Baixada Cuiabana - MT,Várzea Grande,2023,False,True,50 a 100,False,60.0
+510840,Várzea Grande,Baixada Cuiabana - MT,Várzea Grande,2024,False,True,50 a 100,False,60.0
+510840,Várzea Grande,Baixada Cuiabana - MT,Várzea Grande,2025,False,True,50 a 100,True,60.0
+510840,Várzea Grande,Baixada Cuiabana - MT,Várzea Grande,2026,True,True,0 a 50,True,60.0
+510850,Vera,Teles Pires - MT,Vera,2020,False,False,,False,145.0
+510850,Vera,Teles Pires - MT,Vera,2021,False,False,150 a 200,False,145.0
+510850,Vera,Teles Pires - MT,Vera,2022,False,False,150 a 200,False,145.0
+510850,Vera,Teles Pires - MT,Vera,2023,False,False,100 a 150,False,145.0
+510850,Vera,Teles Pires - MT,Vera,2024,False,False,150 a 200,False,145.0
+510850,Vera,Teles Pires - MT,Vera,2025,False,False,150 a 200,True,145.0
+510850,Vera,Teles Pires - MT,Vera,2026,True,False,100 a 150,True,145.0
+510860,Vila Rica,Araguaia Xingu - MT,Vila Rica,2020,False,False,,False,35.0
+510860,Vila Rica,Araguaia Xingu - MT,Vila Rica,2021,False,False,0 a 50,False,35.0
+510860,Vila Rica,Araguaia Xingu - MT,Vila Rica,2022,False,False,,False,35.0
+510860,Vila Rica,Araguaia Xingu - MT,Vila Rica,2023,False,False,,False,35.0
+510860,Vila Rica,Araguaia Xingu - MT,Vila Rica,2024,False,False,50 a 100,False,35.0
+510860,Vila Rica,Araguaia Xingu - MT,Vila Rica,2025,False,False,100 a 150,True,35.0
+510860,Vila Rica,Araguaia Xingu - MT,Vila Rica,2026,True,False,150 a 200,True,35.0
+510880,Nova Guarita,Norte Matogrossense - MT,Terra Nova do Norte,2020,False,False,,False,100.0
+510880,Nova Guarita,Norte Matogrossense - MT,Terra Nova do Norte,2021,False,False,50 a 100,False,100.0
+510880,Nova Guarita,Norte Matogrossense - MT,Terra Nova do Norte,2022,False,False,50 a 100,False,100.0
+510880,Nova Guarita,Norte Matogrossense - MT,Terra Nova do Norte,2023,False,False,100 a 150,False,100.0
+510880,Nova Guarita,Norte Matogrossense - MT,Terra Nova do Norte,2024,False,False,150 a 200,False,100.0
+510880,Nova Guarita,Norte Matogrossense - MT,Terra Nova do Norte,2025,False,False,200 a 300,True,100.0
+510880,Nova Guarita,Norte Matogrossense - MT,Terra Nova do Norte,2026,True,False,300 ou mais,True,100.0
+510885,Nova Marilândia,Médio Norte Matogrossense - MT,Arenápolis,2020,False,False,,False,135.0
+510885,Nova Marilândia,Médio Norte Matogrossense - MT,Arenápolis,2021,False,False,50 a 100,False,135.0
+510885,Nova Marilândia,Médio Norte Matogrossense - MT,Arenápolis,2022,False,False,150 a 200,False,135.0
+510885,Nova Marilândia,Médio Norte Matogrossense - MT,Arenápolis,2023,False,False,100 a 150,False,135.0
+510885,Nova Marilândia,Médio Norte Matogrossense - MT,Arenápolis,2024,False,False,150 a 200,False,135.0
+510885,Nova Marilândia,Médio Norte Matogrossense - MT,Arenápolis,2025,False,False,200 a 300,True,135.0
+510885,Nova Marilândia,Médio Norte Matogrossense - MT,Arenápolis,2026,True,False,200 a 300,True,135.0
+510890,Nova Maringá,Centro Norte - MT,São José do Rio Claro,2020,False,False,0 a 50,False,115.0
+510890,Nova Maringá,Centro Norte - MT,São José do Rio Claro,2021,False,False,50 a 100,False,115.0
+510890,Nova Maringá,Centro Norte - MT,São José do Rio Claro,2022,False,False,50 a 100,False,115.0
+510890,Nova Maringá,Centro Norte - MT,São José do Rio Claro,2023,False,False,50 a 100,False,115.0
+510890,Nova Maringá,Centro Norte - MT,São José do Rio Claro,2024,False,False,150 a 200,False,115.0
+510890,Nova Maringá,Centro Norte - MT,São José do Rio Claro,2025,False,False,300 ou mais,True,115.0
+510890,Nova Maringá,Centro Norte - MT,São José do Rio Claro,2026,True,False,300 ou mais,True,115.0
+510895,Nova Monte Verde,Alto Tapajós - MT,Nova Monte Verde,2020,False,False,,False,40.0
+510895,Nova Monte Verde,Alto Tapajós - MT,Nova Monte Verde,2021,False,False,,False,40.0
+510895,Nova Monte Verde,Alto Tapajós - MT,Nova Monte Verde,2022,False,False,0 a 50,False,40.0
+510895,Nova Monte Verde,Alto Tapajós - MT,Nova Monte Verde,2023,False,False,0 a 50,False,40.0
+510895,Nova Monte Verde,Alto Tapajós - MT,Nova Monte Verde,2024,False,False,50 a 100,False,40.0
+510895,Nova Monte Verde,Alto Tapajós - MT,Nova Monte Verde,2025,False,False,100 a 150,True,40.0
+510895,Nova Monte Verde,Alto Tapajós - MT,Nova Monte Verde,2026,True,False,100 a 150,True,40.0

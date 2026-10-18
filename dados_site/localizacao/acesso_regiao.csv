@@ -1,0 +1,35 @@
+piloto,co_regsaud,pop_alvo,leitos_servico_2025,municipios_com_servico,n_2024_2025,n_em_mt,tempo_medio_obs_min,km_medio_obs,pct_proprio_mun,pct_fora_regiao,pct_fora_mt,indice_60,pct_pop_ate_60min,indice_120,pct_pop_ate_120min,nome_regsaud,unidade_contagem,suprimido
+parto,51001,29370.0,29.2,4,3246.0,3237.0,60.4,59.6,68.1,8.4,0.3,1.067,100.0,1.059,100.0,Alto Tapajós - MT,nascidos vivos hospitalares,False
+parto,51002,298657.0,192.8,4,29670.0,29618.0,10.7,10.2,72.3,0.5,0.2,0.692,97.6,0.702,99.7,Baixada Cuiabana - MT,nascidos vivos hospitalares,False
+parto,51003,24178.0,20.2,4,2964.0,2809.0,69.4,63.0,58.7,3.3,5.2,0.893,90.3,0.893,90.3,Araguaia Xingu - MT,nascidos vivos hospitalares,False
+parto,51004,21134.0,21.7,4,2375.0,,76.3,75.7,44.7,39.8,,1.223,93.3,0.939,100.0,Centro Norte - MT,nascidos vivos hospitalares,True
+parto,51005,37934.0,46.3,8,4048.0,3965.0,30.4,30.8,75.5,11.5,2.1,1.296,97.5,1.307,100.0,Garças Araguaia - MT,nascidos vivos hospitalares,False
+parto,51006,34535.0,29.4,6,4017.0,3877.0,69.9,65.7,63.3,4.0,3.5,0.912,94.0,0.883,100.0,Médio Araguaia - MT,nascidos vivos hospitalares,False
+parto,51007,73428.0,80.5,6,7960.0,7940.0,33.0,33.7,78.0,4.2,0.3,1.138,100.0,1.145,100.0,Médio Norte Matogrossense - MT,nascidos vivos hospitalares,False
+parto,51008,38114.0,59.0,6,4313.0,4241.0,62.1,56.0,79.6,4.5,1.7,1.658,100.0,1.658,100.0,Noroeste Matogrossense - MT,nascidos vivos hospitalares,False
+parto,51009,6642.0,6.0,1,527.0,510.0,195.7,166.4,34.7,32.6,3.2,0.968,52.5,0.968,52.5,Norte Araguaia Karajá - MT,nascidos vivos hospitalares,False
+parto,51010,17184.0,17.2,3,2111.0,,56.4,54.0,47.5,12.2,,1.075,93.6,0.966,100.0,Norte Matogrossense - MT,nascidos vivos hospitalares,True
+parto,51011,47259.0,82.9,6,4984.0,4976.0,44.0,43.9,65.9,7.0,0.2,1.884,100.0,1.877,100.0,Oeste Matogrossense - MT,nascidos vivos hospitalares,False
+parto,51012,33914.0,38.7,5,3773.0,3554.0,76.3,76.8,57.1,17.9,5.8,1.205,89.3,1.22,97.4,Sudoeste Matogrossense - MT,nascidos vivos hospitalares,False
+parto,51013,161394.0,174.3,14,16539.0,16359.0,21.6,21.6,79.8,2.0,1.1,1.16,99.3,1.158,99.3,Sul Matogrossense - MT,nascidos vivos hospitalares,False
+parto,51014,169412.0,119.1,6,19541.0,19489.0,24.6,23.1,81.5,3.2,0.3,0.753,92.6,0.775,98.0,Teles Pires - MT,nascidos vivos hospitalares,False
+parto,51015,26659.0,28.6,4,3596.0,3590.0,32.4,31.4,68.8,15.1,0.2,1.149,100.0,1.213,100.0,Vale do Peixoto - MT,nascidos vivos hospitalares,False
+parto,51016,13809.0,19.1,4,1778.0,1773.0,54.3,49.6,72.6,14.0,0.3,1.48,100.0,1.48,100.0,Vale dos Arinos - MT,nascidos vivos hospitalares,False
+uti,51001,82797.0,0.0,0,310.0,276.0,658.1,657.3,,89.0,11.0,0.0,0.0,0.0,0.0,Alto Tapajós - MT,internacoes,False
+uti,51002,801425.0,223.0,2,11561.0,11403.0,14.9,14.6,70.2,1.6,1.4,2.162,93.1,2.161,99.4,Baixada Cuiabana - MT,internacoes,False
+uti,51003,62039.0,0.0,0,488.0,467.0,1087.5,1030.1,,95.7,4.3,0.0,0.0,0.0,0.0,Araguaia Xingu - MT,internacoes,False
+uti,51004,61544.0,0.0,0,844.0,,191.6,198.2,,,,0.0,0.0,0.261,68.9,Centro Norte - MT,internacoes,True
+uti,51005,105577.0,10.0,1,1147.0,1053.0,154.1,158.5,39.4,29.4,8.2,0.736,58.6,0.901,85.3,Garças Araguaia - MT,internacoes,False
+uti,51006,87481.0,10.0,1,930.0,872.0,229.5,221.7,25.5,21.8,6.2,0.888,28.8,0.689,50.4,Médio Araguaia - MT,internacoes,False
+uti,51007,187913.0,0.0,0,1257.0,1226.0,260.2,267.3,,97.5,2.5,0.0,0.0,0.003,1.2,Médio Norte Matogrossense - MT,internacoes,False
+uti,51008,100575.0,0.0,0,708.0,684.0,821.3,818.8,,96.6,3.4,0.0,0.0,0.0,0.0,Noroeste Matogrossense - MT,internacoes,False
+uti,51009,18729.0,0.0,0,113.0,,785.0,742.7,,,,0.0,0.0,0.0,0.0,Norte Araguaia Karajá - MT,internacoes,True
+uti,51010,49534.0,8.0,1,809.0,796.0,181.4,180.3,35.6,32.3,1.6,1.255,77.7,0.981,100.0,Norte Matogrossense - MT,internacoes,False
+uti,51011,134215.0,16.0,1,1879.0,1841.0,119.5,121.1,37.4,30.0,2.0,0.926,48.4,0.922,85.3,Oeste Matogrossense - MT,internacoes,False
+uti,51012,89452.0,0.0,0,913.0,877.0,377.7,389.6,,96.1,3.9,0.0,0.0,0.0,0.0,Sudoeste Matogrossense - MT,internacoes,False
+uti,51013,429675.0,49.0,2,6790.0,6661.0,67.9,68.7,51.0,7.3,1.9,0.886,66.3,0.886,85.0,Sul Matogrossense - MT,internacoes,False
+uti,51014,405660.0,35.0,3,2691.0,2618.0,112.2,115.4,50.3,16.5,2.7,0.67,70.0,0.631,92.3,Teles Pires - MT,internacoes,False
+uti,51015,71599.0,0.0,0,393.0,383.0,523.2,524.7,,97.5,2.5,0.0,0.0,0.189,63.5,Vale do Peixoto - MT,internacoes,False
+uti,51016,38528.0,0.0,0,220.0,203.0,441.7,455.7,,92.3,7.7,0.0,0.0,0.0,0.0,Vale dos Arinos - MT,internacoes,False
+parto,51,1033623.0,965.0,85,111442.0,110416.0,32.2,31.0,72.9,5.2,0.9,1.0,96.6,1.0,98.9,Mato Grosso,nascidos vivos hospitalares,False
+uti,51,2726743.0,351.0,11,31053.0,30307.0,134.6,134.8,47.0,24.3,2.4,1.0,55.2,1.0,70.6,Mato Grosso,internacoes,False

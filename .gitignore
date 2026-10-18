@@ -23,6 +23,9 @@ deslocamento/*.html
 indicadores/*.html
 municipios/*.html
 eficiencia/*.html
+previsao/*.html
+localizacao/*.html
+judicializacao/*.html
 
 # caminhos locais dos scripts de dados (scripts/config_local.py)
 .env.local

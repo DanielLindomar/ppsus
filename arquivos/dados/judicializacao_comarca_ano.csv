@@ -1,0 +1,554 @@
+comarca,ano,populacao,n_municipios,acoes_saude,taxa_100mil,faixa_taxa_suavizada,ano_parcial,limite_inferior,quebra_centralizacao,suprimido
+Alta Floresta,2020,62158,2,8,12.9,0 a 50,False,False,False,False
+Alta Floresta,2021,62199,2,53,85.2,50 a 100,False,False,False,False
+Alta Floresta,2022,68945,2,149,216.1,200 a 300,False,False,False,False
+Alta Floresta,2023,70265,2,248,352.9,300 ou mais,False,False,False,False
+Alta Floresta,2024,71615,2,182,254.1,200 a 300,False,False,False,False
+Alta Floresta,2025,72418,2,258,356.3,300 ou mais,False,False,True,False
+Alta Floresta,2026,73213,2,144,196.7,150 a 200,True,False,True,False
+Alto Araguaia,2020,21881,3,,,,False,False,False,True
+Alto Araguaia,2021,22148,3,11,49.7,0 a 50,False,False,False,False
+Alto Araguaia,2022,20211,3,7,34.6,0 a 50,False,False,False,False
+Alto Araguaia,2023,20473,3,11,53.7,50 a 100,False,False,False,False
+Alto Araguaia,2024,20739,3,17,82.0,50 a 100,False,False,False,False
+Alto Araguaia,2025,20846,3,10,48.0,50 a 100,False,False,True,False
+Alto Araguaia,2026,20996,3,11,52.4,50 a 100,True,False,True,False
+Alto Garças,2020,12151,1,,,,False,False,False,True
+Alto Garças,2021,12323,1,5,40.6,0 a 50,False,False,False,False
+Alto Garças,2022,13052,1,27,206.9,150 a 200,False,False,False,False
+Alto Garças,2023,13375,1,30,224.3,200 a 300,False,False,False,False
+Alto Garças,2024,13707,1,7,51.1,50 a 100,False,False,False,False
+Alto Garças,2025,13956,1,18,129.0,100 a 150,False,False,True,False
+Alto Garças,2026,14201,1,14,98.6,50 a 100,True,False,True,False
+Alto Taquari,2020,11133,1,0,0.0,0 a 50,False,False,False,False
+Alto Taquari,2021,11413,1,,,,False,False,False,True
+Alto Taquari,2022,10904,1,,,,False,False,False,True
+Alto Taquari,2023,11233,1,,,,False,False,False,True
+Alto Taquari,2024,11571,1,7,60.5,50 a 100,False,False,False,False
+Alto Taquari,2025,11877,1,,,,False,False,True,True
+Alto Taquari,2026,12136,1,11,90.6,50 a 100,True,False,True,False
+Apiacás,2020,10283,1,,,,False,False,False,True
+Apiacás,2021,10431,1,,,,False,False,False,True
+Apiacás,2022,8590,1,,,,False,False,False,True
+Apiacás,2023,8641,1,10,115.7,100 a 150,False,False,False,False
+Apiacás,2024,8692,1,,,,False,False,False,True
+Apiacás,2025,8693,1,,,,False,False,True,True
+Apiacás,2026,8693,1,5,57.5,50 a 100,True,False,True,False
+Araputanga,2020,22473,3,,,,False,False,False,True
+Araputanga,2021,22638,3,,,,False,False,False,True
+Araputanga,2022,19121,3,17,88.9,50 a 100,False,False,False,False
+Araputanga,2023,19115,3,34,177.9,150 a 200,False,False,False,False
+Araputanga,2024,19110,3,29,151.8,150 a 200,False,False,False,False
+Araputanga,2025,18997,3,49,257.9,200 a 300,False,False,True,False
+Araputanga,2026,18884,3,45,238.3,200 a 300,True,False,True,False
+Arenápolis,2020,15961,3,,,,False,False,False,True
+Arenápolis,2021,15895,3,12,75.5,50 a 100,False,False,False,False
+Arenápolis,2022,16624,3,24,144.4,150 a 200,False,False,False,False
+Arenápolis,2023,16753,3,16,95.5,100 a 150,False,False,False,False
+Arenápolis,2024,16885,3,27,159.9,150 a 200,False,False,False,False
+Arenápolis,2025,16916,3,48,283.8,200 a 300,False,False,True,False
+Arenápolis,2026,16947,3,58,342.2,200 a 300,True,False,True,False
+Aripuanã,2020,22714,1,,,,False,False,False,True
+Aripuanã,2021,23067,1,,,,False,False,False,True
+Aripuanã,2022,24626,1,21,85.3,50 a 100,False,False,False,False
+Aripuanã,2023,25309,1,15,59.3,50 a 100,False,False,False,False
+Aripuanã,2024,26010,1,33,126.9,100 a 150,False,False,False,False
+Aripuanã,2025,26558,1,33,124.3,100 a 150,False,False,True,False
+Aripuanã,2026,27101,1,32,118.1,100 a 150,True,False,True,False
+Barra do Bugres,2020,68291,4,,,,False,False,False,True
+Barra do Bugres,2021,68882,4,9,13.1,0 a 50,False,False,False,False
+Barra do Bugres,2022,55993,4,51,91.1,50 a 100,False,False,False,False
+Barra do Bugres,2023,55938,4,50,89.4,50 a 100,False,False,False,False
+Barra do Bugres,2024,55886,4,45,80.5,50 a 100,False,False,False,False
+Barra do Bugres,2025,55426,4,86,155.2,150 a 200,False,False,True,False
+Barra do Bugres,2026,54970,4,87,158.3,150 a 200,True,False,True,False
+Barra do Garças,2020,82648,6,9,10.9,0 a 50,False,False,False,False
+Barra do Garças,2021,83390,6,40,48.0,0 a 50,False,False,False,False
+Barra do Garças,2022,92731,6,49,52.8,50 a 100,False,False,False,False
+Barra do Garças,2023,94900,6,49,51.6,50 a 100,False,False,False,False
+Barra do Garças,2024,97120,6,69,71.0,50 a 100,False,False,False,False
+Barra do Garças,2025,98614,6,64,64.9,50 a 100,False,False,True,False
+Barra do Garças,2026,100089,6,65,64.9,50 a 100,True,False,True,False
+Brasnorte,2020,20140,1,,,,False,False,False,True
+Brasnorte,2021,20571,1,12,58.3,50 a 100,False,False,False,False
+Brasnorte,2022,17004,1,15,88.2,50 a 100,False,False,False,False
+Brasnorte,2023,17248,1,26,150.7,100 a 150,False,False,False,False
+Brasnorte,2024,17496,1,38,217.2,200 a 300,False,False,False,False
+Brasnorte,2025,17645,1,51,289.0,200 a 300,False,False,True,False
+Brasnorte,2026,17793,1,31,174.2,150 a 200,True,False,True,False
+Campinápolis,2020,16919,1,0,0.0,0 a 50,False,False,False,False
+Campinápolis,2021,16223,1,16,98.6,50 a 100,False,False,False,False
+Campinápolis,2022,15347,1,6,39.1,0 a 50,False,False,False,False
+Campinápolis,2023,15529,1,8,51.5,50 a 100,False,False,False,False
+Campinápolis,2024,15713,1,9,57.3,50 a 100,False,False,False,False
+Campinápolis,2025,15808,1,20,126.5,100 a 150,False,False,True,False
+Campinápolis,2026,15902,1,6,37.7,50 a 100,True,False,True,False
+Campo Novo do Parecis,2020,36143,1,,,,False,False,False,True
+Campo Novo do Parecis,2021,36917,1,22,59.6,50 a 100,False,False,False,False
+Campo Novo do Parecis,2022,45899,1,17,37.0,0 a 50,False,False,False,False
+Campo Novo do Parecis,2023,47921,1,21,43.8,50 a 100,False,False,False,False
+Campo Novo do Parecis,2024,50033,1,49,97.9,100 a 150,False,False,False,False
+Campo Novo do Parecis,2025,51722,1,55,106.3,100 a 150,False,False,True,False
+Campo Novo do Parecis,2026,53393,1,48,89.9,50 a 100,True,False,True,False
+Campo Verde,2020,45740,1,8,17.5,0 a 50,False,False,False,False
+Campo Verde,2021,44033,1,24,54.5,50 a 100,False,False,False,False
+Campo Verde,2022,44585,1,41,92.0,50 a 100,False,False,False,False
+Campo Verde,2023,46179,1,31,67.1,50 a 100,False,False,False,False
+Campo Verde,2024,47831,1,34,71.1,50 a 100,False,False,False,False
+Campo Verde,2025,49053,1,38,77.5,50 a 100,False,False,True,False
+Campo Verde,2026,51969,1,16,30.8,0 a 50,True,False,True,False
+Canarana,2020,21842,1,,,,False,False,False,True
+Canarana,2021,22101,1,10,45.2,0 a 50,False,False,False,False
+Canarana,2022,25858,1,,,,False,False,False,True
+Canarana,2023,26742,1,50,187.0,150 a 200,False,False,False,False
+Canarana,2024,27657,1,,,,False,False,False,True
+Canarana,2025,28324,1,38,134.2,100 a 150,False,False,True,False
+Canarana,2026,28985,1,31,107.0,50 a 100,True,False,True,False
+Chapada dos Guimarães,2020,25907,3,,,,False,False,False,True
+Chapada dos Guimarães,2021,28814,3,6,20.8,0 a 50,False,False,False,False
+Chapada dos Guimarães,2022,26088,3,14,53.7,50 a 100,False,False,False,False
+Chapada dos Guimarães,2023,26299,3,18,68.4,50 a 100,False,False,False,False
+Chapada dos Guimarães,2024,26514,3,11,41.5,50 a 100,False,False,False,False
+Chapada dos Guimarães,2025,26577,3,23,86.5,50 a 100,False,False,True,False
+Chapada dos Guimarães,2026,26640,3,15,56.3,50 a 100,True,False,True,False
+Cláudia,2020,15735,2,,,,False,False,False,True
+Cláudia,2021,15793,2,24,152.0,100 a 150,False,False,False,False
+Cláudia,2022,13431,2,15,111.7,200 a 300,False,False,False,False
+Cláudia,2023,13381,2,28,209.3,200 a 300,False,False,False,False
+Cláudia,2024,13333,2,28,210.0,200 a 300,False,False,False,False
+Cláudia,2025,13205,2,41,310.5,300 ou mais,False,False,True,False
+Cláudia,2026,13078,2,44,336.4,200 a 300,True,False,True,False
+Colniza,2020,39861,1,,,,False,False,False,True
+Colniza,2021,41117,1,13,31.6,0 a 50,False,False,False,False
+Colniza,2022,25766,1,16,62.1,50 a 100,False,False,False,False
+Colniza,2023,25927,1,20,77.1,50 a 100,False,False,False,False
+Colniza,2024,26090,1,51,195.5,150 a 200,False,False,False,False
+Colniza,2025,26026,1,78,299.7,200 a 300,False,False,True,False
+Colniza,2026,25963,1,44,169.5,150 a 200,True,False,True,False
+Colíder,2020,33649,1,7,20.8,0 a 50,False,False,False,False
+Colíder,2021,33855,1,57,168.4,150 a 200,False,False,False,False
+Colíder,2022,31370,1,48,153.0,150 a 200,False,False,False,False
+Colíder,2023,31688,1,64,202.0,200 a 300,False,False,False,False
+Colíder,2024,32010,1,96,299.9,200 a 300,False,False,False,False
+Colíder,2025,32054,1,129,402.4,300 ou mais,False,False,True,False
+Colíder,2026,32099,1,116,361.4,300 ou mais,True,False,True,False
+Comodoro,2020,38865,4,,,,False,False,False,True
+Comodoro,2021,39424,4,9,22.8,0 a 50,False,False,False,False
+Comodoro,2022,37235,4,12,32.2,0 a 50,False,False,False,False
+Comodoro,2023,37888,4,27,71.3,50 a 100,False,False,False,False
+Comodoro,2024,38561,4,36,93.4,100 a 150,False,False,False,False
+Comodoro,2025,39005,4,41,105.1,100 a 150,False,False,True,False
+Comodoro,2026,39444,4,52,131.8,100 a 150,True,False,True,False
+Cotriguaçu,2020,36573,2,,,,False,False,False,True
+Cotriguaçu,2021,37528,2,,,,False,False,False,True
+Cotriguaçu,2022,21224,2,7,33.0,0 a 50,False,False,False,False
+Cotriguaçu,2023,20881,2,17,81.4,50 a 100,False,False,False,False
+Cotriguaçu,2024,20547,2,28,136.3,100 a 150,False,False,False,False
+Cotriguaçu,2025,20087,2,29,144.4,150 a 200,False,False,True,False
+Cotriguaçu,2026,19630,2,39,198.7,150 a 200,True,False,True,False
+Cuiabá,2020,623458,2,219,35.1,0 a 50,False,True,False,False
+Cuiabá,2021,628923,2,465,73.9,50 a 100,False,True,False,False
+Cuiabá,2022,655891,2,604,92.1,50 a 100,False,True,False,False
+Cuiabá,2023,671714,2,782,116.4,100 a 150,False,True,False,False
+Cuiabá,2024,687922,2,976,141.9,100 a 150,False,True,False,False
+Cuiabá,2025,696823,2,693,99.5,50 a 100,False,True,True,False
+Cuiabá,2026,703824,2,677,96.2,50 a 100,True,True,True,False
+Cáceres,2020,94861,1,8,8.4,0 a 50,False,False,False,False
+Cáceres,2021,95339,1,23,24.1,0 a 50,False,False,False,False
+Cáceres,2022,89681,1,93,103.7,100 a 150,False,False,False,False
+Cáceres,2023,90648,1,137,151.1,100 a 150,False,False,False,False
+Cáceres,2024,91626,1,194,211.7,200 a 300,False,False,False,False
+Cáceres,2025,91767,1,185,201.6,200 a 300,False,False,True,False
+Cáceres,2026,91908,1,155,168.6,150 a 200,True,False,True,False
+Diamantino,2020,33651,2,0,0.0,0 a 50,False,False,False,False
+Diamantino,2021,33898,2,16,47.2,0 a 50,False,False,False,False
+Diamantino,2022,29950,2,58,193.7,150 a 200,False,False,False,False
+Diamantino,2023,30070,2,49,163.0,150 a 200,False,False,False,False
+Diamantino,2024,30196,2,64,211.9,200 a 300,False,False,False,False
+Diamantino,2025,30148,2,78,258.7,200 a 300,False,False,True,False
+Diamantino,2026,30101,2,60,199.3,150 a 200,True,False,True,False
+Dom Aquino,2020,8159,1,,,,False,False,False,True
+Dom Aquino,2021,8087,1,,,,False,False,False,True
+Dom Aquino,2022,7872,1,,,,False,False,False,True
+Dom Aquino,2023,7893,1,18,228.1,150 a 200,False,False,False,False
+Dom Aquino,2024,7915,1,,,,False,False,False,True
+Dom Aquino,2025,7890,1,12,152.1,100 a 150,False,False,True,False
+Dom Aquino,2026,7865,1,,,,True,False,True,True
+Feliz Natal,2020,14522,1,,,,False,False,False,True
+Feliz Natal,2021,14847,1,15,101.0,100 a 150,False,False,False,False
+Feliz Natal,2022,10521,1,28,266.1,200 a 300,False,False,False,False
+Feliz Natal,2023,10542,1,11,104.3,100 a 150,False,False,False,False
+Feliz Natal,2024,10564,1,19,179.9,150 a 200,False,False,False,False
+Feliz Natal,2025,10523,1,16,152.0,150 a 200,False,False,True,False
+Feliz Natal,2026,10482,1,11,104.9,100 a 150,True,False,True,False
+Guarantã do Norte,2020,45493,2,,,,False,False,False,True
+Guarantã do Norte,2021,45984,2,73,158.8,100 a 150,False,False,False,False
+Guarantã do Norte,2022,37544,2,95,253.0,200 a 300,False,False,False,False
+Guarantã do Norte,2023,37658,2,107,284.1,200 a 300,False,False,False,False
+Guarantã do Norte,2024,37772,2,105,278.0,200 a 300,False,False,False,False
+Guarantã do Norte,2025,37577,2,88,234.2,200 a 300,False,False,True,False
+Guarantã do Norte,2026,37384,2,72,192.6,150 a 200,True,False,True,False
+Guiratinga,2020,19069,2,5,26.2,0 a 50,False,False,False,False
+Guiratinga,2021,19501,2,5,25.6,0 a 50,False,False,False,False
+Guiratinga,2022,13991,2,6,42.9,50 a 100,False,False,False,False
+Guiratinga,2023,13748,2,19,138.2,100 a 150,False,False,False,False
+Guiratinga,2024,13509,2,19,140.6,100 a 150,False,False,False,False
+Guiratinga,2025,13187,2,21,159.2,100 a 150,False,False,True,False
+Guiratinga,2026,12868,2,13,101.0,100 a 150,True,False,True,False
+Itaúba,2020,7441,2,0,0.0,0 a 50,False,False,False,False
+Itaúba,2021,7364,2,,,,False,False,False,True
+Itaúba,2022,9259,2,15,162.0,150 a 200,False,False,False,False
+Itaúba,2023,9424,2,31,328.9,200 a 300,False,False,False,False
+Itaúba,2024,9592,2,33,344.0,300 ou mais,False,False,False,False
+Itaúba,2025,9703,2,21,216.4,200 a 300,False,False,True,False
+Itaúba,2026,9813,2,19,193.6,200 a 300,True,False,True,False
+Itiquira,2020,13552,1,0,0.0,0 a 50,False,False,False,False
+Itiquira,2021,13727,1,,,,False,False,False,True
+Itiquira,2022,12236,1,7,57.2,50 a 100,False,False,False,False
+Itiquira,2023,12377,1,6,48.5,50 a 100,False,False,False,False
+Itiquira,2024,12519,1,9,71.9,50 a 100,False,False,False,False
+Itiquira,2025,12587,1,,,,False,False,True,True
+Itiquira,2026,12654,1,9,71.1,50 a 100,True,False,True,False
+Jaciara,2020,32578,2,,,,False,False,False,True
+Jaciara,2021,32519,2,42,129.2,100 a 150,False,False,False,False
+Jaciara,2022,32760,2,30,91.6,50 a 100,False,False,False,False
+Jaciara,2023,33279,2,44,132.2,100 a 150,False,False,False,False
+Jaciara,2024,33807,2,29,85.8,100 a 150,False,False,False,False
+Jaciara,2025,34053,2,49,143.9,100 a 150,False,False,True,False
+Jaciara,2026,34297,2,18,52.5,50 a 100,True,False,True,False
+Jauru,2020,12034,2,,,,False,False,False,True
+Jauru,2021,11788,2,,,,False,False,False,True
+Jauru,2022,11554,2,8,69.2,50 a 100,False,False,False,False
+Jauru,2023,11369,2,7,61.6,50 a 100,False,False,False,False
+Jauru,2024,11188,2,16,143.0,150 a 200,False,False,False,False
+Jauru,2025,10937,2,15,137.1,150 a 200,False,False,True,False
+Jauru,2026,10522,2,7,66.5,100 a 150,True,False,True,False
+Juara,2020,35121,1,,,,False,False,False,True
+Juara,2021,35275,1,40,113.4,100 a 150,False,False,False,False
+Juara,2022,34906,1,29,83.1,50 a 100,False,False,False,False
+Juara,2023,35399,1,41,115.8,100 a 150,False,False,False,False
+Juara,2024,35899,1,76,211.7,200 a 300,False,False,False,False
+Juara,2025,36089,1,108,299.3,200 a 300,False,False,True,False
+Juara,2026,36276,1,95,261.9,200 a 300,True,False,True,False
+Juscimeira,2020,11176,1,,,,False,False,False,True
+Juscimeira,2021,11124,1,,,,False,False,False,True
+Juscimeira,2022,11480,1,14,122.0,50 a 100,False,False,False,False
+Juscimeira,2023,11550,1,26,225.1,100 a 150,False,False,False,False
+Juscimeira,2024,11620,1,22,189.3,100 a 150,False,False,False,False
+Juscimeira,2025,11622,1,21,180.7,100 a 150,False,False,True,False
+Juscimeira,2026,11728,1,,,,True,False,True,True
+Juína,2020,49850,2,0,0.0,0 a 50,False,False,False,False
+Juína,2021,49972,2,31,62.0,50 a 100,False,False,False,False
+Juína,2022,53375,2,26,48.7,0 a 50,False,False,False,False
+Juína,2023,54307,2,51,93.9,50 a 100,False,False,False,False
+Juína,2024,55259,2,70,126.7,100 a 150,False,False,False,False
+Juína,2025,55788,2,98,175.7,150 a 200,False,False,True,False
+Juína,2026,56312,2,75,133.2,100 a 150,True,False,True,False
+Lucas do Rio Verde,2020,67620,1,5,7.4,0 a 50,False,False,False,False
+Lucas do Rio Verde,2021,69671,1,37,53.1,50 a 100,False,False,False,False
+Lucas do Rio Verde,2022,83798,1,93,111.0,100 a 150,False,False,False,False
+Lucas do Rio Verde,2023,87925,1,130,147.9,100 a 150,False,False,False,False
+Lucas do Rio Verde,2024,92256,1,121,131.2,100 a 150,False,False,False,False
+Lucas do Rio Verde,2025,95792,1,111,115.9,100 a 150,False,False,True,False
+Lucas do Rio Verde,2026,99291,1,67,67.5,50 a 100,True,False,True,False
+Marcelândia,2020,10301,1,,,,False,False,False,True
+Marcelândia,2021,10107,1,10,98.9,50 a 100,False,False,False,False
+Marcelândia,2022,11396,1,28,245.7,200 a 300,False,False,False,False
+Marcelândia,2023,11405,1,28,245.5,200 a 300,False,False,False,False
+Marcelândia,2024,11414,1,20,175.2,150 a 200,False,False,False,False
+Marcelândia,2025,11355,1,32,281.8,200 a 300,False,False,True,False
+Marcelândia,2026,11298,1,32,283.2,200 a 300,True,False,True,False
+Matupá,2020,16793,1,,,,False,False,False,True
+Matupá,2021,17017,1,23,135.2,100 a 150,False,False,False,False
+Matupá,2022,20091,1,27,134.4,100 a 150,False,False,False,False
+Matupá,2023,20742,1,16,77.1,50 a 100,False,False,False,False
+Matupá,2024,21415,1,29,135.4,150 a 200,False,False,False,False
+Matupá,2025,21959,1,55,250.5,200 a 300,False,False,True,False
+Matupá,2026,22497,1,48,213.4,200 a 300,True,False,True,False
+Mirassol D'Oeste,2020,33182,2,12,36.2,0 a 50,False,False,False,False
+Mirassol D'Oeste,2021,33402,2,32,95.8,50 a 100,False,False,False,False
+Mirassol D'Oeste,2022,31688,2,80,252.5,200 a 300,False,False,False,False
+Mirassol D'Oeste,2023,32081,2,58,180.8,150 a 200,False,False,False,False
+Mirassol D'Oeste,2024,32478,2,32,98.5,100 a 150,False,False,False,False
+Mirassol D'Oeste,2025,32607,2,107,328.2,300 ou mais,False,False,True,False
+Mirassol D'Oeste,2026,32735,2,55,168.0,150 a 200,True,False,True,False
+Nobres,2020,15334,1,,,,False,False,False,True
+Nobres,2021,15332,1,6,39.1,0 a 50,False,False,False,False
+Nobres,2022,15492,1,13,83.9,50 a 100,False,False,False,False
+Nobres,2023,15622,1,26,166.4,150 a 200,False,False,False,False
+Nobres,2024,15753,1,57,361.8,300 ou mais,False,False,False,False
+Nobres,2025,15796,1,37,234.2,200 a 300,False,False,True,False
+Nobres,2026,15838,1,45,284.1,200 a 300,True,False,True,False
+Nortelândia,2020,5923,1,0,0.0,0 a 50,False,False,False,False
+Nortelândia,2021,5858,1,,,,False,False,False,True
+Nortelândia,2022,5956,1,15,251.8,150 a 200,False,False,False,False
+Nortelândia,2023,5945,1,14,235.5,150 a 200,False,False,False,False
+Nortelândia,2024,5935,1,23,387.5,300 ou mais,False,False,False,False
+Nortelândia,2025,5890,1,17,288.6,200 a 300,False,False,True,False
+Nortelândia,2026,5845,1,7,119.8,150 a 200,True,False,True,False
+Nova Canaã do Norte,2020,12831,1,,,,False,False,False,True
+Nova Canaã do Norte,2021,12876,1,12,93.2,50 a 100,False,False,False,False
+Nova Canaã do Norte,2022,11707,1,12,102.5,100 a 150,False,False,False,False
+Nova Canaã do Norte,2023,11739,1,21,178.9,200 a 300,False,False,False,False
+Nova Canaã do Norte,2024,11771,1,40,339.8,300 ou mais,False,False,False,False
+Nova Canaã do Norte,2025,11734,1,39,332.4,300 ou mais,False,False,True,False
+Nova Canaã do Norte,2026,11697,1,45,384.7,300 ou mais,True,False,True,False
+Nova Monte Verde,2020,24962,2,,,,False,False,False,True
+Nova Monte Verde,2021,25427,2,,,,False,False,False,True
+Nova Monte Verde,2022,21948,2,5,22.8,0 a 50,False,False,False,False
+Nova Monte Verde,2023,22277,2,6,26.9,0 a 50,False,False,False,False
+Nova Monte Verde,2024,22611,2,14,61.9,50 a 100,False,False,False,False
+Nova Monte Verde,2025,22810,2,24,105.2,100 a 150,False,False,True,False
+Nova Monte Verde,2026,23008,2,22,95.6,100 a 150,True,False,True,False
+Nova Mutum,2020,50319,2,5,9.9,0 a 50,False,False,False,False
+Nova Mutum,2021,51824,2,24,46.3,0 a 50,False,False,False,False
+Nova Mutum,2022,59115,2,51,86.3,50 a 100,False,False,False,False
+Nova Mutum,2023,61837,2,15,24.3,0 a 50,False,False,False,False
+Nova Mutum,2024,64686,2,26,40.2,0 a 50,False,False,False,False
+Nova Mutum,2025,66991,2,39,58.2,50 a 100,False,False,True,False
+Nova Mutum,2026,69272,2,28,40.4,0 a 50,True,False,True,False
+Nova Ubiratã,2020,12298,1,,,,False,False,False,True
+Nova Ubiratã,2021,12492,1,0,0.0,0 a 50,False,False,False,False
+Nova Ubiratã,2022,11530,1,,,,False,False,False,True
+Nova Ubiratã,2023,11815,1,0,0.0,0 a 50,False,False,False,False
+Nova Ubiratã,2024,12108,1,,,,False,False,False,True
+Nova Ubiratã,2025,9760,1,,,,False,False,True,True
+Nova Ubiratã,2026,9929,1,5,50.4,50 a 100,True,False,True,False
+Nova Xavantina,2020,20944,1,0,0.0,0 a 50,False,False,False,False
+Nova Xavantina,2021,21695,1,,,,False,False,False,True
+Nova Xavantina,2022,24345,1,7,28.8,0 a 50,False,False,False,False
+Nova Xavantina,2023,24909,1,21,84.3,50 a 100,False,False,False,False
+Nova Xavantina,2024,25486,1,14,54.9,50 a 100,False,False,False,False
+Nova Xavantina,2025,25915,1,6,23.2,0 a 50,False,False,True,False
+Nova Xavantina,2026,26340,1,16,60.7,50 a 100,True,False,True,False
+Novo São Joaquim,2020,4938,1,0,0.0,0 a 50,False,False,False,False
+Novo São Joaquim,2021,4837,1,0,0.0,0 a 50,False,False,False,False
+Novo São Joaquim,2022,6919,1,,,,False,False,False,True
+Novo São Joaquim,2023,7038,1,,,,False,False,False,True
+Novo São Joaquim,2024,7160,1,,,,False,False,False,True
+Novo São Joaquim,2025,7239,1,,,,False,False,True,True
+Novo São Joaquim,2026,7317,1,5,68.3,50 a 100,True,False,True,False
+Paranatinga,2020,30643,2,8,26.1,0 a 50,False,False,False,False
+Paranatinga,2021,31163,2,14,44.9,0 a 50,False,False,False,False
+Paranatinga,2022,35065,2,21,59.9,50 a 100,False,False,False,False
+Paranatinga,2023,36218,2,36,99.4,50 a 100,False,False,False,False
+Paranatinga,2024,37409,2,48,128.3,100 a 150,False,False,False,False
+Paranatinga,2025,38267,2,40,104.5,100 a 150,False,False,True,False
+Paranatinga,2026,39138,2,21,53.7,50 a 100,True,False,True,False
+Paranaíta,2020,11244,1,,,,False,False,False,True
+Paranaíta,2021,11291,1,12,106.3,50 a 100,False,False,False,False
+Paranaíta,2022,11671,1,10,85.7,50 a 100,False,False,False,False
+Paranaíta,2023,11829,1,38,321.2,300 ou mais,False,False,False,False
+Paranaíta,2024,11989,1,14,116.8,100 a 150,False,False,False,False
+Paranaíta,2025,12079,1,14,115.9,100 a 150,False,False,True,False
+Paranaíta,2026,12167,1,,,,True,False,True,True
+Pedra Preta,2020,17446,1,13,74.5,50 a 100,False,False,False,False
+Pedra Preta,2021,17547,1,51,290.6,200 a 300,False,False,False,False
+Pedra Preta,2022,18066,1,34,188.2,150 a 200,False,False,False,False
+Pedra Preta,2023,18391,1,67,364.3,300 ou mais,False,False,False,False
+Pedra Preta,2024,18722,1,80,427.3,300 ou mais,False,False,False,False
+Pedra Preta,2025,18946,1,46,242.8,150 a 200,False,False,True,False
+Pedra Preta,2026,19168,1,46,240.0,150 a 200,True,False,True,False
+Peixoto de Azevedo,2020,35338,1,,,,False,False,False,True
+Peixoto de Azevedo,2021,35695,1,29,81.2,50 a 100,False,False,False,False
+Peixoto de Azevedo,2022,32714,1,28,85.6,50 a 100,False,False,False,False
+Peixoto de Azevedo,2023,33154,1,48,144.8,100 a 150,False,False,False,False
+Peixoto de Azevedo,2024,33599,1,60,178.6,150 a 200,False,False,False,False
+Peixoto de Azevedo,2025,33754,1,49,145.2,150 a 200,False,False,True,False
+Peixoto de Azevedo,2026,33907,1,48,141.6,100 a 150,True,False,True,False
+Poconé,2020,33315,1,5,15.0,0 a 50,False,False,False,False
+Poconé,2021,33386,1,19,56.9,50 a 100,False,False,False,False
+Poconé,2022,31217,1,43,137.7,100 a 150,False,False,False,False
+Poconé,2023,31243,1,63,201.6,150 a 200,False,False,False,False
+Poconé,2024,31269,1,75,239.9,200 a 300,False,False,False,False
+Poconé,2025,31203,1,66,211.5,200 a 300,False,False,True,False
+Poconé,2026,31138,1,48,154.2,100 a 150,True,False,True,False
+Pontes e Lacerda,2020,53001,3,,,,False,False,False,True
+Pontes e Lacerda,2021,53392,3,37,69.3,50 a 100,False,False,False,False
+Pontes e Lacerda,2022,58682,3,74,126.1,100 a 150,False,False,False,False
+Pontes e Lacerda,2023,60110,3,112,186.3,150 a 200,False,False,False,False
+Pontes e Lacerda,2024,61576,3,203,329.7,300 ou mais,False,False,False,False
+Pontes e Lacerda,2025,62562,3,291,465.1,300 ou mais,False,False,True,False
+Pontes e Lacerda,2026,63704,3,204,320.2,300 ou mais,True,False,True,False
+Porto Alegre do Norte,2020,54543,4,5,9.2,0 a 50,False,False,False,False
+Porto Alegre do Norte,2021,55282,4,14,25.3,0 a 50,False,False,False,False
+Porto Alegre do Norte,2022,57651,4,19,33.0,0 a 50,False,False,False,False
+Porto Alegre do Norte,2023,59158,4,25,42.3,0 a 50,False,False,False,False
+Porto Alegre do Norte,2024,60713,4,81,133.4,100 a 150,False,False,False,False
+Porto Alegre do Norte,2025,61794,4,117,189.3,150 a 200,False,False,True,False
+Porto Alegre do Norte,2026,62863,4,83,132.0,100 a 150,True,False,True,False
+Porto Esperidião,2020,15105,2,,,,False,False,False,True
+Porto Esperidião,2021,15166,2,,,,False,False,False,True
+Porto Esperidião,2022,13109,2,11,83.9,50 a 100,False,False,False,False
+Porto Esperidião,2023,13087,2,12,91.7,100 a 150,False,False,False,False
+Porto Esperidião,2024,13066,2,35,267.9,200 a 300,False,False,False,False
+Porto Esperidião,2025,12966,2,40,308.5,300 ou mais,False,False,True,False
+Porto Esperidião,2026,12869,2,29,225.3,200 a 300,True,False,True,False
+Porto dos Gaúchos,2020,9414,2,,,,False,False,False,True
+Porto dos Gaúchos,2021,9413,2,,,,False,False,False,True
+Porto dos Gaúchos,2022,8942,2,14,156.6,150 a 200,False,False,False,False
+Porto dos Gaúchos,2023,8969,2,22,245.3,150 a 200,False,False,False,False
+Porto dos Gaúchos,2024,8997,2,22,244.5,150 a 200,False,False,False,False
+Porto dos Gaúchos,2025,8972,2,30,334.4,300 ou mais,False,False,True,False
+Porto dos Gaúchos,2026,8947,2,31,346.5,300 ou mais,True,False,True,False
+Poxoréo,2020,15916,1,0,0.0,0 a 50,False,False,False,False
+Poxoréo,2021,15936,1,14,87.9,50 a 100,False,False,False,False
+Poxoréo,2022,23283,1,16,68.7,50 a 100,False,False,False,False
+Poxoréo,2023,23926,1,40,167.2,150 a 200,False,False,False,False
+Poxoréo,2024,24587,1,14,56.9,50 a 100,False,False,False,False
+Poxoréo,2025,25103,1,21,83.7,50 a 100,False,False,True,False
+Poxoréo,2026,25614,1,15,58.6,50 a 100,True,False,True,False
+Primavera do Leste,2020,68426,2,20,29.2,0 a 50,False,False,False,False
+Primavera do Leste,2021,69335,2,86,124.0,100 a 150,False,False,False,False
+Primavera do Leste,2022,89245,2,107,119.9,100 a 150,False,False,False,False
+Primavera do Leste,2023,93106,2,164,176.1,150 a 200,False,False,False,False
+Primavera do Leste,2024,97139,2,152,156.5,150 a 200,False,False,False,False
+Primavera do Leste,2025,100250,2,122,121.7,100 a 150,False,False,True,False
+Primavera do Leste,2026,103328,2,176,170.3,150 a 200,True,False,True,False
+Querência,2020,17937,1,,,,False,False,False,True
+Querência,2021,18386,1,5,27.2,0 a 50,False,False,False,False
+Querência,2022,26769,1,7,26.1,0 a 50,False,False,False,False
+Querência,2023,28253,1,18,63.7,50 a 100,False,False,False,False
+Querência,2024,29820,1,20,67.1,50 a 100,False,False,False,False
+Querência,2025,31100,1,40,128.6,100 a 150,False,False,True,False
+Querência,2026,32368,1,18,55.6,50 a 100,True,False,True,False
+Ribeirão Cascalheira,2020,18713,3,0,0.0,0 a 50,False,False,False,False
+Ribeirão Cascalheira,2021,18985,3,,,,False,False,False,True
+Ribeirão Cascalheira,2022,19169,3,,,,False,False,False,True
+Ribeirão Cascalheira,2023,19611,3,11,56.1,50 a 100,False,False,False,False
+Ribeirão Cascalheira,2024,20063,3,,,,False,False,False,True
+Ribeirão Cascalheira,2025,20394,3,12,58.8,50 a 100,False,False,True,False
+Ribeirão Cascalheira,2026,20722,3,8,38.6,0 a 50,True,False,True,False
+Rio Branco,2020,14631,3,,,,False,False,False,True
+Rio Branco,2021,14619,3,13,88.9,50 a 100,False,False,False,False
+Rio Branco,2022,13004,3,25,192.2,150 a 200,False,False,False,False
+Rio Branco,2023,12948,3,24,185.4,150 a 200,False,False,False,False
+Rio Branco,2024,12892,3,14,108.6,100 a 150,False,False,False,False
+Rio Branco,2025,12759,3,40,313.5,200 a 300,False,False,True,False
+Rio Branco,2026,12629,3,34,269.2,200 a 300,True,False,True,False
+Rondonópolis,2020,240492,2,46,19.1,0 a 50,False,False,False,False
+Rondonópolis,2021,243715,2,90,36.9,0 a 50,False,False,False,False
+Rondonópolis,2022,247786,2,159,64.2,50 a 100,False,False,False,False
+Rondonópolis,2023,254765,2,316,124.0,100 a 150,False,False,False,False
+Rondonópolis,2024,261947,2,334,127.5,100 a 150,False,False,False,False
+Rondonópolis,2025,266424,2,343,128.7,100 a 150,False,False,True,False
+Rondonópolis,2026,270855,2,286,105.6,100 a 150,True,False,True,False
+Rosário Oeste,2020,25505,2,0,0.0,0 a 50,False,False,False,False
+Rosário Oeste,2021,25419,2,6,23.6,0 a 50,False,False,False,False
+Rosário Oeste,2022,22879,2,15,65.6,50 a 100,False,False,False,False
+Rosário Oeste,2023,22780,2,24,105.4,100 a 150,False,False,False,False
+Rosário Oeste,2024,22683,2,22,97.0,50 a 100,False,False,False,False
+Rosário Oeste,2025,22454,2,20,89.1,50 a 100,False,False,True,False
+Rosário Oeste,2026,22228,2,18,81.0,50 a 100,True,False,True,False
+Santo Antônio do Leverger,2020,25163,2,,,,False,False,False,True
+Santo Antônio do Leverger,2021,25353,2,,,,False,False,False,True
+Santo Antônio do Leverger,2022,22499,2,13,57.8,50 a 100,False,False,False,False
+Santo Antônio do Leverger,2023,23230,2,25,107.6,100 a 150,False,False,False,False
+Santo Antônio do Leverger,2024,23999,2,16,66.7,50 a 100,False,False,False,False
+Santo Antônio do Leverger,2025,23976,2,,,,False,False,True,True
+Santo Antônio do Leverger,2026,23953,2,10,41.7,50 a 100,True,False,True,False
+Sapezal,2020,26688,1,,,,False,False,False,True
+Sapezal,2021,27485,1,65,236.5,200 a 300,False,False,False,False
+Sapezal,2022,28944,1,83,286.8,200 a 300,False,False,False,False
+Sapezal,2023,30194,1,85,281.5,200 a 300,False,False,False,False
+Sapezal,2024,31499,1,104,330.2,300 ou mais,False,False,False,False
+Sapezal,2025,32514,1,73,224.5,200 a 300,False,False,True,False
+Sapezal,2026,33520,1,76,226.7,200 a 300,True,False,True,False
+Sinop,2020,150568,2,40,26.6,0 a 50,False,False,False,False
+Sinop,2021,153560,2,212,138.1,100 a 150,False,False,False,False
+Sinop,2022,201686,2,591,293.0,200 a 300,False,False,False,False
+Sinop,2023,211458,2,628,297.0,200 a 300,False,False,False,False
+Sinop,2024,221706,2,735,331.5,300 ou mais,False,False,False,False
+Sinop,2025,229575,2,1210,527.1,300 ou mais,False,False,True,False
+Sinop,2026,237364,2,563,237.2,200 a 300,True,False,True,False
+Sorriso,2020,100689,2,23,22.8,0 a 50,False,False,False,False
+Sorriso,2021,103123,2,56,54.3,50 a 100,False,False,False,False
+Sorriso,2022,118450,2,230,194.2,150 a 200,False,False,False,False
+Sorriso,2023,123801,2,180,145.4,100 a 150,False,False,False,False
+Sorriso,2024,129394,2,182,140.7,100 a 150,False,False,False,False
+Sorriso,2025,139200,3,241,173.1,150 a 200,False,False,True,False
+Sorriso,2026,143614,3,132,91.9,50 a 100,True,False,True,False
+São Felix do Araguaia,2020,23542,4,,,,False,False,False,True
+São Felix do Araguaia,2021,23831,4,8,33.6,0 a 50,False,False,False,False
+São Felix do Araguaia,2022,23860,4,11,46.1,0 a 50,False,False,False,False
+São Felix do Araguaia,2023,24343,4,13,53.4,50 a 100,False,False,False,False
+São Felix do Araguaia,2024,24838,4,26,104.7,100 a 150,False,False,False,False
+São Felix do Araguaia,2025,25181,4,28,111.2,100 a 150,False,False,True,False
+São Felix do Araguaia,2026,25522,4,62,242.9,200 a 300,True,False,True,False
+São José do Rio Claro,2020,29861,2,5,16.7,0 a 50,False,False,False,False
+São José do Rio Claro,2021,30407,2,24,78.9,50 a 100,False,False,False,False
+São José do Rio Claro,2022,20757,2,18,86.7,50 a 100,False,False,False,False
+São José do Rio Claro,2023,20596,2,19,92.3,50 a 100,False,False,False,False
+São José do Rio Claro,2024,20437,2,35,171.3,150 a 200,False,False,False,False
+São José do Rio Claro,2025,20160,2,85,421.6,300 ou mais,False,False,True,False
+São José do Rio Claro,2026,19886,2,70,352.0,300 ou mais,True,False,True,False
+São José dos Quatro Marcos,2020,18846,1,5,26.5,0 a 50,False,False,False,False
+São José dos Quatro Marcos,2021,18788,1,7,37.3,0 a 50,False,False,False,False
+São José dos Quatro Marcos,2022,17849,1,29,162.5,150 a 200,False,False,False,False
+São José dos Quatro Marcos,2023,17839,1,27,151.4,150 a 200,False,False,False,False
+São José dos Quatro Marcos,2024,17830,1,26,145.8,100 a 150,False,False,False,False
+São José dos Quatro Marcos,2025,17721,1,71,400.7,300 ou mais,False,False,True,False
+São José dos Quatro Marcos,2026,17613,1,68,386.1,300 ou mais,True,False,True,False
+Tabaporã,2020,9429,1,0,0.0,0 a 50,False,False,False,False
+Tabaporã,2021,9357,1,8,85.5,50 a 100,False,False,False,False
+Tabaporã,2022,9818,1,5,50.9,100 a 150,False,False,False,False
+Tabaporã,2023,9863,1,10,101.4,100 a 150,False,False,False,False
+Tabaporã,2024,9908,1,11,111.0,150 a 200,False,False,False,False
+Tabaporã,2025,9895,1,30,303.2,300 ou mais,False,False,True,False
+Tabaporã,2026,9882,1,15,151.8,150 a 200,True,False,True,False
+Tangará da Serra,2020,105711,1,20,18.9,0 a 50,False,False,False,False
+Tangará da Serra,2021,107631,1,211,196.0,150 a 200,False,False,False,False
+Tangará da Serra,2022,106434,1,460,432.2,300 ou mais,False,False,False,False
+Tangará da Serra,2023,109448,1,322,294.2,200 a 300,False,False,False,False
+Tangará da Serra,2024,112547,1,406,360.7,300 ou mais,False,False,False,False
+Tangará da Serra,2025,114603,1,150,130.9,100 a 150,False,False,True,False
+Tangará da Serra,2026,116637,1,237,203.2,200 a 300,True,False,True,False
+Tapurah,2020,20931,2,,,,False,False,False,True
+Tapurah,2021,21410,2,19,88.7,50 a 100,False,False,False,False
+Tapurah,2022,21909,2,40,182.6,150 a 200,False,False,False,False
+Tapurah,2023,22604,2,23,101.8,100 a 150,False,False,False,False
+Tapurah,2024,23321,2,26,111.5,100 a 150,False,False,False,False
+Tapurah,2025,23895,2,27,113.0,100 a 150,False,False,True,False
+Tapurah,2026,24464,2,21,85.8,50 a 100,True,False,True,False
+Terra Nova do Norte,2020,13937,2,,,,False,False,False,True
+Terra Nova do Norte,2021,13691,2,12,87.6,50 a 100,False,False,False,False
+Terra Nova do Norte,2022,15206,2,5,32.9,50 a 100,False,False,False,False
+Terra Nova do Norte,2023,15212,2,15,98.6,100 a 150,False,False,False,False
+Terra Nova do Norte,2024,15220,2,20,131.4,150 a 200,False,False,False,False
+Terra Nova do Norte,2025,15137,2,37,244.4,200 a 300,False,False,True,False
+Terra Nova do Norte,2026,15054,2,57,378.6,300 ou mais,True,False,True,False
+Vera,2020,11402,1,,,,False,False,False,True
+Vera,2021,11731,1,22,187.5,150 a 200,False,False,False,False
+Vera,2022,12800,1,18,140.6,150 a 200,False,False,False,False
+Vera,2023,13091,1,15,114.6,100 a 150,False,False,False,False
+Vera,2024,13389,1,23,171.8,150 a 200,False,False,False,False
+Vera,2025,10758,1,20,185.9,150 a 200,False,False,True,False
+Vera,2026,10930,1,16,146.4,100 a 150,True,False,True,False
+Vila Bela da Santíssima Trindade,2020,16271,1,,,,False,False,False,True
+Vila Bela da Santíssima Trindade,2021,16412,1,13,79.2,50 a 100,False,False,False,False
+Vila Bela da Santíssima Trindade,2022,16774,1,17,101.3,50 a 100,False,False,False,False
+Vila Bela da Santíssima Trindade,2023,17076,1,21,123.0,100 a 150,False,False,False,False
+Vila Bela da Santíssima Trindade,2024,17384,1,22,126.6,100 a 150,False,False,False,False
+Vila Bela da Santíssima Trindade,2025,17592,1,36,204.6,200 a 300,False,False,True,False
+Vila Bela da Santíssima Trindade,2026,17798,1,12,67.4,50 a 100,True,False,True,False
+Vila Rica,2020,37589,3,,,,False,False,False,True
+Vila Rica,2021,38193,3,5,13.1,0 a 50,False,False,False,False
+Vila Rica,2022,30145,3,,,,False,False,False,True
+Vila Rica,2023,30261,3,,,,False,False,False,True
+Vila Rica,2024,30381,3,18,59.2,50 a 100,False,False,False,False
+Vila Rica,2025,30327,3,36,118.7,100 a 150,False,False,True,False
+Vila Rica,2026,30273,3,50,165.2,150 a 200,True,False,True,False
+Várzea Grande,2020,300630,2,275,91.5,50 a 100,False,True,False,False
+Várzea Grande,2021,303476,2,236,77.8,50 a 100,False,True,False,False
+Várzea Grande,2022,313018,2,185,59.1,50 a 100,False,True,False,False
+Várzea Grande,2023,319548,2,187,58.5,50 a 100,False,True,False,False
+Várzea Grande,2024,326285,2,196,60.1,50 a 100,False,True,False,False
+Várzea Grande,2025,330580,2,255,77.1,50 a 100,False,True,True,False
+Várzea Grande,2026,334831,2,162,48.4,0 a 50,True,True,True,False
+Água Boa,2020,35817,3,,,,False,False,False,True
+Água Boa,2021,36408,3,12,33.0,0 a 50,False,False,False,False
+Água Boa,2022,39639,3,32,80.7,50 a 100,False,False,False,False
+Água Boa,2023,40902,3,45,110.0,100 a 150,False,False,False,False
+Água Boa,2024,42209,3,43,101.9,50 a 100,False,False,False,False
+Água Boa,2025,43169,3,62,143.6,100 a 150,False,False,True,False
+Água Boa,2026,44117,3,30,68.0,50 a 100,True,False,True,False

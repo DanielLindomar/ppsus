@@ -12,6 +12,9 @@ Complementa os downloads de arquivos/ a partir de dados_site/ (sem acesso ao ban
   arquivos/dados/sedes_municipais.csv                    sede municipal (lon, lat; IBGE Localidades 2022) de cada município
   arquivos/dados/residentes_mt_outras_uf_*.csv           internações de residentes de MT em hospitais de outras UF (v0.3)
   arquivos/dados/saldo_internacoes_mt_outras_uf_2020_2025.csv  entrada × saída × saldo por UF (v0.3)
+  arquivos/dados/previsao_*.csv, localizacao_*.csv e judicializacao_*.csv  (v0.4) NÃO são gerados aqui: vêm dos
+                                                         scripts 08, 11 e 10 (cópia conferida dos arquivos auditados);
+                                                         este script só os confere e os inclui no catálogo
   arquivos/dados/painel_municipal_dicionario.csv         dicionário das colunas de painel_municipal_2020_2025.csv
   arquivos/dados/catalogo_arquivos.csv                   catálogo de todos os downloads (descrição, chave, período, tamanho)
   arquivos/geo/mt_municipios_regioes_saude.geojson       malha mínima com cod_mun6, município e região de saúde
@@ -47,6 +50,16 @@ FUGA = [("fuga_resumo_ano.csv", "residentes_mt_outras_uf_resumo_2020_2025.csv"),
         ("fuga_destinos_mun.csv", "residentes_mt_outras_uf_destinos_2020_2025.csv")]
 CSV_KW = dict(index=False, encoding="utf-8", lineterminator="\n", na_rep="")
 PERIODO = "2020–2025"
+# Versão 0.4: seções de previsão (script 08), judicialização (script 10) e localização (script 11). Os arquivos
+# já chegam a arquivos/dados/ conferidos (supressão < 5 e complementar); aqui só entram no catálogo.
+GRUPO_PREV = "Previsão de demanda (preliminar)"
+GRUPO_LOC = "Localização de serviços (preliminar)"
+GRUPO_JUD = "Judicialização da saúde (preliminar)"
+FONTE_PREV = "SIH/SUS (MT), SIVEP-Gripe, INMET, InfoDengue, RIPSA"
+FONTE_PREV_SIH = "SIH/SUS (AIH reduzida, MT)"
+FONTE_LOC = "SINASC, SIH/SUS, CNES, RIPSA/IBGE, OSRM/OpenStreetMap"
+FONTE_JUD = "DataJud/CNJ (API Pública): TJMT"
+FONTE_JUD_POP = "DataJud/CNJ (API Pública): TJMT; IBGE"
 
 
 def msg(fmt: str, *a) -> None:
@@ -72,8 +85,15 @@ def ler(nome: str) -> pd.DataFrame:
 
 
 def gravar(df: pd.DataFrame, caminho: Path) -> None:
+    """Grava o CSV (UTF-8, LF). Se o arquivo já existe com o MESMO conteúdo (ignorando só o fim de linha),
+    não o regrava: assim o git não marca como modificado um arquivo versionado que só mudaria de fim de linha
+    (core.autocrlf=true no Windows; NOTAS_V04, seção 11)."""
     caminho.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(caminho, **CSV_KW)
+    novo = df.to_csv(**{k: v for k, v in CSV_KW.items() if k != "encoding"}).encode("utf-8")
+    if caminho.exists() and caminho.read_bytes().replace(b"\r\n", b"\n") == novo:
+        msg("  sem mudança %s (%d linhas, %d colunas; não regravado)", caminho.relative_to(RAIZ).as_posix(), len(df), df.shape[1])
+        return
+    caminho.write_bytes(novo)
     msg("  gravado %s (%d linhas, %d colunas)", caminho.relative_to(RAIZ).as_posix(), len(df), df.shape[1])
 
 
@@ -230,6 +250,144 @@ CATALOGO = [
     ("dados/residentes_mt_outras_uf_destinos_2020_2025.csv", GRUPO_FUGA,
      "Os 20 municípios fora de MT que mais internaram residentes de MT em 2020–2025: internações, parcela do total em outras UF e internações de alta complexidade (suprimidas quando a alta ou a média complexidade tem de 1 a 4 internações).",
      "cod_mun6", PERIODO, FONTE_FUGA, "02_preparar_deslocamento.py + 05_downloads.py"),
+    # ---- Versão 0.4: previsão de demanda (A5), resultados PRELIMINARES (script 08) ----
+    ("dados/previsao_proximas_semanas.csv", GRUPO_PREV,
+     "Previsão das quatro semanas seguintes ao corte de 17/10/2026 (SE 42 a 45/2026) das internações J00–J99, por região de saúde e MT, todas as idades e menores de 5 anos: método (nowcast + previsão encadeada e comparadores), previsão, intervalos de 80% e 95%, limiar P90 e situação do alerta. Valores que revelariam contagem de 1 a 4 suprimidos.",
+     "alvo + cod_regiao + metodo + ano_se + se", "SE 42–45/2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_nowcast_hoje.csv", GRUPO_PREV,
+     "Nowcast das semanas ainda incompletas no SIH (SE 17 a 41/2026) no corte de 17/10/2026, por método, região de saúde e MT: estimativa, intervalos de 80% e 95%, atraso em semanas e internações já processadas (contagens de 1 a 4 suprimidas, com supressão complementar).",
+     "alvo + cod_regiao + metodo + ano_se + se", "SE 17–41/2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_serie_semanal_carga_2026_10_17.csv", GRUPO_PREV,
+     "Série semanal das internações J00–J99 (todas as idades e menores de 5 anos) por região de saúde e MT na carga do SIH de 17/10/2026, SE 1/2024 a SE 16/2026. Contagens de 1 a 4 suprimidas, com supressão complementar.",
+     "alvo + cod_regiao + ano_se + se", "2024–2026", FONTE_PREV_SIH, "08_preparar_previsao.py"),
+    ("dados/previsao_serie_semanal_2020_2026.csv", GRUPO_PREV,
+     "Série semanal observada das internações J00–J99 (AIH tipo 1, diagnóstico principal) por região de saúde e MT, óticas de ocorrência e de residência, SE 1/2020 a SE 12/2026 (última semana completa do modelo de referência). Contagens de 1 a 4 suprimidas, com supressão complementar.",
+     "otica + cod_regiao + ano_se + se", "2020–2026", FONTE_PREV_SIH, "08_preparar_previsao.py"),
+    ("dados/previsao_metricas_modelos.csv", GRUPO_PREV,
+     "Erro de previsão de cada modelo (ingênuos, SARIMA, HGB, LightGBM, Random Forest, rede neural e variantes) por ótica, nível (MT ou média das 16 regiões) e horizonte: MAE, RMSE, MASE, rMAE e viés, na validação com origem móvel.",
+     "modelo + otica + nivel + h", "SE 1/2024–SE 12/2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_metricas_regioes.csv", GRUPO_PREV,
+     "Erro médio dos horizontes de 1 a 4 semanas por região de saúde e modelo, com a marca do modelo de menor MASE em cada região.",
+     "otica + cod_regiao + modelo", "SE 1/2024–SE 12/2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_validacao_mt.csv", GRUPO_PREV,
+     "Observado e previsto na validação com origem móvel, série de Mato Grosso, horizontes de 1 e 4 semanas, por modelo.",
+     "otica + modelo + h + ano_se_alvo + se_alvo", "SE 1/2024–SE 12/2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_testes_dm.csv", GRUPO_PREV,
+     "Testes de Diebold-Mariano (correção HLN) entre pares de modelos do modelo de referência sem atraso: perdas médias, estatística e p-valor.",
+     "otica + nivel + h + modelo_a + modelo_b", "SE 1/2024–SE 12/2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_cobertura_intervalos.csv", GRUPO_PREV,
+     "Cobertura, largura e interval score dos intervalos de previsão de 80% e 95%, por modelo, ótica, nível e horizonte.",
+     "tipo + modelo + otica + nivel + h", "SE 1/2024–SE 12/2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_baseline_4sem.csv", GRUPO_PREV,
+     "Previsões do modelo de referência sem atraso para as quatro semanas seguintes à última semana completa (SE 13 a 16/2026), por região, MT e modelo, com a contagem já processada na carga atual. Contagens de 1 a 4 e previsões ingênuas que as copiariam suprimidas.",
+     "otica + cod_regiao + modelo + h", "SE 13–16/2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_metricas_nowcast.csv", GRUPO_PREV,
+     "Erro do nowcast por método e faixa de atraso, na validação retrospectiva com cortes de 2024 e 2025, por cenário de reconstrução, alvo e nível.",
+     "cenario + alvo + nivel + metodo + faixa_atraso_semanas", "2024–2025", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_metricas_encadeado.csv", GRUPO_PREV,
+     "Erro da previsão a partir da semana de corte (nowcast + previsão encadeada) e dos comparadores, por cenário, alvo, nível e horizonte, com a cobertura dos intervalos.",
+     "cenario + alvo + nivel + metodo + h", "2024–2025", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_testes_dm_encadeado.csv", GRUPO_PREV,
+     "Testes de Diebold-Mariano da previsão encadeada: estatística HLN, versão robusta de Newey-West e p-valor ajustado por Holm.",
+     "cenario + alvo + nivel + h + modelo_a + modelo_b", "2024–2025", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_metricas_menor5.csv", GRUPO_PREV,
+     "Erro da previsão das internações de menores de 5 anos (validação com origem móvel, sem atraso), por modelo, nível e horizonte.",
+     "modelo + nivel + h", "SE 1/2024–SE 12/2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_alerta_limiares.csv", GRUPO_PREV,
+     "Limiares de alta pressão (percentis 80 e 90 das 104 semanas de 2022–2023) por alvo e região de saúde; limiares que revelariam contagem pequena ficam suprimidos.",
+     "alvo + cod_regiao + regra", "2022–2023", FONTE_PREV_SIH, "08_preparar_previsao.py"),
+    ("dados/previsao_alerta_medidas.csv", GRUPO_PREV,
+     "Alerta avaliado como classificação: sensibilidade, especificidade, VPP, VPN e F1 por regra, fonte, modelo e horizonte (vp, fp, fn e vn = número de região-semanas).",
+     "regra + fonte + alvo + nivel + modelo + h", "2024–2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_alerta_antecedencia.csv", GRUPO_PREV,
+     "Antecedência do primeiro aviso nos episódios de alta pressão, por regra, fonte, modelo e duração mínima do episódio (episódios e detectados = número de episódios).",
+     "regra + fonte + alvo + nivel + modelo + duracao_minima", "2024–2026", FONTE_PREV, "08_preparar_previsao.py"),
+    ("dados/previsao_contexto_pediatrico.csv", GRUPO_PREV,
+     "Contexto pediátrico por região de saúde e MT: limiar P90 de menores de 5 anos, média de 2022–2023, permanência média, leitos pediátricos clínicos e de UTI pediátrica SUS e ocupação equivalente no limiar.",
+     "cod_regiao", "2022–2025", "SIH/SUS (MT), CNES", "08_preparar_previsao.py"),
+    ("dados/previsao_dicionario.csv", GRUPO_PREV,
+     "Dicionário dos arquivos de previsão: arquivo de origem, versão, conteúdo, colunas, regra de supressão e situação de publicação (resultados preliminares).",
+     "arquivo", "—", "Projeto PPSUS-MT", "08_preparar_previsao.py"),
+    # ---- Versão 0.4: localização de serviços, pilotos de parto e UTI adulto, PRELIMINAR (script 11) ----
+    ("dados/localizacao_acesso_municipios_2025.csv", GRUPO_LOC,
+     "Acesso atual por município de residência e piloto (atenção ao parto, UTI adulto): população-alvo, leitos próprios, tempo e distância rodoviários até o serviço mais próximo, índice de acesso E2SFCA (60 e 120 min), atendimentos de 2024–2025, tempo e distância médios percorridos e percentuais no próprio município, fora da região e fora de MT (vazios quando a contagem é de 1 a 4 ou permitiria deduzi-la).",
+     "piloto + cod_mun6", "2024–2025", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_acesso_regioes_2025.csv", GRUPO_LOC,
+     "Acesso atual por região de saúde e piloto: população-alvo, leitos e municípios com o serviço em 2025, atendimentos de 2024–2025, tempo e distância médios percorridos, percentuais por local de atendimento e população a até 60 e 120 minutos.",
+     "piloto + co_regsaud", "2024–2025", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_demanda_projetada_2026_2030.csv", GRUPO_LOC,
+     "Demanda projetada por piloto, nível (MT, região de saúde, município de residência) e ano: projeção, intervalo de 80% e, no parto, projeção calibrada ao IBGE. PROVISÓRIA: usa a projeção populacional municipal provisória (método de razão sobre a projeção do IBGE para MT). Estimativas de modelo, não contagens observadas.",
+     "piloto + nivel + codigo + ano", "2026–2030", "SINASC, SIH/SUS, RIPSA/IBGE", "11_preparar_localizacao.py"),
+    ("dados/localizacao_otimizacao_solucoes_2030.csv", GRUPO_LOC,
+     "Soluções da otimização para 2030 por piloto, modelo (p-mediana, cobertura máxima de 60 e 120 min e, na UTI adulto, versão com capacidade e regional) e número de unidades novas: municípios escolhidos, tempo e distância médios, cobertura a até 60 e 120 min, ganhos e, na UTI, demanda acima da capacidade e déficit de leitos. Cenários de pesquisa, não recomendação.",
+     "piloto + modelo + limiar_min + k", "2030", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_otimizacao_sensibilidade_2030.csv", GRUPO_LOC,
+     "Sensibilidade das soluções da otimização às variantes de demanda: municípios escolhidos, segunda melhor solução, diferença no objetivo e marca de quase empate.",
+     "piloto + modelo + limiar_min + variante + k", "2030", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_cenarios_resumo_2030.csv", GRUPO_LOC,
+     "Cenários de 2030 com a escolha do paciente: municípios com unidade nova, tempo e distância esperados, cobertura, fluxo para as unidades novas e ganho de tempo frente à referência e frente à ida à unidade mais próxima.",
+     "piloto + cenario", "2030", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_cenarios_ganho_municipios_2030.csv", GRUPO_LOC,
+     "Ganho de tempo por município de residência em cada cenário de 2030: tempo médio de referência, tempo no cenário e ganho por paciente, em minutos.",
+     "piloto + cenario + cod_mun6", "2030", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_uti_leitos_regioes_2030.csv", GRUPO_LOC,
+     "UTI adulto por região de saúde: demanda dos residentes, leitos SUS de 2025, leitos necessários com a ocupação-alvo de 85% (parâmetro de cenário) com a demanda de 2025 e a projetada para 2030, e saldo.",
+     "co_regsaud", "2025 e 2030", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_validacao_demanda.csv", GRUPO_LOC,
+     "Validação dos modelos de demanda no teste temporal, por piloto e modelo: MAE, RMSE, WMAPE (municípios e regiões) e erro do total.",
+     "piloto + modelo", "2024–2025", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_validacao_escolha_temporal.csv", GRUPO_LOC,
+     "Validação dos modelos de escolha do paciente no teste temporal: índice CPC, WMAPE dos destinos, acerto do destino principal e tempo médio observado e previsto.",
+     "piloto + modelo", "2024–2025", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_validacao_escolha_experimentos.csv", GRUPO_LOC,
+     "Validação da escolha do paciente em experimentos naturais (aberturas, fechamentos e reduções de leitos no CNES): CPC médio por modelo e número de eventos em que o modelo vence, empata ou perde da persistência.",
+     "piloto + tipo", "2021–2025", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_validacao_escolha_experimentos_ano.csv", GRUPO_LOC,
+     "Experimentos naturais da validação da escolha do paciente, por ano do evento: anos de ajuste e de teste, CPC médio do modelo e da persistência e resultado da comparação.",
+     "piloto + ano_evento", "2021–2025", FONTE_LOC, "11_preparar_localizacao.py"),
+    ("dados/localizacao_dicionario.csv", GRUPO_LOC,
+     "Dicionário das colunas dos arquivos de localização de serviços.",
+     "arquivo + coluna", "—", "Projeto PPSUS-MT", "11_preparar_localizacao.py"),
+    # ---- Versão 0.4: judicialização da saúde, DataJud/CNJ, PRELIMINAR (script 10) ----
+    ("dados/judicializacao_mt_ano.csv", GRUPO_JUD,
+     "Ações de saúde no 1º grau do TJMT por ano de ajuizamento (2026 até 11/09): total, saúde pública e suplementar, grupos de assunto da saúde pública, ações atribuíveis a uma comarca, ações com liminar concedida e ações ajuizadas diretamente no Núcleo de Justiça 4.0 da Saúde sem comarca de origem. Células de 1 a 4 suprimidas.",
+     "ano", "2020–2026", FONTE_JUD, "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_mt_mes_grupo.csv", GRUPO_JUD,
+     "Série mensal das ações de saúde por grupo de assunto, de 01/2020 a 09/2026 (mês incompleto marcado). Células de 1 a 4 suprimidas, com supressão complementar.",
+     "ano + mes + grupo", "2020–2026", FONTE_JUD, "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_comarca_2022_2024.csv", GRUPO_JUD,
+     "Comarcas no período principal 2022–2024: ações de saúde (total, pública e suplementar, com supressão), população média, taxa bruta, taxa suavizada arredondada a 5 por 100 mil, faixa e marca de limite inferior (Cuiabá e Várzea Grande).",
+     "comarca", "2022–2024", FONTE_JUD_POP, "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_comarca_ano.csv", GRUPO_JUD,
+     "Comarca e ano: ações de saúde (com supressão), população, taxa bruta, faixa da taxa suavizada e marcas de ano parcial, limite inferior e quebra pela centralização no Núcleo de Justiça 4.0 (2025–2026).",
+     "comarca + ano", "2020–2026", FONTE_JUD_POP, "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_municipio_ano.csv", GRUPO_JUD,
+     "Município e ano: comarca, faixa da taxa suavizada da comarca, taxa suavizada 2022–2024 da comarca e marcas. O município herda a taxa da comarca; não há contagens por município.",
+     "cod_mun6 + ano", "2020–2026", FONTE_JUD_POP, "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_comarca_municipio.csv", GRUPO_JUD,
+     "Correspondência entre os 142 municípios e as comarcas do TJMT: comarca, se o município é sede e a regra de atribuição usada.",
+     "cod_mun6", "—", "TJMT, Corregedoria-Geral da Justiça", "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_previsao_trimestre.csv", GRUPO_JUD,
+     "Previsão mensal das ações de saúde de setembro a novembro de 2026, por grupo de assunto, com intervalo empírico de 80% (modelo de menor MASE em cada grupo).",
+     "grupo + alvo", "09–11/2026", FONTE_JUD, "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_previsao_metricas.csv", GRUPO_JUD,
+     "Erro da previsão mensal na validação com origem móvel, por grupo e modelo (ETS, SARIMA, LightGBM e referências ingênuas): MAE, RMSE, viés, MASE e rMAE.",
+     "grupo + modelo", "01/2020–08/2026", FONTE_JUD, "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_fatores_associados.csv", GRUPO_JUD,
+     "Fatores associados à taxa de ações por comarca (binomial negativa, 2022–2025, 77 comarcas sem Cuiabá e Várzea Grande): razão de taxas por desvio-padrão, intervalo de 95% e p-valores bruto e ajustados (Holm e Benjamini-Hochberg). Associação, não causalidade.",
+     "dependente + variavel", "2022–2025", "DataJud/CNJ; painéis do projeto (CNES, SIH, DEA v2.1); IBGE", "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_testes_bloco.csv", GRUPO_JUD,
+     "Testes conjuntos (Wald) do bloco de oferta e eficiência por tipo de ação e especificação (binomial negativa e Poisson com efeitos fixos de comarca): estatística, graus de liberdade e p-valores bruto e ajustados (Holm e Benjamini-Hochberg). Associação, não causalidade.",
+     "dependente + especificacao", "2021–2025", "DataJud/CNJ; painéis do projeto (CNES, SIH, DEA v2.1); IBGE", "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_indicadores_complementares.csv", GRUPO_JUD,
+     "Indicadores citados no texto da aba Judicialização que não estão nas tabelas acima: cobertura da coleta frente ao painel de saúde do CNJ, peso da Justiça Federal, códigos de origem associados às comarcas, correlação de postos entre anos, validação fora da amostra dos fatores associados e testes de Diebold-Mariano da previsão.",
+     "grupo + indicador + recorte", "2020–2026", FONTE_JUD, "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_auditoria_supressao.csv", GRUPO_JUD,
+     "Resumo da auditoria da supressão dos arquivos de judicialização: células, relações de soma, supressões primárias e complementares e células recuperáveis (nenhuma).",
+     "item", "—", "Projeto PPSUS-MT", "10_preparar_judicializacao.py"),
+    ("dados/judicializacao_dicionario.csv", GRUPO_JUD,
+     "Dicionário das colunas dos arquivos de judicialização.",
+     "arquivo + coluna", "—", "Projeto PPSUS-MT", "10_preparar_judicializacao.py"),
     ("geo/mt_municipios_regioes_saude.geojson", "Malhas (GeoJSON)",
      "Malha municipal mínima do IBGE (141 polígonos, simplificada para a web) com as propriedades cod_mun6, municipio, co_regsaud, regiao_saude e codarea (código IBGE de 7 dígitos). É a malha usada nos mapas do site.",
      "cod_mun6", "malha 2022", "IBGE + SES-MT (PDR)", "01_preparar_dados.py + 05_downloads.py"),

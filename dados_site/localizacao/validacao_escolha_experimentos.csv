@@ -1,0 +1,11 @@
+piloto,tipo,n_eventos,n_avaliaveis,cpc_medio_gravitacional_mnl,cpc_medio_lightgbm_pares,cpc_medio_pivo_mnl,cpc_medio_pivo_lightgbm,cpc_medio_persistencia,n_pivo_mnl_vence_margem,n_pivo_mnl_empata_margem,n_pivo_mnl_perde_margem
+parto,abertura,4,4,0.81,0.8704,0.9175,0.8865,0.9171,2,1,1
+parto,ampliacao,4,4,0.8094,0.8774,0.901,0.9015,0.8962,3,0,1
+parto,fechamento,8,2,0.641,0.6961,0.8173,0.7332,0.8295,1,0,1
+parto,reducao,7,7,0.7728,0.8531,0.8652,0.8667,0.912,1,0,6
+uti,abertura,3,3,0.6885,0.6401,0.6917,0.6234,0.5157,3,0,0
+uti,ampliacao,9,9,0.8289,0.8056,0.8092,0.7822,0.7418,5,3,1
+uti,fechamento,7,7,0.7787,0.755,0.7853,0.7428,0.7744,2,3,2
+uti,reducao,12,12,0.7985,0.7981,0.8398,0.798,0.7886,11,1,0
+parto,todos,23,17,0.7747,0.8444,0.8803,0.8638,0.8998,7,1,9
+uti,todos,31,31,0.7922,0.7753,0.8043,0.7641,0.7454,21,7,3

@@ -1,0 +1,98 @@
+arquivo,coluna,descricao
+judicializacao_mt_ano.csv,ano,ano de ajuizamento (2020-2026)
+judicializacao_mt_ano.csv,acoes_saude,"acoes de saude (processos distintos) ajuizadas no 1o grau/juizados do TJMT, classes de acao nova, com assunto de saude publica, suplementar ou nao especificada"
+judicializacao_mt_ano.csv,publica,acoes com assunto de saude publica (inclui as que tambem tem assunto de saude suplementar)
+judicializacao_mt_ano.csv,suplementar,acoes com assunto de saude suplementar (planos de saude; inclui as mistas)
+judicializacao_mt_ano.csv,pub_medicamentos,"saude publica, assunto principal fornecimento de medicamentos"
+judicializacao_mt_ano.csv,pub_tratamento,"saude publica, tratamento medico-hospitalar (consultas, cirurgias, dialise)"
+judicializacao_mt_ano.csv,pub_internacao_uti,"saude publica, internacao/transferencia, leito e UTI"
+judicializacao_mt_ano.csv,pub_insumos,"saude publica, insumos"
+judicializacao_mt_ano.csv,pub_home_care,"saude publica, tratamento domiciliar"
+judicializacao_mt_ano.csv,pub_saude_mental,"saude publica, internacoes psiquiatricas"
+judicializacao_mt_ano.csv,atribuivel,acoes cuja comarca de origem e identificavel
+judicializacao_mt_ano.csv,pct_atribuivel,% atribuivel
+judicializacao_mt_ano.csv,liminar_concedida,acoes com movimento de concessao (total ou parcial) de tutela provisoria ou liminar no 1o grau
+judicializacao_mt_ano.csv,acoes_nucleo_sem_origem,"acoes ajuizadas diretamente no Nucleo de Justica 4.0 da Saude Publica, sem comarca de origem identificavel (parte das acoes sem origem); vazio = suprimido"
+judicializacao_mt_ano.csv,ano_parcial,2026 = ajuizamentos ate 11/09/2026 (ultimo dado carregado na API publica; coleta em 17/10/2026)
+judicializacao_mt_ano.csv,suprimido,linha com alguma contagem suprimida (vazio = 1 a 4 ou supressao complementar)
+judicializacao_comarca_ano.csv,comarca,comarca do TJMT (79 instaladas)
+judicializacao_comarca_ano.csv,ano,ano de ajuizamento
+judicializacao_comarca_ano.csv,populacao,populacao somada dos municipios da comarca (IBGE)
+judicializacao_comarca_ano.csv,n_municipios,municipios abrangidos pela comarca
+judicializacao_comarca_ano.csv,acoes_saude,acoes de saude atribuiveis a comarca (codigo de origem do numero CNJ ou orgao local); vazio = suprimido
+judicializacao_comarca_ano.csv,taxa_100mil,acoes_saude por 100 mil hab. (bruta); vazia quando acoes_saude esta suprimida
+judicializacao_comarca_ano.csv,faixa_taxa_suavizada,"faixa da taxa suavizada por Bayes empirico local (comarca e contiguas), por 100 mil hab.: 0 a 50, 50 a 100, 100 a 150, 150 a 200, 200 a 300, 300 ou mais; vazia quando acoes_saude esta suprimida (a taxa numerica por ano permitiria recalcular contagens suprimidas)"
+judicializacao_comarca_ano.csv,ano_parcial,2026 = ajuizamentos ate 11/09/2026 (ultimo dado carregado na API publica; coleta em 17/10/2026)
+judicializacao_comarca_ano.csv,limite_inferior,"Cuiaba e Varzea Grande: sedes das unidades centralizadas de saude publica; parte das acoes de residentes fica sem origem identificavel, logo a taxa e um limite inferior"
+judicializacao_comarca_ano.csv,quebra_centralizacao,2025-2026: o ajuizamento direto no Nucleo de Justica 4.0 da Saude sem origem identificavel cresce e retira acoes das comarcas de forma desigual; comparar com cautela (periodo principal: 2022-2024)
+judicializacao_comarca_ano.csv,suprimido,"contagem suprimida (1 a 4 ou supressao complementar, que impede o recalculo por diferenca com o arquivo do periodo 2022-2024 e com o total atribuivel do estado)"
+judicializacao_comarca_2022_2024.csv,comarca,comarca do TJMT
+judicializacao_comarca_2022_2024.csv,periodo,2022-2024 (periodo principal para comparar comarcas: depois da centralizacao de 2019-2021 e antes da quebra de 2025)
+judicializacao_comarca_2022_2024.csv,populacao_media,populacao media anual da comarca no periodo (IBGE)
+judicializacao_comarca_2022_2024.csv,acoes_saude,acoes de saude atribuiveis somadas em 2022-2024; vazio = suprimido
+judicializacao_comarca_2022_2024.csv,acoes_publica,"idem, saude publica; vazio = suprimido"
+judicializacao_comarca_2022_2024.csv,acoes_suplementar,"idem, saude suplementar; vazio = suprimido"
+judicializacao_comarca_2022_2024.csv,taxa_100mil,media anual de acoes por 100 mil hab. (bruta); vazia quando acoes_saude esta suprimida
+judicializacao_comarca_2022_2024.csv,taxa_eb_local_100mil,taxa suavizada (Bayes empirico local sobre as contagens do periodo); estimativa; arredondada a 5 por 100 mil (passo aprovado na auditoria de inversao)
+judicializacao_comarca_2022_2024.csv,faixa_taxa_suavizada,faixa da taxa suavizada (mesmos cortes do arquivo anual)
+judicializacao_comarca_2022_2024.csv,taxa_publica_eb_local_100mil,"idem, so saude publica"
+judicializacao_comarca_2022_2024.csv,limite_inferior,Cuiaba e Varzea Grande: limite inferior
+judicializacao_comarca_2022_2024.csv,suprimido,linha com alguma contagem suprimida
+judicializacao_municipio_ano.csv,cod_mun6,codigo IBGE do municipio (6 digitos)
+judicializacao_municipio_ano.csv,nome_municipio,municipio
+judicializacao_municipio_ano.csv,nome_regsaud,regiao de saude
+judicializacao_municipio_ano.csv,comarca,comarca do TJMT que abrange o municipio (Corregedoria do TJMT; 3 municipios por regra documentada no relatorio)
+judicializacao_municipio_ano.csv,ano,ano de ajuizamento
+judicializacao_municipio_ano.csv,ano_parcial,2026 = ajuizamentos ate 11/09/2026 (ultimo dado carregado na API publica; coleta em 17/10/2026)
+judicializacao_municipio_ano.csv,taxa_limite_inferior,"municipio das comarcas de Cuiaba ou Varzea Grande (Cuiaba, Acorizal, Varzea Grande, N. S. do Livramento): a taxa herdada e um limite inferior"
+judicializacao_municipio_ano.csv,faixa_taxa_suavizada,faixa da taxa suavizada da COMARCA a que o municipio pertence no ano (o DataJud nao identifica o municipio do autor); vazia quando a contagem da comarca esta suprimida
+judicializacao_municipio_ano.csv,taxa_eb_local_2022_2024_100mil,taxa suavizada da comarca no periodo 2022-2024 (indicador principal para comparar; repetida em todos os anos)
+judicializacao_municipio_ano.csv,quebra_centralizacao,ver judicializacao_comarca_ano.csv
+judicializacao_mt_mes_grupo.csv,ano,ano de ajuizamento
+judicializacao_mt_mes_grupo.csv,mes,mes de ajuizamento
+judicializacao_mt_mes_grupo.csv,grupo,"medicamentos, tratamento, internacao_uti, outros_publica (insumos, home care, saude mental, outros e nao especificados), suplementar (planos de saude, inclusive acoes mistas com assunto principal de plano)"
+judicializacao_mt_mes_grupo.csv,acoes,"acoes de saude ajuizadas no 1o grau do TJMT no mes (todas, inclusive as sem comarca de origem); vazio = suprimido"
+judicializacao_mt_mes_grupo.csv,mes_incompleto,mes afetado pelo atraso de carga da API (ultimo ajuizamento carregado: 11/09/2026); nao usar como dado final
+judicializacao_mt_mes_grupo.csv,suprimido,contagem suprimida
+judicializacao_previsao_trimestre.csv,grupo,grupo de assunto (ou total = soma dos grupos)
+judicializacao_previsao_trimestre.csv,modelo,"modelo de menor MASE na validacao rolling-origin (ets, lightgbm ou sarima)"
+judicializacao_previsao_trimestre.csv,alvo,mes previsto (primeiro dia)
+judicializacao_previsao_trimestre.csv,h,"horizonte em meses a partir de 08/2026, ultimo mes completo"
+judicializacao_previsao_trimestre.csv,prev,acoes previstas no mes
+judicializacao_previsao_trimestre.csv,li80,limite inferior do intervalo empirico de 80%
+judicializacao_previsao_trimestre.csv,ls80,limite superior do intervalo empirico de 80%
+judicializacao_previsao_metricas.csv,grupo,grupo de assunto ou total
+judicializacao_previsao_metricas.csv,modelo,"ets, lightgbm, sarima, persistencia, ingenuo_sazonal"
+judicializacao_previsao_metricas.csv,n,"previsoes avaliadas (26 origens x 3 horizontes, menos alvos posteriores a 08/2026)"
+judicializacao_previsao_metricas.csv,mae,erro absoluto medio (acoes/mes)
+judicializacao_previsao_metricas.csv,rmse,raiz do erro quadratico medio
+judicializacao_previsao_metricas.csv,vies,erro medio (previsto - observado)
+judicializacao_previsao_metricas.csv,mase,MAE dividido pelo EAM do ingenuo sazonal no treino ate a 1a origem
+judicializacao_previsao_metricas.csv,rmae,MAE relativo ao ingenuo sazonal no periodo avaliado
+judicializacao_fatores_associados.csv,dependente,"acoes_publica, acoes_suplementar (placebo), acoes_saude, acoes_medicamentos, acoes_tratamento, acoes_internacao_uti"
+judicializacao_fatores_associados.csv,variavel,"covariavel padronizada (bloco oferta/eficiencia, contexto e acesso a justica)"
+judicializacao_fatores_associados.csv,irr,"razao de taxas por 1 desvio-padrao (binomial negativa NB2, 2022-2025, 77 comarcas sem Cuiaba e Varzea Grande)"
+judicializacao_fatores_associados.csv,irr_li,limite inferior do IC 95% (erros agrupados por comarca)
+judicializacao_fatores_associados.csv,irr_ls,limite superior do IC 95%
+judicializacao_fatores_associados.csv,p,p-valor bruto
+judicializacao_fatores_associados.csv,p_holm,p ajustado por Holm na familia de 42 testes do bloco (6 dependentes x 7 variaveis); vazio fora do bloco
+judicializacao_fatores_associados.csv,p_bh,p ajustado por Benjamini-Hochberg na mesma familia
+judicializacao_fatores_associados.csv,dp_variavel,desvio-padrao da variavel (unidade original)
+judicializacao_testes_bloco.csv,dependente,"acoes_publica (principal), acoes_suplementar (placebo), acoes_saude, acoes_medicamentos, acoes_tratamento, acoes_internacao_uti"
+judicializacao_testes_bloco.csv,especificacao,"completo (principal: bloco + contexto + acesso a justica), sem_justica, bloco_e_justica, so_bloco, sens_* (amostras alternativas), efeitos_fixos_2021_2025 (PPML com efeitos fixos de comarca)"
+judicializacao_testes_bloco.csv,modelo,NB2 (binomial negativa) ou PPML_FE (Poisson com efeitos fixos)
+judicializacao_testes_bloco.csv,chi2,estatistica de Wald do teste conjunto das 7 variaveis do bloco (6 no PPML_FE)
+judicializacao_testes_bloco.csv,gl,graus de liberdade
+judicializacao_testes_bloco.csv,p,p-valor bruto
+judicializacao_testes_bloco.csv,p_holm,p ajustado por Holm entre os 6 tipos de acao (so especificacao completa e sens_2022_2024); vazio nas demais
+judicializacao_testes_bloco.csv,p_bh,p ajustado por Benjamini-Hochberg na mesma familia
+judicializacao_testes_bloco.csv,n,comarca-anos (77 comarcas sem Cuiaba e Varzea Grande)
+judicializacao_indicadores_complementares.csv,grupo,"cobertura, justica_federal, atribuicao, comarcas, j2_validacao, j3_validacao"
+judicializacao_indicadores_complementares.csv,indicador,codigo do indicador
+judicializacao_indicadores_complementares.csv,recorte,"ano, periodo, modelo ou par de anos"
+judicializacao_indicadores_complementares.csv,valor,valor do indicador
+judicializacao_indicadores_complementares.csv,unidade,unidade do valor
+judicializacao_indicadores_complementares.csv,descricao,definicao do indicador
+auditoria_supressao.csv,item,resultado das auditorias de divulgacao (exporta_site.py / auditoria_supressao.py)
+auditoria_supressao.csv,valor,contagem ou parametro
+(todos os arquivos),(licenca),"informacao derivada da API Publica do DataJud (CNJ): uso somente NAO COMERCIAL, com citacao do DataJud/CNJ e do Observatorio PPSUS-MT (Termo de Uso da API Publica, v1.2, itens 3.3 e 3.8); a licenca CC BY 4.0 do restante do Observatorio nao se aplica a estes arquivos nem aos graficos da aba Judicializacao"

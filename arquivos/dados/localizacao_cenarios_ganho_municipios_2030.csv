@@ -1,0 +1,1984 @@
+piloto,cenario,cod_mun6,nome_municipio,nome_regsaud,tempo_medio_ref,tempo_medio_cenario,ganho_min_por_paciente,provisorio
+parto,p_mediana_k1,510010,Acorizal,Baixada Cuiabana - MT,67.8,67.8,-0.0,True
+parto,p_mediana_k1,510020,Água Boa,Médio Araguaia - MT,14.4,14.4,-0.0,True
+parto,p_mediana_k1,510025,Alta Floresta,Alto Tapajós - MT,16.0,16.0,-0.0,True
+parto,p_mediana_k1,510030,Alto Araguaia,Sul Matogrossense - MT,92.9,92.9,-0.0,True
+parto,p_mediana_k1,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,199.8,199.9,-0.1,True
+parto,p_mediana_k1,510040,Alto Garças,Sul Matogrossense - MT,117.1,117.1,-0.0,True
+parto,p_mediana_k1,510050,Alto Paraguai,Centro Norte - MT,38.1,38.4,-0.4,True
+parto,p_mediana_k1,510060,Alto Taquari,Sul Matogrossense - MT,58.0,58.0,-0.0,True
+parto,p_mediana_k1,510080,Apiacás,Alto Tapajós - MT,115.0,115.0,-0.0,True
+parto,p_mediana_k1,510100,Araguaiana,Garças Araguaia - MT,68.0,68.0,-0.0,True
+parto,p_mediana_k1,510120,Araguainha,Sul Matogrossense - MT,268.2,268.2,-0.0,True
+parto,p_mediana_k1,510125,Araputanga,Oeste Matogrossense - MT,66.9,67.0,-0.0,True
+parto,p_mediana_k1,510130,Arenápolis,Médio Norte Matogrossense - MT,35.4,35.6,-0.2,True
+parto,p_mediana_k1,510140,Aripuanã,Noroeste Matogrossense - MT,96.7,96.7,-0.0,True
+parto,p_mediana_k1,510160,Barão de Melgaço,Baixada Cuiabana - MT,113.4,113.4,-0.0,True
+parto,p_mediana_k1,510170,Barra do Bugres,Médio Norte Matogrossense - MT,22.7,22.8,-0.1,True
+parto,p_mediana_k1,510180,Barra do Garças,Garças Araguaia - MT,4.8,4.8,-0.0,True
+parto,p_mediana_k1,510183,Boa Esperança do Norte,Teles Pires - MT,144.8,145.6,-0.9,True
+parto,p_mediana_k1,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,248.9,248.9,-0.1,True
+parto,p_mediana_k1,510190,Brasnorte,Noroeste Matogrossense - MT,53.7,53.9,-0.1,True
+parto,p_mediana_k1,510250,Cáceres,Oeste Matogrossense - MT,11.5,11.5,-0.0,True
+parto,p_mediana_k1,510260,Campinápolis,Garças Araguaia - MT,66.1,66.1,-0.0,True
+parto,p_mediana_k1,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,61.9,62.0,-0.1,True
+parto,p_mediana_k1,510267,Campo Verde,Sul Matogrossense - MT,33.7,33.7,-0.0,True
+parto,p_mediana_k1,510268,Campos de Júlio,Sudoeste Matogrossense - MT,233.2,233.3,-0.2,True
+parto,p_mediana_k1,510269,Canabrava do Norte,Araguaia Xingu - MT,100.7,100.7,-0.0,True
+parto,p_mediana_k1,510270,Canarana,Médio Araguaia - MT,39.3,39.3,-0.0,True
+parto,p_mediana_k1,510279,Carlinda,Alto Tapajós - MT,49.4,49.6,-0.1,True
+parto,p_mediana_k1,510285,Castanheira,Noroeste Matogrossense - MT,61.3,61.6,-0.2,True
+parto,p_mediana_k1,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,68.5,68.5,-0.0,True
+parto,p_mediana_k1,510305,Cláudia,Teles Pires - MT,121.0,121.7,-0.7,True
+parto,p_mediana_k1,510310,Cocalinho,Médio Araguaia - MT,202.0,202.0,-0.0,True
+parto,p_mediana_k1,510320,Colíder,Norte Matogrossense - MT,19.8,19.9,-0.1,True
+parto,p_mediana_k1,510325,Colniza,Noroeste Matogrossense - MT,74.1,74.1,-0.0,True
+parto,p_mediana_k1,510330,Comodoro,Sudoeste Matogrossense - MT,91.4,91.5,-0.1,True
+parto,p_mediana_k1,510335,Confresa,Araguaia Xingu - MT,26.7,26.7,-0.0,True
+parto,p_mediana_k1,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,124.2,124.4,-0.1,True
+parto,p_mediana_k1,510337,Cotriguaçu,Noroeste Matogrossense - MT,190.4,190.4,-0.0,True
+parto,p_mediana_k1,510340,Cuiabá,Baixada Cuiabana - MT,0.9,0.9,-0.0,True
+parto,p_mediana_k1,510343,Curvelândia,Oeste Matogrossense - MT,72.4,72.4,-0.0,True
+parto,p_mediana_k1,510345,Denise,Médio Norte Matogrossense - MT,63.7,63.8,-0.1,True
+parto,p_mediana_k1,510350,Diamantino,Centro Norte - MT,38.7,38.9,-0.2,True
+parto,p_mediana_k1,510360,Dom Aquino,Sul Matogrossense - MT,80.3,80.3,-0.0,True
+parto,p_mediana_k1,510370,Feliz Natal,Teles Pires - MT,149.9,150.5,-0.6,True
+parto,p_mediana_k1,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,116.3,116.4,-0.1,True
+parto,p_mediana_k1,510385,Gaúcha do Norte,Médio Araguaia - MT,252.1,252.3,-0.2,True
+parto,p_mediana_k1,510390,General Carneiro,Garças Araguaia - MT,161.3,161.3,-0.0,True
+parto,p_mediana_k1,510395,Glória D'Oeste,Oeste Matogrossense - MT,103.4,103.4,-0.0,True
+parto,p_mediana_k1,510410,Guarantã do Norte,Vale do Peixoto - MT,25.2,25.3,-0.1,True
+parto,p_mediana_k1,510420,Guiratinga,Sul Matogrossense - MT,115.2,115.2,-0.0,True
+parto,p_mediana_k1,510450,Indiavaí,Oeste Matogrossense - MT,128.8,128.8,-0.1,True
+parto,p_mediana_k1,510452,Ipiranga do Norte,Teles Pires - MT,81.8,82.2,-0.4,True
+parto,p_mediana_k1,510454,Itanhangá,Teles Pires - MT,137.7,132.5,5.2,True
+parto,p_mediana_k1,510455,Itaúba,Norte Matogrossense - MT,73.5,73.8,-0.3,True
+parto,p_mediana_k1,510460,Itiquira,Sul Matogrossense - MT,151.1,151.1,-0.0,True
+parto,p_mediana_k1,510480,Jaciara,Sul Matogrossense - MT,21.1,21.1,-0.0,True
+parto,p_mediana_k1,510490,Jangada,Baixada Cuiabana - MT,83.1,83.1,-0.0,True
+parto,p_mediana_k1,510500,Jauru,Sudoeste Matogrossense - MT,132.1,132.1,-0.0,True
+parto,p_mediana_k1,510510,Juara,Vale dos Arinos - MT,35.1,35.3,-0.2,True
+parto,p_mediana_k1,510515,Juína,Noroeste Matogrossense - MT,17.2,17.2,-0.0,True
+parto,p_mediana_k1,510517,Juruena,Noroeste Matogrossense - MT,52.4,52.5,-0.1,True
+parto,p_mediana_k1,510520,Juscimeira,Sul Matogrossense - MT,40.9,40.9,-0.0,True
+parto,p_mediana_k1,510523,Lambari D'Oeste,Oeste Matogrossense - MT,121.6,121.6,-0.1,True
+parto,p_mediana_k1,510525,Lucas do Rio Verde,Teles Pires - MT,8.5,9.0,-0.5,True
+parto,p_mediana_k1,510530,Luciára,Norte Araguaia Karajá - MT,218.6,218.7,-0.1,True
+parto,p_mediana_k1,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,37.1,37.1,-0.0,True
+parto,p_mediana_k1,510558,Marcelândia,Norte Matogrossense - MT,120.2,120.5,-0.3,True
+parto,p_mediana_k1,510560,Matupá,Vale do Peixoto - MT,28.3,28.3,-0.1,True
+parto,p_mediana_k1,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,39.7,39.7,-0.0,True
+parto,p_mediana_k1,510590,Nobres,Centro Norte - MT,114.3,114.4,-0.1,True
+parto,p_mediana_k1,510600,Nortelândia,Centro Norte - MT,72.0,72.3,-0.3,True
+parto,p_mediana_k1,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,40.3,40.3,-0.0,True
+parto,p_mediana_k1,510615,Nova Bandeirantes,Alto Tapajós - MT,177.9,178.0,-0.1,True
+parto,p_mediana_k1,510617,Nova Nazaré,Médio Araguaia - MT,64.6,64.7,-0.0,True
+parto,p_mediana_k1,510618,Nova Lacerda,Sudoeste Matogrossense - MT,139.8,139.9,-0.2,True
+parto,p_mediana_k1,510619,Nova Santa Helena,Norte Matogrossense - MT,60.3,60.6,-0.3,True
+parto,p_mediana_k1,510620,Nova Brasilândia,Baixada Cuiabana - MT,161.2,161.3,-0.0,True
+parto,p_mediana_k1,510621,Nova Canaã do Norte,Norte Matogrossense - MT,72.2,72.6,-0.4,True
+parto,p_mediana_k1,510622,Nova Mutum,Teles Pires - MT,21.7,22.2,-0.5,True
+parto,p_mediana_k1,510623,Nova Olímpia,Médio Norte Matogrossense - MT,12.4,12.4,-0.0,True
+parto,p_mediana_k1,510624,Nova Ubiratã,Teles Pires - MT,105.8,106.5,-0.8,True
+parto,p_mediana_k1,510625,Nova Xavantina,Garças Araguaia - MT,10.5,10.5,-0.0,True
+parto,p_mediana_k1,510626,Novo Mundo,Vale do Peixoto - MT,93.3,93.5,-0.2,True
+parto,p_mediana_k1,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,38.4,39.1,-0.7,True
+parto,p_mediana_k1,510628,Novo São Joaquim,Garças Araguaia - MT,45.3,45.3,-0.0,True
+parto,p_mediana_k1,510629,Paranaíta,Alto Tapajós - MT,14.7,14.7,-0.1,True
+parto,p_mediana_k1,510630,Paranatinga,Sul Matogrossense - MT,45.1,45.1,-0.1,True
+parto,p_mediana_k1,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,355.0,355.0,-0.1,True
+parto,p_mediana_k1,510637,Pedra Preta,Sul Matogrossense - MT,29.5,29.5,-0.0,True
+parto,p_mediana_k1,510642,Peixoto de Azevedo,Vale do Peixoto - MT,25.1,25.1,-0.1,True
+parto,p_mediana_k1,510645,Planalto da Serra,Baixada Cuiabana - MT,247.7,247.7,-0.0,True
+parto,p_mediana_k1,510650,Poconé,Baixada Cuiabana - MT,80.7,80.7,-0.0,True
+parto,p_mediana_k1,510665,Pontal do Araguaia,Garças Araguaia - MT,4.1,4.1,-0.0,True
+parto,p_mediana_k1,510670,Ponte Branca,Garças Araguaia - MT,74.1,74.1,-0.0,True
+parto,p_mediana_k1,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,37.8,37.8,-0.0,True
+parto,p_mediana_k1,510677,Porto Alegre do Norte,Araguaia Xingu - MT,55.7,55.7,-0.0,True
+parto,p_mediana_k1,510680,Porto dos Gaúchos,Vale dos Arinos - MT,73.1,73.7,-0.6,True
+parto,p_mediana_k1,510682,Porto Esperidião,Oeste Matogrossense - MT,114.4,114.5,-0.0,True
+parto,p_mediana_k1,510685,Porto Estrela,Médio Norte Matogrossense - MT,56.1,56.2,-0.1,True
+parto,p_mediana_k1,510700,Poxoréo,Sul Matogrossense - MT,51.3,51.3,-0.0,True
+parto,p_mediana_k1,510704,Primavera do Leste,Sul Matogrossense - MT,10.2,10.2,-0.0,True
+parto,p_mediana_k1,510706,Querência,Médio Araguaia - MT,43.6,43.6,-0.0,True
+parto,p_mediana_k1,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,46.7,46.7,-0.0,True
+parto,p_mediana_k1,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,142.1,142.1,-0.1,True
+parto,p_mediana_k1,510718,Ribeirão Cascalheira,Médio Araguaia - MT,96.1,96.1,-0.0,True
+parto,p_mediana_k1,510719,Ribeirãozinho,Garças Araguaia - MT,74.3,74.3,-0.0,True
+parto,p_mediana_k1,510720,Rio Branco,Oeste Matogrossense - MT,129.8,129.9,-0.1,True
+parto,p_mediana_k1,510724,Santa Carmem,Teles Pires - MT,56.3,56.7,-0.4,True
+parto,p_mediana_k1,510726,Santo Afonso,Médio Norte Matogrossense - MT,57.2,57.3,-0.2,True
+parto,p_mediana_k1,510729,São José do Povo,Sul Matogrossense - MT,45.7,45.7,-0.0,True
+parto,p_mediana_k1,510730,São José do Rio Claro,Centro Norte - MT,86.1,86.4,-0.3,True
+parto,p_mediana_k1,510735,São José do Xingu,Araguaia Xingu - MT,227.0,227.2,-0.3,True
+parto,p_mediana_k1,510740,São Pedro da Cipa,Sul Matogrossense - MT,29.7,29.7,-0.0,True
+parto,p_mediana_k1,510760,Rondonópolis,Sul Matogrossense - MT,1.2,1.2,-0.0,True
+parto,p_mediana_k1,510770,Rosário Oeste,Centro Norte - MT,95.9,96.0,-0.1,True
+parto,p_mediana_k1,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,236.6,236.8,-0.2,True
+parto,p_mediana_k1,510775,Salto do Céu,Oeste Matogrossense - MT,150.3,150.3,-0.1,True
+parto,p_mediana_k1,510776,Santa Rita do Trivelato,Teles Pires - MT,168.1,168.9,-0.8,True
+parto,p_mediana_k1,510777,Santa Terezinha,Araguaia Xingu - MT,211.5,211.5,-0.0,True
+parto,p_mediana_k1,510779,Santo Antônio do Leste,Sul Matogrossense - MT,171.2,171.3,-0.1,True
+parto,p_mediana_k1,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,47.2,47.2,-0.0,True
+parto,p_mediana_k1,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,103.4,103.4,-0.0,True
+parto,p_mediana_k1,510787,Sapezal,Médio Norte Matogrossense - MT,74.9,75.0,-0.1,True
+parto,p_mediana_k1,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,277.5,277.6,-0.1,True
+parto,p_mediana_k1,510790,Sinop,Teles Pires - MT,9.5,9.6,-0.1,True
+parto,p_mediana_k1,510792,Sorriso,Teles Pires - MT,5.6,5.7,-0.1,True
+parto,p_mediana_k1,510794,Tabaporã,Vale dos Arinos - MT,106.5,106.9,-0.4,True
+parto,p_mediana_k1,510795,Tangará da Serra,Médio Norte Matogrossense - MT,4.8,4.8,-0.0,True
+parto,p_mediana_k1,510800,Tapurah,Teles Pires - MT,143.9,69.6,74.4,True
+parto,p_mediana_k1,510805,Terra Nova do Norte,Vale do Peixoto - MT,71.1,71.2,-0.2,True
+parto,p_mediana_k1,510810,Tesouro,Sul Matogrossense - MT,141.0,141.0,-0.0,True
+parto,p_mediana_k1,510820,Torixoréu,Garças Araguaia - MT,56.4,56.4,-0.0,True
+parto,p_mediana_k1,510830,União do Sul,Teles Pires - MT,222.2,223.0,-0.8,True
+parto,p_mediana_k1,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,81.4,81.5,-0.1,True
+parto,p_mediana_k1,510840,Várzea Grande,Baixada Cuiabana - MT,11.3,11.3,-0.0,True
+parto,p_mediana_k1,510850,Vera,Teles Pires - MT,77.3,77.8,-0.5,True
+parto,p_mediana_k1,510860,Vila Rica,Araguaia Xingu - MT,39.3,39.3,-0.0,True
+parto,p_mediana_k1,510880,Nova Guarita,Norte Matogrossense - MT,148.9,149.3,-0.4,True
+parto,p_mediana_k1,510885,Nova Marilândia,Médio Norte Matogrossense - MT,56.0,56.2,-0.2,True
+parto,p_mediana_k1,510890,Nova Maringá,Centro Norte - MT,229.1,226.6,2.5,True
+parto,p_mediana_k1,510895,Nova Monte Verde,Alto Tapajós - MT,184.0,184.3,-0.3,True
+parto,p_mediana_k2,510010,Acorizal,Baixada Cuiabana - MT,67.8,67.8,-0.0,True
+parto,p_mediana_k2,510020,Água Boa,Médio Araguaia - MT,14.4,14.4,-0.0,True
+parto,p_mediana_k2,510025,Alta Floresta,Alto Tapajós - MT,16.0,16.1,-0.1,True
+parto,p_mediana_k2,510030,Alto Araguaia,Sul Matogrossense - MT,92.9,92.9,-0.0,True
+parto,p_mediana_k2,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,199.8,200.5,-0.7,True
+parto,p_mediana_k2,510040,Alto Garças,Sul Matogrossense - MT,117.1,117.1,-0.0,True
+parto,p_mediana_k2,510050,Alto Paraguai,Centro Norte - MT,38.1,38.5,-0.5,True
+parto,p_mediana_k2,510060,Alto Taquari,Sul Matogrossense - MT,58.0,58.1,-0.0,True
+parto,p_mediana_k2,510080,Apiacás,Alto Tapajós - MT,115.0,115.1,-0.2,True
+parto,p_mediana_k2,510100,Araguaiana,Garças Araguaia - MT,68.0,68.0,-0.0,True
+parto,p_mediana_k2,510120,Araguainha,Sul Matogrossense - MT,268.2,268.2,-0.0,True
+parto,p_mediana_k2,510125,Araputanga,Oeste Matogrossense - MT,66.9,67.0,-0.0,True
+parto,p_mediana_k2,510130,Arenápolis,Médio Norte Matogrossense - MT,35.4,35.6,-0.2,True
+parto,p_mediana_k2,510140,Aripuanã,Noroeste Matogrossense - MT,96.7,96.7,-0.0,True
+parto,p_mediana_k2,510160,Barão de Melgaço,Baixada Cuiabana - MT,113.4,113.4,-0.0,True
+parto,p_mediana_k2,510170,Barra do Bugres,Médio Norte Matogrossense - MT,22.7,22.8,-0.1,True
+parto,p_mediana_k2,510180,Barra do Garças,Garças Araguaia - MT,4.8,4.8,-0.0,True
+parto,p_mediana_k2,510183,Boa Esperança do Norte,Teles Pires - MT,144.8,145.7,-1.0,True
+parto,p_mediana_k2,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,248.9,249.2,-0.3,True
+parto,p_mediana_k2,510190,Brasnorte,Noroeste Matogrossense - MT,53.7,53.9,-0.2,True
+parto,p_mediana_k2,510250,Cáceres,Oeste Matogrossense - MT,11.5,11.5,-0.0,True
+parto,p_mediana_k2,510260,Campinápolis,Garças Araguaia - MT,66.1,66.1,-0.0,True
+parto,p_mediana_k2,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,61.9,62.0,-0.1,True
+parto,p_mediana_k2,510267,Campo Verde,Sul Matogrossense - MT,33.7,33.7,-0.0,True
+parto,p_mediana_k2,510268,Campos de Júlio,Sudoeste Matogrossense - MT,233.2,233.4,-0.2,True
+parto,p_mediana_k2,510269,Canabrava do Norte,Araguaia Xingu - MT,100.7,100.9,-0.2,True
+parto,p_mediana_k2,510270,Canarana,Médio Araguaia - MT,39.3,39.3,-0.0,True
+parto,p_mediana_k2,510279,Carlinda,Alto Tapajós - MT,49.4,50.0,-0.5,True
+parto,p_mediana_k2,510285,Castanheira,Noroeste Matogrossense - MT,61.3,61.6,-0.3,True
+parto,p_mediana_k2,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,68.5,68.5,-0.0,True
+parto,p_mediana_k2,510305,Cláudia,Teles Pires - MT,121.0,121.4,-0.4,True
+parto,p_mediana_k2,510310,Cocalinho,Médio Araguaia - MT,202.0,202.0,-0.0,True
+parto,p_mediana_k2,510320,Colíder,Norte Matogrossense - MT,19.8,20.9,-1.1,True
+parto,p_mediana_k2,510325,Colniza,Noroeste Matogrossense - MT,74.1,74.1,-0.0,True
+parto,p_mediana_k2,510330,Comodoro,Sudoeste Matogrossense - MT,91.4,91.5,-0.1,True
+parto,p_mediana_k2,510335,Confresa,Araguaia Xingu - MT,26.7,26.7,-0.0,True
+parto,p_mediana_k2,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,124.2,124.4,-0.2,True
+parto,p_mediana_k2,510337,Cotriguaçu,Noroeste Matogrossense - MT,190.4,190.4,-0.1,True
+parto,p_mediana_k2,510340,Cuiabá,Baixada Cuiabana - MT,0.9,0.9,-0.0,True
+parto,p_mediana_k2,510343,Curvelândia,Oeste Matogrossense - MT,72.4,72.5,-0.0,True
+parto,p_mediana_k2,510345,Denise,Médio Norte Matogrossense - MT,63.7,63.8,-0.2,True
+parto,p_mediana_k2,510350,Diamantino,Centro Norte - MT,38.7,38.9,-0.2,True
+parto,p_mediana_k2,510360,Dom Aquino,Sul Matogrossense - MT,80.3,80.3,-0.0,True
+parto,p_mediana_k2,510370,Feliz Natal,Teles Pires - MT,149.9,149.9,0.0,True
+parto,p_mediana_k2,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,116.3,116.4,-0.1,True
+parto,p_mediana_k2,510385,Gaúcha do Norte,Médio Araguaia - MT,252.1,252.3,-0.3,True
+parto,p_mediana_k2,510390,General Carneiro,Garças Araguaia - MT,161.3,161.3,-0.0,True
+parto,p_mediana_k2,510395,Glória D'Oeste,Oeste Matogrossense - MT,103.4,103.4,-0.0,True
+parto,p_mediana_k2,510410,Guarantã do Norte,Vale do Peixoto - MT,25.2,25.5,-0.3,True
+parto,p_mediana_k2,510420,Guiratinga,Sul Matogrossense - MT,115.2,115.2,-0.0,True
+parto,p_mediana_k2,510450,Indiavaí,Oeste Matogrossense - MT,128.8,128.8,-0.1,True
+parto,p_mediana_k2,510452,Ipiranga do Norte,Teles Pires - MT,81.8,82.3,-0.5,True
+parto,p_mediana_k2,510454,Itanhangá,Teles Pires - MT,137.7,132.6,5.1,True
+parto,p_mediana_k2,510455,Itaúba,Norte Matogrossense - MT,73.5,75.1,-1.6,True
+parto,p_mediana_k2,510460,Itiquira,Sul Matogrossense - MT,151.1,151.1,-0.0,True
+parto,p_mediana_k2,510480,Jaciara,Sul Matogrossense - MT,21.1,21.1,-0.0,True
+parto,p_mediana_k2,510490,Jangada,Baixada Cuiabana - MT,83.1,83.1,-0.0,True
+parto,p_mediana_k2,510500,Jauru,Sudoeste Matogrossense - MT,132.1,132.1,-0.1,True
+parto,p_mediana_k2,510510,Juara,Vale dos Arinos - MT,35.1,35.3,-0.2,True
+parto,p_mediana_k2,510515,Juína,Noroeste Matogrossense - MT,17.2,17.2,-0.0,True
+parto,p_mediana_k2,510517,Juruena,Noroeste Matogrossense - MT,52.4,52.6,-0.1,True
+parto,p_mediana_k2,510520,Juscimeira,Sul Matogrossense - MT,40.9,40.9,-0.0,True
+parto,p_mediana_k2,510523,Lambari D'Oeste,Oeste Matogrossense - MT,121.6,121.7,-0.1,True
+parto,p_mediana_k2,510525,Lucas do Rio Verde,Teles Pires - MT,8.5,9.0,-0.5,True
+parto,p_mediana_k2,510530,Luciára,Norte Araguaia Karajá - MT,218.6,219.2,-0.6,True
+parto,p_mediana_k2,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,37.1,37.1,-0.0,True
+parto,p_mediana_k2,510558,Marcelândia,Norte Matogrossense - MT,120.2,21.7,98.5,True
+parto,p_mediana_k2,510560,Matupá,Vale do Peixoto - MT,28.3,28.5,-0.2,True
+parto,p_mediana_k2,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,39.7,39.7,-0.0,True
+parto,p_mediana_k2,510590,Nobres,Centro Norte - MT,114.3,114.5,-0.1,True
+parto,p_mediana_k2,510600,Nortelândia,Centro Norte - MT,72.0,72.4,-0.4,True
+parto,p_mediana_k2,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,40.3,40.3,-0.0,True
+parto,p_mediana_k2,510615,Nova Bandeirantes,Alto Tapajós - MT,177.9,178.2,-0.3,True
+parto,p_mediana_k2,510617,Nova Nazaré,Médio Araguaia - MT,64.6,64.7,-0.1,True
+parto,p_mediana_k2,510618,Nova Lacerda,Sudoeste Matogrossense - MT,139.8,140.0,-0.2,True
+parto,p_mediana_k2,510619,Nova Santa Helena,Norte Matogrossense - MT,60.3,62.5,-2.1,True
+parto,p_mediana_k2,510620,Nova Brasilândia,Baixada Cuiabana - MT,161.2,161.3,-0.1,True
+parto,p_mediana_k2,510621,Nova Canaã do Norte,Norte Matogrossense - MT,72.2,76.7,-4.5,True
+parto,p_mediana_k2,510622,Nova Mutum,Teles Pires - MT,21.7,22.3,-0.5,True
+parto,p_mediana_k2,510623,Nova Olímpia,Médio Norte Matogrossense - MT,12.4,12.4,-0.1,True
+parto,p_mediana_k2,510624,Nova Ubiratã,Teles Pires - MT,105.8,106.6,-0.9,True
+parto,p_mediana_k2,510625,Nova Xavantina,Garças Araguaia - MT,10.5,10.5,-0.0,True
+parto,p_mediana_k2,510626,Novo Mundo,Vale do Peixoto - MT,93.3,94.0,-0.7,True
+parto,p_mediana_k2,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,38.4,39.3,-0.9,True
+parto,p_mediana_k2,510628,Novo São Joaquim,Garças Araguaia - MT,45.3,45.3,-0.0,True
+parto,p_mediana_k2,510629,Paranaíta,Alto Tapajós - MT,14.7,15.1,-0.4,True
+parto,p_mediana_k2,510630,Paranatinga,Sul Matogrossense - MT,45.1,45.1,-0.1,True
+parto,p_mediana_k2,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,355.0,355.3,-0.4,True
+parto,p_mediana_k2,510637,Pedra Preta,Sul Matogrossense - MT,29.5,29.5,-0.0,True
+parto,p_mediana_k2,510642,Peixoto de Azevedo,Vale do Peixoto - MT,25.1,25.3,-0.3,True
+parto,p_mediana_k2,510645,Planalto da Serra,Baixada Cuiabana - MT,247.7,247.7,-0.1,True
+parto,p_mediana_k2,510650,Poconé,Baixada Cuiabana - MT,80.7,80.7,-0.0,True
+parto,p_mediana_k2,510665,Pontal do Araguaia,Garças Araguaia - MT,4.1,4.1,-0.0,True
+parto,p_mediana_k2,510670,Ponte Branca,Garças Araguaia - MT,74.1,74.1,-0.0,True
+parto,p_mediana_k2,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,37.8,37.8,-0.0,True
+parto,p_mediana_k2,510677,Porto Alegre do Norte,Araguaia Xingu - MT,55.7,55.8,-0.1,True
+parto,p_mediana_k2,510680,Porto dos Gaúchos,Vale dos Arinos - MT,73.1,73.9,-0.8,True
+parto,p_mediana_k2,510682,Porto Esperidião,Oeste Matogrossense - MT,114.4,114.5,-0.0,True
+parto,p_mediana_k2,510685,Porto Estrela,Médio Norte Matogrossense - MT,56.1,56.2,-0.1,True
+parto,p_mediana_k2,510700,Poxoréo,Sul Matogrossense - MT,51.3,51.3,-0.0,True
+parto,p_mediana_k2,510704,Primavera do Leste,Sul Matogrossense - MT,10.2,10.2,-0.0,True
+parto,p_mediana_k2,510706,Querência,Médio Araguaia - MT,43.6,43.6,-0.0,True
+parto,p_mediana_k2,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,46.7,46.7,-0.0,True
+parto,p_mediana_k2,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,142.1,142.2,-0.1,True
+parto,p_mediana_k2,510718,Ribeirão Cascalheira,Médio Araguaia - MT,96.1,96.1,-0.1,True
+parto,p_mediana_k2,510719,Ribeirãozinho,Garças Araguaia - MT,74.3,74.3,-0.0,True
+parto,p_mediana_k2,510720,Rio Branco,Oeste Matogrossense - MT,129.8,129.9,-0.1,True
+parto,p_mediana_k2,510724,Santa Carmem,Teles Pires - MT,56.3,56.8,-0.5,True
+parto,p_mediana_k2,510726,Santo Afonso,Médio Norte Matogrossense - MT,57.2,57.4,-0.2,True
+parto,p_mediana_k2,510729,São José do Povo,Sul Matogrossense - MT,45.7,45.7,-0.0,True
+parto,p_mediana_k2,510730,São José do Rio Claro,Centro Norte - MT,86.1,86.4,-0.3,True
+parto,p_mediana_k2,510735,São José do Xingu,Araguaia Xingu - MT,227.0,228.6,-1.7,True
+parto,p_mediana_k2,510740,São Pedro da Cipa,Sul Matogrossense - MT,29.7,29.7,-0.0,True
+parto,p_mediana_k2,510760,Rondonópolis,Sul Matogrossense - MT,1.2,1.2,-0.0,True
+parto,p_mediana_k2,510770,Rosário Oeste,Centro Norte - MT,95.9,96.0,-0.1,True
+parto,p_mediana_k2,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,236.6,237.9,-1.3,True
+parto,p_mediana_k2,510775,Salto do Céu,Oeste Matogrossense - MT,150.3,150.4,-0.1,True
+parto,p_mediana_k2,510776,Santa Rita do Trivelato,Teles Pires - MT,168.1,169.0,-0.9,True
+parto,p_mediana_k2,510777,Santa Terezinha,Araguaia Xingu - MT,211.5,211.5,-0.1,True
+parto,p_mediana_k2,510779,Santo Antônio do Leste,Sul Matogrossense - MT,171.2,171.3,-0.1,True
+parto,p_mediana_k2,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,47.2,47.2,-0.0,True
+parto,p_mediana_k2,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,103.4,103.4,-0.0,True
+parto,p_mediana_k2,510787,Sapezal,Médio Norte Matogrossense - MT,74.9,75.0,-0.1,True
+parto,p_mediana_k2,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,277.5,278.1,-0.6,True
+parto,p_mediana_k2,510790,Sinop,Teles Pires - MT,9.5,9.6,-0.1,True
+parto,p_mediana_k2,510792,Sorriso,Teles Pires - MT,5.6,5.7,-0.1,True
+parto,p_mediana_k2,510794,Tabaporã,Vale dos Arinos - MT,106.5,107.1,-0.6,True
+parto,p_mediana_k2,510795,Tangará da Serra,Médio Norte Matogrossense - MT,4.8,4.8,-0.0,True
+parto,p_mediana_k2,510800,Tapurah,Teles Pires - MT,143.9,69.6,74.3,True
+parto,p_mediana_k2,510805,Terra Nova do Norte,Vale do Peixoto - MT,71.1,71.5,-0.4,True
+parto,p_mediana_k2,510810,Tesouro,Sul Matogrossense - MT,141.0,141.0,-0.0,True
+parto,p_mediana_k2,510820,Torixoréu,Garças Araguaia - MT,56.4,56.4,-0.0,True
+parto,p_mediana_k2,510830,União do Sul,Teles Pires - MT,222.2,222.3,-0.0,True
+parto,p_mediana_k2,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,81.4,81.5,-0.1,True
+parto,p_mediana_k2,510840,Várzea Grande,Baixada Cuiabana - MT,11.3,11.3,-0.0,True
+parto,p_mediana_k2,510850,Vera,Teles Pires - MT,77.3,77.9,-0.6,True
+parto,p_mediana_k2,510860,Vila Rica,Araguaia Xingu - MT,39.3,39.4,-0.1,True
+parto,p_mediana_k2,510880,Nova Guarita,Norte Matogrossense - MT,148.9,150.0,-1.2,True
+parto,p_mediana_k2,510885,Nova Marilândia,Médio Norte Matogrossense - MT,56.0,56.3,-0.3,True
+parto,p_mediana_k2,510890,Nova Maringá,Centro Norte - MT,229.1,226.7,2.3,True
+parto,p_mediana_k2,510895,Nova Monte Verde,Alto Tapajós - MT,184.0,184.8,-0.8,True
+parto,p_mediana_k3,510010,Acorizal,Baixada Cuiabana - MT,67.8,67.8,-0.0,True
+parto,p_mediana_k3,510020,Água Boa,Médio Araguaia - MT,14.4,14.4,-0.0,True
+parto,p_mediana_k3,510025,Alta Floresta,Alto Tapajós - MT,16.0,16.1,-0.1,True
+parto,p_mediana_k3,510030,Alto Araguaia,Sul Matogrossense - MT,92.9,93.0,-0.0,True
+parto,p_mediana_k3,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,199.8,200.6,-0.8,True
+parto,p_mediana_k3,510040,Alto Garças,Sul Matogrossense - MT,117.1,117.2,-0.1,True
+parto,p_mediana_k3,510050,Alto Paraguai,Centro Norte - MT,38.1,42.0,-3.9,True
+parto,p_mediana_k3,510060,Alto Taquari,Sul Matogrossense - MT,58.0,58.1,-0.1,True
+parto,p_mediana_k3,510080,Apiacás,Alto Tapajós - MT,115.0,115.2,-0.2,True
+parto,p_mediana_k3,510100,Araguaiana,Garças Araguaia - MT,68.0,68.1,-0.1,True
+parto,p_mediana_k3,510120,Araguainha,Sul Matogrossense - MT,268.2,268.3,-0.1,True
+parto,p_mediana_k3,510125,Araputanga,Oeste Matogrossense - MT,66.9,67.1,-0.2,True
+parto,p_mediana_k3,510130,Arenápolis,Médio Norte Matogrossense - MT,35.4,36.0,-0.6,True
+parto,p_mediana_k3,510140,Aripuanã,Noroeste Matogrossense - MT,96.7,96.7,-0.0,True
+parto,p_mediana_k3,510160,Barão de Melgaço,Baixada Cuiabana - MT,113.4,113.4,-0.1,True
+parto,p_mediana_k3,510170,Barra do Bugres,Médio Norte Matogrossense - MT,22.7,23.0,-0.3,True
+parto,p_mediana_k3,510180,Barra do Garças,Garças Araguaia - MT,4.8,4.8,-0.0,True
+parto,p_mediana_k3,510183,Boa Esperança do Norte,Teles Pires - MT,144.8,146.0,-1.2,True
+parto,p_mediana_k3,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,248.9,249.2,-0.4,True
+parto,p_mediana_k3,510190,Brasnorte,Noroeste Matogrossense - MT,53.7,54.0,-0.3,True
+parto,p_mediana_k3,510250,Cáceres,Oeste Matogrossense - MT,11.5,11.5,-0.0,True
+parto,p_mediana_k3,510260,Campinápolis,Garças Araguaia - MT,66.1,66.2,-0.1,True
+parto,p_mediana_k3,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,61.9,62.2,-0.3,True
+parto,p_mediana_k3,510267,Campo Verde,Sul Matogrossense - MT,33.7,33.8,-0.1,True
+parto,p_mediana_k3,510268,Campos de Júlio,Sudoeste Matogrossense - MT,233.2,233.6,-0.5,True
+parto,p_mediana_k3,510269,Canabrava do Norte,Araguaia Xingu - MT,100.7,101.0,-0.3,True
+parto,p_mediana_k3,510270,Canarana,Médio Araguaia - MT,39.3,39.3,-0.0,True
+parto,p_mediana_k3,510279,Carlinda,Alto Tapajós - MT,49.4,50.1,-0.6,True
+parto,p_mediana_k3,510285,Castanheira,Noroeste Matogrossense - MT,61.3,61.8,-0.4,True
+parto,p_mediana_k3,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,68.5,68.6,-0.1,True
+parto,p_mediana_k3,510305,Cláudia,Teles Pires - MT,121.0,121.5,-0.5,True
+parto,p_mediana_k3,510310,Cocalinho,Médio Araguaia - MT,202.0,202.1,-0.1,True
+parto,p_mediana_k3,510320,Colíder,Norte Matogrossense - MT,19.8,20.9,-1.1,True
+parto,p_mediana_k3,510325,Colniza,Noroeste Matogrossense - MT,74.1,74.1,-0.0,True
+parto,p_mediana_k3,510330,Comodoro,Sudoeste Matogrossense - MT,91.4,91.6,-0.2,True
+parto,p_mediana_k3,510335,Confresa,Araguaia Xingu - MT,26.7,26.7,-0.0,True
+parto,p_mediana_k3,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,124.2,124.7,-0.5,True
+parto,p_mediana_k3,510337,Cotriguaçu,Noroeste Matogrossense - MT,190.4,190.5,-0.1,True
+parto,p_mediana_k3,510340,Cuiabá,Baixada Cuiabana - MT,0.9,0.9,-0.0,True
+parto,p_mediana_k3,510343,Curvelândia,Oeste Matogrossense - MT,72.4,72.6,-0.2,True
+parto,p_mediana_k3,510345,Denise,Médio Norte Matogrossense - MT,63.7,64.2,-0.5,True
+parto,p_mediana_k3,510350,Diamantino,Centro Norte - MT,38.7,40.3,-1.6,True
+parto,p_mediana_k3,510360,Dom Aquino,Sul Matogrossense - MT,80.3,80.4,-0.1,True
+parto,p_mediana_k3,510370,Feliz Natal,Teles Pires - MT,149.9,150.0,-0.1,True
+parto,p_mediana_k3,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,116.3,116.8,-0.5,True
+parto,p_mediana_k3,510385,Gaúcha do Norte,Médio Araguaia - MT,252.1,252.5,-0.4,True
+parto,p_mediana_k3,510390,General Carneiro,Garças Araguaia - MT,161.3,161.4,-0.1,True
+parto,p_mediana_k3,510395,Glória D'Oeste,Oeste Matogrossense - MT,103.4,103.5,-0.2,True
+parto,p_mediana_k3,510410,Guarantã do Norte,Vale do Peixoto - MT,25.2,25.6,-0.3,True
+parto,p_mediana_k3,510420,Guiratinga,Sul Matogrossense - MT,115.2,115.3,-0.1,True
+parto,p_mediana_k3,510450,Indiavaí,Oeste Matogrossense - MT,128.8,129.1,-0.3,True
+parto,p_mediana_k3,510452,Ipiranga do Norte,Teles Pires - MT,81.8,82.4,-0.7,True
+parto,p_mediana_k3,510454,Itanhangá,Teles Pires - MT,137.7,132.9,4.9,True
+parto,p_mediana_k3,510455,Itaúba,Norte Matogrossense - MT,73.5,75.3,-1.8,True
+parto,p_mediana_k3,510460,Itiquira,Sul Matogrossense - MT,151.1,151.2,-0.1,True
+parto,p_mediana_k3,510480,Jaciara,Sul Matogrossense - MT,21.1,21.2,-0.1,True
+parto,p_mediana_k3,510490,Jangada,Baixada Cuiabana - MT,83.1,83.1,0.0,True
+parto,p_mediana_k3,510500,Jauru,Sudoeste Matogrossense - MT,132.1,132.3,-0.2,True
+parto,p_mediana_k3,510510,Juara,Vale dos Arinos - MT,35.1,35.4,-0.3,True
+parto,p_mediana_k3,510515,Juína,Noroeste Matogrossense - MT,17.2,17.3,-0.1,True
+parto,p_mediana_k3,510517,Juruena,Noroeste Matogrossense - MT,52.4,52.6,-0.2,True
+parto,p_mediana_k3,510520,Juscimeira,Sul Matogrossense - MT,40.9,41.0,-0.1,True
+parto,p_mediana_k3,510523,Lambari D'Oeste,Oeste Matogrossense - MT,121.6,121.9,-0.4,True
+parto,p_mediana_k3,510525,Lucas do Rio Verde,Teles Pires - MT,8.5,9.1,-0.6,True
+parto,p_mediana_k3,510530,Luciára,Norte Araguaia Karajá - MT,218.6,219.3,-0.7,True
+parto,p_mediana_k3,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,37.1,37.2,-0.1,True
+parto,p_mediana_k3,510558,Marcelândia,Norte Matogrossense - MT,120.2,21.8,98.4,True
+parto,p_mediana_k3,510560,Matupá,Vale do Peixoto - MT,28.3,28.5,-0.3,True
+parto,p_mediana_k3,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,39.7,39.7,-0.1,True
+parto,p_mediana_k3,510590,Nobres,Centro Norte - MT,114.3,60.2,54.2,True
+parto,p_mediana_k3,510600,Nortelândia,Centro Norte - MT,72.0,74.3,-2.4,True
+parto,p_mediana_k3,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,40.3,40.4,-0.0,True
+parto,p_mediana_k3,510615,Nova Bandeirantes,Alto Tapajós - MT,177.9,178.2,-0.3,True
+parto,p_mediana_k3,510617,Nova Nazaré,Médio Araguaia - MT,64.6,64.8,-0.2,True
+parto,p_mediana_k3,510618,Nova Lacerda,Sudoeste Matogrossense - MT,139.8,140.3,-0.5,True
+parto,p_mediana_k3,510619,Nova Santa Helena,Norte Matogrossense - MT,60.3,62.7,-2.4,True
+parto,p_mediana_k3,510620,Nova Brasilândia,Baixada Cuiabana - MT,161.2,161.4,-0.1,True
+parto,p_mediana_k3,510621,Nova Canaã do Norte,Norte Matogrossense - MT,72.2,77.0,-4.8,True
+parto,p_mediana_k3,510622,Nova Mutum,Teles Pires - MT,21.7,22.4,-0.7,True
+parto,p_mediana_k3,510623,Nova Olímpia,Médio Norte Matogrossense - MT,12.4,12.6,-0.2,True
+parto,p_mediana_k3,510624,Nova Ubiratã,Teles Pires - MT,105.8,106.8,-1.1,True
+parto,p_mediana_k3,510625,Nova Xavantina,Garças Araguaia - MT,10.5,10.6,-0.1,True
+parto,p_mediana_k3,510626,Novo Mundo,Vale do Peixoto - MT,93.3,94.2,-0.9,True
+parto,p_mediana_k3,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,38.4,39.6,-1.2,True
+parto,p_mediana_k3,510628,Novo São Joaquim,Garças Araguaia - MT,45.3,45.4,-0.1,True
+parto,p_mediana_k3,510629,Paranaíta,Alto Tapajós - MT,14.7,15.1,-0.5,True
+parto,p_mediana_k3,510630,Paranatinga,Sul Matogrossense - MT,45.1,45.2,-0.2,True
+parto,p_mediana_k3,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,355.0,355.5,-0.5,True
+parto,p_mediana_k3,510637,Pedra Preta,Sul Matogrossense - MT,29.5,29.6,-0.0,True
+parto,p_mediana_k3,510642,Peixoto de Azevedo,Vale do Peixoto - MT,25.1,25.4,-0.3,True
+parto,p_mediana_k3,510645,Planalto da Serra,Baixada Cuiabana - MT,247.7,247.8,-0.1,True
+parto,p_mediana_k3,510650,Poconé,Baixada Cuiabana - MT,80.7,80.7,-0.1,True
+parto,p_mediana_k3,510665,Pontal do Araguaia,Garças Araguaia - MT,4.1,4.1,-0.0,True
+parto,p_mediana_k3,510670,Ponte Branca,Garças Araguaia - MT,74.1,74.3,-0.2,True
+parto,p_mediana_k3,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,37.8,37.8,-0.0,True
+parto,p_mediana_k3,510677,Porto Alegre do Norte,Araguaia Xingu - MT,55.7,55.8,-0.1,True
+parto,p_mediana_k3,510680,Porto dos Gaúchos,Vale dos Arinos - MT,73.1,74.2,-1.1,True
+parto,p_mediana_k3,510682,Porto Esperidião,Oeste Matogrossense - MT,114.4,114.6,-0.2,True
+parto,p_mediana_k3,510685,Porto Estrela,Médio Norte Matogrossense - MT,56.1,56.7,-0.6,True
+parto,p_mediana_k3,510700,Poxoréo,Sul Matogrossense - MT,51.3,51.4,-0.1,True
+parto,p_mediana_k3,510704,Primavera do Leste,Sul Matogrossense - MT,10.2,10.2,-0.0,True
+parto,p_mediana_k3,510706,Querência,Médio Araguaia - MT,43.6,43.6,-0.0,True
+parto,p_mediana_k3,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,46.7,46.8,-0.1,True
+parto,p_mediana_k3,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,142.1,142.5,-0.4,True
+parto,p_mediana_k3,510718,Ribeirão Cascalheira,Médio Araguaia - MT,96.1,96.1,-0.1,True
+parto,p_mediana_k3,510719,Ribeirãozinho,Garças Araguaia - MT,74.3,74.4,-0.1,True
+parto,p_mediana_k3,510720,Rio Branco,Oeste Matogrossense - MT,129.8,130.2,-0.3,True
+parto,p_mediana_k3,510724,Santa Carmem,Teles Pires - MT,56.3,56.9,-0.6,True
+parto,p_mediana_k3,510726,Santo Afonso,Médio Norte Matogrossense - MT,57.2,57.8,-0.6,True
+parto,p_mediana_k3,510729,São José do Povo,Sul Matogrossense - MT,45.7,45.7,-0.1,True
+parto,p_mediana_k3,510730,São José do Rio Claro,Centro Norte - MT,86.1,88.1,-2.0,True
+parto,p_mediana_k3,510735,São José do Xingu,Araguaia Xingu - MT,227.0,228.8,-1.9,True
+parto,p_mediana_k3,510740,São Pedro da Cipa,Sul Matogrossense - MT,29.7,29.8,-0.1,True
+parto,p_mediana_k3,510760,Rondonópolis,Sul Matogrossense - MT,1.2,1.2,-0.0,True
+parto,p_mediana_k3,510770,Rosário Oeste,Centro Norte - MT,95.9,85.5,10.4,True
+parto,p_mediana_k3,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,236.6,238.0,-1.4,True
+parto,p_mediana_k3,510775,Salto do Céu,Oeste Matogrossense - MT,150.3,150.6,-0.3,True
+parto,p_mediana_k3,510776,Santa Rita do Trivelato,Teles Pires - MT,168.1,169.2,-1.2,True
+parto,p_mediana_k3,510777,Santa Terezinha,Araguaia Xingu - MT,211.5,211.5,-0.1,True
+parto,p_mediana_k3,510779,Santo Antônio do Leste,Sul Matogrossense - MT,171.2,171.4,-0.2,True
+parto,p_mediana_k3,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,47.2,47.3,-0.0,True
+parto,p_mediana_k3,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,103.4,103.4,-0.0,True
+parto,p_mediana_k3,510787,Sapezal,Médio Norte Matogrossense - MT,74.9,75.2,-0.2,True
+parto,p_mediana_k3,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,277.5,278.3,-0.8,True
+parto,p_mediana_k3,510790,Sinop,Teles Pires - MT,9.5,9.6,-0.1,True
+parto,p_mediana_k3,510792,Sorriso,Teles Pires - MT,5.6,5.7,-0.2,True
+parto,p_mediana_k3,510794,Tabaporã,Vale dos Arinos - MT,106.5,107.3,-0.8,True
+parto,p_mediana_k3,510795,Tangará da Serra,Médio Norte Matogrossense - MT,4.8,4.8,-0.1,True
+parto,p_mediana_k3,510800,Tapurah,Teles Pires - MT,143.9,69.8,74.2,True
+parto,p_mediana_k3,510805,Terra Nova do Norte,Vale do Peixoto - MT,71.1,71.6,-0.6,True
+parto,p_mediana_k3,510810,Tesouro,Sul Matogrossense - MT,141.0,141.1,-0.1,True
+parto,p_mediana_k3,510820,Torixoréu,Garças Araguaia - MT,56.4,56.4,-0.1,True
+parto,p_mediana_k3,510830,União do Sul,Teles Pires - MT,222.2,222.5,-0.2,True
+parto,p_mediana_k3,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,81.4,81.7,-0.3,True
+parto,p_mediana_k3,510840,Várzea Grande,Baixada Cuiabana - MT,11.3,11.3,-0.0,True
+parto,p_mediana_k3,510850,Vera,Teles Pires - MT,77.3,78.0,-0.7,True
+parto,p_mediana_k3,510860,Vila Rica,Araguaia Xingu - MT,39.3,39.4,-0.1,True
+parto,p_mediana_k3,510880,Nova Guarita,Norte Matogrossense - MT,148.9,150.4,-1.5,True
+parto,p_mediana_k3,510885,Nova Marilândia,Médio Norte Matogrossense - MT,56.0,56.8,-0.8,True
+parto,p_mediana_k3,510890,Nova Maringá,Centro Norte - MT,229.1,227.2,1.8,True
+parto,p_mediana_k3,510895,Nova Monte Verde,Alto Tapajós - MT,184.0,184.9,-0.9,True
+parto,mclp60_k1,510010,Acorizal,Baixada Cuiabana - MT,67.8,67.8,0.0,True
+parto,mclp60_k1,510020,Água Boa,Médio Araguaia - MT,14.4,14.4,-0.0,True
+parto,mclp60_k1,510025,Alta Floresta,Alto Tapajós - MT,16.0,16.0,-0.0,True
+parto,mclp60_k1,510030,Alto Araguaia,Sul Matogrossense - MT,92.9,93.0,-0.0,True
+parto,mclp60_k1,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,199.8,199.9,-0.1,True
+parto,mclp60_k1,510040,Alto Garças,Sul Matogrossense - MT,117.1,117.2,-0.1,True
+parto,mclp60_k1,510050,Alto Paraguai,Centro Norte - MT,38.1,41.2,-3.2,True
+parto,mclp60_k1,510060,Alto Taquari,Sul Matogrossense - MT,58.0,58.1,-0.1,True
+parto,mclp60_k1,510080,Apiacás,Alto Tapajós - MT,115.0,115.0,-0.0,True
+parto,mclp60_k1,510100,Araguaiana,Garças Araguaia - MT,68.0,68.1,-0.1,True
+parto,mclp60_k1,510120,Araguainha,Sul Matogrossense - MT,268.2,268.3,-0.1,True
+parto,mclp60_k1,510125,Araputanga,Oeste Matogrossense - MT,66.9,67.1,-0.1,True
+parto,mclp60_k1,510130,Arenápolis,Médio Norte Matogrossense - MT,35.4,35.8,-0.3,True
+parto,mclp60_k1,510140,Aripuanã,Noroeste Matogrossense - MT,96.7,96.7,-0.0,True
+parto,mclp60_k1,510160,Barão de Melgaço,Baixada Cuiabana - MT,113.4,113.4,-0.0,True
+parto,mclp60_k1,510170,Barra do Bugres,Médio Norte Matogrossense - MT,22.7,22.9,-0.2,True
+parto,mclp60_k1,510180,Barra do Garças,Garças Araguaia - MT,4.8,4.8,-0.0,True
+parto,mclp60_k1,510183,Boa Esperança do Norte,Teles Pires - MT,144.8,145.0,-0.2,True
+parto,mclp60_k1,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,248.9,248.9,-0.1,True
+parto,mclp60_k1,510190,Brasnorte,Noroeste Matogrossense - MT,53.7,53.8,-0.1,True
+parto,mclp60_k1,510250,Cáceres,Oeste Matogrossense - MT,11.5,11.5,-0.0,True
+parto,mclp60_k1,510260,Campinápolis,Garças Araguaia - MT,66.1,66.1,-0.1,True
+parto,mclp60_k1,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,61.9,62.0,-0.1,True
+parto,mclp60_k1,510267,Campo Verde,Sul Matogrossense - MT,33.7,33.7,-0.1,True
+parto,mclp60_k1,510268,Campos de Júlio,Sudoeste Matogrossense - MT,233.2,233.4,-0.2,True
+parto,mclp60_k1,510269,Canabrava do Norte,Araguaia Xingu - MT,100.7,100.7,-0.0,True
+parto,mclp60_k1,510270,Canarana,Médio Araguaia - MT,39.3,39.3,-0.0,True
+parto,mclp60_k1,510279,Carlinda,Alto Tapajós - MT,49.4,49.5,-0.1,True
+parto,mclp60_k1,510285,Castanheira,Noroeste Matogrossense - MT,61.3,61.5,-0.1,True
+parto,mclp60_k1,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,68.5,68.5,-0.0,True
+parto,mclp60_k1,510305,Cláudia,Teles Pires - MT,121.0,121.1,-0.1,True
+parto,mclp60_k1,510310,Cocalinho,Médio Araguaia - MT,202.0,202.1,-0.0,True
+parto,mclp60_k1,510320,Colíder,Norte Matogrossense - MT,19.8,19.9,-0.0,True
+parto,mclp60_k1,510325,Colniza,Noroeste Matogrossense - MT,74.1,74.1,-0.0,True
+parto,mclp60_k1,510330,Comodoro,Sudoeste Matogrossense - MT,91.4,91.5,-0.1,True
+parto,mclp60_k1,510335,Confresa,Araguaia Xingu - MT,26.7,26.7,-0.0,True
+parto,mclp60_k1,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,124.2,124.5,-0.2,True
+parto,mclp60_k1,510337,Cotriguaçu,Noroeste Matogrossense - MT,190.4,190.4,-0.0,True
+parto,mclp60_k1,510340,Cuiabá,Baixada Cuiabana - MT,0.9,0.9,-0.0,True
+parto,mclp60_k1,510343,Curvelândia,Oeste Matogrossense - MT,72.4,72.6,-0.2,True
+parto,mclp60_k1,510345,Denise,Médio Norte Matogrossense - MT,63.7,64.0,-0.3,True
+parto,mclp60_k1,510350,Diamantino,Centro Norte - MT,38.7,40.0,-1.4,True
+parto,mclp60_k1,510360,Dom Aquino,Sul Matogrossense - MT,80.3,80.4,-0.1,True
+parto,mclp60_k1,510370,Feliz Natal,Teles Pires - MT,149.9,150.1,-0.1,True
+parto,mclp60_k1,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,116.3,116.6,-0.4,True
+parto,mclp60_k1,510385,Gaúcha do Norte,Médio Araguaia - MT,252.1,252.2,-0.1,True
+parto,mclp60_k1,510390,General Carneiro,Garças Araguaia - MT,161.3,161.4,-0.1,True
+parto,mclp60_k1,510395,Glória D'Oeste,Oeste Matogrossense - MT,103.4,103.5,-0.1,True
+parto,mclp60_k1,510410,Guarantã do Norte,Vale do Peixoto - MT,25.2,25.3,-0.0,True
+parto,mclp60_k1,510420,Guiratinga,Sul Matogrossense - MT,115.2,115.2,-0.1,True
+parto,mclp60_k1,510450,Indiavaí,Oeste Matogrossense - MT,128.8,129.0,-0.2,True
+parto,mclp60_k1,510452,Ipiranga do Norte,Teles Pires - MT,81.8,81.9,-0.1,True
+parto,mclp60_k1,510454,Itanhangá,Teles Pires - MT,137.7,137.9,-0.2,True
+parto,mclp60_k1,510455,Itaúba,Norte Matogrossense - MT,73.5,73.7,-0.2,True
+parto,mclp60_k1,510460,Itiquira,Sul Matogrossense - MT,151.1,151.1,-0.1,True
+parto,mclp60_k1,510480,Jaciara,Sul Matogrossense - MT,21.1,21.2,-0.1,True
+parto,mclp60_k1,510490,Jangada,Baixada Cuiabana - MT,83.1,83.0,0.1,True
+parto,mclp60_k1,510500,Jauru,Sudoeste Matogrossense - MT,132.1,132.3,-0.2,True
+parto,mclp60_k1,510510,Juara,Vale dos Arinos - MT,35.1,35.2,-0.0,True
+parto,mclp60_k1,510515,Juína,Noroeste Matogrossense - MT,17.2,17.2,-0.0,True
+parto,mclp60_k1,510517,Juruena,Noroeste Matogrossense - MT,52.4,52.5,-0.0,True
+parto,mclp60_k1,510520,Juscimeira,Sul Matogrossense - MT,40.9,41.0,-0.1,True
+parto,mclp60_k1,510523,Lambari D'Oeste,Oeste Matogrossense - MT,121.6,121.8,-0.2,True
+parto,mclp60_k1,510525,Lucas do Rio Verde,Teles Pires - MT,8.5,8.6,-0.1,True
+parto,mclp60_k1,510530,Luciára,Norte Araguaia Karajá - MT,218.6,218.7,-0.1,True
+parto,mclp60_k1,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,37.1,37.2,-0.1,True
+parto,mclp60_k1,510558,Marcelândia,Norte Matogrossense - MT,120.2,120.4,-0.2,True
+parto,mclp60_k1,510560,Matupá,Vale do Peixoto - MT,28.3,28.3,-0.0,True
+parto,mclp60_k1,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,39.7,39.7,-0.1,True
+parto,mclp60_k1,510590,Nobres,Centro Norte - MT,114.3,103.0,11.4,True
+parto,mclp60_k1,510600,Nortelândia,Centro Norte - MT,72.0,74.0,-2.0,True
+parto,mclp60_k1,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,40.3,40.4,-0.0,True
+parto,mclp60_k1,510615,Nova Bandeirantes,Alto Tapajós - MT,177.9,177.9,-0.0,True
+parto,mclp60_k1,510617,Nova Nazaré,Médio Araguaia - MT,64.6,64.7,-0.1,True
+parto,mclp60_k1,510618,Nova Lacerda,Sudoeste Matogrossense - MT,139.8,140.0,-0.2,True
+parto,mclp60_k1,510619,Nova Santa Helena,Norte Matogrossense - MT,60.3,60.5,-0.2,True
+parto,mclp60_k1,510620,Nova Brasilândia,Baixada Cuiabana - MT,161.2,161.3,-0.1,True
+parto,mclp60_k1,510621,Nova Canaã do Norte,Norte Matogrossense - MT,72.2,72.4,-0.2,True
+parto,mclp60_k1,510622,Nova Mutum,Teles Pires - MT,21.7,21.9,-0.1,True
+parto,mclp60_k1,510623,Nova Olímpia,Médio Norte Matogrossense - MT,12.4,12.6,-0.2,True
+parto,mclp60_k1,510624,Nova Ubiratã,Teles Pires - MT,105.8,105.9,-0.2,True
+parto,mclp60_k1,510625,Nova Xavantina,Garças Araguaia - MT,10.5,10.5,-0.0,True
+parto,mclp60_k1,510626,Novo Mundo,Vale do Peixoto - MT,93.3,93.4,-0.1,True
+parto,mclp60_k1,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,38.4,38.6,-0.2,True
+parto,mclp60_k1,510628,Novo São Joaquim,Garças Araguaia - MT,45.3,45.4,-0.1,True
+parto,mclp60_k1,510629,Paranaíta,Alto Tapajós - MT,14.7,14.7,-0.0,True
+parto,mclp60_k1,510630,Paranatinga,Sul Matogrossense - MT,45.1,45.2,-0.1,True
+parto,mclp60_k1,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,355.0,355.1,-0.1,True
+parto,mclp60_k1,510637,Pedra Preta,Sul Matogrossense - MT,29.5,29.6,-0.0,True
+parto,mclp60_k1,510642,Peixoto de Azevedo,Vale do Peixoto - MT,25.1,25.1,-0.0,True
+parto,mclp60_k1,510645,Planalto da Serra,Baixada Cuiabana - MT,247.7,247.7,-0.0,True
+parto,mclp60_k1,510650,Poconé,Baixada Cuiabana - MT,80.7,80.7,-0.1,True
+parto,mclp60_k1,510665,Pontal do Araguaia,Garças Araguaia - MT,4.1,4.1,-0.0,True
+parto,mclp60_k1,510670,Ponte Branca,Garças Araguaia - MT,74.1,74.2,-0.2,True
+parto,mclp60_k1,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,37.8,37.8,-0.0,True
+parto,mclp60_k1,510677,Porto Alegre do Norte,Araguaia Xingu - MT,55.7,55.7,-0.0,True
+parto,mclp60_k1,510680,Porto dos Gaúchos,Vale dos Arinos - MT,73.1,73.3,-0.2,True
+parto,mclp60_k1,510682,Porto Esperidião,Oeste Matogrossense - MT,114.4,114.6,-0.2,True
+parto,mclp60_k1,510685,Porto Estrela,Médio Norte Matogrossense - MT,56.1,56.5,-0.4,True
+parto,mclp60_k1,510700,Poxoréo,Sul Matogrossense - MT,51.3,51.3,-0.0,True
+parto,mclp60_k1,510704,Primavera do Leste,Sul Matogrossense - MT,10.2,10.2,-0.0,True
+parto,mclp60_k1,510706,Querência,Médio Araguaia - MT,43.6,43.6,-0.0,True
+parto,mclp60_k1,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,46.7,46.7,-0.1,True
+parto,mclp60_k1,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,142.1,142.3,-0.3,True
+parto,mclp60_k1,510718,Ribeirão Cascalheira,Médio Araguaia - MT,96.1,96.1,-0.0,True
+parto,mclp60_k1,510719,Ribeirãozinho,Garças Araguaia - MT,74.3,74.4,-0.1,True
+parto,mclp60_k1,510720,Rio Branco,Oeste Matogrossense - MT,129.8,130.0,-0.2,True
+parto,mclp60_k1,510724,Santa Carmem,Teles Pires - MT,56.3,56.4,-0.1,True
+parto,mclp60_k1,510726,Santo Afonso,Médio Norte Matogrossense - MT,57.2,57.5,-0.4,True
+parto,mclp60_k1,510729,São José do Povo,Sul Matogrossense - MT,45.7,45.7,-0.0,True
+parto,mclp60_k1,510730,São José do Rio Claro,Centro Norte - MT,86.1,87.6,-1.5,True
+parto,mclp60_k1,510735,São José do Xingu,Araguaia Xingu - MT,227.0,227.1,-0.2,True
+parto,mclp60_k1,510740,São Pedro da Cipa,Sul Matogrossense - MT,29.7,29.8,-0.1,True
+parto,mclp60_k1,510760,Rondonópolis,Sul Matogrossense - MT,1.2,1.2,-0.0,True
+parto,mclp60_k1,510770,Rosário Oeste,Centro Norte - MT,95.9,64.8,31.1,True
+parto,mclp60_k1,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,236.6,236.7,-0.1,True
+parto,mclp60_k1,510775,Salto do Céu,Oeste Matogrossense - MT,150.3,150.5,-0.2,True
+parto,mclp60_k1,510776,Santa Rita do Trivelato,Teles Pires - MT,168.1,168.3,-0.2,True
+parto,mclp60_k1,510777,Santa Terezinha,Araguaia Xingu - MT,211.5,211.5,-0.0,True
+parto,mclp60_k1,510779,Santo Antônio do Leste,Sul Matogrossense - MT,171.2,171.4,-0.1,True
+parto,mclp60_k1,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,47.2,47.3,-0.0,True
+parto,mclp60_k1,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,103.4,103.4,-0.0,True
+parto,mclp60_k1,510787,Sapezal,Médio Norte Matogrossense - MT,74.9,75.0,-0.1,True
+parto,mclp60_k1,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,277.5,277.6,-0.2,True
+parto,mclp60_k1,510790,Sinop,Teles Pires - MT,9.5,9.5,-0.0,True
+parto,mclp60_k1,510792,Sorriso,Teles Pires - MT,5.6,5.6,-0.0,True
+parto,mclp60_k1,510794,Tabaporã,Vale dos Arinos - MT,106.5,106.6,-0.2,True
+parto,mclp60_k1,510795,Tangará da Serra,Médio Norte Matogrossense - MT,4.8,4.8,-0.0,True
+parto,mclp60_k1,510800,Tapurah,Teles Pires - MT,143.9,144.1,-0.2,True
+parto,mclp60_k1,510805,Terra Nova do Norte,Vale do Peixoto - MT,71.1,71.2,-0.1,True
+parto,mclp60_k1,510810,Tesouro,Sul Matogrossense - MT,141.0,141.1,-0.1,True
+parto,mclp60_k1,510820,Torixoréu,Garças Araguaia - MT,56.4,56.4,-0.1,True
+parto,mclp60_k1,510830,União do Sul,Teles Pires - MT,222.2,222.4,-0.1,True
+parto,mclp60_k1,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,81.4,81.6,-0.3,True
+parto,mclp60_k1,510840,Várzea Grande,Baixada Cuiabana - MT,11.3,11.3,-0.0,True
+parto,mclp60_k1,510850,Vera,Teles Pires - MT,77.3,77.3,-0.1,True
+parto,mclp60_k1,510860,Vila Rica,Araguaia Xingu - MT,39.3,39.3,-0.0,True
+parto,mclp60_k1,510880,Nova Guarita,Norte Matogrossense - MT,148.9,149.1,-0.3,True
+parto,mclp60_k1,510885,Nova Marilândia,Médio Norte Matogrossense - MT,56.0,56.5,-0.5,True
+parto,mclp60_k1,510890,Nova Maringá,Centro Norte - MT,229.1,229.7,-0.7,True
+parto,mclp60_k1,510895,Nova Monte Verde,Alto Tapajós - MT,184.0,184.1,-0.1,True
+parto,mclp60_k3,510010,Acorizal,Baixada Cuiabana - MT,67.8,67.8,-0.0,True
+parto,mclp60_k3,510020,Água Boa,Médio Araguaia - MT,14.4,14.4,-0.0,True
+parto,mclp60_k3,510025,Alta Floresta,Alto Tapajós - MT,16.0,16.1,-0.0,True
+parto,mclp60_k3,510030,Alto Araguaia,Sul Matogrossense - MT,92.9,93.0,-0.0,True
+parto,mclp60_k3,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,199.8,200.1,-0.3,True
+parto,mclp60_k3,510040,Alto Garças,Sul Matogrossense - MT,117.1,117.2,-0.1,True
+parto,mclp60_k3,510050,Alto Paraguai,Centro Norte - MT,38.1,41.8,-3.7,True
+parto,mclp60_k3,510060,Alto Taquari,Sul Matogrossense - MT,58.0,58.1,-0.1,True
+parto,mclp60_k3,510080,Apiacás,Alto Tapajós - MT,115.0,115.1,-0.1,True
+parto,mclp60_k3,510100,Araguaiana,Garças Araguaia - MT,68.0,68.1,-0.1,True
+parto,mclp60_k3,510120,Araguainha,Sul Matogrossense - MT,268.2,268.3,-0.1,True
+parto,mclp60_k3,510125,Araputanga,Oeste Matogrossense - MT,66.9,67.1,-0.2,True
+parto,mclp60_k3,510130,Arenápolis,Médio Norte Matogrossense - MT,35.4,36.0,-0.6,True
+parto,mclp60_k3,510140,Aripuanã,Noroeste Matogrossense - MT,96.7,96.7,-0.0,True
+parto,mclp60_k3,510160,Barão de Melgaço,Baixada Cuiabana - MT,113.4,113.4,-0.1,True
+parto,mclp60_k3,510170,Barra do Bugres,Médio Norte Matogrossense - MT,22.7,23.0,-0.3,True
+parto,mclp60_k3,510180,Barra do Garças,Garças Araguaia - MT,4.8,4.8,-0.0,True
+parto,mclp60_k3,510183,Boa Esperança do Norte,Teles Pires - MT,144.8,146.4,-1.6,True
+parto,mclp60_k3,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,248.9,249.0,-0.2,True
+parto,mclp60_k3,510190,Brasnorte,Noroeste Matogrossense - MT,53.7,54.0,-0.3,True
+parto,mclp60_k3,510250,Cáceres,Oeste Matogrossense - MT,11.5,11.5,-0.0,True
+parto,mclp60_k3,510260,Campinápolis,Garças Araguaia - MT,66.1,66.2,-0.1,True
+parto,mclp60_k3,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,61.9,62.2,-0.3,True
+parto,mclp60_k3,510267,Campo Verde,Sul Matogrossense - MT,33.7,33.8,-0.1,True
+parto,mclp60_k3,510268,Campos de Júlio,Sudoeste Matogrossense - MT,233.2,233.6,-0.5,True
+parto,mclp60_k3,510269,Canabrava do Norte,Araguaia Xingu - MT,100.7,100.8,-0.1,True
+parto,mclp60_k3,510270,Canarana,Médio Araguaia - MT,39.3,39.3,-0.0,True
+parto,mclp60_k3,510279,Carlinda,Alto Tapajós - MT,49.4,49.8,-0.4,True
+parto,mclp60_k3,510285,Castanheira,Noroeste Matogrossense - MT,61.3,61.8,-0.4,True
+parto,mclp60_k3,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,68.5,68.6,-0.1,True
+parto,mclp60_k3,510305,Cláudia,Teles Pires - MT,121.0,122.2,-1.2,True
+parto,mclp60_k3,510310,Cocalinho,Médio Araguaia - MT,202.0,202.1,-0.1,True
+parto,mclp60_k3,510320,Colíder,Norte Matogrossense - MT,19.8,20.0,-0.2,True
+parto,mclp60_k3,510325,Colniza,Noroeste Matogrossense - MT,74.1,74.1,-0.0,True
+parto,mclp60_k3,510330,Comodoro,Sudoeste Matogrossense - MT,91.4,91.6,-0.2,True
+parto,mclp60_k3,510335,Confresa,Araguaia Xingu - MT,26.7,26.7,-0.0,True
+parto,mclp60_k3,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,124.2,124.7,-0.5,True
+parto,mclp60_k3,510337,Cotriguaçu,Noroeste Matogrossense - MT,190.4,190.4,-0.1,True
+parto,mclp60_k3,510340,Cuiabá,Baixada Cuiabana - MT,0.9,0.9,-0.0,True
+parto,mclp60_k3,510343,Curvelândia,Oeste Matogrossense - MT,72.4,72.6,-0.2,True
+parto,mclp60_k3,510345,Denise,Médio Norte Matogrossense - MT,63.7,64.1,-0.5,True
+parto,mclp60_k3,510350,Diamantino,Centro Norte - MT,38.7,40.3,-1.7,True
+parto,mclp60_k3,510360,Dom Aquino,Sul Matogrossense - MT,80.3,80.4,-0.1,True
+parto,mclp60_k3,510370,Feliz Natal,Teles Pires - MT,149.9,146.5,3.4,True
+parto,mclp60_k3,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,116.3,116.8,-0.5,True
+parto,mclp60_k3,510385,Gaúcha do Norte,Médio Araguaia - MT,252.1,252.6,-0.5,True
+parto,mclp60_k3,510390,General Carneiro,Garças Araguaia - MT,161.3,161.4,-0.1,True
+parto,mclp60_k3,510395,Glória D'Oeste,Oeste Matogrossense - MT,103.4,103.5,-0.2,True
+parto,mclp60_k3,510410,Guarantã do Norte,Vale do Peixoto - MT,25.2,25.4,-0.2,True
+parto,mclp60_k3,510420,Guiratinga,Sul Matogrossense - MT,115.2,115.3,-0.1,True
+parto,mclp60_k3,510450,Indiavaí,Oeste Matogrossense - MT,128.8,129.1,-0.3,True
+parto,mclp60_k3,510452,Ipiranga do Norte,Teles Pires - MT,81.8,82.7,-1.0,True
+parto,mclp60_k3,510454,Itanhangá,Teles Pires - MT,137.7,133.2,4.5,True
+parto,mclp60_k3,510455,Itaúba,Norte Matogrossense - MT,73.5,74.3,-0.8,True
+parto,mclp60_k3,510460,Itiquira,Sul Matogrossense - MT,151.1,151.2,-0.1,True
+parto,mclp60_k3,510480,Jaciara,Sul Matogrossense - MT,21.1,21.2,-0.1,True
+parto,mclp60_k3,510490,Jangada,Baixada Cuiabana - MT,83.1,83.0,0.1,True
+parto,mclp60_k3,510500,Jauru,Sudoeste Matogrossense - MT,132.1,132.3,-0.2,True
+parto,mclp60_k3,510510,Juara,Vale dos Arinos - MT,35.1,35.4,-0.3,True
+parto,mclp60_k3,510515,Juína,Noroeste Matogrossense - MT,17.2,17.3,-0.1,True
+parto,mclp60_k3,510517,Juruena,Noroeste Matogrossense - MT,52.4,52.6,-0.1,True
+parto,mclp60_k3,510520,Juscimeira,Sul Matogrossense - MT,40.9,41.0,-0.1,True
+parto,mclp60_k3,510523,Lambari D'Oeste,Oeste Matogrossense - MT,121.6,121.9,-0.3,True
+parto,mclp60_k3,510525,Lucas do Rio Verde,Teles Pires - MT,8.5,9.3,-0.8,True
+parto,mclp60_k3,510530,Luciára,Norte Araguaia Karajá - MT,218.6,218.9,-0.2,True
+parto,mclp60_k3,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,37.1,37.2,-0.1,True
+parto,mclp60_k3,510558,Marcelândia,Norte Matogrossense - MT,120.2,121.1,-0.8,True
+parto,mclp60_k3,510560,Matupá,Vale do Peixoto - MT,28.3,28.4,-0.2,True
+parto,mclp60_k3,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,39.7,39.7,-0.1,True
+parto,mclp60_k3,510590,Nobres,Centro Norte - MT,114.3,103.1,11.2,True
+parto,mclp60_k3,510600,Nortelândia,Centro Norte - MT,72.0,74.4,-2.4,True
+parto,mclp60_k3,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,40.3,40.4,-0.0,True
+parto,mclp60_k3,510615,Nova Bandeirantes,Alto Tapajós - MT,177.9,178.1,-0.2,True
+parto,mclp60_k3,510617,Nova Nazaré,Médio Araguaia - MT,64.6,64.8,-0.2,True
+parto,mclp60_k3,510618,Nova Lacerda,Sudoeste Matogrossense - MT,139.8,140.2,-0.5,True
+parto,mclp60_k3,510619,Nova Santa Helena,Norte Matogrossense - MT,60.3,61.3,-1.0,True
+parto,mclp60_k3,510620,Nova Brasilândia,Baixada Cuiabana - MT,161.2,161.4,-0.1,True
+parto,mclp60_k3,510621,Nova Canaã do Norte,Norte Matogrossense - MT,72.2,73.4,-1.1,True
+parto,mclp60_k3,510622,Nova Mutum,Teles Pires - MT,21.7,22.6,-0.9,True
+parto,mclp60_k3,510623,Nova Olímpia,Médio Norte Matogrossense - MT,12.4,12.6,-0.2,True
+parto,mclp60_k3,510624,Nova Ubiratã,Teles Pires - MT,105.8,107.1,-1.4,True
+parto,mclp60_k3,510625,Nova Xavantina,Garças Araguaia - MT,10.5,10.6,-0.1,True
+parto,mclp60_k3,510626,Novo Mundo,Vale do Peixoto - MT,93.3,93.9,-0.6,True
+parto,mclp60_k3,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,38.4,39.6,-1.2,True
+parto,mclp60_k3,510628,Novo São Joaquim,Garças Araguaia - MT,45.3,45.4,-0.1,True
+parto,mclp60_k3,510629,Paranaíta,Alto Tapajós - MT,14.7,14.9,-0.3,True
+parto,mclp60_k3,510630,Paranatinga,Sul Matogrossense - MT,45.1,45.2,-0.2,True
+parto,mclp60_k3,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,355.0,355.2,-0.2,True
+parto,mclp60_k3,510637,Pedra Preta,Sul Matogrossense - MT,29.5,29.6,-0.0,True
+parto,mclp60_k3,510642,Peixoto de Azevedo,Vale do Peixoto - MT,25.1,25.3,-0.2,True
+parto,mclp60_k3,510645,Planalto da Serra,Baixada Cuiabana - MT,247.7,247.8,-0.1,True
+parto,mclp60_k3,510650,Poconé,Baixada Cuiabana - MT,80.7,80.7,-0.1,True
+parto,mclp60_k3,510665,Pontal do Araguaia,Garças Araguaia - MT,4.1,4.1,-0.0,True
+parto,mclp60_k3,510670,Ponte Branca,Garças Araguaia - MT,74.1,74.3,-0.2,True
+parto,mclp60_k3,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,37.8,37.8,-0.0,True
+parto,mclp60_k3,510677,Porto Alegre do Norte,Araguaia Xingu - MT,55.7,55.7,-0.0,True
+parto,mclp60_k3,510680,Porto dos Gaúchos,Vale dos Arinos - MT,73.1,74.2,-1.1,True
+parto,mclp60_k3,510682,Porto Esperidião,Oeste Matogrossense - MT,114.4,114.6,-0.2,True
+parto,mclp60_k3,510685,Porto Estrela,Médio Norte Matogrossense - MT,56.1,56.7,-0.6,True
+parto,mclp60_k3,510700,Poxoréo,Sul Matogrossense - MT,51.3,51.4,-0.1,True
+parto,mclp60_k3,510704,Primavera do Leste,Sul Matogrossense - MT,10.2,10.2,-0.0,True
+parto,mclp60_k3,510706,Querência,Médio Araguaia - MT,43.6,43.6,-0.0,True
+parto,mclp60_k3,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,46.7,46.8,-0.1,True
+parto,mclp60_k3,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,142.1,142.4,-0.4,True
+parto,mclp60_k3,510718,Ribeirão Cascalheira,Médio Araguaia - MT,96.1,96.1,-0.1,True
+parto,mclp60_k3,510719,Ribeirãozinho,Garças Araguaia - MT,74.3,74.4,-0.1,True
+parto,mclp60_k3,510720,Rio Branco,Oeste Matogrossense - MT,129.8,130.2,-0.3,True
+parto,mclp60_k3,510724,Santa Carmem,Teles Pires - MT,56.3,56.5,-0.2,True
+parto,mclp60_k3,510726,Santo Afonso,Médio Norte Matogrossense - MT,57.2,57.8,-0.6,True
+parto,mclp60_k3,510729,São José do Povo,Sul Matogrossense - MT,45.7,45.7,-0.1,True
+parto,mclp60_k3,510730,São José do Rio Claro,Centro Norte - MT,86.1,88.0,-1.9,True
+parto,mclp60_k3,510735,São José do Xingu,Araguaia Xingu - MT,227.0,227.8,-0.9,True
+parto,mclp60_k3,510740,São Pedro da Cipa,Sul Matogrossense - MT,29.7,29.8,-0.1,True
+parto,mclp60_k3,510760,Rondonópolis,Sul Matogrossense - MT,1.2,1.2,-0.0,True
+parto,mclp60_k3,510770,Rosário Oeste,Centro Norte - MT,95.9,64.9,31.0,True
+parto,mclp60_k3,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,236.6,237.1,-0.5,True
+parto,mclp60_k3,510775,Salto do Céu,Oeste Matogrossense - MT,150.3,150.6,-0.3,True
+parto,mclp60_k3,510776,Santa Rita do Trivelato,Teles Pires - MT,168.1,169.7,-1.6,True
+parto,mclp60_k3,510777,Santa Terezinha,Araguaia Xingu - MT,211.5,211.5,-0.0,True
+parto,mclp60_k3,510779,Santo Antônio do Leste,Sul Matogrossense - MT,171.2,171.4,-0.2,True
+parto,mclp60_k3,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,47.2,47.3,-0.0,True
+parto,mclp60_k3,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,103.4,103.4,-0.0,True
+parto,mclp60_k3,510787,Sapezal,Médio Norte Matogrossense - MT,74.9,75.2,-0.2,True
+parto,mclp60_k3,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,277.5,277.9,-0.4,True
+parto,mclp60_k3,510790,Sinop,Teles Pires - MT,9.5,9.7,-0.2,True
+parto,mclp60_k3,510792,Sorriso,Teles Pires - MT,5.6,5.8,-0.3,True
+parto,mclp60_k3,510794,Tabaporã,Vale dos Arinos - MT,106.5,107.3,-0.8,True
+parto,mclp60_k3,510795,Tangará da Serra,Médio Norte Matogrossense - MT,4.8,4.8,-0.1,True
+parto,mclp60_k3,510800,Tapurah,Teles Pires - MT,143.9,70.2,73.8,True
+parto,mclp60_k3,510805,Terra Nova do Norte,Vale do Peixoto - MT,71.1,71.6,-0.5,True
+parto,mclp60_k3,510810,Tesouro,Sul Matogrossense - MT,141.0,141.1,-0.1,True
+parto,mclp60_k3,510820,Torixoréu,Garças Araguaia - MT,56.4,56.4,-0.1,True
+parto,mclp60_k3,510830,União do Sul,Teles Pires - MT,222.2,223.5,-1.2,True
+parto,mclp60_k3,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,81.4,81.7,-0.3,True
+parto,mclp60_k3,510840,Várzea Grande,Baixada Cuiabana - MT,11.3,11.3,-0.0,True
+parto,mclp60_k3,510850,Vera,Teles Pires - MT,77.3,58.3,19.0,True
+parto,mclp60_k3,510860,Vila Rica,Araguaia Xingu - MT,39.3,39.4,-0.0,True
+parto,mclp60_k3,510880,Nova Guarita,Norte Matogrossense - MT,148.9,150.1,-1.2,True
+parto,mclp60_k3,510885,Nova Marilândia,Médio Norte Matogrossense - MT,56.0,56.8,-0.8,True
+parto,mclp60_k3,510890,Nova Maringá,Centro Norte - MT,229.1,227.5,1.6,True
+parto,mclp60_k3,510895,Nova Monte Verde,Alto Tapajós - MT,184.0,184.6,-0.6,True
+uti,p_mediana_k1,510010,Acorizal,Baixada Cuiabana - MT,68.5,68.7,-0.1,True
+uti,p_mediana_k1,510020,Água Boa,Médio Araguaia - MT,127.8,128.0,-0.2,True
+uti,p_mediana_k1,510025,Alta Floresta,Alto Tapajós - MT,610.0,606.7,3.3,True
+uti,p_mediana_k1,510030,Alto Araguaia,Sul Matogrossense - MT,208.2,208.5,-0.3,True
+uti,p_mediana_k1,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,794.0,796.2,-2.2,True
+uti,p_mediana_k1,510040,Alto Garças,Sul Matogrossense - MT,158.9,159.2,-0.3,True
+uti,p_mediana_k1,510050,Alto Paraguai,Centro Norte - MT,205.4,207.4,-2.1,True
+uti,p_mediana_k1,510060,Alto Taquari,Sul Matogrossense - MT,268.5,268.8,-0.3,True
+uti,p_mediana_k1,510080,Apiacás,Alto Tapajós - MT,814.4,791.7,22.6,True
+uti,p_mediana_k1,510100,Araguaiana,Garças Araguaia - MT,127.3,127.8,-0.5,True
+uti,p_mediana_k1,510120,Araguainha,Sul Matogrossense - MT,268.8,269.2,-0.3,True
+uti,p_mediana_k1,510125,Araputanga,Oeste Matogrossense - MT,209.4,210.9,-1.4,True
+uti,p_mediana_k1,510130,Arenápolis,Médio Norte Matogrossense - MT,225.6,227.8,-2.2,True
+uti,p_mediana_k1,510140,Aripuanã,Noroeste Matogrossense - MT,987.4,442.8,544.6,True
+uti,p_mediana_k1,510160,Barão de Melgaço,Baixada Cuiabana - MT,111.6,111.7,-0.1,True
+uti,p_mediana_k1,510170,Barra do Bugres,Médio Norte Matogrossense - MT,163.3,165.3,-1.9,True
+uti,p_mediana_k1,510180,Barra do Garças,Garças Araguaia - MT,82.0,82.2,-0.2,True
+uti,p_mediana_k1,510183,Boa Esperança do Norte,Teles Pires - MT,244.1,245.2,-1.1,True
+uti,p_mediana_k1,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,350.9,351.9,-1.0,True
+uti,p_mediana_k1,510190,Brasnorte,Noroeste Matogrossense - MT,542.4,315.9,226.4,True
+uti,p_mediana_k1,510250,Cáceres,Oeste Matogrossense - MT,52.1,52.5,-0.4,True
+uti,p_mediana_k1,510260,Campinápolis,Garças Araguaia - MT,205.1,206.0,-0.9,True
+uti,p_mediana_k1,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,376.9,375.4,1.5,True
+uti,p_mediana_k1,510267,Campo Verde,Sul Matogrossense - MT,135.7,136.1,-0.4,True
+uti,p_mediana_k1,510268,Campos de Júlio,Sudoeste Matogrossense - MT,524.1,518.6,5.5,True
+uti,p_mediana_k1,510269,Canabrava do Norte,Araguaia Xingu - MT,989.8,991.5,-1.7,True
+uti,p_mediana_k1,510270,Canarana,Médio Araguaia - MT,193.2,194.1,-0.9,True
+uti,p_mediana_k1,510279,Carlinda,Alto Tapajós - MT,573.3,572.9,0.4,True
+uti,p_mediana_k1,510285,Castanheira,Noroeste Matogrossense - MT,721.3,157.7,563.6,True
+uti,p_mediana_k1,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,72.3,72.4,-0.1,True
+uti,p_mediana_k1,510305,Cláudia,Teles Pires - MT,171.8,173.7,-1.9,True
+uti,p_mediana_k1,510310,Cocalinho,Médio Araguaia - MT,336.5,337.1,-0.6,True
+uti,p_mediana_k1,510320,Colíder,Norte Matogrossense - MT,124.9,125.9,-1.0,True
+uti,p_mediana_k1,510325,Colniza,Noroeste Matogrossense - MT,1103.7,573.2,530.5,True
+uti,p_mediana_k1,510330,Comodoro,Sudoeste Matogrossense - MT,515.5,513.3,2.1,True
+uti,p_mediana_k1,510335,Confresa,Araguaia Xingu - MT,1075.9,1076.9,-1.0,True
+uti,p_mediana_k1,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,426.3,428.6,-2.3,True
+uti,p_mediana_k1,510337,Cotriguaçu,Noroeste Matogrossense - MT,938.8,402.7,536.1,True
+uti,p_mediana_k1,510340,Cuiabá,Baixada Cuiabana - MT,4.3,4.4,-0.0,True
+uti,p_mediana_k1,510343,Curvelândia,Oeste Matogrossense - MT,113.6,114.9,-1.4,True
+uti,p_mediana_k1,510345,Denise,Médio Norte Matogrossense - MT,200.0,202.0,-2.1,True
+uti,p_mediana_k1,510350,Diamantino,Centro Norte - MT,183.3,185.4,-2.1,True
+uti,p_mediana_k1,510360,Dom Aquino,Sul Matogrossense - MT,104.2,104.5,-0.3,True
+uti,p_mediana_k1,510370,Feliz Natal,Teles Pires - MT,264.0,265.3,-1.3,True
+uti,p_mediana_k1,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,286.4,289.2,-2.8,True
+uti,p_mediana_k1,510385,Gaúcha do Norte,Médio Araguaia - MT,410.3,412.0,-1.7,True
+uti,p_mediana_k1,510390,General Carneiro,Garças Araguaia - MT,169.8,170.4,-0.6,True
+uti,p_mediana_k1,510395,Glória D'Oeste,Oeste Matogrossense - MT,155.7,157.0,-1.3,True
+uti,p_mediana_k1,510410,Guarantã do Norte,Vale do Peixoto - MT,534.6,537.1,-2.5,True
+uti,p_mediana_k1,510420,Guiratinga,Sul Matogrossense - MT,126.1,126.4,-0.3,True
+uti,p_mediana_k1,510450,Indiavaí,Oeste Matogrossense - MT,247.2,248.6,-1.5,True
+uti,p_mediana_k1,510452,Ipiranga do Norte,Teles Pires - MT,114.7,116.5,-1.8,True
+uti,p_mediana_k1,510454,Itanhangá,Teles Pires - MT,204.9,206.2,-1.3,True
+uti,p_mediana_k1,510455,Itaúba,Norte Matogrossense - MT,138.2,141.7,-3.5,True
+uti,p_mediana_k1,510460,Itiquira,Sul Matogrossense - MT,177.5,177.8,-0.3,True
+uti,p_mediana_k1,510480,Jaciara,Sul Matogrossense - MT,86.7,87.0,-0.3,True
+uti,p_mediana_k1,510490,Jangada,Baixada Cuiabana - MT,79.3,79.4,-0.1,True
+uti,p_mediana_k1,510500,Jauru,Sudoeste Matogrossense - MT,314.2,317.1,-2.9,True
+uti,p_mediana_k1,510510,Juara,Vale dos Arinos - MT,496.0,458.3,37.8,True
+uti,p_mediana_k1,510515,Juína,Noroeste Matogrossense - MT,693.4,35.5,657.9,True
+uti,p_mediana_k1,510517,Juruena,Noroeste Matogrossense - MT,846.7,324.0,522.7,True
+uti,p_mediana_k1,510520,Juscimeira,Sul Matogrossense - MT,68.4,68.7,-0.3,True
+uti,p_mediana_k1,510523,Lambari D'Oeste,Oeste Matogrossense - MT,144.0,145.8,-1.7,True
+uti,p_mediana_k1,510525,Lucas do Rio Verde,Teles Pires - MT,231.7,232.6,-0.9,True
+uti,p_mediana_k1,510530,Luciára,Norte Araguaia Karajá - MT,991.1,993.4,-2.3,True
+uti,p_mediana_k1,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,425.8,428.9,-3.2,True
+uti,p_mediana_k1,510558,Marcelândia,Norte Matogrossense - MT,234.8,238.1,-3.3,True
+uti,p_mediana_k1,510560,Matupá,Vale do Peixoto - MT,512.5,515.0,-2.4,True
+uti,p_mediana_k1,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,169.9,171.2,-1.3,True
+uti,p_mediana_k1,510590,Nobres,Centro Norte - MT,139.1,140.8,-1.7,True
+uti,p_mediana_k1,510600,Nortelândia,Centro Norte - MT,230.8,232.9,-2.1,True
+uti,p_mediana_k1,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,45.2,45.3,-0.1,True
+uti,p_mediana_k1,510615,Nova Bandeirantes,Alto Tapajós - MT,782.4,736.6,45.8,True
+uti,p_mediana_k1,510617,Nova Nazaré,Médio Araguaia - MT,117.7,118.2,-0.6,True
+uti,p_mediana_k1,510618,Nova Lacerda,Sudoeste Matogrossense - MT,440.5,442.4,-1.9,True
+uti,p_mediana_k1,510619,Nova Santa Helena,Norte Matogrossense - MT,192.6,195.4,-2.8,True
+uti,p_mediana_k1,510620,Nova Brasilândia,Baixada Cuiabana - MT,200.4,200.6,-0.2,True
+uti,p_mediana_k1,510621,Nova Canaã do Norte,Norte Matogrossense - MT,230.2,233.2,-3.0,True
+uti,p_mediana_k1,510622,Nova Mutum,Teles Pires - MT,34.8,35.3,-0.5,True
+uti,p_mediana_k1,510623,Nova Olímpia,Médio Norte Matogrossense - MT,197.7,199.8,-2.1,True
+uti,p_mediana_k1,510624,Nova Ubiratã,Teles Pires - MT,144.2,145.8,-1.5,True
+uti,p_mediana_k1,510625,Nova Xavantina,Garças Araguaia - MT,229.5,230.1,-0.6,True
+uti,p_mediana_k1,510626,Novo Mundo,Vale do Peixoto - MT,579.0,581.0,-2.0,True
+uti,p_mediana_k1,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,449.2,425.3,24.0,True
+uti,p_mediana_k1,510628,Novo São Joaquim,Garças Araguaia - MT,313.8,314.6,-0.8,True
+uti,p_mediana_k1,510629,Paranaíta,Alto Tapajós - MT,668.8,663.8,5.0,True
+uti,p_mediana_k1,510630,Paranatinga,Sul Matogrossense - MT,277.7,278.3,-0.6,True
+uti,p_mediana_k1,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,515.3,518.0,-2.7,True
+uti,p_mediana_k1,510637,Pedra Preta,Sul Matogrossense - MT,48.5,48.7,-0.2,True
+uti,p_mediana_k1,510642,Peixoto de Azevedo,Vale do Peixoto - MT,499.8,502.2,-2.5,True
+uti,p_mediana_k1,510645,Planalto da Serra,Baixada Cuiabana - MT,262.0,262.2,-0.2,True
+uti,p_mediana_k1,510650,Poconé,Baixada Cuiabana - MT,108.0,108.1,-0.1,True
+uti,p_mediana_k1,510665,Pontal do Araguaia,Garças Araguaia - MT,125.4,125.7,-0.3,True
+uti,p_mediana_k1,510670,Ponte Branca,Garças Araguaia - MT,264.2,264.9,-0.6,True
+uti,p_mediana_k1,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,330.1,333.3,-3.2,True
+uti,p_mediana_k1,510677,Porto Alegre do Norte,Araguaia Xingu - MT,1000.1,1001.7,-1.7,True
+uti,p_mediana_k1,510680,Porto dos Gaúchos,Vale dos Arinos - MT,364.0,347.2,16.8,True
+uti,p_mediana_k1,510682,Porto Esperidião,Oeste Matogrossense - MT,185.7,187.0,-1.3,True
+uti,p_mediana_k1,510685,Porto Estrela,Médio Norte Matogrossense - MT,188.9,190.8,-1.9,True
+uti,p_mediana_k1,510700,Poxoréo,Sul Matogrossense - MT,94.7,95.0,-0.3,True
+uti,p_mediana_k1,510704,Primavera do Leste,Sul Matogrossense - MT,69.2,69.4,-0.2,True
+uti,p_mediana_k1,510706,Querência,Médio Araguaia - MT,349.7,350.6,-0.9,True
+uti,p_mediana_k1,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,174.6,175.9,-1.3,True
+uti,p_mediana_k1,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,233.3,235.1,-1.8,True
+uti,p_mediana_k1,510718,Ribeirão Cascalheira,Médio Araguaia - MT,301.6,302.3,-0.7,True
+uti,p_mediana_k1,510719,Ribeirãozinho,Garças Araguaia - MT,216.5,217.1,-0.6,True
+uti,p_mediana_k1,510720,Rio Branco,Oeste Matogrossense - MT,213.2,214.8,-1.6,True
+uti,p_mediana_k1,510724,Santa Carmem,Teles Pires - MT,137.8,139.3,-1.5,True
+uti,p_mediana_k1,510726,Santo Afonso,Médio Norte Matogrossense - MT,242.7,244.9,-2.2,True
+uti,p_mediana_k1,510729,São José do Povo,Sul Matogrossense - MT,55.3,55.6,-0.3,True
+uti,p_mediana_k1,510730,São José do Rio Claro,Centro Norte - MT,280.0,282.2,-2.2,True
+uti,p_mediana_k1,510735,São José do Xingu,Araguaia Xingu - MT,1020.7,1020.1,0.5,True
+uti,p_mediana_k1,510740,São Pedro da Cipa,Sul Matogrossense - MT,84.7,85.0,-0.3,True
+uti,p_mediana_k1,510757,Rondolândia,Sudoeste Matogrossense - MT,1015.8,1000.7,15.1,True
+uti,p_mediana_k1,510760,Rondonópolis,Sul Matogrossense - MT,12.2,12.3,-0.1,True
+uti,p_mediana_k1,510770,Rosário Oeste,Centro Norte - MT,124.4,126.0,-1.6,True
+uti,p_mediana_k1,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,1188.8,1187.9,0.9,True
+uti,p_mediana_k1,510775,Salto do Céu,Oeste Matogrossense - MT,204.6,206.3,-1.7,True
+uti,p_mediana_k1,510776,Santa Rita do Trivelato,Teles Pires - MT,227.3,228.3,-1.0,True
+uti,p_mediana_k1,510777,Santa Terezinha,Araguaia Xingu - MT,1244.2,1245.3,-1.1,True
+uti,p_mediana_k1,510779,Santo Antônio do Leste,Sul Matogrossense - MT,232.7,233.1,-0.5,True
+uti,p_mediana_k1,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,43.5,43.6,-0.1,True
+uti,p_mediana_k1,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,994.0,995.9,-1.9,True
+uti,p_mediana_k1,510787,Sapezal,Médio Norte Matogrossense - MT,469.6,464.1,5.5,True
+uti,p_mediana_k1,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,347.9,350.8,-2.9,True
+uti,p_mediana_k1,510790,Sinop,Teles Pires - MT,123.6,124.2,-0.7,True
+uti,p_mediana_k1,510792,Sorriso,Teles Pires - MT,67.3,68.3,-1.0,True
+uti,p_mediana_k1,510794,Tabaporã,Vale dos Arinos - MT,376.1,369.9,6.2,True
+uti,p_mediana_k1,510795,Tangará da Serra,Médio Norte Matogrossense - MT,243.2,245.3,-2.2,True
+uti,p_mediana_k1,510800,Tapurah,Teles Pires - MT,211.6,212.8,-1.2,True
+uti,p_mediana_k1,510805,Terra Nova do Norte,Vale do Peixoto - MT,434.2,437.2,-3.0,True
+uti,p_mediana_k1,510810,Tesouro,Sul Matogrossense - MT,156.9,157.2,-0.3,True
+uti,p_mediana_k1,510820,Torixoréu,Garças Araguaia - MT,210.9,211.3,-0.5,True
+uti,p_mediana_k1,510830,União do Sul,Teles Pires - MT,305.8,307.6,-1.8,True
+uti,p_mediana_k1,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,353.3,356.1,-2.8,True
+uti,p_mediana_k1,510840,Várzea Grande,Baixada Cuiabana - MT,12.6,12.6,-0.1,True
+uti,p_mediana_k1,510850,Vera,Teles Pires - MT,253.5,254.6,-1.0,True
+uti,p_mediana_k1,510860,Vila Rica,Araguaia Xingu - MT,1162.0,1163.1,-1.1,True
+uti,p_mediana_k1,510880,Nova Guarita,Norte Matogrossense - MT,216.3,220.0,-3.7,True
+uti,p_mediana_k1,510885,Nova Marilândia,Médio Norte Matogrossense - MT,248.9,251.1,-2.2,True
+uti,p_mediana_k1,510890,Nova Maringá,Centro Norte - MT,361.0,361.7,-0.7,True
+uti,p_mediana_k1,510895,Nova Monte Verde,Alto Tapajós - MT,795.1,761.4,33.7,True
+uti,p_mediana_k2,510010,Acorizal,Baixada Cuiabana - MT,68.5,68.7,-0.2,True
+uti,p_mediana_k2,510020,Água Boa,Médio Araguaia - MT,127.8,129.0,-1.1,True
+uti,p_mediana_k2,510025,Alta Floresta,Alto Tapajós - MT,610.0,609.4,0.6,True
+uti,p_mediana_k2,510030,Alto Araguaia,Sul Matogrossense - MT,208.2,209.1,-0.9,True
+uti,p_mediana_k2,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,794.0,638.7,155.3,True
+uti,p_mediana_k2,510040,Alto Garças,Sul Matogrossense - MT,158.9,159.6,-0.7,True
+uti,p_mediana_k2,510050,Alto Paraguai,Centro Norte - MT,205.4,208.0,-2.7,True
+uti,p_mediana_k2,510060,Alto Taquari,Sul Matogrossense - MT,268.5,269.4,-0.9,True
+uti,p_mediana_k2,510080,Apiacás,Alto Tapajós - MT,814.4,794.4,19.9,True
+uti,p_mediana_k2,510100,Araguaiana,Garças Araguaia - MT,127.3,129.9,-2.5,True
+uti,p_mediana_k2,510120,Araguainha,Sul Matogrossense - MT,268.8,269.8,-1.0,True
+uti,p_mediana_k2,510125,Araputanga,Oeste Matogrossense - MT,209.4,211.1,-1.6,True
+uti,p_mediana_k2,510130,Arenápolis,Médio Norte Matogrossense - MT,225.6,228.4,-2.8,True
+uti,p_mediana_k2,510140,Aripuanã,Noroeste Matogrossense - MT,987.4,443.9,543.6,True
+uti,p_mediana_k2,510160,Barão de Melgaço,Baixada Cuiabana - MT,111.6,111.8,-0.2,True
+uti,p_mediana_k2,510170,Barra do Bugres,Médio Norte Matogrossense - MT,163.3,165.6,-2.3,True
+uti,p_mediana_k2,510180,Barra do Garças,Garças Araguaia - MT,82.0,82.8,-0.9,True
+uti,p_mediana_k2,510183,Boa Esperança do Norte,Teles Pires - MT,244.1,245.7,-1.6,True
+uti,p_mediana_k2,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,350.9,347.5,3.4,True
+uti,p_mediana_k2,510190,Brasnorte,Noroeste Matogrossense - MT,542.4,316.7,225.7,True
+uti,p_mediana_k2,510250,Cáceres,Oeste Matogrossense - MT,52.1,52.5,-0.4,True
+uti,p_mediana_k2,510260,Campinápolis,Garças Araguaia - MT,205.1,209.0,-3.8,True
+uti,p_mediana_k2,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,376.9,376.1,0.8,True
+uti,p_mediana_k2,510267,Campo Verde,Sul Matogrossense - MT,135.7,136.4,-0.7,True
+uti,p_mediana_k2,510268,Campos de Júlio,Sudoeste Matogrossense - MT,524.1,519.3,4.8,True
+uti,p_mediana_k2,510269,Canabrava do Norte,Araguaia Xingu - MT,989.8,156.6,833.2,True
+uti,p_mediana_k2,510270,Canarana,Médio Araguaia - MT,193.2,197.6,-4.4,True
+uti,p_mediana_k2,510279,Carlinda,Alto Tapajós - MT,573.3,575.5,-2.2,True
+uti,p_mediana_k2,510285,Castanheira,Noroeste Matogrossense - MT,721.3,158.3,563.0,True
+uti,p_mediana_k2,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,72.3,72.5,-0.2,True
+uti,p_mediana_k2,510305,Cláudia,Teles Pires - MT,171.8,175.2,-3.4,True
+uti,p_mediana_k2,510310,Cocalinho,Médio Araguaia - MT,336.5,340.3,-3.8,True
+uti,p_mediana_k2,510320,Colíder,Norte Matogrossense - MT,124.9,126.7,-1.9,True
+uti,p_mediana_k2,510325,Colniza,Noroeste Matogrossense - MT,1103.7,574.8,528.9,True
+uti,p_mediana_k2,510330,Comodoro,Sudoeste Matogrossense - MT,515.5,514.1,1.3,True
+uti,p_mediana_k2,510335,Confresa,Araguaia Xingu - MT,1075.9,20.2,1055.7,True
+uti,p_mediana_k2,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,426.3,429.1,-2.8,True
+uti,p_mediana_k2,510337,Cotriguaçu,Noroeste Matogrossense - MT,938.8,404.3,534.6,True
+uti,p_mediana_k2,510340,Cuiabá,Baixada Cuiabana - MT,4.3,4.4,-0.0,True
+uti,p_mediana_k2,510343,Curvelândia,Oeste Matogrossense - MT,113.6,115.1,-1.6,True
+uti,p_mediana_k2,510345,Denise,Médio Norte Matogrossense - MT,200.0,202.5,-2.5,True
+uti,p_mediana_k2,510350,Diamantino,Centro Norte - MT,183.3,186.0,-2.6,True
+uti,p_mediana_k2,510360,Dom Aquino,Sul Matogrossense - MT,104.2,104.8,-0.6,True
+uti,p_mediana_k2,510370,Feliz Natal,Teles Pires - MT,264.0,266.1,-2.0,True
+uti,p_mediana_k2,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,286.4,289.6,-3.2,True
+uti,p_mediana_k2,510385,Gaúcha do Norte,Médio Araguaia - MT,410.3,414.4,-4.1,True
+uti,p_mediana_k2,510390,General Carneiro,Garças Araguaia - MT,169.8,172.0,-2.2,True
+uti,p_mediana_k2,510395,Glória D'Oeste,Oeste Matogrossense - MT,155.7,157.2,-1.5,True
+uti,p_mediana_k2,510410,Guarantã do Norte,Vale do Peixoto - MT,534.6,538.3,-3.8,True
+uti,p_mediana_k2,510420,Guiratinga,Sul Matogrossense - MT,126.1,126.8,-0.6,True
+uti,p_mediana_k2,510450,Indiavaí,Oeste Matogrossense - MT,247.2,248.8,-1.7,True
+uti,p_mediana_k2,510452,Ipiranga do Norte,Teles Pires - MT,114.7,117.2,-2.5,True
+uti,p_mediana_k2,510454,Itanhangá,Teles Pires - MT,204.9,206.9,-1.9,True
+uti,p_mediana_k2,510455,Itaúba,Norte Matogrossense - MT,138.2,144.4,-6.2,True
+uti,p_mediana_k2,510460,Itiquira,Sul Matogrossense - MT,177.5,178.1,-0.6,True
+uti,p_mediana_k2,510480,Jaciara,Sul Matogrossense - MT,86.7,87.2,-0.6,True
+uti,p_mediana_k2,510490,Jangada,Baixada Cuiabana - MT,79.3,79.4,-0.2,True
+uti,p_mediana_k2,510500,Jauru,Sudoeste Matogrossense - MT,314.2,317.5,-3.3,True
+uti,p_mediana_k2,510510,Juara,Vale dos Arinos - MT,496.0,460.3,35.7,True
+uti,p_mediana_k2,510515,Juína,Noroeste Matogrossense - MT,693.4,35.6,657.7,True
+uti,p_mediana_k2,510517,Juruena,Noroeste Matogrossense - MT,846.7,325.2,521.5,True
+uti,p_mediana_k2,510520,Juscimeira,Sul Matogrossense - MT,68.4,68.9,-0.5,True
+uti,p_mediana_k2,510523,Lambari D'Oeste,Oeste Matogrossense - MT,144.0,146.0,-2.0,True
+uti,p_mediana_k2,510525,Lucas do Rio Verde,Teles Pires - MT,231.7,233.0,-1.3,True
+uti,p_mediana_k2,510530,Luciára,Norte Araguaia Karajá - MT,991.1,683.1,308.1,True
+uti,p_mediana_k2,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,425.8,429.3,-3.6,True
+uti,p_mediana_k2,510558,Marcelândia,Norte Matogrossense - MT,234.8,241.5,-6.8,True
+uti,p_mediana_k2,510560,Matupá,Vale do Peixoto - MT,512.5,516.2,-3.6,True
+uti,p_mediana_k2,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,169.9,171.4,-1.4,True
+uti,p_mediana_k2,510590,Nobres,Centro Norte - MT,139.1,141.3,-2.2,True
+uti,p_mediana_k2,510600,Nortelândia,Centro Norte - MT,230.8,233.5,-2.7,True
+uti,p_mediana_k2,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,45.2,45.3,-0.1,True
+uti,p_mediana_k2,510615,Nova Bandeirantes,Alto Tapajós - MT,782.4,740.2,42.2,True
+uti,p_mediana_k2,510617,Nova Nazaré,Médio Araguaia - MT,117.7,122.0,-4.4,True
+uti,p_mediana_k2,510618,Nova Lacerda,Sudoeste Matogrossense - MT,440.5,443.0,-2.5,True
+uti,p_mediana_k2,510619,Nova Santa Helena,Norte Matogrossense - MT,192.6,197.7,-5.1,True
+uti,p_mediana_k2,510620,Nova Brasilândia,Baixada Cuiabana - MT,200.4,200.7,-0.3,True
+uti,p_mediana_k2,510621,Nova Canaã do Norte,Norte Matogrossense - MT,230.2,235.4,-5.2,True
+uti,p_mediana_k2,510622,Nova Mutum,Teles Pires - MT,34.8,35.4,-0.6,True
+uti,p_mediana_k2,510623,Nova Olímpia,Médio Norte Matogrossense - MT,197.7,200.3,-2.5,True
+uti,p_mediana_k2,510624,Nova Ubiratã,Teles Pires - MT,144.2,146.4,-2.1,True
+uti,p_mediana_k2,510625,Nova Xavantina,Garças Araguaia - MT,229.5,232.8,-3.3,True
+uti,p_mediana_k2,510626,Novo Mundo,Vale do Peixoto - MT,579.0,582.1,-3.1,True
+uti,p_mediana_k2,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,449.2,427.4,21.9,True
+uti,p_mediana_k2,510628,Novo São Joaquim,Garças Araguaia - MT,313.8,316.9,-3.1,True
+uti,p_mediana_k2,510629,Paranaíta,Alto Tapajós - MT,668.8,666.3,2.5,True
+uti,p_mediana_k2,510630,Paranatinga,Sul Matogrossense - MT,277.7,279.0,-1.3,True
+uti,p_mediana_k2,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,515.3,493.8,21.4,True
+uti,p_mediana_k2,510637,Pedra Preta,Sul Matogrossense - MT,48.5,48.9,-0.4,True
+uti,p_mediana_k2,510642,Peixoto de Azevedo,Vale do Peixoto - MT,499.8,503.8,-4.1,True
+uti,p_mediana_k2,510645,Planalto da Serra,Baixada Cuiabana - MT,262.0,262.3,-0.3,True
+uti,p_mediana_k2,510650,Poconé,Baixada Cuiabana - MT,108.0,108.2,-0.2,True
+uti,p_mediana_k2,510665,Pontal do Araguaia,Garças Araguaia - MT,125.4,127.0,-1.6,True
+uti,p_mediana_k2,510670,Ponte Branca,Garças Araguaia - MT,264.2,266.4,-2.2,True
+uti,p_mediana_k2,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,330.1,333.7,-3.7,True
+uti,p_mediana_k2,510677,Porto Alegre do Norte,Araguaia Xingu - MT,1000.1,95.6,904.4,True
+uti,p_mediana_k2,510680,Porto dos Gaúchos,Vale dos Arinos - MT,364.0,349.6,14.4,True
+uti,p_mediana_k2,510682,Porto Esperidião,Oeste Matogrossense - MT,185.7,187.2,-1.5,True
+uti,p_mediana_k2,510685,Porto Estrela,Médio Norte Matogrossense - MT,188.9,191.1,-2.3,True
+uti,p_mediana_k2,510700,Poxoréo,Sul Matogrossense - MT,94.7,95.3,-0.6,True
+uti,p_mediana_k2,510704,Primavera do Leste,Sul Matogrossense - MT,69.2,69.7,-0.5,True
+uti,p_mediana_k2,510706,Querência,Médio Araguaia - MT,349.7,350.1,-0.4,True
+uti,p_mediana_k2,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,174.6,176.1,-1.5,True
+uti,p_mediana_k2,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,233.3,235.4,-2.0,True
+uti,p_mediana_k2,510718,Ribeirão Cascalheira,Médio Araguaia - MT,301.6,302.7,-1.1,True
+uti,p_mediana_k2,510719,Ribeirãozinho,Garças Araguaia - MT,216.5,218.9,-2.4,True
+uti,p_mediana_k2,510720,Rio Branco,Oeste Matogrossense - MT,213.2,215.0,-1.8,True
+uti,p_mediana_k2,510724,Santa Carmem,Teles Pires - MT,137.8,140.2,-2.4,True
+uti,p_mediana_k2,510726,Santo Afonso,Médio Norte Matogrossense - MT,242.7,245.5,-2.8,True
+uti,p_mediana_k2,510729,São José do Povo,Sul Matogrossense - MT,55.3,55.8,-0.5,True
+uti,p_mediana_k2,510730,São José do Rio Claro,Centro Norte - MT,280.0,283.0,-2.9,True
+uti,p_mediana_k2,510735,São José do Xingu,Araguaia Xingu - MT,1020.7,351.3,669.4,True
+uti,p_mediana_k2,510740,São Pedro da Cipa,Sul Matogrossense - MT,84.7,85.2,-0.6,True
+uti,p_mediana_k2,510757,Rondolândia,Sudoeste Matogrossense - MT,1015.8,1001.5,14.3,True
+uti,p_mediana_k2,510760,Rondonópolis,Sul Matogrossense - MT,12.2,12.4,-0.1,True
+uti,p_mediana_k2,510770,Rosário Oeste,Centro Norte - MT,124.4,126.5,-2.0,True
+uti,p_mediana_k2,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,1188.8,341.4,847.4,True
+uti,p_mediana_k2,510775,Salto do Céu,Oeste Matogrossense - MT,204.6,206.6,-2.0,True
+uti,p_mediana_k2,510776,Santa Rita do Trivelato,Teles Pires - MT,227.3,228.7,-1.4,True
+uti,p_mediana_k2,510777,Santa Terezinha,Araguaia Xingu - MT,1244.2,266.2,978.0,True
+uti,p_mediana_k2,510779,Santo Antônio do Leste,Sul Matogrossense - MT,232.7,234.0,-1.3,True
+uti,p_mediana_k2,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,43.5,43.6,-0.1,True
+uti,p_mediana_k2,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,994.0,795.5,198.4,True
+uti,p_mediana_k2,510787,Sapezal,Médio Norte Matogrossense - MT,469.6,464.8,4.8,True
+uti,p_mediana_k2,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,347.9,339.7,8.1,True
+uti,p_mediana_k2,510790,Sinop,Teles Pires - MT,123.6,124.6,-1.1,True
+uti,p_mediana_k2,510792,Sorriso,Teles Pires - MT,67.3,68.7,-1.4,True
+uti,p_mediana_k2,510794,Tabaporã,Vale dos Arinos - MT,376.1,372.7,3.5,True
+uti,p_mediana_k2,510795,Tangará da Serra,Médio Norte Matogrossense - MT,243.2,245.8,-2.7,True
+uti,p_mediana_k2,510800,Tapurah,Teles Pires - MT,211.6,213.3,-1.7,True
+uti,p_mediana_k2,510805,Terra Nova do Norte,Vale do Peixoto - MT,434.2,440.2,-6.0,True
+uti,p_mediana_k2,510810,Tesouro,Sul Matogrossense - MT,156.9,157.6,-0.7,True
+uti,p_mediana_k2,510820,Torixoréu,Garças Araguaia - MT,210.9,213.0,-2.1,True
+uti,p_mediana_k2,510830,União do Sul,Teles Pires - MT,305.8,309.1,-3.4,True
+uti,p_mediana_k2,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,353.3,356.5,-3.2,True
+uti,p_mediana_k2,510840,Várzea Grande,Baixada Cuiabana - MT,12.6,12.6,-0.1,True
+uti,p_mediana_k2,510850,Vera,Teles Pires - MT,253.5,255.2,-1.7,True
+uti,p_mediana_k2,510860,Vila Rica,Araguaia Xingu - MT,1162.0,179.3,982.7,True
+uti,p_mediana_k2,510880,Nova Guarita,Norte Matogrossense - MT,216.3,223.3,-7.0,True
+uti,p_mediana_k2,510885,Nova Marilândia,Médio Norte Matogrossense - MT,248.9,251.7,-2.8,True
+uti,p_mediana_k2,510890,Nova Maringá,Centro Norte - MT,361.0,362.6,-1.6,True
+uti,p_mediana_k2,510895,Nova Monte Verde,Alto Tapajós - MT,795.1,763.8,31.3,True
+uti,p_mediana_k3,510010,Acorizal,Baixada Cuiabana - MT,68.5,68.9,-0.4,True
+uti,p_mediana_k3,510020,Água Boa,Médio Araguaia - MT,127.8,129.2,-1.4,True
+uti,p_mediana_k3,510025,Alta Floresta,Alto Tapajós - MT,610.0,612.2,-2.1,True
+uti,p_mediana_k3,510030,Alto Araguaia,Sul Matogrossense - MT,208.2,209.7,-1.5,True
+uti,p_mediana_k3,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,794.0,640.3,153.6,True
+uti,p_mediana_k3,510040,Alto Garças,Sul Matogrossense - MT,158.9,160.3,-1.3,True
+uti,p_mediana_k3,510050,Alto Paraguai,Centro Norte - MT,205.4,210.2,-4.8,True
+uti,p_mediana_k3,510060,Alto Taquari,Sul Matogrossense - MT,268.5,270.1,-1.6,True
+uti,p_mediana_k3,510080,Apiacás,Alto Tapajós - MT,814.4,797.5,16.9,True
+uti,p_mediana_k3,510100,Araguaiana,Garças Araguaia - MT,127.3,131.0,-3.6,True
+uti,p_mediana_k3,510120,Araguainha,Sul Matogrossense - MT,268.8,270.5,-1.6,True
+uti,p_mediana_k3,510125,Araputanga,Oeste Matogrossense - MT,209.4,209.7,-0.2,True
+uti,p_mediana_k3,510130,Arenápolis,Médio Norte Matogrossense - MT,225.6,230.6,-4.9,True
+uti,p_mediana_k3,510140,Aripuanã,Noroeste Matogrossense - MT,987.4,446.8,540.6,True
+uti,p_mediana_k3,510160,Barão de Melgaço,Baixada Cuiabana - MT,111.6,112.0,-0.4,True
+uti,p_mediana_k3,510170,Barra do Bugres,Médio Norte Matogrossense - MT,163.3,167.7,-4.4,True
+uti,p_mediana_k3,510180,Barra do Garças,Garças Araguaia - MT,82.0,83.2,-1.2,True
+uti,p_mediana_k3,510183,Boa Esperança do Norte,Teles Pires - MT,244.1,246.6,-2.5,True
+uti,p_mediana_k3,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,350.9,348.5,2.4,True
+uti,p_mediana_k3,510190,Brasnorte,Noroeste Matogrossense - MT,542.4,318.8,223.6,True
+uti,p_mediana_k3,510250,Cáceres,Oeste Matogrossense - MT,52.1,53.3,-1.2,True
+uti,p_mediana_k3,510260,Campinápolis,Garças Araguaia - MT,205.1,210.5,-5.3,True
+uti,p_mediana_k3,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,376.9,376.4,0.5,True
+uti,p_mediana_k3,510267,Campo Verde,Sul Matogrossense - MT,135.7,137.1,-1.4,True
+uti,p_mediana_k3,510268,Campos de Júlio,Sudoeste Matogrossense - MT,524.1,395.2,128.9,True
+uti,p_mediana_k3,510269,Canabrava do Norte,Araguaia Xingu - MT,989.8,157.0,832.8,True
+uti,p_mediana_k3,510270,Canarana,Médio Araguaia - MT,193.2,198.5,-5.3,True
+uti,p_mediana_k3,510279,Carlinda,Alto Tapajós - MT,573.3,578.1,-4.8,True
+uti,p_mediana_k3,510285,Castanheira,Noroeste Matogrossense - MT,721.3,160.8,560.5,True
+uti,p_mediana_k3,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,72.3,72.7,-0.3,True
+uti,p_mediana_k3,510305,Cláudia,Teles Pires - MT,171.8,176.2,-4.4,True
+uti,p_mediana_k3,510310,Cocalinho,Médio Araguaia - MT,336.5,341.2,-4.7,True
+uti,p_mediana_k3,510320,Colíder,Norte Matogrossense - MT,124.9,127.1,-2.3,True
+uti,p_mediana_k3,510325,Colniza,Noroeste Matogrossense - MT,1103.7,577.8,525.9,True
+uti,p_mediana_k3,510330,Comodoro,Sudoeste Matogrossense - MT,515.5,331.7,183.8,True
+uti,p_mediana_k3,510335,Confresa,Araguaia Xingu - MT,1075.9,20.2,1055.6,True
+uti,p_mediana_k3,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,426.3,219.4,206.9,True
+uti,p_mediana_k3,510337,Cotriguaçu,Noroeste Matogrossense - MT,938.8,407.1,531.7,True
+uti,p_mediana_k3,510340,Cuiabá,Baixada Cuiabana - MT,4.3,4.4,-0.1,True
+uti,p_mediana_k3,510343,Curvelândia,Oeste Matogrossense - MT,113.6,116.5,-3.0,True
+uti,p_mediana_k3,510345,Denise,Médio Norte Matogrossense - MT,200.0,204.6,-4.7,True
+uti,p_mediana_k3,510350,Diamantino,Centro Norte - MT,183.3,188.1,-4.8,True
+uti,p_mediana_k3,510360,Dom Aquino,Sul Matogrossense - MT,104.2,105.4,-1.2,True
+uti,p_mediana_k3,510370,Feliz Natal,Teles Pires - MT,264.0,266.9,-2.9,True
+uti,p_mediana_k3,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,286.4,200.5,85.8,True
+uti,p_mediana_k3,510385,Gaúcha do Norte,Médio Araguaia - MT,410.3,415.7,-5.5,True
+uti,p_mediana_k3,510390,General Carneiro,Garças Araguaia - MT,169.8,173.3,-3.5,True
+uti,p_mediana_k3,510395,Glória D'Oeste,Oeste Matogrossense - MT,155.7,156.8,-1.1,True
+uti,p_mediana_k3,510410,Guarantã do Norte,Vale do Peixoto - MT,534.6,540.7,-6.1,True
+uti,p_mediana_k3,510420,Guiratinga,Sul Matogrossense - MT,126.1,127.3,-1.2,True
+uti,p_mediana_k3,510450,Indiavaí,Oeste Matogrossense - MT,247.2,244.4,2.8,True
+uti,p_mediana_k3,510452,Ipiranga do Norte,Teles Pires - MT,114.7,118.2,-3.5,True
+uti,p_mediana_k3,510454,Itanhangá,Teles Pires - MT,204.9,207.9,-3.0,True
+uti,p_mediana_k3,510455,Itaúba,Norte Matogrossense - MT,138.2,145.9,-7.7,True
+uti,p_mediana_k3,510460,Itiquira,Sul Matogrossense - MT,177.5,178.7,-1.2,True
+uti,p_mediana_k3,510480,Jaciara,Sul Matogrossense - MT,86.7,87.9,-1.2,True
+uti,p_mediana_k3,510490,Jangada,Baixada Cuiabana - MT,79.3,79.6,-0.4,True
+uti,p_mediana_k3,510500,Jauru,Sudoeste Matogrossense - MT,314.2,190.3,123.9,True
+uti,p_mediana_k3,510510,Juara,Vale dos Arinos - MT,496.0,463.3,32.7,True
+uti,p_mediana_k3,510515,Juína,Noroeste Matogrossense - MT,693.4,36.6,656.8,True
+uti,p_mediana_k3,510517,Juruena,Noroeste Matogrossense - MT,846.7,328.0,518.7,True
+uti,p_mediana_k3,510520,Juscimeira,Sul Matogrossense - MT,68.4,69.5,-1.2,True
+uti,p_mediana_k3,510523,Lambari D'Oeste,Oeste Matogrossense - MT,144.0,147.5,-3.4,True
+uti,p_mediana_k3,510525,Lucas do Rio Verde,Teles Pires - MT,231.7,233.7,-2.0,True
+uti,p_mediana_k3,510530,Luciára,Norte Araguaia Karajá - MT,991.1,684.7,306.4,True
+uti,p_mediana_k3,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,425.8,210.3,215.5,True
+uti,p_mediana_k3,510558,Marcelândia,Norte Matogrossense - MT,234.8,243.1,-8.4,True
+uti,p_mediana_k3,510560,Matupá,Vale do Peixoto - MT,512.5,518.4,-5.9,True
+uti,p_mediana_k3,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,169.9,171.5,-1.6,True
+uti,p_mediana_k3,510590,Nobres,Centro Norte - MT,139.1,143.3,-4.1,True
+uti,p_mediana_k3,510600,Nortelândia,Centro Norte - MT,230.8,235.7,-4.8,True
+uti,p_mediana_k3,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,45.2,45.5,-0.3,True
+uti,p_mediana_k3,510615,Nova Bandeirantes,Alto Tapajós - MT,782.4,743.8,38.6,True
+uti,p_mediana_k3,510617,Nova Nazaré,Médio Araguaia - MT,117.7,122.9,-5.2,True
+uti,p_mediana_k3,510618,Nova Lacerda,Sudoeste Matogrossense - MT,440.5,231.1,209.4,True
+uti,p_mediana_k3,510619,Nova Santa Helena,Norte Matogrossense - MT,192.6,198.9,-6.3,True
+uti,p_mediana_k3,510620,Nova Brasilândia,Baixada Cuiabana - MT,200.4,200.9,-0.5,True
+uti,p_mediana_k3,510621,Nova Canaã do Norte,Norte Matogrossense - MT,230.2,236.7,-6.4,True
+uti,p_mediana_k3,510622,Nova Mutum,Teles Pires - MT,34.8,35.8,-1.0,True
+uti,p_mediana_k3,510623,Nova Olímpia,Médio Norte Matogrossense - MT,197.7,202.3,-4.6,True
+uti,p_mediana_k3,510624,Nova Ubiratã,Teles Pires - MT,144.2,147.4,-3.2,True
+uti,p_mediana_k3,510625,Nova Xavantina,Garças Araguaia - MT,229.5,233.9,-4.4,True
+uti,p_mediana_k3,510626,Novo Mundo,Vale do Peixoto - MT,579.0,584.3,-5.3,True
+uti,p_mediana_k3,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,449.2,430.8,18.5,True
+uti,p_mediana_k3,510628,Novo São Joaquim,Garças Araguaia - MT,313.8,318.3,-4.6,True
+uti,p_mediana_k3,510629,Paranaíta,Alto Tapajós - MT,668.8,669.0,-0.3,True
+uti,p_mediana_k3,510630,Paranatinga,Sul Matogrossense - MT,277.7,279.7,-2.0,True
+uti,p_mediana_k3,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,515.3,496.2,19.0,True
+uti,p_mediana_k3,510637,Pedra Preta,Sul Matogrossense - MT,48.5,49.4,-0.9,True
+uti,p_mediana_k3,510642,Peixoto de Azevedo,Vale do Peixoto - MT,499.8,506.1,-6.3,True
+uti,p_mediana_k3,510645,Planalto da Serra,Baixada Cuiabana - MT,262.0,262.5,-0.6,True
+uti,p_mediana_k3,510650,Poconé,Baixada Cuiabana - MT,108.0,108.4,-0.4,True
+uti,p_mediana_k3,510665,Pontal do Araguaia,Garças Araguaia - MT,125.4,127.6,-2.2,True
+uti,p_mediana_k3,510670,Ponte Branca,Garças Araguaia - MT,264.2,267.7,-3.5,True
+uti,p_mediana_k3,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,330.1,41.4,288.7,True
+uti,p_mediana_k3,510677,Porto Alegre do Norte,Araguaia Xingu - MT,1000.1,95.9,904.1,True
+uti,p_mediana_k3,510680,Porto dos Gaúchos,Vale dos Arinos - MT,364.0,353.8,10.2,True
+uti,p_mediana_k3,510682,Porto Esperidião,Oeste Matogrossense - MT,185.7,185.2,0.5,True
+uti,p_mediana_k3,510685,Porto Estrela,Médio Norte Matogrossense - MT,188.9,193.0,-4.1,True
+uti,p_mediana_k3,510700,Poxoréo,Sul Matogrossense - MT,94.7,95.9,-1.2,True
+uti,p_mediana_k3,510704,Primavera do Leste,Sul Matogrossense - MT,69.2,70.1,-0.9,True
+uti,p_mediana_k3,510706,Querência,Médio Araguaia - MT,349.7,351.0,-1.4,True
+uti,p_mediana_k3,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,174.6,175.8,-1.3,True
+uti,p_mediana_k3,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,233.3,234.5,-1.2,True
+uti,p_mediana_k3,510718,Ribeirão Cascalheira,Médio Araguaia - MT,301.6,303.6,-2.0,True
+uti,p_mediana_k3,510719,Ribeirãozinho,Garças Araguaia - MT,216.5,220.2,-3.6,True
+uti,p_mediana_k3,510720,Rio Branco,Oeste Matogrossense - MT,213.2,215.4,-2.2,True
+uti,p_mediana_k3,510724,Santa Carmem,Teles Pires - MT,137.8,141.0,-3.2,True
+uti,p_mediana_k3,510726,Santo Afonso,Médio Norte Matogrossense - MT,242.7,247.6,-5.0,True
+uti,p_mediana_k3,510729,São José do Povo,Sul Matogrossense - MT,55.3,56.4,-1.0,True
+uti,p_mediana_k3,510730,São José do Rio Claro,Centro Norte - MT,280.0,285.2,-5.2,True
+uti,p_mediana_k3,510735,São José do Xingu,Araguaia Xingu - MT,1020.7,352.0,668.7,True
+uti,p_mediana_k3,510740,São Pedro da Cipa,Sul Matogrossense - MT,84.7,85.9,-1.2,True
+uti,p_mediana_k3,510757,Rondolândia,Sudoeste Matogrossense - MT,1015.8,804.4,211.4,True
+uti,p_mediana_k3,510760,Rondonópolis,Sul Matogrossense - MT,12.2,12.5,-0.3,True
+uti,p_mediana_k3,510770,Rosário Oeste,Centro Norte - MT,124.4,128.4,-4.0,True
+uti,p_mediana_k3,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,1188.8,342.0,846.8,True
+uti,p_mediana_k3,510775,Salto do Céu,Oeste Matogrossense - MT,204.6,207.4,-2.8,True
+uti,p_mediana_k3,510776,Santa Rita do Trivelato,Teles Pires - MT,227.3,229.6,-2.4,True
+uti,p_mediana_k3,510777,Santa Terezinha,Araguaia Xingu - MT,1244.2,266.5,977.7,True
+uti,p_mediana_k3,510779,Santo Antônio do Leste,Sul Matogrossense - MT,232.7,234.7,-2.1,True
+uti,p_mediana_k3,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,43.5,43.8,-0.3,True
+uti,p_mediana_k3,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,994.0,797.1,196.8,True
+uti,p_mediana_k3,510787,Sapezal,Médio Norte Matogrossense - MT,469.6,456.3,13.2,True
+uti,p_mediana_k3,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,347.9,342.3,5.6,True
+uti,p_mediana_k3,510790,Sinop,Teles Pires - MT,123.6,125.0,-1.5,True
+uti,p_mediana_k3,510792,Sorriso,Teles Pires - MT,67.3,69.3,-2.0,True
+uti,p_mediana_k3,510794,Tabaporã,Vale dos Arinos - MT,376.1,376.6,-0.5,True
+uti,p_mediana_k3,510795,Tangará da Serra,Médio Norte Matogrossense - MT,243.2,247.8,-4.6,True
+uti,p_mediana_k3,510800,Tapurah,Teles Pires - MT,211.6,214.3,-2.7,True
+uti,p_mediana_k3,510805,Terra Nova do Norte,Vale do Peixoto - MT,434.2,442.6,-8.4,True
+uti,p_mediana_k3,510810,Tesouro,Sul Matogrossense - MT,156.9,158.2,-1.3,True
+uti,p_mediana_k3,510820,Torixoréu,Garças Araguaia - MT,210.9,214.0,-3.1,True
+uti,p_mediana_k3,510830,União do Sul,Teles Pires - MT,305.8,310.1,-4.3,True
+uti,p_mediana_k3,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,353.3,175.3,178.0,True
+uti,p_mediana_k3,510840,Várzea Grande,Baixada Cuiabana - MT,12.6,12.7,-0.2,True
+uti,p_mediana_k3,510850,Vera,Teles Pires - MT,253.5,256.0,-2.4,True
+uti,p_mediana_k3,510860,Vila Rica,Araguaia Xingu - MT,1162.0,179.6,982.4,True
+uti,p_mediana_k3,510880,Nova Guarita,Norte Matogrossense - MT,216.3,224.9,-8.6,True
+uti,p_mediana_k3,510885,Nova Marilândia,Médio Norte Matogrossense - MT,248.9,253.8,-4.9,True
+uti,p_mediana_k3,510890,Nova Maringá,Centro Norte - MT,361.0,364.6,-3.6,True
+uti,p_mediana_k3,510895,Nova Monte Verde,Alto Tapajós - MT,795.1,766.4,28.6,True
+uti,mclp120_k1,510010,Acorizal,Baixada Cuiabana - MT,68.5,68.7,-0.2,True
+uti,mclp120_k1,510020,Água Boa,Médio Araguaia - MT,127.8,128.2,-0.4,True
+uti,mclp120_k1,510025,Alta Floresta,Alto Tapajós - MT,610.0,611.7,-1.7,True
+uti,mclp120_k1,510030,Alto Araguaia,Sul Matogrossense - MT,208.2,209.0,-0.8,True
+uti,mclp120_k1,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,794.0,796.4,-2.4,True
+uti,mclp120_k1,510040,Alto Garças,Sul Matogrossense - MT,158.9,159.7,-0.8,True
+uti,mclp120_k1,510050,Alto Paraguai,Centro Norte - MT,205.4,197.2,8.2,True
+uti,mclp120_k1,510060,Alto Taquari,Sul Matogrossense - MT,268.5,269.3,-0.8,True
+uti,mclp120_k1,510080,Apiacás,Alto Tapajós - MT,814.4,815.8,-1.4,True
+uti,mclp120_k1,510100,Araguaiana,Garças Araguaia - MT,127.3,128.8,-1.5,True
+uti,mclp120_k1,510120,Araguainha,Sul Matogrossense - MT,268.8,269.6,-0.8,True
+uti,mclp120_k1,510125,Araputanga,Oeste Matogrossense - MT,209.4,210.5,-1.0,True
+uti,mclp120_k1,510130,Arenápolis,Médio Norte Matogrossense - MT,225.6,61.4,164.2,True
+uti,mclp120_k1,510140,Aripuanã,Noroeste Matogrossense - MT,987.4,980.8,6.7,True
+uti,mclp120_k1,510160,Barão de Melgaço,Baixada Cuiabana - MT,111.6,111.8,-0.2,True
+uti,mclp120_k1,510170,Barra do Bugres,Médio Norte Matogrossense - MT,163.3,140.8,22.5,True
+uti,mclp120_k1,510180,Barra do Garças,Garças Araguaia - MT,82.0,82.5,-0.5,True
+uti,mclp120_k1,510183,Boa Esperança do Norte,Teles Pires - MT,244.1,244.7,-0.5,True
+uti,mclp120_k1,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,350.9,352.7,-1.8,True
+uti,mclp120_k1,510190,Brasnorte,Noroeste Matogrossense - MT,542.4,535.4,6.9,True
+uti,mclp120_k1,510250,Cáceres,Oeste Matogrossense - MT,52.1,52.7,-0.6,True
+uti,mclp120_k1,510260,Campinápolis,Garças Araguaia - MT,205.1,207.2,-2.0,True
+uti,mclp120_k1,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,376.9,317.7,59.2,True
+uti,mclp120_k1,510267,Campo Verde,Sul Matogrossense - MT,135.7,136.5,-0.7,True
+uti,mclp120_k1,510268,Campos de Júlio,Sudoeste Matogrossense - MT,524.1,516.8,7.3,True
+uti,mclp120_k1,510269,Canabrava do Norte,Araguaia Xingu - MT,989.8,991.1,-1.3,True
+uti,mclp120_k1,510270,Canarana,Médio Araguaia - MT,193.2,195.1,-1.8,True
+uti,mclp120_k1,510279,Carlinda,Alto Tapajós - MT,573.3,575.0,-1.7,True
+uti,mclp120_k1,510285,Castanheira,Noroeste Matogrossense - MT,721.3,715.2,6.1,True
+uti,mclp120_k1,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,72.3,72.5,-0.2,True
+uti,mclp120_k1,510305,Cláudia,Teles Pires - MT,171.8,173.6,-1.8,True
+uti,mclp120_k1,510310,Cocalinho,Médio Araguaia - MT,336.5,337.8,-1.4,True
+uti,mclp120_k1,510320,Colíder,Norte Matogrossense - MT,124.9,125.8,-1.0,True
+uti,mclp120_k1,510325,Colniza,Noroeste Matogrossense - MT,1103.7,1097.4,6.2,True
+uti,mclp120_k1,510330,Comodoro,Sudoeste Matogrossense - MT,515.5,511.7,3.8,True
+uti,mclp120_k1,510335,Confresa,Araguaia Xingu - MT,1075.9,1076.3,-0.5,True
+uti,mclp120_k1,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,426.3,426.9,-0.6,True
+uti,mclp120_k1,510337,Cotriguaçu,Noroeste Matogrossense - MT,938.8,932.7,6.1,True
+uti,mclp120_k1,510340,Cuiabá,Baixada Cuiabana - MT,4.3,4.4,-0.1,True
+uti,mclp120_k1,510343,Curvelândia,Oeste Matogrossense - MT,113.6,115.1,-1.6,True
+uti,mclp120_k1,510345,Denise,Médio Norte Matogrossense - MT,200.0,140.9,59.1,True
+uti,mclp120_k1,510350,Diamantino,Centro Norte - MT,183.3,177.2,6.2,True
+uti,mclp120_k1,510360,Dom Aquino,Sul Matogrossense - MT,104.2,104.9,-0.7,True
+uti,mclp120_k1,510370,Feliz Natal,Teles Pires - MT,264.0,265.0,-1.0,True
+uti,mclp120_k1,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,286.4,287.9,-1.5,True
+uti,mclp120_k1,510385,Gaúcha do Norte,Médio Araguaia - MT,410.3,412.4,-2.1,True
+uti,mclp120_k1,510390,General Carneiro,Garças Araguaia - MT,169.8,171.4,-1.6,True
+uti,mclp120_k1,510395,Glória D'Oeste,Oeste Matogrossense - MT,155.7,157.2,-1.5,True
+uti,mclp120_k1,510410,Guarantã do Norte,Vale do Peixoto - MT,534.6,536.2,-1.7,True
+uti,mclp120_k1,510420,Guiratinga,Sul Matogrossense - MT,126.1,126.9,-0.7,True
+uti,mclp120_k1,510450,Indiavaí,Oeste Matogrossense - MT,247.2,248.2,-1.0,True
+uti,mclp120_k1,510452,Ipiranga do Norte,Teles Pires - MT,114.7,116.3,-1.6,True
+uti,mclp120_k1,510454,Itanhangá,Teles Pires - MT,204.9,206.0,-1.1,True
+uti,mclp120_k1,510455,Itaúba,Norte Matogrossense - MT,138.2,141.4,-3.2,True
+uti,mclp120_k1,510460,Itiquira,Sul Matogrossense - MT,177.5,178.2,-0.8,True
+uti,mclp120_k1,510480,Jaciara,Sul Matogrossense - MT,86.7,87.4,-0.7,True
+uti,mclp120_k1,510490,Jangada,Baixada Cuiabana - MT,79.3,79.4,-0.1,True
+uti,mclp120_k1,510500,Jauru,Sudoeste Matogrossense - MT,314.2,315.6,-1.4,True
+uti,mclp120_k1,510510,Juara,Vale dos Arinos - MT,496.0,496.3,-0.3,True
+uti,mclp120_k1,510515,Juína,Noroeste Matogrossense - MT,693.4,686.6,6.8,True
+uti,mclp120_k1,510517,Juruena,Noroeste Matogrossense - MT,846.7,841.4,5.3,True
+uti,mclp120_k1,510520,Juscimeira,Sul Matogrossense - MT,68.4,69.1,-0.7,True
+uti,mclp120_k1,510523,Lambari D'Oeste,Oeste Matogrossense - MT,144.0,145.2,-1.2,True
+uti,mclp120_k1,510525,Lucas do Rio Verde,Teles Pires - MT,231.7,231.5,0.2,True
+uti,mclp120_k1,510530,Luciára,Norte Araguaia Karajá - MT,991.1,993.3,-2.2,True
+uti,mclp120_k1,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,425.8,427.7,-2.0,True
+uti,mclp120_k1,510558,Marcelândia,Norte Matogrossense - MT,234.8,237.9,-3.2,True
+uti,mclp120_k1,510560,Matupá,Vale do Peixoto - MT,512.5,514.1,-1.6,True
+uti,mclp120_k1,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,169.9,171.1,-1.2,True
+uti,mclp120_k1,510590,Nobres,Centro Norte - MT,139.1,138.4,0.7,True
+uti,mclp120_k1,510600,Nortelândia,Centro Norte - MT,230.8,208.9,21.9,True
+uti,mclp120_k1,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,45.2,45.4,-0.2,True
+uti,mclp120_k1,510615,Nova Bandeirantes,Alto Tapajós - MT,782.4,784.6,-2.2,True
+uti,mclp120_k1,510617,Nova Nazaré,Médio Araguaia - MT,117.7,119.0,-1.3,True
+uti,mclp120_k1,510618,Nova Lacerda,Sudoeste Matogrossense - MT,440.5,441.0,-0.5,True
+uti,mclp120_k1,510619,Nova Santa Helena,Norte Matogrossense - MT,192.6,195.1,-2.5,True
+uti,mclp120_k1,510620,Nova Brasilândia,Baixada Cuiabana - MT,200.4,200.7,-0.2,True
+uti,mclp120_k1,510621,Nova Canaã do Norte,Norte Matogrossense - MT,230.2,232.7,-2.5,True
+uti,mclp120_k1,510622,Nova Mutum,Teles Pires - MT,34.8,35.2,-0.4,True
+uti,mclp120_k1,510623,Nova Olímpia,Médio Norte Matogrossense - MT,197.7,160.6,37.2,True
+uti,mclp120_k1,510624,Nova Ubiratã,Teles Pires - MT,144.2,145.7,-1.5,True
+uti,mclp120_k1,510625,Nova Xavantina,Garças Araguaia - MT,229.5,231.0,-1.5,True
+uti,mclp120_k1,510626,Novo Mundo,Vale do Peixoto - MT,579.0,580.4,-1.4,True
+uti,mclp120_k1,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,449.2,450.3,-1.0,True
+uti,mclp120_k1,510628,Novo São Joaquim,Garças Araguaia - MT,313.8,315.6,-1.8,True
+uti,mclp120_k1,510629,Paranaíta,Alto Tapajós - MT,668.8,670.2,-1.4,True
+uti,mclp120_k1,510630,Paranatinga,Sul Matogrossense - MT,277.7,278.5,-0.8,True
+uti,mclp120_k1,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,515.3,520.0,-4.7,True
+uti,mclp120_k1,510637,Pedra Preta,Sul Matogrossense - MT,48.5,49.1,-0.6,True
+uti,mclp120_k1,510642,Peixoto de Azevedo,Vale do Peixoto - MT,499.8,501.4,-1.6,True
+uti,mclp120_k1,510645,Planalto da Serra,Baixada Cuiabana - MT,262.0,262.2,-0.2,True
+uti,mclp120_k1,510650,Poconé,Baixada Cuiabana - MT,108.0,108.2,-0.2,True
+uti,mclp120_k1,510665,Pontal do Araguaia,Garças Araguaia - MT,125.4,126.3,-0.9,True
+uti,mclp120_k1,510670,Ponte Branca,Garças Araguaia - MT,264.2,265.9,-1.6,True
+uti,mclp120_k1,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,330.1,332.3,-2.2,True
+uti,mclp120_k1,510677,Porto Alegre do Norte,Araguaia Xingu - MT,1000.1,1001.3,-1.3,True
+uti,mclp120_k1,510680,Porto dos Gaúchos,Vale dos Arinos - MT,364.0,366.9,-2.9,True
+uti,mclp120_k1,510682,Porto Esperidião,Oeste Matogrossense - MT,185.7,187.1,-1.4,True
+uti,mclp120_k1,510685,Porto Estrela,Médio Norte Matogrossense - MT,188.9,172.1,16.8,True
+uti,mclp120_k1,510700,Poxoréo,Sul Matogrossense - MT,94.7,95.4,-0.7,True
+uti,mclp120_k1,510704,Primavera do Leste,Sul Matogrossense - MT,69.2,69.7,-0.6,True
+uti,mclp120_k1,510706,Querência,Médio Araguaia - MT,349.7,351.5,-1.9,True
+uti,mclp120_k1,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,174.6,175.7,-1.2,True
+uti,mclp120_k1,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,233.3,234.0,-0.7,True
+uti,mclp120_k1,510718,Ribeirão Cascalheira,Médio Araguaia - MT,301.6,303.1,-1.5,True
+uti,mclp120_k1,510719,Ribeirãozinho,Garças Araguaia - MT,216.5,218.2,-1.6,True
+uti,mclp120_k1,510720,Rio Branco,Oeste Matogrossense - MT,213.2,213.3,-0.1,True
+uti,mclp120_k1,510724,Santa Carmem,Teles Pires - MT,137.8,139.3,-1.5,True
+uti,mclp120_k1,510726,Santo Afonso,Médio Norte Matogrossense - MT,242.7,147.0,95.7,True
+uti,mclp120_k1,510729,São José do Povo,Sul Matogrossense - MT,55.3,56.0,-0.7,True
+uti,mclp120_k1,510730,São José do Rio Claro,Centro Norte - MT,280.0,276.0,4.1,True
+uti,mclp120_k1,510735,São José do Xingu,Araguaia Xingu - MT,1020.7,1019.1,1.6,True
+uti,mclp120_k1,510740,São Pedro da Cipa,Sul Matogrossense - MT,84.7,85.4,-0.7,True
+uti,mclp120_k1,510757,Rondolândia,Sudoeste Matogrossense - MT,1015.8,1009.4,6.4,True
+uti,mclp120_k1,510760,Rondonópolis,Sul Matogrossense - MT,12.2,12.4,-0.2,True
+uti,mclp120_k1,510770,Rosário Oeste,Centro Norte - MT,124.4,124.4,0.0,True
+uti,mclp120_k1,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,1188.8,1186.9,2.0,True
+uti,mclp120_k1,510775,Salto do Céu,Oeste Matogrossense - MT,204.6,205.0,-0.4,True
+uti,mclp120_k1,510776,Santa Rita do Trivelato,Teles Pires - MT,227.3,227.6,-0.3,True
+uti,mclp120_k1,510777,Santa Terezinha,Araguaia Xingu - MT,1244.2,1244.8,-0.6,True
+uti,mclp120_k1,510779,Santo Antônio do Leste,Sul Matogrossense - MT,232.7,233.6,-0.9,True
+uti,mclp120_k1,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,43.5,43.7,-0.2,True
+uti,mclp120_k1,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,994.0,995.9,-1.9,True
+uti,mclp120_k1,510787,Sapezal,Médio Norte Matogrossense - MT,469.6,415.6,54.0,True
+uti,mclp120_k1,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,347.9,353.1,-5.2,True
+uti,mclp120_k1,510790,Sinop,Teles Pires - MT,123.6,124.2,-0.7,True
+uti,mclp120_k1,510792,Sorriso,Teles Pires - MT,67.3,68.3,-1.0,True
+uti,mclp120_k1,510794,Tabaporã,Vale dos Arinos - MT,376.1,379.1,-3.0,True
+uti,mclp120_k1,510795,Tangará da Serra,Médio Norte Matogrossense - MT,243.2,197.9,45.2,True
+uti,mclp120_k1,510800,Tapurah,Teles Pires - MT,211.6,212.2,-0.5,True
+uti,mclp120_k1,510805,Terra Nova do Norte,Vale do Peixoto - MT,434.2,436.4,-2.2,True
+uti,mclp120_k1,510810,Tesouro,Sul Matogrossense - MT,156.9,157.6,-0.7,True
+uti,mclp120_k1,510820,Torixoréu,Garças Araguaia - MT,210.9,212.2,-1.3,True
+uti,mclp120_k1,510830,União do Sul,Teles Pires - MT,305.8,307.4,-1.6,True
+uti,mclp120_k1,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,353.3,354.3,-1.0,True
+uti,mclp120_k1,510840,Várzea Grande,Baixada Cuiabana - MT,12.6,12.7,-0.1,True
+uti,mclp120_k1,510850,Vera,Teles Pires - MT,253.5,254.2,-0.6,True
+uti,mclp120_k1,510860,Vila Rica,Araguaia Xingu - MT,1162.0,1162.6,-0.6,True
+uti,mclp120_k1,510880,Nova Guarita,Norte Matogrossense - MT,216.3,219.7,-3.4,True
+uti,mclp120_k1,510885,Nova Marilândia,Médio Norte Matogrossense - MT,248.9,140.8,108.1,True
+uti,mclp120_k1,510890,Nova Maringá,Centro Norte - MT,361.0,355.8,5.2,True
+uti,mclp120_k1,510895,Nova Monte Verde,Alto Tapajós - MT,795.1,795.8,-0.7,True
+uti,mclp120_k3,510010,Acorizal,Baixada Cuiabana - MT,68.5,68.9,-0.4,True
+uti,mclp120_k3,510020,Água Boa,Médio Araguaia - MT,127.8,129.4,-1.6,True
+uti,mclp120_k3,510025,Alta Floresta,Alto Tapajós - MT,610.0,617.1,-7.1,True
+uti,mclp120_k3,510030,Alto Araguaia,Sul Matogrossense - MT,208.2,210.2,-2.0,True
+uti,mclp120_k3,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,794.0,640.8,153.1,True
+uti,mclp120_k3,510040,Alto Garças,Sul Matogrossense - MT,158.9,160.7,-1.8,True
+uti,mclp120_k3,510050,Alto Paraguai,Centro Norte - MT,205.4,199.9,5.5,True
+uti,mclp120_k3,510060,Alto Taquari,Sul Matogrossense - MT,268.5,270.6,-2.1,True
+uti,mclp120_k3,510080,Apiacás,Alto Tapajós - MT,814.4,821.1,-6.8,True
+uti,mclp120_k3,510100,Araguaiana,Garças Araguaia - MT,127.3,132.0,-4.7,True
+uti,mclp120_k3,510120,Araguainha,Sul Matogrossense - MT,268.8,270.9,-2.1,True
+uti,mclp120_k3,510125,Araputanga,Oeste Matogrossense - MT,209.4,209.3,0.1,True
+uti,mclp120_k3,510130,Arenápolis,Médio Norte Matogrossense - MT,225.6,62.7,162.9,True
+uti,mclp120_k3,510140,Aripuanã,Noroeste Matogrossense - MT,987.4,980.7,6.7,True
+uti,mclp120_k3,510160,Barão de Melgaço,Baixada Cuiabana - MT,111.6,112.1,-0.5,True
+uti,mclp120_k3,510170,Barra do Bugres,Médio Norte Matogrossense - MT,163.3,142.8,20.5,True
+uti,mclp120_k3,510180,Barra do Garças,Garças Araguaia - MT,82.0,83.6,-1.6,True
+uti,mclp120_k3,510183,Boa Esperança do Norte,Teles Pires - MT,244.1,246.1,-2.0,True
+uti,mclp120_k3,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,350.9,349.2,1.7,True
+uti,mclp120_k3,510190,Brasnorte,Noroeste Matogrossense - MT,542.4,534.9,7.5,True
+uti,mclp120_k3,510250,Cáceres,Oeste Matogrossense - MT,52.1,53.5,-1.4,True
+uti,mclp120_k3,510260,Campinápolis,Garças Araguaia - MT,205.1,211.6,-6.4,True
+uti,mclp120_k3,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,376.9,319.3,57.6,True
+uti,mclp120_k3,510267,Campo Verde,Sul Matogrossense - MT,135.7,137.4,-1.7,True
+uti,mclp120_k3,510268,Campos de Júlio,Sudoeste Matogrossense - MT,524.1,394.2,129.9,True
+uti,mclp120_k3,510269,Canabrava do Norte,Araguaia Xingu - MT,989.8,157.0,832.8,True
+uti,mclp120_k3,510270,Canarana,Médio Araguaia - MT,193.2,199.5,-6.2,True
+uti,mclp120_k3,510279,Carlinda,Alto Tapajós - MT,573.3,580.3,-6.9,True
+uti,mclp120_k3,510285,Castanheira,Noroeste Matogrossense - MT,721.3,715.3,5.9,True
+uti,mclp120_k3,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,72.3,72.8,-0.4,True
+uti,mclp120_k3,510305,Cláudia,Teles Pires - MT,171.8,176.1,-4.3,True
+uti,mclp120_k3,510310,Cocalinho,Médio Araguaia - MT,336.5,341.9,-5.5,True
+uti,mclp120_k3,510320,Colíder,Norte Matogrossense - MT,124.9,127.1,-2.2,True
+uti,mclp120_k3,510325,Colniza,Noroeste Matogrossense - MT,1103.7,1097.6,6.1,True
+uti,mclp120_k3,510330,Comodoro,Sudoeste Matogrossense - MT,515.5,331.0,184.4,True
+uti,mclp120_k3,510335,Confresa,Araguaia Xingu - MT,1075.9,20.3,1055.6,True
+uti,mclp120_k3,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,426.3,219.1,207.2,True
+uti,mclp120_k3,510337,Cotriguaçu,Noroeste Matogrossense - MT,938.8,932.9,6.0,True
+uti,mclp120_k3,510340,Cuiabá,Baixada Cuiabana - MT,4.3,4.5,-0.1,True
+uti,mclp120_k3,510343,Curvelândia,Oeste Matogrossense - MT,113.6,116.7,-3.1,True
+uti,mclp120_k3,510345,Denise,Médio Norte Matogrossense - MT,200.0,143.0,57.0,True
+uti,mclp120_k3,510350,Diamantino,Centro Norte - MT,183.3,179.8,3.5,True
+uti,mclp120_k3,510360,Dom Aquino,Sul Matogrossense - MT,104.2,105.8,-1.6,True
+uti,mclp120_k3,510370,Feliz Natal,Teles Pires - MT,264.0,266.6,-2.6,True
+uti,mclp120_k3,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,286.4,200.7,85.7,True
+uti,mclp120_k3,510385,Gaúcha do Norte,Médio Araguaia - MT,410.3,416.1,-5.8,True
+uti,mclp120_k3,510390,General Carneiro,Garças Araguaia - MT,169.8,174.2,-4.5,True
+uti,mclp120_k3,510395,Glória D'Oeste,Oeste Matogrossense - MT,155.7,156.9,-1.2,True
+uti,mclp120_k3,510410,Guarantã do Norte,Vale do Peixoto - MT,534.6,539.9,-5.3,True
+uti,mclp120_k3,510420,Guiratinga,Sul Matogrossense - MT,126.1,127.8,-1.7,True
+uti,mclp120_k3,510450,Indiavaí,Oeste Matogrossense - MT,247.2,243.9,3.2,True
+uti,mclp120_k3,510452,Ipiranga do Norte,Teles Pires - MT,114.7,118.0,-3.3,True
+uti,mclp120_k3,510454,Itanhangá,Teles Pires - MT,204.9,207.7,-2.8,True
+uti,mclp120_k3,510455,Itaúba,Norte Matogrossense - MT,138.2,145.6,-7.4,True
+uti,mclp120_k3,510460,Itiquira,Sul Matogrossense - MT,177.5,179.2,-1.7,True
+uti,mclp120_k3,510480,Jaciara,Sul Matogrossense - MT,86.7,88.3,-1.6,True
+uti,mclp120_k3,510490,Jangada,Baixada Cuiabana - MT,79.3,79.6,-0.4,True
+uti,mclp120_k3,510500,Jauru,Sudoeste Matogrossense - MT,314.2,190.6,123.6,True
+uti,mclp120_k3,510510,Juara,Vale dos Arinos - MT,496.0,501.0,-4.9,True
+uti,mclp120_k3,510515,Juína,Noroeste Matogrossense - MT,693.4,686.2,7.2,True
+uti,mclp120_k3,510517,Juruena,Noroeste Matogrossense - MT,846.7,842.5,4.2,True
+uti,mclp120_k3,510520,Juscimeira,Sul Matogrossense - MT,68.4,70.0,-1.6,True
+uti,mclp120_k3,510523,Lambari D'Oeste,Oeste Matogrossense - MT,144.0,146.9,-2.9,True
+uti,mclp120_k3,510525,Lucas do Rio Verde,Teles Pires - MT,231.7,232.7,-0.9,True
+uti,mclp120_k3,510530,Luciára,Norte Araguaia Karajá - MT,991.1,684.8,306.3,True
+uti,mclp120_k3,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,425.8,210.5,215.2,True
+uti,mclp120_k3,510558,Marcelândia,Norte Matogrossense - MT,234.8,243.0,-8.2,True
+uti,mclp120_k3,510560,Matupá,Vale do Peixoto - MT,512.5,517.6,-5.1,True
+uti,mclp120_k3,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,169.9,171.4,-1.5,True
+uti,mclp120_k3,510590,Nobres,Centro Norte - MT,139.1,140.8,-1.7,True
+uti,mclp120_k3,510600,Nortelândia,Centro Norte - MT,230.8,211.6,19.2,True
+uti,mclp120_k3,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,45.2,45.6,-0.4,True
+uti,mclp120_k3,510615,Nova Bandeirantes,Alto Tapajós - MT,782.4,791.2,-8.8,True
+uti,mclp120_k3,510617,Nova Nazaré,Médio Araguaia - MT,117.7,123.6,-6.0,True
+uti,mclp120_k3,510618,Nova Lacerda,Sudoeste Matogrossense - MT,440.5,230.8,209.7,True
+uti,mclp120_k3,510619,Nova Santa Helena,Norte Matogrossense - MT,192.6,198.7,-6.1,True
+uti,mclp120_k3,510620,Nova Brasilândia,Baixada Cuiabana - MT,200.4,201.0,-0.5,True
+uti,mclp120_k3,510621,Nova Canaã do Norte,Norte Matogrossense - MT,230.2,236.2,-5.9,True
+uti,mclp120_k3,510622,Nova Mutum,Teles Pires - MT,34.8,35.8,-1.0,True
+uti,mclp120_k3,510623,Nova Olímpia,Médio Norte Matogrossense - MT,197.7,162.7,35.1,True
+uti,mclp120_k3,510624,Nova Ubiratã,Teles Pires - MT,144.2,147.4,-3.2,True
+uti,mclp120_k3,510625,Nova Xavantina,Garças Araguaia - MT,229.5,234.8,-5.3,True
+uti,mclp120_k3,510626,Novo Mundo,Vale do Peixoto - MT,579.0,583.8,-4.8,True
+uti,mclp120_k3,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,449.2,455.7,-6.5,True
+uti,mclp120_k3,510628,Novo São Joaquim,Garças Araguaia - MT,313.8,319.3,-5.5,True
+uti,mclp120_k3,510629,Paranaíta,Alto Tapajós - MT,668.8,675.4,-6.6,True
+uti,mclp120_k3,510630,Paranatinga,Sul Matogrossense - MT,277.7,279.9,-2.2,True
+uti,mclp120_k3,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,515.3,498.0,17.3,True
+uti,mclp120_k3,510637,Pedra Preta,Sul Matogrossense - MT,48.5,49.8,-1.3,True
+uti,mclp120_k3,510642,Peixoto de Azevedo,Vale do Peixoto - MT,499.8,505.3,-5.5,True
+uti,mclp120_k3,510645,Planalto da Serra,Baixada Cuiabana - MT,262.0,262.5,-0.5,True
+uti,mclp120_k3,510650,Poconé,Baixada Cuiabana - MT,108.0,108.5,-0.5,True
+uti,mclp120_k3,510665,Pontal do Araguaia,Garças Araguaia - MT,125.4,128.3,-2.9,True
+uti,mclp120_k3,510670,Ponte Branca,Garças Araguaia - MT,264.2,268.7,-4.5,True
+uti,mclp120_k3,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,330.1,41.6,288.5,True
+uti,mclp120_k3,510677,Porto Alegre do Norte,Araguaia Xingu - MT,1000.1,95.9,904.1,True
+uti,mclp120_k3,510680,Porto dos Gaúchos,Vale dos Arinos - MT,364.0,373.6,-9.6,True
+uti,mclp120_k3,510682,Porto Esperidião,Oeste Matogrossense - MT,185.7,185.3,0.4,True
+uti,mclp120_k3,510685,Porto Estrela,Médio Norte Matogrossense - MT,188.9,174.0,14.9,True
+uti,mclp120_k3,510700,Poxoréo,Sul Matogrossense - MT,94.7,96.3,-1.6,True
+uti,mclp120_k3,510704,Primavera do Leste,Sul Matogrossense - MT,69.2,70.5,-1.3,True
+uti,mclp120_k3,510706,Querência,Médio Araguaia - MT,349.7,352.0,-2.3,True
+uti,mclp120_k3,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,174.6,175.6,-1.1,True
+uti,mclp120_k3,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,233.3,233.5,-0.1,True
+uti,mclp120_k3,510718,Ribeirão Cascalheira,Médio Araguaia - MT,301.6,304.4,-2.8,True
+uti,mclp120_k3,510719,Ribeirãozinho,Garças Araguaia - MT,216.5,221.2,-4.6,True
+uti,mclp120_k3,510720,Rio Branco,Oeste Matogrossense - MT,213.2,214.0,-0.8,True
+uti,mclp120_k3,510724,Santa Carmem,Teles Pires - MT,137.8,141.0,-3.2,True
+uti,mclp120_k3,510726,Santo Afonso,Médio Norte Matogrossense - MT,242.7,149.2,93.5,True
+uti,mclp120_k3,510729,São José do Povo,Sul Matogrossense - MT,55.3,56.8,-1.4,True
+uti,mclp120_k3,510730,São José do Rio Claro,Centro Norte - MT,280.0,278.9,1.1,True
+uti,mclp120_k3,510735,São José do Xingu,Araguaia Xingu - MT,1020.7,352.0,668.7,True
+uti,mclp120_k3,510740,São Pedro da Cipa,Sul Matogrossense - MT,84.7,86.2,-1.6,True
+uti,mclp120_k3,510757,Rondolândia,Sudoeste Matogrossense - MT,1015.8,806.3,209.5,True
+uti,mclp120_k3,510760,Rondonópolis,Sul Matogrossense - MT,12.2,12.7,-0.5,True
+uti,mclp120_k3,510770,Rosário Oeste,Centro Norte - MT,124.4,126.7,-2.3,True
+uti,mclp120_k3,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,1188.8,342.0,846.8,True
+uti,mclp120_k3,510775,Salto do Céu,Oeste Matogrossense - MT,204.6,206.1,-1.5,True
+uti,mclp120_k3,510776,Santa Rita do Trivelato,Teles Pires - MT,227.3,228.9,-1.6,True
+uti,mclp120_k3,510777,Santa Terezinha,Araguaia Xingu - MT,1244.2,266.6,977.6,True
+uti,mclp120_k3,510779,Santo Antônio do Leste,Sul Matogrossense - MT,232.7,235.2,-2.5,True
+uti,mclp120_k3,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,43.5,43.9,-0.4,True
+uti,mclp120_k3,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,994.0,797.6,196.4,True
+uti,mclp120_k3,510787,Sapezal,Médio Norte Matogrossense - MT,469.6,411.7,57.9,True
+uti,mclp120_k3,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,347.9,344.2,3.6,True
+uti,mclp120_k3,510790,Sinop,Teles Pires - MT,123.6,125.0,-1.4,True
+uti,mclp120_k3,510792,Sorriso,Teles Pires - MT,67.3,69.3,-2.0,True
+uti,mclp120_k3,510794,Tabaporã,Vale dos Arinos - MT,376.1,386.0,-9.8,True
+uti,mclp120_k3,510795,Tangará da Serra,Médio Norte Matogrossense - MT,243.2,200.1,43.1,True
+uti,mclp120_k3,510800,Tapurah,Teles Pires - MT,211.6,213.6,-2.0,True
+uti,mclp120_k3,510805,Terra Nova do Norte,Vale do Peixoto - MT,434.2,441.8,-7.6,True
+uti,mclp120_k3,510810,Tesouro,Sul Matogrossense - MT,156.9,158.6,-1.8,True
+uti,mclp120_k3,510820,Torixoréu,Garças Araguaia - MT,210.9,214.8,-3.9,True
+uti,mclp120_k3,510830,União do Sul,Teles Pires - MT,305.8,310.0,-4.2,True
+uti,mclp120_k3,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,353.3,175.7,177.6,True
+uti,mclp120_k3,510840,Várzea Grande,Baixada Cuiabana - MT,12.6,12.8,-0.2,True
+uti,mclp120_k3,510850,Vera,Teles Pires - MT,253.5,255.6,-2.0,True
+uti,mclp120_k3,510860,Vila Rica,Araguaia Xingu - MT,1162.0,179.6,982.4,True
+uti,mclp120_k3,510880,Nova Guarita,Norte Matogrossense - MT,216.3,224.6,-8.3,True
+uti,mclp120_k3,510885,Nova Marilândia,Médio Norte Matogrossense - MT,248.9,142.9,106.0,True
+uti,mclp120_k3,510890,Nova Maringá,Centro Norte - MT,361.0,358.7,2.2,True
+uti,mclp120_k3,510895,Nova Monte Verde,Alto Tapajós - MT,795.1,800.2,-5.1,True
+uti,uti_regional_k1,510010,Acorizal,Baixada Cuiabana - MT,68.5,68.7,-0.1,True
+uti,uti_regional_k1,510020,Água Boa,Médio Araguaia - MT,127.8,128.0,-0.2,True
+uti,uti_regional_k1,510025,Alta Floresta,Alto Tapajós - MT,610.0,606.7,3.3,True
+uti,uti_regional_k1,510030,Alto Araguaia,Sul Matogrossense - MT,208.2,208.5,-0.3,True
+uti,uti_regional_k1,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,794.0,796.2,-2.2,True
+uti,uti_regional_k1,510040,Alto Garças,Sul Matogrossense - MT,158.9,159.2,-0.3,True
+uti,uti_regional_k1,510050,Alto Paraguai,Centro Norte - MT,205.4,207.4,-2.1,True
+uti,uti_regional_k1,510060,Alto Taquari,Sul Matogrossense - MT,268.5,268.8,-0.3,True
+uti,uti_regional_k1,510080,Apiacás,Alto Tapajós - MT,814.4,791.7,22.6,True
+uti,uti_regional_k1,510100,Araguaiana,Garças Araguaia - MT,127.3,127.8,-0.5,True
+uti,uti_regional_k1,510120,Araguainha,Sul Matogrossense - MT,268.8,269.2,-0.3,True
+uti,uti_regional_k1,510125,Araputanga,Oeste Matogrossense - MT,209.4,210.9,-1.4,True
+uti,uti_regional_k1,510130,Arenápolis,Médio Norte Matogrossense - MT,225.6,227.8,-2.2,True
+uti,uti_regional_k1,510140,Aripuanã,Noroeste Matogrossense - MT,987.4,442.8,544.6,True
+uti,uti_regional_k1,510160,Barão de Melgaço,Baixada Cuiabana - MT,111.6,111.7,-0.1,True
+uti,uti_regional_k1,510170,Barra do Bugres,Médio Norte Matogrossense - MT,163.3,165.3,-1.9,True
+uti,uti_regional_k1,510180,Barra do Garças,Garças Araguaia - MT,82.0,82.2,-0.2,True
+uti,uti_regional_k1,510183,Boa Esperança do Norte,Teles Pires - MT,244.1,245.2,-1.1,True
+uti,uti_regional_k1,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,350.9,351.9,-1.0,True
+uti,uti_regional_k1,510190,Brasnorte,Noroeste Matogrossense - MT,542.4,315.9,226.4,True
+uti,uti_regional_k1,510250,Cáceres,Oeste Matogrossense - MT,52.1,52.5,-0.4,True
+uti,uti_regional_k1,510260,Campinápolis,Garças Araguaia - MT,205.1,206.0,-0.9,True
+uti,uti_regional_k1,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,376.9,375.4,1.5,True
+uti,uti_regional_k1,510267,Campo Verde,Sul Matogrossense - MT,135.7,136.1,-0.4,True
+uti,uti_regional_k1,510268,Campos de Júlio,Sudoeste Matogrossense - MT,524.1,518.6,5.5,True
+uti,uti_regional_k1,510269,Canabrava do Norte,Araguaia Xingu - MT,989.8,991.5,-1.7,True
+uti,uti_regional_k1,510270,Canarana,Médio Araguaia - MT,193.2,194.1,-0.9,True
+uti,uti_regional_k1,510279,Carlinda,Alto Tapajós - MT,573.3,572.9,0.4,True
+uti,uti_regional_k1,510285,Castanheira,Noroeste Matogrossense - MT,721.3,157.7,563.6,True
+uti,uti_regional_k1,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,72.3,72.4,-0.1,True
+uti,uti_regional_k1,510305,Cláudia,Teles Pires - MT,171.8,173.7,-1.9,True
+uti,uti_regional_k1,510310,Cocalinho,Médio Araguaia - MT,336.5,337.1,-0.6,True
+uti,uti_regional_k1,510320,Colíder,Norte Matogrossense - MT,124.9,125.9,-1.0,True
+uti,uti_regional_k1,510325,Colniza,Noroeste Matogrossense - MT,1103.7,573.2,530.5,True
+uti,uti_regional_k1,510330,Comodoro,Sudoeste Matogrossense - MT,515.5,513.3,2.1,True
+uti,uti_regional_k1,510335,Confresa,Araguaia Xingu - MT,1075.9,1076.9,-1.0,True
+uti,uti_regional_k1,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,426.3,428.6,-2.3,True
+uti,uti_regional_k1,510337,Cotriguaçu,Noroeste Matogrossense - MT,938.8,402.7,536.1,True
+uti,uti_regional_k1,510340,Cuiabá,Baixada Cuiabana - MT,4.3,4.4,-0.0,True
+uti,uti_regional_k1,510343,Curvelândia,Oeste Matogrossense - MT,113.6,114.9,-1.4,True
+uti,uti_regional_k1,510345,Denise,Médio Norte Matogrossense - MT,200.0,202.0,-2.1,True
+uti,uti_regional_k1,510350,Diamantino,Centro Norte - MT,183.3,185.4,-2.1,True
+uti,uti_regional_k1,510360,Dom Aquino,Sul Matogrossense - MT,104.2,104.5,-0.3,True
+uti,uti_regional_k1,510370,Feliz Natal,Teles Pires - MT,264.0,265.3,-1.3,True
+uti,uti_regional_k1,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,286.4,289.2,-2.8,True
+uti,uti_regional_k1,510385,Gaúcha do Norte,Médio Araguaia - MT,410.3,412.0,-1.7,True
+uti,uti_regional_k1,510390,General Carneiro,Garças Araguaia - MT,169.8,170.4,-0.6,True
+uti,uti_regional_k1,510395,Glória D'Oeste,Oeste Matogrossense - MT,155.7,157.0,-1.3,True
+uti,uti_regional_k1,510410,Guarantã do Norte,Vale do Peixoto - MT,534.6,537.1,-2.5,True
+uti,uti_regional_k1,510420,Guiratinga,Sul Matogrossense - MT,126.1,126.4,-0.3,True
+uti,uti_regional_k1,510450,Indiavaí,Oeste Matogrossense - MT,247.2,248.6,-1.5,True
+uti,uti_regional_k1,510452,Ipiranga do Norte,Teles Pires - MT,114.7,116.5,-1.8,True
+uti,uti_regional_k1,510454,Itanhangá,Teles Pires - MT,204.9,206.2,-1.3,True
+uti,uti_regional_k1,510455,Itaúba,Norte Matogrossense - MT,138.2,141.7,-3.5,True
+uti,uti_regional_k1,510460,Itiquira,Sul Matogrossense - MT,177.5,177.8,-0.3,True
+uti,uti_regional_k1,510480,Jaciara,Sul Matogrossense - MT,86.7,87.0,-0.3,True
+uti,uti_regional_k1,510490,Jangada,Baixada Cuiabana - MT,79.3,79.4,-0.1,True
+uti,uti_regional_k1,510500,Jauru,Sudoeste Matogrossense - MT,314.2,317.1,-2.9,True
+uti,uti_regional_k1,510510,Juara,Vale dos Arinos - MT,496.0,458.3,37.8,True
+uti,uti_regional_k1,510515,Juína,Noroeste Matogrossense - MT,693.4,35.5,657.9,True
+uti,uti_regional_k1,510517,Juruena,Noroeste Matogrossense - MT,846.7,324.0,522.7,True
+uti,uti_regional_k1,510520,Juscimeira,Sul Matogrossense - MT,68.4,68.7,-0.3,True
+uti,uti_regional_k1,510523,Lambari D'Oeste,Oeste Matogrossense - MT,144.0,145.8,-1.7,True
+uti,uti_regional_k1,510525,Lucas do Rio Verde,Teles Pires - MT,231.7,232.6,-0.9,True
+uti,uti_regional_k1,510530,Luciára,Norte Araguaia Karajá - MT,991.1,993.4,-2.3,True
+uti,uti_regional_k1,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,425.8,428.9,-3.2,True
+uti,uti_regional_k1,510558,Marcelândia,Norte Matogrossense - MT,234.8,238.1,-3.3,True
+uti,uti_regional_k1,510560,Matupá,Vale do Peixoto - MT,512.5,515.0,-2.4,True
+uti,uti_regional_k1,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,169.9,171.2,-1.3,True
+uti,uti_regional_k1,510590,Nobres,Centro Norte - MT,139.1,140.8,-1.7,True
+uti,uti_regional_k1,510600,Nortelândia,Centro Norte - MT,230.8,232.9,-2.1,True
+uti,uti_regional_k1,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,45.2,45.3,-0.1,True
+uti,uti_regional_k1,510615,Nova Bandeirantes,Alto Tapajós - MT,782.4,736.6,45.8,True
+uti,uti_regional_k1,510617,Nova Nazaré,Médio Araguaia - MT,117.7,118.2,-0.6,True
+uti,uti_regional_k1,510618,Nova Lacerda,Sudoeste Matogrossense - MT,440.5,442.4,-1.9,True
+uti,uti_regional_k1,510619,Nova Santa Helena,Norte Matogrossense - MT,192.6,195.4,-2.8,True
+uti,uti_regional_k1,510620,Nova Brasilândia,Baixada Cuiabana - MT,200.4,200.6,-0.2,True
+uti,uti_regional_k1,510621,Nova Canaã do Norte,Norte Matogrossense - MT,230.2,233.2,-3.0,True
+uti,uti_regional_k1,510622,Nova Mutum,Teles Pires - MT,34.8,35.3,-0.5,True
+uti,uti_regional_k1,510623,Nova Olímpia,Médio Norte Matogrossense - MT,197.7,199.8,-2.1,True
+uti,uti_regional_k1,510624,Nova Ubiratã,Teles Pires - MT,144.2,145.8,-1.5,True
+uti,uti_regional_k1,510625,Nova Xavantina,Garças Araguaia - MT,229.5,230.1,-0.6,True
+uti,uti_regional_k1,510626,Novo Mundo,Vale do Peixoto - MT,579.0,581.0,-2.0,True
+uti,uti_regional_k1,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,449.2,425.3,24.0,True
+uti,uti_regional_k1,510628,Novo São Joaquim,Garças Araguaia - MT,313.8,314.6,-0.8,True
+uti,uti_regional_k1,510629,Paranaíta,Alto Tapajós - MT,668.8,663.8,5.0,True
+uti,uti_regional_k1,510630,Paranatinga,Sul Matogrossense - MT,277.7,278.3,-0.6,True
+uti,uti_regional_k1,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,515.3,518.0,-2.7,True
+uti,uti_regional_k1,510637,Pedra Preta,Sul Matogrossense - MT,48.5,48.7,-0.2,True
+uti,uti_regional_k1,510642,Peixoto de Azevedo,Vale do Peixoto - MT,499.8,502.2,-2.5,True
+uti,uti_regional_k1,510645,Planalto da Serra,Baixada Cuiabana - MT,262.0,262.2,-0.2,True
+uti,uti_regional_k1,510650,Poconé,Baixada Cuiabana - MT,108.0,108.1,-0.1,True
+uti,uti_regional_k1,510665,Pontal do Araguaia,Garças Araguaia - MT,125.4,125.7,-0.3,True
+uti,uti_regional_k1,510670,Ponte Branca,Garças Araguaia - MT,264.2,264.9,-0.6,True
+uti,uti_regional_k1,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,330.1,333.3,-3.2,True
+uti,uti_regional_k1,510677,Porto Alegre do Norte,Araguaia Xingu - MT,1000.1,1001.7,-1.7,True
+uti,uti_regional_k1,510680,Porto dos Gaúchos,Vale dos Arinos - MT,364.0,347.2,16.8,True
+uti,uti_regional_k1,510682,Porto Esperidião,Oeste Matogrossense - MT,185.7,187.0,-1.3,True
+uti,uti_regional_k1,510685,Porto Estrela,Médio Norte Matogrossense - MT,188.9,190.8,-1.9,True
+uti,uti_regional_k1,510700,Poxoréo,Sul Matogrossense - MT,94.7,95.0,-0.3,True
+uti,uti_regional_k1,510704,Primavera do Leste,Sul Matogrossense - MT,69.2,69.4,-0.2,True
+uti,uti_regional_k1,510706,Querência,Médio Araguaia - MT,349.7,350.6,-0.9,True
+uti,uti_regional_k1,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,174.6,175.9,-1.3,True
+uti,uti_regional_k1,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,233.3,235.1,-1.8,True
+uti,uti_regional_k1,510718,Ribeirão Cascalheira,Médio Araguaia - MT,301.6,302.3,-0.7,True
+uti,uti_regional_k1,510719,Ribeirãozinho,Garças Araguaia - MT,216.5,217.1,-0.6,True
+uti,uti_regional_k1,510720,Rio Branco,Oeste Matogrossense - MT,213.2,214.8,-1.6,True
+uti,uti_regional_k1,510724,Santa Carmem,Teles Pires - MT,137.8,139.3,-1.5,True
+uti,uti_regional_k1,510726,Santo Afonso,Médio Norte Matogrossense - MT,242.7,244.9,-2.2,True
+uti,uti_regional_k1,510729,São José do Povo,Sul Matogrossense - MT,55.3,55.6,-0.3,True
+uti,uti_regional_k1,510730,São José do Rio Claro,Centro Norte - MT,280.0,282.2,-2.2,True
+uti,uti_regional_k1,510735,São José do Xingu,Araguaia Xingu - MT,1020.7,1020.1,0.5,True
+uti,uti_regional_k1,510740,São Pedro da Cipa,Sul Matogrossense - MT,84.7,85.0,-0.3,True
+uti,uti_regional_k1,510757,Rondolândia,Sudoeste Matogrossense - MT,1015.8,1000.7,15.1,True
+uti,uti_regional_k1,510760,Rondonópolis,Sul Matogrossense - MT,12.2,12.3,-0.1,True
+uti,uti_regional_k1,510770,Rosário Oeste,Centro Norte - MT,124.4,126.0,-1.6,True
+uti,uti_regional_k1,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,1188.8,1187.9,0.9,True
+uti,uti_regional_k1,510775,Salto do Céu,Oeste Matogrossense - MT,204.6,206.3,-1.7,True
+uti,uti_regional_k1,510776,Santa Rita do Trivelato,Teles Pires - MT,227.3,228.3,-1.0,True
+uti,uti_regional_k1,510777,Santa Terezinha,Araguaia Xingu - MT,1244.2,1245.3,-1.1,True
+uti,uti_regional_k1,510779,Santo Antônio do Leste,Sul Matogrossense - MT,232.7,233.1,-0.5,True
+uti,uti_regional_k1,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,43.5,43.6,-0.1,True
+uti,uti_regional_k1,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,994.0,995.9,-1.9,True
+uti,uti_regional_k1,510787,Sapezal,Médio Norte Matogrossense - MT,469.6,464.1,5.5,True
+uti,uti_regional_k1,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,347.9,350.8,-2.9,True
+uti,uti_regional_k1,510790,Sinop,Teles Pires - MT,123.6,124.2,-0.7,True
+uti,uti_regional_k1,510792,Sorriso,Teles Pires - MT,67.3,68.3,-1.0,True
+uti,uti_regional_k1,510794,Tabaporã,Vale dos Arinos - MT,376.1,369.9,6.2,True
+uti,uti_regional_k1,510795,Tangará da Serra,Médio Norte Matogrossense - MT,243.2,245.3,-2.2,True
+uti,uti_regional_k1,510800,Tapurah,Teles Pires - MT,211.6,212.8,-1.2,True
+uti,uti_regional_k1,510805,Terra Nova do Norte,Vale do Peixoto - MT,434.2,437.2,-3.0,True
+uti,uti_regional_k1,510810,Tesouro,Sul Matogrossense - MT,156.9,157.2,-0.3,True
+uti,uti_regional_k1,510820,Torixoréu,Garças Araguaia - MT,210.9,211.3,-0.5,True
+uti,uti_regional_k1,510830,União do Sul,Teles Pires - MT,305.8,307.6,-1.8,True
+uti,uti_regional_k1,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,353.3,356.1,-2.8,True
+uti,uti_regional_k1,510840,Várzea Grande,Baixada Cuiabana - MT,12.6,12.6,-0.1,True
+uti,uti_regional_k1,510850,Vera,Teles Pires - MT,253.5,254.6,-1.0,True
+uti,uti_regional_k1,510860,Vila Rica,Araguaia Xingu - MT,1162.0,1163.1,-1.1,True
+uti,uti_regional_k1,510880,Nova Guarita,Norte Matogrossense - MT,216.3,220.0,-3.7,True
+uti,uti_regional_k1,510885,Nova Marilândia,Médio Norte Matogrossense - MT,248.9,251.1,-2.2,True
+uti,uti_regional_k1,510890,Nova Maringá,Centro Norte - MT,361.0,361.7,-0.7,True
+uti,uti_regional_k1,510895,Nova Monte Verde,Alto Tapajós - MT,795.1,761.4,33.7,True
+uti,uti_regional_k3,510010,Acorizal,Baixada Cuiabana - MT,68.5,68.9,-0.4,True
+uti,uti_regional_k3,510020,Água Boa,Médio Araguaia - MT,127.8,129.2,-1.4,True
+uti,uti_regional_k3,510025,Alta Floresta,Alto Tapajós - MT,610.0,612.2,-2.1,True
+uti,uti_regional_k3,510030,Alto Araguaia,Sul Matogrossense - MT,208.2,209.7,-1.5,True
+uti,uti_regional_k3,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,794.0,640.3,153.6,True
+uti,uti_regional_k3,510040,Alto Garças,Sul Matogrossense - MT,158.9,160.3,-1.3,True
+uti,uti_regional_k3,510050,Alto Paraguai,Centro Norte - MT,205.4,210.2,-4.8,True
+uti,uti_regional_k3,510060,Alto Taquari,Sul Matogrossense - MT,268.5,270.1,-1.6,True
+uti,uti_regional_k3,510080,Apiacás,Alto Tapajós - MT,814.4,797.5,16.9,True
+uti,uti_regional_k3,510100,Araguaiana,Garças Araguaia - MT,127.3,131.0,-3.6,True
+uti,uti_regional_k3,510120,Araguainha,Sul Matogrossense - MT,268.8,270.5,-1.6,True
+uti,uti_regional_k3,510125,Araputanga,Oeste Matogrossense - MT,209.4,209.7,-0.2,True
+uti,uti_regional_k3,510130,Arenápolis,Médio Norte Matogrossense - MT,225.6,230.6,-4.9,True
+uti,uti_regional_k3,510140,Aripuanã,Noroeste Matogrossense - MT,987.4,446.8,540.6,True
+uti,uti_regional_k3,510160,Barão de Melgaço,Baixada Cuiabana - MT,111.6,112.0,-0.4,True
+uti,uti_regional_k3,510170,Barra do Bugres,Médio Norte Matogrossense - MT,163.3,167.7,-4.4,True
+uti,uti_regional_k3,510180,Barra do Garças,Garças Araguaia - MT,82.0,83.2,-1.2,True
+uti,uti_regional_k3,510183,Boa Esperança do Norte,Teles Pires - MT,244.1,246.6,-2.5,True
+uti,uti_regional_k3,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,350.9,348.5,2.4,True
+uti,uti_regional_k3,510190,Brasnorte,Noroeste Matogrossense - MT,542.4,318.8,223.6,True
+uti,uti_regional_k3,510250,Cáceres,Oeste Matogrossense - MT,52.1,53.3,-1.2,True
+uti,uti_regional_k3,510260,Campinápolis,Garças Araguaia - MT,205.1,210.5,-5.3,True
+uti,uti_regional_k3,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,376.9,376.4,0.5,True
+uti,uti_regional_k3,510267,Campo Verde,Sul Matogrossense - MT,135.7,137.1,-1.4,True
+uti,uti_regional_k3,510268,Campos de Júlio,Sudoeste Matogrossense - MT,524.1,395.2,128.9,True
+uti,uti_regional_k3,510269,Canabrava do Norte,Araguaia Xingu - MT,989.8,157.0,832.8,True
+uti,uti_regional_k3,510270,Canarana,Médio Araguaia - MT,193.2,198.5,-5.3,True
+uti,uti_regional_k3,510279,Carlinda,Alto Tapajós - MT,573.3,578.1,-4.8,True
+uti,uti_regional_k3,510285,Castanheira,Noroeste Matogrossense - MT,721.3,160.8,560.5,True
+uti,uti_regional_k3,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,72.3,72.7,-0.3,True
+uti,uti_regional_k3,510305,Cláudia,Teles Pires - MT,171.8,176.2,-4.4,True
+uti,uti_regional_k3,510310,Cocalinho,Médio Araguaia - MT,336.5,341.2,-4.7,True
+uti,uti_regional_k3,510320,Colíder,Norte Matogrossense - MT,124.9,127.1,-2.3,True
+uti,uti_regional_k3,510325,Colniza,Noroeste Matogrossense - MT,1103.7,577.8,525.9,True
+uti,uti_regional_k3,510330,Comodoro,Sudoeste Matogrossense - MT,515.5,331.7,183.8,True
+uti,uti_regional_k3,510335,Confresa,Araguaia Xingu - MT,1075.9,20.2,1055.6,True
+uti,uti_regional_k3,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,426.3,219.4,206.9,True
+uti,uti_regional_k3,510337,Cotriguaçu,Noroeste Matogrossense - MT,938.8,407.1,531.7,True
+uti,uti_regional_k3,510340,Cuiabá,Baixada Cuiabana - MT,4.3,4.4,-0.1,True
+uti,uti_regional_k3,510343,Curvelândia,Oeste Matogrossense - MT,113.6,116.5,-3.0,True
+uti,uti_regional_k3,510345,Denise,Médio Norte Matogrossense - MT,200.0,204.6,-4.7,True
+uti,uti_regional_k3,510350,Diamantino,Centro Norte - MT,183.3,188.1,-4.8,True
+uti,uti_regional_k3,510360,Dom Aquino,Sul Matogrossense - MT,104.2,105.4,-1.2,True
+uti,uti_regional_k3,510370,Feliz Natal,Teles Pires - MT,264.0,266.9,-2.9,True
+uti,uti_regional_k3,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,286.4,200.5,85.8,True
+uti,uti_regional_k3,510385,Gaúcha do Norte,Médio Araguaia - MT,410.3,415.7,-5.5,True
+uti,uti_regional_k3,510390,General Carneiro,Garças Araguaia - MT,169.8,173.3,-3.5,True
+uti,uti_regional_k3,510395,Glória D'Oeste,Oeste Matogrossense - MT,155.7,156.8,-1.1,True
+uti,uti_regional_k3,510410,Guarantã do Norte,Vale do Peixoto - MT,534.6,540.7,-6.1,True
+uti,uti_regional_k3,510420,Guiratinga,Sul Matogrossense - MT,126.1,127.3,-1.2,True
+uti,uti_regional_k3,510450,Indiavaí,Oeste Matogrossense - MT,247.2,244.4,2.8,True
+uti,uti_regional_k3,510452,Ipiranga do Norte,Teles Pires - MT,114.7,118.2,-3.5,True
+uti,uti_regional_k3,510454,Itanhangá,Teles Pires - MT,204.9,207.9,-3.0,True
+uti,uti_regional_k3,510455,Itaúba,Norte Matogrossense - MT,138.2,145.9,-7.7,True
+uti,uti_regional_k3,510460,Itiquira,Sul Matogrossense - MT,177.5,178.7,-1.2,True
+uti,uti_regional_k3,510480,Jaciara,Sul Matogrossense - MT,86.7,87.9,-1.2,True
+uti,uti_regional_k3,510490,Jangada,Baixada Cuiabana - MT,79.3,79.6,-0.4,True
+uti,uti_regional_k3,510500,Jauru,Sudoeste Matogrossense - MT,314.2,190.3,123.9,True
+uti,uti_regional_k3,510510,Juara,Vale dos Arinos - MT,496.0,463.3,32.7,True
+uti,uti_regional_k3,510515,Juína,Noroeste Matogrossense - MT,693.4,36.6,656.8,True
+uti,uti_regional_k3,510517,Juruena,Noroeste Matogrossense - MT,846.7,328.0,518.7,True
+uti,uti_regional_k3,510520,Juscimeira,Sul Matogrossense - MT,68.4,69.5,-1.2,True
+uti,uti_regional_k3,510523,Lambari D'Oeste,Oeste Matogrossense - MT,144.0,147.5,-3.4,True
+uti,uti_regional_k3,510525,Lucas do Rio Verde,Teles Pires - MT,231.7,233.7,-2.0,True
+uti,uti_regional_k3,510530,Luciára,Norte Araguaia Karajá - MT,991.1,684.7,306.4,True
+uti,uti_regional_k3,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,425.8,210.3,215.5,True
+uti,uti_regional_k3,510558,Marcelândia,Norte Matogrossense - MT,234.8,243.1,-8.4,True
+uti,uti_regional_k3,510560,Matupá,Vale do Peixoto - MT,512.5,518.4,-5.9,True
+uti,uti_regional_k3,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,169.9,171.5,-1.6,True
+uti,uti_regional_k3,510590,Nobres,Centro Norte - MT,139.1,143.3,-4.1,True
+uti,uti_regional_k3,510600,Nortelândia,Centro Norte - MT,230.8,235.7,-4.8,True
+uti,uti_regional_k3,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,45.2,45.5,-0.3,True
+uti,uti_regional_k3,510615,Nova Bandeirantes,Alto Tapajós - MT,782.4,743.8,38.6,True
+uti,uti_regional_k3,510617,Nova Nazaré,Médio Araguaia - MT,117.7,122.9,-5.2,True
+uti,uti_regional_k3,510618,Nova Lacerda,Sudoeste Matogrossense - MT,440.5,231.1,209.4,True
+uti,uti_regional_k3,510619,Nova Santa Helena,Norte Matogrossense - MT,192.6,198.9,-6.3,True
+uti,uti_regional_k3,510620,Nova Brasilândia,Baixada Cuiabana - MT,200.4,200.9,-0.5,True
+uti,uti_regional_k3,510621,Nova Canaã do Norte,Norte Matogrossense - MT,230.2,236.7,-6.4,True
+uti,uti_regional_k3,510622,Nova Mutum,Teles Pires - MT,34.8,35.8,-1.0,True
+uti,uti_regional_k3,510623,Nova Olímpia,Médio Norte Matogrossense - MT,197.7,202.3,-4.6,True
+uti,uti_regional_k3,510624,Nova Ubiratã,Teles Pires - MT,144.2,147.4,-3.2,True
+uti,uti_regional_k3,510625,Nova Xavantina,Garças Araguaia - MT,229.5,233.9,-4.4,True
+uti,uti_regional_k3,510626,Novo Mundo,Vale do Peixoto - MT,579.0,584.3,-5.3,True
+uti,uti_regional_k3,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,449.2,430.8,18.5,True
+uti,uti_regional_k3,510628,Novo São Joaquim,Garças Araguaia - MT,313.8,318.3,-4.6,True
+uti,uti_regional_k3,510629,Paranaíta,Alto Tapajós - MT,668.8,669.0,-0.3,True
+uti,uti_regional_k3,510630,Paranatinga,Sul Matogrossense - MT,277.7,279.7,-2.0,True
+uti,uti_regional_k3,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,515.3,496.2,19.0,True
+uti,uti_regional_k3,510637,Pedra Preta,Sul Matogrossense - MT,48.5,49.4,-0.9,True
+uti,uti_regional_k3,510642,Peixoto de Azevedo,Vale do Peixoto - MT,499.8,506.1,-6.3,True
+uti,uti_regional_k3,510645,Planalto da Serra,Baixada Cuiabana - MT,262.0,262.5,-0.6,True
+uti,uti_regional_k3,510650,Poconé,Baixada Cuiabana - MT,108.0,108.4,-0.4,True
+uti,uti_regional_k3,510665,Pontal do Araguaia,Garças Araguaia - MT,125.4,127.6,-2.2,True
+uti,uti_regional_k3,510670,Ponte Branca,Garças Araguaia - MT,264.2,267.7,-3.5,True
+uti,uti_regional_k3,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,330.1,41.4,288.7,True
+uti,uti_regional_k3,510677,Porto Alegre do Norte,Araguaia Xingu - MT,1000.1,95.9,904.1,True
+uti,uti_regional_k3,510680,Porto dos Gaúchos,Vale dos Arinos - MT,364.0,353.8,10.2,True
+uti,uti_regional_k3,510682,Porto Esperidião,Oeste Matogrossense - MT,185.7,185.2,0.5,True
+uti,uti_regional_k3,510685,Porto Estrela,Médio Norte Matogrossense - MT,188.9,193.0,-4.1,True
+uti,uti_regional_k3,510700,Poxoréo,Sul Matogrossense - MT,94.7,95.9,-1.2,True
+uti,uti_regional_k3,510704,Primavera do Leste,Sul Matogrossense - MT,69.2,70.1,-0.9,True
+uti,uti_regional_k3,510706,Querência,Médio Araguaia - MT,349.7,351.0,-1.4,True
+uti,uti_regional_k3,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,174.6,175.8,-1.3,True
+uti,uti_regional_k3,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,233.3,234.5,-1.2,True
+uti,uti_regional_k3,510718,Ribeirão Cascalheira,Médio Araguaia - MT,301.6,303.6,-2.0,True
+uti,uti_regional_k3,510719,Ribeirãozinho,Garças Araguaia - MT,216.5,220.2,-3.6,True
+uti,uti_regional_k3,510720,Rio Branco,Oeste Matogrossense - MT,213.2,215.4,-2.2,True
+uti,uti_regional_k3,510724,Santa Carmem,Teles Pires - MT,137.8,141.0,-3.2,True
+uti,uti_regional_k3,510726,Santo Afonso,Médio Norte Matogrossense - MT,242.7,247.6,-5.0,True
+uti,uti_regional_k3,510729,São José do Povo,Sul Matogrossense - MT,55.3,56.4,-1.0,True
+uti,uti_regional_k3,510730,São José do Rio Claro,Centro Norte - MT,280.0,285.2,-5.2,True
+uti,uti_regional_k3,510735,São José do Xingu,Araguaia Xingu - MT,1020.7,352.0,668.7,True
+uti,uti_regional_k3,510740,São Pedro da Cipa,Sul Matogrossense - MT,84.7,85.9,-1.2,True
+uti,uti_regional_k3,510757,Rondolândia,Sudoeste Matogrossense - MT,1015.8,804.4,211.4,True
+uti,uti_regional_k3,510760,Rondonópolis,Sul Matogrossense - MT,12.2,12.5,-0.3,True
+uti,uti_regional_k3,510770,Rosário Oeste,Centro Norte - MT,124.4,128.4,-4.0,True
+uti,uti_regional_k3,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,1188.8,342.0,846.8,True
+uti,uti_regional_k3,510775,Salto do Céu,Oeste Matogrossense - MT,204.6,207.4,-2.8,True
+uti,uti_regional_k3,510776,Santa Rita do Trivelato,Teles Pires - MT,227.3,229.6,-2.4,True
+uti,uti_regional_k3,510777,Santa Terezinha,Araguaia Xingu - MT,1244.2,266.5,977.7,True
+uti,uti_regional_k3,510779,Santo Antônio do Leste,Sul Matogrossense - MT,232.7,234.7,-2.1,True
+uti,uti_regional_k3,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,43.5,43.8,-0.3,True
+uti,uti_regional_k3,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,994.0,797.1,196.8,True
+uti,uti_regional_k3,510787,Sapezal,Médio Norte Matogrossense - MT,469.6,456.3,13.2,True
+uti,uti_regional_k3,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,347.9,342.3,5.6,True
+uti,uti_regional_k3,510790,Sinop,Teles Pires - MT,123.6,125.0,-1.5,True
+uti,uti_regional_k3,510792,Sorriso,Teles Pires - MT,67.3,69.3,-2.0,True
+uti,uti_regional_k3,510794,Tabaporã,Vale dos Arinos - MT,376.1,376.6,-0.5,True
+uti,uti_regional_k3,510795,Tangará da Serra,Médio Norte Matogrossense - MT,243.2,247.8,-4.6,True
+uti,uti_regional_k3,510800,Tapurah,Teles Pires - MT,211.6,214.3,-2.7,True
+uti,uti_regional_k3,510805,Terra Nova do Norte,Vale do Peixoto - MT,434.2,442.6,-8.4,True
+uti,uti_regional_k3,510810,Tesouro,Sul Matogrossense - MT,156.9,158.2,-1.3,True
+uti,uti_regional_k3,510820,Torixoréu,Garças Araguaia - MT,210.9,214.0,-3.1,True
+uti,uti_regional_k3,510830,União do Sul,Teles Pires - MT,305.8,310.1,-4.3,True
+uti,uti_regional_k3,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,353.3,175.3,178.0,True
+uti,uti_regional_k3,510840,Várzea Grande,Baixada Cuiabana - MT,12.6,12.7,-0.2,True
+uti,uti_regional_k3,510850,Vera,Teles Pires - MT,253.5,256.0,-2.4,True
+uti,uti_regional_k3,510860,Vila Rica,Araguaia Xingu - MT,1162.0,179.6,982.4,True
+uti,uti_regional_k3,510880,Nova Guarita,Norte Matogrossense - MT,216.3,224.9,-8.6,True
+uti,uti_regional_k3,510885,Nova Marilândia,Médio Norte Matogrossense - MT,248.9,253.8,-4.9,True
+uti,uti_regional_k3,510890,Nova Maringá,Centro Norte - MT,361.0,364.6,-3.6,True
+uti,uti_regional_k3,510895,Nova Monte Verde,Alto Tapajós - MT,795.1,766.4,28.6,True
+uti,uti_capacitado_k1,510010,Acorizal,Baixada Cuiabana - MT,68.5,68.7,-0.1,True
+uti,uti_capacitado_k1,510020,Água Boa,Médio Araguaia - MT,127.8,128.2,-0.3,True
+uti,uti_capacitado_k1,510025,Alta Floresta,Alto Tapajós - MT,610.0,550.6,59.4,True
+uti,uti_capacitado_k1,510030,Alto Araguaia,Sul Matogrossense - MT,208.2,208.5,-0.3,True
+uti,uti_capacitado_k1,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,794.0,791.4,2.6,True
+uti,uti_capacitado_k1,510040,Alto Garças,Sul Matogrossense - MT,158.9,159.2,-0.3,True
+uti,uti_capacitado_k1,510050,Alto Paraguai,Centro Norte - MT,205.4,207.2,-1.8,True
+uti,uti_capacitado_k1,510060,Alto Taquari,Sul Matogrossense - MT,268.5,268.9,-0.3,True
+uti,uti_capacitado_k1,510080,Apiacás,Alto Tapajós - MT,814.4,756.3,58.1,True
+uti,uti_capacitado_k1,510100,Araguaiana,Garças Araguaia - MT,127.3,128.0,-0.7,True
+uti,uti_capacitado_k1,510120,Araguainha,Sul Matogrossense - MT,268.8,269.2,-0.3,True
+uti,uti_capacitado_k1,510125,Araputanga,Oeste Matogrossense - MT,209.4,210.3,-0.8,True
+uti,uti_capacitado_k1,510130,Arenápolis,Médio Norte Matogrossense - MT,225.6,227.5,-1.9,True
+uti,uti_capacitado_k1,510140,Aripuanã,Noroeste Matogrossense - MT,987.4,977.8,9.7,True
+uti,uti_capacitado_k1,510160,Barão de Melgaço,Baixada Cuiabana - MT,111.6,111.7,-0.1,True
+uti,uti_capacitado_k1,510170,Barra do Bugres,Médio Norte Matogrossense - MT,163.3,164.8,-1.5,True
+uti,uti_capacitado_k1,510180,Barra do Garças,Garças Araguaia - MT,82.0,82.2,-0.2,True
+uti,uti_capacitado_k1,510183,Boa Esperança do Norte,Teles Pires - MT,244.1,245.1,-1.0,True
+uti,uti_capacitado_k1,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,350.9,354.1,-3.2,True
+uti,uti_capacitado_k1,510190,Brasnorte,Noroeste Matogrossense - MT,542.4,542.6,-0.2,True
+uti,uti_capacitado_k1,510250,Cáceres,Oeste Matogrossense - MT,52.1,52.4,-0.3,True
+uti,uti_capacitado_k1,510260,Campinápolis,Garças Araguaia - MT,205.1,206.3,-1.2,True
+uti,uti_capacitado_k1,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,376.9,378.7,-1.8,True
+uti,uti_capacitado_k1,510267,Campo Verde,Sul Matogrossense - MT,135.7,136.2,-0.5,True
+uti,uti_capacitado_k1,510268,Campos de Júlio,Sudoeste Matogrossense - MT,524.1,526.0,-1.9,True
+uti,uti_capacitado_k1,510269,Canabrava do Norte,Araguaia Xingu - MT,989.8,963.1,26.8,True
+uti,uti_capacitado_k1,510270,Canarana,Médio Araguaia - MT,193.2,194.7,-1.5,True
+uti,uti_capacitado_k1,510279,Carlinda,Alto Tapajós - MT,573.3,513.3,60.0,True
+uti,uti_capacitado_k1,510285,Castanheira,Noroeste Matogrossense - MT,721.3,718.3,3.0,True
+uti,uti_capacitado_k1,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,72.3,72.4,-0.1,True
+uti,uti_capacitado_k1,510305,Cláudia,Teles Pires - MT,171.8,171.7,0.1,True
+uti,uti_capacitado_k1,510310,Cocalinho,Médio Araguaia - MT,336.5,337.8,-1.3,True
+uti,uti_capacitado_k1,510320,Colíder,Norte Matogrossense - MT,124.9,123.7,1.2,True
+uti,uti_capacitado_k1,510325,Colniza,Noroeste Matogrossense - MT,1103.7,1080.2,23.5,True
+uti,uti_capacitado_k1,510330,Comodoro,Sudoeste Matogrossense - MT,515.5,517.9,-2.5,True
+uti,uti_capacitado_k1,510335,Confresa,Araguaia Xingu - MT,1075.9,1042.1,33.8,True
+uti,uti_capacitado_k1,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,426.3,428.4,-2.1,True
+uti,uti_capacitado_k1,510337,Cotriguaçu,Noroeste Matogrossense - MT,938.8,912.1,26.8,True
+uti,uti_capacitado_k1,510340,Cuiabá,Baixada Cuiabana - MT,4.3,4.4,-0.0,True
+uti,uti_capacitado_k1,510343,Curvelândia,Oeste Matogrossense - MT,113.6,114.3,-0.8,True
+uti,uti_capacitado_k1,510345,Denise,Médio Norte Matogrossense - MT,200.0,201.7,-1.7,True
+uti,uti_capacitado_k1,510350,Diamantino,Centro Norte - MT,183.3,185.2,-1.8,True
+uti,uti_capacitado_k1,510360,Dom Aquino,Sul Matogrossense - MT,104.2,104.6,-0.4,True
+uti,uti_capacitado_k1,510370,Feliz Natal,Teles Pires - MT,264.0,264.4,-0.4,True
+uti,uti_capacitado_k1,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,286.4,288.0,-1.7,True
+uti,uti_capacitado_k1,510385,Gaúcha do Norte,Médio Araguaia - MT,410.3,412.3,-2.1,True
+uti,uti_capacitado_k1,510390,General Carneiro,Garças Araguaia - MT,169.8,170.5,-0.8,True
+uti,uti_capacitado_k1,510395,Glória D'Oeste,Oeste Matogrossense - MT,155.7,156.5,-0.8,True
+uti,uti_capacitado_k1,510410,Guarantã do Norte,Vale do Peixoto - MT,534.6,213.1,321.5,True
+uti,uti_capacitado_k1,510420,Guiratinga,Sul Matogrossense - MT,126.1,126.4,-0.3,True
+uti,uti_capacitado_k1,510450,Indiavaí,Oeste Matogrossense - MT,247.2,248.0,-0.9,True
+uti,uti_capacitado_k1,510452,Ipiranga do Norte,Teles Pires - MT,114.7,116.3,-1.6,True
+uti,uti_capacitado_k1,510454,Itanhangá,Teles Pires - MT,204.9,206.1,-1.2,True
+uti,uti_capacitado_k1,510455,Itaúba,Norte Matogrossense - MT,138.2,132.3,5.9,True
+uti,uti_capacitado_k1,510460,Itiquira,Sul Matogrossense - MT,177.5,177.8,-0.3,True
+uti,uti_capacitado_k1,510480,Jaciara,Sul Matogrossense - MT,86.7,87.0,-0.4,True
+uti,uti_capacitado_k1,510490,Jangada,Baixada Cuiabana - MT,79.3,79.4,-0.1,True
+uti,uti_capacitado_k1,510500,Jauru,Sudoeste Matogrossense - MT,314.2,315.9,-1.7,True
+uti,uti_capacitado_k1,510510,Juara,Vale dos Arinos - MT,496.0,493.4,2.7,True
+uti,uti_capacitado_k1,510515,Juína,Noroeste Matogrossense - MT,693.4,689.8,3.5,True
+uti,uti_capacitado_k1,510517,Juruena,Noroeste Matogrossense - MT,846.7,835.6,11.1,True
+uti,uti_capacitado_k1,510520,Juscimeira,Sul Matogrossense - MT,68.4,68.7,-0.3,True
+uti,uti_capacitado_k1,510523,Lambari D'Oeste,Oeste Matogrossense - MT,144.0,145.1,-1.0,True
+uti,uti_capacitado_k1,510525,Lucas do Rio Verde,Teles Pires - MT,231.7,232.3,-0.5,True
+uti,uti_capacitado_k1,510530,Luciára,Norte Araguaia Karajá - MT,991.1,982.5,8.7,True
+uti,uti_capacitado_k1,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,425.8,427.3,-1.6,True
+uti,uti_capacitado_k1,510558,Marcelândia,Norte Matogrossense - MT,234.8,226.4,8.4,True
+uti,uti_capacitado_k1,510560,Matupá,Vale do Peixoto - MT,512.5,183.4,329.2,True
+uti,uti_capacitado_k1,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,169.9,170.7,-0.7,True
+uti,uti_capacitado_k1,510590,Nobres,Centro Norte - MT,139.1,140.7,-1.6,True
+uti,uti_capacitado_k1,510600,Nortelândia,Centro Norte - MT,230.8,232.6,-1.8,True
+uti,uti_capacitado_k1,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,45.2,45.3,-0.1,True
+uti,uti_capacitado_k1,510615,Nova Bandeirantes,Alto Tapajós - MT,782.4,730.8,51.6,True
+uti,uti_capacitado_k1,510617,Nova Nazaré,Médio Araguaia - MT,117.7,118.9,-1.3,True
+uti,uti_capacitado_k1,510618,Nova Lacerda,Sudoeste Matogrossense - MT,440.5,442.6,-2.1,True
+uti,uti_capacitado_k1,510619,Nova Santa Helena,Norte Matogrossense - MT,192.6,180.9,11.7,True
+uti,uti_capacitado_k1,510620,Nova Brasilândia,Baixada Cuiabana - MT,200.4,200.6,-0.2,True
+uti,uti_capacitado_k1,510621,Nova Canaã do Norte,Norte Matogrossense - MT,230.2,224.0,6.3,True
+uti,uti_capacitado_k1,510622,Nova Mutum,Teles Pires - MT,34.8,35.3,-0.5,True
+uti,uti_capacitado_k1,510623,Nova Olímpia,Médio Norte Matogrossense - MT,197.7,199.3,-1.6,True
+uti,uti_capacitado_k1,510624,Nova Ubiratã,Teles Pires - MT,144.2,145.8,-1.5,True
+uti,uti_capacitado_k1,510625,Nova Xavantina,Garças Araguaia - MT,229.5,230.5,-1.0,True
+uti,uti_capacitado_k1,510626,Novo Mundo,Vale do Peixoto - MT,579.0,256.0,323.0,True
+uti,uti_capacitado_k1,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,449.2,447.5,1.8,True
+uti,uti_capacitado_k1,510628,Novo São Joaquim,Garças Araguaia - MT,313.8,314.9,-1.1,True
+uti,uti_capacitado_k1,510629,Paranaíta,Alto Tapajós - MT,668.8,608.6,60.1,True
+uti,uti_capacitado_k1,510630,Paranatinga,Sul Matogrossense - MT,277.7,278.4,-0.7,True
+uti,uti_capacitado_k1,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,515.3,522.9,-7.6,True
+uti,uti_capacitado_k1,510637,Pedra Preta,Sul Matogrossense - MT,48.5,48.8,-0.3,True
+uti,uti_capacitado_k1,510642,Peixoto de Azevedo,Vale do Peixoto - MT,499.8,168.9,330.8,True
+uti,uti_capacitado_k1,510645,Planalto da Serra,Baixada Cuiabana - MT,262.0,262.2,-0.2,True
+uti,uti_capacitado_k1,510650,Poconé,Baixada Cuiabana - MT,108.0,108.1,-0.1,True
+uti,uti_capacitado_k1,510665,Pontal do Araguaia,Garças Araguaia - MT,125.4,125.8,-0.4,True
+uti,uti_capacitado_k1,510670,Ponte Branca,Garças Araguaia - MT,264.2,264.9,-0.7,True
+uti,uti_capacitado_k1,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,330.1,331.6,-1.6,True
+uti,uti_capacitado_k1,510677,Porto Alegre do Norte,Araguaia Xingu - MT,1000.1,976.3,23.8,True
+uti,uti_capacitado_k1,510680,Porto dos Gaúchos,Vale dos Arinos - MT,364.0,364.8,-0.8,True
+uti,uti_capacitado_k1,510682,Porto Esperidião,Oeste Matogrossense - MT,185.7,186.5,-0.7,True
+uti,uti_capacitado_k1,510685,Porto Estrela,Médio Norte Matogrossense - MT,188.9,190.3,-1.4,True
+uti,uti_capacitado_k1,510700,Poxoréo,Sul Matogrossense - MT,94.7,95.1,-0.4,True
+uti,uti_capacitado_k1,510704,Primavera do Leste,Sul Matogrossense - MT,69.2,69.4,-0.3,True
+uti,uti_capacitado_k1,510706,Querência,Médio Araguaia - MT,349.7,352.2,-2.5,True
+uti,uti_capacitado_k1,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,174.6,175.4,-0.8,True
+uti,uti_capacitado_k1,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,233.3,234.4,-1.0,True
+uti,uti_capacitado_k1,510718,Ribeirão Cascalheira,Médio Araguaia - MT,301.6,303.7,-2.1,True
+uti,uti_capacitado_k1,510719,Ribeirãozinho,Garças Araguaia - MT,216.5,217.2,-0.6,True
+uti,uti_capacitado_k1,510720,Rio Branco,Oeste Matogrossense - MT,213.2,214.2,-1.0,True
+uti,uti_capacitado_k1,510724,Santa Carmem,Teles Pires - MT,137.8,138.7,-0.9,True
+uti,uti_capacitado_k1,510726,Santo Afonso,Médio Norte Matogrossense - MT,242.7,244.5,-1.9,True
+uti,uti_capacitado_k1,510729,São José do Povo,Sul Matogrossense - MT,55.3,55.6,-0.3,True
+uti,uti_capacitado_k1,510730,São José do Rio Claro,Centro Norte - MT,280.0,282.0,-1.9,True
+uti,uti_capacitado_k1,510735,São José do Xingu,Araguaia Xingu - MT,1020.7,946.3,74.4,True
+uti,uti_capacitado_k1,510740,São Pedro da Cipa,Sul Matogrossense - MT,84.7,85.0,-0.3,True
+uti,uti_capacitado_k1,510757,Rondolândia,Sudoeste Matogrossense - MT,1015.8,1017.8,-2.0,True
+uti,uti_capacitado_k1,510760,Rondonópolis,Sul Matogrossense - MT,12.2,12.3,-0.1,True
+uti,uti_capacitado_k1,510770,Rosário Oeste,Centro Norte - MT,124.4,125.9,-1.5,True
+uti,uti_capacitado_k1,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,1188.8,1116.5,72.4,True
+uti,uti_capacitado_k1,510775,Salto do Céu,Oeste Matogrossense - MT,204.6,205.7,-1.1,True
+uti,uti_capacitado_k1,510776,Santa Rita do Trivelato,Teles Pires - MT,227.3,228.3,-1.0,True
+uti,uti_capacitado_k1,510777,Santa Terezinha,Araguaia Xingu - MT,1244.2,1211.5,32.7,True
+uti,uti_capacitado_k1,510779,Santo Antônio do Leste,Sul Matogrossense - MT,232.7,233.2,-0.6,True
+uti,uti_capacitado_k1,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,43.5,43.6,-0.1,True
+uti,uti_capacitado_k1,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,994.0,989.1,4.8,True
+uti,uti_capacitado_k1,510787,Sapezal,Médio Norte Matogrossense - MT,469.6,471.5,-1.9,True
+uti,uti_capacitado_k1,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,347.9,357.3,-9.4,True
+uti,uti_capacitado_k1,510790,Sinop,Teles Pires - MT,123.6,123.9,-0.3,True
+uti,uti_capacitado_k1,510792,Sorriso,Teles Pires - MT,67.3,68.3,-1.0,True
+uti,uti_capacitado_k1,510794,Tabaporã,Vale dos Arinos - MT,376.1,373.7,2.5,True
+uti,uti_capacitado_k1,510795,Tangará da Serra,Médio Norte Matogrossense - MT,243.2,244.8,-1.7,True
+uti,uti_capacitado_k1,510800,Tapurah,Teles Pires - MT,211.6,212.7,-1.0,True
+uti,uti_capacitado_k1,510805,Terra Nova do Norte,Vale do Peixoto - MT,434.2,40.6,393.6,True
+uti,uti_capacitado_k1,510810,Tesouro,Sul Matogrossense - MT,156.9,157.2,-0.3,True
+uti,uti_capacitado_k1,510820,Torixoréu,Garças Araguaia - MT,210.9,211.4,-0.6,True
+uti,uti_capacitado_k1,510830,União do Sul,Teles Pires - MT,305.8,304.0,1.8,True
+uti,uti_capacitado_k1,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,353.3,354.9,-1.6,True
+uti,uti_capacitado_k1,510840,Várzea Grande,Baixada Cuiabana - MT,12.6,12.6,-0.1,True
+uti,uti_capacitado_k1,510850,Vera,Teles Pires - MT,253.5,253.5,0.1,True
+uti,uti_capacitado_k1,510860,Vila Rica,Araguaia Xingu - MT,1162.0,1129.4,32.5,True
+uti,uti_capacitado_k1,510880,Nova Guarita,Norte Matogrossense - MT,216.3,202.2,14.0,True
+uti,uti_capacitado_k1,510885,Nova Marilândia,Médio Norte Matogrossense - MT,248.9,250.7,-1.8,True
+uti,uti_capacitado_k1,510890,Nova Maringá,Centro Norte - MT,361.0,362.7,-1.7,True
+uti,uti_capacitado_k1,510895,Nova Monte Verde,Alto Tapajós - MT,795.1,733.0,62.1,True
+uti,uti_capacitado_k3,510010,Acorizal,Baixada Cuiabana - MT,68.5,68.8,-0.3,True
+uti,uti_capacitado_k3,510020,Água Boa,Médio Araguaia - MT,127.8,129.4,-1.5,True
+uti,uti_capacitado_k3,510025,Alta Floresta,Alto Tapajós - MT,610.0,553.0,57.0,True
+uti,uti_capacitado_k3,510030,Alto Araguaia,Sul Matogrossense - MT,208.2,209.4,-1.2,True
+uti,uti_capacitado_k3,510035,Alto Boa Vista,Norte Araguaia Karajá - MT,794.0,639.9,154.1,True
+uti,uti_capacitado_k3,510040,Alto Garças,Sul Matogrossense - MT,158.9,160.0,-1.0,True
+uti,uti_capacitado_k3,510050,Alto Paraguai,Centro Norte - MT,205.4,210.0,-4.6,True
+uti,uti_capacitado_k3,510060,Alto Taquari,Sul Matogrossense - MT,268.5,269.8,-1.2,True
+uti,uti_capacitado_k3,510080,Apiacás,Alto Tapajós - MT,814.4,743.5,70.8,True
+uti,uti_capacitado_k3,510100,Araguaiana,Garças Araguaia - MT,127.3,130.5,-3.2,True
+uti,uti_capacitado_k3,510120,Araguainha,Sul Matogrossense - MT,268.8,270.2,-1.3,True
+uti,uti_capacitado_k3,510125,Araputanga,Oeste Matogrossense - MT,209.4,211.9,-2.5,True
+uti,uti_capacitado_k3,510130,Arenápolis,Médio Norte Matogrossense - MT,225.6,230.3,-4.7,True
+uti,uti_capacitado_k3,510140,Aripuanã,Noroeste Matogrossense - MT,987.4,447.3,540.2,True
+uti,uti_capacitado_k3,510160,Barão de Melgaço,Baixada Cuiabana - MT,111.6,111.9,-0.3,True
+uti,uti_capacitado_k3,510170,Barra do Bugres,Médio Norte Matogrossense - MT,163.3,167.1,-3.8,True
+uti,uti_capacitado_k3,510180,Barra do Garças,Garças Araguaia - MT,82.0,83.1,-1.1,True
+uti,uti_capacitado_k3,510183,Boa Esperança do Norte,Teles Pires - MT,244.1,246.9,-2.7,True
+uti,uti_capacitado_k3,510185,Bom Jesus do Araguaia,Médio Araguaia - MT,350.9,351.1,-0.2,True
+uti,uti_capacitado_k3,510190,Brasnorte,Noroeste Matogrossense - MT,542.4,318.9,223.5,True
+uti,uti_capacitado_k3,510250,Cáceres,Oeste Matogrossense - MT,52.1,52.8,-0.7,True
+uti,uti_capacitado_k3,510260,Campinápolis,Garças Araguaia - MT,205.1,210.1,-5.0,True
+uti,uti_capacitado_k3,510263,Campo Novo do Parecis,Médio Norte Matogrossense - MT,376.9,378.1,-1.2,True
+uti,uti_capacitado_k3,510267,Campo Verde,Sul Matogrossense - MT,135.7,136.9,-1.1,True
+uti,uti_capacitado_k3,510268,Campos de Júlio,Sudoeste Matogrossense - MT,524.1,521.4,2.7,True
+uti,uti_capacitado_k3,510269,Canabrava do Norte,Araguaia Xingu - MT,989.8,160.4,829.4,True
+uti,uti_capacitado_k3,510270,Canarana,Médio Araguaia - MT,193.2,199.4,-6.2,True
+uti,uti_capacitado_k3,510279,Carlinda,Alto Tapajós - MT,573.3,517.8,55.5,True
+uti,uti_capacitado_k3,510285,Castanheira,Noroeste Matogrossense - MT,721.3,160.7,560.6,True
+uti,uti_capacitado_k3,510300,Chapada dos Guimarães,Baixada Cuiabana - MT,72.3,72.6,-0.3,True
+uti,uti_capacitado_k3,510305,Cláudia,Teles Pires - MT,171.8,175.9,-4.1,True
+uti,uti_capacitado_k3,510310,Cocalinho,Médio Araguaia - MT,336.5,341.8,-5.4,True
+uti,uti_capacitado_k3,510320,Colíder,Norte Matogrossense - MT,124.9,126.3,-1.5,True
+uti,uti_capacitado_k3,510325,Colniza,Noroeste Matogrossense - MT,1103.7,578.1,525.6,True
+uti,uti_capacitado_k3,510330,Comodoro,Sudoeste Matogrossense - MT,515.5,516.7,-1.2,True
+uti,uti_capacitado_k3,510335,Confresa,Araguaia Xingu - MT,1075.9,21.2,1054.6,True
+uti,uti_capacitado_k3,510336,Conquista D'Oeste,Sudoeste Matogrossense - MT,426.3,431.2,-4.9,True
+uti,uti_capacitado_k3,510337,Cotriguaçu,Noroeste Matogrossense - MT,938.8,407.5,531.3,True
+uti,uti_capacitado_k3,510340,Cuiabá,Baixada Cuiabana - MT,4.3,4.4,-0.1,True
+uti,uti_capacitado_k3,510343,Curvelândia,Oeste Matogrossense - MT,113.6,115.9,-2.4,True
+uti,uti_capacitado_k3,510345,Denise,Médio Norte Matogrossense - MT,200.0,204.3,-4.3,True
+uti,uti_capacitado_k3,510350,Diamantino,Centro Norte - MT,183.3,187.9,-4.6,True
+uti,uti_capacitado_k3,510360,Dom Aquino,Sul Matogrossense - MT,104.2,105.2,-1.0,True
+uti,uti_capacitado_k3,510370,Feliz Natal,Teles Pires - MT,264.0,266.8,-2.8,True
+uti,uti_capacitado_k3,510380,Figueirópolis D'Oeste,Sudoeste Matogrossense - MT,286.4,291.3,-4.9,True
+uti,uti_capacitado_k3,510385,Gaúcha do Norte,Médio Araguaia - MT,410.3,416.5,-6.3,True
+uti,uti_capacitado_k3,510390,General Carneiro,Garças Araguaia - MT,169.8,172.8,-3.0,True
+uti,uti_capacitado_k3,510395,Glória D'Oeste,Oeste Matogrossense - MT,155.7,158.0,-2.3,True
+uti,uti_capacitado_k3,510410,Guarantã do Norte,Vale do Peixoto - MT,534.6,147.3,387.2,True
+uti,uti_capacitado_k3,510420,Guiratinga,Sul Matogrossense - MT,126.1,127.1,-0.9,True
+uti,uti_capacitado_k3,510450,Indiavaí,Oeste Matogrossense - MT,247.2,249.7,-2.5,True
+uti,uti_capacitado_k3,510452,Ipiranga do Norte,Teles Pires - MT,114.7,119.0,-4.3,True
+uti,uti_capacitado_k3,510454,Itanhangá,Teles Pires - MT,204.9,208.2,-3.3,True
+uti,uti_capacitado_k3,510455,Itaúba,Norte Matogrossense - MT,138.2,141.3,-3.1,True
+uti,uti_capacitado_k3,510460,Itiquira,Sul Matogrossense - MT,177.5,178.4,-0.9,True
+uti,uti_capacitado_k3,510480,Jaciara,Sul Matogrossense - MT,86.7,87.6,-0.9,True
+uti,uti_capacitado_k3,510490,Jangada,Baixada Cuiabana - MT,79.3,79.6,-0.3,True
+uti,uti_capacitado_k3,510500,Jauru,Sudoeste Matogrossense - MT,314.2,319.2,-5.0,True
+uti,uti_capacitado_k3,510510,Juara,Vale dos Arinos - MT,496.0,460.5,35.6,True
+uti,uti_capacitado_k3,510515,Juína,Noroeste Matogrossense - MT,693.4,36.5,656.8,True
+uti,uti_capacitado_k3,510517,Juruena,Noroeste Matogrossense - MT,846.7,328.6,518.1,True
+uti,uti_capacitado_k3,510520,Juscimeira,Sul Matogrossense - MT,68.4,69.3,-0.9,True
+uti,uti_capacitado_k3,510523,Lambari D'Oeste,Oeste Matogrossense - MT,144.0,147.0,-3.0,True
+uti,uti_capacitado_k3,510525,Lucas do Rio Verde,Teles Pires - MT,231.7,233.7,-2.0,True
+uti,uti_capacitado_k3,510530,Luciára,Norte Araguaia Karajá - MT,991.1,685.9,305.3,True
+uti,uti_capacitado_k3,510550,Vila Bela da Santíssima Trindade,Sudoeste Matogrossense - MT,425.8,430.9,-5.2,True
+uti,uti_capacitado_k3,510558,Marcelândia,Norte Matogrossense - MT,234.8,236.0,-1.2,True
+uti,uti_capacitado_k3,510560,Matupá,Vale do Peixoto - MT,512.5,106.2,406.4,True
+uti,uti_capacitado_k3,510562,Mirassol d'Oeste,Oeste Matogrossense - MT,169.9,172.1,-2.2,True
+uti,uti_capacitado_k3,510590,Nobres,Centro Norte - MT,139.1,143.0,-3.8,True
+uti,uti_capacitado_k3,510600,Nortelândia,Centro Norte - MT,230.8,235.5,-4.6,True
+uti,uti_capacitado_k3,510610,Nossa Senhora do Livramento,Baixada Cuiabana - MT,45.2,45.4,-0.2,True
+uti,uti_capacitado_k3,510615,Nova Bandeirantes,Alto Tapajós - MT,782.4,700.2,82.3,True
+uti,uti_capacitado_k3,510617,Nova Nazaré,Médio Araguaia - MT,117.7,123.6,-5.9,True
+uti,uti_capacitado_k3,510618,Nova Lacerda,Sudoeste Matogrossense - MT,440.5,445.1,-4.6,True
+uti,uti_capacitado_k3,510619,Nova Santa Helena,Norte Matogrossense - MT,192.6,190.1,2.5,True
+uti,uti_capacitado_k3,510620,Nova Brasilândia,Baixada Cuiabana - MT,200.4,200.9,-0.5,True
+uti,uti_capacitado_k3,510621,Nova Canaã do Norte,Norte Matogrossense - MT,230.2,231.4,-1.2,True
+uti,uti_capacitado_k3,510622,Nova Mutum,Teles Pires - MT,34.8,35.9,-1.1,True
+uti,uti_capacitado_k3,510623,Nova Olímpia,Médio Norte Matogrossense - MT,197.7,201.9,-4.2,True
+uti,uti_capacitado_k3,510624,Nova Ubiratã,Teles Pires - MT,144.2,148.1,-3.9,True
+uti,uti_capacitado_k3,510625,Nova Xavantina,Garças Araguaia - MT,229.5,234.0,-4.5,True
+uti,uti_capacitado_k3,510626,Novo Mundo,Vale do Peixoto - MT,579.0,194.7,384.3,True
+uti,uti_capacitado_k3,510627,Novo Horizonte do Norte,Vale dos Arinos - MT,449.2,427.9,21.3,True
+uti,uti_capacitado_k3,510628,Novo São Joaquim,Garças Araguaia - MT,313.8,318.0,-4.2,True
+uti,uti_capacitado_k3,510629,Paranaíta,Alto Tapajós - MT,668.8,609.4,59.3,True
+uti,uti_capacitado_k3,510630,Paranatinga,Sul Matogrossense - MT,277.7,279.8,-2.1,True
+uti,uti_capacitado_k3,510631,Novo Santo Antônio,Norte Araguaia Karajá - MT,515.3,501.7,13.5,True
+uti,uti_capacitado_k3,510637,Pedra Preta,Sul Matogrossense - MT,48.5,49.2,-0.7,True
+uti,uti_capacitado_k3,510642,Peixoto de Azevedo,Vale do Peixoto - MT,499.8,37.9,461.8,True
+uti,uti_capacitado_k3,510645,Planalto da Serra,Baixada Cuiabana - MT,262.0,262.6,-0.6,True
+uti,uti_capacitado_k3,510650,Poconé,Baixada Cuiabana - MT,108.0,108.3,-0.3,True
+uti,uti_capacitado_k3,510665,Pontal do Araguaia,Garças Araguaia - MT,125.4,127.4,-2.0,True
+uti,uti_capacitado_k3,510670,Ponte Branca,Garças Araguaia - MT,264.2,267.1,-2.9,True
+uti,uti_capacitado_k3,510675,Pontes e Lacerda,Sudoeste Matogrossense - MT,330.1,335.3,-5.2,True
+uti,uti_capacitado_k3,510677,Porto Alegre do Norte,Araguaia Xingu - MT,1000.1,98.7,901.4,True
+uti,uti_capacitado_k3,510680,Porto dos Gaúchos,Vale dos Arinos - MT,364.0,352.0,12.0,True
+uti,uti_capacitado_k3,510682,Porto Esperidião,Oeste Matogrossense - MT,185.7,188.0,-2.2,True
+uti,uti_capacitado_k3,510685,Porto Estrela,Médio Norte Matogrossense - MT,188.9,192.6,-3.7,True
+uti,uti_capacitado_k3,510700,Poxoréo,Sul Matogrossense - MT,94.7,95.7,-1.0,True
+uti,uti_capacitado_k3,510704,Primavera do Leste,Sul Matogrossense - MT,69.2,69.9,-0.8,True
+uti,uti_capacitado_k3,510706,Querência,Médio Araguaia - MT,349.7,353.0,-3.3,True
+uti,uti_capacitado_k3,510710,São José dos Quatro Marcos,Oeste Matogrossense - MT,174.6,176.9,-2.3,True
+uti,uti_capacitado_k3,510715,Reserva do Cabaçal,Oeste Matogrossense - MT,233.3,236.4,-3.1,True
+uti,uti_capacitado_k3,510718,Ribeirão Cascalheira,Médio Araguaia - MT,301.6,305.1,-3.5,True
+uti,uti_capacitado_k3,510719,Ribeirãozinho,Garças Araguaia - MT,216.5,219.6,-3.0,True
+uti,uti_capacitado_k3,510720,Rio Branco,Oeste Matogrossense - MT,213.2,216.0,-2.8,True
+uti,uti_capacitado_k3,510724,Santa Carmem,Teles Pires - MT,137.8,141.5,-3.7,True
+uti,uti_capacitado_k3,510726,Santo Afonso,Médio Norte Matogrossense - MT,242.7,247.4,-4.8,True
+uti,uti_capacitado_k3,510729,São José do Povo,Sul Matogrossense - MT,55.3,56.1,-0.8,True
+uti,uti_capacitado_k3,510730,São José do Rio Claro,Centro Norte - MT,280.0,285.1,-5.0,True
+uti,uti_capacitado_k3,510735,São José do Xingu,Araguaia Xingu - MT,1020.7,352.1,668.6,True
+uti,uti_capacitado_k3,510740,São Pedro da Cipa,Sul Matogrossense - MT,84.7,85.6,-0.9,True
+uti,uti_capacitado_k3,510757,Rondolândia,Sudoeste Matogrossense - MT,1015.8,1003.7,12.2,True
+uti,uti_capacitado_k3,510760,Rondonópolis,Sul Matogrossense - MT,12.2,12.5,-0.2,True
+uti,uti_capacitado_k3,510770,Rosário Oeste,Centro Norte - MT,124.4,128.0,-3.6,True
+uti,uti_capacitado_k3,510774,Santa Cruz do Xingu,Araguaia Xingu - MT,1188.8,345.3,843.5,True
+uti,uti_capacitado_k3,510775,Salto do Céu,Oeste Matogrossense - MT,204.6,207.7,-3.0,True
+uti,uti_capacitado_k3,510776,Santa Rita do Trivelato,Teles Pires - MT,227.3,229.8,-2.6,True
+uti,uti_capacitado_k3,510777,Santa Terezinha,Araguaia Xingu - MT,1244.2,270.2,974.0,True
+uti,uti_capacitado_k3,510779,Santo Antônio do Leste,Sul Matogrossense - MT,232.7,234.6,-1.9,True
+uti,uti_capacitado_k3,510780,Santo Antônio do Leverger,Baixada Cuiabana - MT,43.5,43.7,-0.2,True
+uti,uti_capacitado_k3,510785,São Félix do Araguaia,Norte Araguaia Karajá - MT,994.0,796.0,198.0,True
+uti,uti_capacitado_k3,510787,Sapezal,Médio Norte Matogrossense - MT,469.6,466.9,2.7,True
+uti,uti_capacitado_k3,510788,Serra Nova Dourada,Norte Araguaia Karajá - MT,347.9,349.3,-1.4,True
+uti,uti_capacitado_k3,510790,Sinop,Teles Pires - MT,123.6,125.2,-1.6,True
+uti,uti_capacitado_k3,510792,Sorriso,Teles Pires - MT,67.3,69.8,-2.5,True
+uti,uti_capacitado_k3,510794,Tabaporã,Vale dos Arinos - MT,376.1,372.4,3.7,True
+uti,uti_capacitado_k3,510795,Tangará da Serra,Médio Norte Matogrossense - MT,243.2,247.5,-4.4,True
+uti,uti_capacitado_k3,510800,Tapurah,Teles Pires - MT,211.6,214.5,-2.9,True
+uti,uti_capacitado_k3,510805,Terra Nova do Norte,Vale do Peixoto - MT,434.2,160.8,273.4,True
+uti,uti_capacitado_k3,510810,Tesouro,Sul Matogrossense - MT,156.9,157.9,-1.1,True
+uti,uti_capacitado_k3,510820,Torixoréu,Garças Araguaia - MT,210.9,213.6,-2.7,True
+uti,uti_capacitado_k3,510830,União do Sul,Teles Pires - MT,305.8,308.3,-2.5,True
+uti,uti_capacitado_k3,510835,Vale de São Domingos,Sudoeste Matogrossense - MT,353.3,358.1,-4.8,True
+uti,uti_capacitado_k3,510840,Várzea Grande,Baixada Cuiabana - MT,12.6,12.7,-0.1,True
+uti,uti_capacitado_k3,510850,Vera,Teles Pires - MT,253.5,255.5,-2.0,True
+uti,uti_capacitado_k3,510860,Vila Rica,Araguaia Xingu - MT,1162.0,182.9,979.1,True
+uti,uti_capacitado_k3,510880,Nova Guarita,Norte Matogrossense - MT,216.3,213.3,2.9,True
+uti,uti_capacitado_k3,510885,Nova Marilândia,Médio Norte Matogrossense - MT,248.9,253.6,-4.7,True
+uti,uti_capacitado_k3,510890,Nova Maringá,Centro Norte - MT,361.0,364.5,-3.6,True
+uti,uti_capacitado_k3,510895,Nova Monte Verde,Alto Tapajós - MT,795.1,711.3,83.7,True

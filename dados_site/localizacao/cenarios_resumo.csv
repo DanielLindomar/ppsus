@@ -1,0 +1,17 @@
+piloto,cenario,modelo_l4,k,abertos,nomes_abertos,modulo_leitos,tempo_medio_esperado,km_medio_esperado,pct_ate_60,pct_ate_120,fluxo_para_novas,fluxo_para_novas_proprios_residentes,ganho_tempo_esperado_min,ganho_tempo_mais_proximo_min,ganho_tempo_mais_proximo_l4_min,ganho_pct_ate_60,ganho_pct_ate_120,ocupacao_implicita_media,ocupacao_implicita_max,destinos_ocupacao_acima_100pct,tempo_medio_esperado_capacidade,ganho_tempo_esperado_capacidade_min,provisorio
+parto,referencia_2030,sem unidade nova,0,,,0.0,32.01,30.85,83.4,89.46,0,0,0.0,0.0,0.0,0.0,0.0,,,,,,True
+parto,p_mediana_k1,p_mediana,1,510800,Tapurah,7.25,31.74,30.61,83.58,89.65,176,135,0.27,0.0,0.56,0.18,0.19,,,,,,True
+parto,p_mediana_k2,p_mediana,2,510558;510800,Marcelândia; Tapurah,7.25,31.46,30.34,83.79,89.67,372,295,0.54,0.0,1.05,0.39,0.21,,,,,,True
+parto,p_mediana_k3,p_mediana,3,510558;510590;510800,Marcelândia; Nobres; Tapurah,7.25,31.29,30.16,83.91,89.84,578,428,0.72,0.0,1.47,0.51,0.37,,,,,,True
+parto,mclp60_k1,mclp_60min,1,510770,Rosário Oeste,7.25,31.94,30.79,83.46,89.55,143,73,0.06,0.0,0.42,0.06,0.09,,,,,,True
+parto,mclp60_k3,mclp_60min,3,510770;510800;510850,Rosário Oeste; Tapurah; Vera,7.25,31.68,30.55,83.68,89.73,385,237,0.33,0.0,1.33,0.28,0.27,,,,,,True
+uti,referencia_2030,sem unidade nova,0,,,0.0,134.2,134.38,58.46,67.26,0,0,0.0,0.0,0.0,0.0,0.0,0.92,1.06,7.0,135.88,0.0,True
+uti,p_mediana_k1,p_mediana,1,510515,Juína,10.0,121.73,121.28,59.32,68.11,379,132,12.46,9.6,9.6,0.86,0.85,0.89,1.06,6.0,122.89,12.98,True
+uti,p_mediana_k2,p_mediana,2,510335;510515,Confresa; Juína,10.0,107.01,107.18,60.13,69.24,653,241,27.18,16.48,16.48,1.66,1.97,0.87,1.06,6.0,108.07,27.81,True
+uti,p_mediana_k3,p_mediana,3,510335;510515;510675,Confresa; Juína; Pontes e Lacerda,10.0,100.41,100.22,61.54,71.13,1050,473,33.78,22.49,22.49,3.07,3.86,0.84,1.05,5.0,100.89,34.99,True
+uti,mclp120_k1,mclp_120min,1,510130,Arenápolis,10.0,132.15,132.09,58.79,68.3,318,37,2.04,4.13,4.13,0.33,1.04,0.89,1.06,6.0,133.34,2.53,True
+uti,mclp120_k3,mclp_120min,3,510130;510335;510675,Arenápolis; Confresa; Pontes e Lacerda,10.0,110.81,111.04,61.01,71.31,991,377,23.38,17.02,17.02,2.54,4.05,0.84,1.05,5.0,111.37,24.51,True
+uti,uti_regional_k1,uti_regional,1,510515,Juína,10.0,121.73,121.28,59.32,68.11,379,132,12.46,9.6,9.6,0.86,0.85,0.89,1.06,6.0,122.89,12.98,True
+uti,uti_regional_k3,uti_regional,3,510335;510515;510675,Confresa; Juína; Pontes e Lacerda,10.0,100.41,100.22,61.54,71.13,1050,473,33.78,22.49,22.49,3.07,3.86,0.84,1.05,5.0,100.89,34.99,True
+uti,uti_capacitado_k1,uti_capacitado,1,510805,Terra Nova do Norte,10.0,129.16,129.06,58.99,68.11,250,17,5.03,0.94,0.94,0.53,0.85,0.89,1.06,3.0,130.06,5.81,True
+uti,uti_capacitado_k3,uti_capacitado,3,510335;510515;510642,Confresa; Juína; Peixoto de Azevedo,10.0,102.04,102.11,60.98,70.15,874,308,32.15,17.67,17.67,2.52,2.89,0.84,1.05,3.0,102.84,33.04,True

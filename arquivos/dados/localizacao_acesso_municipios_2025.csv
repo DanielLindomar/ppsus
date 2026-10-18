@@ -1,0 +1,285 @@
+piloto,cod_mun6,nome_municipio,co_regsaud,nome_regsaud,pop_alvo,leitos_proprios,tempo_servico_min,km_servico,e2sfca_60,e2sfca_120,indice_60,indice_120,unidade_contagem,n_2024_2025,tempo_medio_obs_min,km_medio_obs,pct_proprio_mun,pct_fora_regiao,pct_fora_mt,suprimido
+parto,510010,Acorizal,51002,Baixada Cuiabana - MT,1095.0,0.0,64.7,66.2,0.0,8.302,0.0,0.889,nascidos vivos hospitalares,111.0,66.9,69.4,0.0,,0.0,True
+parto,510020,Água Boa,51006,Médio Araguaia - MT,8582.0,9.0,0.0,0.0,10.39,9.559,1.113,1.024,nascidos vivos hospitalares,998.0,13.1,13.0,91.6,3.0,5.3,False
+parto,510025,Alta Floresta,51001,Alto Tapajós - MT,16487.0,18.9,0.0,0.0,10.685,10.105,1.144,1.082,nascidos vivos hospitalares,1853.0,20.9,20.9,92.4,6.7,,True
+parto,510030,Alto Araguaia,51013,Sul Matogrossense - MT,4393.0,19.0,0.0,0.0,40.612,28.117,4.35,3.012,nascidos vivos hospitalares,299.0,86.5,90.1,43.8,,23.1,True
+parto,510035,Alto Boa Vista,51009,Norte Araguaia Karajá - MT,1560.0,0.0,135.8,90.6,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,134.0,187.8,147.6,0.0,16.4,,True
+parto,510040,Alto Garças,51013,Sul Matogrossense - MT,3547.0,1.0,0.0,0.0,5.844,16.194,0.626,1.735,nascidos vivos hospitalares,301.0,128.0,133.8,9.6,,5.0,True
+parto,510050,Alto Paraguai,51004,Centro Norte - MT,1643.0,0.0,22.8,18.8,9.11,7.977,0.976,0.854,nascidos vivos hospitalares,199.0,44.7,41.3,0.0,13.1,,True
+parto,510060,Alto Taquari,51013,Sul Matogrossense - MT,3250.0,4.7,0.0,0.0,14.624,21.256,1.566,2.277,nascidos vivos hospitalares,292.0,45.3,47.6,70.2,0.0,14.7,False
+parto,510080,Apiacás,51001,Alto Tapajós - MT,2137.0,6.0,0.0,0.0,28.077,20.269,3.007,2.171,nascidos vivos hospitalares,273.0,111.4,102.9,56.0,13.2,0.0,False
+parto,510100,Araguaiana,51005,Garças Araguaia - MT,934.0,0.0,60.6,54.1,0.0,6.68,0.0,0.716,nascidos vivos hospitalares,72.0,70.7,65.1,0.0,,,True
+parto,510120,Araguainha,51013,Sul Matogrossense - MT,215.0,0.0,29.8,30.5,20.225,24.885,2.166,2.665,nascidos vivos hospitalares,19.0,240.1,244.9,0.0,36.8,,True
+parto,510125,Araputanga,51011,Oeste Matogrossense - MT,3792.0,5.4,0.0,0.0,18.262,16.315,1.956,1.747,nascidos vivos hospitalares,465.0,63.1,64.0,63.4,9.2,0.0,False
+parto,510130,Arenápolis,51007,Médio Norte Matogrossense - MT,2697.0,8.0,0.0,0.0,11.623,11.159,1.245,1.195,nascidos vivos hospitalares,326.0,47.1,45.5,65.6,9.8,,True
+parto,510140,Aripuanã,51008,Noroeste Matogrossense - MT,7105.0,10.0,0.0,0.0,14.075,14.075,1.508,1.508,nascidos vivos hospitalares,841.0,104.2,92.9,78.8,7.5,3.8,False
+parto,510160,Barão de Melgaço,51002,Baixada Cuiabana - MT,1552.0,2.0,0.0,0.0,12.887,1.377,1.38,0.147,nascidos vivos hospitalares,124.0,114.1,113.6,0.0,0.0,0.0,False
+parto,510170,Barra do Bugres,51007,Médio Norte Matogrossense - MT,7601.0,9.0,0.0,0.0,13.13,11.563,1.406,1.239,nascidos vivos hospitalares,850.0,24.7,24.5,77.5,6.6,,True
+parto,510180,Barra do Garças,51005,Garças Araguaia - MT,19506.0,22.3,0.0,0.0,11.46,12.3,1.227,1.317,nascidos vivos hospitalares,1990.0,5.7,6.0,95.7,1.2,2.8,False
+parto,510183,Boa Esperança do Norte,51014,Teles Pires - MT,1541.0,0.0,144.8,132.1,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,17.0,144.8,132.1,0.0,0.0,0.0,False
+parto,510185,Bom Jesus do Araguaia,51006,Médio Araguaia - MT,2080.0,0.0,110.1,116.6,0.0,0.5,0.0,0.054,nascidos vivos hospitalares,194.0,241.7,255.4,0.0,3.6,3.1,False
+parto,510190,Brasnorte,51008,Noroeste Matogrossense - MT,4577.0,9.0,0.0,0.0,19.664,19.664,2.106,2.106,nascidos vivos hospitalares,602.0,54.6,57.2,76.6,8.6,,True
+parto,510250,Cáceres,51011,Oeste Matogrossense - MT,23709.0,36.0,0.0,0.0,15.184,16.794,1.626,1.799,nascidos vivos hospitalares,2503.0,11.9,12.3,94.3,5.3,,True
+parto,510260,Campinápolis,51005,Garças Araguaia - MT,3774.0,4.3,0.0,0.0,11.482,15.262,1.23,1.635,nascidos vivos hospitalares,668.0,61.1,60.1,59.3,35.6,1.0,False
+parto,510263,Campo Novo do Parecis,51007,Médio Norte Matogrossense - MT,14720.0,8.8,0.0,0.0,6.001,6.473,0.643,0.693,nascidos vivos hospitalares,1664.0,57.5,60.2,67.8,4.9,0.4,False
+parto,510267,Campo Verde,51013,Sul Matogrossense - MT,13657.0,9.0,0.0,0.0,7.07,6.27,0.757,0.672,nascidos vivos hospitalares,1473.0,31.9,32.9,75.3,9.8,,True
+parto,510268,Campos de Júlio,51012,Sudoeste Matogrossense - MT,2679.0,2.0,0.0,0.0,6.314,11.835,0.676,1.268,nascidos vivos hospitalares,275.0,207.1,212.7,,77.1,4.0,True
+parto,510269,Canabrava do Norte,51003,Araguaia Xingu - MT,1059.0,0.0,44.2,41.2,1.008,7.037,0.108,0.754,nascidos vivos hospitalares,113.0,87.9,84.4,0.0,,,True
+parto,510270,Canarana,51006,Médio Araguaia - MT,7396.0,7.5,0.0,0.0,10.141,9.217,1.086,0.987,nascidos vivos hospitalares,918.0,38.3,38.3,69.6,3.3,3.6,False
+parto,510279,Carlinda,51001,Alto Tapajós - MT,2353.0,0.0,36.4,34.5,5.998,8.682,0.642,0.93,nascidos vivos hospitalares,232.0,53.3,52.0,0.0,12.5,0.0,False
+parto,510285,Castanheira,51008,Noroeste Matogrossense - MT,1791.0,0.0,46.9,42.6,4.807,11.073,0.515,1.186,nascidos vivos hospitalares,188.0,65.5,62.1,0.0,2.7,0.0,False
+parto,510300,Chapada dos Guimarães,51002,Baixada Cuiabana - MT,4484.0,0.0,67.2,64.9,0.0,5.61,0.0,0.601,nascidos vivos hospitalares,453.0,68.6,66.3,0.0,2.9,,True
+parto,510305,Cláudia,51014,Teles Pires - MT,2210.0,0.0,88.8,74.7,0.0,2.344,0.0,0.251,nascidos vivos hospitalares,292.0,123.4,107.2,0.0,12.3,0.0,False
+parto,510310,Cocalinho,51006,Médio Araguaia - MT,1606.0,2.0,0.0,0.0,12.453,12.453,1.334,1.334,nascidos vivos hospitalares,134.0,191.8,175.7,,,,True
+parto,510320,Colíder,51010,Norte Matogrossense - MT,8061.0,11.2,0.0,0.0,13.419,10.717,1.437,1.148,nascidos vivos hospitalares,934.0,22.4,20.1,89.2,10.7,0.0,False
+parto,510325,Colniza,51008,Noroeste Matogrossense - MT,7003.0,8.0,0.0,0.0,11.424,11.424,1.224,1.224,nascidos vivos hospitalares,759.0,83.9,68.7,81.3,3.0,3.8,False
+parto,510330,Comodoro,51012,Sudoeste Matogrossense - MT,4758.0,8.0,0.0,0.0,16.814,12.319,1.801,1.32,nascidos vivos hospitalares,573.0,96.2,100.5,53.6,12.9,20.9,False
+parto,510335,Confresa,51003,Araguaia Xingu - MT,10715.0,13.5,0.0,0.0,12.281,11.3,1.315,1.21,nascidos vivos hospitalares,1441.0,21.8,20.6,91.2,2.4,6.3,False
+parto,510336,Conquista D'Oeste,51012,Sudoeste Matogrossense - MT,996.0,0.0,89.4,91.8,0.0,5.596,0.0,0.599,nascidos vivos hospitalares,125.0,136.1,139.3,,18.4,,True
+parto,510337,Cotriguaçu,51008,Noroeste Matogrossense - MT,2551.0,7.0,0.0,0.0,27.44,25.641,2.939,2.746,nascidos vivos hospitalares,271.0,134.4,112.3,49.8,3.3,,True
+parto,510340,Cuiabá,51002,Baixada Cuiabana - MT,187905.0,142.5,0.0,0.0,6.852,6.715,0.734,0.719,nascidos vivos hospitalares,18154.0,0.9,0.9,98.4,0.2,0.2,False
+parto,510343,Curvelândia,51011,Oeste Matogrossense - MT,1196.0,0.0,29.6,26.1,15.002,23.313,1.607,2.497,nascidos vivos hospitalares,126.0,80.9,77.7,0.0,7.9,0.0,False
+parto,510345,Denise,51007,Médio Norte Matogrossense - MT,1686.0,0.0,38.4,36.7,13.462,14.02,1.442,1.502,nascidos vivos hospitalares,193.0,64.2,62.5,0.0,7.8,0.0,False
+parto,510350,Diamantino,51004,Centro Norte - MT,5840.0,6.0,0.0,0.0,9.486,10.284,1.016,1.102,nascidos vivos hospitalares,699.0,39.3,39.8,77.0,22.9,0.0,False
+parto,510360,Dom Aquino,51013,Sul Matogrossense - MT,1746.0,3.7,0.0,0.0,8.164,9.569,0.874,1.025,nascidos vivos hospitalares,141.0,69.8,70.3,,4.3,0.0,True
+parto,510370,Feliz Natal,51014,Teles Pires - MT,2660.0,0.0,57.7,50.9,0.147,0.107,0.016,0.011,nascidos vivos hospitalares,350.0,142.6,125.3,,4.3,0.0,True
+parto,510380,Figueirópolis D'Oeste,51012,Sudoeste Matogrossense - MT,705.0,0.0,24.0,21.3,10.794,10.372,1.156,1.111,nascidos vivos hospitalares,69.0,123.0,110.3,0.0,52.2,0.0,False
+parto,510385,Gaúcha do Norte,51006,Médio Araguaia - MT,2468.0,1.3,0.0,0.0,5.402,5.402,0.579,0.579,nascidos vivos hospitalares,306.0,241.3,183.3,20.3,13.4,2.6,False
+parto,510390,General Carneiro,51005,Garças Araguaia - MT,1440.0,2.0,0.0,0.0,13.889,7.362,1.488,0.789,nascidos vivos hospitalares,233.0,158.2,167.7,0.0,67.4,,True
+parto,510395,Glória D'Oeste,51011,Oeste Matogrossense - MT,651.0,0.0,23.8,25.5,18.417,18.36,1.973,1.967,nascidos vivos hospitalares,57.0,91.9,94.7,0.0,,0.0,True
+parto,510410,Guarantã do Norte,51015,Vale do Peixoto - MT,8159.0,7.0,0.0,0.0,9.679,9.668,1.037,1.036,nascidos vivos hospitalares,1163.0,25.0,24.4,84.7,10.8,,True
+parto,510420,Guiratinga,51013,Sul Matogrossense - MT,2159.0,0.0,40.2,42.7,2.934,5.655,0.314,0.606,nascidos vivos hospitalares,152.0,113.7,120.8,,,,True
+parto,510450,Indiavaí,51011,Oeste Matogrossense - MT,529.0,0.0,34.1,30.9,8.069,11.753,0.864,1.259,nascidos vivos hospitalares,50.0,102.3,99.4,0.0,,0.0,True
+parto,510452,Ipiranga do Norte,51014,Teles Pires - MT,2324.0,0.0,67.7,69.6,0.0,4.154,0.0,0.445,nascidos vivos hospitalares,284.0,78.4,80.7,0.0,1.8,,True
+parto,510454,Itanhangá,51014,Teles Pires - MT,2070.0,0.0,61.8,64.7,0.0,0.809,0.0,0.087,nascidos vivos hospitalares,186.0,143.1,141.6,0.0,5.4,0.0,False
+parto,510455,Itaúba,51010,Norte Matogrossense - MT,1312.0,4.0,0.0,0.0,13.052,11.742,1.398,1.258,nascidos vivos hospitalares,173.0,52.3,50.3,37.6,12.7,,True
+parto,510460,Itiquira,51013,Sul Matogrossense - MT,3231.0,4.0,0.0,0.0,12.38,12.38,1.326,1.326,nascidos vivos hospitalares,258.0,151.1,145.3,,0.0,2.3,True
+parto,510480,Jaciara,51013,Sul Matogrossense - MT,7601.0,5.0,0.0,0.0,7.004,7.953,0.75,0.852,nascidos vivos hospitalares,732.0,19.4,19.1,77.0,2.9,,True
+parto,510490,Jangada,51002,Baixada Cuiabana - MT,1748.0,0.0,47.6,48.7,1.73,9.248,0.185,0.991,nascidos vivos hospitalares,159.0,83.2,82.2,0.0,,0.0,True
+parto,510500,Jauru,51012,Sudoeste Matogrossense - MT,1899.0,4.0,0.0,0.0,12.688,8.801,1.359,0.943,nascidos vivos hospitalares,194.0,124.3,110.2,5.7,29.9,0.0,False
+parto,510510,Juara,51016,Vale dos Arinos - MT,9145.0,9.8,0.0,0.0,13.4,13.017,1.435,1.394,nascidos vivos hospitalares,1180.0,35.2,33.8,89.5,10.3,,True
+parto,510515,Juína,51008,Noroeste Matogrossense - MT,12497.0,19.0,0.0,0.0,14.515,13.617,1.555,1.459,nascidos vivos hospitalares,1336.0,16.7,17.5,96.8,2.4,0.4,False
+parto,510517,Juruena,51008,Noroeste Matogrossense - MT,2590.0,6.0,0.0,0.0,23.166,24.939,2.481,2.671,nascidos vivos hospitalares,316.0,45.0,40.0,83.9,2.8,,True
+parto,510520,Juscimeira,51013,Sul Matogrossense - MT,2549.0,1.0,0.0,0.0,6.12,9.133,0.656,0.978,nascidos vivos hospitalares,216.0,41.4,38.3,,,,True
+parto,510523,Lambari D'Oeste,51011,Oeste Matogrossense - MT,1122.0,0.0,18.5,16.2,16.525,15.516,1.77,1.662,nascidos vivos hospitalares,126.0,118.1,108.8,0.0,6.3,0.0,False
+parto,510525,Lucas do Rio Verde,51014,Teles Pires - MT,28678.0,14.0,0.0,0.0,4.882,8.016,0.523,0.859,nascidos vivos hospitalares,2983.0,7.8,8.0,95.0,1.6,0.2,False
+parto,510530,Luciára,51009,Norte Araguaia Karajá - MT,624.0,0.0,152.2,101.2,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,56.0,237.2,181.4,0.0,19.6,0.0,False
+parto,510550,Vila Bela da Santíssima Trindade,51012,Sudoeste Matogrossense - MT,4460.0,10.0,0.0,0.0,22.422,12.21,2.402,1.308,nascidos vivos hospitalares,477.0,32.7,31.3,78.4,4.8,,True
+parto,510558,Marcelândia,51010,Norte Matogrossense - MT,2800.0,2.0,0.0,0.0,7.143,4.81,0.765,0.515,nascidos vivos hospitalares,391.0,100.6,98.5,26.6,15.1,0.0,False
+parto,510560,Matupá,51015,Vale do Peixoto - MT,5840.0,10.5,0.0,0.0,12.04,11.351,1.29,1.216,nascidos vivos hospitalares,709.0,27.2,26.0,78.1,13.0,,True
+parto,510562,Mirassol d'Oeste,51011,Oeste Matogrossense - MT,7093.0,18.0,0.0,0.0,25.695,21.408,2.752,2.293,nascidos vivos hospitalares,731.0,43.7,44.6,62.2,7.5,,True
+parto,510590,Nobres,51004,Centro Norte - MT,3939.0,5.7,0.0,0.0,13.203,8.333,1.414,0.893,nascidos vivos hospitalares,431.0,94.2,96.1,32.7,64.0,,True
+parto,510600,Nortelândia,51004,Centro Norte - MT,1387.0,0.0,5.4,5.2,12.461,11.0,1.335,1.178,nascidos vivos hospitalares,124.0,83.0,84.6,0.0,39.5,0.0,False
+parto,510610,Nossa Senhora do Livramento,51002,Baixada Cuiabana - MT,2463.0,0.0,34.6,32.4,2.999,5.969,0.321,0.639,nascidos vivos hospitalares,195.0,41.0,38.7,0.0,0.0,,True
+parto,510615,Nova Bandeirantes,51001,Alto Tapajós - MT,3389.0,2.0,0.0,0.0,5.831,5.855,0.625,0.627,nascidos vivos hospitalares,331.0,185.9,183.6,26.9,15.7,,True
+parto,510617,Nova Nazaré,51006,Médio Araguaia - MT,1085.0,0.0,57.1,52.1,0.766,4.983,0.082,0.534,nascidos vivos hospitalares,171.0,65.4,60.5,0.0,5.8,,True
+parto,510618,Nova Lacerda,51012,Sudoeste Matogrossense - MT,1733.0,0.0,93.1,97.9,0.0,6.072,0.0,0.65,nascidos vivos hospitalares,195.0,144.7,149.7,0.0,17.9,,True
+parto,510619,Nova Santa Helena,51010,Norte Matogrossense - MT,1064.0,0.0,22.0,21.1,18.541,15.449,1.986,1.655,nascidos vivos hospitalares,138.0,57.5,54.7,0.0,12.3,,True
+parto,510620,Nova Brasilândia,51002,Baixada Cuiabana - MT,861.0,0.0,85.9,88.6,0.0,1.231,0.0,0.132,nascidos vivos hospitalares,89.0,171.8,175.1,0.0,25.8,0.0,False
+parto,510621,Nova Canaã do Norte,51010,Norte Matogrossense - MT,2839.0,0.0,51.3,51.0,2.624,7.023,0.281,0.752,nascidos vivos hospitalares,350.0,68.3,67.3,0.0,9.4,0.0,False
+parto,510622,Nova Mutum,51014,Teles Pires - MT,18484.0,14.0,0.0,0.0,7.574,7.165,0.811,0.767,nascidos vivos hospitalares,2235.0,20.2,21.0,91.3,7.0,,True
+parto,510623,Nova Olímpia,51007,Médio Norte Matogrossense - MT,4130.0,18.0,0.0,0.0,16.646,14.35,1.783,1.537,nascidos vivos hospitalares,542.0,15.5,14.1,73.4,2.0,,True
+parto,510624,Nova Ubiratã,51014,Teles Pires - MT,2552.0,0.0,95.8,87.2,0.0,1.867,0.0,0.2,nascidos vivos hospitalares,358.0,102.0,93.6,,,0.0,True
+parto,510625,Nova Xavantina,51005,Garças Araguaia - MT,6614.0,3.0,0.0,0.0,4.536,8.156,0.486,0.874,nascidos vivos hospitalares,611.0,13.0,14.5,89.2,4.4,1.1,False
+parto,510626,Novo Mundo,51015,Vale do Peixoto - MT,1506.0,0.0,36.3,32.2,2.202,6.932,0.236,0.742,nascidos vivos hospitalares,188.0,93.2,87.9,0.0,19.1,,True
+parto,510627,Novo Horizonte do Norte,51016,Vale dos Arinos - MT,692.0,2.0,0.0,0.0,13.778,13.967,1.476,1.496,nascidos vivos hospitalares,95.0,48.2,48.1,13.7,6.3,0.0,False
+parto,510628,Novo São Joaquim,51005,Garças Araguaia - MT,1711.0,6.0,0.0,0.0,35.067,18.492,3.756,1.981,nascidos vivos hospitalares,189.0,51.1,50.2,82.0,7.9,0.0,False
+parto,510629,Paranaíta,51001,Alto Tapajós - MT,2909.0,2.3,0.0,0.0,7.642,8.062,0.819,0.863,nascidos vivos hospitalares,302.0,13.6,13.5,84.4,2.3,,True
+parto,510630,Paranatinga,51013,Sul Matogrossense - MT,7280.0,7.0,0.0,0.0,9.615,9.615,1.03,1.03,nascidos vivos hospitalares,780.0,46.0,43.0,81.5,3.1,0.0,False
+parto,510631,Novo Santo Antônio,51009,Norte Araguaia Karajá - MT,510.0,0.0,140.2,93.1,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,47.0,364.7,345.1,0.0,89.4,,True
+parto,510637,Pedra Preta,51013,Sul Matogrossense - MT,4764.0,2.0,0.0,0.0,7.686,8.96,0.823,0.96,nascidos vivos hospitalares,481.0,29.4,28.8,1.2,,,True
+parto,510642,Peixoto de Azevedo,51015,Vale do Peixoto - MT,8683.0,7.1,0.0,0.0,12.651,12.562,1.355,1.346,nascidos vivos hospitalares,1225.0,23.7,23.4,76.2,14.9,,True
+parto,510645,Planalto da Serra,51002,Baixada Cuiabana - MT,779.0,0.0,145.3,103.7,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,78.0,247.4,245.5,0.0,9.0,0.0,False
+parto,510650,Poconé,51002,Baixada Cuiabana - MT,7475.0,4.0,0.0,0.0,5.351,1.939,0.573,0.208,nascidos vivos hospitalares,878.0,78.2,79.3,26.7,,,True
+parto,510665,Pontal do Araguaia,51005,Garças Araguaia - MT,1927.0,0.0,3.3,2.1,12.771,12.736,1.368,1.364,nascidos vivos hospitalares,140.0,3.6,2.5,0.0,0.0,,True
+parto,510670,Ponte Branca,51005,Garças Araguaia - MT,445.0,2.0,0.0,0.0,34.298,21.739,3.674,2.328,nascidos vivos hospitalares,32.0,74.5,70.1,43.8,0.0,,True
+parto,510675,Pontes e Lacerda,51012,Sudoeste Matogrossense - MT,15143.0,14.7,0.0,0.0,9.62,12.914,1.03,1.383,nascidos vivos hospitalares,1722.0,43.3,44.6,84.6,12.0,0.4,False
+parto,510677,Porto Alegre do Norte,51003,Araguaia Xingu - MT,3166.0,3.0,0.0,0.0,10.214,10.201,1.094,1.093,nascidos vivos hospitalares,311.0,68.4,65.9,,5.5,3.2,True
+parto,510680,Porto dos Gaúchos,51016,Vale dos Arinos - MT,1415.0,3.0,0.0,0.0,10.902,16.402,1.168,1.757,nascidos vivos hospitalares,190.0,88.5,87.2,33.2,16.3,,True
+parto,510682,Porto Esperidião,51011,Oeste Matogrossense - MT,2470.0,0.0,47.1,49.7,3.696,12.789,0.396,1.37,nascidos vivos hospitalares,292.0,109.2,112.0,0.0,12.0,,True
+parto,510685,Porto Estrela,51007,Médio Norte Matogrossense - MT,685.0,0.0,43.3,39.9,3.495,6.515,0.374,0.698,nascidos vivos hospitalares,66.0,70.2,67.7,0.0,15.2,0.0,False
+parto,510700,Poxoréo,51013,Sul Matogrossense - MT,5515.0,8.0,0.0,0.0,9.594,13.29,1.028,1.424,nascidos vivos hospitalares,453.0,48.9,49.8,27.2,,0.0,True
+parto,510704,Primavera do Leste,51013,Sul Matogrossense - MT,27584.0,34.0,0.0,0.0,13.308,11.432,1.425,1.225,nascidos vivos hospitalares,3052.0,10.3,10.7,93.5,2.4,0.3,False
+parto,510706,Querência,51006,Médio Araguaia - MT,8672.0,6.5,0.0,0.0,7.495,8.631,0.803,0.924,nascidos vivos hospitalares,1059.0,43.0,42.7,83.4,3.2,2.8,False
+parto,510710,São José dos Quatro Marcos,51011,Oeste Matogrossense - MT,4265.0,17.5,0.0,0.0,27.133,21.673,2.906,2.321,nascidos vivos hospitalares,375.0,69.6,71.4,41.9,9.6,,True
+parto,510715,Reserva do Cabaçal,51011,Oeste Matogrossense - MT,486.0,0.0,49.1,41.3,1.893,11.264,0.203,1.206,nascidos vivos hospitalares,50.0,148.0,143.6,0.0,,0.0,True
+parto,510718,Ribeirão Cascalheira,51006,Médio Araguaia - MT,2646.0,3.1,0.0,0.0,11.653,7.541,1.248,0.808,nascidos vivos hospitalares,237.0,116.9,124.3,18.1,2.1,2.1,False
+parto,510719,Ribeirãozinho,51005,Garças Araguaia - MT,648.0,2.7,0.0,0.0,41.753,18.068,4.472,1.935,nascidos vivos hospitalares,54.0,81.2,76.7,13.0,0.0,,True
+parto,510720,Rio Branco,51011,Oeste Matogrossense - MT,1096.0,3.0,0.0,0.0,21.13,13.034,2.263,1.396,nascidos vivos hospitalares,121.0,133.8,121.8,,11.6,0.0,True
+parto,510724,Santa Carmem,51014,Teles Pires - MT,1483.0,0.0,43.8,38.6,3.538,4.85,0.379,0.52,nascidos vivos hospitalares,197.0,58.2,51.1,0.0,4.6,,True
+parto,510726,Santo Afonso,51007,Médio Norte Matogrossense - MT,530.0,0.0,27.1,24.9,7.81,12.198,0.837,1.307,nascidos vivos hospitalares,76.0,58.4,54.8,0.0,7.9,0.0,False
+parto,510729,São José do Povo,51013,Sul Matogrossense - MT,517.0,0.0,45.7,42.5,3.719,8.131,0.398,0.871,nascidos vivos hospitalares,29.0,45.7,45.5,0.0,0.0,0.0,False
+parto,510730,São José do Rio Claro,51004,Centro Norte - MT,3642.0,6.0,0.0,0.0,16.474,8.668,1.765,0.928,nascidos vivos hospitalares,468.0,71.7,72.6,63.5,29.9,0.0,False
+parto,510735,São José do Xingu,51003,Araguaia Xingu - MT,1616.0,0.0,193.8,146.2,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,233.0,223.7,184.3,0.0,8.6,,True
+parto,510740,São Pedro da Cipa,51013,Sul Matogrossense - MT,1042.0,0.0,9.3,7.8,6.732,8.796,0.721,0.942,nascidos vivos hospitalares,87.0,30.4,27.3,0.0,,0.0,True
+parto,510757,Rondolândia,51012,Sudoeste Matogrossense - MT,892.0,0.0,436.1,389.5,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,76.0,,,0.0,0.0,100.0,False
+parto,510760,Rondonópolis,51013,Sul Matogrossense - MT,70666.0,75.0,0.0,0.0,10.351,10.385,1.109,1.112,nascidos vivos hospitalares,7587.0,1.3,1.3,99.2,0.4,0.3,False
+parto,510770,Rosário Oeste,51004,Centro Norte - MT,3263.0,4.0,0.0,0.0,12.76,7.858,1.367,0.842,nascidos vivos hospitalares,310.0,90.5,91.2,27.7,69.7,,True
+parto,510774,Santa Cruz do Xingu,51003,Araguaia Xingu - MT,740.0,0.0,210.4,185.7,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,89.0,229.0,200.3,,,,True
+parto,510775,Salto do Céu,51011,Oeste Matogrossense - MT,850.0,3.0,0.0,0.0,21.29,10.487,2.28,1.123,nascidos vivos hospitalares,88.0,130.8,119.3,18.2,12.5,0.0,False
+parto,510776,Santa Rita do Trivelato,51014,Teles Pires - MT,911.0,0.0,124.2,104.1,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,72.0,161.2,142.9,0.0,,0.0,True
+parto,510777,Santa Terezinha,51003,Araguaia Xingu - MT,1832.0,1.7,0.0,0.0,9.098,9.098,0.974,0.974,nascidos vivos hospitalares,196.0,196.2,176.1,5.6,2.6,,True
+parto,510779,Santo Antônio do Leste,51013,Sul Matogrossense - MT,1067.0,0.0,126.8,94.2,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,127.0,168.3,155.8,6.3,,0.0,True
+parto,510780,Santo Antônio do Leverger,51002,Baixada Cuiabana - MT,3921.0,0.0,34.8,34.0,3.901,6.226,0.418,0.667,nascidos vivos hospitalares,430.0,51.0,50.8,,7.9,0.0,True
+parto,510785,São Félix do Araguaia,51009,Norte Araguaia Karajá - MT,3490.0,6.0,0.0,0.0,17.192,17.192,1.841,1.841,nascidos vivos hospitalares,243.0,141.6,116.1,75.3,21.8,2.9,False
+parto,510787,Sapezal,51007,Médio Norte Matogrossense - MT,9305.0,8.0,0.0,0.0,8.929,7.877,0.956,0.844,nascidos vivos hospitalares,1086.0,75.1,78.7,75.0,6.8,0.6,False
+parto,510788,Serra Nova Dourada,51009,Norte Araguaia Karajá - MT,458.0,0.0,131.8,134.5,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,47.0,286.9,293.8,0.0,93.6,,True
+parto,510790,Sinop,51014,Teles Pires - MT,63375.0,41.5,0.0,0.0,6.489,7.668,0.695,0.821,nascidos vivos hospitalares,7363.0,9.3,8.8,94.5,3.7,0.4,False
+parto,510792,Sorriso,51014,Teles Pires - MT,35296.0,47.0,0.0,0.0,13.316,9.207,1.426,0.986,nascidos vivos hospitalares,4287.0,6.1,6.1,95.2,1.0,0.3,False
+parto,510794,Tabaporã,51016,Vale dos Arinos - MT,2557.0,4.3,0.0,0.0,16.947,15.221,1.815,1.63,nascidos vivos hospitalares,313.0,107.5,87.4,50.8,29.1,,True
+parto,510795,Tangará da Serra,51007,Médio Norte Matogrossense - MT,31139.0,28.7,0.0,0.0,11.938,12.727,1.279,1.363,nascidos vivos hospitalares,3052.0,3.8,3.8,98.0,1.2,,True
+parto,510800,Tapurah,51014,Teles Pires - MT,4241.0,1.8,0.0,0.0,4.126,1.896,0.442,0.203,nascidos vivos hospitalares,460.0,142.3,130.0,2.8,3.7,,True
+parto,510805,Terra Nova do Norte,51015,Vale do Peixoto - MT,2471.0,4.0,0.0,0.0,9.478,15.046,1.015,1.612,nascidos vivos hospitalares,311.0,69.0,67.2,,34.7,0.0,True
+parto,510810,Tesouro,51013,Sul Matogrossense - MT,611.0,1.0,0.0,0.0,5.999,3.906,0.643,0.418,nascidos vivos hospitalares,60.0,135.2,143.2,,,,True
+parto,510820,Torixoréu,51005,Garças Araguaia - MT,935.0,4.0,0.0,0.0,16.249,18.204,1.74,1.95,nascidos vivos hospitalares,59.0,55.2,54.5,55.9,,,True
+parto,510830,União do Sul,51014,Teles Pires - MT,943.0,0.0,145.5,93.8,0.0,0.0,0.0,0.0,nascidos vivos hospitalares,131.0,225.9,195.2,0.0,9.2,0.0,False
+parto,510835,Vale de São Domingos,51012,Sudoeste Matogrossense - MT,649.0,0.0,27.2,24.5,11.068,8.978,1.185,0.962,nascidos vivos hospitalares,67.0,88.4,72.9,0.0,10.4,0.0,False
+parto,510840,Várzea Grande,51002,Baixada Cuiabana - MT,86374.0,44.2,0.0,0.0,6.452,6.818,0.691,0.73,nascidos vivos hospitalares,8999.0,11.5,9.8,37.1,0.2,0.1,False
+parto,510850,Vera,51014,Teles Pires - MT,2644.0,0.8,0.0,0.0,2.448,5.92,0.262,0.634,nascidos vivos hospitalares,326.0,75.6,68.6,0.0,,,True
+parto,510860,Vila Rica,51003,Araguaia Xingu - MT,5050.0,2.0,0.0,0.0,3.96,4.785,0.424,0.513,nascidos vivos hospitalares,581.0,48.2,48.6,70.4,2.6,7.9,False
+parto,510880,Nova Guarita,51010,Norte Matogrossense - MT,1108.0,0.0,63.2,56.2,0.0,2.988,0.0,0.32,nascidos vivos hospitalares,125.0,143.3,135.2,0.0,20.8,0.0,False
+parto,510885,Nova Marilândia,51007,Médio Norte Matogrossense - MT,935.0,0.0,18.7,18.9,8.734,8.609,0.935,0.922,nascidos vivos hospitalares,105.0,76.1,70.5,0.0,12.4,0.0,False
+parto,510890,Nova Maringá,51004,Centro Norte - MT,1420.0,0.0,70.7,71.4,0.0,4.791,0.0,0.513,nascidos vivos hospitalares,144.0,225.8,205.8,0.0,54.9,,True
+parto,510895,Nova Monte Verde,51001,Alto Tapajós - MT,2095.0,0.0,59.2,53.5,0.114,8.039,0.012,0.861,nascidos vivos hospitalares,255.0,192.5,196.4,,9.8,,True
+uti,510010,Acorizal,51002,Baixada Cuiabana - MT,3683.0,0.0,65.7,68.0,0.0,18.084,0.0,1.405,internacoes,55.0,70.2,72.5,0.0,,0.0,True
+uti,510020,Água Boa,51006,Médio Araguaia - MT,22572.0,10.0,0.0,0.0,43.926,24.202,3.412,1.88,internacoes,326.0,125.6,121.7,72.7,20.2,7.1,False
+uti,510025,Alta Floresta,51001,Alto Tapajós - MT,44532.0,0.0,155.7,160.7,0.0,0.0,0.0,0.0,internacoes,170.0,630.9,638.4,0.0,91.2,8.8,False
+uti,510030,Alto Araguaia,51013,Sul Matogrossense - MT,12886.0,0.0,195.4,203.7,0.0,0.0,0.0,0.0,internacoes,166.0,207.6,216.4,0.0,4.8,4.8,False
+uti,510035,Alto Boa Vista,51009,Norte Araguaia Karajá - MT,3809.0,0.0,335.5,324.6,0.0,0.0,0.0,0.0,internacoes,24.0,789.8,767.3,0.0,100.0,0.0,False
+uti,510040,Alto Garças,51013,Sul Matogrossense - MT,9886.0,0.0,139.8,146.2,0.0,0.0,0.0,0.0,internacoes,156.0,162.1,169.5,0.0,5.8,3.2,False
+uti,510050,Alto Paraguai,51004,Centro Norte - MT,5550.0,0.0,108.9,111.7,0.0,3.495,0.0,0.272,internacoes,65.0,200.1,205.9,0.0,,,True
+uti,510060,Alto Taquari,51013,Sul Matogrossense - MT,8056.0,0.0,254.7,267.8,0.0,0.0,0.0,0.0,internacoes,85.0,266.5,280.2,0.0,,17.6,True
+uti,510080,Apiacás,51001,Alto Tapajós - MT,5853.0,0.0,345.7,332.6,0.0,0.0,0.0,0.0,internacoes,19.0,818.3,808.5,0.0,100.0,0.0,False
+uti,510100,Araguaiana,51005,Garças Araguaia - MT,2932.0,0.0,60.6,54.1,0.0,10.506,0.0,0.816,internacoes,42.0,145.6,143.2,0.0,16.7,,True
+uti,510120,Araguainha,51013,Sul Matogrossense - MT,751.0,0.0,180.3,174.4,0.0,0.0,0.0,0.0,internacoes,10.0,279.7,292.8,0.0,,,True
+uti,510125,Araputanga,51011,Oeste Matogrossense - MT,10726.0,0.0,122.1,123.3,0.0,0.0,0.0,0.0,internacoes,155.0,225.7,230.4,0.0,47.1,,True
+uti,510130,Arenápolis,51007,Médio Norte Matogrossense - MT,7643.0,0.0,136.9,145.9,0.0,0.0,0.0,0.0,internacoes,101.0,233.6,242.2,0.0,,,True
+uti,510140,Aripuanã,51008,Noroeste Matogrossense - MT,17526.0,0.0,719.1,597.8,0.0,0.0,0.0,0.0,internacoes,123.0,994.3,953.9,0.0,95.9,4.1,False
+uti,510160,Barão de Melgaço,51002,Baixada Cuiabana - MT,5190.0,0.0,110.4,109.9,0.0,2.784,0.0,0.216,internacoes,60.0,116.1,115.8,0.0,,0.0,True
+uti,510170,Barra do Bugres,51007,Médio Norte Matogrossense - MT,20779.0,0.0,151.0,152.8,0.0,0.0,0.0,0.0,internacoes,243.0,166.3,171.5,0.0,,,True
+uti,510180,Barra do Garças,51005,Garças Araguaia - MT,53163.0,10.0,0.0,0.0,16.995,15.102,1.32,1.173,internacoes,603.0,92.6,97.4,75.0,17.9,7.1,False
+uti,510183,Boa Esperança do Norte,51014,Teles Pires - MT,3798.0,0.0,144.8,132.1,0.0,0.0,0.0,0.0,internacoes,0.0,,,,,,False
+uti,510185,Bom Jesus do Araguaia,51006,Médio Araguaia - MT,5386.0,0.0,246.0,262.0,0.0,0.0,0.0,0.0,internacoes,47.0,329.8,342.0,0.0,14.9,,True
+uti,510190,Brasnorte,51008,Noroeste Matogrossense - MT,11741.0,0.0,366.5,313.5,0.0,0.0,0.0,0.0,internacoes,105.0,546.5,568.3,0.0,93.3,6.7,False
+uti,510250,Cáceres,51011,Oeste Matogrossense - MT,64943.0,16.0,0.0,0.0,24.637,18.993,1.914,1.475,internacoes,911.0,48.9,50.6,77.1,21.6,1.3,False
+uti,510260,Campinápolis,51005,Garças Araguaia - MT,8776.0,0.0,135.5,133.0,0.0,0.0,0.0,0.0,internacoes,109.0,206.5,202.6,0.0,90.8,,True
+uti,510263,Campo Novo do Parecis,51007,Médio Norte Matogrossense - MT,34130.0,0.0,186.8,212.9,0.0,0.0,0.0,0.0,internacoes,188.0,376.8,392.2,0.0,,,True
+uti,510267,Campo Verde,51013,Sul Matogrossense - MT,33616.0,0.0,100.9,103.9,0.0,2.173,0.0,0.169,internacoes,322.0,137.4,141.5,0.0,24.5,2.2,False
+uti,510268,Campos de Júlio,51012,Sudoeste Matogrossense - MT,6460.0,0.0,342.8,377.4,0.0,0.0,0.0,0.0,internacoes,31.0,492.4,509.7,0.0,,,True
+uti,510269,Canabrava do Norte,51003,Araguaia Xingu - MT,3061.0,0.0,432.7,401.2,0.0,0.0,0.0,0.0,internacoes,30.0,1004.8,951.4,0.0,,,True
+uti,510270,Canarana,51006,Médio Araguaia - MT,18894.0,0.0,88.1,92.8,0.0,9.674,0.0,0.752,internacoes,176.0,201.9,195.5,0.0,18.2,6.2,False
+uti,510279,Carlinda,51001,Alto Tapajós - MT,7516.0,0.0,121.8,126.4,0.0,0.0,0.0,0.0,internacoes,39.0,543.4,546.5,0.0,,,True
+uti,510285,Castanheira,51008,Noroeste Matogrossense - MT,5456.0,0.0,508.2,485.8,0.0,0.0,0.0,0.0,internacoes,26.0,735.7,767.3,0.0,,,True
+uti,510300,Chapada dos Guimarães,51002,Baixada Cuiabana - MT,14107.0,0.0,67.2,64.9,0.0,17.534,0.0,1.362,internacoes,295.0,74.2,71.6,0.0,2.4,0.0,False
+uti,510305,Cláudia,51014,Teles Pires - MT,6700.0,0.0,108.7,91.2,0.0,0.664,0.0,0.052,internacoes,65.0,221.2,212.0,0.0,15.4,,True
+uti,510310,Cocalinho,51006,Médio Araguaia - MT,4734.0,0.0,179.4,164.0,0.0,0.0,0.0,0.0,internacoes,47.0,284.5,261.1,0.0,14.9,17.0,False
+uti,510320,Colíder,51010,Norte Matogrossense - MT,23407.0,8.0,0.0,0.0,28.994,17.561,2.252,1.364,internacoes,403.0,136.9,136.7,71.5,27.0,1.5,False
+uti,510325,Colniza,51008,Noroeste Matogrossense - MT,17667.0,0.0,709.7,573.3,0.0,0.0,0.0,0.0,internacoes,109.0,1108.1,1039.7,0.0,,,True
+uti,510330,Comodoro,51012,Sudoeste Matogrossense - MT,12521.0,0.0,403.0,423.1,0.0,0.0,0.0,0.0,internacoes,91.0,529.1,552.3,0.0,,,True
+uti,510335,Confresa,51003,Araguaia Xingu - MT,25982.0,0.0,450.1,422.5,0.0,0.0,0.0,0.0,internacoes,209.0,1068.0,1021.1,0.0,97.6,2.4,False
+uti,510336,Conquista D'Oeste,51012,Sudoeste Matogrossense - MT,2633.0,0.0,302.8,317.4,0.0,0.0,0.0,0.0,internacoes,29.0,436.4,458.1,0.0,100.0,0.0,False
+uti,510337,Cotriguaçu,51008,Noroeste Matogrossense - MT,7044.0,0.0,525.7,450.0,0.0,0.0,0.0,0.0,internacoes,58.0,938.6,931.5,0.0,100.0,0.0,False
+uti,510340,Cuiabá,51002,Baixada Cuiabana - MT,502411.0,163.0,0.0,0.0,30.785,29.39,2.392,2.283,internacoes,7319.0,4.9,4.8,89.1,1.3,1.5,False
+uti,510343,Curvelândia,51011,Oeste Matogrossense - MT,3660.0,0.0,68.3,64.5,0.0,11.773,0.0,0.915,internacoes,76.0,114.5,112.7,0.0,21.1,,True
+uti,510345,Denise,51007,Médio Norte Matogrossense - MT,4729.0,0.0,174.8,184.5,0.0,0.0,0.0,0.0,internacoes,58.0,204.8,212.4,0.0,100.0,0.0,False
+uti,510350,Diamantino,51004,Centro Norte - MT,15619.0,0.0,89.9,93.9,0.0,9.27,0.0,0.72,internacoes,196.0,180.3,187.2,0.0,100.0,0.0,False
+uti,510360,Dom Aquino,51013,Sul Matogrossense - MT,5828.0,0.0,90.4,91.9,0.0,8.567,0.0,0.666,internacoes,148.0,102.9,105.2,0.0,15.5,,True
+uti,510370,Feliz Natal,51014,Teles Pires - MT,6680.0,0.0,127.6,110.2,0.0,0.0,0.0,0.0,internacoes,43.0,244.4,239.3,0.0,16.3,,True
+uti,510380,Figueirópolis D'Oeste,51012,Sudoeste Matogrossense - MT,2298.0,0.0,177.5,173.6,0.0,0.0,0.0,0.0,internacoes,31.0,277.2,275.0,0.0,,,True
+uti,510385,Gaúcha do Norte,51006,Médio Araguaia - MT,5838.0,0.0,285.8,205.7,0.0,0.0,0.0,0.0,internacoes,53.0,399.8,324.1,0.0,37.7,0.0,False
+uti,510390,General Carneiro,51005,Garças Araguaia - MT,4037.0,0.0,67.2,66.0,0.0,9.529,0.0,0.74,internacoes,69.0,214.6,223.1,0.0,47.8,,True
+uti,510395,Glória D'Oeste,51011,Oeste Matogrossense - MT,2181.0,0.0,91.4,93.9,0.0,6.844,0.0,0.532,internacoes,41.0,171.8,175.8,0.0,29.3,,True
+uti,510410,Guarantã do Norte,51015,Vale do Peixoto - MT,21767.0,0.0,140.6,144.2,0.0,0.0,0.0,0.0,internacoes,102.0,528.3,531.5,0.0,,,True
+uti,510420,Guiratinga,51013,Sul Matogrossense - MT,7964.0,0.0,103.0,109.5,0.0,3.851,0.0,0.299,internacoes,170.0,131.8,136.3,0.0,7.1,,True
+uti,510450,Indiavaí,51011,Oeste Matogrossense - MT,1595.0,0.0,155.9,154.1,0.0,0.0,0.0,0.0,internacoes,29.0,233.4,235.5,0.0,37.9,0.0,False
+uti,510452,Ipiranga do Norte,51014,Teles Pires - MT,5766.0,0.0,67.7,69.6,0.0,1.88,0.0,0.146,internacoes,46.0,115.0,121.8,0.0,,,True
+uti,510454,Itanhangá,51014,Teles Pires - MT,5572.0,0.0,128.6,126.2,0.0,0.0,0.0,0.0,internacoes,30.0,228.0,240.8,0.0,26.7,,True
+uti,510455,Itaúba,51010,Norte Matogrossense - MT,3604.0,0.0,53.9,54.5,4.535,13.28,0.352,1.032,internacoes,57.0,140.3,137.6,0.0,29.8,,True
+uti,510460,Itiquira,51013,Sul Matogrossense - MT,8625.0,0.0,152.4,146.5,0.0,0.0,0.0,0.0,internacoes,147.0,178.2,172.9,0.0,5.4,,True
+uti,510480,Jaciara,51013,Sul Matogrossense - MT,21222.0,0.0,77.1,74.8,0.0,9.335,0.0,0.725,internacoes,345.0,87.7,86.3,0.0,9.3,,True
+uti,510490,Jangada,51002,Baixada Cuiabana - MT,5314.0,0.0,71.2,70.0,0.0,14.897,0.0,1.157,internacoes,82.0,79.0,78.0,0.0,,0.0,True
+uti,510500,Jauru,51012,Sudoeste Matogrossense - MT,5804.0,0.0,200.6,194.7,0.0,0.0,0.0,0.0,internacoes,68.0,306.3,303.0,0.0,,,True
+uti,510510,Juara,51016,Vale dos Arinos - MT,25241.0,0.0,313.9,292.9,0.0,0.0,0.0,0.0,internacoes,115.0,473.7,495.5,0.0,89.6,10.4,False
+uti,510515,Juína,51008,Noroeste Matogrossense - MT,34167.0,0.0,462.6,443.4,0.0,0.0,0.0,0.0,internacoes,245.0,691.4,724.9,0.0,97.6,2.4,False
+uti,510517,Juruena,51008,Noroeste Matogrossense - MT,6974.0,0.0,575.4,486.0,0.0,0.0,0.0,0.0,internacoes,42.0,880.0,875.4,0.0,,,True
+uti,510520,Juscimeira,51013,Sul Matogrossense - MT,8599.0,0.0,62.1,60.5,0.0,12.105,0.0,0.94,internacoes,143.0,71.7,70.6,0.0,6.3,0.0,False
+uti,510523,Lambari D'Oeste,51011,Oeste Matogrossense - MT,3280.0,0.0,111.3,103.8,0.0,2.114,0.0,0.164,internacoes,53.0,151.8,137.0,0.0,20.8,0.0,False
+uti,510525,Lucas do Rio Verde,51014,Teles Pires - MT,64237.0,0.0,70.5,68.9,0.0,13.722,0.0,1.066,internacoes,152.0,197.4,210.7,0.0,40.1,4.6,False
+uti,510530,Luciára,51009,Norte Araguaia Karajá - MT,1783.0,0.0,501.3,435.0,0.0,0.0,0.0,0.0,internacoes,10.0,1085.3,995.2,0.0,,,True
+uti,510550,Vila Bela da Santíssima Trindade,51012,Sudoeste Matogrossense - MT,11641.0,0.0,305.6,306.6,0.0,0.0,0.0,0.0,internacoes,75.0,422.9,425.7,0.0,,,True
+uti,510558,Marcelândia,51010,Norte Matogrossense - MT,7702.0,0.0,119.3,123.6,0.0,0.153,0.0,0.012,internacoes,111.0,252.6,250.9,0.0,37.8,,True
+uti,510560,Matupá,51015,Vale do Peixoto - MT,14952.0,0.0,115.8,118.6,0.0,0.945,0.0,0.073,internacoes,67.0,521.9,521.1,0.0,,,True
+uti,510562,Mirassol d'Oeste,51011,Oeste Matogrossense - MT,20030.0,0.0,81.7,82.5,0.0,9.003,0.0,0.699,internacoes,234.0,183.9,188.9,0.0,42.7,5.1,False
+uti,510590,Nobres,51004,Centro Norte - MT,10985.0,0.0,121.3,122.2,0.0,0.0,0.0,0.0,internacoes,220.0,139.2,142.3,0.0,,,True
+uti,510600,Nortelândia,51004,Centro Norte - MT,4313.0,0.0,131.6,140.8,0.0,0.0,0.0,0.0,internacoes,63.0,232.4,244.6,0.0,100.0,0.0,False
+uti,510610,Nossa Senhora do Livramento,51002,Baixada Cuiabana - MT,8609.0,0.0,34.6,32.4,13.769,24.978,1.07,1.94,internacoes,138.0,43.2,41.1,0.0,,4.3,True
+uti,510615,Nova Bandeirantes,51001,Alto Tapajós - MT,10216.0,0.0,356.8,365.6,0.0,0.0,0.0,0.0,internacoes,12.0,801.0,741.9,0.0,,,True
+uti,510617,Nova Nazaré,51006,Médio Araguaia - MT,2630.0,0.0,57.1,52.1,3.236,17.612,0.251,1.368,internacoes,35.0,132.7,129.4,0.0,17.1,,True
+uti,510618,Nova Lacerda,51012,Sudoeste Matogrossense - MT,4826.0,0.0,310.5,325.7,0.0,0.0,0.0,0.0,internacoes,66.0,438.9,460.4,0.0,,,True
+uti,510619,Nova Santa Helena,51010,Norte Matogrossense - MT,3074.0,0.0,36.5,35.8,16.565,15.547,1.287,1.208,internacoes,44.0,186.9,186.2,0.0,34.1,0.0,False
+uti,510620,Nova Brasilândia,51002,Baixada Cuiabana - MT,2837.0,0.0,164.1,171.0,0.0,0.0,0.0,0.0,internacoes,64.0,202.7,207.3,0.0,21.9,,True
+uti,510621,Nova Canaã do Norte,51010,Norte Matogrossense - MT,8412.0,0.0,51.3,51.0,6.427,13.662,0.499,1.061,internacoes,131.0,240.6,240.2,0.0,41.2,,True
+uti,510622,Nova Mutum,51014,Teles Pires - MT,41984.0,20.0,0.0,0.0,47.637,24.539,3.701,1.906,internacoes,482.0,38.8,39.7,83.4,11.6,1.7,False
+uti,510623,Nova Olímpia,51007,Médio Norte Matogrossense - MT,11329.0,0.0,187.3,190.7,0.0,0.0,0.0,0.0,internacoes,131.0,205.2,211.9,0.0,,,True
+uti,510624,Nova Ubiratã,51014,Teles Pires - MT,6302.0,0.0,95.8,87.2,0.0,0.921,0.0,0.072,internacoes,56.0,181.8,177.9,0.0,17.9,0.0,False
+uti,510625,Nova Xavantina,51005,Garças Araguaia - MT,19231.0,0.0,81.0,86.6,0.0,12.104,0.0,0.94,internacoes,144.0,262.0,271.8,0.0,31.2,21.5,False
+uti,510626,Novo Mundo,51015,Vale do Peixoto - MT,4380.0,0.0,175.0,175.7,0.0,0.0,0.0,0.0,internacoes,32.0,630.8,631.6,0.0,,,True
+uti,510627,Novo Horizonte do Norte,51016,Vale dos Arinos - MT,2511.0,0.0,290.9,266.3,0.0,0.0,0.0,0.0,internacoes,30.0,452.8,467.6,0.0,,,True
+uti,510628,Novo São Joaquim,51005,Garças Araguaia - MT,5135.0,0.0,184.9,187.1,0.0,0.0,0.0,0.0,internacoes,51.0,304.6,317.5,0.0,25.5,,True
+uti,510629,Paranaíta,51001,Alto Tapajós - MT,8669.0,0.0,201.6,208.4,0.0,0.0,0.0,0.0,internacoes,41.0,651.7,660.1,0.0,,,True
+uti,510630,Paranatinga,51013,Sul Matogrossense - MT,19615.0,0.0,155.6,142.0,0.0,0.0,0.0,0.0,internacoes,215.0,280.0,270.6,0.0,14.0,2.3,False
+uti,510631,Novo Santo Antônio,51009,Norte Araguaia Karajá - MT,1457.0,0.0,355.5,338.7,0.0,0.0,0.0,0.0,internacoes,20.0,483.3,462.5,0.0,100.0,0.0,False
+uti,510637,Pedra Preta,51013,Sul Matogrossense - MT,13531.0,0.0,28.7,28.0,15.119,16.488,1.174,1.281,internacoes,292.0,51.3,51.6,0.0,4.1,2.1,False
+uti,510642,Peixoto de Azevedo,51015,Vale do Peixoto - MT,22906.0,0.0,105.4,108.8,0.0,3.275,0.0,0.254,internacoes,158.0,511.4,513.7,0.0,,,True
+uti,510645,Planalto da Serra,51002,Baixada Cuiabana - MT,2279.0,0.0,217.3,147.2,0.0,0.0,0.0,0.0,internacoes,30.0,259.0,258.8,0.0,,0.0,True
+uti,510650,Poconé,51002,Baixada Cuiabana - MT,22250.0,0.0,96.0,97.5,0.0,6.075,0.0,0.472,internacoes,222.0,108.8,110.6,0.0,2.3,,True
+uti,510665,Pontal do Araguaia,51005,Garças Araguaia - MT,5434.0,0.0,3.3,2.1,16.931,15.088,1.315,1.172,internacoes,41.0,153.0,160.2,0.0,26.8,12.2,False
+uti,510670,Ponte Branca,51005,Garças Araguaia - MT,1582.0,0.0,155.1,147.8,0.0,0.0,0.0,0.0,internacoes,22.0,224.8,224.3,0.0,27.3,0.0,False
+uti,510675,Pontes e Lacerda,51012,Sudoeste Matogrossense - MT,38903.0,0.0,221.6,230.3,0.0,0.0,0.0,0.0,internacoes,481.0,343.3,355.5,0.0,97.9,2.1,False
+uti,510677,Porto Alegre do Norte,51003,Araguaia Xingu - MT,8527.0,0.0,425.9,396.6,0.0,0.0,0.0,0.0,internacoes,69.0,1022.1,974.7,0.0,92.8,7.2,False
+uti,510680,Porto dos Gaúchos,51016,Vale dos Arinos - MT,4111.0,0.0,272.3,247.5,0.0,0.0,0.0,0.0,internacoes,40.0,385.1,392.6,0.0,,,True
+uti,510682,Porto Esperidião,51011,Oeste Matogrossense - MT,7052.0,0.0,105.1,107.8,0.0,3.619,0.0,0.281,internacoes,86.0,188.3,195.2,0.0,36.0,,True
+uti,510685,Porto Estrela,51007,Médio Norte Matogrossense - MT,2300.0,0.0,107.9,112.9,0.0,2.937,0.0,0.228,internacoes,25.0,186.4,188.4,0.0,100.0,0.0,False
+uti,510700,Poxoréo,51013,Sul Matogrossense - MT,17471.0,0.0,43.6,43.7,4.516,15.135,0.351,1.176,internacoes,217.0,95.1,97.9,0.0,8.3,,True
+uti,510704,Primavera do Leste,51013,Sul Matogrossense - MT,65442.0,8.0,0.0,0.0,11.019,8.936,0.856,0.694,internacoes,1074.0,70.7,72.9,53.9,10.1,2.0,False
+uti,510706,Querência,51006,Médio Araguaia - MT,20211.0,0.0,209.1,223.8,0.0,0.0,0.0,0.0,internacoes,139.0,363.1,357.0,0.0,26.6,5.8,False
+uti,510710,São José dos Quatro Marcos,51011,Oeste Matogrossense - MT,13336.0,0.0,92.1,94.9,0.0,6.672,0.0,0.518,internacoes,196.0,177.6,184.5,0.0,38.8,2.6,False
+uti,510715,Reserva do Cabaçal,51011,Oeste Matogrossense - MT,1447.0,0.0,170.9,167.9,0.0,0.0,0.0,0.0,internacoes,17.0,235.9,236.1,0.0,29.4,,True
+uti,510718,Ribeirão Cascalheira,51006,Médio Araguaia - MT,7216.0,0.0,136.7,145.8,0.0,0.0,0.0,0.0,internacoes,107.0,288.4,295.1,0.0,26.2,,True
+uti,510719,Ribeirãozinho,51005,Garças Araguaia - MT,1989.0,0.0,116.6,112.1,0.0,0.665,0.0,0.052,internacoes,34.0,224.7,213.2,0.0,17.6,,True
+uti,510720,Rio Branco,51011,Oeste Matogrossense - MT,3246.0,0.0,129.2,119.8,0.0,0.0,0.0,0.0,internacoes,46.0,218.7,195.3,0.0,43.5,,True
+uti,510724,Santa Carmem,51014,Teles Pires - MT,3879.0,0.0,44.4,38.8,2.258,4.047,0.175,0.314,internacoes,30.0,143.3,140.5,0.0,,0.0,True
+uti,510726,Santo Afonso,51007,Médio Norte Matogrossense - MT,1741.0,0.0,161.8,169.4,0.0,0.0,0.0,0.0,internacoes,18.0,248.7,250.3,0.0,100.0,0.0,False
+uti,510729,São José do Povo,51013,Sul Matogrossense - MT,2142.0,0.0,45.7,45.5,7.519,14.606,0.584,1.135,internacoes,86.0,53.5,53.9,0.0,,0.0,True
+uti,510730,São José do Rio Claro,51004,Centro Norte - MT,10133.0,0.0,107.6,108.9,0.0,3.885,0.0,0.302,internacoes,145.0,279.5,292.0,0.0,,,True
+uti,510735,São José do Xingu,51003,Araguaia Xingu - MT,3964.0,0.0,479.1,388.3,0.0,0.0,0.0,0.0,internacoes,31.0,1002.0,875.7,0.0,,,True
+uti,510740,São Pedro da Cipa,51013,Sul Matogrossense - MT,2950.0,0.0,68.0,67.7,0.0,11.072,0.0,0.86,internacoes,66.0,92.5,92.7,0.0,15.2,0.0,False
+uti,510757,Rondolândia,51012,Sudoeste Matogrossense - MT,2234.0,0.0,836.3,847.0,0.0,0.0,0.0,0.0,internacoes,5.0,1036.1,1054.0,0.0,,,True
+uti,510760,Rondonópolis,51013,Sul Matogrossense - MT,186282.0,41.0,0.0,0.0,20.825,17.757,1.618,1.379,internacoes,3065.0,10.5,10.7,94.1,4.2,1.6,False
+uti,510770,Rosário Oeste,51004,Centro Norte - MT,11083.0,0.0,117.1,118.0,0.0,0.298,0.0,0.023,internacoes,116.0,124.7,125.7,0.0,100.0,0.0,False
+uti,510774,Santa Cruz do Xingu,51003,Araguaia Xingu - MT,1922.0,0.0,580.0,495.3,0.0,0.0,0.0,0.0,internacoes,17.0,1140.2,990.0,0.0,100.0,0.0,False
+uti,510775,Salto do Céu,51011,Oeste Matogrossense - MT,2719.0,0.0,145.7,134.9,0.0,0.0,0.0,0.0,internacoes,35.0,206.4,188.9,0.0,31.4,0.0,False
+uti,510776,Santa Rita do Trivelato,51014,Teles Pires - MT,2277.0,0.0,124.2,104.1,0.0,0.0,0.0,0.0,internacoes,19.0,232.5,222.0,0.0,36.8,,True
+uti,510777,Santa Terezinha,51003,Araguaia Xingu - MT,4969.0,0.0,627.8,581.4,0.0,0.0,0.0,0.0,internacoes,37.0,1250.5,1176.3,0.0,,,True
+uti,510779,Santo Antônio do Leste,51013,Sul Matogrossense - MT,2649.0,0.0,154.5,140.4,0.0,0.0,0.0,0.0,internacoes,49.0,229.0,217.7,0.0,,0.0,True
+uti,510780,Santo Antônio do Leverger,51002,Baixada Cuiabana - MT,11965.0,0.0,34.8,34.0,17.655,26.077,1.372,2.026,internacoes,243.0,43.9,43.3,0.0,3.3,,True
+uti,510785,São Félix do Araguaia,51009,Norte Araguaia Karajá - MT,10298.0,0.0,470.5,414.3,0.0,0.0,0.0,0.0,internacoes,45.0,1003.1,933.3,0.0,,,True
+uti,510787,Sapezal,51007,Médio Norte Matogrossense - MT,21618.0,0.0,290.7,322.8,0.0,0.0,0.0,0.0,internacoes,103.0,472.8,493.9,0.0,,,True
+uti,510788,Serra Nova Dourada,51009,Norte Araguaia Karajá - MT,1382.0,0.0,267.7,279.9,0.0,0.0,0.0,0.0,internacoes,14.0,317.0,327.7,0.0,,,True
+uti,510790,Sinop,51014,Teles Pires - MT,154876.0,9.0,0.0,0.0,5.755,5.895,0.447,0.458,internacoes,930.0,125.6,131.6,52.4,18.0,4.3,False
+uti,510792,Sorriso,51014,Teles Pires - MT,83224.0,6.0,0.0,0.0,7.209,4.874,0.56,0.379,internacoes,667.0,66.2,68.6,69.6,11.5,1.2,False
+uti,510794,Tabaporã,51016,Vale dos Arinos - MT,6665.0,0.0,262.0,211.5,0.0,0.0,0.0,0.0,internacoes,35.0,397.7,393.7,0.0,,,True
+uti,510795,Tangará da Serra,51007,Médio Norte Matogrossense - MT,81108.0,0.0,232.3,229.4,0.0,0.0,0.0,0.0,internacoes,371.0,246.4,246.8,0.0,94.6,5.4,False
+uti,510800,Tapurah,51014,Teles Pires - MT,10385.0,0.0,133.8,125.5,0.0,0.0,0.0,0.0,internacoes,113.0,201.4,198.3,0.0,20.4,,True
+uti,510805,Terra Nova do Norte,51015,Vale do Peixoto - MT,7594.0,0.0,66.3,66.7,0.0,11.245,0.0,0.874,internacoes,34.0,464.4,462.4,0.0,,,True
+uti,510810,Tesouro,51013,Sul Matogrossense - MT,2160.0,0.0,142.7,147.8,0.0,0.0,0.0,0.0,internacoes,34.0,157.9,165.6,0.0,,,True
+uti,510820,Torixoréu,51005,Garças Araguaia - MT,3298.0,0.0,56.9,57.1,1.365,11.025,0.106,0.856,internacoes,32.0,212.3,222.6,0.0,28.1,,True
+uti,510830,União do Sul,51014,Teles Pires - MT,2610.0,0.0,202.5,169.7,0.0,0.0,0.0,0.0,internacoes,13.0,321.2,297.3,0.0,,,True
+uti,510835,Vale de São Domingos,51012,Sudoeste Matogrossense - MT,2132.0,0.0,216.0,217.7,0.0,0.0,0.0,0.0,internacoes,36.0,339.3,347.2,0.0,,,True
+uti,510840,Várzea Grande,51002,Baixada Cuiabana - MT,222780.0,60.0,0.0,0.0,29.192,29.003,2.268,2.253,internacoes,3053.0,11.8,10.6,52.0,1.5,1.1,False
+uti,510850,Vera,51014,Teles Pires - MT,7370.0,0.0,71.3,63.2,0.0,3.978,0.0,0.309,internacoes,45.0,237.9,240.7,0.0,26.7,,True
+uti,510860,Vila Rica,51003,Araguaia Xingu - MT,13614.0,0.0,549.1,527.8,0.0,0.0,0.0,0.0,internacoes,95.0,1162.7,1120.1,0.0,93.7,6.3,False
+uti,510880,Nova Guarita,51010,Norte Matogrossense - MT,3335.0,0.0,116.5,113.1,0.0,0.792,0.0,0.061,internacoes,63.0,250.4,244.1,0.0,38.1,,True
+uti,510885,Nova Marilândia,51007,Médio Norte Matogrossense - MT,2536.0,0.0,153.4,163.4,0.0,0.0,0.0,0.0,internacoes,19.0,252.2,261.7,0.0,100.0,0.0,False
+uti,510890,Nova Maringá,51004,Centro Norte - MT,3861.0,0.0,177.1,179.9,0.0,0.0,0.0,0.0,internacoes,39.0,335.1,347.2,0.0,100.0,0.0,False
+uti,510895,Nova Monte Verde,51001,Alto Tapajós - MT,6011.0,0.0,300.2,313.7,0.0,0.0,0.0,0.0,internacoes,29.0,866.3,811.3,0.0,,,True

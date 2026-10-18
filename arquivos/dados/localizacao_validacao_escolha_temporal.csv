@@ -1,0 +1,11 @@
+piloto,modelo,cpc,wmape_destino,acerto_principal_destino,tempo_medio_obs,tempo_medio_prev
+parto,gravitacional_mnl,0.8616,0.1645,0.7509,31.9302,31.9683
+parto,lightgbm_pares,0.9285,0.0897,0.8754,31.9302,32.8954
+parto,persistencia_2023,0.9612,0.0401,0.9253,31.9302,32.6187
+parto,pivo_mnl,0.9549,0.0507,0.9146,31.9302,33.117
+parto,pivo_lightgbm,0.9373,0.0818,0.8861,31.9302,32.6617
+uti,gravitacional_mnl,0.8799,0.0696,0.7794,134.6457,136.4921
+uti,lightgbm_pares,0.87,0.1511,0.8078,134.6457,137.0583
+uti,persistencia_2023,0.9021,0.0789,0.7687,134.6457,136.8566
+uti,pivo_mnl,0.8954,0.0972,0.7544,134.6457,137.5522
+uti,pivo_lightgbm,0.8775,0.1379,0.726,134.6457,138.1204

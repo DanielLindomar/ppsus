@@ -1,0 +1,529 @@
+versao,regra,fonte,alvo,nivel,modelo,duracao_minima,episodios,detectados,detectados_antes_inicio,pct_antes_inicio,antecedencia_media_detectados,antecedencia_media_todos_perdido_0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,hgb,1,119.0,57.0,41.0,0.3445378151260504,2.263157894736842,1.1176470588235294
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,hgb_pandemia,1,119.0,53.0,38.0,0.3193277310924369,2.39622641509434,1.084033613445378
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,hgb_sem_exog,1,119.0,54.0,42.0,0.3529411764705882,2.6481481481481484,1.2352941176470589
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,ingenuo_sazonal,1,119.0,54.0,53.0,0.4453781512605042,3.4814814814814814,1.6218487394957983
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,ingenuo_sazonal_aj,1,119.0,64.0,60.0,0.5042016806722689,3.28125,1.831932773109244
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,ingenuo_ultima,1,119.0,74.0,38.0,0.3193277310924369,1.864864864864865,1.1596638655462186
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,lgbm,1,119.0,55.0,39.0,0.3277310924369748,2.290909090909091,1.100840336134454
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,mlp,1,119.0,62.0,52.0,0.4369747899159664,2.5,1.3529411764705883
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,rf,1,119.0,60.0,41.0,0.3445378151260504,2.2666666666666666,1.218487394957983
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,sarima,1,119.0,64.0,59.0,0.4957983193277311,3.265625,1.7899159663865547
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,hgb,1,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,hgb_pandemia,1,3.0,3.0,2.0,0.6666666666666666,2.0,2.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,hgb_sem_exog,1,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,ingenuo_sazonal,1,3.0,3.0,3.0,1.0,2.333333333333333,2.333333333333333
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,ingenuo_sazonal_aj,1,3.0,3.0,3.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,ingenuo_ultima,1,3.0,3.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,lgbm,1,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,mlp,1,3.0,3.0,3.0,1.0,2.6666666666666665,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,rf,1,3.0,3.0,1.0,0.3333333333333333,0.3333333333333333,0.6666666666666666
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,sarima,1,3.0,3.0,3.0,1.0,3.6666666666666665,3.6666666666666665
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,sarima_soma_regioes,1,3.0,3.0,3.0,1.0,3.6666666666666665,3.6666666666666665
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb,1,105.0,47.0,37.0,0.3523809523809524,2.48936170212766,1.1333333333333333
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb_pandemia,1,105.0,43.0,32.0,0.3047619047619048,2.558139534883721,1.0666666666666669
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb_sem_exog,1,105.0,45.0,37.0,0.3523809523809524,2.888888888888889,1.2571428571428571
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_sazonal,1,105.0,49.0,48.0,0.4571428571428571,3.489795918367347,1.6761904761904762
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_sazonal_aj,1,105.0,61.0,57.0,0.5428571428571428,3.2459016393442623,1.9619047619047616
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_ultima,1,105.0,64.0,36.0,0.3428571428571428,2.046875,1.2476190476190476
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,lgbm,1,105.0,45.0,34.0,0.3238095238095238,2.466666666666667,1.0952380952380951
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,mlp,1,105.0,51.0,45.0,0.4285714285714285,2.764705882352941,1.3714285714285714
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,rf,1,105.0,52.0,39.0,0.3714285714285714,2.5,1.3047619047619048
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,sarima,1,105.0,53.0,48.0,0.4571428571428571,3.2830188679245285,1.6952380952380952
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,hgb,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,hgb_pandemia,1,2.0,2.0,1.0,0.5,2.0,2.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,hgb_sem_exog,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_sazonal,1,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_sazonal_aj,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_ultima,1,2.0,2.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,lgbm,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,mlp,1,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,rf,1,2.0,2.0,1.0,0.5,1.0,1.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,sarima,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,sarima_soma_regioes,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,hgb,1,76.0,35.0,26.0,0.3421052631578947,2.2,1.0789473684210529
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_sazonal,1,76.0,39.0,39.0,0.5131578947368421,3.3846153846153846,1.736842105263158
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,1,76.0,41.0,34.0,0.4473684210526316,2.682926829268293,1.5921052631578947
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_ultima,1,76.0,52.0,17.0,0.2236842105263158,1.1923076923076923,0.8157894736842105
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,lgbm,1,76.0,35.0,22.0,0.2894736842105263,1.7714285714285714,0.9605263157894736
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,mlp,1,76.0,50.0,36.0,0.4736842105263157,1.84,1.3289473684210529
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,rf,1,76.0,42.0,27.0,0.3552631578947368,1.7142857142857142,1.105263157894737
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,sarima,1,76.0,41.0,38.0,0.5,3.1951219512195124,1.763157894736842
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,hgb,1,3.0,3.0,3.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_sazonal,1,3.0,2.0,2.0,0.6666666666666666,4.0,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_sazonal_aj,1,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_ultima,1,3.0,3.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,lgbm,1,3.0,3.0,3.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,mlp,1,3.0,3.0,2.0,0.6666666666666666,2.6666666666666665,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,rf,1,3.0,3.0,2.0,0.6666666666666666,2.333333333333333,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,sarima,1,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,sarima_soma_regioes,1,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,hgb,1,63.0,27.0,21.0,0.3333333333333333,2.6296296296296298,1.1746031746031746
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_sazonal,1,63.0,35.0,35.0,0.5555555555555556,3.5142857142857142,1.9523809523809523
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,1,63.0,32.0,28.0,0.4444444444444444,2.90625,1.6349206349206349
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_ultima,1,63.0,42.0,17.0,0.2698412698412698,1.4761904761904765,0.984126984126984
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,lgbm,1,63.0,27.0,19.0,0.3015873015873015,2.111111111111111,1.0634920634920637
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,mlp,1,63.0,40.0,30.0,0.4761904761904761,2.1,1.4444444444444444
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,rf,1,63.0,37.0,26.0,0.4126984126984127,1.945945945945946,1.2857142857142858
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,sarima,1,63.0,32.0,30.0,0.4761904761904761,3.375,1.746031746031746
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,hgb,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_sazonal,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_sazonal_aj,1,2.0,1.0,1.0,0.5,4.0,2.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_ultima,1,2.0,2.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,lgbm,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,mlp,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,rf,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,sarima,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,sarima_soma_regioes,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,encadeado_cl,1,105.0,45.0,42.0,0.4,3.2222222222222223,1.3904761904761904
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,encadeado_ml,1,105.0,44.0,42.0,0.4,3.4545454545454546,1.457142857142857
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,encadeado_ml_bf,1,105.0,45.0,43.0,0.4095238095238095,3.1333333333333333,1.3714285714285714
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,ingenuo_sazonal,1,105.0,49.0,48.0,0.4571428571428571,3.489795918367347,1.6761904761904762
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,ingenuo_sazonal_aj,1,105.0,56.0,55.0,0.5238095238095238,3.607142857142857,1.923809523809524
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,ref_sem_atraso_lgbm_sem_exog,1,105.0,44.0,35.0,0.3333333333333333,2.75,1.161904761904762
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,sem_nowcast_lgbm,1,105.0,33.0,29.0,0.2761904761904762,3.0,0.9809523809523808
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,encadeado_cl,1,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,encadeado_ml,1,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,encadeado_ml_bf,1,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,ingenuo_sazonal,1,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,ingenuo_sazonal_aj,1,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,ref_sem_atraso_lgbm_sem_exog,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,sem_nowcast_lgbm,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_cl,1,63.0,34.0,31.0,0.492063492063492,3.3529411764705883,1.8253968253968251
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_ml,1,63.0,33.0,31.0,0.492063492063492,3.484848484848485,1.8412698412698407
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_ml_bf,1,63.0,34.0,31.0,0.492063492063492,3.411764705882353,1.8571428571428568
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,ingenuo_sazonal,1,63.0,35.0,35.0,0.5555555555555556,3.5142857142857142,1.9523809523809523
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,1,63.0,40.0,40.0,0.6349206349206349,3.5,2.2222222222222223
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,ref_sem_atraso_lgbm_sem_exog,1,63.0,28.0,23.0,0.365079365079365,2.892857142857143,1.3650793650793651
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,sem_nowcast_lgbm,1,63.0,27.0,24.0,0.3809523809523809,3.037037037037037,1.3174603174603174
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,encadeado_cl,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,encadeado_ml,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,encadeado_ml_bf,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,ingenuo_sazonal,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,ingenuo_sazonal_aj,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,ref_sem_atraso_lgbm_sem_exog,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,sem_nowcast_lgbm,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,encadeado_cl,1,105.0,43.0,41.0,0.3904761904761905,3.302325581395349,1.361904761904762
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,encadeado_ml,1,105.0,44.0,42.0,0.4,3.340909090909091,1.438095238095238
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,encadeado_ml_bf,1,105.0,44.0,41.0,0.3904761904761905,3.113636363636364,1.3428571428571427
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,ingenuo_sazonal,1,105.0,49.0,48.0,0.4571428571428571,3.489795918367347,1.6761904761904762
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,ingenuo_sazonal_aj,1,105.0,56.0,55.0,0.5238095238095238,3.607142857142857,1.923809523809524
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,ref_sem_atraso_lgbm_sem_exog,1,105.0,44.0,35.0,0.3333333333333333,2.75,1.161904761904762
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,sem_nowcast_lgbm,1,105.0,32.0,28.0,0.2666666666666666,2.71875,0.8857142857142857
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,encadeado_cl,1,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,encadeado_ml,1,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,encadeado_ml_bf,1,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,ingenuo_sazonal,1,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,ingenuo_sazonal_aj,1,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,ref_sem_atraso_lgbm_sem_exog,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,sem_nowcast_lgbm,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_cl,1,63.0,34.0,31.0,0.492063492063492,3.3823529411764706,1.8412698412698407
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_ml,1,63.0,34.0,32.0,0.5079365079365079,3.323529411764706,1.809523809523809
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_ml_bf,1,63.0,36.0,33.0,0.5238095238095238,3.2777777777777777,1.8888888888888888
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,ingenuo_sazonal,1,63.0,35.0,35.0,0.5555555555555556,3.5142857142857142,1.9523809523809523
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,1,63.0,40.0,40.0,0.6349206349206349,3.5,2.2222222222222223
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,ref_sem_atraso_lgbm_sem_exog,1,63.0,28.0,23.0,0.365079365079365,2.892857142857143,1.3650793650793651
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,sem_nowcast_lgbm,1,63.0,26.0,22.0,0.3492063492063492,3.0,1.253968253968254
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,encadeado_cl,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,encadeado_ml,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,encadeado_ml_bf,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,ingenuo_sazonal,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,ingenuo_sazonal_aj,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,ref_sem_atraso_lgbm_sem_exog,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,sem_nowcast_lgbm,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,hgb,2,59.0,44.0,28.0,0.4745762711864407,1.9545454545454544,1.5254237288135593
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,hgb_pandemia,2,59.0,41.0,26.0,0.4406779661016949,2.048780487804878,1.4576271186440677
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,hgb_sem_exog,2,59.0,42.0,30.0,0.5084745762711864,2.357142857142857,1.7457627118644068
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,ingenuo_sazonal,2,59.0,39.0,38.0,0.6440677966101694,3.282051282051282,2.254237288135593
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,ingenuo_sazonal_aj,2,59.0,41.0,37.0,0.6271186440677966,2.926829268292683,2.169491525423729
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,ingenuo_ultima,2,59.0,59.0,23.0,0.3898305084745763,1.3559322033898304,1.3559322033898304
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,lgbm,2,59.0,43.0,27.0,0.4576271186440678,1.930232558139535,1.4915254237288136
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,mlp,2,59.0,46.0,36.0,0.6101694915254238,2.239130434782609,1.847457627118644
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,rf,2,59.0,46.0,27.0,0.4576271186440678,1.7608695652173914,1.5254237288135593
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,16 regioes,sarima,2,59.0,45.0,40.0,0.6779661016949152,3.1333333333333333,2.457627118644068
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,hgb,2,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,hgb_pandemia,2,3.0,3.0,2.0,0.6666666666666666,2.0,2.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,hgb_sem_exog,2,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,ingenuo_sazonal,2,3.0,3.0,3.0,1.0,2.333333333333333,2.333333333333333
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,ingenuo_sazonal_aj,2,3.0,3.0,3.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,ingenuo_ultima,2,3.0,3.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,lgbm,2,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,mlp,2,3.0,3.0,3.0,1.0,2.6666666666666665,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,rf,2,3.0,3.0,1.0,0.3333333333333333,0.3333333333333333,0.6666666666666666
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,sarima,2,3.0,3.0,3.0,1.0,3.6666666666666665,3.6666666666666665
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline,j00_j99,MT,sarima_soma_regioes,2,3.0,3.0,3.0,1.0,3.6666666666666665,3.6666666666666665
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb,2,50.0,35.0,25.0,0.5,2.2,1.58
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb_pandemia,2,50.0,32.0,21.0,0.42,2.21875,1.46
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb_sem_exog,2,50.0,33.0,25.0,0.5,2.606060606060606,1.76
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_sazonal,2,50.0,34.0,33.0,0.66,3.264705882352941,2.32
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_sazonal_aj,2,50.0,38.0,34.0,0.68,2.8421052631578947,2.32
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_ultima,2,50.0,49.0,21.0,0.42,1.489795918367347,1.46
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,lgbm,2,50.0,34.0,23.0,0.46,2.088235294117647,1.5
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,mlp,2,50.0,37.0,31.0,0.62,2.5675675675675675,1.96
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,rf,2,50.0,38.0,25.0,0.5,1.973684210526316,1.64
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,16 regioes,sarima,2,50.0,37.0,32.0,0.64,3.054054054054054,2.34
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,hgb,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,hgb_pandemia,2,2.0,2.0,1.0,0.5,2.0,2.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,hgb_sem_exog,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_sazonal,2,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_sazonal_aj,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_ultima,2,2.0,2.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,lgbm,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,mlp,2,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,rf,2,2.0,2.0,1.0,0.5,1.0,1.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,sarima,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,A_rolling_baseline_janela_C,j00_j99,MT,sarima_soma_regioes,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,hgb,2,46.0,31.0,22.0,0.4782608695652174,2.032258064516129,1.4782608695652173
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_sazonal,2,46.0,34.0,34.0,0.7391304347826086,3.294117647058824,2.4347826086956523
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,2,46.0,33.0,26.0,0.5652173913043478,2.4242424242424243,1.9782608695652173
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_ultima,2,46.0,46.0,11.0,0.2391304347826087,0.8695652173913043,0.8695652173913043
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,lgbm,2,46.0,31.0,18.0,0.391304347826087,1.5806451612903225,1.3043478260869563
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,mlp,2,46.0,40.0,26.0,0.5652173913043478,1.6,1.5869565217391304
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,rf,2,46.0,37.0,22.0,0.4782608695652174,1.4324324324324325,1.4130434782608696
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,16 regioes,sarima,2,46.0,36.0,33.0,0.717391304347826,3.138888888888889,2.5217391304347827
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,hgb,2,3.0,3.0,3.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_sazonal,2,3.0,2.0,2.0,0.6666666666666666,4.0,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_sazonal_aj,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_ultima,2,3.0,3.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,lgbm,2,3.0,3.0,3.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,mlp,2,3.0,3.0,2.0,0.6666666666666666,2.6666666666666665,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,rf,2,3.0,3.0,2.0,0.6666666666666666,2.333333333333333,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,sarima,2,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5,j00_j99_menor5,MT,sarima_soma_regioes,2,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,hgb,2,36.0,24.0,18.0,0.5,2.458333333333333,1.7222222222222223
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_sazonal,2,36.0,30.0,30.0,0.8333333333333334,3.433333333333333,2.861111111111111
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,2,36.0,26.0,22.0,0.6111111111111112,2.6538461538461537,2.1944444444444446
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_ultima,2,36.0,36.0,11.0,0.3055555555555556,1.1111111111111112,1.1111111111111112
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,lgbm,2,36.0,24.0,16.0,0.4444444444444444,1.9166666666666667,1.5555555555555556
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,mlp,2,36.0,32.0,22.0,0.6111111111111112,1.84375,1.8333333333333333
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,rf,2,36.0,32.0,21.0,0.5833333333333334,1.65625,1.7222222222222223
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,sarima,2,36.0,29.0,27.0,0.75,3.310344827586207,2.7222222222222223
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,hgb,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_sazonal,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_sazonal_aj,2,2.0,1.0,1.0,0.5,4.0,2.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_ultima,2,2.0,2.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,lgbm,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,mlp,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,rf,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,sarima,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,B_rolling_menor5_janela_C,j00_j99_menor5,MT,sarima_soma_regioes,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,encadeado_cl,2,50.0,31.0,28.0,0.56,3.290322580645161,2.06
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,encadeado_ml,2,50.0,30.0,28.0,0.56,3.3,2.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,encadeado_ml_bf,2,50.0,30.0,28.0,0.56,3.1333333333333333,1.94
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,ingenuo_sazonal,2,50.0,34.0,33.0,0.66,3.264705882352941,2.32
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,ingenuo_sazonal_aj,2,50.0,37.0,36.0,0.72,3.5405405405405403,2.62
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,ref_sem_atraso_lgbm_sem_exog,2,50.0,33.0,24.0,0.48,2.4242424242424243,1.62
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,16 regioes,sem_nowcast_lgbm,2,50.0,26.0,22.0,0.44,3.0384615384615383,1.66
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,encadeado_cl,2,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,encadeado_ml,2,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,encadeado_ml_bf,2,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,ingenuo_sazonal,2,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,ingenuo_sazonal_aj,2,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,ref_sem_atraso_lgbm_sem_exog,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99,MT,sem_nowcast_lgbm,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_cl,2,36.0,28.0,25.0,0.6944444444444444,3.321428571428572,2.611111111111111
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_ml,2,36.0,29.0,27.0,0.75,3.413793103448276,2.7777777777777777
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_ml_bf,2,36.0,28.0,25.0,0.6944444444444444,3.392857142857143,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,ingenuo_sazonal,2,36.0,30.0,30.0,0.8333333333333334,3.433333333333333,2.861111111111111
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,2,36.0,33.0,33.0,0.9166666666666666,3.4545454545454546,3.1666666666666665
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,ref_sem_atraso_lgbm_sem_exog,2,36.0,25.0,20.0,0.5555555555555556,2.76,2.055555555555556
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,16 regioes,sem_nowcast_lgbm,2,36.0,24.0,21.0,0.5833333333333334,2.9166666666666665,1.9722222222222223
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,encadeado_cl,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,encadeado_ml,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,encadeado_ml_bf,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,ingenuo_sazonal,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,ingenuo_sazonal_aj,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,ref_sem_atraso_lgbm_sem_exog,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S1,j00_j99_menor5,MT,sem_nowcast_lgbm,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,encadeado_cl,2,50.0,30.0,28.0,0.56,3.433333333333333,2.08
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,encadeado_ml,2,50.0,30.0,28.0,0.56,3.1333333333333333,1.96
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,encadeado_ml_bf,2,50.0,30.0,27.0,0.54,3.2,2.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,ingenuo_sazonal,2,50.0,34.0,33.0,0.66,3.264705882352941,2.32
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,ingenuo_sazonal_aj,2,50.0,37.0,36.0,0.72,3.5405405405405403,2.62
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,ref_sem_atraso_lgbm_sem_exog,2,50.0,33.0,24.0,0.48,2.4242424242424243,1.62
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,16 regioes,sem_nowcast_lgbm,2,50.0,27.0,23.0,0.46,2.7777777777777777,1.62
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,encadeado_cl,2,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,encadeado_ml,2,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,encadeado_ml_bf,2,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,ingenuo_sazonal,2,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,ingenuo_sazonal_aj,2,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,ref_sem_atraso_lgbm_sem_exog,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99,MT,sem_nowcast_lgbm,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_cl,2,36.0,28.0,25.0,0.6944444444444444,3.357142857142857,2.638888888888889
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_ml,2,36.0,29.0,27.0,0.75,3.2758620689655173,2.6666666666666665
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_ml_bf,2,36.0,29.0,26.0,0.7222222222222222,3.310344827586207,2.6944444444444446
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,ingenuo_sazonal,2,36.0,30.0,30.0,0.8333333333333334,3.433333333333333,2.861111111111111
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,2,36.0,33.0,33.0,0.9166666666666666,3.4545454545454546,3.1666666666666665
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,ref_sem_atraso_lgbm_sem_exog,2,36.0,25.0,20.0,0.5555555555555556,2.76,2.055555555555556
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,16 regioes,sem_nowcast_lgbm,2,36.0,23.0,19.0,0.5277777777777778,2.869565217391304,1.8611111111111112
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,encadeado_cl,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,encadeado_ml,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,encadeado_ml_bf,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,ingenuo_sazonal,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,ingenuo_sazonal_aj,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,ref_sem_atraso_lgbm_sem_exog,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p90,C_encadeado_S2,j00_j99_menor5,MT,sem_nowcast_lgbm,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,hgb,1,140.0,83.0,67.0,0.4785714285714286,2.5903614457831323,1.6142857142857143
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,hgb_pandemia,1,140.0,79.0,64.0,0.4571428571428571,2.5822784810126582,1.55
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,hgb_sem_exog,1,140.0,84.0,72.0,0.5142857142857142,2.833333333333333,1.7642857142857142
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,ingenuo_sazonal,1,140.0,63.0,61.0,0.4357142857142857,3.253968253968254,1.5142857142857142
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,ingenuo_sazonal_aj,1,140.0,92.0,85.0,0.6071428571428571,3.239130434782609,2.164285714285714
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,ingenuo_ultima,1,140.0,103.0,57.0,0.4071428571428571,2.058252427184466,1.5142857142857142
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,lgbm,1,140.0,83.0,68.0,0.4857142857142857,2.7590361445783134,1.7
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,mlp,1,140.0,85.0,71.0,0.5071428571428571,2.552941176470588,1.6285714285714286
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,rf,1,140.0,93.0,74.0,0.5285714285714286,2.7311827956989245,1.8785714285714288
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,sarima,1,140.0,86.0,77.0,0.55,3.197674418604651,2.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,hgb,1,6.0,3.0,3.0,0.5,2.333333333333333,1.1666666666666667
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,hgb_pandemia,1,6.0,3.0,3.0,0.5,2.0,1.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,hgb_sem_exog,1,6.0,3.0,3.0,0.5,3.0,1.5
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,ingenuo_sazonal,1,6.0,3.0,3.0,0.5,3.333333333333333,1.6666666666666667
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,ingenuo_sazonal_aj,1,6.0,3.0,3.0,0.5,3.333333333333333,1.6666666666666667
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,ingenuo_ultima,1,6.0,5.0,1.0,0.1666666666666666,0.6,0.5
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,lgbm,1,6.0,3.0,3.0,0.5,2.333333333333333,1.1666666666666667
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,mlp,1,6.0,3.0,3.0,0.5,1.6666666666666667,0.8333333333333334
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,rf,1,6.0,3.0,3.0,0.5,2.333333333333333,1.1666666666666667
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,sarima,1,6.0,5.0,4.0,0.6666666666666666,2.8,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,sarima_soma_regioes,1,6.0,3.0,3.0,0.5,3.6666666666666665,1.8333333333333333
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb,1,125.0,69.0,56.0,0.448,2.63768115942029,1.536
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb_pandemia,1,125.0,65.0,52.0,0.416,2.5538461538461537,1.424
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb_sem_exog,1,125.0,70.0,60.0,0.48,2.9,1.696
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_sazonal,1,125.0,53.0,51.0,0.408,3.2452830188679247,1.432
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_sazonal_aj,1,125.0,79.0,74.0,0.592,3.329113924050633,2.136
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_ultima,1,125.0,90.0,54.0,0.432,2.2333333333333334,1.608
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,lgbm,1,125.0,69.0,57.0,0.456,2.8115942028985508,1.616
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,mlp,1,125.0,72.0,63.0,0.504,2.763888888888889,1.664
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,rf,1,125.0,80.0,67.0,0.536,2.9375,1.936
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,sarima,1,125.0,73.0,66.0,0.528,3.2054794520547945,1.912
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,hgb,1,5.0,2.0,2.0,0.4,2.5,1.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,hgb_pandemia,1,5.0,2.0,2.0,0.4,2.0,0.8
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,hgb_sem_exog,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_sazonal,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_sazonal_aj,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_ultima,1,5.0,4.0,1.0,0.2,0.75,0.6
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,lgbm,1,5.0,2.0,2.0,0.4,2.5,1.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,mlp,1,5.0,2.0,2.0,0.4,1.5,0.6
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,rf,1,5.0,2.0,2.0,0.4,2.5,1.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,sarima,1,5.0,4.0,3.0,0.6,2.5,2.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,sarima_soma_regioes,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,hgb,1,105.0,56.0,49.0,0.4666666666666667,2.642857142857143,1.4857142857142858
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_sazonal,1,105.0,50.0,48.0,0.4571428571428571,3.32,1.5904761904761904
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,1,105.0,62.0,54.0,0.5142857142857142,2.9838709677419355,1.8285714285714283
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_ultima,1,105.0,71.0,31.0,0.2952380952380952,1.5211267605633805,1.0285714285714285
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,lgbm,1,105.0,51.0,42.0,0.4,2.784313725490196,1.4
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,mlp,1,105.0,60.0,52.0,0.4952380952380952,2.433333333333333,1.4190476190476191
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,rf,1,105.0,62.0,49.0,0.4666666666666667,2.661290322580645,1.638095238095238
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,sarima,1,105.0,59.0,53.0,0.5047619047619047,3.135593220338983,1.838095238095238
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,hgb,1,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_sazonal,1,3.0,3.0,3.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_sazonal_aj,1,3.0,3.0,3.0,1.0,3.6666666666666665,3.6666666666666665
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_ultima,1,3.0,3.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,lgbm,1,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,mlp,1,3.0,3.0,3.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,rf,1,3.0,3.0,3.0,1.0,2.333333333333333,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,sarima,1,3.0,3.0,3.0,1.0,3.6666666666666665,3.6666666666666665
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,sarima_soma_regioes,1,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,hgb,1,90.0,43.0,38.0,0.4222222222222222,2.86046511627907,1.4444444444444444
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_sazonal,1,90.0,42.0,40.0,0.4444444444444444,3.4285714285714284,1.6111111111111112
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,1,90.0,50.0,43.0,0.4777777777777778,3.02,1.7555555555555555
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_ultima,1,90.0,59.0,30.0,0.3333333333333333,1.7796610169491525,1.1666666666666667
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,lgbm,1,90.0,38.0,33.0,0.3666666666666666,3.131578947368421,1.3666666666666667
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,mlp,1,90.0,47.0,41.0,0.4555555555555555,2.6595744680851063,1.4111111111111112
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,rf,1,90.0,49.0,44.0,0.4888888888888889,3.204081632653061,1.788888888888889
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,sarima,1,90.0,47.0,42.0,0.4666666666666667,3.2127659574468086,1.7666666666666666
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,hgb,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_sazonal,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_sazonal_aj,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_ultima,1,2.0,2.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,lgbm,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,mlp,1,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,rf,1,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,sarima,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,sarima_soma_regioes,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,encadeado_cl,1,125.0,60.0,56.0,0.448,3.1,1.52
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,encadeado_ml,1,125.0,62.0,61.0,0.488,3.370967741935484,1.696
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,encadeado_ml_bf,1,125.0,62.0,59.0,0.472,3.064516129032258,1.568
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,ingenuo_sazonal,1,125.0,53.0,51.0,0.408,3.2452830188679247,1.432
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,ingenuo_sazonal_aj,1,125.0,72.0,72.0,0.576,3.611111111111111,2.08
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,ref_sem_atraso_lgbm_sem_exog,1,125.0,66.0,55.0,0.44,2.833333333333333,1.6
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,sem_nowcast_lgbm,1,125.0,54.0,49.0,0.392,3.037037037037037,1.392
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,encadeado_cl,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,encadeado_ml,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,encadeado_ml_bf,1,5.0,2.0,2.0,0.4,2.5,1.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,ingenuo_sazonal,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,ingenuo_sazonal_aj,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,ref_sem_atraso_lgbm_sem_exog,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,sem_nowcast_lgbm,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_cl,1,90.0,42.0,41.0,0.4555555555555555,3.619047619047619,1.6888888888888889
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_ml,1,90.0,43.0,42.0,0.4666666666666667,3.627906976744186,1.7333333333333334
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_ml_bf,1,90.0,44.0,43.0,0.4777777777777778,3.636363636363636,1.7777777777777777
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,ingenuo_sazonal,1,90.0,42.0,40.0,0.4444444444444444,3.4285714285714284,1.6111111111111112
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,1,90.0,48.0,48.0,0.5333333333333333,3.6875,1.9666666666666663
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,ref_sem_atraso_lgbm_sem_exog,1,90.0,40.0,37.0,0.4111111111111111,3.375,1.5333333333333334
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,sem_nowcast_lgbm,1,90.0,36.0,36.0,0.4,3.7222222222222223,1.488888888888889
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,encadeado_cl,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,encadeado_ml,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,encadeado_ml_bf,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,ingenuo_sazonal,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,ingenuo_sazonal_aj,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,ref_sem_atraso_lgbm_sem_exog,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,sem_nowcast_lgbm,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,encadeado_cl,1,125.0,61.0,58.0,0.464,3.2131147540983607,1.584
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,encadeado_ml,1,125.0,63.0,61.0,0.488,3.365079365079365,1.728
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,encadeado_ml_bf,1,125.0,63.0,59.0,0.472,3.095238095238096,1.608
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,ingenuo_sazonal,1,125.0,53.0,51.0,0.408,3.2452830188679247,1.432
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,ingenuo_sazonal_aj,1,125.0,72.0,72.0,0.576,3.583333333333333,2.064
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,ref_sem_atraso_lgbm_sem_exog,1,125.0,66.0,55.0,0.44,2.833333333333333,1.6
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,sem_nowcast_lgbm,1,125.0,54.0,50.0,0.4,3.1481481481481484,1.432
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,encadeado_cl,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,encadeado_ml,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,encadeado_ml_bf,1,5.0,2.0,2.0,0.4,3.0,1.2
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,ingenuo_sazonal,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,ingenuo_sazonal_aj,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,ref_sem_atraso_lgbm_sem_exog,1,5.0,2.0,2.0,0.4,3.5,1.4
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,sem_nowcast_lgbm,1,5.0,2.0,2.0,0.4,3.0,1.2
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_cl,1,90.0,43.0,41.0,0.4555555555555555,3.511627906976744,1.6777777777777778
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_ml,1,90.0,43.0,42.0,0.4666666666666667,3.674418604651162,1.7555555555555555
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_ml_bf,1,90.0,44.0,43.0,0.4777777777777778,3.613636363636364,1.7666666666666666
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,ingenuo_sazonal,1,90.0,42.0,40.0,0.4444444444444444,3.4285714285714284,1.6111111111111112
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,1,90.0,48.0,48.0,0.5333333333333333,3.6666666666666665,1.9555555555555555
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,ref_sem_atraso_lgbm_sem_exog,1,90.0,40.0,37.0,0.4111111111111111,3.375,1.5333333333333334
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,sem_nowcast_lgbm,1,90.0,37.0,37.0,0.4111111111111111,3.675675675675676,1.511111111111111
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,encadeado_cl,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,encadeado_ml,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,encadeado_ml_bf,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,ingenuo_sazonal,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,ingenuo_sazonal_aj,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,ref_sem_atraso_lgbm_sem_exog,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,sem_nowcast_lgbm,1,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,hgb,2,82.0,68.0,52.0,0.6341463414634146,2.367647058823529,2.097560975609756
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,hgb_pandemia,2,82.0,66.0,51.0,0.6219512195121951,2.378787878787879,2.073170731707317
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,hgb_sem_exog,2,82.0,67.0,55.0,0.6707317073170732,2.626865671641791,2.256097560975609
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,ingenuo_sazonal,2,82.0,53.0,51.0,0.6219512195121951,3.1132075471698117,2.097560975609756
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,ingenuo_sazonal_aj,2,82.0,68.0,61.0,0.7439024390243902,3.0588235294117645,2.597560975609756
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,ingenuo_ultima,2,82.0,82.0,36.0,0.4390243902439024,1.6341463414634143,1.6341463414634143
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,lgbm,2,82.0,69.0,54.0,0.6585365853658537,2.5217391304347827,2.231707317073171
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,mlp,2,82.0,67.0,53.0,0.6463414634146342,2.298507462686567,2.0121951219512195
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,rf,2,82.0,71.0,52.0,0.6341463414634146,2.3661971830985915,2.158536585365854
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,16 regioes,sarima,2,82.0,66.0,57.0,0.6951219512195121,3.015151515151515,2.4878048780487805
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,hgb,2,4.0,3.0,3.0,0.75,2.333333333333333,1.75
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,hgb_pandemia,2,4.0,3.0,3.0,0.75,2.0,1.5
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,hgb_sem_exog,2,4.0,3.0,3.0,0.75,3.0,2.25
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,ingenuo_sazonal,2,4.0,3.0,3.0,0.75,3.333333333333333,2.5
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,ingenuo_sazonal_aj,2,4.0,3.0,3.0,0.75,3.333333333333333,2.5
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,ingenuo_ultima,2,4.0,4.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,lgbm,2,4.0,3.0,3.0,0.75,2.333333333333333,1.75
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,mlp,2,4.0,3.0,3.0,0.75,1.6666666666666667,1.25
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,rf,2,4.0,3.0,3.0,0.75,2.333333333333333,1.75
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,sarima,2,4.0,4.0,3.0,0.75,2.75,2.75
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline,j00_j99,MT,sarima_soma_regioes,2,4.0,3.0,3.0,0.75,3.6666666666666665,2.75
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb,2,69.0,54.0,41.0,0.5942028985507246,2.3703703703703702,2.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb_pandemia,2,69.0,52.0,39.0,0.5652173913043478,2.269230769230769,1.884057971014493
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,hgb_sem_exog,2,69.0,53.0,43.0,0.6231884057971014,2.660377358490566,2.1739130434782608
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_sazonal,2,69.0,43.0,41.0,0.5942028985507246,3.069767441860465,2.0144927536231885
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_sazonal_aj,2,69.0,55.0,50.0,0.7246376811594203,3.145454545454545,2.565217391304348
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,ingenuo_ultima,2,69.0,69.0,33.0,0.4782608695652174,1.7826086956521738,1.7826086956521738
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,lgbm,2,69.0,55.0,43.0,0.6231884057971014,2.527272727272728,2.130434782608696
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,mlp,2,69.0,53.0,44.0,0.6376811594202898,2.490566037735849,2.0434782608695654
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,rf,2,69.0,58.0,45.0,0.6521739130434783,2.5689655172413794,2.260869565217391
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,16 regioes,sarima,2,69.0,53.0,46.0,0.6666666666666666,2.981132075471698,2.36231884057971
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,hgb,2,3.0,2.0,2.0,0.6666666666666666,2.5,1.6666666666666667
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,hgb_pandemia,2,3.0,2.0,2.0,0.6666666666666666,2.0,1.3333333333333333
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,hgb_sem_exog,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_sazonal,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_sazonal_aj,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,ingenuo_ultima,2,3.0,3.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,lgbm,2,3.0,2.0,2.0,0.6666666666666666,2.5,1.6666666666666667
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,mlp,2,3.0,2.0,2.0,0.6666666666666666,1.5,1.0
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,rf,2,3.0,2.0,2.0,0.6666666666666666,2.5,1.6666666666666667
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,sarima,2,3.0,3.0,2.0,0.6666666666666666,2.333333333333333,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,A_rolling_baseline_janela_C,j00_j99,MT,sarima_soma_regioes,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,hgb,2,55.0,48.0,41.0,0.7454545454545455,2.583333333333333,2.4
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_sazonal,2,55.0,42.0,40.0,0.7272727272727273,3.1904761904761907,2.4545454545454546
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,2,55.0,45.0,37.0,0.6727272727272727,2.6666666666666665,2.309090909090909
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,ingenuo_ultima,2,55.0,55.0,15.0,0.2727272727272727,0.9272727272727272,0.9272727272727272
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,lgbm,2,55.0,46.0,37.0,0.6727272727272727,2.717391304347826,2.363636363636364
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,mlp,2,55.0,48.0,40.0,0.7272727272727273,2.375,2.1272727272727274
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,rf,2,55.0,49.0,36.0,0.6545454545454545,2.4285714285714284,2.290909090909091
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,16 regioes,sarima,2,55.0,47.0,41.0,0.7454545454545455,2.9574468085106385,2.672727272727273
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,hgb,2,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_sazonal,2,3.0,3.0,3.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_sazonal_aj,2,3.0,3.0,3.0,1.0,3.6666666666666665,3.6666666666666665
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,ingenuo_ultima,2,3.0,3.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,lgbm,2,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,mlp,2,3.0,3.0,3.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,rf,2,3.0,3.0,3.0,1.0,2.333333333333333,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,sarima,2,3.0,3.0,3.0,1.0,3.6666666666666665,3.6666666666666665
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5,j00_j99_menor5,MT,sarima_soma_regioes,2,3.0,3.0,3.0,1.0,3.333333333333333,3.333333333333333
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,hgb,2,43.0,36.0,31.0,0.7209302325581395,2.7777777777777777,2.488372093023256
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_sazonal,2,43.0,34.0,32.0,0.7441860465116279,3.294117647058824,2.627906976744186
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,2,43.0,34.0,27.0,0.627906976744186,2.617647058823529,2.232558139534884
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,ingenuo_ultima,2,43.0,43.0,14.0,0.3255813953488372,1.1162790697674418,1.1162790697674418
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,lgbm,2,43.0,34.0,29.0,0.6744186046511628,3.0294117647058822,2.488372093023256
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,mlp,2,43.0,36.0,30.0,0.6976744186046512,2.611111111111111,2.232558139534884
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,rf,2,43.0,37.0,32.0,0.7441860465116279,3.027027027027027,2.697674418604651
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,16 regioes,sarima,2,43.0,36.0,31.0,0.7209302325581395,3.0,2.697674418604651
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,hgb,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_sazonal,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_sazonal_aj,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,ingenuo_ultima,2,2.0,2.0,0.0,0.0,0.0,0.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,lgbm,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,mlp,2,2.0,2.0,2.0,1.0,3.5,3.5
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,rf,2,2.0,2.0,2.0,1.0,3.0,3.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,sarima,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,B_rolling_menor5_janela_C,j00_j99_menor5,MT,sarima_soma_regioes,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,encadeado_cl,2,69.0,46.0,42.0,0.6086956521739131,2.9347826086956523,2.0144927536231885
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,encadeado_ml,2,69.0,44.0,43.0,0.6231884057971014,3.25,2.1159420289855078
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,encadeado_ml_bf,2,69.0,45.0,42.0,0.6086956521739131,3.0,2.0434782608695654
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,ingenuo_sazonal,2,69.0,43.0,41.0,0.5942028985507246,3.069767441860465,2.0144927536231885
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,ingenuo_sazonal_aj,2,69.0,53.0,53.0,0.7681159420289855,3.5660377358490565,2.739130434782609
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,ref_sem_atraso_lgbm_sem_exog,2,69.0,51.0,40.0,0.5797101449275363,2.4901960784313726,2.028985507246377
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,16 regioes,sem_nowcast_lgbm,2,69.0,42.0,37.0,0.5362318840579711,2.880952380952381,1.8985507246376807
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,encadeado_cl,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,encadeado_ml,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,encadeado_ml_bf,2,3.0,2.0,2.0,0.6666666666666666,2.5,1.6666666666666667
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,ingenuo_sazonal,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,ingenuo_sazonal_aj,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,ref_sem_atraso_lgbm_sem_exog,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99,MT,sem_nowcast_lgbm,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_cl,2,43.0,33.0,32.0,0.7441860465116279,3.696969696969697,2.8372093023255816
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_ml,2,43.0,32.0,31.0,0.7209302325581395,3.6875,2.744186046511628
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,encadeado_ml_bf,2,43.0,32.0,31.0,0.7209302325581395,3.6875,2.744186046511628
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,ingenuo_sazonal,2,43.0,34.0,32.0,0.7441860465116279,3.294117647058824,2.627906976744186
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,2,43.0,36.0,36.0,0.8372093023255814,3.583333333333333,3.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,ref_sem_atraso_lgbm_sem_exog,2,43.0,35.0,32.0,0.7441860465116279,3.3142857142857145,2.7674418604651163
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,16 regioes,sem_nowcast_lgbm,2,43.0,31.0,31.0,0.7209302325581395,3.6774193548387095,2.6511627906976742
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,encadeado_cl,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,encadeado_ml,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,encadeado_ml_bf,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,ingenuo_sazonal,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,ingenuo_sazonal_aj,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,ref_sem_atraso_lgbm_sem_exog,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S1,j00_j99_menor5,MT,sem_nowcast_lgbm,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,encadeado_cl,2,69.0,47.0,44.0,0.6376811594202898,3.0638297872340425,2.1159420289855078
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,encadeado_ml,2,69.0,43.0,41.0,0.5942028985507246,3.3488372093023258,2.1449275362318843
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,encadeado_ml_bf,2,69.0,45.0,41.0,0.5942028985507246,2.977777777777778,2.028985507246377
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,ingenuo_sazonal,2,69.0,43.0,41.0,0.5942028985507246,3.069767441860465,2.0144927536231885
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,ingenuo_sazonal_aj,2,69.0,53.0,53.0,0.7681159420289855,3.5283018867924527,2.710144927536232
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,ref_sem_atraso_lgbm_sem_exog,2,69.0,51.0,40.0,0.5797101449275363,2.4901960784313726,2.028985507246377
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,16 regioes,sem_nowcast_lgbm,2,69.0,42.0,38.0,0.5507246376811594,3.023809523809524,1.9710144927536235
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,encadeado_cl,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,encadeado_ml,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,encadeado_ml_bf,2,3.0,2.0,2.0,0.6666666666666666,3.0,2.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,ingenuo_sazonal,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,ingenuo_sazonal_aj,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,ref_sem_atraso_lgbm_sem_exog,2,3.0,2.0,2.0,0.6666666666666666,3.5,2.333333333333333
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99,MT,sem_nowcast_lgbm,2,3.0,2.0,2.0,0.6666666666666666,3.0,2.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_cl,2,43.0,34.0,32.0,0.7441860465116279,3.5588235294117645,2.813953488372093
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_ml,2,43.0,32.0,31.0,0.7209302325581395,3.6875,2.744186046511628
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,encadeado_ml_bf,2,43.0,32.0,31.0,0.7209302325581395,3.65625,2.7209302325581395
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,ingenuo_sazonal,2,43.0,34.0,32.0,0.7441860465116279,3.294117647058824,2.627906976744186
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,ingenuo_sazonal_aj,2,43.0,36.0,36.0,0.8372093023255814,3.555555555555556,2.976744186046512
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,ref_sem_atraso_lgbm_sem_exog,2,43.0,35.0,32.0,0.7441860465116279,3.3142857142857145,2.7674418604651163
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,16 regioes,sem_nowcast_lgbm,2,43.0,31.0,31.0,0.7209302325581395,3.6774193548387095,2.6511627906976742
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,encadeado_cl,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,encadeado_ml,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,encadeado_ml_bf,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,ingenuo_sazonal,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,ingenuo_sazonal_aj,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,ref_sem_atraso_lgbm_sem_exog,2,2.0,2.0,2.0,1.0,4.0,4.0
+nowcast_preliminar_2026-10-17,p80,C_encadeado_S2,j00_j99_menor5,MT,sem_nowcast_lgbm,2,2.0,2.0,2.0,1.0,4.0,4.0

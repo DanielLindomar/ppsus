@@ -1,0 +1,40 @@
+chave,valor,fonte
+versao_baseline,baseline_preliminar_2026-10-13,CSV de origem (coluna versao)
+versao_nowcast,nowcast_preliminar_2026-10-17,CSV de origem (coluna versao)
+corte,2026-10-17,a5nc_site_nowcast_hoje.csv (coluna corte)
+ano_corte,2026,a5nc_site_nowcast_hoje.csv
+se_corte,41,a5nc_site_nowcast_hoje.csv (atraso 0)
+se_nowcast_ini,17,a5nc_site_nowcast_hoje.csv
+se_nowcast_fim,41,a5nc_site_nowcast_hoje.csv
+ultima_se_completa,16/2026,a5nc_site_serie_completa_hoje.csv
+fim_ultima_se_completa,2026-04-25,a5nc_site_serie_completa_hoje.csv
+ultima_se_completa_baseline,12/2026,a5_site_serie_observada.csv
+se_previsao_ini,42,a5nc_site_previsao_hoje.csv
+se_previsao_fim,45,a5nc_site_previsao_hoje.csv
+inicio_previsao,2026-10-18,a5nc_site_previsao_hoje.csv
+fim_previsao,2026-11-14,a5nc_site_previsao_hoje.csv
+competencia_sih,08/2026,"A5_Nowcasting_Alerta (17/10/2026), seção 6: SIH até a competência 08/2026"
+carga_sih,17/10/2026,"A5_Nowcasting_Alerta (17/10/2026), seção 6: carga do SIH de 17/10/2026"
+versao_sivep,12/10/2026,"A5_Nowcasting_Alerta (17/10/2026), seção 6: SIVEP-Gripe na versão de 12/10/2026"
+decisao_publicacao,17/10/2026,Decisão do coordenador de 17/10/2026: publicar no site como resultados preliminares
+relatorio_baseline,"Modelo de referência preliminar da previsão de demanda (A5), versão baseline_preliminar_2026-10-13, documento regerado em 17/10/2026",relatório técnico do projeto
+relatorio_nowcast,"Nowcasting do atraso do SIH, previsão encadeada e alerta de alta pressão (A5), versão nowcast_preliminar_2026-10-17, revisão 1",relatório técnico do projeto
+preparado_em,18/10/2026 09:08,scripts/08_preparar_previsao.py
+sha256:a5_site_serie_observada.csv,02bcae85f6082d6a86fc7773624c7249e5e3ac9781c0b3073310fac36f784157,cópia em dados_site/previsao
+sha256:a5_site_metricas_resumo.csv,f1dea8239ec571fc95fbc05f4c08b4cc4345a0ba09a234d27bebf1d44e65c5ef,cópia em dados_site/previsao
+sha256:a5_site_metricas_regiao.csv,e2454dd7cb734cade17438c292fceb902fe3e52138f0c6abbcebeb7921491cd2,cópia em dados_site/previsao
+sha256:a5_site_previsoes_4sem.csv,53600ba5495fb1ecf804b1769424d5a842b3e237f903a2872cc2a07bcd7cacba,cópia em dados_site/previsao
+sha256:a5_site_rolling_mt.csv,e6f66493576b954e5ed2cd802dac29575bac4e5e521f24de6c73fef620e1b107,cópia em dados_site/previsao
+sha256:a5_site_testes_dm.csv,bda3596d830cfe03ab1d7bd95085c3e84a834be7d62858733b480fa91dd760a7,cópia em dados_site/previsao
+sha256:a5_site_intervalos_cobertura.csv,12aa8485521fba6497039e2b88c647f12dedd5fdf78ab25b4a0af0e6b0af4ff8,cópia em dados_site/previsao
+sha256:a5nc_site_serie_completa_hoje.csv,d6f55cef8f387db50dd6352085cfdc4b300ad28f5a1733048e1723591a8e9170,cópia em dados_site/previsao
+sha256:a5nc_site_nowcast_hoje.csv,65bb481b778a5fb422d74d59ccdae6c7b396be4703dd97a6f50059e82075f3fd,cópia em dados_site/previsao
+sha256:a5nc_site_previsao_hoje.csv,a1c58bdce9d930322cc0782ba96ff8f3433a5100a5de5630ac28ffb24ebe5c1f,cópia em dados_site/previsao
+sha256:a5nc_site_metricas_nowcast.csv,2b074d4f385eab0e46fd073f8e0875ca2bb5d7fb2eb857212043f6a6a908518d,cópia em dados_site/previsao
+sha256:a5nc_site_metricas_encadeado.csv,212a665176a85acc5cd0e7c83e0a78766897b93cd41e5fd7831d517912ffdda9,cópia em dados_site/previsao
+sha256:a5nc_site_testes_dm.csv,3d7028a0d94630d2bbf79f24327df60817fbc600f68a2bb5f5de1cbb171f0950,cópia em dados_site/previsao
+sha256:a5nc_site_metricas_menor5.csv,013895d212f38cc43e4ee3548d93ef14dd5ed9db02f6c7bab9dbb0223609f278,cópia em dados_site/previsao
+sha256:a5nc_site_alerta_limiares.csv,87b1cf9427898f94292cbec72d3065c700bdc0f77d0ecb6ccbb02964ea67418f,cópia em dados_site/previsao
+sha256:a5nc_site_alerta_medidas.csv,5cf20cc3b248940da91438458a9733f9f6bd10d46846e45d1bfd45528fb6f4df,cópia em dados_site/previsao
+sha256:a5nc_site_alerta_antecedencia.csv,dab8cd0bd7a735d1d0d4072bba9e4e8349c6acef4ad46c007097a20fe6d7b36c,cópia em dados_site/previsao
+sha256:a5nc_site_contexto_pediatrico.csv,f2f590eef96a789b78a27d72e9ab1759574412bc7021871211a1be175c2485c7,cópia em dados_site/previsao

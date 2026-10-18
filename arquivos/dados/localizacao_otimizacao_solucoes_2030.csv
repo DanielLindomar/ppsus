@@ -1,0 +1,44 @@
+piloto,modelo,limiar_min,k,abertos,nomes_abertos,tempo_medio,km_medio,pct_ate_60,pct_ate_120,ganho_tempo_medio_min,ganho_pct_ate_60,ganho_pct_ate_120,nao_atendida,leitos_deficit,tempo_medio_atendida,provisorio
+parto,situacao_2025,,0,,,10.74,9.8,91.86,97.52,0.0,0.0,0.0,,,,True
+parto,p_mediana,,1,510800,Tapurah,10.19,9.23,92.3,97.72,0.56,0.44,0.2,,,,True
+parto,p_mediana,,2,510558;510800,Marcelândia; Tapurah,9.69,8.71,92.63,97.72,1.05,0.77,0.2,,,,True
+parto,p_mediana,,3,510558;510590;510800,Marcelândia; Nobres; Tapurah,9.27,8.29,93.3,97.72,1.47,1.44,0.2,,,,True
+parto,p_mediana,,4,510460;510558;510590;510800,Itiquira; Marcelândia; Nobres; Tapurah,8.9,7.93,93.54,97.96,1.84,1.68,0.44,,,,True
+parto,p_mediana,,5,510460;510558;510590;510800;510850,Itiquira; Marcelândia; Nobres; Tapurah; Vera,8.55,7.6,94.05,98.26,2.2,2.19,0.74,,,,True
+parto,mclp,60.0,1,510770,Rosário Oeste,10.33,9.38,92.67,97.52,0.42,0.81,0.0,,,,True
+parto,mclp,60.0,2,510770;510850,Rosário Oeste; Vera,9.97,9.04,93.18,97.82,0.78,1.32,0.3,,,,True
+parto,mclp,60.0,3,510770;510800;510850,Rosário Oeste; Tapurah; Vera,9.41,8.47,93.62,98.02,1.33,1.76,0.5,,,,True
+parto,mclp,60.0,4,510558;510770;510800;510850,Marcelândia; Rosário Oeste; Tapurah; Vera,8.91,7.95,93.95,98.02,1.83,2.09,0.5,,,,True
+parto,mclp,60.0,5,510460;510558;510770;510800;510850,Itiquira; Marcelândia; Rosário Oeste; Tapurah; Vera,8.55,7.59,94.19,98.26,2.2,2.33,0.74,,,,True
+parto,mclp,120.0,1,510850,Vera,10.38,9.46,92.37,97.82,0.36,0.51,0.3,,,,True
+parto,mclp,120.0,2,510460;510850,Itiquira; Vera,10.02,9.1,92.61,98.06,0.73,0.75,0.54,,,,True
+parto,mclp,120.0,3,510460;510800;510850,Itiquira; Tapurah; Vera,9.46,8.54,93.05,98.26,1.28,1.19,0.74,,,,True
+parto,mclp,120.0,4,510460;510718;510800;510850,Itiquira; Ribeirão Cascalheira; Tapurah; Vera,9.25,8.31,93.27,98.44,1.5,1.41,0.92,,,,True
+parto,mclp,120.0,5,510305;510460;510718;510800;510850,Cláudia; Itiquira; Ribeirão Cascalheira; Tapurah; Vera,8.81,7.86,93.49,98.54,1.93,1.62,1.02,,,,True
+uti,situacao_2025,,0,,,67.52,66.47,66.11,79.26,0.0,0.0,0.0,,,,True
+uti,p_mediana,,1,510515,Juína,57.92,57.03,67.05,80.2,9.6,0.94,0.94,,,,True
+uti,p_mediana,,2,510335;510515,Confresa; Juína,51.04,50.54,67.89,81.41,16.48,1.78,2.15,,,,True
+uti,p_mediana,,3,510335;510515;510675,Confresa; Juína; Pontes e Lacerda,45.03,44.08,69.56,83.94,22.49,3.45,4.69,,,,True
+uti,p_mediana,,4,510335;510515;510675;510795,Confresa; Juína; Pontes e Lacerda; Tangará da Serra,40.13,38.88,71.25,87.11,27.4,5.14,7.85,,,,True
+uti,p_mediana,,5,510140;510335;510515;510675;510795,Aripuanã; Confresa; Juína; Pontes e Lacerda; Tangará da Serra,37.99,37.23,71.68,87.54,29.54,5.57,8.28,,,,True
+uti,mclp,60.0,1,510480,Jaciara,65.92,64.92,68.13,79.26,1.6,2.02,0.0,,,,True
+uti,mclp,60.0,2,510480;510562,Jaciara; Mirassol d'Oeste,62.7,61.6,70.11,80.13,4.82,4.0,0.88,,,,True
+uti,mclp,60.0,3,510480;510562;510795,Jaciara; Mirassol d'Oeste; Tangará da Serra,57.6,56.01,71.8,83.3,9.92,5.69,4.04,,,,True
+uti,mclp,60.0,4,510480;510562;510675;510795,Jaciara; Mirassol d'Oeste; Pontes e Lacerda; Tangará da Serra,53.04,51.17,73.47,85.75,14.49,7.36,6.49,,,,True
+uti,mclp,60.0,5,510130;510480;510562;510675;510795,Arenápolis; Jaciara; Mirassol d'Oeste; Pontes e Lacerda; Tangará da Serra,51.96,50.22,75.05,86.42,15.56,8.94,7.16,,,,True
+uti,mclp,120.0,1,510130,Arenápolis,63.4,62.15,67.69,83.09,4.13,1.58,3.83,,,,True
+uti,mclp,120.0,2,510130;510675,Arenápolis; Pontes e Lacerda,57.38,55.67,69.36,85.62,10.14,3.26,6.36,,,,True
+uti,mclp,120.0,3,510130;510335;510675,Arenápolis; Confresa; Pontes e Lacerda,50.5,49.18,70.2,86.83,17.02,4.1,7.58,,,,True
+uti,mclp,120.0,4,510130;510335;510675;510787,Arenápolis; Confresa; Pontes e Lacerda; Sapezal,46.08,45.34,70.75,88.02,21.45,4.64,8.76,,,,True
+uti,mclp,120.0,5,510130;510335;510515;510675;510787,Arenápolis; Confresa; Juína; Pontes e Lacerda; Sapezal,38.73,37.42,71.69,88.96,28.79,5.58,9.7,,,,True
+uti,uti_capacitado,,0,,,67.52,66.47,66.11,79.26,0.0,0.0,0.0,1304,29.23,75.53,True
+uti,uti_capacitado,,1,510805,Terra Nova do Norte,66.58,65.45,66.88,79.68,0.94,0.77,0.42,858,19.23,76.17,True
+uti,uti_capacitado,,2,510335;510805,Confresa; Terra Nova do Norte,59.78,59.07,67.72,80.89,7.74,1.61,1.63,412,9.23,78.86,True
+uti,uti_capacitado,,3,510335;510515;510642,Confresa; Juína; Peixoto de Azevedo,49.86,49.26,69.0,81.83,17.67,2.89,2.57,0,0.0,80.95,True
+uti,uti_capacitado,,4,510335;510515;510642;510675,Confresa; Juína; Peixoto de Azevedo; Pontes e Lacerda,43.85,42.8,70.67,84.37,23.68,4.57,5.11,0,0.0,69.74,True
+uti,uti_capacitado,,5,510263;510335;510515;510642;510675,Campo Novo do Parecis; Confresa; Juína; Peixoto de Azevedo; Pontes e Lacerda,40.6,39.52,71.31,85.43,26.93,5.2,6.17,0,0.0,61.99,True
+uti,uti_regional,,1,510515,Juína,57.92,57.03,67.05,80.2,9.6,0.94,0.94,,,,True
+uti,uti_regional,,2,510335;510515,Confresa; Juína,51.04,50.54,67.89,81.41,16.48,1.78,2.15,,,,True
+uti,uti_regional,,3,510335;510515;510675,Confresa; Juína; Pontes e Lacerda,45.03,44.08,69.56,83.94,22.49,3.45,4.69,,,,True
+uti,uti_regional,,4,510335;510515;510675;510795,Confresa; Juína; Pontes e Lacerda; Tangará da Serra,40.13,38.88,71.25,87.11,27.4,5.14,7.85,,,,True
+uti,uti_regional,,5,510335;510350;510515;510675;510795,Confresa; Diamantino; Juína; Pontes e Lacerda; Tangará da Serra,38.59,37.38,72.56,87.78,28.94,6.46,8.52,,,,True

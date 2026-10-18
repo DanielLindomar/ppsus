@@ -142,6 +142,19 @@ abbr[title] { text-decoration: underline dotted #9ca3af; cursor: help; }
 
 /* Rodapé e logomarcas */
 .navbar-brand .navbar-logo { max-height: 30px; width: auto; }
+
+/* Versão 0.4: 11 abas no menu. O menu recolhe abaixo de 1200 px (collapse-below: xl no _quarto.yml);
+   entre 1200 e 1599 px, itens mais compactos para caber em uma linha sem cortar o logotipo nem o título;
+   entre 1200 e 1279 px, só o logotipo (o título do site volta a partir de 1280 px). */
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+  .navbar .navbar-nav .nav-link { padding-left: .32rem !important; padding-right: .32rem !important; font-size: .9rem; }
+  .navbar .navbar-title { font-size: 1.05rem; }
+  .navbar-brand .navbar-logo { max-height: 26px; }
+  .navbar-brand-container { flex-shrink: 0; }
+}
+@media (min-width: 1200px) and (max-width: 1279.98px) {
+  .navbar .navbar-title { display: none; }
+}
 .nav-footer { display: block; font-size: .8rem; color: #4b5563; padding: 1.1rem 0 3.4rem; }
 .nav-footer .nav-footer-center { max-width: 1120px; margin: 0 auto; text-align: center; }
 .rodape p { margin: .3rem 0; }

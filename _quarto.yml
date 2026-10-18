@@ -24,6 +24,7 @@ website:
     foreground: "#ffffff"
     logo: assets/logos/unemat-branco.png
     logo-alt: "UNEMAT — Universidade do Estado de Mato Grosso"
+    collapse-below: xl
     left:
       - href: index.qmd
         text: Início
@@ -49,6 +50,18 @@ website:
             text: "Alta complexidade (regiões de saúde)"
           - href: eficiencia/produtividade.qmd
             text: "Produtividade (Malmquist)"
+      - href: previsao/index.qmd
+        text: Previsão
+      - text: Localização
+        menu:
+          - href: localizacao/index.qmd
+            text: "Visão geral"
+          - href: localizacao/parto.qmd
+            text: "Atenção ao parto"
+          - href: localizacao/uti-adulto.qmd
+            text: "UTI adulto"
+      - href: judicializacao/index.qmd
+        text: Judicialização
       - href: dados/index.qmd
         text: Dados
       - href: metodologia.qmd
@@ -70,7 +83,7 @@ website:
       :::
       [Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.]{.rodape-citacao}
 
-      [Versão 0.3 · atualizado em 16/10/2026 · Conteúdo sob licença CC BY 4.0 · [Código-fonte](https://github.com/daniellindomar/ppsus)]{.rodape-versao}
+      [Versão 0.4 · atualizado em 17/10/2026 · Conteúdo sob licença CC BY 4.0, exceto os arquivos e gráficos derivados do DataJud/CNJ (uso não comercial) · [Código-fonte](https://github.com/daniellindomar/ppsus)]{.rodape-versao}
       ::::
 
 format:

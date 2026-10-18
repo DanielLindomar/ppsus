@@ -1,0 +1,14 @@
+item,valor
+celulas de contagem publicadas auditadas,1279
+supressao primaria (1 a 4),113
+contagens derivaveis por diferenca de 1 a 4 (nao publicadas) protegidas como primarias,69
+supressao complementar,54
+relacoes aditivas auditadas,407
+relacoes exatas com uma unica celula suprimida,0
+celulas primarias determinadas por programacao linear (atacante realista),0
+"idem, pior caso (atacante sabe quais vazias sao primarias, 1 a 4, e quais sao complementares, 5 ou mais)",0
+taxas suavizadas por comarca e ano,"so faixas (0-50, 50-100, 100-150, 150-200, 200-300, 300+)"
+passo de arredondamento das taxas suavizadas do periodo 2022-2024 (por 100 mil),5
+celulas determinadas pela inversao do Bayes empirico na forma publicada,0
+rodada 1: complementares novas / primarias determinadas,38 / 20
+rodada 2: complementares novas / primarias determinadas,0 / 0
