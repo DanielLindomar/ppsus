@@ -1,0 +1,86 @@
+versao,modelo,nivel,h,mae,mase,rotulo_modelo
+nowcast_preliminar_2026-10-17,hgb,16 regioes (media),1,3.2712367937358247,0.9080444833784966,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,16 regioes (media),1,4.798076923076923,1.3148988976007312,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,16 regioes (media),1,4.6167800052997165,1.3048685587342528,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,16 regioes (media),1,3.731837606837607,1.0608038372243498,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,16 regioes (media),1,3.21331790560928,0.8949040009227075,lgbm
+nowcast_preliminar_2026-10-17,mlp,16 regioes (media),1,3.461018455072935,0.9695419209314852,mlp
+nowcast_preliminar_2026-10-17,rf,16 regioes (media),1,3.312224331096722,0.92937200237348,rf
+nowcast_preliminar_2026-10-17,sarima,16 regioes (media),1,3.901183883927554,1.0840447175893222,sarima
+nowcast_preliminar_2026-10-17,hgb,MT,1,19.515915238886027,0.9961046925695048,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,MT,1,33.21367521367522,1.6952470500537893,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,MT,1,30.234198876033656,1.5431726879244132,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,MT,1,21.1965811965812,1.081886949082192,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,MT,1,18.701373631116848,0.9545299722522472,lgbm
+nowcast_preliminar_2026-10-17,mlp,MT,1,23.47899046666165,1.1983825659396183,mlp
+nowcast_preliminar_2026-10-17,rf,MT,1,21.722441498993035,1.108727192465948,rf
+nowcast_preliminar_2026-10-17,sarima,MT,1,22.552479288516484,1.1510928477290376,sarima
+nowcast_preliminar_2026-10-17,sarima_soma_regioes,MT,1,26.699179084199308,1.3627430355166148,sarima_soma_regioes
+nowcast_preliminar_2026-10-17,hgb,16 regioes (media),2,3.4686128143192865,0.9548816764167728,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,16 regioes (media),2,4.824353448275862,1.3214900716520508,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,16 regioes (media),2,4.866972724369503,1.3727713871831386,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,16 regioes (media),2,3.976293103448276,1.114054776540872,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,16 regioes (media),2,3.348455953152825,0.9282296974092884,lgbm
+nowcast_preliminar_2026-10-17,mlp,16 regioes (media),2,3.758481357362914,1.0410353187810968,mlp
+nowcast_preliminar_2026-10-17,rf,16 regioes (media),2,3.603193878222564,1.000825275310122,rf
+nowcast_preliminar_2026-10-17,sarima,16 regioes (media),2,4.123332149975768,1.1325159686851365,sarima
+nowcast_preliminar_2026-10-17,hgb,MT,2,22.07259905665797,1.1265994563110855,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,MT,2,33.44827586206897,1.7072212159529747,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,MT,2,33.40404575011192,1.7049636829839083,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,MT,2,28.379310344827587,1.448498000751854,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,MT,2,21.146863564122874,1.0793493295860537,lgbm
+nowcast_preliminar_2026-10-17,mlp,MT,2,26.917579037012903,1.3738903076374274,mlp
+nowcast_preliminar_2026-10-17,rf,MT,2,25.195528478544272,1.2859957548513676,rf
+nowcast_preliminar_2026-10-17,sarima,MT,2,26.56670074872745,1.355981257244265,sarima
+nowcast_preliminar_2026-10-17,sarima_soma_regioes,MT,2,30.405632963151906,1.551922792470092,sarima_soma_regioes
+nowcast_preliminar_2026-10-17,hgb,16 regioes (media),3,3.635552096336363,0.9924512318287,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,16 regioes (media),3,4.844021739130435,1.3261631321318472,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,16 regioes (media),3,5.112477840423022,1.435630672725013,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,16 regioes (media),3,4.548913043478261,1.2451849729358635,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,16 regioes (media),3,3.5429345948341187,0.9717012238235032,lgbm
+nowcast_preliminar_2026-10-17,mlp,16 regioes (media),3,4.094853512734845,1.1210138389513706,mlp
+nowcast_preliminar_2026-10-17,rf,16 regioes (media),3,3.829415978891308,1.0656934075859392,rf
+nowcast_preliminar_2026-10-17,sarima,16 regioes (media),3,4.259786030354986,1.16481691276282,sarima
+nowcast_preliminar_2026-10-17,hgb,MT,3,24.63567630303572,1.2574205447040032,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,MT,3,33.71304347826087,1.7207351230232255,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,MT,3,36.61950148695986,1.8690825833284763,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,MT,3,39.89565217391304,2.036299392424699,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,MT,3,24.36814164729805,1.2437654061802277,lgbm
+nowcast_preliminar_2026-10-17,mlp,MT,3,32.048870034393815,1.635794654877385,mlp
+nowcast_preliminar_2026-10-17,rf,MT,3,28.147428284529656,1.4366625933134562,rf
+nowcast_preliminar_2026-10-17,sarima,MT,3,29.615721078230177,1.5116051888293895,sarima
+nowcast_preliminar_2026-10-17,sarima_soma_regioes,MT,3,32.93397637943659,1.680971044143691,sarima_soma_regioes
+nowcast_preliminar_2026-10-17,hgb,16 regioes (media),4,3.694320047727752,1.006948336713663,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,16 regioes (media),4,4.8618421052631575,1.331838916969502,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,16 regioes (media),4,5.316652499401932,1.486535217505973,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,16 regioes (media),4,4.99890350877193,1.361048248610055,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,16 regioes (media),4,3.641665480586246,0.992926963161881,lgbm
+nowcast_preliminar_2026-10-17,mlp,16 regioes (media),4,4.187627994879196,1.133810801695247,mlp
+nowcast_preliminar_2026-10-17,rf,16 regioes (media),4,4.044316088742987,1.1340139200949235,rf
+nowcast_preliminar_2026-10-17,sarima,16 regioes (media),4,4.337558613075769,1.1874142593226622,sarima
+nowcast_preliminar_2026-10-17,hgb,MT,4,27.355279148856745,1.3962307989753442,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,MT,4,33.91228070175438,1.7309043172847878,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,MT,4,38.598820100013896,1.9701082608034843,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,MT,4,50.43859649122807,2.5744179576791333,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,MT,4,27.336260673230264,1.3952600839161131,lgbm
+nowcast_preliminar_2026-10-17,mlp,MT,4,33.82318167147724,1.7263566462646955,mlp
+nowcast_preliminar_2026-10-17,rf,MT,4,31.92677102981917,1.6295626442375497,rf
+nowcast_preliminar_2026-10-17,sarima,MT,4,30.47947127470253,1.5556915467266403,sarima
+nowcast_preliminar_2026-10-17,sarima_soma_regioes,MT,4,33.95134159988846,1.7328980103015417,sarima_soma_regioes
+nowcast_preliminar_2026-10-17,hgb,16 regioes (media),0,3.5158761208826284,0.9652196559854714,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,16 regioes (media),0,4.831845238095238,1.3235376971008854,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,16 regioes (media),0,4.975682755903457,1.399293602693093,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,16 regioes (media),0,4.309253246753246,1.1941562235133347,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,16 regioes (media),0,3.434992269945388,0.9465751678519296,lgbm
+nowcast_preliminar_2026-10-17,mlp,16 regioes (media),0,3.872772169000794,1.0657305727278286,mlp
+nowcast_preliminar_2026-10-17,rf,16 regioes (media),0,3.694665818834058,1.031741525923973,rf
+nowcast_preliminar_2026-10-17,sarima,16 regioes (media),0,4.153900690905139,1.1418273914630614,sarima
+nowcast_preliminar_2026-10-17,hgb,MT,0,23.36664106350815,1.192648181140406,hgb
+nowcast_preliminar_2026-10-17,ingenuo_sazonal,MT,0,33.56926406926407,1.7133965307899894,Ingenuo sazonal (mesma SE do ano anterior)
+nowcast_preliminar_2026-10-17,ingenuo_sazonal_aj,MT,0,34.68350376171188,1.770268031445155,Ingenuo sazonal ajustado
+nowcast_preliminar_2026-10-17,ingenuo_ultima,MT,0,34.87012987012987,1.779793546394141,ingenuo_ultima
+nowcast_preliminar_2026-10-17,lgbm,MT,0,22.856638299710934,1.1666173165858404,lgbm
+nowcast_preliminar_2026-10-17,mlp,MT,0,29.028016920771872,1.481608395857038,mlp
+nowcast_preliminar_2026-10-17,rf,MT,0,26.71171668617666,1.3633829626740317,rf
+nowcast_preliminar_2026-10-17,sarima,MT,0,27.27455630502461,1.3921106538243482,sarima
+nowcast_preliminar_2026-10-17,sarima_soma_regioes,MT,0,30.97125022207669,1.5807922561317636,sarima_soma_regioes

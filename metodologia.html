@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3f3c2766e82e7a818a36b889e02efff9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c0798e995a665d3d6f8fc6b7b3a23fbc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-xl " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
@@ -150,6 +150,33 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
+    <a class="nav-link" href="./previsao/index.html"> 
+<span class="menu-text">Previsão</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-localização" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Localização</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-localização">    
+        <li>
+    <a class="dropdown-item" href="./localizacao/index.html">
+ <span class="dropdown-text">Visão geral</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./localizacao/parto.html">
+ <span class="dropdown-text">Atenção ao parto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./localizacao/uti-adulto.html">
+ <span class="dropdown-text">UTI adulto</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./judicializacao/index.html"> 
+<span class="menu-text">Judicialização</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./dados/index.html"> 
 <span class="menu-text">Dados</span></a>
   </li>  
@@ -189,6 +216,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#por-que-20202025" id="toc-por-que-20202025" class="nav-link" data-scroll-target="#por-que-20202025">Por que 2020–2025</a></li>
   <li><a href="#anomalias-e-limitações-conhecidas" id="toc-anomalias-e-limitações-conhecidas" class="nav-link" data-scroll-target="#anomalias-e-limitações-conhecidas">Anomalias e limitações conhecidas</a></li>
   <li><a href="#eficiencia" id="toc-eficiencia" class="nav-link" data-scroll-target="#eficiencia">Eficiência e produtividade (DEA e Malmquist)</a></li>
+  <li><a href="#previsao" id="toc-previsao" class="nav-link" data-scroll-target="#previsao">Previsão de demanda (preliminar)</a></li>
+  <li><a href="#localizacao" id="toc-localizacao" class="nav-link" data-scroll-target="#localizacao">Localização de serviços (preliminar)</a></li>
+  <li><a href="#judicializacao" id="toc-judicializacao" class="nav-link" data-scroll-target="#judicializacao">Judicialização da saúde (preliminar)</a></li>
   <li><a href="#pipeline-do-dado-bruto-ao-site" id="toc-pipeline-do-dado-bruto-ao-site" class="nav-link" data-scroll-target="#pipeline-do-dado-bruto-ao-site">Pipeline: do dado bruto ao site</a></li>
   <li><a href="#glossário-de-siglas" id="toc-glossário-de-siglas" class="nav-link" data-scroll-target="#glossário-de-siglas">Glossário de siglas</a></li>
   </ul>
@@ -223,13 +253,14 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="faixa-versao"><b>Versão 0.3</b> (16/10/2026) — dados e indicadores 2020–2025, deslocamento nas internações (inclusive as de residentes de Mato Grosso em hospitais de outros estados), escores de eficiência (DEA) e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT. Cada valor mostra a fonte e o ano a que se refere.</div>
+<div class="faixa-versao"><b>Versão 0.4</b> (17/10/2026) — dados e indicadores 2020–2025, deslocamento nas internações (inclusive as de residentes de Mato Grosso em hospitais de outros estados), escores de eficiência (DEA) e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT; e, em caráter preliminar, a previsão de demanda das internações respiratórias, a localização de serviços de saúde (pilotos de atenção ao parto e UTI adulto) e a judicialização da saúde (DataJud/CNJ). Cada valor mostra a fonte e o ano a que se refere.</div>
 </div>
 </div>
 <p>Esta página explica de onde vêm os números do site, o que cada um significa, por que a janela é 2020–2025 e quais problemas conhecidos dos dados exigem cautela na leitura. É a referência para todas as demais páginas; o dicionário completo dos indicadores está em <a href="dados/index.html">Dados</a>.</p>
 <section id="fontes-de-dados" class="level2">
 <h2 class="anchored" data-anchor-id="fontes-de-dados">Fontes de dados</h2>
-<p>Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DATASUS/Ministério da Saúde), do SIOPS e do IBGE. Os arquivos brutos foram carregados em um repositório único do projeto (Data Lake do SUS-MT), validados e reorganizados em painéis por município e ano.</p>
+<p>Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DATASUS/Ministério da Saúde), do SIOPS e do IBGE. Os arquivos brutos foram carregados em um repositório único do projeto (Data Lake do SUS-MT), validados e reorganizados em painéis por município e ano. As seções da versão 0.4 usam também fontes de fora do SUS (SIVEP-Gripe, INMET, InfoDengue, OpenStreetMap e DataJud/CNJ), descritas adiante em <a href="#previsao">Previsão</a>, <a href="#localizacao">Localização</a> e <a href="#judicializacao">Judicialização</a>.</p>
+<div class="rolagem-x">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -302,6 +333,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="definições-que-valem-em-todo-o-site" class="level2">
 <h2 class="anchored" data-anchor-id="definições-que-valem-em-todo-o-site">Definições que valem em todo o site</h2>
@@ -350,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="tabela-rolagem">
+<div class="tabela-rolagem rolagem-x">
 
 <table class="table table-sm caption-top table-striped small">
 <thead>
@@ -409,13 +441,159 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p><strong>Ressalvas da eficiência.</strong> Unidades com dados de registro atípicos recebem o sinal “registro a verificar”: continuam avaliadas, mas não servem de referência a outras e podem ter a meta financeira omitida; a lista de verificações será encaminhada à SES-MT e ao COSEMS-MT. Valem também as limitações acima: as internações de moradores em outros estados não entram nos modelos (são medidas à parte, na página <a href="deslocamento/index.html#fuga">Deslocamento</a>); 2020–2021 foram afetados pela COVID-19; a classificação da despesa por subfunção é frágil em alguns municípios; o pré-natal de 2025 ainda não está disponível. Internações por condições sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.</p>
 </section>
+<section id="previsao" class="level2">
+<h2 class="anchored" data-anchor-id="previsao">Previsão de demanda (preliminar)</h2>
+<p>A seção <a href="previsao/index.html">Previsão</a> aplica a previsão de demanda ao caso escolhido no Marco Zero do projeto (25/05/2026): as internações semanais por doenças do aparelho respiratório (CID-10 J00–J99, diagnóstico principal) nos hospitais de cada uma das 16 regiões de saúde, pela semana epidemiológica (SE) da internação, para todas as idades e, à parte, para menores de 5 anos. Os resultados são <strong>preliminares</strong>: a especificação do modelo (série-alvo, horizontes, variáveis e critério de escolha) ainda está em validação pela coordenação.</p>
+<div class="rolagem-x">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>Período usado</th>
+<th>O que se extrai</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>SIH/SUS de Mato Grosso</strong> (AIH reduzida)</td>
+<td>Internações de 2020 a 2026; competência de processamento até 08/2026, carga de 17/10/2026</td>
+<td>Série semanal das internações J00–J99 (AIH tipo 1) e o atraso de registro de cada semana</td>
+</tr>
+<tr class="even">
+<td><strong>SIVEP-Gripe</strong></td>
+<td>2020–2026 (arquivos de 2025 e 2026 na versão de 12/10/2026)</td>
+<td>Hospitalizações por síndrome respiratória aguda grave (SRAG), por região de residência e semana de início dos sintomas, como sinal antecipado</td>
+</tr>
+<tr class="odd">
+<td><strong>INMET e InfoDengue</strong></td>
+<td>2010–2026</td>
+<td>Clima semanal por região de saúde: precipitação interpolada das estações do INMET; temperatura e umidade do InfoDengue; anomalias em relação a 2010–2021</td>
+</tr>
+<tr class="even">
+<td><strong>RIPSA/IBGE e CNES</strong></td>
+<td>2020–2025</td>
+<td>População das regiões; leitos pediátricos SUS, usados como contexto do alerta</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><strong>Modelos.</strong> Referências ingênuas (repetir a mesma semana do ano anterior ou a última semana conhecida), o modelo estatístico SARIMA e quatro modelos de aprendizado de máquina: <em>gradient boosting</em> (HGB e LightGBM), Random Forest e rede neural (perceptron multicamadas). Os modelos são treinados com as semanas a partir de 2022, porque 2020–2021 foram distorcidos pela COVID-19, e testados no passado com origem móvel, de 2024 a 2026, para horizontes de 1 a 4 semanas. O critério é o erro médio escalado (MASE), que compara o erro de cada modelo com o de uma previsão ingênua; o LightGBM é a referência desta versão por ter o menor MASE.</li>
+<li><strong>Atraso do SIH.</strong> Uma semana só fica praticamente completa no SIH cerca de quatro competências depois, e os arquivos mensais são republicados com mais registros. Por isso a previsão tem duas etapas: o <em>nowcast</em> estima as semanas ainda incompletas e a previsão encadeada projeta, a partir dele, as quatro semanas seguintes, com intervalos de 80% e 95%.</li>
+<li><strong>Alerta.</strong> Uma semana é de alta pressão quando as internações da região passam do percentil 90 das semanas de 2022–2023 (limiar P90). O alerta é avaliado como classificação, com sensibilidade, especificidade, valor preditivo positivo e F1. O ganho do alerta vem de ter algum <em>nowcast</em>: com o método atuarial chain-ladder no lugar do LightGBM, o desempenho é praticamente o mesmo. A regra do alerta não foi pactuada com a SES-MT e não é alerta operacional.</li>
+<li><strong>Supressão.</strong> Contagens observadas de 1 a 4 por região e semana não são publicadas. Para que não sejam deduzidas pelo total de Mato Grosso, outras regiões da mesma semana também ficam vazias até que nenhuma contagem pequena possa ser recalculada (supressão complementar conferida por programação inteira); na semana em que o próprio total do estado é suprimido, todas as regiões também são. As previsões dos modelos ingênuos que copiariam uma contagem suprimida ficam vazias, e os arquivos marcam só se a célula foi suprimida, não o motivo.</li>
+</ul>
+</section>
+<section id="localizacao" class="level2">
+<h2 class="anchored" data-anchor-id="localizacao">Localização de serviços (preliminar)</h2>
+<p>A seção <a href="localizacao/index.html">Localização</a> organiza em cenários, para apoiar a discussão com a gestão, a pergunta sobre onde a abertura ou a ampliação de um serviço reduziria mais o deslocamento dos pacientes, considerando a demanda dos próximos anos, com dois pilotos: <a href="localizacao/parto.html">atenção ao parto</a> e <a href="localizacao/uti-adulto.html">UTI adulto</a>. A resposta vem de uma cadeia de cinco modelos: demanda por município de residência em 2026–2030 (L1), escolha do estabelecimento pelo paciente (L2), acesso atual (L3), otimização da localização de unidades novas — p-mediana, cobertura máxima e, na UTI, uma versão com capacidade (L4) — e cenários que combinam a otimização com a escolha do paciente (L5).</p>
+<div class="rolagem-x">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>Período usado</th>
+<th>O que se extrai</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>SINASC</strong></td>
+<td>2020–2025 (2025 preliminar); deslocamento em 2024–2025</td>
+<td>Nascidos vivos hospitalares de mães residentes em Mato Grosso, por município de residência e de nascimento</td>
+</tr>
+<tr class="even">
+<td><strong>SIH/SUS de MT e das outras UF</strong></td>
+<td>2020–2025; deslocamento em 2024–2025</td>
+<td>Internações SUS com UTI adulto de residentes de Mato Grosso, por município de residência e do hospital</td>
+</tr>
+<tr class="odd">
+<td><strong>CNES</strong></td>
+<td>Média mensal de 2025; aberturas e fechamentos de 2021–2025</td>
+<td>Leitos obstétricos e leitos SUS de UTI adulto por município; os experimentos naturais da validação</td>
+</tr>
+<tr class="even">
+<td><strong>RIPSA/SVS e IBGE</strong></td>
+<td>2025 e projeção 2026–2030</td>
+<td>População-alvo (mulheres de 15 a 49 anos; adultos de 20 anos ou mais) e projeção do IBGE para Mato Grosso</td>
+</tr>
+<tr class="odd">
+<td><strong>OSRM / OpenStreetMap</strong></td>
+<td>Consulta de 08/10/2026</td>
+<td>Tempo e distância rodoviários de automóvel entre as sedes municipais (© colaboradores do OpenStreetMap, licença ODbL)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><strong>Projeção populacional provisória.</strong> A população municipal de 2026–2030 aplica a participação de cada município, por sexo e faixa etária, à projeção do IBGE para o estado (método de razão). A demanda de 2030 é, por isso, <strong>provisória</strong> e será refeita quando houver projeção municipal por idade e sexo.</li>
+<li><strong>Parâmetros de cenário, não normas.</strong> A ocupação-alvo de 85%, o módulo de 10 leitos de UTI, o filtro de candidatos pela captação esperada (com o desconto de 1,28 medido nas aberturas de UTI) e os limiares de 52 e 100 partos por ano são parâmetros de pesquisa para montar cenários, não critérios normativos de habilitação. Na UTI adulto, as soluções da p-mediana e da versão com capacidade aparecem lado a lado como cenários; no parto, várias soluções quase empatam e devem ser lidas como ordem de grandeza.</li>
+<li><strong>Tempos em condições ideais.</strong> Os tempos do OSRM não incluem balsas, estradas sazonais, transporte sanitário, regulação ou espera; servem para comparar alternativas.</li>
+<li><strong>Divulgação.</strong> Contagens são publicadas em números inteiros; percentuais municipais e regionais de deslocamento com contagem de 1 a 4 ficam vazios, assim como os que permitiriam deduzi-los por diferença (inclusive pelo total de Mato Grosso, publicado na linha do estado); a supressão é conferida por programação inteira. Os resultados não são recomendação oficial de abertura, habilitação ou fechamento de serviços.</li>
+</ul>
+</section>
+<section id="judicializacao" class="level2">
+<h2 class="anchored" data-anchor-id="judicializacao">Judicialização da saúde (preliminar)</h2>
+<p>A seção <a href="judicializacao/index.html">Judicialização</a> descreve as ações judiciais de saúde em Mato Grosso, compara as comarcas, prevê o volume dos meses seguintes e testa se a judicialização se associa à oferta e à eficiência dos serviços.</p>
+<div class="rolagem-x">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>Período usado</th>
+<th>O que se extrai</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>DataJud (CNJ), API Pública</strong></td>
+<td>Ações ajuizadas de 2020 a 11/09/2026 (coleta de 17/10/2026)</td>
+<td>Metadados das ações com assuntos de saúde da Tabela Processual Unificada no TJMT e na Justiça Federal em Mato Grosso (TRF1): classe, assuntos, grau, mês de ajuizamento, unidade de origem e decisões liminares. Sem nomes das partes, sem texto e sem processos sigilosos</td>
+</tr>
+<tr class="even">
+<td><strong>TJMT, Corregedoria-Geral da Justiça</strong></td>
+<td>Jurisdição vigente das comarcas</td>
+<td>Municípios abrangidos por cada comarca</td>
+</tr>
+<tr class="odd">
+<td><strong>IBGE</strong></td>
+<td>2020–2026</td>
+<td>População das comarcas, para as taxas por 100 mil habitantes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><strong>Unidade.</strong> Ação nova de saúde no 1º grau e nos juizados, contada uma vez por processo, pelo ano de ajuizamento. A coleta reproduz de 87% a 97% dos casos novos de saúde do painel do CNJ, contados na unidade do painel.</li>
+<li><strong>Atribuição territorial.</strong> A comarca vem do código da unidade de origem no número do processo; o município herda a taxa da comarca. A regra é uma <strong>proposta</strong> do projeto, em validação.</li>
+<li><strong>Período de comparação.</strong> As comarcas são comparadas em 2022–2024. Em 2025 e 2026, a centralização de ações de saúde pública no Núcleo de Justiça 4.0 deixou parte das ações sem comarca de origem, e por isso esses anos são marcados como afetados pela centralização. As taxas de Cuiabá e Várzea Grande são limites inferiores.</li>
+<li><strong>Taxas suavizadas e supressão.</strong> As taxas por comarca são suavizadas (Bayes empírico) e publicadas arredondadas a 5 por 100 mil no período 2022–2024 e só em faixas por ano. Contagens de 1 a 4 não são publicadas, nem as que se deduzem por diferença (inclusive as ações mistas, que entram na saúde pública e na suplementar), e a supressão complementar foi auditada por programação linear para que nenhuma célula suprimida possa ser recalculada.</li>
+<li><strong>Previsão e fatores associados.</strong> A previsão mensal compara ETS, SARIMA, LightGBM e referências ingênuas pelo MASE. Os fatores associados vêm de um modelo de contagem (binomial negativo) por comarca e ano, com razões de taxas: são <strong>associações, não causas</strong>, e os dados não sustentam a hipótese de que oferta insuficiente ou ineficiência levem a mais judicialização.</li>
+<li><strong>Uso dos dados.</strong> A coleta seguiu o Termo de Uso da API Pública do DataJud (versão 1.2): uso não comercial, sem dados pessoais e dentro do limite de requisições.</li>
+</ul>
+</section>
 <section id="pipeline-do-dado-bruto-ao-site" class="level2">
 <h2 class="anchored" data-anchor-id="pipeline-do-dado-bruto-ao-site">Pipeline: do dado bruto ao site</h2>
 <ol type="1">
 <li><strong>Data Lake (camada bruta):</strong> arquivos originais do DATASUS (FTP), do SIOPS e do IBGE, carregados sem alteração em PostgreSQL, com registro de origem e data.</li>
 <li><strong>Camada tratada (<code>trusted</code>):</strong> tipos corrigidos, datas validadas (fora de 1900–2027 anuladas), duplicidades removidas, chaves de município padronizadas; perdas inferiores a 0,001% dos registros.</li>
 <li><strong>Painéis analíticos (<code>mart</code>):</strong> uma linha por município e ano (e por hospital e ano) com insumos, produção e resultados, per capita e sinalizadores de completude. É a base do DEA e deste site.</li>
-<li><strong>Site:</strong> scripts em Python extraem dos painéis os arquivos públicos (CSV e GeoJSON) e geram as páginas; o Quarto renderiza tudo em HTML estático, publicado no GitHub Pages. Nenhum microdado sai do repositório.</li>
+<li><strong>Site:</strong> scripts em Python extraem dos painéis os arquivos públicos (CSV e GeoJSON) e geram as páginas; o Quarto renderiza tudo em HTML estático, publicado no GitHub Pages. Nenhum microdado sai do repositório. Nas seções de previsão, localização e judicialização, os arquivos chegam já agregados e com supressão pelas frentes de pesquisa do projeto; os scripts do site conferem de novo a supressão (e a completam quando necessário) antes de copiá-los.</li>
 </ol>
 <p>Os dados são somente de leitura em todas as etapas posteriores à carga; a reprodução do site depende apenas dos arquivos publicados em <a href="dados/index.html">Dados</a>.</p>
 </section>
@@ -591,6 +769,78 @@ ul.task-list li input[type="checkbox"] {
 <td>Taxa de mortalidade infantil (óbitos de menores de 1 ano por mil nascidos vivos)</td>
 </tr>
 <tr class="even">
+<td>SE</td>
+<td>Semana epidemiológica (de domingo a sábado)</td>
+</tr>
+<tr class="odd">
+<td>SRAG</td>
+<td>Síndrome respiratória aguda grave</td>
+</tr>
+<tr class="even">
+<td>SIVEP-Gripe</td>
+<td>Sistema de Informação de Vigilância Epidemiológica da Gripe (notificações de SRAG)</td>
+</tr>
+<tr class="odd">
+<td>INMET</td>
+<td>Instituto Nacional de Meteorologia</td>
+</tr>
+<tr class="even">
+<td>SARIMA</td>
+<td>Modelo estatístico de série temporal com sazonalidade (autorregressivo integrado de médias móveis sazonal)</td>
+</tr>
+<tr class="odd">
+<td>HGB</td>
+<td><em>Histogram gradient boosting</em>, modelo de aprendizado de máquina por árvores de decisão em sequência (como o LightGBM)</td>
+</tr>
+<tr class="even">
+<td>MLP</td>
+<td>Perceptron multicamadas (rede neural)</td>
+</tr>
+<tr class="odd">
+<td>MASE</td>
+<td>Erro absoluto médio escalado: erro do modelo dividido pelo de uma previsão ingênua (abaixo de 1, melhor que ela)</td>
+</tr>
+<tr class="even">
+<td>P90</td>
+<td>Percentil 90: valor superado em 10% das semanas de referência</td>
+</tr>
+<tr class="odd">
+<td>VPP</td>
+<td>Valor preditivo positivo: parcela dos alertas emitidos que se confirmaram</td>
+</tr>
+<tr class="even">
+<td>OSRM</td>
+<td>Open Source Routing Machine: cálculo de rotas sobre o mapa colaborativo OpenStreetMap</td>
+</tr>
+<tr class="odd">
+<td>E2SFCA</td>
+<td>Índice de acesso por áreas de captação flutuantes em duas etapas, com peso que diminui com o tempo de viagem</td>
+</tr>
+<tr class="even">
+<td>CNJ</td>
+<td>Conselho Nacional de Justiça</td>
+</tr>
+<tr class="odd">
+<td>DataJud</td>
+<td>Base Nacional de Dados do Poder Judiciário (CNJ)</td>
+</tr>
+<tr class="even">
+<td>TJMT</td>
+<td>Tribunal de Justiça do Estado de Mato Grosso</td>
+</tr>
+<tr class="odd">
+<td>TRF1</td>
+<td>Tribunal Regional Federal da 1ª Região (Justiça Federal, que abrange Mato Grosso)</td>
+</tr>
+<tr class="even">
+<td>TPU</td>
+<td>Tabelas Processuais Unificadas do Poder Judiciário (classes e assuntos)</td>
+</tr>
+<tr class="odd">
+<td>ETS</td>
+<td>Modelo de suavização exponencial (erro, tendência e sazonalidade)</td>
+</tr>
+<tr class="even">
 <td>PPSUS</td>
 <td>Programa Pesquisa para o SUS: gestão compartilhada em saúde</td>
 </tr>
@@ -732,6 +982,26 @@ Definições, ressalvas e anomalias conhecidas em
     "p.p.": "Pontos percentuais: diferença entre dois percentuais",
     "WGS84": "Sistema de referência geodésico mundial usado nas malhas (latitude e longitude em graus)",
     "EPSG:4326": "Código do sistema de coordenadas WGS84 (latitude e longitude em graus)",
+    "MASE": "Erro absoluto médio escalado: erro da previsão dividido pelo erro de uma regra ingênua; abaixo de 1, o modelo erra menos que ela",
+    "SARIMA": "Modelo estatístico de séries temporais com tendência e sazonalidade (média móvel integrada autorregressiva sazonal)",
+    "LightGBM": "Modelo de aprendizado de máquina com árvores de decisão em sequência (gradient boosting)",
+    "HGB": "Gradient boosting por histogramas: modelo de aprendizado de máquina com árvores de decisão em sequência",
+    "MLP": "Perceptron multicamadas: rede neural artificial simples",
+    "ETS": "Suavização exponencial com erro, tendência e sazonalidade (Holt-Winters)",
+    "SRAG": "Síndrome respiratória aguda grave",
+    "SIVEP-Gripe": "Sistema de Informação de Vigilância Epidemiológica da Gripe: notificações de SRAG (Ministério da Saúde)",
+    "SE": "Semana epidemiológica: semana de domingo a sábado, numerada no ano",
+    "VPP": "Valor preditivo positivo: parcela dos avisos de alerta que se confirmaram",
+    "P90": "Percentil 90: valor que só 10% das semanas de referência ultrapassaram",
+    "WMAPE": "Erro absoluto médio ponderado: soma dos erros absolutos dividida pela soma observada",
+    "CPC": "Common Part of Commuters: parte comum entre os fluxos previstos e os observados (1 = previsão perfeita)",
+    "E2SFCA": "Método de áreas de captação flutuantes em duas etapas: índice de acesso que compara leitos ao alcance com a população que disputa esses leitos",
+    "OSRM": "Open Source Routing Machine: cálculo de rotas e tempos rodoviários sobre o mapa colaborativo OpenStreetMap",
+    "CNJ": "Conselho Nacional de Justiça",
+    "DataJud": "Base Nacional de Dados do Poder Judiciário, mantida pelo CNJ (API pública de metadados processuais)",
+    "TJMT": "Tribunal de Justiça do Estado de Mato Grosso",
+    "TRF1": "Tribunal Regional Federal da 1ª Região (Justiça Federal; inclui as subseções de Mato Grosso)",
+    "TPU": "Tabelas Processuais Unificadas do CNJ: códigos padronizados de classes, assuntos e movimentos",
     "SECTICS": "Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (Ministério da Saúde)",
     "SECITECI": "Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso"
   };
@@ -1210,7 +1480,7 @@ Definições, ressalvas e anomalias conhecidas em
 <p><span class="rodape-rotulo">Financiamento</span> <img src="./assets/logos/ppsus-mt.png" class="rodape-logo img-fluid" alt="PPSUS — Programa Pesquisa para o SUS: Mato Grosso"> <img src="./assets/logos/fapemat.png" class="rodape-logo img-fluid" alt="FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso"> <img src="./assets/logos/ses-mt.png" class="rodape-logo img-fluid" alt="SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso"> <img src="./assets/logos/cnpq.png" class="rodape-logo img-fluid" alt="CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico"> <img src="./assets/logos/ministerio-saude-sus.png" class="rodape-logo img-fluid" alt="SUS · Ministério da Saúde · Governo do Brasil"></p>
 </div>
 <p><span class="rodape-citacao">Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.</span></p>
-<p><span class="rodape-versao">Versão 0.3 · atualizado em 16/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
+<p><span class="rodape-versao">Versão 0.4 · atualizado em 17/10/2026 · Conteúdo sob licença CC BY 4.0, exceto os arquivos e gráficos derivados do DataJud/CNJ (uso não comercial) · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
 </div>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div>
     <div class="nav-footer-right">

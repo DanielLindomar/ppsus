@@ -1,0 +1,185 @@
+arquivo,coluna,descricao
+acesso_atual_mun.csv,piloto,parto (atenção ao parto) ou uti (UTI adulto)
+acesso_atual_mun.csv,cod_mun6,código IBGE do município (6 dígitos)
+acesso_atual_mun.csv,nome_municipio,município de residência
+acesso_atual_mun.csv,co_regsaud,código da região de saúde
+acesso_atual_mun.csv,nome_regsaud,região de saúde
+acesso_atual_mun.csv,pop_alvo,população-alvo 2025 (RIPSA): mulheres de 15-49 anos (parto) ou pessoas de 20 anos ou mais (UTI)
+acesso_atual_mun.csv,leitos_proprios,leitos do serviço no município em 2025 (média mensal; parto: obstétricos existentes; UTI: SUS de UTI adulto)
+acesso_atual_mun.csv,tempo_servico_min,"tempo rodoviário (OSRM, min) da sede ao município mais próximo com o serviço; 0 = tem no próprio município"
+acesso_atual_mun.csv,km_servico,distância rodoviária (km) correspondente
+acesso_atual_mun.csv,e2sfca_60,"acesso E2SFCA, decaimento gaussiano com limiar de 60 min (parto: leitos por 10 mil mulheres de 15-49; UTI: leitos por 100 mil adultos)"
+acesso_atual_mun.csv,e2sfca_120,"idem, limiar de 120 min"
+acesso_atual_mun.csv,indice_60,e2sfca_60 dividido pela média estadual (MT = 1)
+acesso_atual_mun.csv,indice_120,e2sfca_120 dividido pela média estadual (MT = 1)
+acesso_atual_mun.csv,unidade_contagem,unidade de n_2024_2025: nascidos vivos hospitalares (parto; cada gêmeo conta 1) ou internações (UTI)
+acesso_atual_mun.csv,n_2024_2025,"demanda observada 2024-2025 em contagem inteira (parto: nascidos vivos hospitalares, SINASC; UTI: internações SUS com UTI adulto, SIH); nulo se 1 a 4"
+acesso_atual_mun.csv,tempo_medio_obs_min,"tempo médio sede-sede percorrido pelos residentes atendidos em MT, 2024-2025, ponderado pela contagem inteira (nulo se demanda < 5)"
+acesso_atual_mun.csv,km_medio_obs,km médio correspondente (nulo se demanda < 5)
+acesso_atual_mun.csv,pct_proprio_mun,"% atendidos no próprio município (nulo se numerador 1 a 4 ou demanda < 5) No site, também vazio por supressão complementar (para que nenhuma célula suprimida seja deduzida por diferença)."
+acesso_atual_mun.csv,pct_fora_regiao,"% atendidos fora da região de saúde de residência (mesma regra) No site, também vazio por supressão complementar."
+acesso_atual_mun.csv,pct_fora_mt,"% atendidos fora de MT (mesma regra) No site, também vazio por supressão complementar."
+acesso_atual_mun.csv,suprimido,"true se alguma célula da linha foi suprimida (contagem de 1 a 4) No site, também true quando a linha recebeu supressão complementar (as duas não são distinguidas)."
+acesso_atual_mun.csv,(tabela),"Acesso atual (2025) por município e piloto: E2SFCA, tempo ao serviço e deslocamento observado 2024-2025"
+acesso_regiao.csv,piloto,parto ou uti
+acesso_regiao.csv,co_regsaud,"código da região de saúde de residência; 51 = Mato Grosso (total do estado, calculado das contagens antes da supressão)"
+acesso_regiao.csv,pop_alvo,população-alvo 2025 (RIPSA)
+acesso_regiao.csv,leitos_servico_2025,leitos do serviço na região (média mensal 2025)
+acesso_regiao.csv,municipios_com_servico,municípios da região com o serviço em 2025
+acesso_regiao.csv,n_2024_2025,demanda observada 2024-2025 dos residentes (contagem inteira; ver unidade_contagem)
+acesso_regiao.csv,n_em_mt,"parte da demanda atendida em MT; vazio = suprimido (atendidos fora de MT de 1 a 4, ou supressão complementar)"
+acesso_regiao.csv,tempo_medio_obs_min,"tempo médio sede-sede percorrido, ponderado só pelos atendimentos em MT"
+acesso_regiao.csv,km_medio_obs,km médio correspondente
+acesso_regiao.csv,pct_proprio_mun,% atendidos no próprio município (vazio nas regiões sem o serviço: nenhum atendimento)
+acesso_regiao.csv,pct_fora_regiao,% atendidos fora da região de saúde (em MT); vazio = suprimido
+acesso_regiao.csv,pct_fora_mt,"% atendidos fora de MT; vazio = suprimido (contagem de 1 a 4 ou supressão complementar: >= 2 regiões vazias e soma das vazias - (vazias - 1) >= 5, porque o total de MT é publicado; nas regiões sem o serviço, fora da região + fora de MT = demanda, e os dois ficam vazios juntos)"
+acesso_regiao.csv,indice_60,índice E2SFCA 60 min médio da região (ponderado pela população-alvo; MT = 1)
+acesso_regiao.csv,pct_pop_ate_60min,% da população-alvo a até 60 min de um município com o serviço
+acesso_regiao.csv,indice_120,"idem, 120 min"
+acesso_regiao.csv,pct_pop_ate_120min,"idem, 120 min"
+acesso_regiao.csv,nome_regsaud,região de saúde (ou Mato Grosso)
+acesso_regiao.csv,unidade_contagem,nascidos vivos hospitalares (parto) ou internações (UTI)
+acesso_regiao.csv,suprimido,true se alguma contagem de 1 a 4 foi suprimida
+acesso_regiao.csv,(tabela),Acesso atual por região de saúde de residência (2025 e deslocamento observado 2024-2025)
+projecao_demanda.csv,piloto,parto ou uti
+projecao_demanda.csv,nivel,"MT, regiao (de saúde) ou municipio (de residência)"
+projecao_demanda.csv,codigo,"51, código da região ou código IBGE"
+projecao_demanda.csv,nome,nome
+projecao_demanda.csv,ano,2026 a 2030
+projecao_demanda.csv,demanda_proj,demanda projetada (média dos cenários populacionais constante e tendência)
+projecao_demanda.csv,li80,limite inferior do intervalo de 80%
+projecao_demanda.csv,ls80,limite superior do intervalo de 80%
+projecao_demanda.csv,demanda_proj_calib_ibge,parto: projeção calibrada ao total implícito na projeção do IBGE (população de 0 ano de MT); uti: igual a demanda_proj
+projecao_demanda.csv,modelo,"modelo escolhido na validação temporal (variante ancorada ao nível regional observado; a mais simples a até 0,5 p.p. do menor WMAPE 2024-2025)"
+projecao_demanda.csv,provisorio,true: usa a projeção populacional municipal PROVISÓRIA (a projeção municipal oficial não existe)
+projecao_demanda.csv,(tabela),"Demanda projetada 2026-2030 (PROVISÓRIA) por MT, região de saúde e município de residência"
+validacao_demanda.csv,piloto,parto ou uti
+validacao_demanda.csv,modelo,"taxa_historica, glm_poisson, glm_nb, glm_poisson_tendencia, lightgbm_poisson; sufixo _ancorado = previsão multiplicada pela razão observado/ajustado da região em 2023"
+validacao_demanda.csv,mae,erro absoluto médio por município-ano (teste 2024-2025)
+validacao_demanda.csv,rmse,raiz do erro quadrático médio
+validacao_demanda.csv,wmape,MAPE ponderado = soma |erro| / soma observado (municípios)
+validacao_demanda.csv,wmape_regiao,MAPE ponderado agregando por região de saúde
+validacao_demanda.csv,erro_total_pct,erro do total de MT (%)
+validacao_demanda.csv,(tabela),"Validação temporal da demanda (treino 2020-2023, teste 2024-2025)"
+validacao_escolha_temporal.csv,piloto,parto ou uti
+validacao_escolha_temporal.csv,modelo,"gravitacional_mnl, lightgbm_pares, persistencia_2023, pivo_mnl, pivo_lightgbm"
+validacao_escolha_temporal.csv,cpc,parte comum dos fluxos (0 a 1; 1 = previsão perfeita)
+validacao_escolha_temporal.csv,wmape_destino,MAPE ponderado da demanda recebida por município de atendimento
+validacao_escolha_temporal.csv,acerto_principal_destino,fração das origens com o principal destino acertado
+validacao_escolha_temporal.csv,tempo_medio_obs,tempo médio observado (min)
+validacao_escolha_temporal.csv,tempo_medio_prev,tempo médio previsto (min)
+validacao_escolha_temporal.csv,(tabela),Validação temporal do modelo de escolha do paciente (2024-2025)
+validacao_escolha_experimentos.csv,piloto,parto ou uti
+validacao_escolha_experimentos.csv,tipo,"abertura, ampliacao, reducao, fechamento ou todos"
+validacao_escolha_experimentos.csv,n_eventos,eventos identificados no CNES 2021-2025
+validacao_escolha_experimentos.csv,n_avaliaveis,eventos com origens afetadas
+validacao_escolha_experimentos.csv,cpc_medio_gravitacional_mnl,CPC médio nas origens afetadas - gravitacional_mnl
+validacao_escolha_experimentos.csv,cpc_medio_lightgbm_pares,CPC médio nas origens afetadas - lightgbm_pares
+validacao_escolha_experimentos.csv,cpc_medio_pivo_mnl,CPC médio nas origens afetadas - pivo_mnl
+validacao_escolha_experimentos.csv,cpc_medio_pivo_lightgbm,CPC médio nas origens afetadas - pivo_lightgbm
+validacao_escolha_experimentos.csv,cpc_medio_persistencia,CPC médio nas origens afetadas - persistencia
+validacao_escolha_experimentos.csv,n_pivo_mnl_vence_margem,"eventos em que o pivô MNL supera a persistência por 0,005 ou mais de CPC"
+validacao_escolha_experimentos.csv,n_pivo_mnl_empata_margem,"eventos com diferença de CPC menor que 0,005 (empate)"
+validacao_escolha_experimentos.csv,n_pivo_mnl_perde_margem,"eventos em que o pivô MNL perde por 0,005 ou mais"
+validacao_escolha_experimentos.csv,(tabela),Validação por experimento natural (abertura/fechamento/mudança de leitos 2021-2025); o modelo dos cenários foi escolhido nestes mesmos eventos
+validacao_escolha_experimentos_ano.csv,piloto,parto ou uti
+validacao_escolha_experimentos_ano.csv,ano_evento,ano T da mudança de oferta
+validacao_escolha_experimentos_ano.csv,anos_ajuste,anos usados no ajuste (2020 a T-1)
+validacao_escolha_experimentos_ano.csv,anos_teste,"anos avaliados (T e T+1, até 2025)"
+validacao_escolha_experimentos_ano.csv,n_eventos,eventos do ano
+validacao_escolha_experimentos_ano.csv,n_avaliaveis,eventos com origens afetadas
+validacao_escolha_experimentos_ano.csv,tipos,tipos de evento do ano
+validacao_escolha_experimentos_ano.csv,cpc_medio_pivo_mnl,CPC médio do pivô MNL
+validacao_escolha_experimentos_ano.csv,cpc_medio_persistencia,CPC médio da persistência
+validacao_escolha_experimentos_ano.csv,n_pivo_vence,eventos em que o pivô supera a persistência (qualquer margem)
+validacao_escolha_experimentos_ano.csv,n_pivo_vence_margem,"idem, por 0,005 ou mais"
+validacao_escolha_experimentos_ano.csv,n_empate_margem,"diferença menor que 0,005"
+validacao_escolha_experimentos_ano.csv,n_pivo_perde_margem,"pivô perde por 0,005 ou mais"
+validacao_escolha_experimentos_ano.csv,dif_cpc_mediana,mediana da diferença de CPC (pivô - persistência)
+validacao_escolha_experimentos_ano.csv,(tabela),Experimentos naturais por ano: eventos do mesmo ano compartilham ajuste e janela de teste (não são independentes)
+otimizacao_solucoes.csv,piloto,parto ou uti
+otimizacao_solucoes.csv,modelo,"situacao_2025, p_mediana, mclp, uti_capacitado, uti_regional"
+otimizacao_solucoes.csv,limiar_min,limiar de cobertura do MCLP (min)
+otimizacao_solucoes.csv,k,número de unidades novas
+otimizacao_solucoes.csv,abertos,códigos IBGE dos municípios escolhidos
+otimizacao_solucoes.csv,nomes_abertos,municípios escolhidos
+otimizacao_solucoes.csv,tempo_medio,"tempo médio (min) até a unidade mais próxima, ponderado pela demanda projetada 2030"
+otimizacao_solucoes.csv,km_medio,km médio correspondente
+otimizacao_solucoes.csv,pct_ate_60,% da demanda 2030 a até 60 min de uma unidade
+otimizacao_solucoes.csv,pct_ate_120,% da demanda 2030 a até 120 min
+otimizacao_solucoes.csv,ganho_tempo_medio_min,redução do tempo médio em relação a 2025
+otimizacao_solucoes.csv,ganho_pct_ate_60,ganho em pontos percentuais
+otimizacao_solucoes.csv,ganho_pct_ate_120,ganho em pontos percentuais
+otimizacao_solucoes.csv,nao_atendida,UTI capacitado: internações/ano acima da capacidade (ocupação-alvo 85%) Arredondada ao inteiro no site.
+otimizacao_solucoes.csv,leitos_deficit,UTI capacitado: leitos SUS equivalentes ao excesso de demanda
+otimizacao_solucoes.csv,tempo_medio_atendida,UTI capacitado: tempo médio da demanda alocada respeitando a capacidade
+otimizacao_solucoes.csv,provisorio,true: demanda 2030 provisória
+otimizacao_solucoes.csv,(tabela),"Soluções de localização (scipy.optimize.milp/HiGHS) para k = 1..5 unidades novas, 2030"
+otimizacao_sensibilidade.csv,piloto,parto ou uti
+otimizacao_sensibilidade.csv,modelo,"p_mediana, mclp ou uti_regional"
+otimizacao_sensibilidade.csv,limiar_min,limiar do MCLP (min)
+otimizacao_sensibilidade.csv,variante,"variante da demanda 2030 (principal, cenários constante/tendência, calibrada ao IBGE, limites municipais do IC80, versão anterior sem ancoragem) ou demanda observada 2025"
+otimizacao_sensibilidade.csv,k,unidades novas (1 a 3)
+otimizacao_sensibilidade.csv,demanda_mt_2030,demanda total da variante atendida em MT Arredondada ao inteiro no site.
+otimizacao_sensibilidade.csv,objetivo_sem_unidade_nova,valor do objetivo sem unidade nova
+otimizacao_sensibilidade.csv,abertos,códigos IBGE da melhor solução (força bruta)
+otimizacao_sensibilidade.csv,nomes_abertos,municípios da melhor solução
+otimizacao_sensibilidade.csv,objetivo,tempo médio (min; p-mediana e regional) ou % da demanda coberta (MCLP)
+otimizacao_sensibilidade.csv,segunda_abertos,códigos da segunda melhor solução
+otimizacao_sensibilidade.csv,segunda_nomes,municípios da segunda melhor solução
+otimizacao_sensibilidade.csv,segunda_objetivo,objetivo da segunda melhor
+otimizacao_sensibilidade.csv,dif_pct_objetivo,"diferença entre a melhor e a segunda, em % do objetivo"
+otimizacao_sensibilidade.csv,dif_pct_ganho,diferença em % do ganho da melhor solução sobre a situação sem unidade nova
+otimizacao_sensibilidade.csv,objetivo_tipo,o que o objetivo mede
+otimizacao_sensibilidade.csv,quase_empate,true: p-mediana/regional com diferença < 1% do objetivo; MCLP com diferença < 10% do ganho
+otimizacao_sensibilidade.csv,igual_principal,true se a solução coincide com a da variante principal
+otimizacao_sensibilidade.csv,provisorio,true: depende da projeção provisória
+otimizacao_sensibilidade.csv,(tabela),Sensibilidade da solução ótima (k = 1 a 3) à variante de demanda; segunda melhor solução e quase-empates
+uti_necessidade_regional.csv,co_regsaud,código da região de saúde
+uti_necessidade_regional.csv,demanda_residentes_2030,"internações com UTI adulto projetadas para os residentes atendidos em MT (2030, PROVISÓRIA) Arredondada ao inteiro no site."
+uti_necessidade_regional.csv,leitos_uti_sus_2025,leitos SUS de UTI adulto existentes na região (2025)
+uti_necessidade_regional.csv,leitos_necessarios_2030,"critério empírico: demanda x permanência média / (365 x 0,85)"
+uti_necessidade_regional.csv,saldo_leitos,existentes - necessários (negativo = déficit)
+uti_necessidade_regional.csv,nome_regsaud,região de saúde
+uti_necessidade_regional.csv,permanencia_media_dias,permanência média em UTI adulto 2024-2025
+uti_necessidade_regional.csv,ocupacao_alvo,taxa de ocupação-alvo
+uti_necessidade_regional.csv,demanda_residentes_2025_obs,internações com UTI adulto OBSERVADAS dos residentes em 2025 (atendidas em MT)
+uti_necessidade_regional.csv,leitos_necessarios_2025_obs,mesmo critério com a demanda observada de 2025 (não depende da projeção)
+uti_necessidade_regional.csv,saldo_leitos_2025_obs,existentes - necessários com a demanda de 2025
+uti_necessidade_regional.csv,provisorio,true: as colunas de 2030 dependem da projeção provisória
+uti_necessidade_regional.csv,(tabela),UTI adulto: necessidade empírica de leitos SUS por região de saúde em 2030 (PROVISÓRIA; não é parâmetro normativo) e com a demanda observada de 2025
+cenarios_resumo.csv,piloto,parto ou uti
+cenarios_resumo.csv,cenario,referencia_2030 (sem unidade nova) ou solução do L4
+cenarios_resumo.csv,modelo_l4,modelo de otimização de origem
+cenarios_resumo.csv,k,unidades novas
+cenarios_resumo.csv,abertos,códigos IBGE
+cenarios_resumo.csv,nomes_abertos,municípios
+cenarios_resumo.csv,modulo_leitos,leitos atribuídos a cada unidade nova
+cenarios_resumo.csv,tempo_medio_esperado,"tempo médio esperado (min) com a escolha do paciente (L2, pivô MNL)"
+cenarios_resumo.csv,km_medio_esperado,km médio esperado
+cenarios_resumo.csv,pct_ate_60,% da demanda que se desloca até 60 min
+cenarios_resumo.csv,pct_ate_120,idem até 120 min
+cenarios_resumo.csv,fluxo_para_novas,atendimentos/ano previstos nas unidades novas (2030) Arredondado ao inteiro no site.
+cenarios_resumo.csv,fluxo_para_novas_proprios_residentes,parte de fluxo_para_novas vinda dos residentes do próprio município da unidade nova Arredondado ao inteiro no site.
+cenarios_resumo.csv,ganho_tempo_esperado_min,redução do tempo médio esperado em relação à referência 2030
+cenarios_resumo.csv,ganho_tempo_mais_proximo_min,"redução supondo ida à unidade mais próxima, com o mesmo conjunto de oferta do L2 (todo município com >= 0,5 leito)"
+cenarios_resumo.csv,ganho_tempo_mais_proximo_l4_min,redução supondo ida à unidade mais próxima entre os serviços existentes do L4 (parto: só maternidades com >= 52 partos/ano)
+cenarios_resumo.csv,ganho_pct_ate_60,pontos percentuais
+cenarios_resumo.csv,ganho_pct_ate_120,pontos percentuais
+cenarios_resumo.csv,ocupacao_implicita_media,UTI: ocupação média implícita dos leitos SUS (internações x permanência / leitos x 365)
+cenarios_resumo.csv,ocupacao_implicita_max,UTI: maior ocupação implícita entre os destinos (o L5 não respeita capacidade)
+cenarios_resumo.csv,destinos_ocupacao_acima_100pct,UTI: destinos com ocupação implícita acima de 100%
+cenarios_resumo.csv,tempo_medio_esperado_capacidade,UTI: tempo médio esperado na variante com restrição de capacidade (ocupação <= 100%)
+cenarios_resumo.csv,ganho_tempo_esperado_capacidade_min,UTI: ganho na variante com restrição de capacidade
+cenarios_resumo.csv,provisorio,true: demanda 2030 provisória
+cenarios_resumo.csv,(tabela),Cenários 2030: soluções do L4 com redistribuição dos fluxos pelo modelo de escolha (L2)
+cenarios_ganho_mun.csv,piloto,parto ou uti
+cenarios_ganho_mun.csv,cenario,solução do L4
+cenarios_ganho_mun.csv,cod_mun6,código IBGE do município de residência
+cenarios_ganho_mun.csv,nome_municipio,município
+cenarios_ganho_mun.csv,nome_regsaud,região de saúde
+cenarios_ganho_mun.csv,tempo_medio_ref,tempo médio esperado sem unidade nova (min)
+cenarios_ganho_mun.csv,tempo_medio_cenario,tempo médio esperado no cenário (min)
+cenarios_ganho_mun.csv,ganho_min_por_paciente,minutos poupados por paciente
+cenarios_ganho_mun.csv,provisorio,true: demanda 2030 provisória
+cenarios_ganho_mun.csv,(tabela),Cenários 2030: ganho por município de residência

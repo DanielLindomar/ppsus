@@ -1,0 +1,80 @@
+comarca,periodo,populacao_media,acoes_saude,acoes_publica,acoes_suplementar,taxa_100mil,taxa_eb_local_100mil,taxa_publica_eb_local_100mil,limite_inferior,faixa_taxa_suavizada,suprimido
+Alta Floresta,2022-2024,70275,579,555,,274.6,275.0,260.0,False,200 a 300,True
+Alto Araguaia,2022-2024,20474,35,,,57.0,60.0,,False,50 a 100,True
+Alto Garças,2022-2024,13378,64,,,159.5,155.0,,False,150 a 200,True
+Alto Taquari,2022-2024,11236,14,9,5,41.5,50.0,40.0,False,50 a 100,False
+Apiacás,2022-2024,8641,21,21,0,81.0,80.0,80.0,False,50 a 100,False
+Araputanga,2022-2024,19115,80,,,139.5,140.0,,False,100 a 150,True
+Arenápolis,2022-2024,16754,67,58,,133.3,135.0,120.0,False,100 a 150,True
+Aripuanã,2022-2024,25315,69,,,90.9,90.0,,False,50 a 100,True
+Barra do Bugres,2022-2024,55939,146,131,21,87.0,85.0,80.0,False,50 a 100,False
+Barra do Garças,2022-2024,94917,167,157,15,58.6,60.0,55.0,False,50 a 100,False
+Brasnorte,2022-2024,17249,79,,,152.7,150.0,,False,150 a 200,True
+Campinápolis,2022-2024,15530,23,23,0,49.4,60.0,60.0,False,50 a 100,False
+Campo Novo do Parecis,2022-2024,47951,87,76,,60.5,65.0,55.0,False,50 a 100,True
+Campo Verde,2022-2024,46198,106,88,18,76.5,85.0,65.0,False,50 a 100,False
+Canarana,2022-2024,26752,79,74,,98.4,95.0,90.0,False,50 a 100,True
+Chapada dos Guimarães,2022-2024,26300,43,,,54.5,75.0,,False,50 a 100,True
+Cláudia,2022-2024,13382,71,64,,176.9,215.0,200.0,False,200 a 300,True
+Colniza,2022-2024,25928,87,87,,111.8,105.0,105.0,False,100 a 150,True
+Colíder,2022-2024,31689,208,,6,218.8,220.0,,False,200 a 300,True
+Comodoro,2022-2024,37895,75,,,66.0,70.0,,False,50 a 100,True
+Cotriguaçu,2022-2024,20884,52,,,83.0,85.0,,False,50 a 100,True
+Cuiabá,2022-2024,671842,2362,1506,938,117.2,115.0,75.0,True,100 a 150,False
+Cáceres,2022-2024,90652,424,357,79,155.9,155.0,130.0,False,150 a 200,False
+Diamantino,2022-2024,30072,171,158,,189.5,190.0,175.0,False,150 a 200,True
+Dom Aquino,2022-2024,7893,30,30,0,126.7,125.0,120.0,False,100 a 150,False
+Feliz Natal,2022-2024,10542,58,,,183.4,185.0,,False,150 a 200,True
+Guarantã do Norte,2022-2024,37658,307,295,,271.7,270.0,260.0,False,200 a 300,True
+Guiratinga,2022-2024,13749,44,,,106.7,105.0,,False,100 a 150,True
+Itaúba,2022-2024,9425,79,,,279.4,275.0,,False,200 a 300,True
+Itiquira,2022-2024,12377,22,,,59.2,65.0,,False,50 a 100,True
+Jaciara,2022-2024,33282,103,83,28,103.2,105.0,80.0,False,100 a 150,False
+Jauru,2022-2024,11370,31,31,0,90.9,100.0,95.0,False,50 a 100,False
+Juara,2022-2024,35401,146,,,137.5,140.0,,False,100 a 150,True
+Juscimeira,2022-2024,11550,62,56,,178.9,125.0,105.0,False,100 a 150,True
+Juína,2022-2024,54314,147,134,,90.2,90.0,85.0,False,50 a 100,True
+Lucas do Rio Verde,2022-2024,87993,344,303,47,130.3,130.0,115.0,False,100 a 150,False
+Marcelândia,2022-2024,11405,76,,,222.1,215.0,,False,200 a 300,True
+Matupá,2022-2024,20749,72,72,,115.7,120.0,120.0,False,100 a 150,True
+Mirassol D'Oeste,2022-2024,32082,170,163,12,176.6,160.0,150.0,False,150 a 200,False
+Nobres,2022-2024,15622,96,,10,204.8,200.0,,False,150 a 200,True
+Nortelândia,2022-2024,5945,52,,,291.5,260.0,,False,200 a 300,True
+Nova Canaã do Norte,2022-2024,11739,73,73,0,207.3,215.0,215.0,False,200 a 300,False
+Nova Monte Verde,2022-2024,22279,25,,,37.4,40.0,,False,0 a 50,True
+Nova Mutum,2022-2024,61879,92,78,19,49.6,50.0,45.0,False,50 a 100,False
+Nova Ubiratã,2022-2024,11818,10,10,0,28.2,40.0,40.0,False,0 a 50,False
+Nova Xavantina,2022-2024,24913,42,,,56.2,60.0,,False,50 a 100,True
+Novo São Joaquim,2022-2024,7039,8,8,0,37.9,50.0,50.0,False,0 a 50,False
+Paranatinga,2022-2024,36231,105,90,,96.6,95.0,85.0,False,50 a 100,True
+Paranaíta,2022-2024,11830,62,57,,174.7,175.0,165.0,False,150 a 200,True
+Pedra Preta,2022-2024,18393,181,173,14,328.0,315.0,300.0,False,300 ou mais,False
+Peixoto de Azevedo,2022-2024,33156,136,,5,136.7,135.0,,False,100 a 150,True
+Poconé,2022-2024,31243,181,159,,193.1,190.0,165.0,False,150 a 200,True
+Pontes e Lacerda,2022-2024,60123,389,374,20,215.7,215.0,205.0,False,200 a 300,False
+Porto Alegre do Norte,2022-2024,59174,125,,6,70.4,70.0,,False,50 a 100,True
+Porto Esperidião,2022-2024,13087,58,,,147.7,155.0,,False,150 a 200,True
+Porto dos Gaúchos,2022-2024,8969,58,58,,215.5,175.0,170.0,False,150 a 200,True
+Poxoréo,2022-2024,23932,70,,,97.5,100.0,,False,50 a 100,True
+Primavera do Leste,2022-2024,93163,423,378,54,151.3,150.0,135.0,False,150 a 200,False
+Querência,2022-2024,28281,45,,,53.0,55.0,,False,50 a 100,True
+Ribeirão Cascalheira,2022-2024,19614,22,22,0,37.4,45.0,45.0,False,0 a 50,False
+Rio Branco,2022-2024,12948,63,,,162.2,165.0,,False,150 a 200,True
+Rondonópolis,2022-2024,254833,809,690,140,105.8,105.0,90.0,False,100 a 150,False
+Rosário Oeste,2022-2024,22781,61,,,89.3,90.0,,False,50 a 100,True
+Santo Antônio do Leverger,2022-2024,23243,54,48,,77.4,80.0,70.0,False,50 a 100,True
+Sapezal,2022-2024,30212,272,265,,300.1,300.0,290.0,False,200 a 300,True
+Sinop,2022-2024,211617,1954,1757,205,307.8,305.0,275.0,False,300 ou mais,False
+Sorriso,2022-2024,123882,592,534,68,159.3,160.0,145.0,False,150 a 200,False
+São Felix do Araguaia,2022-2024,24347,50,50,,68.5,70.0,70.0,False,50 a 100,True
+São José do Rio Claro,2022-2024,20597,72,66,6,116.5,115.0,105.0,False,100 a 150,False
+São José dos Quatro Marcos,2022-2024,17839,82,,5,153.2,150.0,,False,150 a 200,True
+Tabaporã,2022-2024,9863,26,,,87.9,110.0,,False,100 a 150,True
+Tangará da Serra,2022-2024,109476,1188,1123,,361.7,360.0,340.0,False,300 ou mais,True
+Tapurah,2022-2024,22611,89,82,7,131.2,130.0,120.0,False,100 a 150,False
+Terra Nova do Norte,2022-2024,15213,40,,,87.6,100.0,,False,50 a 100,True
+Vera,2022-2024,13093,56,,,142.6,145.0,,False,100 a 150,True
+Vila Bela da Santíssima Trindade,2022-2024,17078,60,,,117.1,120.0,,False,100 a 150,True
+Vila Rica,2022-2024,30262,31,31,0,34.1,35.0,35.0,False,0 a 50,False
+Várzea Grande,2022-2024,319617,568,427,152,59.2,60.0,45.0,True,50 a 100,False
+Água Boa,2022-2024,40917,120,,,97.8,95.0,,False,50 a 100,True

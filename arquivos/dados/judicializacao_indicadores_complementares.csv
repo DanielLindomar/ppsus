@@ -1,0 +1,21 @@
+grupo,indicador,recorte,valor,unidade,descricao
+cobertura,razao_documentos_datajud_painel_cnj,2020,0.9651,razao,documentos de saude do TJMT na coleta / casos novos de saude do painel Estatisticas Processuais de Direito a Saude do CNJ (um documento por grau)
+cobertura,razao_documentos_datajud_painel_cnj,2021,0.926,razao,documentos de saude do TJMT na coleta / casos novos de saude do painel Estatisticas Processuais de Direito a Saude do CNJ (um documento por grau)
+cobertura,razao_documentos_datajud_painel_cnj,2022,0.8965,razao,documentos de saude do TJMT na coleta / casos novos de saude do painel Estatisticas Processuais de Direito a Saude do CNJ (um documento por grau)
+cobertura,razao_documentos_datajud_painel_cnj,2023,0.898,razao,documentos de saude do TJMT na coleta / casos novos de saude do painel Estatisticas Processuais de Direito a Saude do CNJ (um documento por grau)
+cobertura,razao_documentos_datajud_painel_cnj,2024,0.8849,razao,documentos de saude do TJMT na coleta / casos novos de saude do painel Estatisticas Processuais de Direito a Saude do CNJ (um documento por grau)
+cobertura,razao_documentos_datajud_painel_cnj,2025,0.8904,razao,documentos de saude do TJMT na coleta / casos novos de saude do painel Estatisticas Processuais de Direito a Saude do CNJ (um documento por grau)
+cobertura,razao_documentos_datajud_painel_cnj,2026,0.8694,razao,documentos de saude do TJMT na coleta / casos novos de saude do painel Estatisticas Processuais de Direito a Saude do CNJ (um documento por grau)
+justica_federal,documentos_tjmt,coleta completa,100176.0,documentos,documentos de saude do TJMT coletados (todos os graus e anos)
+justica_federal,documentos_trf1_mt,coleta completa,3704.0,documentos,documentos de saude do TRF1 nas subsecoes de Mato Grosso
+justica_federal,pct_documentos_trf1_sobre_tjmt,coleta completa,3.7,%,documentos do TRF1 em MT / documentos do TJMT
+atribuicao,codigos_origem_identificados,TJMT,94.0,codigos,codigos de unidade de origem (OOOO do numero CNJ) encontrados nos processos
+atribuicao,codigos_origem_associados_comarcas,TJMT,92.0,codigos,codigos associados a uma das 79 comarcas instaladas pelos nomes dos orgaos julgadores locais
+comarcas,correlacao_postos_taxa_suavizada,2022x2024,0.639,Spearman,correlacao de postos entre anos da taxa suavizada (Bayes empirico local) das 79 comarcas
+comarcas,correlacao_postos_taxa_suavizada,2023x2024,0.686,Spearman,correlacao de postos entre anos da taxa suavizada (Bayes empirico local) das 79 comarcas
+comarcas,correlacao_postos_taxa_suavizada,2022x2025,0.584,Spearman,correlacao de postos entre anos da taxa suavizada (Bayes empirico local) das 79 comarcas
+j2_validacao,pseudo_r2_fora_da_amostra,NB2 completo sem as indicadoras de entrancia,0.103,pseudo-R2,"1 - deviance de Poisson do modelo / deviance da taxa constante, validacao por grupos de comarcas (GroupKFold 5)"
+j2_validacao,pseudo_r2_fora_da_amostra,NB2 completo (com entrancia),-0.444,pseudo-R2,"1 - deviance de Poisson do modelo / deviance da taxa constante, validacao por grupos de comarcas (GroupKFold 5)"
+j2_validacao,pseudo_r2_fora_da_amostra,LightGBM Poisson,0.002,pseudo-R2,"1 - deviance de Poisson do modelo / deviance da taxa constante, validacao por grupos de comarcas (GroupKFold 5)"
+j3_validacao,dm_p_minimo,"total; pares ETS, LightGBM e SARIMA; h 1 a 3",0.236,p-valor,menor p dos 9 testes de Diebold-Mariano (correcao HLN)
+j3_validacao,dm_p_maximo,"total; pares ETS, LightGBM e SARIMA; h 1 a 3",0.778,p-valor,maior p dos 9 testes de Diebold-Mariano (correcao HLN)

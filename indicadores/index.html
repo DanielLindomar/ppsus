@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3f3c2766e82e7a818a36b889e02efff9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c0798e995a665d3d6f8fc6b7b3a23fbc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-xl " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
@@ -149,6 +149,33 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../previsao/index.html"> 
+<span class="menu-text">Previsão</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-localização" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Localização</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-localização">    
+        <li>
+    <a class="dropdown-item" href="../localizacao/index.html">
+ <span class="dropdown-text">Visão geral</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../localizacao/parto.html">
+ <span class="dropdown-text">Atenção ao parto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../localizacao/uti-adulto.html">
+ <span class="dropdown-text">UTI adulto</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../judicializacao/index.html"> 
+<span class="menu-text">Judicialização</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../dados/index.html"> 
 <span class="menu-text">Dados</span></a>
@@ -696,6 +723,26 @@ Definições, ressalvas e anomalias conhecidas em
     "p.p.": "Pontos percentuais: diferença entre dois percentuais",
     "WGS84": "Sistema de referência geodésico mundial usado nas malhas (latitude e longitude em graus)",
     "EPSG:4326": "Código do sistema de coordenadas WGS84 (latitude e longitude em graus)",
+    "MASE": "Erro absoluto médio escalado: erro da previsão dividido pelo erro de uma regra ingênua; abaixo de 1, o modelo erra menos que ela",
+    "SARIMA": "Modelo estatístico de séries temporais com tendência e sazonalidade (média móvel integrada autorregressiva sazonal)",
+    "LightGBM": "Modelo de aprendizado de máquina com árvores de decisão em sequência (gradient boosting)",
+    "HGB": "Gradient boosting por histogramas: modelo de aprendizado de máquina com árvores de decisão em sequência",
+    "MLP": "Perceptron multicamadas: rede neural artificial simples",
+    "ETS": "Suavização exponencial com erro, tendência e sazonalidade (Holt-Winters)",
+    "SRAG": "Síndrome respiratória aguda grave",
+    "SIVEP-Gripe": "Sistema de Informação de Vigilância Epidemiológica da Gripe: notificações de SRAG (Ministério da Saúde)",
+    "SE": "Semana epidemiológica: semana de domingo a sábado, numerada no ano",
+    "VPP": "Valor preditivo positivo: parcela dos avisos de alerta que se confirmaram",
+    "P90": "Percentil 90: valor que só 10% das semanas de referência ultrapassaram",
+    "WMAPE": "Erro absoluto médio ponderado: soma dos erros absolutos dividida pela soma observada",
+    "CPC": "Common Part of Commuters: parte comum entre os fluxos previstos e os observados (1 = previsão perfeita)",
+    "E2SFCA": "Método de áreas de captação flutuantes em duas etapas: índice de acesso que compara leitos ao alcance com a população que disputa esses leitos",
+    "OSRM": "Open Source Routing Machine: cálculo de rotas e tempos rodoviários sobre o mapa colaborativo OpenStreetMap",
+    "CNJ": "Conselho Nacional de Justiça",
+    "DataJud": "Base Nacional de Dados do Poder Judiciário, mantida pelo CNJ (API pública de metadados processuais)",
+    "TJMT": "Tribunal de Justiça do Estado de Mato Grosso",
+    "TRF1": "Tribunal Regional Federal da 1ª Região (Justiça Federal; inclui as subseções de Mato Grosso)",
+    "TPU": "Tabelas Processuais Unificadas do CNJ: códigos padronizados de classes, assuntos e movimentos",
     "SECTICS": "Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (Ministério da Saúde)",
     "SECITECI": "Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso"
   };
@@ -1174,7 +1221,7 @@ Definições, ressalvas e anomalias conhecidas em
 <p><span class="rodape-rotulo">Financiamento</span> <img src="../assets/logos/ppsus-mt.png" class="rodape-logo img-fluid" alt="PPSUS — Programa Pesquisa para o SUS: Mato Grosso"> <img src="../assets/logos/fapemat.png" class="rodape-logo img-fluid" alt="FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso"> <img src="../assets/logos/ses-mt.png" class="rodape-logo img-fluid" alt="SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso"> <img src="../assets/logos/cnpq.png" class="rodape-logo img-fluid" alt="CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico"> <img src="../assets/logos/ministerio-saude-sus.png" class="rodape-logo img-fluid" alt="SUS · Ministério da Saúde · Governo do Brasil"></p>
 </div>
 <p><span class="rodape-citacao">Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.</span></p>
-<p><span class="rodape-versao">Versão 0.3 · atualizado em 16/10/2026 · Conteúdo sob licença CC BY 4.0 · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
+<p><span class="rodape-versao">Versão 0.4 · atualizado em 17/10/2026 · Conteúdo sob licença CC BY 4.0, exceto os arquivos e gráficos derivados do DataJud/CNJ (uso não comercial) · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
 </div>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div>
     <div class="nav-footer-right">

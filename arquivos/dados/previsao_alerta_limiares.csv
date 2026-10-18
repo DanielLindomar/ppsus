@@ -1,0 +1,69 @@
+versao,alvo,cod_regiao,regiao,regra,limiar,limiar_suprimido,n_semanas
+nowcast_preliminar_2026-10-17,j00_j99,51001,Alto Tapajós,p90,26.40000000000001,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51001,Alto Tapajós,p80,18.40000000000001,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51002,Baixada Cuiabana,p90,90.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51002,Baixada Cuiabana,p80,81.4,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51003,Araguaia Xingu,p90,19.700000000000003,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51003,Araguaia Xingu,p80,16.400000000000006,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51004,Centro Norte,p90,22.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51004,Centro Norte,p80,19.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51005,Garças Araguaia,p90,32.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51005,Garças Araguaia,p80,27.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51006,Médio Araguaia,p90,35.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51006,Médio Araguaia,p80,30.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51007,Médio Norte Matogrossense,p90,47.500000000000014,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51007,Médio Norte Matogrossense,p80,38.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51008,Noroeste Matogrossense,p90,39.7,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51008,Noroeste Matogrossense,p80,33.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51009,Norte Araguaia Karajá,p90,6.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51009,Norte Araguaia Karajá,p80,5.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51010,Norte Matogrossense,p90,16.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51010,Norte Matogrossense,p80,14.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51011,Oeste Matogrossense,p90,35.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51011,Oeste Matogrossense,p80,32.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51012,Sudoeste Matogrossense,p90,35.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51012,Sudoeste Matogrossense,p80,31.40000000000001,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51013,Sul Matogrossense,p90,101.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51013,Sul Matogrossense,p80,92.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51014,Teles Pires,p90,59.7,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51014,Teles Pires,p80,49.400000000000006,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51015,Vale do Peixoto,p90,25.10000000000001,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51015,Vale do Peixoto,p80,19.40000000000001,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51016,Vale dos Arinos,p90,11.700000000000005,False,104
+nowcast_preliminar_2026-10-17,j00_j99,51016,Vale dos Arinos,p80,9.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99,MT,Mato Grosso,p90,576.2,False,104
+nowcast_preliminar_2026-10-17,j00_j99,MT,Mato Grosso,p80,480.8,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51001,Alto Tapajós,p90,11.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51001,Alto Tapajós,p80,8.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51002,Baixada Cuiabana,p90,37.7,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51002,Baixada Cuiabana,p80,32.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51003,Araguaia Xingu,p90,10.700000000000005,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51003,Araguaia Xingu,p80,8.400000000000006,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51004,Centro Norte,p90,10.700000000000005,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51004,Centro Norte,p80,8.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51005,Garças Araguaia,p90,13.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51005,Garças Araguaia,p80,10.400000000000006,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51006,Médio Araguaia,p90,20.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51006,Médio Araguaia,p80,15.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51007,Médio Norte Matogrossense,p90,28.40000000000001,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51007,Médio Norte Matogrossense,p80,19.40000000000001,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51008,Noroeste Matogrossense,p90,23.700000000000003,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51008,Noroeste Matogrossense,p80,18.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51009,Norte Araguaia Karajá,p90,,True,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51009,Norte Araguaia Karajá,p80,,True,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51010,Norte Matogrossense,p90,6.700000000000003,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51010,Norte Matogrossense,p80,5.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51011,Oeste Matogrossense,p90,18.700000000000003,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51011,Oeste Matogrossense,p80,16.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51012,Sudoeste Matogrossense,p90,18.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51012,Sudoeste Matogrossense,p80,15.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51013,Sul Matogrossense,p90,38.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51013,Sul Matogrossense,p80,35.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51014,Teles Pires,p90,22.700000000000003,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51014,Teles Pires,p80,19.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51015,Vale do Peixoto,p90,13.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51015,Vale do Peixoto,p80,9.400000000000006,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51016,Vale dos Arinos,p90,5.0,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,51016,Vale dos Arinos,p80,,True,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,MT,Mato Grosso,p90,257.1,False,104
+nowcast_preliminar_2026-10-17,j00_j99_menor5,MT,Mato Grosso,p80,225.40000000000003,False,104

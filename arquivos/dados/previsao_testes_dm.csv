@@ -1,0 +1,481 @@
+versao,otica,nivel,h,modelo_a,modelo_b,n,perda_a,perda_b,estat_hln,p_valor,rotulo_a,rotulo_b
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,hgb,sarima,117,35.78758393332315,45.45268102818723,-3.337391244252547,0.0011370156494783,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,hgb,sarima,117,0.9628204053462364,1.1517780621826348,-8.685209439692267,2.7997571525825305e-14,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,hgb,ingenuo_sazonal,117,35.78758393332315,69.58974358974359,-7.229007700351271,5.5814969570587433e-11,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,hgb,ingenuo_sazonal,117,0.9628204053462364,1.3906030426307154,-13.116165989541354,1.172422710799771e-24,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,sarima,ingenuo_sazonal,117,45.45268102818723,69.58974358974359,-4.370657392281629,2.71374294723428e-05,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,sarima,ingenuo_sazonal,117,1.1517780621826348,1.3906030426307154,-7.850057020502984,2.2883905029374177e-12,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,hgb,ingenuo_ultima,117,35.78758393332315,40.888888888888886,-1.613238443259952,0.1094099504912812,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,hgb,ingenuo_ultima,117,0.9628204053462364,1.124433407146846,-7.968827130005544,1.2315328219887141e-12,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,sarima,ingenuo_ultima,117,45.45268102818723,40.888888888888886,1.413802058805459,0.1600981675168726,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,sarima,ingenuo_ultima,117,1.1517780621826348,1.124433407146846,1.033336019653571,0.303596211706042,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,lgbm,sarima,117,36.21673211399493,45.45268102818723,-3.3527635873613946,0.0010810184261021,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,lgbm,sarima,117,0.93519413553039,1.1517780621826348,-10.037761643678012,1.9193113799699458e-17,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,hgb,ingenuo_sazonal_aj,117,35.78758393332315,59.49212028548836,-5.666993590937889,1.076846256495336e-07,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,hgb,ingenuo_sazonal_aj,117,0.9628204053462364,1.4124121519766573,-15.524343227257772,4.3229746957181776e-30,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,sarima,ingenuo_sazonal_aj,117,45.45268102818723,59.49212028548836,-2.9031244457281256,0.0044235191899386,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,sarima,ingenuo_sazonal_aj,117,1.1517780621826348,1.4124121519766573,-9.637266539575284,1.6795846859582902e-16,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,lgbm,hgb,117,36.21673211399493,35.78758393332315,0.390145329056761,0.6971445601660978,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,lgbm,hgb,117,0.93519413553039,0.9628204053462364,-4.6143289773632965,1.0243667544308344e-05,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,hgb_sem_exog,hgb,117,39.45468069403472,35.78758393332315,2.3458056704375303,0.0206838520822966,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,hgb_sem_exog,hgb,117,0.9661967624679813,0.9628204053462364,0.3546145217923617,0.7235222568063855,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,hgb_pandemia,hgb,117,38.092199159509015,35.78758393332315,1.4486887112295268,0.1501223333468954,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,hgb_pandemia,hgb,117,0.9658388817687116,0.9628204053462364,0.3259282899566849,0.7450658413072421,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,rf,lgbm,117,43.43672460529569,36.21673211399493,3.294735249276639,0.0013069519390211,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,rf,lgbm,117,0.974601942910661,0.93519413553039,3.4870684793324487,0.0006906221639135,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,rf,sarima,117,43.43672460529569,45.45268102818723,-0.5835050412760174,0.560686183162645,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,rf,sarima,117,0.974601942910661,1.1517780621826348,-7.189955512539725,6.803500246922141e-11,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,mlp,lgbm,117,44.42636249053515,36.21673211399493,3.7495035216904182,0.0002779487617614,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,mlp,lgbm,117,1.015209478737049,0.93519413553039,5.878911770754524,4.0539927185869017e-08,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,mlp,sarima,117,44.42636249053515,45.45268102818723,-0.285502979192847,0.7757679901277568,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,mlp,sarima,117,1.015209478737049,1.1517780621826348,-5.979654497378655,2.532244954769112e-08,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,rf,hgb,117,43.43672460529569,35.78758393332315,3.171466195505804,0.0019408981810908,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,rf,hgb,117,0.974601942910661,0.9628204053462364,0.9911287126391884,0.3236856671591782,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,mlp,hgb,117,44.42636249053515,35.78758393332315,3.958173693331377,0.0001305977341272,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,mlp,hgb,117,1.015209478737049,0.9628204053462364,3.6408613519868935,0.0004073578795721,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,rf,ingenuo_sazonal,117,43.43672460529569,69.58974358974359,-4.896914448685656,3.1795869382710623e-06,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,rf,ingenuo_sazonal,117,0.974601942910661,1.3906030426307154,-12.052529355561932,3.4781182912876125e-22,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,mlp,ingenuo_sazonal,117,44.42636249053515,69.58974358974359,-5.27392683021223,6.271657669149031e-07,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,mlp,ingenuo_sazonal,117,1.015209478737049,1.3906030426307154,-11.63325933160777,3.3436213936833105e-21,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,1,mlp,rf,117,44.42636249053515,43.43672460529569,0.3282610888664488,0.7433060586245112,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,1,mlp,rf,117,1.015209478737049,0.974601942910661,2.492115772415717,0.0141111881221037,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,hgb,sarima,116,43.55431273390006,52.45443702291176,-2.685893967235657,0.0083045390790133,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,hgb,sarima,116,1.0013511581527137,1.1910362884636645,-6.265393139656754,6.6663405639422675e-09,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,hgb,ingenuo_sazonal,116,43.55431273390006,69.90517241379311,-4.954726798898406,2.5138082221268745e-06,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,hgb,ingenuo_sazonal,116,1.0013511581527137,1.395565032986951,-11.909482170638723,8.541935363224408e-22,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,sarima,ingenuo_sazonal,116,52.45443702291176,69.90517241379311,-2.881336108837562,0.0047256860310312,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,sarima,ingenuo_sazonal,116,1.1910362884636645,1.395565032986951,-6.3768361891796985,3.903885329898775e-09,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,hgb,ingenuo_ultima,116,43.55431273390006,53.706896551724135,-1.7640653442366332,0.0803763668701733,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,hgb,ingenuo_ultima,116,1.0013511581527137,1.2061534430014662,-6.614263533856686,1.2318982833774366e-09,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,sarima,ingenuo_ultima,116,52.45443702291176,53.706896551724135,-0.2181421630625689,0.8277049671102928,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,sarima,ingenuo_ultima,116,1.1910362884636645,1.2061534430014662,-0.3460149183065385,0.7299637209710462,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,lgbm,sarima,116,41.92909983940353,52.45443702291176,-3.240956139833866,0.0015584830165529,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,lgbm,sarima,116,0.9821667492985282,1.1910362884636645,-6.531035173257679,1.849454423684236e-09,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,hgb,ingenuo_sazonal_aj,116,43.55431273390006,64.92695221355797,-3.678664982730992,0.0003581491095524,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,hgb,ingenuo_sazonal_aj,116,1.0013511581527137,1.4654758395859222,-13.150250044985604,1.1484946683087668e-24,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,sarima,ingenuo_sazonal_aj,116,52.45443702291176,64.92695221355797,-1.976390626204095,0.0505045409776664,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,sarima,ingenuo_sazonal_aj,116,1.1910362884636645,1.4654758395859222,-8.618675588845885,4.212952094718154e-14,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,lgbm,hgb,116,41.92909983940353,43.55431273390006,-1.5499369187196177,0.1239043503552893,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,lgbm,hgb,116,0.9821667492985282,1.0013511581527137,-2.652989485311701,0.009106180659119,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,hgb_sem_exog,hgb,116,46.45333732533078,43.55431273390006,1.6336139480606795,0.1050748100860332,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,hgb_sem_exog,hgb,116,1.0184881742496077,1.0013511581527137,1.4581752211654289,0.1475179119311995,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,hgb_pandemia,hgb,116,44.8200450499619,43.55431273390006,0.7211078467276578,0.4723065989658678,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,hgb_pandemia,hgb,116,0.997725971100714,1.0013511581527137,-0.312464124488402,0.7552537040897058,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,rf,lgbm,116,52.326174992511966,41.92909983940353,3.1060013608704,0.002388668202712,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,rf,lgbm,116,1.0504781753556285,0.9821667492985282,4.867062483571411,3.637159439414584e-06,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,rf,sarima,116,52.326174992511966,52.45443702291176,-0.0287753416833717,0.9770936447201034,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,rf,sarima,116,1.0504781753556285,1.1910362884636645,-3.785149343361543,0.0002457011670462,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,mlp,lgbm,116,51.43835255507464,41.92909983940353,2.9685270090738483,0.0036419522403799,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,mlp,lgbm,116,1.0767674987779747,0.9821667492985282,5.375036715581157,4.062224882425372e-07,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,mlp,sarima,116,51.43835255507464,52.45443702291176,-0.2637659713103807,0.7924323215768128,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,mlp,sarima,116,1.0767674987779747,1.1910362884636645,-3.583373251741846,0.000498676061209,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,rf,hgb,116,52.326174992511966,43.55431273390006,2.7393639074829204,0.0071373837845043,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,rf,hgb,116,1.0504781753556285,1.0013511581527137,3.427634537890392,0.0008455954903655,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,mlp,hgb,116,51.43835255507464,43.55431273390006,2.213504205419223,0.0288363579339153,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,mlp,hgb,116,1.0767674987779747,1.0013511581527137,3.990785504224052,0.0001162950475179,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,rf,ingenuo_sazonal,116,52.326174992511966,69.90517241379311,-2.658199475970485,0.0089747585100358,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,rf,ingenuo_sazonal,116,1.0504781753556285,1.395565032986951,-8.644398579581807,3.6755069897447486e-14,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,mlp,ingenuo_sazonal,116,51.43835255507464,69.90517241379311,-3.313754821636058,0.0012313499459988,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,mlp,ingenuo_sazonal,116,1.0767674987779747,1.395565032986951,-8.573091032610908,5.364590172585288e-14,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,2,mlp,rf,116,51.43835255507464,52.326174992511966,-0.1968461163127316,0.8442954294167342,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,2,mlp,rf,116,1.0767674987779747,1.0504781753556285,1.181859992761567,0.2396993595145296,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,hgb,sarima,115,48.15203278984484,57.54130993659302,-2.87207217697214,0.0048638634769959,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,hgb,sarima,115,1.0314132613812,1.2213611502882251,-5.254514948682352,6.990188108486283e-07,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,hgb,ingenuo_sazonal,115,48.15203278984484,70.48695652173913,-4.290737932083268,3.751878155683893e-05,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,hgb,ingenuo_sazonal,115,1.0314132613812,1.399377425146515,-11.406056437475176,1.44000276653065e-20,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,sarima,ingenuo_sazonal,115,57.54130993659302,70.48695652173913,-2.021258975363338,0.0455956805119679,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,sarima,ingenuo_sazonal,115,1.2213611502882251,1.399377425146515,-5.253559651418277,7.01943992597963e-07,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,hgb,ingenuo_ultima,115,48.15203278984484,70.2,-2.4919318867615337,0.0141433977712345,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,hgb,ingenuo_ultima,115,1.0314132613812,1.2830488214152065,-5.7678560645361285,6.997384154635186e-08,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,sarima,ingenuo_ultima,115,57.54130993659302,70.2,-1.4895884925113965,0.1390939278148617,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,sarima,ingenuo_ultima,115,1.2213611502882251,1.2830488214152065,-1.2130670657580809,0.2276117920057012,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,lgbm,sarima,115,46.791782663730416,57.54130993659302,-3.531230243282557,0.0005979814868656,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,lgbm,sarima,115,0.9993970924885298,1.2213611502882251,-6.398845524282491,3.589803473547516e-09,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,hgb,ingenuo_sazonal_aj,115,48.15203278984484,70.49046803331606,-3.853944115912266,0.0001926516643871,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,hgb,ingenuo_sazonal_aj,115,1.0314132613812,1.5125030345474186,-11.648873067701109,3.917039869246761e-21,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,sarima,ingenuo_sazonal_aj,115,57.54130993659302,70.49046803331606,-1.966496111174893,0.0516716878458806,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,sarima,ingenuo_sazonal_aj,115,1.2213611502882251,1.5125030345474186,-7.452638692756294,1.9155046250064656e-11,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,lgbm,hgb,115,46.791782663730416,48.15203278984484,-1.3763816824691435,0.1714009897442392,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,lgbm,hgb,115,0.9993970924885298,1.0314132613812,-5.582752881673824,1.6253123042347097e-07,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,hgb_sem_exog,hgb,115,48.70483453814805,48.15203278984484,0.3036977389980835,0.7619117695754868,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,hgb_sem_exog,hgb,115,1.0292434474899588,1.0314132613812,-0.1981980972555497,0.8432430829296815,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,hgb_pandemia,hgb,115,48.20861805571931,48.15203278984484,0.037474403573786,0.9701722927069176,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,hgb_pandemia,hgb,115,1.022828871634356,1.0314132613812,-0.8327086994212092,0.4067501500515563,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,rf,lgbm,115,58.49833964424903,46.791782663730416,2.469166973643095,0.0150255849956333,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,rf,lgbm,115,1.1084208864844023,0.9993970924885298,5.102167257692854,1.353310386917969e-06,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,rf,sarima,115,58.49833964424903,57.54130993659302,0.2000649228965699,0.8417862601252454,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,rf,sarima,115,1.1084208864844023,1.2213611502882251,-2.621627699801001,0.00994537023832,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,mlp,lgbm,115,58.84484739835032,46.791782663730416,2.5496408337405194,0.0121110318402288,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,mlp,lgbm,115,1.1231761082773808,0.9993970924885298,5.444827584093376,3.017436513265213e-07,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,mlp,sarima,115,58.84484739835032,57.54130993659302,0.2147091576486201,0.8303776930947261,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,mlp,sarima,115,1.1231761082773808,1.2213611502882251,-2.4255625604727613,0.0168534769558083,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,rf,hgb,115,58.49833964424903,48.15203278984484,2.172237906578715,0.0319084186515511,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,rf,hgb,115,1.1084208864844023,1.0314132613812,3.7020082338909055,0.0003311254544052,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,mlp,hgb,115,58.84484739835032,48.15203278984484,2.0584656021409886,0.0418248166885471,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,mlp,hgb,115,1.1231761082773808,1.0314132613812,3.7370108836513194,0.0002926630373782,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,rf,ingenuo_sazonal,115,58.49833964424903,70.48695652173913,-1.6148832193876883,0.1091004225564535,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,rf,ingenuo_sazonal,115,1.1084208864844023,1.399377425146515,-7.333127048471637,3.516900568800707e-11,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,mlp,ingenuo_sazonal,115,58.84484739835032,70.48695652173913,-2.183963024807461,0.0310131655225316,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,mlp,ingenuo_sazonal,115,1.1231761082773808,1.399377425146515,-6.873881238455083,3.519861589153098e-10,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,3,mlp,rf,115,58.84484739835032,58.49833964424903,0.0472046101111692,0.9624327494778242,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,3,mlp,rf,115,1.1231761082773808,1.1084208864844023,0.4196389353487633,0.675539008419544,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,hgb,sarima,114,50.25216710077107,57.30945784026525,-2.7614146468547185,0.0067184408359095,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,hgb,sarima,114,1.0547489335234148,1.233448555495518,-4.082822348602221,8.333831219191432e-05,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,hgb,ingenuo_sazonal,114,50.25216710077107,70.43859649122807,-3.655640717019724,0.0003908362415295,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,hgb,ingenuo_sazonal,114,1.0547489335234148,1.4036170120884366,-11.732046082666034,2.8447305679614985e-21,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,sarima,ingenuo_sazonal,114,57.30945784026525,70.43859649122807,-1.995953255671597,0.0483442924290452,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,sarima,ingenuo_sazonal,114,1.233448555495518,1.4036170120884366,-4.771678811295536,5.50555182138549e-06,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,hgb,ingenuo_ultima,114,50.25216710077107,86.42105263157895,-3.364931419205829,0.0010464725573211,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,hgb,ingenuo_ultima,114,1.0547489335234148,1.375646560070927,-5.297711851297301,5.85594009007027e-07,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,sarima,ingenuo_ultima,114,57.30945784026525,86.42105263157895,-2.6289616183736038,0.0097563667422824,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,sarima,ingenuo_ultima,114,1.233448555495518,1.375646560070927,-2.44394806744283,0.0160737201185405,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,lgbm,sarima,114,49.64584205157681,57.30945784026525,-2.9951999157760727,0.0033708235578721,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,lgbm,sarima,114,1.0302034574156902,1.233448555495518,-5.034551418430321,1.8267674525641683e-06,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,hgb,ingenuo_sazonal_aj,114,50.25216710077107,74.53928482173416,-3.4590917843663047,0.0007653315967782,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,hgb,ingenuo_sazonal_aj,114,1.0547489335234148,1.5454804162042377,-10.575037728809429,1.384715559777782e-18,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,sarima,ingenuo_sazonal_aj,114,57.30945784026525,74.53928482173416,-2.3838982167493383,0.0187969738352228,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,sarima,ingenuo_sazonal_aj,114,1.233448555495518,1.5454804162042377,-6.3407348073388246,4.8519732066340885e-09,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,lgbm,hgb,114,49.64584205157681,50.25216710077107,-0.451710342080432,0.6523434740934241,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,lgbm,hgb,114,1.0302034574156902,1.0547489335234148,-2.910308681152167,0.0043499239936816,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,hgb_sem_exog,hgb,114,49.87964335716275,50.25216710077107,-0.2345031519710451,0.8150187640837051,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,hgb_sem_exog,hgb,114,1.0594315339194234,1.0547489335234148,0.6445167839882695,0.5205466125580601,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,hgb_pandemia,hgb,114,50.60820036074821,50.25216710077107,0.2019747248418558,0.8402996494133619,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,hgb_pandemia,hgb,114,1.0457231826513254,1.0547489335234148,-0.8080777498951397,0.4207437226984868,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,rf,lgbm,114,63.64478019627671,49.64584205157681,2.6849266207111966,0.0083467258813805,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,rf,lgbm,114,1.154821255899943,1.0302034574156902,5.009216279023108,2.034712500167844e-06,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,rf,sarima,114,63.64478019627671,57.30945784026525,1.2327591244935474,0.2202242090410496,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,rf,sarima,114,1.154821255899943,1.233448555495518,-1.5953303301950768,0.1134314826695798,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,mlp,lgbm,114,61.16349908466781,49.64584205157681,1.7528969544896524,0.0823317374225496,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,mlp,lgbm,114,1.1490720305179318,1.0302034574156902,3.683057195453815,0.0003551530738401,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,mlp,sarima,114,61.16349908466781,57.30945784026525,0.5090256728392882,0.6117267404005283,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,mlp,sarima,114,1.1490720305179318,1.233448555495518,-1.9797987786803,0.0501572786255698,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,rf,hgb,114,63.64478019627671,50.25216710077107,2.719388829286549,0.007573270903579,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,rf,hgb,114,1.154821255899943,1.0547489335234148,3.820879555435341,0.0002178920681007,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,mlp,hgb,114,61.16349908466781,50.25216710077107,1.5013807254674532,0.1360463160882537,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,mlp,hgb,114,1.1490720305179318,1.0547489335234148,2.589659836503652,0.0108712156203492,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,rf,ingenuo_sazonal,114,63.64478019627671,70.43859649122807,-0.8230341371884288,0.4122221024480685,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,rf,ingenuo_sazonal,114,1.154821255899943,1.4036170120884366,-6.563774540399757,1.655310040179204e-09,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,mlp,ingenuo_sazonal,114,61.16349908466781,70.43859649122807,-1.4057579395946125,0.1625396654104577,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,mlp,ingenuo_sazonal,114,1.1490720305179318,1.4036170120884366,-5.605761992358085,1.486512857410674e-07,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,4,mlp,rf,114,61.16349908466781,63.64478019627671,-0.2685214975507998,0.7887875368893609,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,4,mlp,rf,114,1.1490720305179318,1.154821255899943,-0.1374955099001561,0.890883837368504,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,hgb,sarima,105,60.04832562308016,65.12472884832646,-0.7290454336140187,0.4676125140404608,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,hgb,sarima,105,1.1414387482365242,1.2503444296410966,-3.847432292209493,0.0002061688852236,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,hgb,ingenuo_sazonal,105,60.04832562308016,71.3047619047619,-1.5485400026782845,0.1245301086111874,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,hgb,ingenuo_sazonal,105,1.1414387482365242,1.413084456410615,-6.324921158132272,6.465381851862977e-09,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,sarima,ingenuo_sazonal,105,65.12472884832646,71.3047619047619,-0.7596381886518419,0.4491893753239398,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,sarima,ingenuo_sazonal,105,1.2503444296410966,1.413084456410615,-2.942810467324629,0.0040111037027628,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,hgb,ingenuo_ultima,105,60.04832562308016,166.9047619047619,-5.749847882992343,9.023355512228077e-08,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,hgb,ingenuo_ultima,105,1.1414387482365242,1.973457049904792,-6.323024359625283,6.522966256474724e-09,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,sarima,ingenuo_ultima,105,65.12472884832646,166.9047619047619,-5.835360252510648,6.140521164528452e-08,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,sarima,ingenuo_ultima,105,1.2503444296410966,1.973457049904792,-5.721722305641383,1.0235254057261885e-07,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,lgbm,sarima,105,55.28421096772424,65.12472884832646,-1.3085384162841818,0.1935751562539327,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,lgbm,sarima,105,1.111775094605174,1.2503444296410966,-4.881114136489904,3.823579116521294e-06,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,hgb,ingenuo_sazonal_aj,105,60.04832562308016,62.83373352572992,-0.4518913974821982,0.6522882739347424,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,hgb,ingenuo_sazonal_aj,105,1.1414387482365242,1.5433862563326208,-7.585297701931576,1.4623393660183814e-11,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,sarima,ingenuo_sazonal_aj,105,65.12472884832646,62.83373352572992,0.3551100996992349,0.7232262643396361,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,sarima,ingenuo_sazonal_aj,105,1.2503444296410966,1.5433862563326208,-4.345510383374078,3.242878328132907e-05,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,lgbm,hgb,105,55.28421096772424,60.04832562308016,-1.8110237193763463,0.0730239514323506,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,lgbm,hgb,105,1.111775094605174,1.1414387482365242,-2.986999160565391,0.0035141006147264,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,hgb_sem_exog,hgb,105,58.55461980287926,60.04832562308016,-0.3387094835370126,0.7355114875091633,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,hgb_sem_exog,hgb,105,1.123462271028825,1.1414387482365242,-1.0854391129018597,0.2802368511107074,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,hgb_pandemia,hgb,105,61.88675578811364,60.04832562308016,0.3206728321867207,0.7491017903852277,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,hgb_pandemia,hgb,105,1.1385880888095463,1.1414387482365242,-0.1336192040830845,0.8939619173044956,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,rf,lgbm,105,69.01434740952412,55.28421096772424,2.524613976453304,0.0130931653876217,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,rf,lgbm,105,1.2931531466917636,1.111775094605174,2.8953866395667376,0.0046159178770019,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,rf,sarima,105,69.01434740952412,65.12472884832646,0.5366910125171227,0.5926273142355858,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,rf,sarima,105,1.2931531466917636,1.2503444296410966,0.7601212269998492,0.4489018754440502,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,mlp,lgbm,105,60.86081481522126,55.28421096772424,1.496979219796068,0.1374274878882993,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,mlp,lgbm,105,1.2323874912126045,1.111775094605174,4.867024342995167,4.052133710143821e-06,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,mlp,sarima,105,60.86081481522126,65.12472884832646,-0.4492344330720357,0.6541973307380339,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,mlp,sarima,105,1.2323874912126045,1.2503444296410966,-0.6542291214032911,0.5144083394154836,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,rf,hgb,105,69.01434740952412,60.04832562308016,1.544331465450011,0.1255455899062174,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,rf,hgb,105,1.2931531466917636,1.1414387482365242,2.3518590493811766,0.0205632651183225,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,mlp,hgb,105,60.86081481522126,60.04832562308016,0.1313182880076837,0.8957772238599866,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,mlp,hgb,105,1.2323874912126045,1.1414387482365242,3.549253881964377,0.0005814981209426,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,rf,ingenuo_sazonal,105,69.01434740952412,71.3047619047619,-0.4220925953432733,0.6738287196998741,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,rf,ingenuo_sazonal,105,1.2931531466917636,1.413084456410615,-2.669100296484802,0.0088253784322348,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,mlp,ingenuo_sazonal,105,60.86081481522126,71.3047619047619,-3.1215686408671752,0.0023293581299118,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,mlp,ingenuo_sazonal,105,1.2323874912126045,1.413084456410615,-4.896255353333685,3.5919441922556905e-06,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,13,mlp,rf,105,60.86081481522126,69.01434740952412,-0.92876046273975,0.3551638681722409,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,13,mlp,rf,105,1.2323874912126045,1.2931531466917636,-0.9071079991039468,0.3664467035680682,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,hgb,sarima,92,67.42451045143132,63.87942122763096,0.2892505738823201,0.7730475880592828,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,hgb,sarima,92,1.106178548482385,1.205977927295509,-1.5405314238248131,0.126901151902854,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,hgb,ingenuo_sazonal,92,67.42451045143132,67.25,0.019383235128952,0.9845778209865732,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,hgb,ingenuo_sazonal,92,1.106178548482385,1.3600193441546873,-8.982441813451373,3.437351898978398e-14,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,sarima,ingenuo_sazonal,92,63.87942122763096,67.25,-0.5689809249689641,0.5707707496471937,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,sarima,ingenuo_sazonal,92,1.205977927295509,1.3600193441546873,-2.2544125143219658,0.0265698516853117,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,hgb,ingenuo_ultima,92,67.42451045143132,181.3586956521739,-7.58312866154158,2.7698719790276204e-11,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,hgb,ingenuo_ultima,92,1.106178548482385,1.99862957295028,-8.692652350254017,1.386947887851779e-13,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,sarima,ingenuo_ultima,92,63.87942122763096,181.3586956521739,-7.119604543112928,2.4380267229548563e-10,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,sarima,ingenuo_ultima,92,1.205977927295509,1.99862957295028,-7.322704045450267,9.436107208863439e-11,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,lgbm,sarima,92,63.499668947292186,63.87942122763096,-0.0252636881007804,0.9798999556412956,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,lgbm,sarima,92,1.100924521459178,1.205977927295509,-1.856315024533612,0.0666445686568171,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,hgb,ingenuo_sazonal_aj,92,67.42451045143132,66.5952814285046,0.0601120338349889,0.9521982238726135,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,hgb,ingenuo_sazonal_aj,92,1.106178548482385,1.4801927700756252,-5.950600091335399,4.9165179308231377e-08,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,sarima,ingenuo_sazonal_aj,92,63.87942122763096,66.5952814285046,-0.3060878063178357,0.7602369653173996,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,sarima,ingenuo_sazonal_aj,92,1.205977927295509,1.4801927700756252,-4.951235725786821,3.375298076196508e-06,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,lgbm,hgb,92,63.499668947292186,67.42451045143132,-1.5023812096523017,0.1364610207766603,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,lgbm,hgb,92,1.100924521459178,1.106178548482385,-1.6376721273989203,0.1049436349109542,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,hgb_sem_exog,hgb,92,58.779718574411234,67.42451045143132,-1.4871591163059146,0.1404296415744698,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,hgb_sem_exog,hgb,92,1.0794877598608026,1.106178548482385,-1.0690770896830533,0.2878625905837194,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,hgb_pandemia,hgb,92,69.73284617990987,67.42451045143132,0.920170451469266,0.3599165544839236,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,hgb_pandemia,hgb,92,1.0949480272454657,1.106178548482385,-0.663200057097361,0.5088789629552541,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,rf,lgbm,92,53.05920267840881,63.499668947292186,-2.217822576153732,0.0290563048677681,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,rf,lgbm,92,1.192479995111902,1.100924521459178,0.8871659714123176,0.3773282728265464,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,rf,sarima,92,53.05920267840881,63.87942122763096,-0.7482662698796261,0.456229103626086,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,rf,sarima,92,1.192479995111902,1.205977927295509,-0.1236912110140105,0.901832566865374,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,mlp,lgbm,92,69.88496118098261,63.499668947292186,0.321612325249051,0.7484839743579994,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,mlp,lgbm,92,1.2331467627310917,1.100924521459178,2.431037209887561,0.0170157578461215,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,mlp,sarima,92,69.88496118098261,63.87942122763096,0.754621928638173,0.4524243488175332,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,mlp,sarima,92,1.2331467627310917,1.205977927295509,2.14897333701095,0.0342908064239517,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,rf,hgb,92,53.05920267840881,67.42451045143132,-3.411399914152175,0.0009657943185815,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,rf,hgb,92,1.192479995111902,1.106178548482385,0.8993711124512979,0.3708287607784614,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,mlp,hgb,92,69.88496118098261,67.42451045143132,0.1438792755776547,0.8859139472399545,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,mlp,hgb,92,1.2331467627310917,1.106178548482385,1.9668281598490764,0.0522494907261569,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,rf,ingenuo_sazonal,92,53.05920267840881,67.25,-1.8785575361972904,0.0635064142573693,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,rf,ingenuo_sazonal,92,1.192479995111902,1.3600193441546873,-2.6412802961498647,0.0097212860929062,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,mlp,ingenuo_sazonal,92,69.88496118098261,67.25,0.301716871474465,0.7635563370796598,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,mlp,ingenuo_sazonal,92,1.2331467627310917,1.3600193441546873,-1.6887211647558762,0.094696908465735,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,ocorrencia,MT,26,mlp,rf,92,69.88496118098261,53.05920267840881,1.096354951213783,0.275816390651299,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,ocorrencia,16 regioes,26,mlp,rf,92,1.2331467627310917,1.192479995111902,0.3096266326793148,0.7575527934262409,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,MT,1,hgb,sarima,117,38.45164316881744,47.5615411106857,-2.852111873210122,0.0051432459858763,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,hgb,sarima,117,0.9904954091045116,1.2065211347859326,-8.609591362970207,4.1880195961510703e-14,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,1,hgb,ingenuo_sazonal,117,38.45164316881744,69.33333333333333,-6.5974733014782085,1.3053651884935878e-09,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,hgb,ingenuo_sazonal,117,0.9904954091045116,1.4061823845588488,-13.634513103615305,7.556255470232025e-26,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,1,sarima,ingenuo_sazonal,117,47.5615411106857,69.33333333333333,-3.947113066733359,0.0001360254533061,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,sarima,ingenuo_sazonal,117,1.2065211347859326,1.4061823845588488,-6.781893658101073,5.25952931835978e-10,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,1,hgb,ingenuo_ultima,117,38.45164316881744,40.61538461538461,-0.7068397599467634,0.4810835362368724,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,hgb,ingenuo_ultima,117,0.9904954091045116,1.180178942220164,-8.727202926815911,2.2380729388129647e-14,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,1,sarima,ingenuo_ultima,117,47.5615411106857,40.61538461538461,1.9772175728838528,0.05038905520056,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,sarima,ingenuo_ultima,117,1.2065211347859326,1.180178942220164,0.9274723986474238,0.3556070823462614,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,1,lgbm,sarima,117,36.18991950726584,47.5615411106857,-3.732548291054965,0.0002951830290349,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,lgbm,sarima,117,0.9734064400926896,1.2065211347859326,-9.567484634428345,2.4492260777978497e-16,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,1,hgb,ingenuo_sazonal_aj,117,38.45164316881744,59.40741345125449,-4.9387465028264455,2.6646299377751333e-06,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,hgb,ingenuo_sazonal_aj,117,0.9904954091045116,1.4591611590666869,-16.28138849425779,9.6690812103148e-32,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,1,sarima,ingenuo_sazonal_aj,117,47.5615411106857,59.40741345125449,-2.372454950273202,0.0193157046596084,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,sarima,ingenuo_sazonal_aj,117,1.2065211347859326,1.4591611590666869,-9.277880791834054,1.168381555479198e-15,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,1,lgbm,hgb,117,36.18991950726584,38.45164316881744,-2.5926916517318803,0.0107479527776894,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,lgbm,hgb,117,0.9734064400926896,0.9904954091045116,-2.6217713886686687,0.0099202987141736,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,1,hgb_sem_exog,hgb,117,40.67201328408454,38.45164316881744,1.3344125296890588,0.1846822367915574,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,hgb_sem_exog,hgb,117,1.000160966762017,0.9904954091045116,0.969163630304053,0.3344799660262892,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,1,hgb_pandemia,hgb,117,38.01371715177199,38.45164316881744,-0.3268039203329054,0.744405137498353,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,hgb_pandemia,hgb,117,0.9844149326122296,0.9904954091045116,-0.6509958307144784,0.5163366697646689,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,1,rf,lgbm,117,41.91536363967184,36.18991950726584,2.7439373702115653,0.0070361501513171,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,rf,lgbm,117,0.997660651089299,0.9734064400926896,2.354135530123898,0.0202472842971387,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,1,rf,sarima,117,41.91536363967184,47.5615411106857,-1.530263368833058,0.1286740889327065,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,rf,sarima,117,0.997660651089299,1.2065211347859326,-7.9468373297359856,1.3814896236203538e-12,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,1,mlp,lgbm,117,43.77259827578878,36.18991950726584,3.158275192978349,0.0020235236934191,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,mlp,lgbm,117,1.060913048926878,0.9734064400926896,6.996150299056265,1.8070866733622992e-10,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,1,mlp,sarima,117,43.77259827578878,47.5615411106857,-0.9768838368469196,0.3306595321947737,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,mlp,sarima,117,1.060913048926878,1.2065211347859326,-5.789378564039435,6.138817913976738e-08,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,1,rf,hgb,117,41.91536363967184,38.45164316881744,1.567763986870128,0.119660137084871,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,rf,hgb,117,0.997660651089299,0.9904954091045116,0.6050338114345151,0.5463383125295842,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,1,mlp,hgb,117,43.77259827578878,38.45164316881744,2.2077633115228226,0.0292280681824637,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,mlp,hgb,117,1.060913048926878,0.9904954091045116,5.3880448139066575,3.786666299814964e-07,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,1,rf,ingenuo_sazonal,117,41.91536363967184,69.33333333333333,-5.187797650564815,9.142071884847506e-07,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,rf,ingenuo_sazonal,117,0.997660651089299,1.4061823845588488,-12.119369665986437,2.426736054886516e-22,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,1,mlp,ingenuo_sazonal,117,43.77259827578878,69.33333333333333,-5.587794533459457,1.5440863004057052e-07,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,mlp,ingenuo_sazonal,117,1.060913048926878,1.4061823845588488,-11.278078816729597,2.2877571019670878e-20,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,1,mlp,rf,117,43.77259827578878,41.91536363967184,0.5913364895949752,0.5554455690082422,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,1,mlp,rf,117,1.060913048926878,0.997660651089299,4.026388500698936,0.0001014251497454,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,MT,2,hgb,sarima,116,43.65067678625108,56.21317130609403,-2.2699171886078715,0.0250757889053412,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,hgb,sarima,116,1.0337837751205572,1.24297250378609,-6.044414982764437,1.901911544547348e-08,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,2,hgb,ingenuo_sazonal,116,43.65067678625108,69.59482758620689,-4.761676898587671,5.641318946823389e-06,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,hgb,ingenuo_sazonal,116,1.0337837751205572,1.4110323135214549,-12.455931953649646,4.583331701966157e-23,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,2,sarima,ingenuo_sazonal,116,56.21317130609403,69.59482758620689,-2.015172408277277,0.0462188464891268,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,sarima,ingenuo_sazonal,116,1.24297250378609,1.4110323135214549,-5.258709911472705,6.783068649349544e-07,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,2,hgb,ingenuo_ultima,116,43.65067678625108,53.060344827586206,-1.541625929632861,0.1259117844890627,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,hgb,ingenuo_ultima,116,1.0337837751205572,1.2306535371361844,-6.467015629504727,2.524344321596137e-09,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,2,sarima,ingenuo_ultima,116,56.21317130609403,53.060344827586206,0.4440933876019296,0.6578095993532839,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,sarima,ingenuo_ultima,116,1.24297250378609,1.2306535371361844,0.2681829464686734,0.7890389591453636,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,2,lgbm,sarima,116,42.69034810783317,56.21317130609403,-2.464211147420565,0.0152108055222289,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,lgbm,sarima,116,1.0107839400383336,1.24297250378609,-6.908062881607375,2.8876716571937056e-10,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,2,hgb,ingenuo_sazonal_aj,116,43.65067678625108,65.08120312615434,-3.741333943152947,0.0002871637266249,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,hgb,ingenuo_sazonal_aj,116,1.0337837751205572,1.511542387943393,-13.2542989461412,6.63220843946116e-25,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,2,sarima,ingenuo_sazonal_aj,116,56.21317130609403,65.08120312615434,-1.2206069641791464,0.2247317366956609,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,sarima,ingenuo_sazonal_aj,116,1.24297250378609,1.511542387943393,-7.774844717540865,3.5220156974291218e-12,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,2,lgbm,hgb,116,42.69034810783317,43.65067678625108,-1.167015596842807,0.2456182588663157,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,lgbm,hgb,116,1.0107839400383336,1.0337837751205572,-3.216494450798799,0.0016854918243918,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,2,hgb_sem_exog,hgb,116,43.92492829977139,43.65067678625108,0.1487703212113374,0.8819954346048626,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,hgb_sem_exog,hgb,116,1.0272998229985884,1.0337837751205572,-0.5061613029506192,0.6137123757165655,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,2,hgb_pandemia,hgb,116,45.17348598821044,43.65067678625108,0.9054916597273648,0.3670981695958808,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,hgb_pandemia,hgb,116,1.0369579856901654,1.0337837751205572,0.2813653999453508,0.7789357966024323,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,2,rf,lgbm,116,50.119859635568034,42.69034810783317,2.111600246548615,0.0368859911418896,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,rf,lgbm,116,1.0568689068057333,1.0107839400383336,2.853831789105494,0.0051245541789548,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,2,rf,sarima,116,50.119859635568034,56.21317130609403,-1.0432153840260083,0.29903659445081,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,rf,sarima,116,1.0568689068057333,1.24297250378609,-4.840990268784665,4.056495693340555e-06,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,2,mlp,lgbm,116,51.78337796733402,42.69034810783317,2.7085400590087625,0.0077905709208003,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,mlp,lgbm,116,1.1270612262191615,1.0107839400383336,5.732924447620443,8.085027807796422e-08,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,2,mlp,sarima,116,51.78337796733402,56.21317130609403,-0.9436375885937388,0.3473331458595198,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,mlp,sarima,116,1.1270612262191615,1.24297250378609,-4.16854305111088,5.96601687055608e-05,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,2,rf,hgb,116,50.119859635568034,43.65067678625108,1.7519530906546832,0.0824475226661535,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,rf,hgb,116,1.0568689068057333,1.0337837751205572,1.4764584799647609,0.142553940845399,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,2,mlp,hgb,116,51.78337796733402,43.65067678625108,2.191284070293789,0.030447487005462,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,mlp,hgb,116,1.1270612262191615,1.0337837751205572,4.302433348443221,3.5642807449394986e-05,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,2,rf,ingenuo_sazonal,116,50.119859635568034,69.59482758620689,-3.061875666548305,0.0027389703514155,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,rf,ingenuo_sazonal,116,1.0568689068057333,1.4110323135214549,-9.6416948084756,1.7661215700287783e-16,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,2,mlp,ingenuo_sazonal,116,51.78337796733402,69.59482758620689,-3.049176546106171,0.0028482646346529,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,mlp,ingenuo_sazonal,116,1.1270612262191615,1.4110323135214549,-7.984503766459379,1.1850093124361837e-12,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,2,mlp,rf,116,51.78337796733402,50.119859635568034,0.3732663060591756,0.7096374175543403,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,2,mlp,rf,116,1.1270612262191615,1.0568689068057333,2.7067626883965046,0.0078298402156878,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,MT,3,hgb,sarima,115,47.14124077941651,63.47814949782472,-2.063884086527222,0.041298606696873,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,hgb,sarima,115,1.064502074126952,1.279651392285171,-4.984928061598784,2.233243344300576e-06,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,3,hgb,ingenuo_sazonal,115,47.14124077941651,70.19130434782609,-4.540806027295066,1.3988814063587552e-05,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,hgb,ingenuo_sazonal,115,1.064502074126952,1.4159957707258155,-10.533616999883856,1.5708541878169326e-18,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,3,sarima,ingenuo_sazonal,115,63.47814949782472,70.19130434782609,-0.7438719265889789,0.4584844276593944,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,sarima,ingenuo_sazonal,115,1.279651392285171,1.4159957707258155,-3.4439588472761127,0.0008028739079714,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,3,hgb,ingenuo_ultima,115,47.14124077941651,69.49565217391304,-2.5883030498502664,0.0109002891938732,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,hgb,ingenuo_ultima,115,1.064502074126952,1.3086592537100292,-5.573202501785515,1.6968955896825092e-07,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,3,sarima,ingenuo_ultima,115,63.47814949782472,69.49565217391304,-0.578457266574979,0.564096482270804,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,sarima,ingenuo_ultima,115,1.279651392285171,1.3086592537100292,-0.5682532412953939,0.5709806465094729,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,3,lgbm,sarima,115,44.55767376734919,63.47814949782472,-2.3452323054585063,0.020744418998023,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,lgbm,sarima,115,1.0410529492689364,1.279651392285171,-5.531805603939551,2.044556151189689e-07,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,3,hgb,ingenuo_sazonal_aj,115,47.14124077941651,70.562817512966,-3.766523266762584,0.0002635665672793,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,hgb,ingenuo_sazonal_aj,115,1.064502074126952,1.566645465445892,-11.903404962072306,1.0035769200877764e-21,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,3,sarima,ingenuo_sazonal_aj,115,63.47814949782472,70.562817512966,-0.787064990512036,0.4328770551217369,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,sarima,ingenuo_sazonal_aj,115,1.279651392285171,1.566645465445892,-6.639694495138343,1.1152064910557436e-09,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,3,lgbm,hgb,115,44.55767376734919,47.14124077941651,-2.44693164317368,0.0159343267582079,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,lgbm,hgb,115,1.0410529492689364,1.064502074126952,-3.397129825657076,0.0009384202094635,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,3,hgb_sem_exog,hgb,115,46.316650576859296,47.14124077941651,-0.4550854482109616,0.6499132707631445,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,hgb_sem_exog,hgb,115,1.0556939205564266,1.064502074126952,-0.6241751183999219,0.5337596815517686,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,3,hgb_pandemia,hgb,115,46.40677900616181,47.14124077941651,-0.4351202336084476,0.6642978015722805,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,hgb_pandemia,hgb,115,1.0606504615710275,1.064502074126952,-0.3868223612130096,0.6996088467922102,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,3,rf,lgbm,115,56.30266621090075,44.55767376734919,2.517798253227204,0.0131974595650751,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,rf,lgbm,115,1.1028315733000305,1.0410529492689364,2.9808456448541825,0.003514657966347,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,3,rf,sarima,115,56.30266621090075,63.47814949782472,-0.8960316071799935,0.3721240518691691,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,rf,sarima,115,1.1028315733000305,1.279651392285171,-3.7573402815087737,0.0002723120047844,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,3,mlp,lgbm,115,56.99884896476606,44.55767376734919,2.718343373358198,0.0075863728137641,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,mlp,lgbm,115,1.1600930967368948,1.0410529492689364,4.507435512865418,1.598932675065095e-05,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,3,mlp,sarima,115,56.99884896476606,63.47814949782472,-0.7208079084825161,0.4725032453338207,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,mlp,sarima,115,1.1600930967368948,1.279651392285171,-2.913690516449617,0.0042996416115501,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,3,rf,hgb,115,56.30266621090075,47.14124077941651,1.9088240101638283,0.0587990733246729,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,rf,hgb,115,1.1028315733000305,1.064502074126952,1.731436562974055,0.0860791814304429,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,3,mlp,hgb,115,56.99884896476606,47.14124077941651,2.019041691878534,0.0458292871949086,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,mlp,hgb,115,1.1600930967368948,1.064502074126952,3.4821474189850314,0.0007061959833992,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,3,rf,ingenuo_sazonal,115,56.30266621090075,70.19130434782609,-2.0423247619909253,0.043426519226896,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,rf,ingenuo_sazonal,115,1.1028315733000305,1.4159957707258155,-7.610608898648056,8.540252027477494e-12,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,3,mlp,ingenuo_sazonal,115,56.99884896476606,70.19130434782609,-2.3946883223556026,0.0182647427081339,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,mlp,ingenuo_sazonal,115,1.1600930967368948,1.4159957707258155,-6.6928448256785895,8.595785926395331e-10,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,3,mlp,rf,115,56.99884896476606,56.30266621090075,0.1088230711171465,0.91353414071399,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,3,mlp,rf,115,1.1600930967368948,1.1028315733000305,1.588751213860908,0.1148862247889223,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,MT,4,hgb,sarima,114,50.68143417424611,68.17786994684582,-1.672297199232866,0.0972324467969618,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,hgb,sarima,114,1.0964802969894325,1.291367863950584,-3.8861882712419433,0.0001721420373116,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,4,hgb,ingenuo_sazonal,114,50.68143417424611,70.1842105263158,-3.867534124521002,0.0001841790013508,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,hgb,ingenuo_sazonal,114,1.0964802969894325,1.418872493412779,-9.128765786818985,3.1636275030494978e-15,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,4,sarima,ingenuo_sazonal,114,68.17786994684582,70.1842105263158,-0.1676663769853518,0.8671454498932336,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,sarima,ingenuo_sazonal,114,1.291367863950584,1.418872493412779,-3.044717683967067,0.00289805245657,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,4,hgb,ingenuo_ultima,114,50.68143417424611,85.67543859649123,-3.243542879498418,0.0015525640751417,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,hgb,ingenuo_ultima,114,1.0964802969894325,1.4476994218543071,-6.298582817409642,5.934847485763121e-09,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,4,sarima,ingenuo_ultima,114,68.17786994684582,85.67543859649123,-1.42307989224248,0.1574679962820636,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,sarima,ingenuo_ultima,114,1.291367863950584,1.4476994218543071,-2.650960753000956,0.0091784208968172,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,4,lgbm,sarima,114,48.96234865509428,68.17786994684582,-1.86661528312386,0.0645476081689732,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,lgbm,sarima,114,1.0705643351955485,1.291367863950584,-4.618551886516007,1.030058062045813e-05,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,4,hgb,ingenuo_sazonal_aj,114,50.68143417424611,74.89830526965777,-3.447357565953165,0.0007960191038272,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,hgb,ingenuo_sazonal_aj,114,1.0964802969894325,1.601541599229806,-10.895743116166257,2.482707947529435e-19,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,4,sarima,ingenuo_sazonal_aj,114,68.17786994684582,74.89830526965777,-0.6012088299396051,0.5489050532663649,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,sarima,ingenuo_sazonal_aj,114,1.291367863950584,1.601541599229806,-5.988968704892523,2.5585743304575388e-08,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,4,lgbm,hgb,114,48.96234865509428,50.68143417424611,-1.106284594058191,0.2709529916118003,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,lgbm,hgb,114,1.0705643351955485,1.0964802969894325,-2.930326250895446,0.0040979784459184,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,4,hgb_sem_exog,hgb,114,49.10627047839753,50.68143417424611,-0.7117881767666943,0.4780628706357574,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,hgb_sem_exog,hgb,114,1.0948882864736431,1.0964802969894325,-0.135294207531594,0.8926199733352217,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,4,hgb_pandemia,hgb,114,50.1176500177422,50.68143417424611,-0.3021338088203363,0.7631054478987518,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,hgb_pandemia,hgb,114,1.078923657471327,1.0964802969894325,-1.4438746682666015,0.1515410565917122,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,4,rf,lgbm,114,61.09876155366839,48.96234865509428,2.2732703452515515,0.0248996912003662,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,rf,lgbm,114,1.154122098842205,1.0705643351955485,3.63914051790156,0.000413920758409,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,4,rf,sarima,114,61.09876155366839,68.17786994684582,-0.6672074848459394,0.5059998214031648,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,rf,sarima,114,1.154122098842205,1.291367863950584,-2.561576778824232,0.0117367705137096,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,4,mlp,lgbm,114,60.66958529262599,48.96234865509428,2.108361592464964,0.0372095106384024,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,mlp,lgbm,114,1.1947054364139282,1.0705643351955485,4.195066253431983,5.451251267376616e-05,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,4,mlp,sarima,114,60.66958529262599,68.17786994684582,-0.661990695065344,0.509324961584572,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,mlp,sarima,114,1.1947054364139282,1.291367863950584,-2.5066754526542088,0.0136097847046151,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,4,rf,hgb,114,61.09876155366839,50.68143417424611,1.9228806627312844,0.0570118537599147,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,rf,hgb,114,1.154122098842205,1.0964802969894325,2.487833245531394,0.014311779238481,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,4,mlp,hgb,114,60.66958529262599,50.68143417424611,1.576398824934968,0.1177294669503529,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,mlp,hgb,114,1.1947054364139282,1.0964802969894325,2.891491101884107,0.0045996640012315,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,4,rf,ingenuo_sazonal,114,61.09876155366839,70.1842105263158,-1.1659339853611117,0.2460961490551071,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,rf,ingenuo_sazonal,114,1.154122098842205,1.418872493412779,-6.160560797699222,1.1431065714221036e-08,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,4,mlp,ingenuo_sazonal,114,60.66958529262599,70.1842105263158,-1.6336499577947416,0.1051155893516502,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,mlp,ingenuo_sazonal,114,1.1947054364139282,1.418872493412779,-5.675812540961156,1.0823049256271168e-07,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,4,mlp,rf,114,60.66958529262599,61.09876155366839,-0.0543611480034865,0.9567434262486736,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,4,mlp,rf,114,1.1947054364139282,1.154122098842205,1.0365593775530395,0.3021543464921382,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,MT,13,hgb,sarima,105,60.826331873834505,69.91446272165038,-1.1656440141129478,0.2464247933434208,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,hgb,sarima,105,1.1692386420542429,1.2927399645779534,-4.957790147892194,2.783236460087232e-06,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,13,hgb,ingenuo_sazonal,105,60.826331873834505,71.0,-1.72123583352788,0.0881815055002754,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,hgb,ingenuo_sazonal,105,1.1692386420542429,1.429499445925691,-6.5645246811732045,2.091869595126541e-09,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,13,sarima,ingenuo_sazonal,105,69.91446272165038,71.0,-0.0963730418853043,0.9234097697655358,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,sarima,ingenuo_sazonal,105,1.2927399645779534,1.429499445925691,-2.667363942274877,0.0088681153385624,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,13,hgb,ingenuo_ultima,105,60.826331873834505,165.66666666666666,-5.369096976997029,4.844131916383101e-07,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,hgb,ingenuo_ultima,105,1.1692386420542429,2.0313437378852712,-5.911156989907406,4.3560927880259914e-08,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,13,sarima,ingenuo_ultima,105,69.91446272165038,165.66666666666666,-7.329245917976156,5.1830489032619455e-11,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,sarima,ingenuo_ultima,105,1.2927399645779534,2.0313437378852712,-5.133100234983166,1.3329867006106146e-06,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,13,lgbm,sarima,105,55.54519401049944,69.91446272165038,-1.6573601160693936,0.1004603888852268,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,lgbm,sarima,105,1.1452812131683294,1.2927399645779534,-6.766982075068972,7.965005386921714e-10,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,13,hgb,ingenuo_sazonal_aj,105,60.826331873834505,62.6275333094281,-0.2725727744890825,0.7857221000997747,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,hgb,ingenuo_sazonal_aj,105,1.1692386420542429,1.6047736110010706,-7.297920960287366,6.045809620570495e-11,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,13,sarima,ingenuo_sazonal_aj,105,69.91446272165038,62.6275333094281,1.2798577240158528,0.203442811091678,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,sarima,ingenuo_sazonal_aj,105,1.2927399645779534,1.6047736110010706,-3.997392535274484,0.0001199181093589,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,13,lgbm,hgb,105,55.54519401049944,60.826331873834505,-5.24472379557367,8.282784142750002e-07,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,lgbm,hgb,105,1.1452812131683294,1.1692386420542429,-1.8385673163459828,0.0688324974672838,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,13,hgb_sem_exog,hgb,105,59.98157658351474,60.826331873834505,-0.2691886104770075,0.7883178706674026,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,hgb_sem_exog,hgb,105,1.1584810835301371,1.1692386420542429,-0.5578042202462169,0.5781768266552025,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,13,hgb_pandemia,hgb,105,61.77356557780979,60.826331873834505,0.1759296016763116,0.8606913569343707,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,hgb_pandemia,hgb,105,1.1799119284378974,1.1692386420542429,0.3634973449869243,0.71697124289261,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,13,rf,lgbm,105,67.73204987304716,55.54519401049944,2.721322925654821,0.0076241384455496,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,rf,lgbm,105,1.3233178781486,1.1452812131683294,2.3545175293738425,0.0204243552600305,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,13,rf,sarima,105,67.73204987304716,69.91446272165038,-0.2281506093997398,0.8199771321766851,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,rf,sarima,105,1.3233178781486,1.2927399645779534,0.4112187270020206,0.6817583049724049,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,13,mlp,lgbm,105,58.955640718282126,55.54519401049944,0.773686624799582,0.4408712534553876,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,mlp,lgbm,105,1.295574561894954,1.1452812131683294,3.5225878993295296,0.0006362726830861,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,13,mlp,sarima,105,58.955640718282126,69.91446272165038,-0.8260297167910876,0.410678192198703,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,mlp,sarima,105,1.295574561894954,1.2927399645779534,0.0528761517486445,0.9579320197011788,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,13,rf,hgb,105,67.73204987304716,60.826331873834505,1.325188043599509,0.1880128210518753,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,rf,hgb,105,1.3233178781486,1.1692386420542429,1.9568581505598928,0.0530450475466822,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,13,mlp,hgb,105,58.955640718282126,60.826331873834505,-0.3275157702310266,0.7439361789562021,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,mlp,hgb,105,1.295574561894954,1.1692386420542429,3.4684500055632213,0.0007627921348934,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,13,rf,ingenuo_sazonal,105,67.73204987304716,71.0,-0.545139975906273,0.5868244454471326,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,rf,ingenuo_sazonal,105,1.3233178781486,1.429499445925691,-1.5254073706871225,0.1301929169918024,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,13,mlp,ingenuo_sazonal,105,58.955640718282126,71.0,-3.4599709385463866,0.0007846352042194,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,mlp,ingenuo_sazonal,105,1.295574561894954,1.429499445925691,-6.655237600118385,1.3589750294240207e-09,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,13,mlp,rf,105,58.955640718282126,67.73204987304716,-1.0233106802737653,0.3085353853382301,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,13,mlp,rf,105,1.295574561894954,1.3233178781486,-0.3361047429767237,0.7374690498396241,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,MT,26,hgb,sarima,92,66.879214352373,64.00411482510133,0.2889195326688303,0.7733001052807726,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,hgb,sarima,92,1.1448605383231418,1.269452607337965,-1.8969690965510928,0.0610035213102633,Gradient boosting (HGB),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,26,hgb,ingenuo_sazonal,92,66.879214352373,66.8804347826087,-0.0002402457931937,0.9998088374759,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,hgb,ingenuo_sazonal,92,1.1448605383231418,1.3870009960876477,-14.956164536847066,2.994830177970663e-26,Gradient boosting (HGB),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,26,sarima,ingenuo_sazonal,92,64.00411482510133,66.8804347826087,-0.5164481113173989,0.606794241477854,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,sarima,ingenuo_sazonal,92,1.269452607337965,1.3870009960876477,-1.7610972088769616,0.0815810864117354,SARIMA,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,26,hgb,ingenuo_ultima,92,66.879214352373,180.9782608695652,-7.59999726829635,2.5576944000411597e-11,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,hgb,ingenuo_ultima,92,1.1448605383231418,2.059804245246998,-9.1954259081594,1.2315639704397662e-14,Gradient boosting (HGB),Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,26,sarima,ingenuo_ultima,92,64.00411482510133,180.9782608695652,-29.343376445470707,3.550193555718556e-48,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,sarima,ingenuo_ultima,92,1.269452607337965,2.059804245246998,-7.55756623257705,3.125217279206576e-11,SARIMA,Persistência (última SE)
+baseline_preliminar_2026-10-13,residencia_total,MT,26,lgbm,sarima,92,62.27171773612943,64.00411482510133,-0.1206155874546799,0.904261438077565,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,lgbm,sarima,92,1.1335504341934597,1.269452607337965,-2.113725986279148,0.0372746585202624,LightGBM,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,26,hgb,ingenuo_sazonal_aj,92,66.879214352373,66.51520469707044,0.034270960294026,0.9727361425438216,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,hgb,ingenuo_sazonal_aj,92,1.1448605383231418,1.5720674641890862,-16.83683367164255,1.0607868524309345e-29,Gradient boosting (HGB),Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,26,sarima,ingenuo_sazonal_aj,92,64.00411482510133,66.51520469707044,-0.2770638228139932,0.78235949042794,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,sarima,ingenuo_sazonal_aj,92,1.269452607337965,1.5720674641890862,-5.027571218195365,2.475482801152725e-06,SARIMA,Ingênuo sazonal ajustado
+baseline_preliminar_2026-10-13,residencia_total,MT,26,lgbm,hgb,92,62.27171773612943,66.879214352373,-1.0382492625752897,0.3019049320590886,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,lgbm,hgb,92,1.1335504341934597,1.1448605383231418,-0.9667575002208628,0.3362275883051879,LightGBM,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,26,hgb_sem_exog,hgb,92,61.684236163384014,66.879214352373,-1.2192073394514962,0.2259163744142049,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,hgb_sem_exog,hgb,92,1.1114085484081218,1.1448605383231418,-1.5801799611545206,0.1175354641994433,HGB sem SRAG e clima,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,26,hgb_pandemia,hgb,92,70.98133443560523,66.879214352373,1.7583795283045678,0.0820449946226663,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,hgb_pandemia,hgb,92,1.164672198742052,1.1448605383231418,5.918889219438582,5.6512156334019356e-08,HGB com 2020–2021,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,26,rf,lgbm,92,54.194119720026286,62.27171773612943,-1.8702499288669616,0.0646636889972091,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,rf,lgbm,92,1.2421296779805175,1.1335504341934597,0.9077080879626754,0.3664299946989963,Random Forest,LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,26,rf,sarima,92,54.194119720026286,64.00411482510133,-0.6371057233903217,0.5256555840234943,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,rf,sarima,92,1.2421296779805175,1.269452607337965,-0.1681407399000749,0.8668456924751268,Random Forest,SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,26,mlp,lgbm,92,69.47709028610497,62.27171773612943,0.4378764568345643,0.6625134379806574,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,mlp,lgbm,92,1.2511352481845832,1.1335504341934597,3.3651912300254234,0.001121462246262,Rede neural (MLP),LightGBM
+baseline_preliminar_2026-10-13,residencia_total,MT,26,mlp,sarima,92,69.47709028610497,64.00411482510133,1.2070451944509044,0.23054296552768,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,mlp,sarima,92,1.2511352481845832,1.269452607337965,-0.4144471604900454,0.6795219951345228,Rede neural (MLP),SARIMA
+baseline_preliminar_2026-10-13,residencia_total,MT,26,rf,hgb,92,54.194119720026286,66.879214352373,-1.9787863548132776,0.0508634728310083,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,rf,hgb,92,1.2421296779805175,1.1448605383231418,0.8007856336708395,0.4253415647674183,Random Forest,Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,26,mlp,hgb,92,69.47709028610497,66.879214352373,0.2131974962689415,0.831649824509996,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,mlp,hgb,92,1.2511352481845832,1.1448605383231418,3.1997592149042418,0.0018938672385921,Rede neural (MLP),Gradient boosting (HGB)
+baseline_preliminar_2026-10-13,residencia_total,MT,26,rf,ingenuo_sazonal,92,54.194119720026286,66.8804347826087,-1.6060388191754722,0.1117301240675123,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,rf,ingenuo_sazonal,92,1.2421296779805175,1.3870009960876477,-1.1621060001427803,0.248231226515725,Random Forest,Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,26,mlp,ingenuo_sazonal,92,69.47709028610497,66.8804347826087,0.311504435036549,0.7561296987575185,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,mlp,ingenuo_sazonal,92,1.2511352481845832,1.3870009960876477,-3.094404506485307,0.0026199724323066,Rede neural (MLP),Ingênuo sazonal
+baseline_preliminar_2026-10-13,residencia_total,MT,26,mlp,rf,92,69.47709028610497,54.194119720026286,1.0259495473848403,0.3076348306340864,Rede neural (MLP),Random Forest
+baseline_preliminar_2026-10-13,residencia_total,16 regioes,26,mlp,rf,92,1.2511352481845832,1.2421296779805175,0.0772690550029846,0.9385791467471246,Rede neural (MLP),Random Forest

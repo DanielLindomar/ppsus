@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Cenários de localização de serviços de saúde em Mato Grosso para apoiar a discussão sobre o deslocamento dos pacientes: a cadeia de modelos L1–L5 (demanda, escolha do paciente, acesso, otimização e cenários) e os pilotos de atenção ao parto e UTI adulto, com resultados preliminares">
+
+<title>Localização de serviços de saúde – Observatório PPSUS-MT</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c0798e995a665d3d6f8fc6b7b3a23fbc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-xl " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logos/unemat-branco.png" alt="UNEMAT — Universidade do Estado de Mato Grosso" class="navbar-logo light-content">
+    <img src="../assets/logos/unemat-branco.png" alt="UNEMAT — Universidade do Estado de Mato Grosso" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Observatório PPSUS-MT</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../municipios/index.html"> 
+<span class="menu-text">Municípios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../indicadores/index.html"> 
+<span class="menu-text">Indicadores</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../deslocamento/index.html"> 
+<span class="menu-text">Deslocamento</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-eficiência" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Eficiência</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-eficiência">    
+        <li>
+    <a class="dropdown-item" href="../eficiencia/index.html">
+ <span class="dropdown-text">Como ler e visão geral</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/atencao-basica.html">
+ <span class="dropdown-text">Atenção básica</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/consolidado.html">
+ <span class="dropdown-text">Consolidado municipal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/media-complexidade.html">
+ <span class="dropdown-text">Média complexidade (produção e acesso)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/hospitais.html">
+ <span class="dropdown-text">Hospitais SUS</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/alta-complexidade.html">
+ <span class="dropdown-text">Alta complexidade (regiões de saúde)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../eficiencia/produtividade.html">
+ <span class="dropdown-text">Produtividade (Malmquist)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../previsao/index.html"> 
+<span class="menu-text">Previsão</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-localização" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Localização</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-localização">    
+        <li>
+    <a class="dropdown-item" href="../localizacao/index.html">
+ <span class="dropdown-text">Visão geral</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../localizacao/parto.html">
+ <span class="dropdown-text">Atenção ao parto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../localizacao/uti-adulto.html">
+ <span class="dropdown-text">UTI adulto</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../judicializacao/index.html"> 
+<span class="menu-text">Judicialização</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dados/index.html"> 
+<span class="menu-text">Dados</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../metodologia.html"> 
+<span class="menu-text">Metodologia</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sobre.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/daniellindomar/ppsus"> <i class="bi bi-github" role="img" aria-label="Código-fonte no GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Localização de serviços de saúde</h1>
+</div>
+
+<div>
+  <div class="description">
+    Cenários de localização de serviços de saúde em Mato Grosso para apoiar a discussão sobre o deslocamento dos pacientes: a cadeia de modelos L1–L5 (demanda, escolha do paciente, acesso, otimização e cenários) e os pilotos de atenção ao parto e UTI adulto, com resultados preliminares
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output-display">
+<style>
+body.fullcontent main.content { min-width: 0; }
+.rolagem-x { max-width: 100%; overflow-x: auto; contain: inline-size; }
+.rolagem-x .reactable { max-width: 100%; }
+.loc-cadeia { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: .6rem; margin: .8rem 0 1.2rem; counter-reset: passo; }
+.loc-passo { border: 1px solid #d9e4e4; border-radius: 8px; padding: .7rem .8rem; background: #fff; position: relative; }
+.loc-passo .loc-cod { display: inline-block; font-weight: 700; color: #fff; background: #0E5A5E; border-radius: 4px; padding: 0 .4rem; font-size: .8rem; }
+.loc-passo h4 { font-size: .98rem; margin: .35rem 0 .25rem; }
+.loc-passo p { font-size: .84rem; color: #374151; margin: 0; }
+.loc-passo .loc-ml { font-size: .76rem; color: #2E86AB; font-weight: 600; margin-top: .3rem; }
+.vistas-mapa { display: flex; flex-wrap: wrap; gap: .35rem; margin: .4rem 0 .5rem; }
+.vistas-mapa .btn { white-space: normal; text-align: left; }
+.leg-mapa { display: flex; flex-wrap: wrap; gap: .3rem .9rem; font-size: .8rem; color: #374151; margin: .4rem 0 .2rem; }
+.leg-mapa .leg-tit { flex-basis: 100%; font-weight: 600; }
+.leg-mapa .leg-cx { display: inline-block; width: 14px; height: 14px; border: 1px solid #cbd5e1; margin-right: .3rem; vertical-align: -2px; }
+.leg-mapa .leg-dest { display: inline-block; width: 14px; height: 14px; border: 2.5px solid #111827; margin-right: .3rem; vertical-align: -2px; }
+.cenarios-lado { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: .8rem 0 1.2rem; }
+.cenarios-lado .bloco h4 { color: #0E5A5E; }
+.cenarios-lado dl { display: grid; grid-template-columns: 1fr auto; gap: .15rem .8rem; margin: 0; font-size: .88rem; }
+.cenarios-lado dt { font-weight: 400; color: #374151; }
+.cenarios-lado dd { margin: 0; font-weight: 700; text-align: right; }
+.tab-loc { width: 100%; border-collapse: collapse; font-size: .86rem; }
+.tab-loc th, .tab-loc td { padding: .3rem .45rem; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+.tab-loc th { font-weight: 600; color: #374151; background: #f6f9f9; text-align: left; }
+.tab-loc td.num, .tab-loc th.num { text-align: right; white-space: nowrap; }
+.tab-loc tr.destaque td { background: #e8f2f2; font-weight: 600; }
+.selo-prov { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: #7c4a03; background: #fdf1dc; border: 1px solid #f2d39b; border-radius: 4px; padding: 0 .35rem; vertical-align: 2px; }
+.supr { color: #6b7280; font-style: italic; }
+</style>
+</div>
+<div class="cell-output-display">
+<div class="faixa-versao"><b>Versão 0.4</b> (17/10/2026) — dados e indicadores 2020–2025, deslocamento nas internações (inclusive as de residentes de Mato Grosso em hospitais de outros estados), escores de eficiência (DEA) e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT; e, em caráter preliminar, a previsão de demanda das internações respiratórias, a localização de serviços de saúde (pilotos de atenção ao parto e UTI adulto) e a judicialização da saúde (DataJud/CNJ). Cada valor mostra a fonte e o ano a que se refere.</div>
+</div>
+<div class="cell-output-display">
+<div class="faixa-construcao"><b>Resultados preliminares</b> (versão de 17/10/2026), divulgados para discussão com a gestão do SUS. A demanda de 2026–2030 usa uma projeção populacional municipal <b>provisória</b>; os cenários de localização de serviços, para apoiar a discussão, dependem de parâmetros de pesquisa que <b>não são normas</b> e <b>não constituem recomendação oficial</b> do projeto, da SES-MT ou dos municípios.</div>
+</div>
+<div class="cell-output-display">
+<nav class="nav-mun" aria-label="Páginas da seção Localização">
+<a class="btn btn-sm btn-primary" href="index.html" aria-current="page">Visão geral</a>
+<a class="btn btn-sm btn-outline-primary" href="parto.html">Atenção ao parto</a>
+<a class="btn btn-sm btn-outline-primary" href="uti-adulto.html">UTI adulto</a>
+</nav>
+</div>
+<div class="cell-output-display">
+<nav class="nav-mun" aria-label="Seções desta página">
+<a class="btn btn-sm btn-outline-secondary" href="#problema">O problema</a>
+<a class="btn btn-sm btn-outline-secondary" href="#cadeia">A cadeia L1–L5</a>
+<a class="btn btn-sm btn-outline-secondary" href="#pilotos">Os dois pilotos</a>
+<a class="btn btn-sm btn-outline-secondary" href="#ler">Como ler</a>
+<a class="btn btn-sm btn-outline-secondary" href="#limitacoes">Limitações</a>
+<a class="btn btn-sm btn-outline-secondary" href="#arquivos">Arquivos</a>
+</nav>
+</div>
+</div>
+<section id="problema" class="level2">
+<h2 class="anchored" data-anchor-id="problema">O problema</h2>
+<p>Mato Grosso tem 142 municípios espalhados por um território extenso, e muitos serviços de saúde só existem em poucos deles. Para o gestor, a pergunta prática é: <strong>se for possível abrir ou ampliar um serviço, onde ele mais reduziria o deslocamento dos pacientes, considerando a demanda dos próximos anos?</strong> Esta seção do Observatório organiza essa pergunta em <strong>cenários, para apoiar a discussão</strong>, com uma cadeia de modelos aplicada a dois pilotos: <strong>atenção ao parto</strong> (abertura ou qualificação de maternidades) e <strong>UTI adulto</strong> (leitos SUS de terapia intensiva).</p>
+<p>A localização de serviços passou a ser objetivo do projeto em 17/10/2026, por decisão da coordenação. Os resultados desta versão são <strong>preliminares</strong>: a demanda futura usa uma projeção populacional municipal provisória, e os cenários dependem de parâmetros de pesquisa que não são normas. Eles servem para organizar a discussão com a gestão do SUS, <strong>não como recomendação oficial</strong> de abertura, habilitação ou fechamento de serviços.</p>
+</section>
+<section id="cadeia" class="level2">
+<h2 class="anchored" data-anchor-id="cadeia">A cadeia L1–L5</h2>
+<p>O problema é de otimização (escolher locais), mas a otimização só é tão boa quanto as estimativas que a alimentam. Por isso, a cadeia tem cinco elos; o aprendizado de máquina entra em dois deles, para estimar a demanda e o comportamento dos pacientes.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="loc-cadeia">
+<div class="loc-passo">
+<span class="loc-cod">L1</span>
+<h4 class="anchored">Quanta demanda haverá?</h4>
+<p>Demanda de cada município de residência em 2026–2030, a partir da história do município e da população projetada.</p>
+<div class="loc-ml">modelos de contagem e LightGBM, testados em 2024–2025</div>
+</div>
+<div class="loc-passo">
+<span class="loc-cod">L2</span>
+<h4 class="anchored">Para onde os pacientes vão?</h4>
+<p>Probabilidade de um morador escolher cada município de atendimento, conforme o tempo de viagem, o tamanho da oferta e a região de saúde.</p>
+<div class="loc-ml">modelo gravitacional e LightGBM, testados quando a oferta mudou</div>
+</div>
+<div class="loc-passo">
+<span class="loc-cod">L3</span>
+<h4 class="anchored">Como está o acesso hoje?</h4>
+<p>Tempo até o serviço mais próximo, índice de acesso que compara leitos e população (E2SFCA) e deslocamento observado em 2024–2025.</p>
+</div>
+<div class="loc-passo">
+<span class="loc-cod">L4</span>
+<h4 class="anchored">Que locais reduzem o deslocamento?</h4>
+<p>Municípios que mais reduzem o tempo médio de viagem (p-mediana) ou que mais ampliam a cobertura a até 60 ou 120 minutos, para 1 a 5 unidades novas.</p>
+</div>
+<div class="loc-passo">
+<span class="loc-cod">L5</span>
+<h4 class="anchored">O que muda?</h4>
+<p>Os fluxos de 2030 são redistribuídos com o modelo de escolha: quanto tempo cada município poupa e quantos pacientes as unidades novas recebem.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Cada elo é testado antes de alimentar o seguinte: a demanda, em anos que o modelo não usou; a escolha dos pacientes, em mudanças reais de oferta ocorridas entre 2021 e 2025 (aberturas, ampliações, reduções e fechamentos de leitos), os chamados <strong>experimentos naturais</strong>. As soluções da otimização são recalculadas com oito variantes da demanda para mostrar quais são robustas e quais são <strong>quase-empates</strong>.</p>
+</section>
+<section id="pilotos" class="level2">
+<h2 class="anchored" data-anchor-id="pilotos">Os dois pilotos</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="cartoes">
+<a class="cartao " href="parto.html">
+<h4 class="anchored">Atenção ao parto</h4>
+<p>Acesso aos leitos obstétricos, partos projetados para 2026–2030, cenários de localização de maternidades e quase-empates.</p>
+</a>
+<a class="cartao " href="uti-adulto.html">
+<h4 class="anchored">UTI adulto</h4>
+<p>Acesso aos leitos SUS de UTI adulto, internações projetadas, cenários com e sem capacidade dos leitos e necessidade de leitos por região de saúde.</p>
+</a>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="rolagem-x">
+
+<table class="tab-loc caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Indicador</th>
+<th class="num" data-quarto-table-cell-role="th"><a href="parto.html">Atenção ao parto</a></th>
+<th class="num" data-quarto-table-cell-role="th"><a href="uti-adulto.html">UTI adulto</a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Municípios com o serviço (2025)
+<div class="sub">
+parto: leito obstétrico; UTI: leito SUS de UTI adulto (CNES)
+</div></td>
+<td class="num">85</td>
+<td class="num">11</td>
+</tr>
+<tr class="even">
+<td>População-alvo a até 60 min do serviço (2025)
+<div class="sub">
+mulheres de 15 a 49 anos; adultos de 20 anos ou mais
+</div></td>
+<td class="num">96,6%</td>
+<td class="num">55,2%</td>
+</tr>
+<tr class="odd">
+<td>População-alvo a até 120 min (2025)</td>
+<td class="num">98,9%</td>
+<td class="num">70,6%</td>
+</tr>
+<tr class="even">
+<td>Tempo médio percorrido (2024–2025)
+<div class="sub">
+sede a sede, atendidos em MT
+</div></td>
+<td class="num">32,2 min</td>
+<td class="num">134,6 min</td>
+</tr>
+<tr class="odd">
+<td>Atendidos fora da região de saúde (2024–2025)</td>
+<td class="num">5,2%</td>
+<td class="num">24,3%</td>
+</tr>
+<tr class="even">
+<td>Atendidos em outros estados (2024–2025)</td>
+<td class="num">0,9%</td>
+<td class="num">2,4%</td>
+</tr>
+<tr class="odd">
+<td>Demanda projetada para 2030 <span class="selo-prov">PROVISÓRIO</span>
+<div class="sub">
+partos; internações com UTI adulto (intervalo de 80%)
+</div></td>
+<td class="num">58.362 (50.180 a 67.636)</td>
+<td class="num">17.176 (11.915 a 24.326)</td>
+</tr>
+<tr class="even">
+<td>Tempo médio até a unidade mais próxima: serviços de 2025 → mais 3 unidades novas (p-mediana)
+<div class="sub">
+demanda de 2030 (provisória)
+</div></td>
+<td class="num">10,7 min → 9,3 min</td>
+<td class="num">67,5 min → 45,0 min</td>
+</tr>
+<tr class="odd">
+<td>Modelo de escolha × regra ingênua quando a oferta muda (CPC médio)
+<div class="sub">
+experimentos naturais 2021–2025; maior é melhor
+</div></td>
+<td class="num">0,880 × 0,900</td>
+<td class="num">0,804 × 0,745</td>
+</tr>
+<tr class="even">
+<td>Soluções com quase-empate (k = 1 a 3)</td>
+<td class="num">5 de 6</td>
+<td class="num">2 de 9</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="nota-fonte">
+<p>Fontes: SINASC e SIH/SUS (demanda e deslocamento, 2024–2025), CNES (leitos, 2025), RIPSA/SVS (população, 2025), tempos rodoviários entre sedes (OSRM/OpenStreetMap). Demanda de 2030 e tempos da otimização dependem da projeção populacional municipal provisória.</p>
+</div>
+<p>O que os pilotos mostram, em resumo:</p>
+<ul>
+<li><strong>A malha de maternidades já é densa; o desafio é a escolha das gestantes.</strong> 96,6% das mulheres de 15 a 49 anos moram a até 60 minutos de um leito obstétrico, mas o tempo médio efetivamente percorrido (32,2 min) é bem maior que o tempo até a unidade mais próxima. Quase todos os municípios que aparecem nas soluções da otimização já têm leitos obstétricos. As escolhas são frágeis (com uma unidade, Tapurah e Marcelândia praticamente empatam), e o modelo de escolha <strong>não superou a regra ingênua</strong> de repetir o ano anterior quando a oferta mudou (CPC de 0,880 contra 0,900): os cenários do parto valem como ordem de grandeza.</li>
+<li><strong>A UTI adulto do SUS está concentrada, e o deslocamento é longo.</strong> Só 11 municípios tinham UTI adulto SUS em 2025; 70,6% dos adultos moram a até 120 minutos dela, e o tempo médio percorrido foi de 134,6 min (cerca de 2 h). A otimização leva as unidades novas para os polos das regiões remotas, e as soluções são estáveis. Dois cenários de três unidades são comparados sem recomendação: a p-mediana (Confresa; Juína; Pontes e Lacerda) e a versão que respeita a capacidade dos leitos (Confresa; Juína; Peixoto de Azevedo). Quando a oferta mudou, o modelo de escolha acertou mais que a regra ingênua (CPC de 0,804 contra 0,745), mas a vantagem vem do ciclo da COVID-19.</li>
+</ul>
+</section>
+<section id="ler" class="level2">
+<h2 class="anchored" data-anchor-id="ler">Como ler</h2>
+<ul>
+<li><strong>Tempo até o serviço</strong>: tempo rodoviário, de automóvel e em condições ideais, entre a sede do município de residência e a sede do município mais próximo que tem o serviço (<abbr title="Open Source Routing Machine: cálculo de rotas sobre o mapa colaborativo OpenStreetMap" tabindex="0">OSRM</abbr>). Dentro do próprio município, conta zero.</li>
+<li><strong>Índice de acesso (<abbr title="Enhanced two-step floating catchment area: método de áreas de captação flutuantes em duas etapas, com peso que diminui com o tempo de viagem" tabindex="0">E2SFCA</abbr>)</strong>: leitos disponíveis a até 60 ou 120 minutos, divididos pela população que disputa esses leitos, com peso menor para o que fica mais longe. A média de Mato Grosso vale 1; abaixo de 0,5, o acesso é menos da metade da média do estado; zero, nenhum leito ao alcance.</li>
+<li><strong>Tempo médio percorrido</strong>: média do tempo entre a sede do município de residência e a do município onde o paciente foi atendido, em 2024–2025.</li>
+<li><strong>Unidades novas (k)</strong>: número de municípios que recebem o serviço no cenário (1 a 5), além dos que já o têm.</li>
+<li><strong>p-mediana</strong>: escolhe os municípios que tornam mínimo o tempo médio de viagem até a unidade mais próxima. <strong>Cobertura máxima</strong>: escolhe os que tornam máxima a parcela da demanda a até 60 ou 120 minutos.</li>
+<li><strong>Modelo de escolha (pivô do gravitacional)</strong>: parte de para onde os pacientes de cada município foram em 2025 e ajusta essas parcelas conforme a nova oferta. <strong>Persistência</strong>: regra ingênua que só repete o ano anterior.</li>
+<li><strong><abbr title="Common Part of Commuters: parte comum entre os fluxos previstos e os observados" tabindex="0">CPC</abbr></strong>: parte comum entre os fluxos previstos e os observados; 1 é previsão perfeita.</li>
+<li><strong>Erro médio (<abbr title="Erro absoluto médio ponderado: soma dos erros absolutos dividida pela soma observada" tabindex="0">WMAPE</abbr>)</strong>: soma dos erros absolutos dividida pela soma observada.</li>
+<li><strong>Intervalo de 80%</strong>: faixa em que se espera o valor em 8 de cada 10 situações, dadas a incerteza da população e o erro observado no teste.</li>
+<li><strong>Quase-empate</strong>: duas soluções praticamente equivalentes para o critério do modelo; a escolha entre elas depende de fatores que o modelo não tem.</li>
+<li><strong>PROVISÓRIO</strong>: depende da projeção populacional municipal provisória e será refeito quando houver projeção municipal por idade e sexo.</li>
+<li><strong>“suprimido”</strong>: contagem de 1 a 4 não mostrada, ou célula escondida para que outra não pudesse ser deduzida por diferença.</li>
+</ul>
+</section>
+<section id="limitacoes" class="level2">
+<h2 class="anchored" data-anchor-id="limitacoes">Limitações</h2>
+<div class="callout callout-style-default callout-warning callout-titled" title="Comuns aos dois pilotos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Aviso</span>Comuns aos dois pilotos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Projeção populacional provisória.</strong> A população municipal de 2026–2030 aplica a participação de cada município (por sexo e faixa etária) à projeção do IBGE para Mato Grosso; não desloca as coortes, e cada município herda o envelhecimento médio do estado.</li>
+<li><strong>Demanda e oferta nas sedes.</strong> Os sistemas informam o município, não o endereço; o deslocamento dentro do município conta zero, e municípios extensos têm o acesso superestimado.</li>
+<li><strong>Tempos em condições ideais.</strong> Sem balsas, estradas sazonais, transporte sanitário, regulação ou espera; algumas rotas estão em validação com a SES-MT.</li>
+<li><strong>Modelos escolhidos no próprio teste.</strong> As métricas de validação são otimistas, e os experimentos naturais são poucos e correlacionados.</li>
+<li><strong>Município de destino, não hospital.</strong> A localização é feita entre municípios; a qualidade e a segurança do serviço não entram nos modelos.</li>
+<li><strong>Parâmetros não normativos.</strong> Ocupação-alvo, tamanho do módulo de leitos, filtros de candidatos e limiares de demanda são escolhas da pesquisa, apresentadas em cada página.</li>
+<li><strong>Sem recomendação.</strong> Os cenários mostram consequências de hipóteses para a discussão com a gestão; não indicam onde abrir, habilitar ou fechar serviços.</li>
+</ul>
+</div>
+</div>
+<p>Para onde os moradores de cada município se internam, em todas as especialidades, está na seção <a href="../deslocamento/index.html">Deslocamento</a>; o quanto cada município e hospital produz com os recursos que tem, na seção <a href="../eficiencia/index.html">Eficiência</a>.</p>
+</section>
+<section id="arquivos" class="level2">
+<h2 class="anchored" data-anchor-id="arquivos">Arquivos</h2>
+<p>Arquivos agregados da frente de localização (CSV, UTF-8, separador vírgula, decimal ponto; células suprimidas vazias, com a coluna <code>suprimido</code>). Projeções e cenários de 2026–2030 são provisórios (coluna <code>provisorio</code>). Contagens observadas de 1 a 4 não são publicadas, nem as colunas que permitiriam estimá-las.</p>
+<div class="cell">
+<div class="cell-output-display">
+<ul>
+<li>
+<a href="../arquivos/dados/localizacao_acesso_municipios_2025.csv">localizacao_acesso_municipios_2025.csv</a>
+ (42 KB)
+ — 
+Acesso atual por município e piloto: tempo até o serviço, índice E2SFCA (60 e 120 min), demanda e deslocamento observados em 2024–2025, com supressão
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_acesso_regioes_2025.csv">localizacao_acesso_regioes_2025.csv</a>
+ (5 KB)
+ — 
+Acesso atual por região de saúde de residência e piloto
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_demanda_projetada_2026_2030.csv">localizacao_demanda_projetada_2026_2030.csv</a>
+ (146 KB)
+ — 
+Demanda projetada 2026–2030 (PROVISÓRIA) para MT, regiões de saúde e municípios, com intervalo de 80%
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_otimizacao_solucoes_2030.csv">localizacao_otimizacao_solucoes_2030.csv</a>
+ (5 KB)
+ — 
+Soluções da otimização para k = 0 a 5 unidades novas (p-mediana, cobertura máxima; UTI: com capacidade e regional), 2030
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_otimizacao_sensibilidade_2030.csv">localizacao_otimizacao_sensibilidade_2030.csv</a>
+ (22 KB)
+ — 
+Sensibilidade das soluções (k = 1 a 3) a oito variantes de demanda: segunda melhor solução e quase-empates
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_cenarios_resumo_2030.csv">localizacao_cenarios_resumo_2030.csv</a>
+ (3 KB)
+ — 
+Cenários de 2030 com a escolha do paciente: tempo médio esperado e ganhos
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_cenarios_ganho_municipios_2030.csv">localizacao_cenarios_ganho_municipios_2030.csv</a>
+ (163 KB)
+ — 
+Ganho de tempo por município de residência em cada cenário de 2030
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_uti_leitos_regioes_2030.csv">localizacao_uti_leitos_regioes_2030.csv</a>
+ (2 KB)
+ — 
+UTI adulto: necessidade empírica de leitos SUS por região de saúde (2030, PROVISÓRIA, e demanda observada de 2025)
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_validacao_demanda.csv">localizacao_validacao_demanda.csv</a>
+ (1 KB)
+ — 
+Validação dos modelos de demanda (treino 2020–2023, teste 2024–2025)
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_validacao_escolha_temporal.csv">localizacao_validacao_escolha_temporal.csv</a>
+ (1 KB)
+ — 
+Validação temporal dos modelos de escolha do paciente (teste 2024–2025)
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_validacao_escolha_experimentos.csv">localizacao_validacao_escolha_experimentos.csv</a>
+ (1 KB)
+ — 
+Validação por experimento natural (aberturas, fechamentos e mudanças de leitos, 2021–2025), por tipo de evento
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_validacao_escolha_experimentos_ano.csv">localizacao_validacao_escolha_experimentos_ano.csv</a>
+ (1 KB)
+ — 
+Validação por experimento natural, por ano do evento
+</li>
+<li>
+<a href="../arquivos/dados/localizacao_dicionario.csv">localizacao_dicionario.csv</a>
+ (18 KB)
+ — 
+Dicionário das colunas de todos os arquivos acima
+</li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p class="nota-fonte">
+Fontes: 
+SINASC (nascidos vivos em hospital, por município de residência da mãe, inclusive os nascidos em outros estados); SIH/SUS (internações SUS com UTI adulto tipos I a III ou SRAG/COVID-19, por município de residência, inclusive as realizadas em outros estados)
+; 
+CNES (leitos obstétricos existentes, SUS e não SUS, média mensal de 2025); CNES (leitos SUS de UTI adulto, média mensal de 2025)
+; população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024), base da projeção municipal provisória; 
+tempos rodoviários entre sedes municipais calculados com o OSRM sobre o OpenStreetMap (consulta de 08/10/2026; condições ideais de automóvel). 
+Elaboração: Projeto PPSUS-MT, frente de localização de serviços (cadeia L1–L5, 
+17/10/2026
+). 
+Definições gerais em 
+<a href="../metodologia.html">Metodologia</a>.
+</p>
+</div>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
+<script>
+// Siglas explicadas ao passar o cursor (ou tocar, no celular). Aplica-se a parágrafos, listas,
+// legendas e rótulos dos cartões. A primeira ocorrência de cada sigla em cada bloco recebe <abbr title>.
+(function () {
+  var G = {
+    "SUS": "Sistema Único de Saúde",
+    "SIOPS": "Sistema de Informações sobre Orçamentos Públicos em Saúde: despesas declaradas pelos municípios (Ministério da Saúde)",
+    "CNES": "Cadastro Nacional de Estabelecimentos de Saúde: estabelecimentos, leitos, equipamentos e profissionais",
+    "SIA": "Sistema de Informações Ambulatoriais do SUS: procedimentos ambulatoriais aprovados",
+    "SIH": "Sistema de Informações Hospitalares do SUS: internações pagas por AIH",
+    "AIH": "Autorização de Internação Hospitalar: registro de cada internação no SUS",
+    "SISAB": "Sistema de Informação em Saúde para a Atenção Básica: produção das equipes de atenção primária",
+    "SI-PNI": "Sistema de Informação do Programa Nacional de Imunizações: doses de vacina aplicadas",
+    "SIM": "Sistema de Informações sobre Mortalidade: óbitos por residência",
+    "SINASC": "Sistema de Informações sobre Nascidos Vivos",
+    "APS": "Atenção Primária à Saúde (atenção básica): unidades básicas e equipes de saúde da família",
+    "ESF": "Estratégia Saúde da Família",
+    "eSF": "Equipe de Saúde da Família (médico, enfermeiro, técnico e agentes comunitários)",
+    "eAP": "Equipe de Atenção Primária (formato reduzido, sem agentes comunitários)",
+    "eSB": "Equipe de Saúde Bucal",
+    "ACS": "Agente Comunitário de Saúde (CBO 515105); não inclui os agentes de combate às endemias nem as demais ocupações da família CBO 5151",
+    "CBO": "Classificação Brasileira de Ocupações: código da ocupação do profissional no CNES",
+    "FTE": "Equivalente em tempo integral: horas semanais contratadas divididas por 40",
+    "MC": "Média complexidade: procedimentos e internações de nível intermediário (SIA/SIH)",
+    "AC": "Alta complexidade: procedimentos e internações de alto custo ou tecnologia (SIA/SIH)",
+    "UTI": "Unidade de Terapia Intensiva",
+    "CIR": "Comissão Intergestores Regional: instância das 16 regiões de saúde de Mato Grosso",
+    "PDR": "Plano Diretor de Regionalização: define regiões e macrorregiões de saúde",
+    "DEA": "Análise Envoltória de Dados: compara municípios, hospitais ou regiões pelo que produzem com os recursos que usam; as melhores práticas observadas formam a fronteira de eficiência",
+    "BCC": "Modelo DEA de Banker, Charnes e Cooper, com retornos variáveis de escala: cada unidade é comparada com unidades de porte semelhante",
+    "IC": "Intervalo de confiança de 95%: faixa de valores plausíveis do escore, estimada por reamostragem (bootstrap); quanto mais largo, mais incerta a posição",
+    "COSEMS-MT": "Conselho de Secretarias Municipais de Saúde de Mato Grosso",
+    "fronteira de eficiência": "Conjunto das melhores práticas observadas no ano: unidades que nenhuma outra supera produzindo mais com os mesmos recursos (escore original = 1)",
+    "Fronteira (melhores práticas)": "Faixa das unidades que formam a fronteira de eficiência no ano (escore original = 1)",
+    "escore de eficiência": "Razão entre a produção observada e a que as melhores práticas comparáveis alcançariam com os mesmos recursos (0 a 1; 1 = fronteira)",
+    "Escore corrigido": "Escore de eficiência corrigido do viés da estimação por bootstrap; é a base das faixas e vem com intervalo de confiança",
+    "escore corrigido": "Escore de eficiência corrigido do viés da estimação por bootstrap; é a base das faixas e vem com intervalo de confiança",
+    "faixa de eficiência": "Grupo de posição no ano: fronteira ou quartil (superior, terceiro, segundo, inferior) do escore corrigido entre as unidades avaliadas; substitui o ranking pontual",
+    "Faixa no estado": "Fronteira ou quartil do escore corrigido entre as unidades avaliadas no estado no ano; substitui o ranking pontual",
+    "par de referência": "Unidade da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, e as fichas mostram os 3 de maior peso",
+    "pares de referência": "Unidades da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, e as fichas mostram os 3 de maior peso",
+    "Municípios de referência plausíveis": "Pares de referência: municípios da fronteira, com registro plausível, cujas práticas compõem a meta; o peso indica a participação de cada um",
+    "meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
+    "Meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
+    "meta intermediária": "Metade do caminho entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
+    "Meta intermediária": "Metade do caminho entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
+    "potencial de melhoria": "Diferença entre a meta plena e o observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
+    "Potencial de melhoria": "Diferença entre a meta plena e o observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
+    "mudança de eficiência": "Componente do Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; leitura de gestão",
+    "Mudança de eficiência": "Componente do Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; leitura de gestão",
+    "deslocamento tecnológico": "Componente do Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
+    "Deslocamento tecnológico": "Componente do Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
+    "escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças); comparar o observado com ele isola a parte atribuível à gestão",
+    "Escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças); comparar o observado com ele isola a parte atribuível à gestão",
+    "escore esperado": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças)",
+    "eficiência condicional": "Eficiência medida só entre unidades de contexto semelhante (ordem-m condicional); informação complementar, não ranking",
+    "EC": "Mudança de eficiência (índice de Malmquist): aproximação (> 1) ou afastamento (< 1) das melhores práticas entre dois anos; o site mostra a variação em % ao ano",
+    "TC": "Deslocamento das melhores práticas (deslocamento tecnológico do índice de Malmquist): movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
+    "MI": "Índice de Malmquist: variação da produtividade total entre dois anos (MI = EC × TC); acima de 1 = aumento",
+    "APAC": "Autorização de Procedimento Ambulatorial de Alta Complexidade: registro do SIA para procedimentos como diálise, quimioterapia e radioterapia",
+    "supereficiência": "Escore DEA calculado sem a própria unidade na fronteira; acima de 1 indica o quanto a unidade supera as demais; infactível quando nenhuma outra unidade usa tão pouco de algum recurso",
+    "referência com alavancagem": "Unidade da fronteira com supereficiência muito alta (acima de 2): pesa demais na fronteira e, por isso, não é usada como par de outras",
+    "Referência com grande peso na fronteira": "Unidade da fronteira com supereficiência muito alta (acima de 2): pesa demais na fronteira e, por isso, não é usada como par de outras",
+    "diagnóstico ordem-m": "Teste de robustez: a unidade fica acima das melhores práticas de amostras de unidades comparáveis; sinal informativo, que não impede o uso como referência",
+    "ordem-m": "Fronteira parcial de ordem m: compara a unidade com amostras de m unidades comparáveis, reduzindo a influência de valores extremos",
+    "TMI": "Taxa de mortalidade infantil: óbitos de menores de 1 ano por mil nascidos vivos",
+    "PPSUS": "Programa Pesquisa para o SUS: gestão compartilhada em saúde",
+    "FAPEMAT": "Fundação de Amparo à Pesquisa do Estado de Mato Grosso",
+    "CNPq": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
+    "Decit": "Departamento de Ciência e Tecnologia do Ministério da Saúde",
+    "SES-MT": "Secretaria de Estado de Saúde de Mato Grosso",
+    "UNEMAT": "Universidade do Estado de Mato Grosso",
+    "IBGE": "Instituto Brasileiro de Geografia e Estatística",
+    "UBS": "Unidade Básica de Saúde",
+    "UPA": "Unidade de Pronto Atendimento",
+    "Malmquist": "Índice de Malmquist: variação da produtividade entre dois anos, decomposta em mudança de eficiência (gestão) e deslocamento tecnológico (fronteira)",
+    "RREO": "Relatório Resumido da Execução Orçamentária: demonstrativo bimestral que alimenta o SIOPS",
+    "OMS": "Organização Mundial da Saúde",
+    "BPA-C": "Boletim de Produção Ambulatorial consolidado: registro do SIA sem identificação do paciente",
+    "e-SUS APS": "Estratégia e-SUS Atenção Primária à Saúde: sistema de registro das equipes, que alimenta o SISAB",
+    "UFs": "Unidades da Federação (estados e Distrito Federal)",
+    "UF": "Unidade da Federação (estado ou Distrito Federal)",
+    "p.p.": "Pontos percentuais: diferença entre dois percentuais",
+    "WGS84": "Sistema de referência geodésico mundial usado nas malhas (latitude e longitude em graus)",
+    "EPSG:4326": "Código do sistema de coordenadas WGS84 (latitude e longitude em graus)",
+    "MASE": "Erro absoluto médio escalado: erro da previsão dividido pelo erro de uma regra ingênua; abaixo de 1, o modelo erra menos que ela",
+    "SARIMA": "Modelo estatístico de séries temporais com tendência e sazonalidade (média móvel integrada autorregressiva sazonal)",
+    "LightGBM": "Modelo de aprendizado de máquina com árvores de decisão em sequência (gradient boosting)",
+    "HGB": "Gradient boosting por histogramas: modelo de aprendizado de máquina com árvores de decisão em sequência",
+    "MLP": "Perceptron multicamadas: rede neural artificial simples",
+    "ETS": "Suavização exponencial com erro, tendência e sazonalidade (Holt-Winters)",
+    "SRAG": "Síndrome respiratória aguda grave",
+    "SIVEP-Gripe": "Sistema de Informação de Vigilância Epidemiológica da Gripe: notificações de SRAG (Ministério da Saúde)",
+    "SE": "Semana epidemiológica: semana de domingo a sábado, numerada no ano",
+    "VPP": "Valor preditivo positivo: parcela dos avisos de alerta que se confirmaram",
+    "P90": "Percentil 90: valor que só 10% das semanas de referência ultrapassaram",
+    "WMAPE": "Erro absoluto médio ponderado: soma dos erros absolutos dividida pela soma observada",
+    "CPC": "Common Part of Commuters: parte comum entre os fluxos previstos e os observados (1 = previsão perfeita)",
+    "E2SFCA": "Método de áreas de captação flutuantes em duas etapas: índice de acesso que compara leitos ao alcance com a população que disputa esses leitos",
+    "OSRM": "Open Source Routing Machine: cálculo de rotas e tempos rodoviários sobre o mapa colaborativo OpenStreetMap",
+    "CNJ": "Conselho Nacional de Justiça",
+    "DataJud": "Base Nacional de Dados do Poder Judiciário, mantida pelo CNJ (API pública de metadados processuais)",
+    "TJMT": "Tribunal de Justiça do Estado de Mato Grosso",
+    "TRF1": "Tribunal Regional Federal da 1ª Região (Justiça Federal; inclui as subseções de Mato Grosso)",
+    "TPU": "Tabelas Processuais Unificadas do CNJ: códigos padronizados de classes, assuntos e movimentos",
+    "SECTICS": "Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (Ministério da Saúde)",
+    "SECITECI": "Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso"
+  };
+  var chaves = Object.keys(G).sort(function (a, b) { return b.length - a.length; });
+  var re = new RegExp("(^|[^\\wÀ-ú-])(" + chaves.map(function (k) { return k.replace(/[.*+?^${}()|[\]\\-]/g, "\\$&"); }).join("|") + ")(?![\\wÀ-ú-])");
+  function marcar(el) {
+    var usados = {};
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        var p = n.parentNode;
+        while (p && p !== el) { if (/^(A|ABBR|CODE|SCRIPT|STYLE|SVG|BUTTON|SELECT|OPTION|H1|H2|H3)$/i.test(p.nodeName)) return NodeFilter.FILTER_REJECT; p = p.parentNode; }
+        return re.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+      }
+    });
+    var nos = []; while (w.nextNode()) nos.push(w.currentNode);
+    nos.forEach(function (n) {
+      var m = n.nodeValue.match(re); if (!m || usados[m[2]]) return;
+      usados[m[2]] = true;
+      var i = m.index + m[1].length, depois = n.splitText(i); depois.splitText(m[2].length);
+      var ab = document.createElement("abbr"); ab.title = G[m[2]]; ab.tabIndex = 0; ab.textContent = m[2];
+      depois.parentNode.replaceChild(ab, depois);
+    });
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("main p, main li, main figcaption, main td, main th, main .kpi-rotulo, main .kpi-meta, main .kpi-comp, main .kpi-nota, main .ficha-ind > div, main .ressalva-ind, main .faixa-versao, main .definicao-ind, main .ef-linha, main .ef-sintese, footer .nav-footer-left").forEach(marcar);
+  });
+})();
+</script>
+<div id="dica-grafico" role="tooltip" aria-hidden="true"></div>
+<script>
+// Dica imediata para elementos com data-tip (pontos, barras e linhas dos gráficos SVG).
+(function () {
+  var dica = document.getElementById("dica-grafico");
+  function mostrar(el, x, y) {
+    dica.textContent = el.getAttribute("data-tip");
+    dica.style.display = "block";
+    var w = dica.offsetWidth, h = dica.offsetHeight;
+    var left = Math.min(x + 12, window.innerWidth - w - 8), top = y - h - 12;
+    if (top < 4) top = y + 16;
+    dica.style.left = left + "px"; dica.style.top = top + "px";
+  }
+  function esconder() { dica.style.display = "none"; }
+  document.addEventListener("mouseover", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); if (el) mostrar(el, e.clientX, e.clientY);
+  });
+  document.addEventListener("mousemove", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); if (el && dica.style.display === "block") mostrar(el, e.clientX, e.clientY);
+  });
+  document.addEventListener("mouseout", function (e) {
+    if (e.target.closest && e.target.closest("[data-tip]")) esconder();
+  });
+  document.addEventListener("touchstart", function (e) {
+    var el = e.target.closest && e.target.closest("[data-tip]"); var t = e.touches[0];
+    if (el) mostrar(el, t.clientX, t.clientY); else esconder();
+  }, { passive: true });
+  window.addEventListener("scroll", esconder, { passive: true });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/daniellindomar\.github\.io\/ppsus\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<div class="rodape">
+<div class="rodape-logos">
+<p><span class="rodape-rotulo">Realização</span> <img src="../assets/logos/unemat.png" class="rodape-logo img-fluid" alt="UNEMAT — Universidade do Estado de Mato Grosso"></p>
+</div>
+<div class="rodape-logos">
+<p><span class="rodape-rotulo">Financiamento</span> <img src="../assets/logos/ppsus-mt.png" class="rodape-logo img-fluid" alt="PPSUS — Programa Pesquisa para o SUS: Mato Grosso"> <img src="../assets/logos/fapemat.png" class="rodape-logo img-fluid" alt="FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso"> <img src="../assets/logos/ses-mt.png" class="rodape-logo img-fluid" alt="SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso"> <img src="../assets/logos/cnpq.png" class="rodape-logo img-fluid" alt="CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico"> <img src="../assets/logos/ministerio-saude-sus.png" class="rodape-logo img-fluid" alt="SUS · Ministério da Saúde · Governo do Brasil"></p>
+</div>
+<p><span class="rodape-citacao">Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.</span></p>
+<p><span class="rodape-versao">Versão 0.4 · atualizado em 17/10/2026 · Conteúdo sob licença CC BY 4.0, exceto os arquivos e gráficos derivados do DataJud/CNJ (uso não comercial) · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
+</div>
+<div class="toc-actions"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
