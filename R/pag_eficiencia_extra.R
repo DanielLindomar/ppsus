@@ -180,7 +180,7 @@ efx_spec <- function(modelo) {
 }
 efx_bloco_spec <- function(modelo) {
   e <- efx_spec(modelo)
-  if (nrow(e) == 0) return(p(class = "nota-fonte", "Especificação do modelo indisponível."))
+  if (nrow(e) == 0) return(p(class = "nota-fonte", "A especificação do modelo não está disponível."))
   item <- function(x) lapply(seq_len(nrow(x)), function(i) tags$li(strong(x$nome_gerencial[i]),
     span(class = "sub", sprintf(" — %s; fonte: %s", x$unidade[i], gsub(";? ?com flags", "", x$fonte[i])))))
   ins <- unique(e[e$tipo == "insumo", c("variavel", "nome_gerencial", "unidade", "fonte")])
@@ -378,7 +378,7 @@ efx_h_distribuicao_grupos <- function(a = EFX_ANO) {
 # Tabela de todos os hospitais do ano: faixa, escore com IC, esperado, tendência, produção, sinais
 efx_h_tabela <- function(a = EFX_ANO, prefixo = "../municipios/", id_html = "tab-hospitais") {
   d <- efx_h_ano(a)
-  if (nrow(d) == 0) return(p(class = "nota-fonte", "Sem dados de hospitais."))
+  if (nrow(d) == 0) return(p(class = "nota-fonte", "Não há dados de hospitais para o ano."))
   pro <- efx_spec("H"); pro <- pro[pro$tipo == "produto", ]
   prod <- efx_h_producao(a)
   d <- left_join(d, prod, by = "cnes")
@@ -431,7 +431,7 @@ efx_h_metas_agregadas <- function(a = EFX_ANO) {
 }
 efx_h_tabela_metas <- function(a = EFX_ANO) {
   g <- efx_h_metas_agregadas(a)
-  if (is.null(g)) return(p(class = "nota-fonte", "Metas indisponíveis."))
+  if (is.null(g)) return(p(class = "nota-fonte", "As metas não estão disponíveis."))
   t <- g |> transmute(Variável = nome_gerencial, Tipo = ifelse(tipo == "produto", "Produção", "Recurso"), Unidade = unidade,
                       `Hospitais com meta` = n, `Com lacuna` = n_lacuna, Observado = obs, `Meta intermediária` = inter,
                       `Meta plena` = meta, `Variação até a meta intermediária` = var_inter, `Variação até a meta plena` = var_pct)
@@ -447,7 +447,7 @@ efx_h_tabela_metas <- function(a = EFX_ANO) {
 # Hospitais de referência (pares) mais usados no ano
 efx_h_pares_top <- function(a = EFX_ANO, n = 10, prefixo = "../municipios/") {
   p0 <- EFX_PH[EFX_PH$ano == a, ]
-  if (nrow(p0) == 0) return(p(class = "nota-fonte", "Sem pares no ano."))
+  if (nrow(p0) == 0) return(p(class = "nota-fonte", "Não há pares de referência no ano."))
   f <- efx_h_ano(a)
   t <- p0 |> group_by(par_cnes, par_nome, par_municipio) |>
     summarise(n_ref = n_distinct(cnes), n_sem = sum(mais_semelhante == 1, na.rm = TRUE), peso = mean(peso, na.rm = TRUE), .groups = "drop") |>
@@ -484,7 +484,7 @@ efx_mq_tabela_janelas <- function(modelos = names(MODELOS_MQ), grupos = list(), 
       tibble::tibble(Modelo = MODELOS_MQ[[md]], cod = md, Grupo = GRUPO_ROT[[g]], Janela = efx_janela_rot(x$periodo), n = x$n,
                      EC = x$ec, pct_ec = 100 * x$n_ec_maior_1 / x$n, MI = x$mi, TC = x$tc, melhora = x$n_melhora_ec, piora = x$n_piora_ec) }) })
   t <- bind_rows(unlist(linhas, recursive = FALSE))
-  if (nrow(t) == 0) return(p(class = "nota-fonte", "Malmquist indisponível."))
+  if (nrow(t) == 0) return(p(class = "nota-fonte", "O índice de Malmquist não está disponível."))
   # contagens de tendência consistente ausentes no agregado de um modelo (todas zero) → "—", não zero
   sem_cont <- tapply(t$melhora + t$piora, t$cod, function(v) all(is.na(v) | v == 0))
   t$melhora[t$cod %in% names(sem_cont)[sem_cont]] <- NA; t$piora[t$cod %in% names(sem_cont)[sem_cont]] <- NA
@@ -553,7 +553,7 @@ efx_ac_kpis <- function(a = EFX_ANO) {
 
 # Painel regional (16 regiões) do ano, com busca e download
 efx_ac_tabela_painel <- function(a = EFX_ANO, id_html = "tab-painel-ac") {
-  d <- efx_ac_ano(a); if (nrow(d) == 0) return(p(class = "nota-fonte", "Painel indisponível."))
+  d <- efx_ac_ano(a); if (nrow(d) == 0) return(p(class = "nota-fonte", "O painel não está disponível para o ano."))
   t <- tibble::tibble(Região = d$regiao_saude, Quadrante = d$quadrante, Macrorregião = d$macrorregiao, População = d$populacao,
     Acesso = d$internacoes_ac_res_p1000, APAC = d$apac_ac_res_p1000, Realizadas = d$internacoes_ac_local_p1000,
     Autossuficiencia = d$autossuficiencia_ac_pct, Valor = d$valor_ac_res_pc,
@@ -795,7 +795,7 @@ efx_mq_kpis <- function() {
 
 # Por região de saúde: EC nas três janelas (+ MI 2022–2025), com barras da variação anual 2022–2025
 efx_mq_regioes_tabela <- function(modelo, grupo = "todos", id_html = NULL) {
-  x <- efx_mq(modelo, "regiao", grupo, "janela"); if (nrow(x) == 0) return(p(class = "nota-fonte", "Sem dados por região."))
+  x <- efx_mq(modelo, "regiao", grupo, "janela"); if (nrow(x) == 0) return(p(class = "nota-fonte", "Não há dados por região de saúde para este modelo."))
   regs <- unique(x$regiao_saude); regs <- regs[ordem_nome(regs)]
   pega <- function(per, campo) { y <- x[x$periodo == per, ]; y[[campo]][match(regs, y$regiao_saude)] }
   t <- tibble::tibble(Região = regs, n = pega("2022-2025", "n"),

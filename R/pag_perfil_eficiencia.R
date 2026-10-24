@@ -439,7 +439,7 @@ motivo_gestor <- function(r) {
 ficha_modelo <- function(cod, modelo, nome, nome_reg) {
   r <- ef_linha(cod, modelo)
   pag <- paste0(EF_PREFIXO, EF_PAGINA[[modelo]], ".html")
-  if (is.null(r)) return(sprintf('<p class="nota-fonte">Sem ficha de %s para %s.</p>', EF_MODELOS[[modelo]], esc(nome)))
+  if (is.null(r)) return(sprintf('<p class="nota-fonte">Não há ficha de %s para %s.</p>', tolower(EF_MODELOS[[modelo]]), esc(nome)))
   if (!r$situacao %in% "avaliado")
     return(sprintf('<div class="ef-ficha"><p><b>Não avaliado em %d:</b> %s</p><p class="nota-fonte"><a href="%s">Como o modelo funciona →</a></p></div>',
                    EF_ANO, esc(motivo_gestor(r)), pag))

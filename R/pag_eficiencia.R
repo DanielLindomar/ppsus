@@ -255,7 +255,7 @@ kpis_modelo <- function(modelo, grupo = NULL, ano = ANO_EF) {
 bloco_especificacao <- function(modelo, grupo = NULL) {
   e <- ESPEC[ESPEC$modelo == modelo, ]
   if (!is.null(grupo)) e <- e[e$tipo == "produto" | (!is.na(e$grupo) & e$grupo == grupo), ]
-  if (nrow(e) == 0) return(p(class = "nota-fonte", "Especificação não disponível."))
+  if (nrow(e) == 0) return(p(class = "nota-fonte", "A especificação deste modelo não está disponível."))
   e <- e[order(e$tipo, e$ordem), ]
   item <- function(x) tags$li(strong(x$nome_gerencial), span(class = "sub", paste0(" — ", x$unidade, " · ", x$fonte)))
   lista <- function(tp) { x <- e[e$tipo == tp, ]; x <- x[!duplicated(x$variavel), ]
@@ -388,7 +388,7 @@ ficha_detalhe <- function(cod, modelo, ano = ANO_EF, prefixo = "../municipios/")
           else sprintf("Por situar-se na fronteira, o município não tem pares e serve de referência para %s %s.", num(r$n_vezes_referencia),
                        if (isTRUE(nref == 1)) "município" else "municípios")
         } else
-        "Sem pares listados: entre os municípios elegíveis como referência (com registro plausível), nenhum supera este município com recursos semelhantes. O escore publicado provém da fronteira comum, que inclui unidades que não servem de par.")
+        "Não há pares listados, uma vez que, entre os municípios elegíveis como referência (com registro plausível), nenhum supera este município com recursos semelhantes. O escore publicado provém da fronteira comum, que inclui unidades que não servem de par.")
   sem_lacuna <- nrow(mt) > 0 && all(!is.finite(mt$potencial_unidades) | abs(mt$potencial_unidades) < 1e-9)
   metas <- if (nrow(mt) && (!isTRUE(r$faixa == "fronteira") || nrow(pr) > 0) && !sem_lacuna) tags$table(
     tags$thead(tags$tr(tags$th("Variável"), tags$th("Unidade"), tags$th("Observado"), tags$th("Meta intermediária"), tags$th("Meta plena"), tags$th("Potencial"))),
@@ -407,7 +407,7 @@ ficha_detalhe <- function(cod, modelo, ano = ANO_EF, prefixo = "../municipios/")
 tabela_eficiencia <- function(modelo, ano = ANO_EF, grupo = NULL, prefixo = "../municipios/",
                               id_html = paste0("tab-ef-", tolower(modelo), if (!is.null(grupo)) paste0("-", gsub("_", "-", grupo)) else "")) {
   f <- avaliados(fichas_modelo(modelo, ano, grupo))
-  if (nrow(f) == 0) return(p(class = "nota-fonte", "Sem municípios avaliados."))
+  if (nrow(f) == 0) return(p(class = "nota-fonte", "Não há municípios avaliados neste modelo no ano."))
   f <- ordenar_mun(f)
   d <- tibble::tibble(cod_mun6 = f$cod_mun6, Município = f$municipio, slug = f$slug, `Região de saúde` = f$regiao_saude,
                       Porte = f$porte_faixa, faixa = f$faixa, Faixa = match(f$faixa, FAIXAS), ic_cruza_faixa = f$ic_cruza_faixa,
@@ -482,7 +482,7 @@ potencial_agregado <- function(modelo, ano = ANO_EF, grupo = NULL) {
 
 tabela_potencial <- function(modelo, ano = ANO_EF, grupo = NULL) {
   x <- potencial_agregado(modelo, ano, grupo)
-  if (nrow(x) == 0) return(p(class = "nota-fonte", "Sem metas publicáveis."))
+  if (nrow(x) == 0) return(p(class = "nota-fonte", "Não há metas publicáveis neste modelo no ano."))
   fm <- function(v, u) if (grepl("^R\\$", u)) reais_txt(v) else escala(v)
   d <- tibble::tibble(Tipo = ifelse(x$tipo == "produto", "Produção", "Recurso"), Variável = x$nome_gerencial, Unidade = x$unidade_abs,
                       Municípios = x$n, Observado = x$observado, Intermediaria = x$inter, Plena = x$plena, Pct = x$pct, u = x$unidade_abs)
@@ -514,7 +514,7 @@ texto_potencial <- function(modelo, ano = ANO_EF, grupo = NULL) {
 # Municípios mais usados como referência (n_vezes_referencia) — barras com link ao perfil
 pares_mais_usados <- function(modelo, ano = ANO_EF, grupo = NULL, n = 10, prefixo = "../municipios/") {
   f <- avaliados(fichas_modelo(modelo, ano, grupo)); f <- f[!is.na(f$n_vezes_referencia) & f$n_vezes_referencia > 0, ]
-  if (nrow(f) == 0) return(p(class = "nota-fonte", "Sem pares de referência no ano."))
+  if (nrow(f) == 0) return(p(class = "nota-fonte", "Não há pares de referência neste modelo no ano."))
   f <- f[order(-f$n_vezes_referencia, ordem_nome(f$municipio)), ][seq_len(min(n, nrow(f))), ]
   HTML(svg_sem_ancora(svg_barras_h(paste0(f$municipio, " (", f$regiao_saude, ")"), f$n_vezes_referencia, "int",
                     titulo = paste0("Municípios mais usados como referência, ", ano), hrefs = paste0(prefixo, f$slug, ".html"),
@@ -538,7 +538,7 @@ svg_evolucao <- function(modelo, grupo = "todos") {
 # Janelas do estado: EC e MI médios anuais, municípios com tendência consistente
 tabela_janelas <- function(modelo, grupo = "todos") {
   x <- mq_estado(modelo, grupo); x <- x[x$tipo_periodo == "janela", ]
-  if (nrow(x) == 0) return(p(class = "nota-fonte", "Sem Malmquist para este modelo."))
+  if (nrow(x) == 0) return(p(class = "nota-fonte", "O índice de Malmquist não está disponível para este modelo."))
   x <- x[order(match(x$periodo, c("2020-2022", "2022-2025", "2020-2025"))), ]
   d <- tibble::tibble(Período = sub("-", "–", x$periodo), n = x$n, EC = x$ec, MI = x$mi,
                       Melhora = x$n_melhora_ec, Piora = x$n_piora_ec)
