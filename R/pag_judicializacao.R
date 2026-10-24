@@ -367,8 +367,8 @@ mapa_comarcas <- function(altura = 600) {
                         "<br>%s<br><span style='color:#6b7280'>%s</span>%s"),
                  esc(g$comarca), num(g$taxa_eb_local_100mil), g$faixa_taxa_suavizada,
                  sprintf("%s ações atribuíveis em 2022–2024 · população média %s", supr_j(g$acoes_saude), num(g$populacao_media)),
-                 ifelse(nmun == 1, sprintf("Abrange só o município de %s.", esc(g$municipios)),
-                        sprintf("Abrange %s municípios, que recebem todos esta mesma taxa: %s.", por_extenso(nmun), esc(gsub("; ", ", ", g$municipios)))),
+                 ifelse(nmun == 1, sprintf("Abrange apenas o município de %s.", esc(g$municipios)),
+                        sprintf("Abrange %s municípios, aos quais se atribui a mesma taxa: %s.", por_extenso(nmun), esc(gsub("; ", ", ", g$municipios)))),
                  ifelse(g$limite_inferior %in% TRUE,
                         "<br><b>Limite inferior:</b> parte das ações dos moradores tramita em unidades centralizadas sem origem identificável.", ""))
   li <- g[g$limite_inferior %in% TRUE, ]
@@ -423,7 +423,7 @@ tabela_ranking <- function(id_html = "tab-jud-comarcas") {
 # Municípios: taxa e faixa HERDADAS da comarca (o DataJud não informa o município do autor)
 tabela_municipios_jud <- function(prefixo = "../municipios/", id_html = "tab-jud-mun") {
   m <- JUD_MUN[JUD_MUN$ano == ANO_COMPL, ]
-  if (nrow(m) == 0) return(p(class = "nota-fonte", "Sem dados por município."))
+  if (nrow(m) == 0) return(p(class = "nota-fonte", "Não há dados por município."))
   per <- JUD_PER[, c("comarca", "faixa_taxa_suavizada")]; names(per)[2] <- "faixa_per"
   d <- m |> left_join(per, by = "comarca") |>
     left_join(JUD_CM[, c("cod_mun6", "sede_comarca")], by = "cod_mun6") |>
@@ -455,7 +455,7 @@ tabela_municipios_jud <- function(prefixo = "../municipios/", id_html = "tab-jud
 # Faixas por ano (2022–2026) de cada comarca, com as ações atribuíveis do ano
 tabela_faixas_ano <- function(anos = 2022:2026) {
   ca <- JUD_CA[JUD_CA$ano %in% anos, ]
-  if (nrow(ca) == 0) return(p(class = "nota-fonte", "Sem série por comarca."))
+  if (nrow(ca) == 0) return(p(class = "nota-fonte", "Não há série por comarca."))
   cel <- ca |> mutate(txt = ifelse(is.na(acoes_saude), chip_faixa(NA),
                                    chip_faixa(faixa_taxa_suavizada, sprintf('<div class="sub">%s ações</div>', num(acoes_saude))))) |>
     select(comarca, ano, txt) |> tidyr::pivot_wider(names_from = ano, values_from = txt)
@@ -542,7 +542,7 @@ tabela_metricas <- function() {
 # ---- 7. Fatores associados (J2) ---------------------------------------------------------------------------
 tabela_j2 <- function(dep) {
   d <- JUD_J2[JUD_J2$dependente == dep, ]
-  if (nrow(d) == 0) return(p(class = "nota-fonte", "Sem resultados."))
+  if (nrow(d) == 0) return(p(class = "nota-fonte", "Não há resultados para este tipo de ação."))
   d$bloco <- J2_BLOCO[d$variavel]
   d <- d[order(match(d$bloco, names(J2_BLOCOS)), match(d$variavel, names(J2_VAR))), ]
   dp <- vapply(seq_len(nrow(d)), function(i) {
@@ -568,7 +568,7 @@ tabela_j2 <- function(dep) {
 tabela_j2_grupos <- function() {
   deps <- c("acoes_medicamentos", "acoes_tratamento", "acoes_internacao_uti")
   d <- JUD_J2[JUD_J2$dependente %in% deps & JUD_J2$variavel %in% names(J2_BLOCO)[J2_BLOCO == "oferta"], ]
-  if (nrow(d) == 0) return(p(class = "nota-fonte", "Sem resultados."))
+  if (nrow(d) == 0) return(p(class = "nota-fonte", "Não há resultados para os grupos de assunto."))
   d <- d |> mutate(txt = sprintf("%s (%s–%s)<div class='sub'>p %s · BH %s</div>", dec2(irr), dec2(irr_li), dec2(irr_ls), p_txt(p), p_txt(p_bh))) |>
     select(variavel, dependente, txt) |> tidyr::pivot_wider(names_from = dependente, values_from = txt) |>
     mutate(ordem = match(variavel, names(J2_VAR))) |> arrange(ordem) |> transmute(Variável = unname(J2_VAR[variavel]), !!!rlang::syms(deps))
@@ -580,6 +580,8 @@ tabela_j2_grupos <- function() {
 # Valor de uma linha do J2 (para o texto)
 j2 <- function(dep, var) { r <- JUD_J2[JUD_J2$dependente == dep & JUD_J2$variavel == var, ]; if (nrow(r)) r[1, ] else NULL }
 irr_txt <- function(r, extra = "") sprintf("%s (IC 95%% %s–%s%s)", dec2(r$irr), dec2(r$irr_li), dec2(r$irr_ls), extra)
+# Mesma razão para uso DENTRO de parênteses (v0.5: sem parênteses aninhados): "1,18; IC 95%: 1,03–1,35"
+irr_par <- function(r) sprintf("%s; IC 95%%: %s–%s", dec2(r$irr), dec2(r$irr_li), dec2(r$irr_ls))
 
 # Nota de supressão (auditoria da origem)
 aud_val <- function(prefixo) {
