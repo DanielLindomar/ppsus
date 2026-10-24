@@ -5,6 +5,7 @@ source(file.path(Sys.getenv("QUARTO_PROJECT_DIR", "."), "R", "pag_indicadores.R"
 R_ <- info_ind(IND_ID)
 A_ <- ano_ult(IND_ID)
 A_TXT <- ifelse(is.na(A_), "último ano disponível", A_)
+FONTE_ <- ifelse(is.na(R_$fonte) | !nzchar(R_$fonte), "elaboração própria", R_$fonte)
 ```
 
 ```{r}
@@ -24,7 +25,7 @@ cat(sprintf("## Mato Grosso em %s\n\n", A_TXT))
 kpis_indicador(IND_ID, ano = A_, prefixo_mun = "../municipios/")
 ```
 
-O agregado de Mato Grosso é calculado com os totais do estado; a mediana descreve o município "típico" e é a referência usada nos perfis municipais (▲/▼). Maior e menor valor apontam os extremos entre os municípios com dado no ano.
+O agregado de Mato Grosso é calculado com os totais do estado, ao passo que a mediana descreve o município "típico" e constitui a referência utilizada nos perfis municipais (▲/▼). O maior e o menor valor, por sua vez, indicam os extremos entre os municípios com dado no ano.
 
 ```{r}
 #| results: asis
@@ -37,14 +38,16 @@ cat(sprintf("## Municípios em %s\n\n", A_TXT))
 mapa_indicador(IND_ID, ano = A_, altura = 480, prefixo = "../municipios/")
 ```
 
-[Cores por quintis dos municípios com dado (cinco faixas com o mesmo número de municípios); sem dado em cinza. Clique em um município para abrir o perfil. Boa Esperança do Norte (instalado em 2025) não consta na malha do IBGE e aparece apenas no ranking.]{.nota-fonte}
+[Figura 1 – Distribuição municipal do indicador, `r A_TXT`. Fonte: `r FONTE_`; malha municipal do IBGE. Nota: as cores correspondem aos quintis dos municípios com dado (cinco faixas com o mesmo número de municípios), e os municípios sem dado aparecem em cinza. A seleção de um município no mapa abre o respectivo perfil. Boa Esperança do Norte (instalado em 2025) não consta da malha do IBGE e aparece apenas no *ranking*.]{.nota-fonte}
 :::
 ::: {.perfil-texto}
+**Tabela 1 – Posição dos municípios no indicador, `r A_TXT`**
+
 ```{r}
 ranking_indicador(IND_ID, ano = A_, prefixo = "../municipios/", tamanho = 20)
 ```
 
-[Posição 1º = maior valor, sem juízo: leia com o campo "Leitura" da ficha; municípios empatados recebem a mesma posição. Use a busca para localizar um município; "—" indica município sem dado no ano.]{.nota-fonte}
+[Fonte: `r FONTE_`. Nota: a posição 1º corresponde ao maior valor, sem juízo de valor, e deve ser interpretada à luz do campo "Leitura" da ficha; os municípios empatados recebem a mesma posição. O campo de busca permite localizar um município, e o símbolo "—" indica município sem dado no ano.]{.nota-fonte}
 :::
 ::::
 
@@ -57,18 +60,22 @@ cat(sprintf("## Evolução %d–%s\n\n", ANOS[1], A_TXT))
 serie_indicador_regioes(IND_ID)
 ```
 
-Linha cheia: mediana dos municípios em cada ano; linha pontilhada: agregado de Mato Grosso; linha tracejada: agregado da região escolhida. Passe o cursor (ou toque, no celular) sobre um ponto para ver o valor. Os anos de 2020 e 2021 foram afetados pela pandemia de COVID-19.
+[Figura 2 – Evolução do indicador em Mato Grosso, `r ANOS[1]`–`r A_TXT`. Fonte: `r FONTE_`.]{.nota-fonte}
+
+Na Figura 2, a linha cheia representa a mediana dos municípios em cada ano, a linha pontilhada, o agregado de Mato Grosso, e a linha tracejada, o agregado da região de saúde selecionada. O valor de cada ponto é exibido quando se posiciona o cursor sobre ele (ou quando se toca o ponto, no celular). Ressalta-se, ainda, que os anos de 2020 e 2021 foram afetados pela pandemia de COVID-19.
 
 ```{r}
 #| results: asis
 cat(sprintf("## Regiões de saúde em %s\n\n", A_TXT))
 ```
 
+**Tabela 2 – Valor do indicador e mediana dos municípios, por região de saúde, `r A_TXT`**
+
 ```{r}
 tabela_regioes_indicador(IND_ID, ano = A_)
 ```
 
-Valor da região = razão dos totais (ou soma) dos municípios da região; mediana = mediana dos municípios da região. Regiões ordenadas do maior para o menor valor.
+[Fonte: `r FONTE_`. Nota: o valor da região corresponde à razão dos totais (ou à soma, no caso das contagens) dos municípios da região, e a mediana, à mediana dos municípios da região. As regiões estão ordenadas do maior para o menor valor.]{.nota-fonte}
 
 ```{r}
 p(class = "nota-fonte",

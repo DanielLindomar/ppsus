@@ -17,27 +17,33 @@ n_reg <- nrow(REG)
 faixa_versao()
 ```
 
-Mato Grosso tem **`r nrow(MUN)` municípios**, organizados em `r n_reg` regiões de saúde (CIR) e `r length(unique(REG$macrorregiao))` macrorregiões. Cada perfil reúne os indicadores de financiamento, capacidade instalada, atenção básica, média e alta complexidade e resultados em saúde de 2020 a 2025, a posição do município entre os 142 e entre os da sua região, o deslocamento dos moradores para internação, os hospitais SUS e o download dos dados. Clique em um município do mapa ou da tabela.
+Mato Grosso possui **`r nrow(MUN)` municípios**, organizados em `r n_reg` regiões de saúde, correspondentes às Comissões Intergestores Regionais (CIR), e em `r length(unique(REG$macrorregiao))` macrorregiões. Cada perfil reúne os indicadores de financiamento, capacidade instalada, atenção básica, média e alta complexidade e resultados em saúde de 2020 a 2025, a posição do município entre os 142 e entre os da sua região, o deslocamento dos moradores para internação, os hospitais SUS e o *download* dos dados. A seleção de um município no mapa (Figura 1) ou na tabela (Tabela 1) abre o respectivo perfil.
 
 ```{r}
 sem_zoom_rolagem(mapa_municipio(NULL, altura = 460, prefixo = ""))
 ```
 
 ::: {.nota-fonte}
-Malha municipal do IBGE simplificada. Boa Esperança do Norte (instalado em 2025) ainda não consta na malha e aparece apenas na tabela. Em 2025, `r n_sem_hosp` municípios não tinham hospital SUS registrado no CNES.
+Figura 1 – Municípios de Mato Grosso e acesso aos perfis municipais. Fonte: IBGE (malha municipal simplificada); CNES. Nota: Boa Esperança do Norte (instalado em 2025) ainda não consta da malha e aparece apenas na tabela. Em 2025, `r n_sem_hosp` municípios não dispunham de hospital SUS registrado no Cadastro Nacional de Estabelecimentos de Saúde (CNES).
 :::
 
 ## Os 142 municípios
 
-Valores de 2025: população estimada (IBGE), despesa liquidada em saúde por habitante (SIOPS, R$ correntes), médicos com atendimento SUS por mil habitantes (CNES, equivalente de 40 h) e parcela das internações de moradores realizadas em outro município (SIH). Use a busca para localizar um município e clique no cabeçalho para ordenar.
+A Tabela 1 apresenta, para 2025, a população estimada pelo Instituto Brasileiro de Geografia e Estatística (IBGE), a despesa liquidada em saúde por habitante, registrada no Sistema de Informações sobre Orçamentos Públicos em Saúde (SIOPS) em R$ correntes, os médicos com atendimento SUS por mil habitantes, em equivalente de 40 h, segundo o CNES, e a parcela das internações de moradores realizadas em outro município, segundo o Sistema de Informações Hospitalares do SUS (SIH). O campo de busca permite localizar um município, e a seleção do cabeçalho de uma coluna ordena a tabela.
+
+**Tabela 1 – Indicadores selecionados dos municípios de Mato Grosso, 2025**
 
 ```{r}
 tabela_municipios(prefixo = "")
 ```
 
+[Fonte: IBGE; SIOPS; CNES; SIH/SUS.]{.nota-fonte}
+
 ## Regiões de saúde
 
-As 16 regiões de saúde (Comissões Intergestores Regionais) organizam a referência da média e alta complexidade. Clique na seta para listar os municípios de cada região.
+As 16 regiões de saúde, correspondentes às CIR, organizam a referência da média e da alta complexidade. A Tabela 2 relaciona as regiões, com a respectiva macrorregião, o número de municípios e a população, e a seleção da seta de cada linha exibe os municípios que as compõem.
+
+**Tabela 2 – Regiões de saúde de Mato Grosso: macrorregião, número de municípios e população, 2025**
 
 ```{r}
 d <- REG |> arrange(regiao_saude) |>
@@ -54,6 +60,8 @@ reactable(d, compact = TRUE, striped = TRUE, pagination = FALSE,
               tagList(a(href = paste0(m$slug[j], ".html"), m$municipio[j]), if (j < nrow(m)) " · ")))
           })
 ```
+
+[Fonte: elaboração própria; população estimada pelo IBGE.]{.nota-fonte}
 
 ```{r}
 fonte_rodape()
