@@ -232,6 +232,24 @@ fmt_eixo <- function(v) {
 esc <- function(x) { x <- gsub("&", "&amp;", x, fixed = TRUE); x <- gsub("<", "&lt;", x, fixed = TRUE)
   x <- gsub(">", "&gt;", x, fixed = TRUE); gsub("\"", "&quot;", x, fixed = TRUE) }
 
+# Termos estrangeiros em itálico na exibição das notas do catálogo de indicadores (colunas nota e nota_curta), nos
+# cartões e nas tabelas dos perfis, na ressalva das páginas de indicador e no dicionário da Dados (v0.5). Os CSV
+# publicados e as colunas ocultas dos reactable mantêm o texto simples.
+TERMOS_ITALICO <- c("full-time equivalent", "download")
+RE_TERMOS_ITALICO <- paste0("\\b(", paste(TERMOS_ITALICO, collapse = "|"), ")\\b")
+# Texto já escapado para HTML -> mesmo texto com os termos em <em> (células de reactable com html = TRUE)
+italico_esc <- function(x) gsub(RE_TERMOS_ITALICO, "<em>\\1</em>", x, perl = TRUE)
+# HTML estático (fora dos reactable): texto escapado como o htmltools escapa texto, com os termos em <em>
+italico_html <- function(x) HTML(italico_esc(htmltools::htmlEscape(x)))
+# Detalhes de linha do reactable: lista de filhos (texto e <em>), porque ali uma cadeia HTML aparece como texto
+italico_tags <- function(x) {
+  if (length(x) != 1 || is.na(x) || !nzchar(x)) return(x)
+  m <- gregexpr(RE_TERMOS_ITALICO, x, perl = TRUE)
+  if (m[[1]][1] == -1) return(x)
+  pecas <- regmatches(x, m, invert = NA)[[1]]
+  tagList(lapply(seq_along(pecas), function(k) if (k %% 2 == 0) tags$em(pecas[k]) else if (nzchar(pecas[k])) pecas[k]))
+}
+
 # Ordinal pt-BR: 3 → "3º"
 ordinal <- function(n) ifelse(is.na(n), "—", paste0(n, "º"))
 
@@ -362,7 +380,7 @@ nota_curta_ind <- function(r) {
   if (is.na(n) || !nzchar(n)) "" else n
 }
 # Linha de ressalva visível no cartão KPI (NULL quando o indicador não tem nota curta)
-nota_kpi <- function(r) { n <- nota_curta_ind(r); if (nzchar(n)) div(class = "kpi-nota", paste0("Ressalva: ", n)) }
+nota_kpi <- function(r) { n <- nota_curta_ind(r); if (nzchar(n)) div(class = "kpi-nota", italico_html(paste0("Ressalva: ", n))) }
 
 # Cartão KPI de um indicador para um município, com mediana MT/região, situação ▲/▼ e ressalva
 kpi_ind <- function(id, cod, prefixo_ind = "../indicadores/") {
@@ -688,7 +706,7 @@ tabela_grupo <- function(grupo, cod, prefixo_ind = "../indicadores/") {
     r <- info_ind(id); s <- resumo_ind(id, cod); sit <- situacao(s$valor, s$med_mt, r$sentido)
     ser <- serie_mun(id, cod)
     # ressalva visível ao clicar/tocar (<details>), acessível por teclado — não depende de hover
-    nota <- if (!is.na(r$nota) && nzchar(r$nota)) sprintf(' <details class="nota-det"><summary aria-label="Ressalva do indicador">ⓘ ressalva</summary>%s</details>', esc(r$nota)) else ""
+    nota <- if (!is.na(r$nota) && nzchar(r$nota)) sprintf(' <details class="nota-det"><summary aria-label="Ressalva do indicador">ⓘ ressalva</summary>%s</details>', italico_esc(esc(r$nota))) else ""
     tibble::tibble(
       id = id,
       Indicador = sprintf('<a href="%s">%s</a>%s<div class="sub">%s</div>', url_ind(id, prefixo_ind), esc(r$rotulo), nota, esc(r$unidade)),
@@ -714,7 +732,7 @@ tabela_grupo <- function(grupo, cod, prefixo_ind = "../indicadores/") {
               g <- serie_comparada(d$id[i], cod)
               div(class = "detalhe-ind",
                   if (nzchar(g)) HTML(g) else p(class = "sub", "Indicador sem série suficiente para o gráfico."),
-                  if (nzchar(d$nota_txt[i])) p(class = "nota-fonte", strong("Nota: "), d$nota_txt[i]),
+                  if (nzchar(d$nota_txt[i])) p(class = "nota-fonte", strong("Nota: "), italico_tags(d$nota_txt[i])),
                   p(class = "nota-fonte", a(href = url_ind(d$id[i], prefixo_ind), "Ver este indicador para todos os municípios →")))
             })
 }

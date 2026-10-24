@@ -180,8 +180,8 @@ tabela_dicionario <- function(prefixo_ind = "../indicadores/") {
               Fórmula = colDef(show = FALSE), Nota = colDef(show = FALSE)),
             details = function(i) div(class = "detalhe-ind",
               p(class = "nota-fonte", strong("Fórmula: "), d$Fórmula[i]),
-              if (nzchar(d$Nota[i])) p(class = "nota-fonte", strong("Nota: "), d$Nota[i]),
-              p(class = "nota-fonte", a(href = paste0(prefixo_ind, d$id[i], ".html"), "Ver mapa, ranking e série deste indicador →"))))
+              if (nzchar(d$Nota[i])) p(class = "nota-fonte", strong("Nota: "), italico_tags(d$Nota[i])),
+              p(class = "nota-fonte", a(href = paste0(prefixo_ind, d$id[i], ".html"), "Ver mapa, ", tags$em("ranking"), " e série deste indicador →"))))
 }
 
 # ---- Eficiência (DEA/Malmquist): downloads e dicionário ---------------------------------------

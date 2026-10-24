@@ -88,7 +88,7 @@ ficha_indicador <- function(id, prefixo_indice = "") {
 ressalva_indicador <- function(id) {
   r <- info_ind(id)
   if (is.na(r$nota) || !nzchar(r$nota)) return(NULL)
-  div(class = "ressalva-ind", strong("Ressalva: "), r$nota)
+  div(class = "ressalva-ind", strong("Ressalva: "), italico_html(r$nota))
 }
 
 # Variação do agregado de MT entre o primeiro ano da janela e o ano de referência
