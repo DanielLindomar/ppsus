@@ -240,7 +240,13 @@ bloco_atende <- function(cod, ano = ANO_REF) {
     fmt = "int", titulo = paste0("Internações realizadas em ", nome, " — 2020–2025"), h = 230) else ""
   div(class = "bloco",
       h4("Origem dos pacientes atendidos"),
-      p(HTML(sprintf(paste0("Em %d, os estabelecimentos de %s realizaram <b>%s internações</b> SUS de residentes de Mato Grosso, das quais <b>%s (%s)</b> corresponderam a moradores ",
+      # versão 0.5 (5ª rodada): concordância no singular quando há uma única internação de moradores de outros municípios
+      p(HTML(if (isTRUE(d$recebidas_de_fora == 1) && isTRUE(d$n_origens == 1))
+        sprintf(paste0("Em %d, os estabelecimentos de %s realizaram <b>%s internações</b> SUS de residentes de Mato Grosso, das quais <b>%s (%s)</b> correspondeu a morador ",
+                       "de outro município (%d município de origem).%s%s"),
+                ano, esc(nome), num(d$internacoes_recebidas), num(d$recebidas_de_fora), fmt_valor(d$pct_recebidas_de_fora, "pct1"),
+                d$n_origens, frase_saldo, frase_ac)
+        else sprintf(paste0("Em %d, os estabelecimentos de %s realizaram <b>%s internações</b> SUS de residentes de Mato Grosso, das quais <b>%s (%s)</b> corresponderam a moradores ",
                             "de outros municípios, provenientes de %d %s.%s%s"),
                      ano, esc(nome), num(d$internacoes_recebidas), num(d$recebidas_de_fora), fmt_valor(d$pct_recebidas_de_fora, "pct1"),
                      d$n_origens, if (d$n_origens == 1) "outro município" else "outros municípios", frase_saldo, frase_ac))),
@@ -269,9 +275,13 @@ texto_hospitais <- function(cod, ano = ANO_REF) {
   nome <- nome_mun(cod); r <- resumo_hospitais(cod, ano)
   if (r$n == 0) return(sprintf("Nenhum estabelecimento classificado como hospital com atendimento SUS consta no CNES para %s em %d.", nome, ano))
   media_txt <- if (abs(r$n_medio - r$n) >= 0.05) sprintf(" (%s em média nas competências do CNES)", num(r$n_medio, 1)) else ""
-  paste0(sprintf("Em %d, o CNES registrava **%d %s com atendimento SUS** em %s em ao menos uma competência%s, que somavam %s leitos SUS (%s de UTI) na média das competências do ano. ",
-                 ano, r$n, if (r$n == 1) "estabelecimento hospitalar" else "estabelecimentos hospitalares", nome, media_txt, num(round(r$leitos)), num(round(r$uti))),
-         if (r$internacoes > 0) sprintf("Esses estabelecimentos realizaram %s internações SUS no ano (SIH, ano da alta), inclusive de residentes de outros estados. ", num(r$internacoes)) else "",
+  # versão 0.5 (5ª rodada): concordância no singular quando há um único estabelecimento
+  paste0(sprintf("Em %d, o CNES registrava **%d %s com atendimento SUS** em %s em ao menos uma competência%s, que %s %s leitos SUS (%s de UTI) na média das competências do ano. ",
+                 ano, r$n, if (r$n == 1) "estabelecimento hospitalar" else "estabelecimentos hospitalares", nome, media_txt,
+                 if (r$n == 1) "somava" else "somavam", num(round(r$leitos)), num(round(r$uti))),
+         if (r$internacoes > 0) sprintf("%s %s %s SUS no ano (SIH, ano da alta), inclusive de residentes de outros estados. ",
+                                        if (r$n == 1) "Esse estabelecimento realizou" else "Esses estabelecimentos realizaram", num(r$internacoes),
+                                        if (isTRUE(r$internacoes == 1)) "internação" else "internações") else "",
          if (r$sem_sih > 0) sprintf("Dos estabelecimentos registrados, %d %s sem produção registrada no SIH no ano, constando apenas no CNES. ", r$sem_sih,
                                     if (r$sem_sih == 1) "permaneceu" else "permaneceram") else "",
          "Na tabela por estabelecimento, os leitos e os médicos correspondem às médias dos meses em que cada estabelecimento constou no CNES, a mortalidade não tem ajuste de risco e a ocupação dos leitos SUS é expressa em percentual (%).")

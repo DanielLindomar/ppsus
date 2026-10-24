@@ -387,8 +387,30 @@ nota_curta_ind <- function(r) {
   n <- if ("nota_curta" %in% names(r)) as.character(r$nota_curta[1]) else NA_character_
   if (is.na(n) || !nzchar(n)) "" else n
 }
+# Versão 0.5 (5ª rodada): ressalvas curtas do catálogo em oração completa, SÓ NA EXIBIÇÃO dos cartões (o CSV não muda;
+# os mesmos números). Texto sem mapeamento é exibido como está.
+NOTA_CURTA_ORACAO <- c(
+  `Valores em R$ correntes, sem deflação, que abrangem todas as fontes de recursos.` =
+    "Os valores estão em R$ correntes, sem deflação, e abrangem todas as fontes de recursos.",
+  `Equivalente em tempo integral (FTE, do inglês full-time equivalent) de 40 h; o crescimento pode refletir a melhoria do registro no CNES.` =
+    "O indicador é expresso em equivalente em tempo integral (FTE, do inglês full-time equivalent) de 40 h, e o crescimento pode refletir a melhoria do registro no CNES.",
+  `Média das competências do ano, com valor zero onde não há hospital SUS.` =
+    "O valor corresponde à média das competências do ano e é igual a zero quando não há hospital SUS.",
+  `Indicador sem ajuste de risco.` = "O indicador não tem ajuste de risco.",
+  `Indicador instável em municípios com menos de 100 nascidos vivos por ano, com dados até 2024.` =
+    "O indicador é instável em municípios com menos de 100 nascidos vivos por ano, e os dados vão até 2024.")
+# Depois do rótulo "Ressalva:", inicial minúscula (convenção da v0.5 para rótulo seguido de dois-pontos), salvo sigla
+minuscula_inicial <- function(x) {
+  w <- sub("^(\\S+).*$", "\\1", x)
+  if (nchar(w) == 1 || grepl("^[[:upper:]][[:lower:]]", w)) paste0(tolower(substr(x, 1, 1)), substring(x, 2)) else x
+}
 # Linha de ressalva visível no cartão KPI (NULL quando o indicador não tem nota curta)
-nota_kpi <- function(r) { n <- nota_curta_ind(r); if (nzchar(n)) div(class = "kpi-nota", italico_html(paste0("Ressalva: ", n))) }
+nota_kpi <- function(r) {
+  n <- nota_curta_ind(r)
+  if (!nzchar(n)) return(NULL)
+  if (n %in% names(NOTA_CURTA_ORACAO)) n <- unname(NOTA_CURTA_ORACAO[[n]])
+  div(class = "kpi-nota", italico_html(paste0("Ressalva: ", minuscula_inicial(n))))
+}
 
 # Cartão KPI de um indicador para um município, com mediana MT/região, situação ▲/▼ e ressalva
 kpi_ind <- function(id, cod, prefixo_ind = "../indicadores/") {
