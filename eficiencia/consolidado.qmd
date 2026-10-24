@@ -27,14 +27,14 @@ comp_fr <- if (r$n_fronteira < n_fr1) "mais estreita" else if (r$n_fronteira > n
 css_eficiencia()
 faixa_versao_ef()
 nav_eficiencia("consolidado.html")
-secoes_pagina(c(modelo = "O que compara", panorama = paste("Panorama", A), mapa = "Mapa", regioes = "Por região",
+secoes_pagina(c(modelo = "Especificação", panorama = paste("Panorama", A), mapa = "Mapa", regioes = "Por região",
                 municipios = "Municípios", potencial = "Potencial de melhoria", pares = "Pares mais usados",
                 evolucao = "Evolução", ressalvas = "Ressalvas"))
 ```
 
-O modelo consolidado considera o **sistema municipal de saúde como um todo**, isto é, confronta toda a despesa em saúde e todos os profissionais e estabelecimentos do Sistema Único de Saúde (SUS) no município com o conjunto da produção, que abrange os atendimentos na atenção primária, os procedimentos ambulatoriais de média e alta complexidade, as internações e as vacinas. Constitui, assim, a leitura mais próxima da pergunta do gestor municipal: **o sistema, somadas todas as frentes, produz o que poderia com o que custa?** Os valores são expressos por mil habitantes, e a interpretação das faixas, dos intervalos, dos pares e das metas é detalhada em [Como ler](index.qmd#como-ler).
+O modelo consolidado considera o **sistema municipal de saúde como um todo**, isto é, confronta toda a despesa em saúde e todos os profissionais e estabelecimentos do Sistema Único de Saúde (SUS) no município com o conjunto da produção, que abrange os atendimentos na atenção primária, os procedimentos ambulatoriais de média e alta complexidade, as internações e as vacinas. Constitui, assim, a leitura mais próxima da pergunta do gestor municipal: **o sistema, somadas todas as frentes, produz o que poderia com o que custa?** Os valores são expressos por mil habitantes, e a interpretação das faixas, dos intervalos, dos pares e das metas é detalhada em [Interpretação dos resultados](index.qmd#como-ler).
 
-## O que o modelo compara {#modelo}
+## Especificação do modelo {#modelo}
 
 ```{r}
 bloco_especificacao(M)

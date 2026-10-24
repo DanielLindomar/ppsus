@@ -23,13 +23,13 @@ lim_t <- num(100 * efx_param("tendencia_limiar", 0.02), 0)
 efx_css()
 efx_nav("produtividade.html")
 efx_faixa()
-efx_atalhos(c(como = "Como ler", panorama = "Panorama 2022–2025", modelos = "Por modelo e janela", serie = "Ano a ano",
+efx_atalhos(c(como = "Interpretação", panorama = "Panorama 2022–2025", modelos = "Por modelo e janela", serie = "Variação anual",
               regioes = "Por região de saúde", ressalvas = "Ressalvas", arquivos = "Arquivos"))
 ```
 
 Os escores de eficiência de cada ano comparam as unidades com as **melhores práticas daquele ano**. Para verificar se um município ou hospital **melhorou ao longo do tempo**, utiliza-se o **índice de Malmquist** (CAVES; CHRISTENSEN; DIEWERT, 1982), na formulação de Färe *et al.* (1994), que compara cada unidade consigo mesma entre dois anos consecutivos. Esta página sintetiza essa evolução por modelo, por período e por região de saúde, de 2020 a 2025, e as referências completas das obras citadas constam da [Metodologia](../metodologia.qmd#referencias).
 
-## Como ler {#como}
+## Interpretação do índice {#como}
 
 O índice de Malmquist (MI, do inglês *Malmquist index*) mede a variação da produtividade, entendida como a produção obtida por unidade de recurso, e decompõe-se em dois componentes. O primeiro, a **aproximação às melhores práticas**, ou mudança de eficiência (EC, do inglês *efficiency change*), indica se a unidade ficou mais perto (EC > 1) ou mais longe (EC < 1) das melhores práticas do seu tempo; trata-se do **componente de gestão**, sobre o qual o gestor local tem mais influência, e, por isso, constitui o destaque desta página e das fichas. O segundo, o **deslocamento das melhores práticas**, ou mudança tecnológica (TC, do inglês *technical change*), indica se as próprias melhores práticas avançaram ou recuaram; depende de fatores comuns a todos (tecnologia, financiamento e regras de registro) e é apresentado apenas de forma agregada, com reserva (veja-se a nota adiante).
 
@@ -64,7 +64,7 @@ efx_mq_tabela_janelas(names(MODELOS_MQ), grupos = list(M2A = c("todos", "com_lei
 Fonte: elaboração própria, com base no índice de Malmquist estimado pelo Projeto PPSUS-MT. Nota: as *unidades* são os municípios ou hospitais com ao menos uma transição publicável na janela; as *unidades com EC > 1*, a parcela das unidades que se aproximaram das melhores práticas; e a *melhora / piora consistente*, as unidades com tendência estatisticamente definida na janela ("—" quando a contagem não está disponível no agregado do modelo; nas fichas de cada unidade, a tendência é sempre informada). \* Quanto ao TC, veja-se a nota acima. As transições com quebra de registro (por exemplo, produção ambulatorial ou da atenção básica com registro incompleto) ficam fora das médias.
 :::
 
-## Ano a ano {#serie}
+## Variação anual {#serie}
 
 As Figuras 1 e 2 apresentam a média geométrica de cada transição anual, marcada no ano de chegada (2021 = transição 2020–2021).
 

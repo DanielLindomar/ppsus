@@ -8,7 +8,7 @@
 #
 # Índice
 #   1. Contexto do município (população, frases com valor + posição)
-#   2. Deslocamento — KPIs, "Onde os moradores se internam", "Quem o município atende"
+#   2. Deslocamento — KPIs, "Local de internação dos moradores", "Origem dos pacientes atendidos"
 #   3. Hospitais SUS do município (resumo para o texto)
 #   4. Botões de download e notas condicionais
 # =============================================================================
@@ -150,10 +150,10 @@ serie_fora_mun <- function(cod) {
   svg_linhas(series, fmt = "pct1", titulo = paste0("Internações de moradores fora do município de residência — ", nome_mun(cod)), h = 230)
 }
 
-# Bloco "Onde os moradores se internam" (residência → hospital)
+# Bloco "Local de internação dos moradores" (residência → hospital)
 bloco_moradores <- function(cod, ano = ANO_REF) {
   nome <- nome_mun(cod); d <- desl_mun(cod, ano)
-  if (!tem_desl(d)) return(div(class = "bloco", h4("Onde os moradores se internam"), p(texto_sem_desl(cod, ano))))
+  if (!tem_desl(d)) return(div(class = "bloco", h4("Local de internação dos moradores"), p(texto_sem_desl(cod, ano))))
   partes <- c(`No próprio município` = d$no_proprio_mun, `Outro município da mesma região de saúde` = d$mesma_regiao,
               `Outra região de saúde` = d$outra_regiao)
   td <- top_destinos(cod, ano, n = 1000) |> filter(cod_destino != cod) |> slice_head(n = 5)
@@ -162,7 +162,7 @@ bloco_moradores <- function(cod, ano = ANO_REF) {
   dist <- if (is.finite(d$km_medio_internacao)) sprintf("A distância média, em linha reta, até o hospital foi de <b>%s</b>.", paste0(num(d$km_medio_internacao, 1), " km"))
           else "A distância média, em linha reta, até o hospital <b>não foi calculada</b>."
   div(class = "bloco",
-      h4("Onde os moradores se internam"),
+      h4("Local de internação dos moradores"),
       p(HTML(sprintf(paste0("Em %d, registraram-se <b>%s internações</b> SUS de moradores de %s em hospitais de Mato Grosso, das quais <b>%s</b> ocorreram no próprio município, ",
                             "%s em outro município da mesma região de saúde e %s em outra região. %s%s"),
                      ano, num(d$internacoes_res), esc(nome), fmt_valor(d$pct_proprio_mun, "pct1"), fmt_valor(d$pct_mesma_regiao, "pct1"),
@@ -178,7 +178,7 @@ bloco_moradores <- function(cod, ano = ANO_REF) {
       { g <- serie_fora_mun(cod); if (nzchar(g)) tagList(h5("Evolução da parcela internada fora do município"), HTML(g)) })
 }
 
-# Bloco "Quem o município atende" (hospital ← residência)
+# Bloco "Origem dos pacientes atendidos" (hospital ← residência)
 bloco_atende <- function(cod, ano = ANO_REF) {
   nome <- nome_mun(cod); d <- desl_mun(cod, ano); m <- info_mun(cod)
   tem_hosp <- isTRUE(m$tem_hospital_sus_2025 == 1)
@@ -189,7 +189,7 @@ bloco_atende <- function(cod, ano = ANO_REF) {
                                          "de modo que os moradores se internam integralmente em outros municípios."), esc(nome), ano)
       else sprintf(paste0("Embora o CNES registre hospital com atendimento SUS em %s, o SIH não contém internações realizadas no município em %d, ",
                           "isto é, nenhuma AIH foi paga no ano."), esc(nome), ano)
-    return(div(class = "bloco", h4("Quem o município atende"), p(HTML(txt))))
+    return(div(class = "bloco", h4("Origem dos pacientes atendidos"), p(HTML(txt))))
   }
   po <- POLOS[POLOS$cod_mun6 == cod & POLOS$ano == ano, ]
   saldo <- if (nrow(po)) po$saldo[1] else NA_real_
@@ -207,7 +207,7 @@ bloco_atende <- function(cod, ano = ANO_REF) {
     list(nome = "Das quais de moradores de outros municípios", cor = COR[["sec"]], larg = 1.8, dash = "6,4", x = ser$ano, y = ser$recebidas_de_fora)),
     fmt = "int", titulo = paste0("Internações realizadas em ", nome, " — 2020–2025"), h = 230) else ""
   div(class = "bloco",
-      h4("Quem o município atende"),
+      h4("Origem dos pacientes atendidos"),
       p(HTML(sprintf(paste0("Em %d, os estabelecimentos de %s realizaram <b>%s internações</b> SUS de residentes de Mato Grosso, das quais <b>%s (%s)</b> corresponderam a moradores ",
                             "de outros municípios, provenientes de %d %s.%s%s"),
                      ano, esc(nome), num(d$internacoes_recebidas), num(d$recebidas_de_fora), fmt_valor(d$pct_recebidas_de_fora, "pct1"),

@@ -1,6 +1,6 @@
 ---
-title: "Eficiência: como ler e visão geral"
-description: "Escores de eficiência (DEA) e produtividade (Malmquist) do SUS nos municípios, hospitais e regiões de saúde de Mato Grosso, 2020–2025: como ler faixas, intervalos de confiança, pares, metas e evolução, e o panorama de 2025 por modelo"
+title: "Eficiência: interpretação dos resultados e visão geral"
+description: "Escores de eficiência (DEA) e produtividade (Malmquist) do SUS nos municípios, hospitais e regiões de saúde de Mato Grosso, 2020–2025: interpretação das faixas, dos intervalos de confiança, dos pares, das metas e da evolução, e panorama de 2025 por modelo"
 page-layout: full
 toc: false
 aliases:
@@ -28,7 +28,7 @@ nav_eficiencia("index.html")
 ```
 
 ```{r}
-secoes_pagina(c(`como-ler` = "Como ler", `visao-geral` = paste("Visão geral", A), distribuicao = "Faixas por modelo",
+secoes_pagina(c(`como-ler` = "Interpretação", `visao-geral` = paste("Visão geral", A), distribuicao = "Faixas por modelo",
                 resumo = "Tabela-resumo", ressalvas = "Ressalvas", arquivos = "Arquivos e método"))
 ```
 
@@ -38,12 +38,12 @@ Esta seção apresenta **a relação entre o que cada município, hospital e reg
 nota_versao_ef(extra = '<a href="atencao-basica.html">Ver a atenção básica</a>.')
 ```
 
-## Como ler os resultados {#como-ler}
+## Interpretação dos resultados {#como-ler}
 
 ::: {.dois-blocos}
 
 ::: {.bloco}
-#### O que o escore mede e o que não mede
+#### Alcance e limites do escore {#o-que-o-escore-mede-e-o-que-não-mede}
 
 O **escore de eficiência** compara cada unidade com aquelas que, utilizando recursos semelhantes (despesa, profissionais, leitos, equipamentos e equipes), obtiveram maior produção (atendimentos, visitas, vacinas, procedimentos e internações). As melhores práticas compõem a **fronteira** de eficiência, à qual corresponde o escore 1 (CHARNES; COOPER; RHODES, 1978). Assim, um escore de 0,80 indica que a unidade produz cerca de 80% do que as melhores práticas obtêm com recursos semelhantes; em outras palavras, mantidos os recursos, a produção poderia crescer cerca de 25% (1/0,80 − 1).
 
@@ -51,7 +51,7 @@ Cumpre ressaltar que o escore **não mede a qualidade do cuidado** nem o resulta
 :::
 
 ::: {.bloco}
-#### Faixas com intervalo de confiança, e não *ranking*
+#### Faixas com intervalo de confiança, e não *ranking* {#faixas-com-intervalo-de-confiança-não-ranking}
 
 Cada escore é estimado com incerteza. O **escore corrigido** do viés por reamostragem (*bootstrap*`r if (is.numeric(b_boot)) paste0(", ", num(b_boot), " réplicas") else ""`), segundo o procedimento de Simar e Wilson (1998), é acompanhado de um **intervalo de confiança (IC) de `r num(100 * IC_NIVEL, 0)`%**. Por essa razão, o site publica **faixas** — a fronteira e os quartis do escore corrigido entre as unidades do ano —, em vez de posições pontuais (1º, 2º, 3º…). Quando o IC alcança a faixa vizinha, a faixa é exibida com o sinal **±** e deve ser interpretada como provisória.
 

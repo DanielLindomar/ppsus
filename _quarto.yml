@@ -37,7 +37,7 @@ website:
       - text: Eficiência
         menu:
           - href: eficiencia/index.qmd
-            text: "Como ler e visão geral"
+            text: "Interpretação dos resultados e visão geral"
           - href: eficiencia/atencao-basica.qmd
             text: "Atenção básica"
           - href: eficiencia/consolidado.qmd

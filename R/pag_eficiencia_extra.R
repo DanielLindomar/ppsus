@@ -147,7 +147,7 @@ efx_faixa <- function() faixa_construcao(sprintf(paste0(
 
 # Navegação entre as páginas da seção Eficiência (prefixo relativo à página que chama)
 efx_nav <- function(atual = "") {
-  pags <- c(`index.html` = "Como ler", `atencao-basica.html` = "Atenção básica", `consolidado.html` = "Consolidado",
+  pags <- c(`index.html` = "Interpretação", `atencao-basica.html` = "Atenção básica", `consolidado.html` = "Consolidado",
             `media-complexidade.html` = "Média complexidade", `hospitais.html` = "Hospitais",
             `alta-complexidade.html` = "Alta complexidade", `produtividade.html` = "Produtividade")
   tags$nav(class = "efx-nav", `aria-label` = "Páginas da seção Eficiência",

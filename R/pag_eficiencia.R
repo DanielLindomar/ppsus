@@ -182,7 +182,7 @@ rotulo_grupo_ef <- function(g) switch(g, com_leito = "municípios com leito SUS"
                                       publico = "hospitais públicos", privado_filantropico = "hospitais privados e filantrópicos", "todos")
 
 # ---- 4. Componentes ----------------------------------------------------------------------
-PAGINAS_EF <- c("index.html" = "Como ler e visão geral", "atencao-basica.html" = "Atenção básica",
+PAGINAS_EF <- c("index.html" = "Interpretação dos resultados e visão geral", "atencao-basica.html" = "Atenção básica",
                 "consolidado.html" = "Consolidado", "media-complexidade.html" = "Média complexidade",
                 "hospitais.html" = "Hospitais", "alta-complexidade.html" = "Alta complexidade",
                 "produtividade.html" = "Produtividade (Malmquist)")

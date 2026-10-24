@@ -21,12 +21,12 @@ b_boot <- param_ef(paste0("b_bootstrap_", M), NA)
 css_eficiencia()
 faixa_versao_ef(nota_curta = FALSE)
 nav_eficiencia("atencao-basica.html")
-secoes_pagina(c(modelo = "O que compara", panorama = paste("Panorama", A), mapa = "Mapa", regioes = "Por região",
+secoes_pagina(c(modelo = "Especificação", panorama = paste("Panorama", A), mapa = "Mapa", regioes = "Por região",
                 municipios = "Municípios", potencial = "Potencial de melhoria", pares = "Pares mais usados",
                 evolucao = "Evolução", ressalvas = "Ressalvas"))
 ```
 
-A atenção básica constitui a porta de entrada do Sistema Único de Saúde (SUS) e a parte do sistema mais diretamente sujeita à gestão municipal. O modelo apresentado nesta página investiga a seguinte questão: **com o gasto, os profissionais e as equipes de atenção primária que mantém, quanto cada município produz em atendimentos, visitas domiciliares e vacinação, em comparação com os municípios que mais produzem com recursos semelhantes?** Todos os valores são expressos por mil habitantes, o que permite comparar municípios de portes diferentes, e a interpretação das faixas, dos intervalos, dos pares e das metas é detalhada em [Como ler](index.qmd#como-ler).
+A atenção básica constitui a porta de entrada do Sistema Único de Saúde (SUS) e a parte do sistema mais diretamente sujeita à gestão municipal. O modelo apresentado nesta página investiga a seguinte questão: **com o gasto, os profissionais e as equipes de atenção primária que mantém, quanto cada município produz em atendimentos, visitas domiciliares e vacinação, em comparação com os municípios que mais produzem com recursos semelhantes?** Todos os valores são expressos por mil habitantes, o que permite comparar municípios de portes diferentes, e a interpretação das faixas, dos intervalos, dos pares e das metas é detalhada em [Interpretação dos resultados](index.qmd#como-ler).
 
 ```{r}
 nota_versao_ef(extra = if (nzchar(VERSAO_ANT_EF)) sprintf(
@@ -34,7 +34,7 @@ nota_versao_ef(extra = if (nzchar(VERSAO_ANT_EF)) sprintf(
   sub("^v", "", VERSAO_ANT_EF), DATA_ANT_EF))
 ```
 
-## O que o modelo compara {#modelo}
+## Especificação do modelo {#modelo}
 
 ```{r}
 bloco_especificacao(M)

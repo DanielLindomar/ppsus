@@ -41,7 +41,7 @@ rmp_ok <- sum(is.finite(H$rmp) & H$flag_rmp_base_pequena != 1, na.rm = TRUE)
 efx_css()
 efx_nav("hospitais.html")
 efx_faixa()
-efx_atalhos(c(modelo = "O que o modelo compara", panorama = "Panorama", mapa = "Mapa", distribuicao = "Distribuição",
+efx_atalhos(c(modelo = "Especificação do modelo", panorama = "Panorama", mapa = "Mapa", distribuicao = "Distribuição",
               tabela = "Todos os hospitais", potencial = "Potencial de melhoria", pares = "Referências", evolucao = "Evolução",
               ressalvas = "Ressalvas", arquivos = "Arquivos"))
 ```
@@ -52,7 +52,7 @@ Esta página compara os **hospitais SUS de Mato Grosso**, isto é, os que atende
 efx_h_aviso_reprocessamento()
 ```
 
-## O que o modelo compara {#modelo}
+## Especificação do modelo {#modelo}
 
 O modelo, estimado por Análise Envoltória de Dados (DEA, do inglês *Data Envelopment Analysis*), investiga a seguinte questão: **com os mesmos recursos, quanto a mais o hospital poderia produzir se operasse como os hospitais de melhor prática do mesmo ano?** Os recursos (insumos) e a produção (produtos) da especificação principal são os seguintes:
 

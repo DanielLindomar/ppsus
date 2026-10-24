@@ -31,9 +31,9 @@ secoes_pagina(c(modelo = "Produção local", panorama = paste("Panorama", A), ma
                 evolucao = "Evolução", acesso = "Ótica do acesso", ressalvas = "Ressalvas"))
 ```
 
-A média complexidade reúne consultas especializadas, exames, pequenas cirurgias e a maior parte das internações, e é analisada nesta página sob duas óticas complementares. A **produção local** investiga a seguinte questão: **com a despesa, os leitos, os médicos e os equipamentos que mantém, quanto o município produz em internações e procedimentos de média complexidade nos seus próprios estabelecimentos?** Essa leitura somente faz sentido para os municípios que dispõem de hospital. A **ótica do acesso**, por sua vez, formula para todos os municípios a questão: **com esses recursos, quanto os moradores conseguem internar-se, onde quer que a internação ocorra?** Nessa ótica, comparam-se os municípios com leito SUS entre si e os municípios sem leito entre si. Os valores são expressos por mil habitantes, e a interpretação das faixas, dos intervalos, dos pares e das metas é detalhada em [Como ler](index.qmd#como-ler).
+A média complexidade reúne consultas especializadas, exames, pequenas cirurgias e a maior parte das internações, e é analisada nesta página sob duas óticas complementares. A **produção local** investiga a seguinte questão: **com a despesa, os leitos, os médicos e os equipamentos que mantém, quanto o município produz em internações e procedimentos de média complexidade nos seus próprios estabelecimentos?** Essa leitura somente faz sentido para os municípios que dispõem de hospital. A **ótica do acesso**, por sua vez, formula para todos os municípios a questão: **com esses recursos, quanto os moradores conseguem internar-se, onde quer que a internação ocorra?** Nessa ótica, comparam-se os municípios com leito SUS entre si e os municípios sem leito entre si. Os valores são expressos por mil habitantes, e a interpretação das faixas, dos intervalos, dos pares e das metas é detalhada em [Interpretação dos resultados](index.qmd#como-ler).
 
-## Produção local: o que o modelo compara {#modelo}
+## Produção local: especificação do modelo {#modelo}
 
 ```{r}
 bloco_especificacao(M)

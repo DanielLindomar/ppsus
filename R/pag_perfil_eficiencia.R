@@ -454,7 +454,7 @@ ficha_modelo <- function(cod, modelo, nome, nome_reg) {
          sprintf('<p class="ef-sintese">%s</p>', esc(frase_sintese(r, nome))),
          topo,
          regua_escore(r, mediana_modelo(modelo, EF_ANO, grp)),
-         sprintf('<p class="ef-linha"><b>O que o modelo compara.</b> %s</p>', esc(texto_espec(modelo, grp))),
+         sprintf('<p class="ef-linha"><b>Especificação do modelo.</b> %s</p>', esc(texto_espec(modelo, grp))),
          intro_acesso,
          sprintf('<p class="ef-linha"><b>Posição.</b> %s</p>', texto_posicao(r, nome_reg)),
          sprintf('<p class="ef-linha"><b>Contexto.</b> %s</p>', texto_contexto(r)),
