@@ -1,6 +1,6 @@
 ---
 title: "Equipes de saúde bucal"
-description: "Capacidade instalada · equipes. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–2025 e valores por região de saúde."
+description: "Capacidade instalada · equipes. A página apresenta o mapa dos 142 municípios de Mato Grosso, o ranking municipal, a evolução 2020–2025 e os valores por região de saúde."
 toc: false
 page-layout: full
 ---

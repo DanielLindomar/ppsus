@@ -6,13 +6,13 @@
 
 # Texto curto de cada grupo do catálogo (usado no índice)
 DESC_GRUPOS <- c(
-  contexto       = "População de referência: o denominador dos indicadores por habitante.",
-  financiamento  = "Quanto o município liquida em saúde e como financia esse gasto (SIOPS; R$ correntes, sem deflação).",
-  capacidade     = "Profissionais, leitos, equipamentos, unidades e equipes com atendimento SUS (CNES; média das competências do ano).",
-  atencao_basica = "Produção das equipes de atenção primária (SISAB) e vacinação de rotina (SI-PNI, sem COVID-19).",
-  media_alta     = "Procedimentos ambulatoriais (SIA) e internações (SIH) realizados nos estabelecimentos do município ou por seus moradores.",
-  deslocamento   = "Para onde os moradores se deslocam para se internar: fora do município, fora da região de saúde e distância média (SIH).",
-  resultados     = "Resultados em saúde por residência: mortalidade e condições do nascimento (SIM/SINASC; dados até 2024).")
+  contexto       = "O grupo reúne a população de referência, que constitui o denominador dos indicadores por habitante.",
+  financiamento  = "O grupo reúne indicadores do montante liquidado pelo município em saúde e da forma de financiamento desse gasto, com base no Sistema de Informações sobre Orçamentos Públicos em Saúde (SIOPS), em R$ correntes e sem deflação.",
+  capacidade     = "O grupo reúne profissionais, leitos, equipamentos, unidades e equipes com atendimento SUS, segundo o Cadastro Nacional de Estabelecimentos de Saúde (CNES), pela média das competências do ano.",
+  atencao_basica = "O grupo reúne a produção das equipes de atenção primária, registrada no Sistema de Informação em Saúde para a Atenção Básica (SISAB), e a vacinação de rotina, registrada no Sistema de Informação do Programa Nacional de Imunizações (SI-PNI), sem as doses contra a COVID-19.",
+  media_alta     = "O grupo reúne os procedimentos ambulatoriais, registrados no Sistema de Informações Ambulatoriais do SUS (SIA), e as internações, registradas no Sistema de Informações Hospitalares do SUS (SIH), realizados nos estabelecimentos do município ou por seus moradores.",
+  deslocamento   = "O grupo descreve o deslocamento dos moradores para internação, isto é, a parcela internada fora do município e fora da região de saúde e a distância média percorrida, com base no SIH.",
+  resultados     = "O grupo reúne resultados em saúde por local de residência, relativos à mortalidade e às condições do nascimento, provenientes do Sistema de Informações sobre Mortalidade (SIM) e do Sistema de Informações sobre Nascidos Vivos (SINASC), com dados até 2024.")
 
 # Grupos do catálogo, na ordem de GRUPOS
 grupos_presentes <- function() intersect(names(GRUPOS), unique(IND$grupo[!is.na(IND$grupo)]))
@@ -32,7 +32,7 @@ descricao_ind <- function(r) {
 
 # Leitura do sentido do indicador
 texto_sentido <- function(s) {
-  if (is.na(s) || s == 0) return("indicador de contexto, sem juízo de valor: ▲/▼ apenas descrevem a posição frente à mediana")
+  if (is.na(s) || s == 0) return("indicador de contexto, sem juízo de valor: ▲/▼ apenas descrevem a posição em relação à mediana")
   if (s > 0) "maior é melhor: ▲ acima da mediana indica situação favorável"
   else "menor é melhor: ▼ abaixo da mediana indica situação favorável"
 }

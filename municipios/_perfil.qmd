@@ -21,11 +21,9 @@ faixa_versao()
 
 :::: {.perfil-topo}
 ::: {.perfil-texto}
-**`r NOME`** integra a região de saúde **`r M$regiao_saude`** (`r N_REG` municípios) e a macrorregião **`r M$macrorregiao`**. Código IBGE: `r ifelse(is.na(M$cod_ibge7), "—", as.character(M$cod_ibge7))`.
+O município de **`r NOME`** integra a região de saúde **`r M$regiao_saude`**, composta por `r N_REG` municípios, e a macrorregião **`r M$macrorregiao`**, e é identificado pelo código `r ifelse(is.na(M$cod_ibge7), "—", as.character(M$cod_ibge7))` do Instituto Brasileiro de Geografia e Estatística (IBGE). `r txt_contexto`
 
-`r txt_contexto`
-
-As comparações usam a **mediana dos 142 municípios de Mato Grosso** e a **mediana dos municípios da região de saúde**, no último ano disponível de cada indicador. ▲/▼ indicam valor acima ou abaixo da mediana de MT; verde marca situação mais favorável e vermelho, menos favorável, segundo o sentido de cada indicador; cinza indica indicador de contexto, sem juízo de melhor ou pior.
+As comparações tomam como referência a **mediana dos 142 municípios de Mato Grosso** e a **mediana dos municípios da região de saúde**, no último ano disponível de cada indicador. Os símbolos ▲ e ▼ indicam, respectivamente, valor acima e abaixo da mediana estadual, ao passo que a cor verde assinala situação mais favorável e a vermelha, menos favorável, conforme o sentido de cada indicador; a cor cinza, por sua vez, identifica os indicadores de contexto, para os quais não se atribui juízo de melhor ou pior.
 
 ```{r}
 botoes_download_mun(M)
@@ -49,7 +47,7 @@ grade_kpis(MUN_ID)
 
 ## Indicadores por grupo
 
-Clique na seta de uma linha para ver a série 2020–2025 do indicador comparada às medianas. Na coluna "Posição", os pontos claros são os demais municípios de Mato Grosso, o ponto escuro é `r NOME` e o traço pontilhado é a mediana estadual. Clique (ou toque) em "ⓘ ressalva" para ler a ressalva do indicador.
+As tabelas a seguir reúnem os indicadores do município por grupo temático. Ao clicar na seta de cada linha, exibe-se a série 2020–2025 do indicador, comparada às medianas. Na coluna "Posição", os pontos claros representam os demais municípios de Mato Grosso, o ponto escuro corresponde a `r NOME` e o traço pontilhado indica a mediana estadual. A ressalva de cada indicador, por sua vez, pode ser consultada ao clicar (ou tocar) em "ⓘ ressalva".
 
 ::: {.panel-tabset}
 
@@ -94,7 +92,7 @@ secao_eficiencia(MUN_ID)
 
 ## Deslocamento para internação
 
-Internações SUS (AIH tipo 1, pelo ano da alta) de residentes de Mato Grosso em hospitais de Mato Grosso, cruzando o município de residência com o município do hospital. `r texto_fuga_mun(MUN_ID)` A análise completa está em [Deslocamento](../deslocamento/index.html).
+Esta seção analisa as internações SUS de residentes de Mato Grosso em hospitais de Mato Grosso, registradas pela Autorização de Internação Hospitalar (AIH) tipo 1 e atribuídas ao ano da alta, mediante o cruzamento do município de residência com o município do hospital. `r texto_fuga_mun(MUN_ID)` A análise completa encontra-se na página [Deslocamento](../deslocamento/index.html).
 
 ```{r}
 kpis_deslocamento(MUN_ID)
@@ -121,7 +119,7 @@ bloco_hospitais_ef(MUN_ID)
 ```
 
 ```{r}
-fonte_rodape(eficiencia = TRUE, extra = "Deslocamento: AIH tipo 1 do SIH, residentes de Mato Grosso; distâncias em linha reta entre as sedes municipais (IBGE, Localidades 2022), não rodoviárias. ")
+fonte_rodape(eficiencia = TRUE, extra = "Deslocamento: AIH tipo 1 do SIH, de residentes de Mato Grosso; distâncias em linha reta entre as sedes municipais (IBGE, Localidades 2022), e não rodoviárias. ")
 ```
 
 ```{r}

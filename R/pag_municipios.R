@@ -58,20 +58,20 @@ pct_pop_txt <- function(p) if (!is.finite(p)) "—" else if (p < 0.05) "menos de
 # Parágrafo de contexto: população, despesa por habitante e estrutura no último ano
 texto_contexto_mun <- function(cod) {
   nome <- nome_mun(cod); pop <- ultimo("populacao", cod)
-  p1 <- if (is.na(pop$valor)) sprintf("%s não tem estimativa populacional disponível.", nome) else
-    sprintf("A população estimada em %d é de **%s habitantes** (%s da população do estado; %s entre os 142 municípios).",
+  p1 <- if (is.na(pop$valor)) sprintf("Não há estimativa populacional disponível para %s.", nome) else
+    sprintf("Em %d, a população estimada do município era de **%s habitantes**, o que corresponde a %s da população do estado e o situa em %s lugar entre os 142 municípios.",
             pop$ano, fmt_valor(pop$valor, "int"), pct_pop_txt(100 * pop$valor / POP_MT_2025), ordinal(pos_populacao(cod)))
   s_desp <- resumo_ind("desp_total_pc", cod)
   p2 <- if (is.na(s_desp$valor)) "" else
-    sprintf(" Em %d, a despesa liquidada em saúde foi de **%s por habitante** (%s de %d em MT; mediana estadual %s).",
+    sprintf(" No que se refere ao financiamento, em %d, a despesa liquidada em saúde foi de **%s por habitante** (%s lugar entre %d municípios de Mato Grosso), ante uma mediana estadual de %s.",
             s_desp$ano, fmt_valor(s_desp$valor, "brl"), ordinal(s_desp$pos_mt), s_desp$n_mt, fmt_valor(s_desp$med_mt, "brl"))
   s_med <- resumo_ind("fte_medicos_p1000", cod); s_lei <- resumo_ind("leitos_sus_p1000", cod); s_hos <- ultimo("n_hospitais_sus", cod)
   p3 <- if (is.na(s_med$valor)) "" else
-    sprintf(" O município contava com **%s médicos SUS por mil habitantes** em equivalente de 40 h (%s de %d), %s leitos SUS por mil habitantes e %s.",
+    sprintf(" Quanto à capacidade instalada, o município contava com **%s médicos SUS por mil habitantes**, em equivalente de 40 h semanais (%s de %d), e com %s leitos SUS por mil habitantes, %s.",
             fmt_valor(s_med$valor, "dec2"), ordinal(s_med$pos_mt), s_med$n_mt, fmt_valor(s_lei$valor, "dec2"),
             if (is.na(s_hos$valor)) "sem informação sobre hospitais SUS"
-            else if (round(s_hos$valor) == 0) "nenhum hospital SUS registrado no CNES"
-            else sprintf("%s %s SUS (média anual no CNES)", num(round(s_hos$valor)), if (round(s_hos$valor) == 1) "hospital" else "hospitais"))
+            else if (round(s_hos$valor) == 0) "sem hospital SUS registrado no Cadastro Nacional de Estabelecimentos de Saúde (CNES)"
+            else sprintf("além de %s %s SUS (média anual no Cadastro Nacional de Estabelecimentos de Saúde, CNES)", num(round(s_hos$valor)), if (round(s_hos$valor) == 1) "hospital" else "hospitais"))
   paste0(p1, p2, p3)
 }
 
@@ -93,8 +93,8 @@ tem_desl <- function(d) !is.null(d) && is.finite(d$internacoes_res) && d$interna
 texto_sem_desl <- function(cod, ano) {
   nome <- nome_mun(cod)
   if (mun_novo(cod))
-    sprintf(paste0("O SIH não registra internações de residentes de %s em %d. O município foi instalado em 2025 e as AIH ",
-                   "ainda não usam o seu código: os moradores continuam codificados nos municípios de origem."), nome, ano)
+    sprintf(paste0("O SIH não registra internações de residentes de %s em %d. Isso decorre do fato de o município ter sido instalado em 2025 ",
+                   "e de as AIH ainda não utilizarem o seu código, de modo que os moradores continuam codificados nos municípios de origem."), nome, ano)
   else sprintf("O SIH não registra internações de residentes de %s em %d.", nome, ano)
 }
 
@@ -158,22 +158,23 @@ bloco_moradores <- function(cod, ano = ANO_REF) {
               `Outra região de saúde` = d$outra_regiao)
   td <- top_destinos(cod, ano, n = 1000) |> filter(cod_destino != cod) |> slice_head(n = 5)
   ac <- if (is.finite(d$internacoes_ac_res) && d$internacoes_ac_res > 0 && is.finite(d$pct_ac_fora_mun))
-    sprintf(" Na alta complexidade (%s internações), %s ocorreram fora do município.", num(d$internacoes_ac_res), fmt_valor(d$pct_ac_fora_mun, "pct1")) else ""
+    sprintf(" Na alta complexidade, que somou %s internações, %s ocorreram fora do município.", num(d$internacoes_ac_res), fmt_valor(d$pct_ac_fora_mun, "pct1")) else ""
+  dist <- if (is.finite(d$km_medio_internacao)) sprintf("A distância média, em linha reta, até o hospital foi de <b>%s</b>.", paste0(num(d$km_medio_internacao, 1), " km"))
+          else "A distância média, em linha reta, até o hospital <b>não foi calculada</b>."
   div(class = "bloco",
       h4("Onde os moradores se internam"),
-      p(HTML(sprintf(paste0("Em %d, os moradores de %s tiveram <b>%s internações</b> SUS em hospitais de Mato Grosso: <b>%s</b> no próprio município, ",
-                            "%s em outro município da mesma região de saúde e %s em outra região. Distância média em linha reta até o hospital: <b>%s</b>.%s"),
-                     ano, esc(nome), num(d$internacoes_res), fmt_valor(d$pct_proprio_mun, "pct1"), fmt_valor(d$pct_mesma_regiao, "pct1"),
-                     fmt_valor(d$pct_outra_regiao, "pct1"),
-                     if (is.finite(d$km_medio_internacao)) paste0(num(d$km_medio_internacao, 1), " km") else "não calculada", ac))),
+      p(HTML(sprintf(paste0("Em %d, registraram-se <b>%s internações</b> SUS de moradores de %s em hospitais de Mato Grosso, das quais <b>%s</b> ocorreram no próprio município, ",
+                            "%s em outro município da mesma região de saúde e %s em outra região. %s%s"),
+                     ano, num(d$internacoes_res), esc(nome), fmt_valor(d$pct_proprio_mun, "pct1"), fmt_valor(d$pct_mesma_regiao, "pct1"),
+                     fmt_valor(d$pct_outra_regiao, "pct1"), dist, ac))),
       HTML(svg_barra_empilhada(partes, titulo = paste0("Local de internação dos moradores de ", nome, " em ", ano))),
       if (nrow(td)) tagList(
         h5(sprintf("Principais destinos fora do município (%d)", ano)),
         tabela_fluxo_html("Município de destino", td$destino, paste0(slug_mun(td$cod_destino), ".html"), td$internacoes, td$pct,
                           km = km_entre(cod, td$cod_destino), rotulo_pct = "% das internações de moradores"),
-        p(class = "nota-fonte", sprintf("%d %s fora do município no total; distância em linha reta entre as sedes municipais (IBGE, Localidades 2022), não rodoviária.",
+        p(class = "nota-fonte", sprintf("Fonte: SIH/SUS; IBGE. Nota: No total, as internações de moradores fora do município distribuíram-se por %d %s; a distância é medida em linha reta entre as sedes municipais (IBGE, Localidades 2022), e não pela malha rodoviária.",
                                         d$n_destinos, if (d$n_destinos == 1) "município de destino" else "municípios de destino")))
-      else p(class = "nota-fonte", sprintf("Todas as internações de moradores em %d ocorreram no próprio município.", ano)),
+      else p(class = "nota-fonte", sprintf("Em %d, a totalidade das internações de moradores ocorreu no próprio município.", ano)),
       { g <- serie_fora_mun(cod); if (nzchar(g)) tagList(h5("Evolução da parcela internada fora do município"), HTML(g)) })
 }
 
@@ -183,23 +184,23 @@ bloco_atende <- function(cod, ano = ANO_REF) {
   tem_hosp <- isTRUE(m$tem_hospital_sus_2025 == 1)
   rec <- if (is.null(d)) NA_real_ else d$internacoes_recebidas
   if (!is.finite(rec) || rec == 0) {
-    txt <- if (mun_novo(cod)) sprintf("O SIH não registra internações realizadas em %s em %d (município instalado em 2025).", nome, ano)
-      else if (!tem_hosp) sprintf(paste0("<b>%s não tem hospital SUS registrado no CNES em %d</b> e não realizou internações SUS no ano: ",
-                                         "os moradores se internam integralmente em outros municípios."), esc(nome), ano)
-      else sprintf(paste0("O CNES registra hospital com atendimento SUS em %s, mas o SIH não traz internações realizadas no município em %d ",
-                          "(nenhuma AIH paga no ano)."), esc(nome), ano)
+    txt <- if (mun_novo(cod)) sprintf("O SIH não registra internações realizadas em %s em %d, uma vez que o município foi instalado em 2025.", nome, ano)
+      else if (!tem_hosp) sprintf(paste0("<b>%s não possui hospital SUS registrado no CNES em %d</b> e não realizou internações SUS no ano, ",
+                                         "de modo que os moradores se internam integralmente em outros municípios."), esc(nome), ano)
+      else sprintf(paste0("Embora o CNES registre hospital com atendimento SUS em %s, o SIH não contém internações realizadas no município em %d, ",
+                          "isto é, nenhuma AIH foi paga no ano."), esc(nome), ano)
     return(div(class = "bloco", h4("Quem o município atende"), p(HTML(txt))))
   }
   po <- POLOS[POLOS$cod_mun6 == cod & POLOS$ano == ano, ]
   saldo <- if (nrow(po)) po$saldo[1] else NA_real_
   ac_rec <- if (nrow(po)) po$internacoes_ac_recebidas[1] else NA_real_
   to <- top_origens(cod, ano, n = 5)
-  frase_saldo <- if (is.finite(saldo)) sprintf(" Saldo entre internações realizadas e internações dos próprios moradores: <b>%s%s</b> (%s).",
+  frase_saldo <- if (is.finite(saldo)) sprintf(" O saldo entre as internações realizadas e as internações dos próprios moradores foi de <b>%s%s</b>, o que indica que %s.",
                                                if (saldo > 0) "+" else "", num(saldo),
                                                if (saldo > 0) "o município atende mais do que os moradores demandam"
-                                               else if (saldo < 0) "os moradores demandam mais do que o município realiza" else "equilíbrio") else ""
-  frase_ac <- if (is.finite(ac_rec) && ac_rec > 0) sprintf(" Na alta complexidade, foram %s internações realizadas no município.", num(ac_rec)) else ""
-  nota_hosp <- if (!tem_hosp) p(class = "nota-fonte", "O CNES não classifica como hospital nenhum estabelecimento SUS do município; as internações foram realizadas em outros tipos de estabelecimento (por exemplo, unidades mistas).")
+                                               else if (saldo < 0) "os moradores demandam mais do que o município realiza" else "há equilíbrio entre ambas") else ""
+  frase_ac <- if (is.finite(ac_rec) && ac_rec > 0) sprintf(" Na alta complexidade, realizaram-se %s internações no município.", num(ac_rec)) else ""
+  nota_hosp <- if (!tem_hosp) p(class = "nota-fonte", "O CNES não classifica como hospital nenhum estabelecimento SUS do município; as internações, portanto, foram realizadas em outros tipos de estabelecimento (por exemplo, unidades mistas).")
   ser <- DESL[DESL$cod_mun6 == cod & DESL$ano %in% ANOS & is.finite(DESL$internacoes_recebidas), ]
   g <- if (nrow(ser) >= 2) svg_linhas(list(
     list(nome = "Internações realizadas no município", cor = COR[["mun"]], larg = 2.8, dash = "", x = ser$ano, y = ser$internacoes_recebidas),
@@ -207,8 +208,8 @@ bloco_atende <- function(cod, ano = ANO_REF) {
     fmt = "int", titulo = paste0("Internações realizadas em ", nome, " — 2020–2025"), h = 230) else ""
   div(class = "bloco",
       h4("Quem o município atende"),
-      p(HTML(sprintf(paste0("Em %d, os estabelecimentos de %s realizaram <b>%s internações</b> SUS de residentes de Mato Grosso; <b>%s (%s)</b> foram de moradores ",
-                            "de outros municípios, vindos de %d %s.%s%s"),
+      p(HTML(sprintf(paste0("Em %d, os estabelecimentos de %s realizaram <b>%s internações</b> SUS de residentes de Mato Grosso, das quais <b>%s (%s)</b> corresponderam a moradores ",
+                            "de outros municípios, provenientes de %d %s.%s%s"),
                      ano, esc(nome), num(d$internacoes_recebidas), num(d$recebidas_de_fora), fmt_valor(d$pct_recebidas_de_fora, "pct1"),
                      d$n_origens, if (d$n_origens == 1) "outro município" else "outros municípios", frase_saldo, frase_ac))),
       nota_hosp,
@@ -216,7 +217,7 @@ bloco_atende <- function(cod, ano = ANO_REF) {
         h5(sprintf("Principais origens dos pacientes de fora (%d)", ano)),
         tabela_fluxo_html("Município de residência", to$origem, paste0(slug_mun(to$cod_origem), ".html"), to$internacoes, to$pct,
                           km = km_entre(cod, to$cod_origem), rotulo_pct = "% dos pacientes de fora"))
-      else p(class = "nota-fonte", sprintf("Em %d, todas as internações realizadas no município foram de moradores do próprio município.", ano)),
+      else p(class = "nota-fonte", sprintf("Em %d, a totalidade das internações realizadas no município correspondeu a moradores do próprio município.", ano)),
       if (nzchar(g)) tagList(h5("Evolução das internações realizadas"), HTML(g)))
 }
 
@@ -235,11 +236,12 @@ texto_hospitais <- function(cod, ano = ANO_REF) {
   nome <- nome_mun(cod); r <- resumo_hospitais(cod, ano)
   if (r$n == 0) return(sprintf("Nenhum estabelecimento classificado como hospital com atendimento SUS consta no CNES para %s em %d.", nome, ano))
   media_txt <- if (abs(r$n_medio - r$n) >= 0.05) sprintf(" (%s em média nas competências do CNES)", num(r$n_medio, 1)) else ""
-  paste0(sprintf("Em %d, o CNES registrava **%d %s com atendimento SUS** em %s em ao menos uma competência%s, com %s leitos SUS (%s de UTI) na média das competências do ano. ",
+  paste0(sprintf("Em %d, o CNES registrava **%d %s com atendimento SUS** em %s em ao menos uma competência%s, que somavam %s leitos SUS (%s de UTI) na média das competências do ano. ",
                  ano, r$n, if (r$n == 1) "estabelecimento hospitalar" else "estabelecimentos hospitalares", nome, media_txt, num(round(r$leitos)), num(round(r$uti))),
          if (r$internacoes > 0) sprintf("Esses estabelecimentos realizaram %s internações SUS no ano (SIH, ano da alta), inclusive de residentes de outros estados. ", num(r$internacoes)) else "",
-         if (r$sem_sih > 0) sprintf("%d %s sem produção registrada no SIH no ano (só CNES). ", r$sem_sih, if (r$sem_sih == 1) "estabelecimento" else "estabelecimentos") else "",
-         "Valores por estabelecimento: leitos e médicos são médias dos meses em que cada um constou no CNES; mortalidade sem ajuste de risco; ocupação dos leitos SUS em %.")
+         if (r$sem_sih > 0) sprintf("Dos estabelecimentos registrados, %d %s sem produção registrada no SIH no ano, constando apenas no CNES. ", r$sem_sih,
+                                    if (r$sem_sih == 1) "estabelecimento permaneceu" else "estabelecimentos permaneceram") else "",
+         "Na tabela por estabelecimento, os leitos e os médicos correspondem às médias dos meses em que cada estabelecimento constou no CNES, a mortalidade não tem ajuste de risco e a ocupação dos leitos SUS é expressa em percentual (%).")
 }
 
 # ---- 4. Botões e notas -------------------------------------------------------------------
@@ -260,7 +262,7 @@ sem_zoom_rolagem <- function(m) {
 # Nota quando o município não tem polígono na malha (ex.: Boa Esperança do Norte)
 nota_malha <- function(cod) {
   if (nrow(GEO) == 0 || cod %in% GEO$cod_mun6) return(invisible(NULL))
-  p(class = "nota-fonte", sprintf("%s ainda não consta na malha municipal do IBGE usada no site; o mapa destaca apenas a região de saúde.", nome_mun(cod)))
+  p(class = "nota-fonte", sprintf("%s ainda não consta da malha municipal do IBGE usada no site, razão pela qual o mapa destaca apenas a região de saúde.", nome_mun(cod)))
 }
 
 # Internações de moradores em hospitais de OUTROS estados, 2020–2025 somado (versão 0.3):
@@ -272,19 +274,19 @@ if (!exists("em_uf")) {
 }
 texto_fuga_mun <- function(cod) {
   f <- ds("fuga_mun_periodo.csv")
-  base <- "Os números abaixo não incluem internações em hospitais de outros estados."
+  base <- "Os números apresentados a seguir não incluem as internações em hospitais de outros estados."
   if (!file.exists(f)) return(base)
   d <- data.table::fread(f, encoding = "UTF-8", na.strings = "", colClasses = list(character = c("uf_principal", "nome_uf_principal", "nota_supressao")))
   r <- d[d$cod_mun6 == cod, ]
   if (nrow(r) == 0) return(base)
   per <- r$periodo[1]; lnk <- "(SIH/SUS das outras 26 UF; ver [Internações em outros estados](../deslocamento/index.html#fuga))"
   if (isTRUE(r$total_suprimido[1] == 1))
-    return(sprintf("Em %s, a contagem de internações de moradores em hospitais de outros estados não é mostrada: a regra de divulgação do projeto suprime contagens de 1 a 4 e as que permitiriam deduzi-las %s. Os números abaixo não incluem essas internações.", per, lnk))
+    return(sprintf("Em %s, a contagem de internações de moradores em hospitais de outros estados não é apresentada, uma vez que a regra de divulgação do projeto suprime as contagens de 1 a 4 e aquelas que permitiriam deduzi-las %s. Os números apresentados a seguir não incluem essas internações.", per, lnk))
   tot <- r$internacoes_total_res[1]; fora <- r$internacoes_outra_uf[1]
   if (is.na(tot) || tot == 0) return(sprintf("Não há internações de moradores registradas em %s, nem em Mato Grosso nem em outros estados.", per))
   if (fora == 0) return(sprintf("Em %s, nenhuma internação de moradores ocorreu em hospitais de outros estados %s.", per, lnk))
   uf <- if (!is.na(r$nome_uf_principal[1]) && !is.na(r$pct_uf_principal[1])) sprintf(", %s delas %s", paste0(num(r$pct_uf_principal[1], 1), "%"), em_uf(r$nome_uf_principal[1]))
         else if (!is.na(r$nome_uf_principal[1])) sprintf(", principalmente %s", em_uf(r$nome_uf_principal[1])) else ""
-  sprintf("Em %s, %s das %s internações de moradores (%s) ocorreram em hospitais de outros estados%s %s; elas não entram nos números abaixo.",
+  sprintf("Em %s, %s das %s internações de moradores (%s) ocorreram em hospitais de outros estados%s %s; essas internações não integram os números apresentados a seguir.",
           per, num(fora), num(tot), paste0(num(r$pct_outra_uf[1], 1), "%"), uf, lnk)
 }

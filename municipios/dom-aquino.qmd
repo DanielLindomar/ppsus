@@ -1,6 +1,6 @@
 ---
 title: "Dom Aquino"
-description: "Perfil de Dom Aquino (MT), região de saúde Sul Matogrossense: indicadores de saúde 2020–2025, eficiência (DEA) e produtividade (Malmquist), deslocamento para internação e hospitais SUS — Observatório PPSUS-MT"
+description: "Perfil do município de Dom Aquino (MT), integrante da região de saúde Sul Matogrossense: indicadores de saúde de 2020–2025, eficiência estimada por Análise Envoltória de Dados (DEA), produtividade medida pelo índice de Malmquist, deslocamento para internação e hospitais SUS — Observatório PPSUS-MT"
 toc: false
 page-layout: full
 ---

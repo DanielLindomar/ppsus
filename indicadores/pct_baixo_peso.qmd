@@ -1,6 +1,6 @@
 ---
 title: "Nascidos vivos com baixo peso"
-description: "Resultados em saúde · % dos nascidos vivos. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–2024 e valores por região de saúde."
+description: "Resultados em saúde · % dos nascidos vivos. A página apresenta o mapa dos 142 municípios de Mato Grosso, o ranking municipal, a evolução 2020–2024 e os valores por região de saúde."
 toc: false
 page-layout: full
 ---

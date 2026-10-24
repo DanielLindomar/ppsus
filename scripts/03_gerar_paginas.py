@@ -76,7 +76,7 @@ def limpar_obsoletos(pasta: Path, manter: set[str]) -> int:
 # 1. Páginas de município
 # ---------------------------------------------------------------------------
 def pagina_municipio(m: pd.Series) -> str:
-    desc = f"Perfil de {m.municipio} (MT), região de saúde {m.regiao_saude}: indicadores de saúde 2020–2025, eficiência (DEA) e produtividade (Malmquist), deslocamento para internação e hospitais SUS — Observatório PPSUS-MT"
+    desc = f"Perfil do município de {m.municipio} (MT), integrante da região de saúde {m.regiao_saude}: indicadores de saúde de 2020–2025, eficiência estimada por Análise Envoltória de Dados (DEA), produtividade medida pelo índice de Malmquist, deslocamento para internação e hospitais SUS — Observatório PPSUS-MT"
     return "\n".join([
         "---",
         f"title: {yaml_str(m.municipio)}",
@@ -136,7 +136,7 @@ def pagina_indicador(r: pd.Series) -> str:
         ano_fim = int(float(r.get("ano_max")))
     except (TypeError, ValueError):
         ano_fim = 2025
-    desc = f"{grupo} · {unidade}. Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–{ano_fim} e valores por região de saúde."
+    desc = f"{grupo} · {unidade}. A página apresenta o mapa dos 142 municípios de Mato Grosso, o ranking municipal, a evolução 2020–{ano_fim} e os valores por região de saúde."
     return "\n".join([
         "---",
         f"title: {yaml_str(r.rotulo)}",

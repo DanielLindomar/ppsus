@@ -39,7 +39,7 @@ def pagina(r: dict) -> str:
     ano_max = (r.get("ano_max") or "2025").strip()
     partes = [p for p in (grupo, unidade) if p]
     desc = (" · ".join(partes) + ". " if partes else "") + \
-        f"Mapa dos 142 municípios de Mato Grosso, ranking, evolução 2020–{ano_max} e valores por região de saúde."
+        f"A página apresenta o mapa dos 142 municípios de Mato Grosso, o ranking municipal, a evolução 2020–{ano_max} e os valores por região de saúde."
     return "\n".join([
         "---",
         f"title: {yaml_str(titulo)}",

@@ -157,7 +157,7 @@ matriz_regioes <- function(nivel = "total", ano = ANO_DESL) {
   })
   tagList(div(class = "rolagem-x", tags$table(class = "matriz-calor", `aria-label` = sprintf("Matriz de fluxos entre regiões de saúde — %s, %d", NIVEIS_DESL[[nivel]], ano),
                                               tags$thead(cabecalho), tags$tbody(linhas))),
-          p(class = "nota-fonte", sprintf("Cada linha soma 100%% das internações dos residentes da região (%s, %d). A diagonal, em negrito e com borda, é a parcela atendida na própria região de saúde; a cor segue a raiz quadrada da parcela, para que fluxos pequenos continuem visíveis. Passe o cursor sobre uma célula para ver o número de internações.", NIVEIS_DESL[[nivel]], ano)))
+          p(class = "nota-fonte", sprintf("Fonte: SIH/SUS. Nota: Cada linha soma 100%% das internações dos residentes da região (%s, %d). A diagonal, em negrito e com borda, corresponde à parcela atendida na própria região de saúde, e a intensidade da cor segue a raiz quadrada da parcela, para que os fluxos pequenos permaneçam visíveis. O número de internações de cada célula pode ser consultado ao posicionar o cursor sobre ela.", NIVEIS_DESL[[nivel]], ano)))
 }
 
 # ---- 5. Mapa de fluxos com seletor de nível ---------------------------------------------------
@@ -368,9 +368,9 @@ FUGADEST <- ler_contrato("fuga_destinos_mun")
 COR_FUGA <- c(MC = COR[["sec"]], AC = "#b45309")
 PERIODO_FUGA <- sprintf("%d–%d", min(ANOS), max(ANOS))
 TXT_SUPR <- "suprimido"
-NOTA_SUPR <- paste0("“Suprimido”: célula com menos de 5 internações, ou escondida para que outra célula pequena não ",
-                    "possa ser deduzida por diferença (regra de divulgação do projeto: nenhum recorte por região de saúde ou ",
-                    "por município mostra contagens de 1 a 4).")
+NOTA_SUPR <- paste0("“Suprimido” designa a célula com menos de 5 internações ou aquela ocultada para que outra célula pequena não ",
+                    "possa ser deduzida por diferença, conforme a regra de divulgação do projeto, segundo a qual nenhum recorte por ",
+                    "região de saúde ou por município apresenta contagens de 1 a 4.")
 
 # preposição contraída antes do nome da UF ("no Paraná", "na Bahia", "em São Paulo")
 PREP_UF <- c("Acre" = "no", "Alagoas" = "em", "Amapá" = "no", "Amazonas" = "no", "Bahia" = "na", "Ceará" = "no", "Distrito Federal" = "no", "Espírito Santo" = "no", "Goiás" = "em", "Maranhão" = "no", "Mato Grosso do Sul" = "em", "Minas Gerais" = "em", "Pará" = "no", "Paraíba" = "na", "Paraná" = "no", "Pernambuco" = "em", "Piauí" = "no", "Rio de Janeiro" = "no", "Rio Grande do Norte" = "no", "Rio Grande do Sul" = "no", "Rondônia" = "em", "Roraima" = "em", "Santa Catarina" = "em", "São Paulo" = "em", "Sergipe" = "em", "Tocantins" = "no", "Mato Grosso" = "em")
