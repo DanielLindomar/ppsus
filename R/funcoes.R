@@ -34,6 +34,8 @@ suppressPackageStartupMessages({
 
 RAIZ <- Sys.getenv("QUARTO_PROJECT_DIR", unset = ".")
 source(file.path(RAIZ, "R", "idioma.R"))
+# Redação científica (v0.5) dos textos gerados da eficiência, aplicada só na exibição (ver o cabeçalho do arquivo)
+source(file.path(RAIZ, "R", "redacao_eficiencia.R"))
 ds    <- function(...) file.path(RAIZ, "dados_site", ...)
 aviso <- function(...) message("[funcoes.R] ", sprintf(...))
 

@@ -422,7 +422,7 @@ ficha_modelo <- function(cod, modelo, nome, nome_reg) {
          faixas_anos(cod, modelo),
          lista_sinais(r),
          if (!is.na(r$texto_padrao) && nzchar(r$texto_padrao))
-           sprintf('<details class="nota-det"><summary>Leitura técnica completa da ficha</summary><p class="nota-fonte">%s</p></details>', esc(r$texto_padrao)) else "",
+           sprintf('<details class="nota-det"><summary>Leitura técnica completa da ficha</summary><p class="nota-fonte">%s</p></details>', esc(redigir_texto_padrao(r$texto_padrao))) else "",
          sprintf('<p class="nota-fonte"><a href="%s">Ver %s para todos os municípios →</a></p>', pag, esc(tolower(EF_MODELOS[[modelo]]))),
          '</div>')
 }

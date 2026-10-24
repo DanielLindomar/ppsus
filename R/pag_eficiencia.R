@@ -59,7 +59,7 @@ IC_NIVEL    <- param_ef("ic_nivel", 0.95)
 LIM_TEND    <- param_ef("tendencia_limiar", 0.02)
 CITACAO_EF  <- paste0("Resultados DEA ", VERSAO_EF, ", ", DATA_EF)
 # Nota de versão (vazia na v2): o que mudou frente à versão anterior da estimação
-NOTA_VERSAO_EF   <- meta_ef("nota_versao", "")
+NOTA_VERSAO_EF   <- redigir_nota_versao_ef(meta_ef("nota_versao", ""))   # redação v0.5 (R/redacao_eficiencia.R)
 VERSAO_ANT_EF    <- meta_ef("versao_anterior", "")
 DATA_ANT_EF      <- meta_ef("data_versao_anterior", "")
 REESTIMADOS_EF   <- strsplit(meta_ef("modelos_reestimados", ""), ",\\s*")[[1]]
@@ -390,10 +390,10 @@ ficha_detalhe <- function(cod, modelo, ano = ANO_EF, prefixo = "../municipios/")
               tags$td(num(x$observado, 1)), tags$td(num(x$meta_intermediaria, 1)), tags$td(num(x$meta_radial, 1)),
               tags$td(pct_ef(x$potencial_pct))) }))) else NULL
   div(class = "ef-ficha",
-      if (!is.na(r$texto_padrao)) p(class = "sintese", r$texto_padrao),
+      if (!is.na(r$texto_padrao)) p(class = "sintese", redigir_texto_padrao(r$texto_padrao)),
       h5("Pares de referência plausíveis"), pares,
       if (!is.null(metas)) tagList(h5(sprintf("Metas %d (por mil habitantes; meta intermediária = %s da distância até a meta plena)", ano, pct_ef(100 * FRACAO_META, 0))), metas),
-      if (!is.na(r$nota_evolucao) && nzchar(r$nota_evolucao)) p(class = "sub", strong("Evolução: "), r$nota_evolucao),
+      if (!is.na(r$nota_evolucao) && nzchar(r$nota_evolucao)) p(class = "sub", strong("Evolução: "), redigir_nota_evolucao(r$nota_evolucao)),
       p(a(href = paste0(prefixo, r$slug, ".html"), paste0("Abrir o perfil de ", r$municipio, " →"))))
 }
 

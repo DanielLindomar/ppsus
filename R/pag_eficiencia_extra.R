@@ -831,11 +831,11 @@ efx_arquivos <- function(nomes, prefixo = "../arquivos/") {
   itens <- lapply(nomes, function(n) {
     arq <- paste0("dados/eficiencia/", n, ".csv")
     if (!file.exists(file.path(RAIZ, "arquivos", arq))) return(NULL)
-    i <- match(arq, cat_e$arquivo); desc <- if (is.na(i)) "" else cat_e$descricao[i]
+    i <- match(arq, cat_e$arquivo); desc <- if (is.na(i)) "" else redigir_descricao_ef(cat_e$descricao[i])
     tags$li(a(href = paste0(prefixo, arq), download = paste0(n, ".csv"), paste0(n, ".csv")), if (nzchar(desc)) paste0(" — ", desc))
   })
   dic <- file.exists(file.path(RAIZ, "arquivos", "dados", "eficiencia", "dicionario_eficiencia.csv"))
   tagList(tags$ul(Filter(Negate(is.null), itens),
     if (dic) tags$li(a(href = paste0(prefixo, "dados/eficiencia/dicionario_eficiencia.csv"), download = "dicionario_eficiencia.csv", "dicionario_eficiencia.csv"),
-                     " — dicionário de todos os campos: nome gerencial, unidade, definição e fonte.")))
+                     " — dicionário de todos os campos, com o nome gerencial, a unidade, a definição e a fonte.")))
 }

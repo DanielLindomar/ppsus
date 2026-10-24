@@ -192,6 +192,7 @@ catalogo_eficiencia <- function() {
   if (!file.exists(f)) { aviso("arquivos/dados/eficiencia/catalogo_eficiencia.csv ausente: rode scripts/06_preparar_eficiencia.py"); return(NULL) }
   cat_e <- tibble::as_tibble(data.table::fread(f, encoding = "UTF-8", na.strings = "",
                                                colClasses = list(character = c("arquivo", "descricao", "chave", "periodo", "fonte"))))
+  cat_e$descricao <- redigir_descricao_ef(cat_e$descricao)   # redação v0.5 (R/redacao_eficiencia.R)
   cat_e$caminho <- ARQ(cat_e$arquivo)
   cat_e$existe <- file.exists(cat_e$caminho)
   if (any(!cat_e$existe)) aviso("arquivos de eficiência ausentes: %s", paste(cat_e$arquivo[!cat_e$existe], collapse = ", "))

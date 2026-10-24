@@ -117,7 +117,7 @@ md_ef <- file.path(RAIZ, "arquivos", "dados", "eficiencia", "metadados.csv")
 meta_ef <- if (file.exists(md_ef)) data.table::fread(md_ef, encoding = "UTF-8", colClasses = "character") else NULL
 data_ef <- if (is.null(meta_ef)) "" else meta_ef$valor[meta_ef$item == "data_resultados"][1]
 versao_ef <- if (is.null(meta_ef)) "v2" else meta_ef$valor[meta_ef$item == "versao_resultados"][1]
-nota_ef <- if (is.null(meta_ef) || !any(meta_ef$item == "nota_versao")) "" else meta_ef$valor[meta_ef$item == "nota_versao"][1]
+nota_ef <- if (is.null(meta_ef) || !any(meta_ef$item == "nota_versao")) "" else redigir_nota_versao_ef(meta_ef$valor[meta_ef$item == "nota_versao"][1])
 nota_ef <- if (is.na(nota_ef) || !nzchar(nota_ef)) "" else paste0(" ", nota_ef, " A nota completa encontra-se em [Eficiência](../eficiencia/index.html#versao).")
 n_col_painel <- length(names(data.table::fread(file.path(RAIZ, "arquivos", "dados", "painel_municipal_2020_2025.csv"), nrows = 0, encoding = "UTF-8")))
 ```
