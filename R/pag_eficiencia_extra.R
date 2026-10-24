@@ -136,8 +136,8 @@ body.fullcontent main.content { min-width:0; }
 efx_frase_versao <- function() {
   if (!nzchar(efx_meta("nota_versao", "")) || !length(EFX_REESTIMADOS) || !all(EFX_REESTIMADOS %in% names(MODELOS_MQ))) return("")
   nomes <- efx_lista_e(tolower(MODELOS_MQ[EFX_REESTIMADOS]))
-  sprintf(paste0("Na versão %s, apenas o modelo de %s foi reestimado, e os demais resultados correspondem aos da versão %s (%s) — ",
-                 "<a href=\"index.html#versao\">nota de versão</a>. "), EFX_VERSAO_N, nomes, EFX_VERSAO_ANT, EFX_DATA_ANT)
+  sprintf(paste0("Na versão %s, apenas o modelo de %s foi reestimado, e os demais resultados correspondem aos da versão %s (%s), ",
+                 "conforme a <a href=\"index.html#versao\">nota de versão</a>. "), EFX_VERSAO_N, nomes, EFX_VERSAO_ANT, EFX_DATA_ANT)
 }
 
 efx_faixa <- function() faixa_construcao(sprintf(paste0(
@@ -595,7 +595,7 @@ efx_ac_grade_quadrantes <- function(a = EFX_ANO) {
             esc(x$regiao_saude[i]), num(x$internacoes_ac_res_p1000[i], 2), efx_pct(x$autossuficiencia_ac_pct[i]), efx_chip_quad(x$quadrante[i])))))))
   }
   tagList(
-    p(class = "nota-fonte", sprintf("Nas linhas, a autossuficiência (internações de AC realizadas na região ÷ internações de AC de residentes) é de pelo menos 50%% ou inferior a 50%%; nas colunas, o acesso dos residentes situa-se abaixo ou a partir da mediana estadual de %d (%s internações de AC por mil hab.).", a, num(med, 2))),
+    p(class = "nota-fonte", sprintf("Nas linhas, a autossuficiência (internações de AC realizadas na região ÷ internações de AC de residentes) é de pelo menos 50%% ou inferior a 50%%; nas colunas, o acesso dos residentes situa-se abaixo da mediana estadual de %d (%s internações de AC por mil habitantes) ou na mediana e acima dela.", a, num(med, 2))),
     div(class = "efx-quad-grade",
       celula(0, 1, "Autossuficiência ≥ 50% · acesso abaixo da mediana", "A região produz alta complexidade, mas seus residentes têm acesso inferior à mediana."),
       celula(1, 1, "Autossuficiência ≥ 50% · acesso na mediana ou acima", "Reúnem-se nesta célula os polos, cuja autossuficiência é de pelo menos 100% e que atendem também outras regiões, e as regiões em transição, com autossuficiência de 50% a 100%."),
@@ -841,5 +841,5 @@ efx_arquivos <- function(nomes, prefixo = "../arquivos/") {
   dic <- file.exists(file.path(RAIZ, "arquivos", "dados", "eficiencia", "dicionario_eficiencia.csv"))
   tagList(tags$ul(Filter(Negate(is.null), itens),
     if (dic) tags$li(a(href = paste0(prefixo, "dados/eficiencia/dicionario_eficiencia.csv"), download = "dicionario_eficiencia.csv", "dicionario_eficiencia.csv"),
-                     " — dicionário de todos os campos, com o nome gerencial, a unidade, a definição e a fonte.")))
+                     " — Dicionário de todos os campos, com o nome gerencial, a unidade, a definição e a fonte.")))
 }

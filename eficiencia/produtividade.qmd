@@ -15,7 +15,9 @@ j22 <- JE[JE$periodo == "2022-2025", ]; j20 <- JE[JE$periodo == "2020-2022", ]
 melhor <- j22[which.max(j22$ec), ]; pior <- j22[which.min(j22$ec), ]
 n_ec_pos <- sum(j22$ec > 1)
 tc_baixo <- j22$cod[j22$tc < 1]
-frase_ec <- paste(sprintf("%s, %s", tolower(MODELOS_MQ[j22$cod]), efx_var(j22$ec)), collapse = "; ")
+frase_ec <- sprintf("%s, %s", tolower(MODELOS_MQ[j22$cod]), efx_var(j22$ec))
+if (length(frase_ec) > 1) frase_ec[length(frase_ec)] <- paste("e", frase_ec[length(frase_ec)])  # versão 0.5: "e" antes do último item
+frase_ec <- paste(frase_ec, collapse = "; ")
 lim_t <- num(100 * efx_param("tendencia_limiar", 0.02), 0)
 ```
 

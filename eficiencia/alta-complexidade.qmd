@@ -31,11 +31,11 @@ Q <- EFX_QAC
 mud <- Q |> group_by(regiao_saude) |> arrange(ano) |>
   summarise(q0 = first(quadrante), q1 = last(quadrante), n = sum(quadrante != lag(quadrante), na.rm = TRUE), .groups = "drop")
 mud_ext <- mud[mud$q0 != mud$q1, ]
-# versão 0.5: mudança de quadrante em prosa ("a região X passou de A a B"), sem seta
-quad_prosa <- c(polo = "polo", `em transição` = "região em transição", `dependente com acesso adequado` = "dependente com acesso adequado",
-                `dependente com baixo acesso` = "dependente com baixo acesso")
+# versão 0.5: mudança de quadrante em prosa ("a região X passou do quadrante “A” ao “B”"), sem seta; nomes dos quadrantes entre aspas (5ª rodada)
+quad_prosa <- c(polo = "“polo”", `em transição` = "“em transição”", `dependente com acesso adequado` = "“dependente com acesso adequado”",
+                `dependente com baixo acesso` = "“dependente com baixo acesso”")
 frase_mud <- if (nrow(mud_ext) == 0) "nenhuma região terminou o período em quadrante diferente do inicial" else {
-  m_ <- sprintf("a região %s%s de %s a %s", mud_ext$regiao_saude, c(" passou", rep(",", nrow(mud_ext) - 1)),
+  m_ <- sprintf("a região %s%s do quadrante %s ao %s", mud_ext$regiao_saude, c(" passou", rep(",", nrow(mud_ext) - 1)),
                 quad_prosa[mud_ext$q0], quad_prosa[mud_ext$q1])
   if (length(m_) > 1) m_[length(m_)] <- paste("e", m_[length(m_)])
   paste(m_, collapse = "; ") }
@@ -156,7 +156,7 @@ Para as regiões que **produzem** alta complexidade de forma contínua, o escore
 efx_bloco_spec("M3")
 ```
 
-**Por que apenas três regiões.** Segundo a regra aprovada, uma região tem **oferta hospitalar contínua de alta complexidade** quando realiza pelo menos `r num(lim, 0)`% das internações de alta complexidade do estado em **todos** os anos de 2020 a 2025. Somente `r efx_lista_e(pub)` cumprem a regra e, juntas, realizaram `r efx_pct(sum(loc$share[loc$publicavel_m3 == 1]))` das internações de alta complexidade do estado em `r A`. As demais regiões têm produção nula ou residual, de modo que o escore delas mediria a ausência de oferta, e não a ineficiência; por isso, nelas vale apenas o painel. As três regiões publicáveis foram ratificadas pela coordenação do projeto em `r EFX_DATA`.
+**Critério das três regiões publicáveis.** Segundo a regra aprovada, uma região tem **oferta hospitalar contínua de alta complexidade** quando realiza pelo menos `r num(lim, 0)`% das internações de alta complexidade do estado em **todos** os anos de 2020 a 2025. Somente `r efx_lista_e(pub)` cumprem a regra e, juntas, realizaram `r efx_pct(sum(loc$share[loc$publicavel_m3 == 1]))` das internações de alta complexidade do estado em `r A`. As demais regiões têm produção nula ou residual, de modo que o escore delas mediria a ausência de oferta, e não a ineficiência, razão pela qual nessas regiões se adota apenas o painel. As três regiões publicáveis foram ratificadas pela coordenação do projeto em `r EFX_DATA`.
 
 **Tabela 4 – Participação de cada região no total de internações de alta complexidade realizadas em Mato Grosso, por ano (%)**
 
@@ -210,9 +210,9 @@ efx_fichas_regioes(A)
 ## Ressalvas {#ressalvas}
 
 ::: {.callout-warning title="Cuidados na interpretação"}
-Os **resultados da versão `r EFX_VERSAO_N`** (`r EFX_ROTULO`, `r EFX_DATA`) encontram-se **em validação** com a SES-MT e o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT). Ressalta-se que **as internações em outros estados não entram no acesso**: o painel utiliza apenas o SIH de Mato Grosso, de modo que os moradores atendidos em São Paulo, Goiás, Rondônia ou outros estados ficam de fora, o que subestima o acesso nas regiões de fronteira. Essas internações são medidas à parte, na página [Deslocamento](../deslocamento/index.qmd#fuga), e não alteram os escores.
+Os **resultados da versão `r EFX_VERSAO_N`** (`r EFX_ROTULO`, `r EFX_DATA`) encontram-se **em validação** com a SES-MT e o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT). Ressalta-se que **as internações em outros estados não são consideradas no acesso**: o painel utiliza apenas o SIH de Mato Grosso, de modo que os moradores atendidos em São Paulo, Goiás, Rondônia ou outros estados não são contabilizados, o que subestima o acesso nas regiões de fronteira. Essas internações são medidas à parte, na página [Deslocamento](../deslocamento/index.qmd#fuga), e não alteram os escores.
 
-Quanto à **despesa atribuída à alta complexidade**, trata-se da despesa municipal (SIOPS, subfunção 302) rateada pelo valor aprovado de alta complexidade, que não inclui o gasto estadual e federal direto e, em algumas regiões, é ínfima ou mal classificada. No que se refere ao **registro de UTI no CNES**, há sub-registro de leitos de UTI, e o painel utiliza os leitos validados pelas diárias de UTI do SIH. Além disso, a **APAC por residência** somente é comparável a partir de 2023, e, antes disso, o acesso ambulatorial não entra nas comparações.
+Quanto à **despesa atribuída à alta complexidade**, trata-se da despesa municipal (SIOPS, subfunção 302) rateada pelo valor aprovado de alta complexidade, que não inclui o gasto estadual e federal direto e, em algumas regiões, é ínfima ou mal classificada. No que se refere ao **registro de UTI no CNES**, há sub-registro de leitos de UTI, e o painel utiliza os leitos validados pelas diárias de UTI do SIH. Além disso, a **APAC por residência** somente é comparável a partir de 2023, e, antes disso, o acesso ambulatorial não integra as comparações.
 
 Em relação à **COVID-19**, em 2020 e 2021, o volume e a composição das internações foram alterados, inclusive pelas habilitações temporárias de UTI COVID. Por fim, **eficiência não é qualidade**: os escores diagnósticos não medem o resultado clínico, e a mortalidade hospitalar padronizada da região aparece nas fichas como informação complementar.
 :::
