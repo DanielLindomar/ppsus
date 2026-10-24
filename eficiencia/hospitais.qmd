@@ -175,7 +175,7 @@ efx_h_tendencias(A)
 
 ## Ressalvas {#ressalvas}
 
-::: {.callout-warning title="Leia antes de interpretar"}
+::: {.callout-warning title="Cuidados na interpretação"}
 **Resultados da versão `r EFX_VERSAO_N`, em validação.** Os escores provêm da estimação de `r efx_data_modelo("H")` e encontram-se em validação com a SES-MT e o COSEMS-MT, e os `r num(n_reg)` hospitais com registro a verificar em `r A` dependem de conferência na origem (CNES e SIH). Recomenda-se, ademais, a leitura por **faixa**, e não por *ranking*: com `r num(n_bal)` hospitais no painel completo e `r length(ins) + length(pro)` variáveis, os intervalos de confiança são largos, de modo que dois hospitais em faixas vizinhas podem não ser estatisticamente diferentes. Como a correção de viés reduz mais o escore das unidades situadas na fronteira, um hospital da fronteira pode ter escore corrigido menor que o de um hospital do quartil superior.
 
 Cumpre reiterar que **eficiência não é qualidade**. O modelo mede o volume de atendimento (internações e diárias) por recurso, mas não mede a resolutividade, a segurança do paciente nem a adequação clínica; hospitais que internam por mais tempo por necessidade clínica podem, assim, parecer mais "produtivos" em diárias. A mortalidade padronizada é apresentada ao lado e não altera o escore. Quanto à **complexidade dos casos**, as internações e as diárias são contadas sem ponderação pela complexidade de cada caso, de modo que os hospitais de referência regional que concentram casos graves podem ficar em desvantagem.

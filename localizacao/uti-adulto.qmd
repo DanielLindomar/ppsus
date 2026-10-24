@@ -333,7 +333,7 @@ A **permanência média em UTI** é a de cada município de destino (2024–2025
 
 ## Ressalvas {#ressalvas}
 
-::: {.callout-warning title="Leia antes de interpretar"}
+::: {.callout-warning title="Cuidados na interpretação"}
 **Preliminar e provisório.** A demanda de 2026–2030 depende de uma projeção populacional municipal provisória (método de razão sobre a projeção do IBGE para Mato Grosso), que não desloca as coortes: cada município herda o envelhecimento médio do estado, o que subestima o envelhecimento dos municípios hoje mais velhos. Os resultados serão refeitos quando houver projeção municipal por idade e sexo.
 
 **Não é recomendação.** Os cenários A e B e as demais soluções mostram as consequências de hipóteses e não indicam onde o estado deve abrir, habilitar ou fechar leitos.

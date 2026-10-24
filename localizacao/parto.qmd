@@ -277,7 +277,7 @@ Ressalta-se, por fim, que **a qualidade e a segurança não entram nos modelos**
 
 ## Ressalvas {#ressalvas}
 
-::: {.callout-warning title="Leia antes de interpretar"}
+::: {.callout-warning title="Cuidados na interpretação"}
 **Preliminar e provisório.** A demanda de 2026–2030 depende de uma projeção populacional municipal provisória (método de razão sobre a projeção do IBGE para Mato Grosso), que não desloca as coortes, de modo que cada município herda o ritmo de envelhecimento médio do estado. Os resultados serão refeitos quando houver projeção municipal por idade e sexo.
 
 **Não é recomendação.** Os cenários mostram as consequências de hipóteses e não indicam onde o estado ou os municípios devem abrir ou fechar maternidades.

@@ -203,7 +203,7 @@ efx_fichas_regioes(A)
 
 ## Ressalvas {#ressalvas}
 
-::: {.callout-warning title="Leia antes de interpretar"}
+::: {.callout-warning title="Cuidados na interpretação"}
 **Resultados da versão `r EFX_VERSAO_N`** (`r EFX_ROTULO`, `r EFX_DATA`), **em validação** com a SES-MT e o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT). Ressalta-se que **as internações em outros estados não entram no acesso**: o painel utiliza apenas o SIH de Mato Grosso, de modo que os moradores atendidos em São Paulo, Goiás, Rondônia ou outros estados ficam de fora, o que subestima o acesso nas regiões de fronteira. Essas internações são medidas à parte, na página [Deslocamento](../deslocamento/index.qmd#fuga), e não alteram os escores.
 
 Quanto à **despesa atribuída à alta complexidade**, trata-se da despesa municipal (SIOPS, subfunção 302) rateada pelo valor aprovado de alta complexidade, que não inclui o gasto estadual e federal direto e, em algumas regiões, é ínfima ou mal classificada. No que se refere ao **registro de UTI no CNES**, há subregistro de leitos de UTI, e o painel utiliza os leitos validados pelas diárias de UTI do SIH. Além disso, a **APAC por residência** somente é comparável a partir de 2023, e, antes disso, o acesso ambulatorial não entra nas comparações.
