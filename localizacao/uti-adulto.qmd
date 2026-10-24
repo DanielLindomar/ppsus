@@ -60,7 +60,7 @@ secoes_loc(c(acesso = "Acesso atual", demanda = "Demanda projetada", validacao =
              sensibilidade = "Sensibilidade", parametros = "Parâmetros", ressalvas = "Ressalvas", arquivos = "Arquivos"))
 ```
 
-Este piloto organiza em **cenários, destinados a apoiar a discussão com a gestão do SUS**, a questão sobre onde novas unidades de terapia intensiva (UTI) adulto do SUS reduziriam o deslocamento dos pacientes graves, considerando-se a demanda esperada para os próximos anos e a capacidade dos leitos. Apresentam-se o acesso atual, a demanda de internações com UTI adulto projetada para 2026–2030, o desempenho dos modelos, os cenários de otimização com 1 a 5 unidades novas (inclusive uma versão que respeita a capacidade dos leitos), a necessidade de leitos por região de saúde e o efeito dos cenários sobre o tempo de viagem de cada município. A demanda considerada é a de **internações SUS com UTI adulto de residentes de Mato Grosso**, registradas no Sistema de Informações Hospitalares do SUS (SIH/SUS), e o tempo é o **rodoviário entre as sedes municipais**. Os resultados são preliminares, e as ressalvas encontram-se ao final da página.
+Este piloto examina, por meio de **cenários destinados a apoiar a discussão com a gestão do SUS**, onde novas unidades de terapia intensiva (UTI) adulto do SUS reduziriam o deslocamento dos pacientes graves, considerando-se a demanda esperada para os próximos anos e a capacidade dos leitos. Apresentam-se o acesso atual, a demanda de internações com UTI adulto projetada para 2026–2030, o desempenho dos modelos, os cenários de otimização com 1 a 5 unidades novas (inclusive uma versão que respeita a capacidade dos leitos), a necessidade de leitos por região de saúde e o efeito dos cenários sobre o tempo de viagem de cada município. A demanda considerada é a de **internações SUS com UTI adulto de residentes de Mato Grosso**, registradas no Sistema de Informações Hospitalares do SUS (SIH/SUS), e o tempo é o **rodoviário entre as sedes municipais**. Os resultados são preliminares, e as ressalvas encontram-se ao final da página.
 
 ## Acesso atual {#acesso}
 
@@ -91,7 +91,7 @@ tabela_acesso_regioes(P)
 ```
 
 ::: {.nota-fonte}
-Fonte: elaboração do Projeto PPSUS-MT. População-alvo: `r INFO$pop`, segundo as estimativas da RIPSA e da Secretaria de Vigilância em Saúde (RIPSA/SVS) para `r ANO_OFERTA`. Leitos: `r INFO$fonte_oferta`. Demanda e deslocamento: `r INFO$fonte_dem`, 2024–2025. Nota: índice E2SFCA com decaimento gaussiano até 60 ou 120 minutos de tempo rodoviário (média ponderada pela população-alvo; Mato Grosso = 1); tempo médio ponderado somente pelos atendidos em Mato Grosso. "—" no próprio município indica região sem UTI adulto SUS, sem internação no próprio município.
+Fonte: elaboração do Projeto PPSUS-MT. População-alvo: `r INFO$pop`, segundo as estimativas da RIPSA e da Secretaria de Vigilância em Saúde (RIPSA/SVS) para `r ANO_OFERTA`. Leitos: `r INFO$fonte_oferta`. Demanda e deslocamento: `r INFO$fonte_dem`, 2024–2025. Nota: o índice E2SFCA utiliza decaimento gaussiano até 60 ou 120 minutos de tempo rodoviário (média ponderada pela população-alvo; Mato Grosso = 1), e o tempo médio é ponderado somente pelos atendidos em Mato Grosso. O sinal "—" no próprio município indica região sem UTI adulto SUS e sem internação no próprio município.
 :::
 
 ### Por município de residência
@@ -134,7 +134,7 @@ tabela_projecao_municipios(P)
 ```
 
 ::: {.nota-fonte}
-Fonte: elaboração do Projeto PPSUS-MT, com base no SIH/SUS 2020–2025, na população da RIPSA/SVS de 2025 e na projeção do IBGE para Mato Grosso (Revisão 2024). Nota: internações SUS com UTI adulto projetadas para residentes de Mato Grosso, atendidas no estado ou fora dele; projeção do projeto pelo modelo de taxa histórica ancorada, com valores provisórios, porque não existe projeção populacional oficial por município. Os limites inferiores do intervalo abaixo de 5 aparecem como "< 5".
+Fonte: elaboração do Projeto PPSUS-MT, com base no SIH/SUS 2020–2025, na população da RIPSA/SVS de 2025 e na projeção do IBGE para Mato Grosso (Revisão 2024). Nota: projetam-se as internações SUS com UTI adulto de residentes de Mato Grosso, atendidas no estado ou fora dele, pelo modelo de taxa histórica ancorada do projeto, com valores provisórios, porque não existe projeção populacional oficial por município. Os limites inferiores do intervalo abaixo de 5 aparecem como "< 5".
 :::
 
 ## Validação dos modelos {#validacao}
@@ -171,7 +171,7 @@ fonte_curta(P, "eventos de mudança de oferta identificados no CNES 2021–2025"
             figura = "Figura 3 – CPC médio do modelo pivô e da persistência nas origens afetadas por mudanças de oferta de UTI adulto, por tipo de evento")
 ```
 
-Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o pivô do gravitacional apresentou o maior CPC médio (`r num(ET$cpc_medio_pivo_mnl, 3)`, contra `r num(ET$cpc_medio_persistencia, 3)` da persistência) e superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e foi superado em `r num(ET$n_pivo_mnl_perde_margem)`. **A vantagem, contudo, concentra-se no ciclo da COVID-19**: `r num(sum(e2122$n_avaliaveis))` dos `r num(ET$n_avaliaveis)` eventos são de 2021 e 2022, e os do mesmo ano não são independentes; em 2023, o ano mais próximo da rotina, o pivô praticamente empata com a persistência (CPC de `r num(e23$cpc_medio_pivo_mnl, 3)` contra `r num(e23$cpc_medio_persistencia, 3)`). Nas aberturas de UTI, o modelo previu para a unidade nova mais pacientes do que ela recebeu nos dois primeiros anos, razão pela qual a captação prevista é dividida por 1,28 no filtro de candidatos da otimização.
+Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o pivô do gravitacional apresentou o maior CPC médio (`r num(ET$cpc_medio_pivo_mnl, 3)`, contra `r num(ET$cpc_medio_persistencia, 3)` da persistência) e superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e foi superado em `r num(ET$n_pivo_mnl_perde_margem)`. **A vantagem, contudo, concentra-se no ciclo da COVID-19**: `r num(sum(e2122$n_avaliaveis))` dos `r num(ET$n_avaliaveis)` eventos são de 2021 e 2022, e os do mesmo ano não são independentes; em 2023, o ano mais próximo da rotina, o pivô apresenta desempenho praticamente equivalente ao da persistência (CPC de `r num(e23$cpc_medio_pivo_mnl, 3)` contra `r num(e23$cpc_medio_persistencia, 3)`). Nas aberturas de UTI, o modelo previu para a unidade nova mais pacientes do que ela recebeu nos dois primeiros anos, razão pela qual a captação prevista é dividida por 1,28 no filtro de candidatos da otimização.
 
 **Tabela 7 – CPC médio dos modelos de escolha nos experimentos naturais, por tipo de evento**
 
@@ -186,7 +186,7 @@ tabela_experimentos_ano(P)
 ```
 
 ::: {.nota-fonte}
-Fonte: validação da frente de localização do Projeto PPSUS-MT, com base no CNES e no SIH/SUS 2020–2025. Nota: o modelo dos cenários foi escolhido nos mesmos eventos em que foi avaliado (o de maior CPC médio entre os que respondem à mudança de oferta), e não há amostra reservada para confirmar o desempenho.
+Fonte: validação do estudo de localização de serviços do Projeto PPSUS-MT, com base no CNES e no SIH/SUS 2020–2025. Nota: o modelo dos cenários foi escolhido nos mesmos eventos em que foi avaliado (o de maior CPC médio entre os que respondem à mudança de oferta), e não há amostra reservada para confirmar o desempenho.
 :::
 
 ## Cenários de localização (otimização) {#onde}
@@ -204,7 +204,7 @@ cenarios_lado_a_lado("uti", 3L)
 fonte_curta(P, "cenários de 2030 provisórios")
 ```
 
-Parte das "unidades novas" pode corresponder à habilitação ou à contratação SUS de leitos de UTI adulto que já existem fora do SUS, ou à reabertura de UTI fechadas depois da pandemia. Mais da metade dos leitos de UTI adulto existentes em Mato Grosso não é SUS, e o uso desses leitos pago fora do SUS não aparece no SIH (CNES e SIH, 2021–2025, relatório técnico da frente).
+Parte das "unidades novas" pode corresponder à habilitação ou à contratação SUS de leitos de UTI adulto que já existem fora do SUS, ou à reabertura de UTI fechadas depois da pandemia. Mais da metade dos leitos de UTI adulto existentes em Mato Grosso não é SUS, e o uso desses leitos pago fora do SUS não aparece no SIH (CNES e SIH, 2021–2025, relatório técnico do estudo de localização).
 
 ::: {.panel-tabset}
 
@@ -269,7 +269,7 @@ tabela_escolhidos(P, lapply(MODS, function(m) m[c("modelo", "limiar", "nome")]))
 ```
 
 ::: {.nota-fonte}
-Nota: demanda de 2030 projetada (provisória) por município, descontada a parcela observada atendida fora de Mato Grosso; demanda e candidatos nas sedes municipais; custo igual ao tempo rodoviário entre sedes. Soluções exatas por programação inteira (HiGHS), conferidas por enumeração completa para k = 1 e 2.
+Nota: utiliza-se a demanda de 2030 projetada (provisória) por município, descontada a parcela observada atendida fora de Mato Grosso, com a demanda e os candidatos nas sedes municipais e o custo igual ao tempo rodoviário entre sedes. As soluções são exatas, obtidas por programação inteira (HiGHS), e foram conferidas por enumeração completa para k = 1 e 2.
 :::
 
 ## Leitos por região de saúde {#leitos}
@@ -311,7 +311,7 @@ tabela_ganho_municipios(P, CENS)
 ```
 
 ::: {.nota-fonte}
-Nota: cenários de 2030 (provisórios), com a demanda projetada atendida em Mato Grosso e as participações observadas em 2025 como ponto de partida; a parcela atendida fora de Mato Grosso permanece constante. A ocupação implícita corresponde a internações previstas × permanência média do destino ÷ (leitos SUS × 365).
+Nota: os cenários de 2030 (provisórios) partem da demanda projetada atendida em Mato Grosso e das participações observadas em 2025, e a parcela atendida fora de Mato Grosso permanece constante. A ocupação implícita corresponde a internações previstas × permanência média do destino ÷ (leitos SUS × 365).
 :::
 
 ## Sensibilidade {#sensibilidade}

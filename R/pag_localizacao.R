@@ -198,10 +198,10 @@ fonte_loc <- function(piloto = NULL, prefixo = "../", arquivos = TRUE) {
            paste(vapply(pil, function(x) x$fonte_oferta, ""), collapse = "; "),
            "; população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024), base da projeção municipal provisória; ",
            "tempos rodoviários entre sedes municipais calculados com o OSRM sobre o OpenStreetMap (consulta de 08/10/2026; condições ideais de automóvel). ",
-           "Elaboração: Projeto PPSUS-MT, frente de localização de serviços (cadeia L1–L5, ", DATA_LOC, "). "),
-    if (arquivos) tagList("Arquivos em ", a(href = paste0(prefixo, "localizacao/index.html#arquivos"), "Localização: arquivos", .noWS = "after"),
-                          "; definições gerais em ")
-    else "Definições gerais em ", a(href = paste0(prefixo, "metodologia.html"), "Metodologia", .noWS = "after"), ".")
+           "Elaboração: Projeto PPSUS-MT, estudo de localização de serviços (cadeia L1–L5, ", DATA_LOC, "). "),
+    if (arquivos) tagList("Os arquivos encontram-se em ", a(href = paste0(prefixo, "localizacao/index.html#arquivos"), "Localização: arquivos", .noWS = "after"),
+                          ", e as definições gerais, em ")
+    else "As definições gerais encontram-se em ", a(href = paste0(prefixo, "metodologia.html"), "Metodologia", .noWS = "after"), ".")
 }
 
 ARQ_LOC <- list(
@@ -380,7 +380,7 @@ mapa_loc <- function(piloto, cenarios = "p_mediana_k3", altura = 520) {
     fitBounds(bb[1], bb[2], bb[3], bb[4]) |>
     htmlwidgets::onRender(JS_MAPA_LOC, data = dados_js)
   tagList(
-    div(class = "vistas-mapa", role = "group", `aria-label` = "O que o mapa mostra",
+    div(class = "vistas-mapa", role = "group", `aria-label` = "Seleção da camada do mapa",
         lapply(seq_along(vistas), function(k) tags$button(type = "button", class = paste("btn btn-sm btn-outline-primary", if (k == 1) "active"),
                                                           `data-mapa` = id, `data-vista` = k - 1, `aria-pressed` = if (k == 1) "true" else "false", vistas[[k]]$rot))),
     m,
@@ -538,7 +538,7 @@ tabela_valid_demanda <- function(piloto) {
     tags$td(class = "num", pct_l(d$w0[i])), tags$td(class = "num", pct_l(d$w1[i])), tags$td(class = "num", pct_l(d$wr1[i])),
     tags$td(class = "num", paste0(if (d$et1[i] >= 0) "+" else "−", num(abs(d$et1[i]), 1), "%"))))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Nota: erro médio por município (WMAPE), isto é, soma dos erros absolutos dividida pela soma observada; treino em 2020–2023 e teste em 2024–2025."),
+    tags$caption(class = "nota-fonte", "Nota: o erro médio por município (WMAPE) corresponde à soma dos erros absolutos dividida pela soma observada; o treino abrange 2020–2023, e o teste, 2024–2025."),
     tags$thead(tags$tr(tags$th("Modelo"), tags$th(class = "num", "Erro por município"), tags$th(class = "num", "Erro por município, ancorado"),
                        tags$th(class = "num", "Erro por região, ancorado"), tags$th(class = "num", "Erro do total de MT, ancorado"))),
     tags$tbody(linhas)))
@@ -553,7 +553,7 @@ tabela_valid_escolha <- function(piloto) {
     tags$td(class = "num", num(v$cpc[i], 3)), tags$td(class = "num", pct_l(100 * v$acerto_principal_destino[i])),
     tags$td(class = "num", paste0(num(v$tempo_medio_prev[i], 1), " (obs. ", num(v$tempo_medio_obs[i], 1), ")"))))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Nota: o CPC é a parte comum entre fluxos previstos e observados (1 = previsão perfeita). Treino em 2020–2023 e teste em 2024–2025, sem mudança de oferta além da observada."),
+    tags$caption(class = "nota-fonte", "Nota: o CPC é a parte comum entre fluxos previstos e observados (1 = previsão perfeita). O treino abrange 2020–2023, e o teste, 2024–2025, sem mudança de oferta além da observada."),
     tags$thead(tags$tr(tags$th("Modelo"), tags$th(class = "num", "CPC"), tags$th(class = "num", "Acerto do destino principal"),
                        tags$th(class = "num", "Tempo médio previsto (min)"))),
     tags$tbody(linhas)))
@@ -601,7 +601,7 @@ tabela_experimentos <- function(piloto) {
     tags$td(class = "num", tags$b(num(e$cpc_medio_persistencia[i], 3))),
     tags$td(class = "num", sprintf("%s / %s / %s", num(e$n_pivo_mnl_vence_margem[i]), num(e$n_pivo_mnl_empata_margem[i]), num(e$n_pivo_mnl_perde_margem[i])))))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Nota: CPC médio nas origens afetadas. Vence / empata / perde: número de eventos (mudanças de oferta de leitos no CNES, e não pacientes) em que o pivô do gravitacional supera a persistência por 0,005 de CPC ou mais, fica a menos de 0,005 ou perde por 0,005 ou mais."),
+    tags$caption(class = "nota-fonte", "Nota: o CPC corresponde à média nas origens afetadas, e a coluna “Vence / empata / perde” indica o número de eventos (mudanças de oferta de leitos no CNES, e não pacientes) em que o pivô do gravitacional supera a persistência por 0,005 de CPC ou mais, fica a menos de 0,005 ou perde por 0,005 ou mais."),
     tags$thead(tags$tr(tags$th("Tipo de evento"), tags$th(class = "num", "Eventos avaliáveis"), tags$th(class = "num", "Gravitacional"),
                        tags$th(class = "num", "LightGBM nos pares"), tags$th(class = "num", "Pivô do LightGBM"), tags$th(class = "num", "Pivô do gravitacional"),
                        tags$th(class = "num", "Persistência"), tags$th(class = "num", "Pivô: vence / empata / perde"))),
@@ -724,7 +724,7 @@ tabela_sensibilidade <- function(piloto) {
       tags$td(if (isTRUE(r$quase_empate)) tags$b("sim") else "não"), tags$td(outras))
   })
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Nota: considera-se quase-empate, na p-mediana e na regional, a diferença entre a melhor e a segunda melhor solução menor que 1% do tempo médio e, na cobertura máxima, menor que 10% do ganho de cobertura. Oito variantes de demanda; candidatos fixos; busca exaustiva (força bruta)."),
+    tags$caption(class = "nota-fonte", "Nota: considera-se quase-empate, na p-mediana e na regional, a diferença entre a melhor e a segunda melhor solução menor que 1% do tempo médio e, na cobertura máxima, menor que 10% do ganho de cobertura. Consideram-se oito variantes de demanda e candidatos fixos, com busca exaustiva (força bruta)."),
     tags$thead(tags$tr(tags$th("Modelo"), tags$th(class = "num", "k"), tags$th("Melhor solução"), tags$th("Segunda melhor"),
                        tags$th(class = "num", "Diferença (% do objetivo)"), tags$th(class = "num", "Diferença (% do ganho)"),
                        tags$th("Quase-empate"), tags$th("Variantes de demanda com outra solução"))),
@@ -752,7 +752,7 @@ tabela_necessidade_uti <- function() {
                  tags$td(class = "num", num(sum(d$demanda_residentes_2030))), tags$td(class = "num", num(sum(d$leitos_necessarios_2030), 1)),
                  tags$td(class = "num", sald(sum(d$leitos_uti_sus_2025) - sum(d$leitos_necessarios_2030))))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Nota: leitos necessários = internações dos residentes atendidas em MT × permanência média em UTI adulto (6,95 dias, 2024–2025) ÷ (365 × 0,85). Trata-se de critério empírico do estudo, e não de parâmetro normativo. ▲ sobra / ▼ déficit em relação aos leitos SUS existentes na região."),
+    tags$caption(class = "nota-fonte", "Nota: leitos necessários = internações dos residentes atendidas em MT × permanência média em UTI adulto (6,95 dias, 2024–2025) ÷ (365 × 0,85). Trata-se de critério empírico do estudo, e não de parâmetro normativo. Os símbolos ▲ e ▼ indicam, respectivamente, sobra e déficit em relação aos leitos SUS existentes na região."),
     tags$thead(tags$tr(tags$th("Região de saúde"), tags$th(class = "num", "Leitos SUS de UTI adulto (2025)"),
                        tags$th(class = "num", "Internações observadas 2025 (em MT)"), tags$th(class = "num", "Leitos necessários, 2025"),
                        tags$th(class = "num", "Saldo, 2025"), tags$th(class = "num", tagList("Internações projetadas 2030 ", selo_prov())),
