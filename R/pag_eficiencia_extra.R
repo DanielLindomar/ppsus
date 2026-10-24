@@ -136,14 +136,14 @@ body.fullcontent main.content { min-width:0; }
 efx_frase_versao <- function() {
   if (!nzchar(efx_meta("nota_versao", "")) || !length(EFX_REESTIMADOS) || !all(EFX_REESTIMADOS %in% names(MODELOS_MQ))) return("")
   nomes <- efx_lista_e(tolower(MODELOS_MQ[EFX_REESTIMADOS]))
-  sprintf(paste0("Na versão %s, só o modelo de %s foi reestimado; os demais resultados são os da versão %s (%s) — ",
+  sprintf(paste0("Na versão %s, apenas o modelo de %s foi reestimado, e os demais resultados correspondem aos da versão %s (%s) — ",
                  "<a href=\"index.html#versao\">nota de versão</a>. "), EFX_VERSAO_N, nomes, EFX_VERSAO_ANT, EFX_DATA_ANT)
 }
 
 efx_faixa <- function() faixa_construcao(sprintf(paste0(
   "<b>Resultados da versão %s da estimação</b> (%s, %s), em validação com a SES-MT e o COSEMS-MT. %s",
-  "Leia os escores por <b>faixa e intervalo de confiança</b>, não como ranking; eficiência mede o volume de produção ",
-  "obtido com os recursos disponíveis e <b>não</b> a qualidade do cuidado."), EFX_VERSAO_N, EFX_ROTULO, EFX_DATA, efx_frase_versao()))
+  "Os escores devem ser lidos por <b>faixa e intervalo de confiança</b>, e não como <i>ranking</i>; a eficiência mede o volume de produção ",
+  "obtido com os recursos disponíveis, e <b>não</b> a qualidade do cuidado."), EFX_VERSAO_N, EFX_ROTULO, EFX_DATA, efx_frase_versao()))
 
 # Navegação entre as páginas da seção Eficiência (prefixo relativo à página que chama)
 efx_nav <- function(atual = "") {
@@ -266,7 +266,7 @@ efx_h_aviso_reprocessamento <- function() {
       div(class = "callout-header d-flex align-content-center", div(class = "callout-title-container flex-fill", "Atualização em andamento")),
       div(class = "callout-body-container callout-body",
           p(HTML(sprintf(paste0("A especificação principal do modelo de hospitais passou a ser <b>%s</b> (decisão da coordenação do projeto, %s). ",
-            "Os escores, as faixas, os pares, as metas e a evolução desta página ainda vêm da estimação com os produtos da especificação anterior ",
+            "Os escores, as faixas, os pares, as metas e a evolução desta página ainda provêm da estimação com os produtos da especificação anterior ",
             "(<b>%s</b>) e serão substituídos automaticamente quando o reprocessamento for concluído."),
             esc(efx_lista_e(efx_nomes_produtos("H"))), EFX_DATA, esc(efx_lista_e(efx_h_produtos_escore()$nome_gerencial)))))))
 }
@@ -591,9 +591,9 @@ efx_ac_grade_quadrantes <- function(a = EFX_ANO) {
             esc(x$regiao_saude[i]), num(x$internacoes_ac_res_p1000[i], 2), efx_pct(x$autossuficiencia_ac_pct[i]), efx_chip_quad(x$quadrante[i])))))))
   }
   tagList(
-    p(class = "nota-fonte", sprintf("Linhas: autossuficiência (internações de AC realizadas na região ÷ internações de AC de residentes) de pelo menos 50%% ou abaixo de 50%%. Colunas: acesso dos residentes abaixo ou a partir da mediana estadual de %d (%s internações de AC por mil hab.).", a, num(med, 2))),
+    p(class = "nota-fonte", sprintf("Nas linhas, a autossuficiência (internações de AC realizadas na região ÷ internações de AC de residentes) é de pelo menos 50%% ou inferior a 50%%; nas colunas, o acesso dos residentes situa-se abaixo ou a partir da mediana estadual de %d (%s internações de AC por mil hab.).", a, num(med, 2))),
     div(class = "efx-quad-grade",
-      celula(0, 1, "Autossuficiência ≥ 50% · acesso abaixo da mediana", "Produz alta complexidade, mas seus residentes acessam menos do que a mediana."),
+      celula(0, 1, "Autossuficiência ≥ 50% · acesso abaixo da mediana", "A região produz alta complexidade, mas seus residentes têm acesso inferior à mediana."),
       celula(1, 1, "Autossuficiência ≥ 50% · acesso na mediana ou acima", "Polos (≥ 100%: atendem também outras regiões) e regiões em transição (50% a 100%)."),
       celula(0, 0, "Autossuficiência < 50% · acesso abaixo da mediana", "Dependentes com baixo acesso: prioridade para regulação e pactuação de fluxos."),
       celula(1, 0, "Autossuficiência < 50% · acesso na mediana ou acima", "Dependentes com acesso adequado: a rede de referência funciona para seus residentes.")))

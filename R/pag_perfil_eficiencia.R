@@ -71,7 +71,7 @@ EF_DATA <- ef_meta("data_resultados")   # data dos resultados (08/10/2026 na v2;
 EF_VERSAO <- ef_meta("versao_resultados")
 # Frase curta da nota de versão (vazia quando não há versão anterior): o que mudou frente à versão anterior
 EF_NOTA_CURTA <- if (!is.na(ef_meta("nota_versao")) && nzchar(ef_meta("nota_versao")) && identical(ef_meta("modelos_reestimados"), "M1"))
-  sprintf(" Na versão %s, só a atenção básica foi reestimada, com o insumo de agentes comunitários restrito ao ACS (CBO 515105) — [nota de versão](%sindex.html#versao).",
+  sprintf(" Na versão %s, apenas a atenção básica foi reestimada, com o insumo de agentes comunitários restrito ao ACS (CBO 515105) — [nota de versão](%sindex.html#versao).",
           sub("^v", "", EF_VERSAO), EF_PREFIXO) else ""
 
 # Modelos municipais na ordem da ficha: rótulo curto (aba) e página da seção Eficiência
@@ -207,9 +207,9 @@ bloco_pares <- function(cod, modelo, r) {
   if (nrow(p) == 0) {
     txt <- if (eh1(r$fronteira)) {
       nref <- as.integer(r$n_vezes_referencia)
-      if (is.finite(nref) && nref > 0) sprintf("Na fronteira: não tem pares, e serve de referência para %d %s neste modelo.", nref, if (nref == 1) "município" else "municípios")
-      else "Na fronteira: não tem pares."
-    } else "nenhum listado: entre os municípios elegíveis como referência (com registro plausível), não há quem produza mais com os mesmos recursos. O potencial indicado pelo escore vem da comparação com todos os municípios, que inclui unidades fora desse grupo."
+      if (is.finite(nref) && nref > 0) sprintf("Na fronteira: o município não tem pares e serve de referência para %d %s neste modelo.", nref, if (nref == 1) "município" else "municípios")
+      else "Na fronteira: o município não tem pares."
+    } else "nenhum listado: entre os municípios elegíveis como referência (com registro plausível), nenhum produz mais com os mesmos recursos. O potencial indicado pelo escore provém da comparação com todos os municípios, que inclui unidades fora desse grupo."
     return(sprintf('<p class="ef-linha"><b>Municípios de referência:</b> %s</p>', txt))
   }
   itens <- sprintf('<li><a href="%s.html">%s</a> <span class="sub">(%s; %s hab.; peso %s%%)</span>%s</li>',
@@ -220,8 +220,8 @@ bloco_pares <- function(cod, modelo, r) {
   alt <- eh1(r$fronteira)
   sprintf('<div class="ef-pares"><b>%s</b> <span class="sub">(%s)</span><ul>%s</ul></div>',
           if (alt) "Referência alternativa" else "Municípios de referência plausíveis",
-          if (alt) "a posição na fronteira decorre de falta de comparável em algum recurso; frente aos municípios elegíveis como referência, estas são as práticas a observar; o peso indica quanto cada um compõe a meta"
-          else "práticas a observar; o peso indica quanto cada um compõe a meta",
+          if (alt) "a posição na fronteira decorre da falta de comparável em algum recurso; em relação aos municípios elegíveis como referência, estas são as práticas a observar, e o peso indica a participação de cada um na composição da meta"
+          else "práticas a observar; o peso indica a participação de cada um na composição da meta",
           paste(itens, collapse = ""))
 }
 
@@ -233,7 +233,7 @@ nota_meta_gestor <- function(n) {
          ifelse(grepl("^sem comparável entre os pares", n), "em alguma variável não há comparável entre os municípios elegíveis: meta igual ao observado",
          ifelse(grepl("meta financeira não publicada", n) & grepl("302", n), "meta financeira não publicada (despesa de média complexidade com registro a verificar)",
          ifelse(grepl("meta financeira não publicada", n), "meta financeira não publicada (classificação orçamentária a verificar)",
-         ifelse(grepl("^sem hospital SUS", n), "sem hospital SUS no município, as internações locais são zero por configuração da rede; a meta de internações é apenas informativa", n)))))
+         ifelse(grepl("^sem hospital SUS", n), "sem hospital SUS no município, as internações locais são nulas por configuração da rede, e a meta de internações é apenas informativa", n)))))
   unique(out)
 }
 
@@ -259,15 +259,15 @@ bloco_metas <- function(cod, modelo, r) {
   m <- cm$m; lac <- cm$lac; info <- cm$info; n_ok <- cm$n_ok
   if (nrow(m) == 0) return('<p class="ef-linha"><b>Metas:</b> não publicadas para este modelo.</p>')
   notas <- nota_meta_gestor(unique(m$nota_meta[!is.na(m$nota_meta) & nzchar(m$nota_meta)]))
-  if (nrow(cm$rec_polo)) notas <- c(notas, sprintf("%s: polo de alta complexidade — parte dos recursos atende moradores de outros municípios e a alta complexidade, por isso a folga de recursos não é comparável e não é publicada",
+  if (nrow(cm$rec_polo)) notas <- c(notas, sprintf("%s: polo de alta complexidade — parte dos recursos atende moradores de outros municípios e a alta complexidade; por isso, a folga de recursos não é comparável e não é publicada",
                                                    if (nrow(cm$rec_polo) == 1) "meta de recurso omitida" else sprintf("%d metas de recursos omitidas", nrow(cm$rec_polo))))
   txt_ok <- if (n_ok > 0) sprintf(" %d %s do modelo já %s na meta.", n_ok, if (n_ok == 1) "outra variável" else "outras variáveis", if (n_ok == 1) "está" else "estão") else ""
   txt_info <- if (nrow(info)) sprintf(" %s: observado igual a zero no município, sem percentual de lacuna; a meta é apenas informativa.",
                                       paste(esc(unique(info$nome_gerencial)), collapse = "; ")) else ""
   if (nrow(lac) == 0 && nrow(info) == 0) {
     corpo <- if (fronteira) '<p class="ef-linha"><b>Metas 2025:</b> todas as variáveis do modelo já estão na meta (o município está na fronteira).</p>'
-             else if (nrow(cm$rec_polo)) '<p class="ef-linha"><b>Metas 2025:</b> sem lacuna de produção frente aos municípios elegíveis como referência.</p>'
-             else '<p class="ef-linha"><b>Metas 2025:</b> sem lacuna na comparação com os municípios elegíveis como referência (com registro plausível), de onde vêm as metas; por isso não há meta a publicar, embora o escore, calculado entre todos os municípios, indique potencial.</p>'
+             else if (nrow(cm$rec_polo)) '<p class="ef-linha"><b>Metas 2025:</b> sem lacuna de produção em relação aos municípios elegíveis como referência.</p>'
+             else '<p class="ef-linha"><b>Metas 2025:</b> sem lacuna na comparação com os municípios elegíveis como referência (com registro plausível), dos quais derivam as metas; por isso, não há meta a publicar, embora o escore, calculado entre todos os municípios, indique potencial.</p>'
   } else {
     if (nrow(info)) { info$potencial_pct <- NA_real_; lac <- rbind(lac, info) }
     pot <- ifelse(!is.finite(lac$potencial_pct),
@@ -281,7 +281,7 @@ bloco_metas <- function(cod, modelo, r) {
                       esc(lac$nome_gerencial), ifelse(lac$tipo == "produto", "produção ▲", "recurso ▼"), esc(lac$unidade_abs),
                       fmt_unid(lac$observado_abs, lac$unidade_abs), fmt_unid(lac$meta_intermediaria_abs, lac$unidade_abs),
                       fmt_unid(lac$meta_radial_abs, lac$unidade_abs), pot)
-    corpo <- sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><caption>Metas 2025 (valores anuais do município)</caption><thead><tr><th>Variável</th><th class="num">Observado 2025</th><th class="num">Meta intermediária</th><th class="num">Meta plena</th><th class="num">Potencial de melhoria</th></tr></thead><tbody>%s</tbody></table></div><p class="nota-fonte">Meta plena: o que as melhores práticas comparáveis alcançam com os mesmos recursos; meta intermediária: metade do caminho. Na produção, o potencial é o aumento possível; nos recursos, a folga que poderia ser redirecionada sem reduzir a produção.%s</p>',
+    corpo <- sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><caption>Metas 2025 (valores anuais do município)</caption><thead><tr><th>Variável</th><th class="num">Observado 2025</th><th class="num">Meta intermediária</th><th class="num">Meta plena</th><th class="num">Potencial de melhoria</th></tr></thead><tbody>%s</tbody></table></div><p class="nota-fonte">A meta plena corresponde ao que as melhores práticas comparáveis alcançam com os mesmos recursos, e a meta intermediária, à metade do caminho. Na produção, o potencial expressa o aumento possível; nos recursos, a folga que poderia ser redirecionada sem reduzir a produção.%s</p>',
                      paste(linhas, collapse = ""), paste0(txt_ok, txt_info))
   }
   paste0(corpo, if (length(notas)) sprintf('<p class="nota-fonte">Nota: %s.</p>', esc(paste(notas, collapse = "; "))) else "")
@@ -324,19 +324,19 @@ texto_evolucao <- function(r) {
 EF_SINAIS <- c(
   registro_a_verificar = "Registro a verificar: algum dado de origem (SIOPS, CNES, SISAB, SIA/SIH) tem valor atípico; o município não serve de referência a outros até a verificação.",
   sem_comparavel_insumo = "Sem comparável em algum recurso: nenhum outro município usa tão pouco de algum recurso; a posição na fronteira deve ser lida com reserva.",
-  diagnostico_ordem_m = "Desempenho muito acima de amostras de municípios comparáveis (diagnóstico de robustez, informativo): o município continua elegível como referência; vale confirmar os dados de origem.",
+  diagnostico_ordem_m = "Desempenho muito acima de amostras de municípios comparáveis (diagnóstico de robustez, informativo): o município continua elegível como referência, mas recomenda-se confirmar os dados de origem.",
   referencia_com_alavancagem = "Referência com grande peso na fronteira (supereficiência acima de 2): não é usada como par de outros municípios.")
 lista_sinais <- function(r) {
   cod <- if (is.na(r$sinal) || !nzchar(r$sinal)) character(0) else trimws(strsplit(r$sinal, ";", fixed = TRUE)[[1]])
   s <- unname(ifelse(cod %in% names(EF_SINAIS), EF_SINAIS[cod], gsub("_", " ", cod)))
   if (eh1(r$registro_a_verificar) && !"registro_a_verificar" %in% cod) s <- c(EF_SINAIS[["registro_a_verificar"]], s)
   if (eh1(r$flag_polo_ac) && r$modelo %in% c("M2", "M2A"))
-    s <- c(s, "Polo de alta complexidade: parte dos recursos atende à alta complexidade, por isso o escore de média complexidade é conservador.")
+    s <- c(s, "Polo de alta complexidade: parte dos recursos atende à alta complexidade; por isso, o escore de média complexidade é conservador.")
   if (eh1(r$flag_rede_sem_hospital) && r$modelo == "M0") s <- c(s, "Sem hospital SUS no município: internações locais nulas por configuração da rede (meta de internações apenas informativa).")
-  if (eh1(r$flag_visitas_baixas)) s <- c(s, "Visitas domiciliares abaixo do piso informativo (10% da mediana do ano): só sinalização, sem efeito no escore.")
+  if (eh1(r$flag_visitas_baixas)) s <- c(s, "Visitas domiciliares abaixo do piso informativo (10% da mediana do ano): apenas sinalização, sem efeito no escore.")
   if (eh1(r$flag_sisab_incompleto)) s <- c(s, "Registro do SISAB incompleto no ano: produção da atenção básica anualizada.")
-  if (eh1(r$flag_quebra_registro)) s <- c(s, "Quebra de registro na série do município (produção muito abaixo dos demais anos).")
-  if (eh1(r$transicao_marcada)) s <- c(s, "Há transição anual com registro marcado: fica fora das médias de evolução.")
+  if (eh1(r$flag_quebra_registro)) s <- c(s, "Quebra de registro na série do município (produção muito abaixo da dos demais anos).")
+  if (eh1(r$transicao_marcada)) s <- c(s, "Há transição anual com registro marcado, que fica fora das médias de evolução.")
   s <- unique(s)
   if (length(s) == 0) return('<p class="ef-linha"><b>Sinais de registro:</b> nenhum sinal neste modelo.</p>')
   sprintf('<div class="ef-sinais"><b>Sinais de registro e leitura</b><ul>%s</ul></div>', paste0("<li>", esc(s), "</li>", collapse = ""))
@@ -358,7 +358,7 @@ frase_sintese <- function(r, nome) {
     pr <- cm$lac[cm$lac$tipo == "produto", ]
     esc_txt <- sprintf("%s%% (entre %s%% e %s%%)", num(r$potencial_expansao_pct, 0), num(r$potencial_expansao_min_pct, 0), num(r$potencial_expansao_max_pct, 0))
     paste0(if (nrow(pr))
-             sprintf("Em %d, frente aos municípios de referência com registro plausível, %s poderia ampliar %s em %s %s%% com os mesmos recursos (meta plena); na comparação com todos os municípios, o escore indica cerca de %s. Faixa no estado: %s",
+             sprintf("Em %d, em relação aos municípios de referência com registro plausível, %s poderia ampliar %s em %s %s%% com os mesmos recursos (meta plena); na comparação com todos os municípios, o escore indica cerca de %s. Faixa no estado: %s",
                      EF_ANO, nome, EF_PROD[[r$modelo]], if (nrow(pr) > 1) "até" else "cerca de", num(max(pr$potencial_pct), 0), esc_txt, tolower(rotulo_faixa(r$faixa)))
            else sprintf("Em %d, com os mesmos recursos, %s poderia ampliar %s em cerca de %s, segundo o escore calculado entre todos os municípios; faixa no estado: %s",
                         EF_ANO, nome, EF_PROD[[r$modelo]], esc_txt, tolower(rotulo_faixa(r$faixa))),
@@ -386,7 +386,7 @@ ef_linha <- function(cod, modelo, ano = EF_ANO) {
 motivo_gestor <- function(r) {
   m <- ifelse(is.na(r$motivo_situacao), "", r$motivo_situacao)
   if (r$modelo == "M2" && grepl("sem hospital SUS|iguais a zero", m))
-    return("sem produção hospitalar de média complexidade no município em todos os anos 2020–2025, a média complexidade é lida pela ótica do acesso.")
+    return("sem produção hospitalar de média complexidade no município em todos os anos 2020–2025, a média complexidade é analisada pela ótica do acesso.")
   if (grepl("instalado em 1", m)) return("município instalado em 1º/01/2025, sem série própria para este modelo.")
   if (grepl("^escore não publicado", m)) return(paste0(sub(" — registro a verificar na origem$", "", m), "; registro de origem a verificar."))
   if (grepl("subfunção 302\\) igual a zero", m)) return("despesa de média complexidade (subfunção 302) igual a zero no ano: o município fica fora da estimação deste modelo.")
@@ -402,7 +402,7 @@ ficha_modelo <- function(cod, modelo, nome, nome_reg) {
     return(sprintf('<div class="ef-ficha"><p><b>Não avaliado em %d:</b> %s</p><p class="nota-fonte"><a href="%s">Como o modelo funciona →</a></p></div>',
                    EF_ANO, esc(motivo_gestor(r)), pag))
   grp <- if (!is.na(r$grupo) && nzchar(r$grupo)) r$grupo else NA
-  intro_acesso <- if (modelo == "M2A") sprintf('<p class="ef-linha">Compara os recursos municipais de média complexidade com as internações de média complexidade dos moradores, onde quer que tenham ocorrido em Mato Grosso, numa fronteira só com os <b>%s</b>.%s</p>',
+  intro_acesso <- if (modelo == "M2A") sprintf('<p class="ef-linha">O modelo compara os recursos municipais de média complexidade com as internações de média complexidade dos moradores, onde quer que tenham ocorrido em Mato Grosso, em uma fronteira composta apenas pelos <b>%s</b>.%s</p>',
     esc(r$rotulo_grupo), if (eh1(r$flag_rede_sem_hospital) || identical(grp, "sem_leito")) " Sem leito SUS no município, esta é a leitura da média complexidade." else "") else ""
   topo <- sprintf('<div class="ef-topo"><div class="ef-faixa">%s <span class="ef-faixa-txt">%s</span>%s</div><div class="ef-escore">Escore corrigido <b>%s</b> <span class="sub">(IC 95%%: %s a %s · original %s)</span></div></div>',
                   glifo_faixa(r$faixa), esc(rotulo_faixa(r$faixa)),
@@ -477,10 +477,10 @@ secao_eficiencia <- function(cod) {
   sem_m2 <- !is.null(r2) && !r2$situacao %in% "avaliado"
   html <- function(x) cat("\n```{=html}\n", x, "\n```\n\n", sep = "")
   html(as.character(ef_estilo()))
-  cat(sprintf("Os escores comparam o que %s produz com os recursos que usa, frente às **melhores práticas observadas em municípios de Mato Grosso** no mesmo ano (DEA, orientação ao produto). A leitura é por **faixa com intervalo de confiança**, não por posição exata. O escore mede eficiência técnica, **não a qualidade do cuidado**; os resultados em saúde estão nas abas acima. Resultados da versão %s da estimação (%s), em validação com a SES-MT e o COSEMS-MT.%s Como ler: [Eficiência — visão geral](%sindex.html).\n\n",
+  cat(sprintf("Os escores comparam o que %s produz com os recursos que utiliza, tendo como referência as **melhores práticas observadas em municípios de Mato Grosso** no mesmo ano, estimadas por Análise Envoltória de Dados (DEA, do inglês *Data Envelopment Analysis*) com orientação ao produto. A leitura deve ser feita por **faixa com intervalo de confiança**, e não por posição exata. Cumpre ressaltar que o escore mede a eficiência técnica, **e não a qualidade do cuidado**, e que os resultados em saúde constam das abas acima. Os resultados correspondem à versão %s da estimação (%s) e encontram-se em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT) e o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT).%s A forma de leitura é detalhada em [Eficiência — visão geral](%sindex.html).\n\n",
               nome, ifelse(is.na(EF_VERSAO), "2", sub("^v", "", EF_VERSAO)), ifelse(is.na(EF_DATA), "", EF_DATA), EF_NOTA_CURTA, EF_PREFIXO))
-  if (primeiro) cat(sprintf("::: {.callout-note}\n**Primeiro exercício.** %s foi instalado em 1º/01/2025: só há resultado para 2025, marcado como parcial (produção da atenção básica anualizada e registro possivelmente incompleto). O município ainda não serve de referência a outros e não tem evolução (Malmquist) nem escore esperado pelo contexto.\n:::\n\n", nome))
-  if (sem_m2 && !primeiro) cat(sprintf("Sem hospital SUS com produção de média complexidade em todos os anos, %s não entra no modelo de média complexidade pela produção local; a média complexidade é lida **pela ótica do acesso** (internações de média complexidade dos moradores, onde quer que tenham ocorrido em Mato Grosso).\n\n", nome))
+  if (primeiro) cat(sprintf("::: {.callout-note}\n**Primeiro exercício.** %s foi instalado em 1º/01/2025, razão pela qual há resultado apenas para 2025, marcado como parcial (produção da atenção básica anualizada e registro possivelmente incompleto). O município ainda não serve de referência a outros e não dispõe de evolução (Malmquist) nem de escore esperado pelo contexto.\n:::\n\n", nome))
+  if (sem_m2 && !primeiro) cat(sprintf("Por não dispor de hospital SUS com produção de média complexidade em todos os anos, %s não integra o modelo de média complexidade pela produção local; nesse caso, a média complexidade é analisada **pela ótica do acesso**, isto é, pelas internações de média complexidade dos moradores, onde quer que tenham ocorrido em Mato Grosso.\n\n", nome))
   html(resumo_ef(cod))
   cat(":::: {.panel-tabset}\n\n")
   for (mo in names(EF_MODELOS)) {
@@ -492,7 +492,7 @@ secao_eficiencia <- function(cod) {
     html(ficha_modelo(cod, mo, nome, m$regiao_saude))
   }
   cat("::::\n\n")
-  cat(sprintf('<p class="nota-fonte">Fonte: Projeto PPSUS-MT, Resultados DEA %s (%s), com dados de SIOPS, CNES, SISAB, SI-PNI, SIA, SIH e IBGE, 2020–2025; valores monetários em R$ de 2025 (IPCA). Escore corrigido do viés por bootstrap; faixas = quartis entre os municípios avaliados fora da fronteira. Arquivos completos em <a href="../dados/index.html#eficiencia">Dados</a>.</p>\n\n',
+  cat(sprintf('<p class="nota-fonte">Fonte: Projeto PPSUS-MT, Resultados DEA %s (%s), com base em dados do SIOPS, CNES, SISAB, SI-PNI, SIA, SIH e IBGE, 2020–2025. Nota: os valores monetários estão expressos em R$ de 2025 (IPCA); o escore é corrigido do viés por <i>bootstrap</i>, e as faixas correspondem aos quartis entre os municípios avaliados fora da fronteira. Os arquivos completos encontram-se em <a href="../dados/index.html#eficiencia">Dados</a>.</p>\n\n',
               ifelse(is.na(EF_VERSAO), "v2", EF_VERSAO), ifelse(is.na(EF_DATA), "", EF_DATA)))
   invisible()
 }
@@ -519,11 +519,11 @@ bloco_hospitais_ef <- function(cod, ano = EF_ANO) {
   }, character(1))
   tagList(
     h4(paste0("Eficiência dos hospitais (modelo de hospitais, ", ano, ")")),
-    p(sprintf("Compara cada hospital SUS com as melhores práticas entre os %s hospitais avaliados em Mato Grosso. %s Faixa com intervalo de confiança, não ranking; eficiência não é qualidade.",
+    p(sprintf("O modelo compara cada hospital SUS com as melhores práticas entre os %s hospitais avaliados em Mato Grosso. %s A leitura é feita por faixa com intervalo de confiança, e não por ranking, e cumpre lembrar que eficiência não é qualidade.",
               num(n_aval), texto_espec("H"))),
     HTML(sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><thead><tr><th>Hospital</th><th>Faixa no estado</th><th class="num">Escore corrigido (IC 95%%)</th><th>Mudança de eficiência 2022–2025</th></tr></thead><tbody>%s</tbody></table></div>',
                  paste(linhas, collapse = ""))),
-    p(class = "nota-fonte", sprintf("Fonte: Projeto PPSUS-MT, Resultados DEA %s (%s); CNES e SIH/SUS. Hospitais do município fora desta tabela não entram no modelo de hospitais. ",
+    p(class = "nota-fonte", sprintf("Fonte: Projeto PPSUS-MT, Resultados DEA %s (%s), com base em dados do CNES e do SIH/SUS. Nota: os hospitais do município ausentes desta tabela não integram o modelo de hospitais. ",
                                     ifelse(is.na(EF_VERSAO), "v2", EF_VERSAO), ifelse(is.na(EF_DATA), "", EF_DATA)),
       a(href = paste0(EF_PREFIXO, "hospitais.html"), "Ver todos os hospitais avaliados →")))
 }

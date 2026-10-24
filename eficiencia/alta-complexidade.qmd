@@ -46,11 +46,11 @@ efx_atalhos(c(porque = "Por que um painel", panorama = "Panorama", painel = "Pai
               fichas = "Fichas das regiões", ressalvas = "Ressalvas", arquivos = "Arquivos"))
 ```
 
-A alta complexidade (AC) — cirurgia cardiovascular, oncologia, neurocirurgia, terapia renal, UTI, transplantes, traumato-ortopedia de alta complexidade — é organizada no SUS por **regiões e macrorregiões de saúde**: poucos polos concentram a oferta e atendem moradores de todo o estado. Por isso esta página lê a alta complexidade pelas **16 regiões de saúde (CIR)** e por duas perguntas complementares: os moradores da região **têm acesso** à alta complexidade, onde quer que ela seja realizada? E a região **realiza** a alta complexidade de que seus moradores precisam (autossuficiência)?
+A alta complexidade (AC), que compreende a cirurgia cardiovascular, a oncologia, a neurocirurgia, a terapia renal, a Unidade de Terapia Intensiva (UTI), os transplantes e a traumato-ortopedia de alta complexidade, é organizada no Sistema Único de Saúde (SUS) por **regiões e macrorregiões de saúde**, de modo que poucos polos concentram a oferta e atendem moradores de todo o estado. Por essa razão, esta página analisa a alta complexidade pelas **16 regiões de saúde**, que correspondem às Comissões Intergestores Regionais (CIR), a partir de duas perguntas complementares: os moradores da região **têm acesso** à alta complexidade, onde quer que ela seja realizada? E a região **realiza** a alta complexidade de que seus moradores precisam (autossuficiência)?
 
 ## Por que um painel, e não um escore para cada região {#porque}
 
-Na maior parte das regiões, a ausência de produção de alta complexidade é uma **decisão de rede** (regionalização), não um sinal de ineficiência. Um escore de eficiência que comparasse todas as regiões mediria, na prática, quem tem ou não tem hospital de alta complexidade. Por isso o **produto gerencial é o painel regional de acesso e produção**, com a leitura em quadrantes, e o escore de eficiência (DEA) é calculado apenas como **diagnóstico** para as regiões que mantêm oferta hospitalar contínua de alta complexidade — em `r A`, `r efx_lista_e(pub)` (seção [Escores diagnósticos](#escores)).
+Na maior parte das regiões, a ausência de produção de alta complexidade constitui uma **decisão de rede** (regionalização), e não um sinal de ineficiência. Um escore de eficiência que comparasse todas as regiões mediria, na prática, a existência ou não de hospital de alta complexidade. Por essa razão, o **produto gerencial é o painel regional de acesso e produção**, com a leitura em quadrantes, ao passo que o escore de eficiência, estimado por Análise Envoltória de Dados (DEA, do inglês *Data Envelopment Analysis*), é calculado apenas como **diagnóstico** para as regiões que mantêm oferta hospitalar contínua de alta complexidade — em `r A`, `r efx_lista_e(pub)` (seção [Escores diagnósticos](#escores)).
 
 ## Panorama `r A` {#panorama}
 
@@ -58,23 +58,25 @@ Na maior parte das regiões, a ausência de produção de alta complexidade é u
 efx_ac_kpis(A)
 ```
 
-Em `r A`, os residentes de Mato Grosso tiveram `r num(mt_acc, 2)` internações de alta complexidade por mil habitantes (`r num(mt_acc0, 2)` em `r min(EFX_ANOS)`), contando as realizadas em qualquer hospital do estado. A produção é muito concentrada: a região `r loc$regiao_saude[1]` realizou `r efx_pct(loc$share[1])` das internações de alta complexidade do estado, seguida de `r loc$regiao_saude[2]` (`r efx_pct(loc$share[2])`) e `r loc$regiao_saude[3]` (`r efx_pct(loc$share[3])`). Fonte: SIH/SUS (internações por residência e por local de atendimento), SIA/SUS (APAC), CNES e SIOPS, `r A`.
+Em `r A`, os residentes de Mato Grosso tiveram `r num(mt_acc, 2)` internações de alta complexidade por mil habitantes (`r num(mt_acc0, 2)` em `r min(EFX_ANOS)`), consideradas as realizadas em qualquer hospital do estado. Observa-se, ademais, que a produção é muito concentrada: a região `r loc$regiao_saude[1]` realizou `r efx_pct(loc$share[1])` das internações de alta complexidade do estado, seguida das regiões `r loc$regiao_saude[2]` (`r efx_pct(loc$share[2])`) e `r loc$regiao_saude[3]` (`r efx_pct(loc$share[3])`). Fonte: Sistema de Informações Hospitalares do SUS (SIH/SUS), com as internações por residência e por local de atendimento; Sistema de Informações Ambulatoriais do SUS (SIA/SUS), com as Autorizações de Procedimento Ambulatorial de Alta Complexidade (APAC); Cadastro Nacional de Estabelecimentos de Saúde (CNES); e Sistema de Informações sobre Orçamentos Públicos em Saúde (SIOPS), `r A`.
 
 ## Painel regional `r A` {#painel}
 
-O **acesso** é medido pelas internações de alta complexidade dos residentes por mil habitantes, onde quer que tenham ocorrido em Mato Grosso; a **autossuficiência** é a razão entre as internações de alta complexidade realizadas na região e as de seus residentes (acima de 100%: a região atende também moradores de outras regiões). Os procedimentos ambulatoriais de alta complexidade (APAC: quimioterapia, radioterapia, terapia renal) por residência só são comparáveis entre regiões a partir de 2023. Os leitos de UTI SUS são os do CNES validados pelas diárias de UTI registradas no SIH.
+Na Tabela 1, o **acesso** é medido pelas internações de alta complexidade dos residentes por mil habitantes, onde quer que tenham ocorrido em Mato Grosso, e a **autossuficiência** corresponde à razão entre as internações de alta complexidade realizadas na região e as de seus residentes; valores acima de 100% indicam que a região atende também moradores de outras regiões. Os procedimentos ambulatoriais de alta complexidade registrados em APAC (quimioterapia, radioterapia e terapia renal), por residência, somente são comparáveis entre regiões a partir de 2023. Por fim, os leitos de UTI SUS são os do CNES validados pelas diárias de UTI registradas no SIH.
+
+**Tabela 1 – Painel regional de acesso e produção de alta complexidade, por região de saúde**
 
 ```{r}
 efx_ac_tabela_painel(A)
 ```
 
 ::: {.nota-fonte}
-Tendência do acesso: variação média anual (taxa geométrica) das internações de alta complexidade de residentes por mil habitantes. Valor de AC por residente: valor aprovado de internações e procedimentos de alta complexidade dos residentes, em R$ de 2025 (IPCA). Distância ao polo: distância média, em linha reta e ponderada pela população dos municípios, até o polo de alta complexidade mais próximo. A região mais distante de um polo em `r A` é `r dist_max$regiao_saude` (`r num(dist_max$dist_polo_ac_km, 0)` km).
+Fonte: elaboração própria, com base no painel regional de alta complexidade do Projeto PPSUS-MT. Nota: a tendência do acesso corresponde à variação média anual (taxa geométrica) das internações de alta complexidade de residentes por mil habitantes; o valor de AC por residente, ao valor aprovado de internações e procedimentos de alta complexidade dos residentes, em R$ de 2025 (IPCA); e a distância ao polo, à distância média, em linha reta e ponderada pela população dos municípios, até o polo de alta complexidade mais próximo. A região mais distante de um polo em `r A` é `r dist_max$regiao_saude` (`r num(dist_max$dist_polo_ac_km, 0)` km).
 :::
 
 ## Quadrantes acesso × autossuficiência {#quadrantes}
 
-Cada região é classificada pelo acesso dos residentes frente à **mediana das 16 regiões no ano** e pela autossuficiência (limite de 50%; regiões com 100% ou mais são **polos**). Em `r A`: `r length(polos)` `r ifelse(length(polos) == 1, 'polo', 'polos')` (`r efx_lista_e(polos)`), `r length(transi)` em transição (`r efx_lista_e(transi)`), `r length(dep_ok)` dependentes com acesso adequado e `r length(dep_baixo)` dependentes com baixo acesso — o grupo prioritário para a regulação e a pactuação de fluxos.
+Cada região é classificada segundo o acesso dos residentes, em relação à **mediana das 16 regiões no ano**, e segundo a autossuficiência, com limite de 50%, sendo **polos** as regiões com 100% ou mais. Em `r A`, identificam-se `r length(polos)` `r ifelse(length(polos) == 1, 'polo', 'polos')` (`r efx_lista_e(polos)`), `r length(transi)` em transição (`r efx_lista_e(transi)`), `r length(dep_ok)` dependentes com acesso adequado e `r length(dep_baixo)` dependentes com baixo acesso, que constituem o grupo prioritário para a regulação e a pactuação de fluxos.
 
 ```{r}
 efx_ac_grade_quadrantes(A)
@@ -84,26 +86,34 @@ efx_ac_grade_quadrantes(A)
 HTML(efx_svg_quadrantes(A))
 ```
 
-Leitura: o símbolo marca o acesso dos residentes (linha tracejada = mediana das regiões); a barra, a autossuficiência (linhas em 50% e 100%). Passe o cursor sobre a linha de cada região para ver os valores.
+::: {.nota-fonte}
+Figura 1 – Quadrantes acesso × autossuficiência em alta complexidade, por região de saúde. Fonte: elaboração própria, com base no painel regional de alta complexidade do Projeto PPSUS-MT. Nota: o símbolo marca o acesso dos residentes (a linha tracejada representa a mediana das regiões), e a barra, a autossuficiência (com linhas em 50% e 100%). Ao posicionar o cursor sobre a linha de cada região, exibem-se os respectivos valores.
+:::
 
 #### Quadrante de cada região, `r min(EFX_ANOS)`–`r A`
 
-Entre `r min(EFX_ANOS)` e `r A`: `r frase_mud`. Regiões que alternam de quadrante estão perto dos limites (mediana do acesso ou 50% e 100% de autossuficiência) e devem ser lidas com a série completa.
+No período de `r min(EFX_ANOS)` a `r A`, observa-se: `r frase_mud`. As regiões que alternam de quadrante situam-se perto dos limites (mediana do acesso ou 50% e 100% de autossuficiência) e devem ser interpretadas com base na série completa, apresentada na Tabela 2.
+
+**Tabela 2 – Quadrante de cada região de saúde, por ano**
 
 ```{r}
 efx_ac_quadrantes_anos()
 ```
 
+::: {.nota-fonte}
+Fonte: elaboração própria, com base no painel regional de alta complexidade do Projeto PPSUS-MT.
+:::
+
 ## Mapa das regiões de saúde por quadrante, `r A` {#mapa}
 
-A cor e o símbolo indicam o quadrante de `r A`. Passe o cursor sobre a região para ver acesso, autossuficiência, leitos de UTI e distância ao polo.
+Na Figura 2, a cor e o símbolo indicam o quadrante de `r A` de cada região; ao posicionar o cursor sobre a região, exibem-se o acesso, a autossuficiência, os leitos de UTI e a distância ao polo.
 
 ```{r}
 efx_mapa_regioes(A, altura = 600)
 ```
 
 ::: {.nota-fonte}
-Regiões de saúde formadas pela união dos municípios da malha do IBGE (simplificada para exibição). Boa Esperança do Norte não consta na malha usada no mapa; seus dados estão incluídos na região Teles Pires.
+Figura 2 – Regiões de saúde por quadrante de acesso e autossuficiência em alta complexidade. Fonte: elaboração própria, com base no painel regional de alta complexidade do Projeto PPSUS-MT e na malha municipal do IBGE. Nota: as regiões de saúde são formadas pela união dos municípios da malha do IBGE (simplificada para exibição); Boa Esperança do Norte não consta da malha usada no mapa, e seus dados estão incluídos na região Teles Pires.
 :::
 
 ## Evolução do acesso, 2020–2025 {#evolucao}
@@ -112,45 +122,67 @@ Regiões de saúde formadas pela união dos municípios da malha do IBGE (simpli
 HTML(efx_ac_serie_acesso())
 ```
 
-As linhas destacadas são as regiões-polo ou com escore diagnóstico; as demais aparecem em cinza (passe o cursor para identificá-las). Entre `r min(EFX_ANOS)` e `r A`, o acesso cresceu em `r sum(D$tendencia_acesso_2020_2025 > 0, na.rm = TRUE)` das `r nrow(D)` regiões, em parte pela recuperação após a queda de 2020–2021 (COVID-19). A tendência de cada região está na tabela do [painel regional](#painel).
+::: {.nota-fonte}
+Figura 3 – Internações de alta complexidade de residentes por mil habitantes, por região de saúde. Fonte: elaboração própria, com base no painel regional de alta complexidade do Projeto PPSUS-MT. Nota: as linhas destacadas correspondem às regiões-polo ou com escore diagnóstico, e as demais aparecem em cinza, identificáveis ao posicionar o cursor.
+:::
+
+Entre `r min(EFX_ANOS)` e `r A`, o acesso cresceu em `r sum(D$tendencia_acesso_2020_2025 > 0, na.rm = TRUE)` das `r nrow(D)` regiões, em parte pela recuperação após a queda de 2020–2021 (COVID-19). A tendência de cada região consta da Tabela 1, no [painel regional](#painel).
 
 ## Macrorregiões de saúde, `r A` {#macro}
 
-A leitura por macrorregião é a **soma das regiões** que a compõem (não um modelo próprio).
+A leitura por macrorregião, apresentada na Tabela 3, corresponde à **soma das regiões** que a compõem, e não a um modelo próprio.
+
+**Tabela 3 – Acesso e produção de alta complexidade por macrorregião de saúde**
 
 ```{r}
 efx_ac_tabela_macro(A)
 ```
 
+::: {.nota-fonte}
+Fonte: elaboração própria, com base no painel regional de alta complexidade do Projeto PPSUS-MT.
+:::
+
 ## Escores diagnósticos de eficiência: as três regiões publicáveis {#escores}
 
-Para as regiões que **produzem** alta complexidade de forma contínua, o escore de eficiência (DEA, orientado ao produto) responde: com a despesa municipal atribuída à alta complexidade e a capacidade instalada (leitos de UTI validados, equipamentos e serviços habilitados), quanto a região produziu de internações e procedimentos de alta complexidade, comparada às melhores combinações observadas? Os recursos e a produção do modelo são:
+Para as regiões que **produzem** alta complexidade de forma contínua, o escore de eficiência (DEA, orientado ao produto) responde à seguinte questão: com a despesa municipal atribuída à alta complexidade e a capacidade instalada (leitos de UTI validados, equipamentos e serviços habilitados), quanto a região produziu de internações e procedimentos de alta complexidade, em comparação com as melhores combinações observadas? Os recursos e a produção do modelo são os seguintes:
 
 ```{r}
 efx_bloco_spec("M3")
 ```
 
-**Por que só três regiões.** A regra aprovada considera que uma região tem **oferta hospitalar contínua de alta complexidade** quando realiza pelo menos `r num(lim, 0)`% das internações de alta complexidade do estado em **todos** os anos de 2020 a 2025. Só `r efx_lista_e(pub)` cumprem a regra; juntas, realizaram `r efx_pct(sum(loc$share[loc$publicavel_m3 == 1]))` das internações de alta complexidade do estado em `r A`. As demais regiões têm produção nula ou residual — o escore delas mediria a ausência de oferta, e não ineficiência —, por isso nelas vale apenas o painel. As três regiões publicáveis foram ratificadas pela coordenação do projeto em `r EFX_DATA`.
+**Por que apenas três regiões.** Segundo a regra aprovada, uma região tem **oferta hospitalar contínua de alta complexidade** quando realiza pelo menos `r num(lim, 0)`% das internações de alta complexidade do estado em **todos** os anos de 2020 a 2025. Somente `r efx_lista_e(pub)` cumprem a regra e, juntas, realizaram `r efx_pct(sum(loc$share[loc$publicavel_m3 == 1]))` das internações de alta complexidade do estado em `r A`. As demais regiões têm produção nula ou residual, de modo que o escore delas mediria a ausência de oferta, e não a ineficiência; por isso, nelas vale apenas o painel. As três regiões publicáveis foram ratificadas pela coordenação do projeto em `r EFX_DATA`.
+
+**Tabela 4 – Participação de cada região no total de internações de alta complexidade realizadas em Mato Grosso, por ano (%)**
 
 ```{r}
 efx_ac_participacao()
 ```
 
 ::: {.nota-fonte}
-Participação de cada região no total de internações de alta complexidade realizadas em Mato Grosso no ano (%), para as regiões com alguma produção local no período. Valores em cinza ficam abaixo do limite de `r num(lim, 0)`%.
+Fonte: elaboração própria, com base no painel regional de alta complexidade do Projeto PPSUS-MT. Nota: a tabela inclui as regiões com alguma produção local no período, e os valores em cinza ficam abaixo do limite de `r num(lim, 0)`%.
 :::
 
-`r n_cap` regiões sem escore têm alguma capacidade instalada de alta complexidade (UTI validada ou serviço habilitado) em `r A`. O caso mais visível é `r cap$regiao_saude`: tem o maior índice de capacidade entre elas, mas realizou entre `r num(cap_sh[1], 2)`% e `r num(cap_sh[2], 2)`% das internações de alta complexidade do estado no período, abaixo do limite em todos os anos. Capacidade que não se converte em produção local é um tema de **configuração da rede e de regulação**, a ser levado à CIR e à SES-MT, e não de eficiência técnica.
+Observa-se, ademais, que `r n_cap` regiões sem escore têm alguma capacidade instalada de alta complexidade (UTI validada ou serviço habilitado) em `r A`. O caso mais visível é o da região `r cap$regiao_saude`, que apresenta o maior índice de capacidade entre elas, mas realizou entre `r num(cap_sh[1], 2)`% e `r num(cap_sh[2], 2)`% das internações de alta complexidade do estado no período, abaixo do limite em todos os anos. A capacidade que não se converte em produção local constitui, portanto, uma questão de **configuração da rede e de regulação**, a ser levada à CIR e à Secretaria de Estado de Saúde de Mato Grosso (SES-MT), e não de eficiência técnica.
 
-**Como ler os escores.** Diferente dos demais modelos, a fronteira aqui é **única para 2020–2025** (as regiões são comparadas com as melhores combinações observadas em todo o período), o que permite comparar os anos entre si. O escore publicado é corrigido e tem intervalo de confiança de 95% calculado por subamostragem, porque o número de unidades é pequeno. A faixa é o quartil entre as região-anos com escore. Não se publicam metas nem índice de Malmquist para a alta complexidade.
+**Como ler os escores.** Diferentemente dos demais modelos, a fronteira, neste caso, é **única para 2020–2025**, isto é, as regiões são comparadas com as melhores combinações observadas em todo o período, o que permite comparar os anos entre si. O escore publicado é corrigido e tem intervalo de confiança de 95% calculado por subamostragem, em razão do pequeno número de unidades. A faixa corresponde ao quartil entre as região-anos com escore. Não se publicam metas nem índice de Malmquist para a alta complexidade.
 
 ```{r}
 HTML(efx_m3_grafico())
 ```
 
+::: {.nota-fonte}
+Figura 4 – Escore diagnóstico de alta complexidade das regiões publicáveis, com intervalo de confiança. Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT.
+:::
+
+**Tabela 5 – Escores diagnósticos das regiões publicáveis, por ano**
+
 ```{r}
 efx_m3_tabela()
 ```
+
+::: {.nota-fonte}
+Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT.
+:::
 
 ```{r}
 #| results: asis
@@ -159,11 +191,11 @@ for (i in seq_len(nrow(F3a))) {
 }
 ```
 
-Os escores são complementares ao painel: uma região-polo pode ter escore baixo porque concentra casos de maior complexidade ou porque a despesa municipal atribuída à alta complexidade não reflete o financiamento estadual e federal. A leitura principal continua sendo o acesso dos residentes e a autossuficiência.
+Cumpre destacar que os escores são complementares ao painel: uma região-polo pode apresentar escore baixo por concentrar casos de maior complexidade ou porque a despesa municipal atribuída à alta complexidade não reflete o financiamento estadual e federal. A leitura principal continua a ser, portanto, a do acesso dos residentes e da autossuficiência.
 
 ## Fichas das regiões, `r A` {#fichas}
 
-Síntese de cada região em linguagem de gestão (clique para abrir). As regiões com escore diagnóstico aparecem primeiro.
+As fichas a seguir sintetizam a situação de cada região em linguagem de gestão e abrem-se com um clique; as regiões com escore diagnóstico aparecem primeiro.
 
 ```{r}
 efx_fichas_regioes(A)
@@ -172,13 +204,11 @@ efx_fichas_regioes(A)
 ## Ressalvas {#ressalvas}
 
 ::: {.callout-warning title="Leia antes de interpretar"}
-- **Resultados da versão `r EFX_VERSAO_N`, em validação** com a SES-MT e o COSEMS-MT (`r EFX_ROTULO`, `r EFX_DATA`).
-- **Internações em outros estados não entram no acesso.** O painel usa só o SIH de Mato Grosso: moradores atendidos em São Paulo, Goiás, Rondônia ou outros estados ficam de fora, o que subestima o acesso nas regiões de fronteira. Essas internações são medidas à parte, em [Deslocamento](../deslocamento/index.qmd#fuga), e não alteram os escores.
-- **Despesa atribuída à alta complexidade.** A despesa é a municipal (SIOPS, subfunção 302) rateada pelo valor aprovado de alta complexidade; não inclui o gasto estadual e federal direto e, em algumas regiões, é ínfima ou mal classificada.
-- **Registro de UTI no CNES.** Há subregistro de leitos de UTI; o painel usa os leitos validados pelas diárias de UTI do SIH.
-- **APAC por residência** só é comparável a partir de 2023; antes disso, o acesso ambulatorial não entra nas comparações.
-- **COVID-19.** Em 2020 e 2021 o volume e a composição das internações foram alterados, inclusive pelas habilitações temporárias de UTI COVID.
-- **Eficiência não é qualidade.** Os escores diagnósticos não medem resultado clínico; a mortalidade hospitalar padronizada da região aparece nas fichas como informação complementar.
+**Resultados da versão `r EFX_VERSAO_N`** (`r EFX_ROTULO`, `r EFX_DATA`), **em validação** com a SES-MT e o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT). Ressalta-se que **as internações em outros estados não entram no acesso**: o painel utiliza apenas o SIH de Mato Grosso, de modo que os moradores atendidos em São Paulo, Goiás, Rondônia ou outros estados ficam de fora, o que subestima o acesso nas regiões de fronteira. Essas internações são medidas à parte, na página [Deslocamento](../deslocamento/index.qmd#fuga), e não alteram os escores.
+
+Quanto à **despesa atribuída à alta complexidade**, trata-se da despesa municipal (SIOPS, subfunção 302) rateada pelo valor aprovado de alta complexidade, que não inclui o gasto estadual e federal direto e, em algumas regiões, é ínfima ou mal classificada. No que se refere ao **registro de UTI no CNES**, há subregistro de leitos de UTI, e o painel utiliza os leitos validados pelas diárias de UTI do SIH. Além disso, a **APAC por residência** somente é comparável a partir de 2023, e, antes disso, o acesso ambulatorial não entra nas comparações.
+
+Em relação à **COVID-19**, em 2020 e 2021, o volume e a composição das internações foram alterados, inclusive pelas habilitações temporárias de UTI COVID. Por fim, **eficiência não é qualidade**: os escores diagnósticos não medem o resultado clínico, e a mortalidade hospitalar padronizada da região aparece nas fichas como informação complementar.
 :::
 
 ## Arquivos {#arquivos}
@@ -188,5 +218,5 @@ efx_arquivos(c("painel_ac_regiao", "quadrantes_ac", "painel_ac_macro", "fichas_r
 ```
 
 ```{r}
-fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Alta complexidade: %s (%s), Projeto PPSUS-MT — painel regional de acesso e produção (SIH/SUS por residência e por local de atendimento, SIA/SUS-APAC, CNES, SIOPS), 2020–2025; escore diagnóstico por DEA orientada ao produto com fronteira única 2020–2025 e intervalo de confiança por subamostragem. ", EFX_ROTULO, EFX_DATA))
+fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Os resultados de alta complexidade provêm de %s (%s), Projeto PPSUS-MT — painel regional de acesso e produção (SIH/SUS por residência e por local de atendimento, SIA/SUS-APAC, CNES e SIOPS), 2020–2025, e escore diagnóstico por DEA orientada ao produto, com fronteira única 2020–2025 e intervalo de confiança por subamostragem. ", EFX_ROTULO, EFX_DATA))
 ```

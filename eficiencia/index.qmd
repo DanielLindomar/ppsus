@@ -32,7 +32,7 @@ secoes_pagina(c(`como-ler` = "Como ler", `visao-geral` = paste("Visão geral", A
                 resumo = "Tabela-resumo", ressalvas = "Ressalvas", arquivos = "Arquivos e método"))
 ```
 
-Esta seção mostra **quanto cada município, hospital e região de saúde de Mato Grosso produz com os recursos de que dispõe, comparado às melhores práticas observadas no próprio estado**. Os resultados vêm da versão `r sub("^v", "", VERSAO_EF)` da estimação por Análise Envoltória de Dados (DEA) e índice de Malmquist do Projeto PPSUS-MT (`r CITACAO_EF`), para 2020–`r A`, e estão em validação com a SES-MT e o COSEMS-MT. São cinco leituras complementares — **atenção básica**, **sistema municipal consolidado**, **média complexidade** (pela produção local e pela ótica do acesso dos moradores), **hospitais SUS** e **alta complexidade por região de saúde** — além da **evolução da produtividade** ao longo do período. Antes dos números, vale ler como interpretá-los.
+Esta seção apresenta **a relação entre o que cada município, hospital e região de saúde de Mato Grosso produz e os recursos de que dispõe, tomando como referência as melhores práticas observadas no próprio estado**. Os resultados provêm da versão `r sub("^v", "", VERSAO_EF)` da estimação por Análise Envoltória de Dados (DEA, do inglês *Data Envelopment Analysis*) e pelo índice de Malmquist conduzida no Projeto PPSUS-MT (`r CITACAO_EF`), referem-se ao período 2020–`r A` e encontram-se em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT) e o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT). Organizam-se em cinco leituras complementares — a **atenção básica**, o **sistema municipal consolidado**, a **média complexidade** (pela produção local e pela ótica do acesso dos moradores), os **hospitais SUS** e a **alta complexidade por região de saúde** —, às quais se soma a **evolução da produtividade** ao longo do período. Recomenda-se, antes do exame dos números, a leitura das orientações de interpretação apresentadas a seguir.
 
 ```{r}
 nota_versao_ef(extra = '<a href="atencao-basica.html">Ver a atenção básica</a>.')
@@ -43,48 +43,48 @@ nota_versao_ef(extra = '<a href="atencao-basica.html">Ver a atenção básica</a
 ::: {.dois-blocos}
 
 ::: {.bloco}
-#### O que o escore mede — e o que não mede
+#### O que o escore mede e o que não mede
 
-O **escore de eficiência** compara cada unidade com as que, usando recursos semelhantes (despesa, profissionais, leitos, equipamentos, equipes), produziram mais (atendimentos, visitas, vacinas, procedimentos, internações). As melhores práticas formam a **fronteira** (escore 1); um escore de 0,80 indica que a unidade produz cerca de 80% do que as melhores práticas obtêm com recursos semelhantes — mantidos os recursos, a produção poderia crescer cerca de 25% (1/0,80 − 1).
+O **escore de eficiência** compara cada unidade com aquelas que, utilizando recursos semelhantes (despesa, profissionais, leitos, equipamentos e equipes), obtiveram maior produção (atendimentos, visitas, vacinas, procedimentos e internações). As melhores práticas compõem a **fronteira** de eficiência, à qual corresponde o escore 1 (CHARNES; COOPER; RHODES, 1978). Assim, um escore de 0,80 indica que a unidade produz cerca de 80% do que as melhores práticas obtêm com recursos semelhantes; em outras palavras, mantidos os recursos, a produção poderia crescer cerca de 25% (1/0,80 − 1).
 
-O escore **não mede a qualidade do cuidado** nem o resultado em saúde: mortalidade infantil, pré-natal e mortalidade hospitalar aparecem ao lado do escore, nas fichas, e não o modificam. Também não diz *por que* uma unidade está longe da fronteira — registro incompleto, perfil da rede ou decisões de gestão podem explicar a distância. É um ponto de partida para a conversa, não um veredito.
+Cumpre ressaltar que o escore **não mede a qualidade do cuidado** nem o resultado em saúde: a mortalidade infantil, o pré-natal e a mortalidade hospitalar são apresentados ao lado do escore, nas fichas, sem modificá-lo. Tampouco o escore explica *por que* uma unidade se encontra distante da fronteira, distância que pode decorrer de registro incompleto, do perfil da rede ou de decisões de gestão. Trata-se, portanto, de um ponto de partida para o diálogo, e não de um veredito.
 :::
 
 ::: {.bloco}
-#### Faixas com intervalo de confiança, não ranking
+#### Faixas com intervalo de confiança, e não *ranking*
 
-Cada escore é estimado com incerteza: o **escore corrigido** (por bootstrap`r if (is.numeric(b_boot)) paste0(", ", num(b_boot), " réplicas") else ""`) vem acompanhado de um **intervalo de confiança (IC) de `r num(100 * IC_NIVEL, 0)`%**. Por isso o site publica **faixas** — fronteira e quartis do escore corrigido entre as unidades do ano — em vez de posições pontuais (1º, 2º, 3º…). Quando o IC alcança a faixa vizinha, a faixa aparece com o sinal **±** e deve ser lida como provisória.
+Cada escore é estimado com incerteza. O **escore corrigido** do viés por reamostragem (*bootstrap*`r if (is.numeric(b_boot)) paste0(", ", num(b_boot), " réplicas") else ""`), segundo o procedimento de Simar e Wilson (1998), é acompanhado de um **intervalo de confiança (IC) de `r num(100 * IC_NIVEL, 0)`%**. Por essa razão, o site publica **faixas** — a fronteira e os quartis do escore corrigido entre as unidades do ano —, em vez de posições pontuais (1º, 2º, 3º…). Quando o IC alcança a faixa vizinha, a faixa é exibida com o sinal **±** e deve ser interpretada como provisória.
 
-A faixa *fronteira* reúne as unidades com escore original igual a 1. A correção do viés reduz mais o escore delas, que pode ficar abaixo do de unidades do quartil superior: a comparação entre ambas deve usar o IC. As fronteiras são **anuais**: o nível do escore não é comparável entre anos — a evolução é lida pelo índice de Malmquist.
+A faixa *fronteira* reúne as unidades com escore original igual a 1. Como a correção do viés reduz em maior medida o escore dessas unidades, este pode situar-se abaixo do escore de unidades do quartil superior, razão pela qual a comparação entre ambas deve basear-se no IC. Ademais, as fronteiras são **anuais**, de modo que o nível do escore não é comparável entre anos; a evolução é avaliada pelo índice de Malmquist.
 :::
 
 ::: {.bloco}
 #### Pares de referência
 
-Para cada unidade fora da fronteira, o modelo indica até cinco **pares de referência** (as fichas mostram os três de maior peso): unidades eficientes cuja combinação de recursos e produção é a mais próxima. Só entram como pares as unidades com **registro plausível** (sem sinal de registro a verificar e sem supereficiência extrema); as demais continuam com escore publicado, mas não servem de modelo para terceiros. O **par mais semelhante** é o de maior peso entre os de porte parecido (de um terço a três vezes o tamanho da unidade). Os pares são o melhor ponto de partida para a troca de experiências entre gestores.
+Para cada unidade situada fora da fronteira, o modelo indica até cinco **pares de referência**, isto é, unidades eficientes cuja combinação de recursos e produção é a mais próxima da sua; as fichas apresentam os três de maior peso. Somente as unidades com **registro plausível** (sem sinal de registro a verificar e sem supereficiência extrema) podem atuar como pares, ao passo que as demais mantêm o escore publicado, mas não servem de modelo para terceiros. O **par mais semelhante**, por sua vez, é o de maior peso entre os de porte parecido (de um terço a três vezes o tamanho da unidade). Os pares constituem, assim, o ponto de partida mais adequado para a troca de experiências entre gestores.
 :::
 
 ::: {.bloco}
 #### Meta, meta intermediária e potencial de melhoria
 
-A **meta plena** é o ponto da fronteira de pares que a unidade alcançaria produzindo como eles, com os mesmos recursos. A **meta intermediária** cobre `r pct_ef(100 * FRACAO_META, 0)` da distância entre o valor observado e a meta plena (limiar homologado pelo coordenador em 08/10/2026) e é a referência de curto prazo. O **potencial de melhoria** é essa diferença em unidades e em %: produção adicional possível nos produtos e, nos recursos, a folga frente aos pares. A folga financeira, em R$ de 2025, indica **espaço de realocação, não corte**. Metas financeiras não são publicadas quando a classificação orçamentária do município é inconsistente.
+A **meta plena** corresponde ao ponto da fronteira de pares que a unidade alcançaria caso produzisse como eles, com os mesmos recursos. A **meta intermediária**, adotada como referência de curto prazo, cobre `r pct_ef(100 * FRACAO_META, 0)` da distância entre o valor observado e a meta plena (limiar homologado pelo coordenador em 08/10/2026). O **potencial de melhoria**, por sua vez, expressa essa diferença em unidades e em percentual: nos produtos, representa a produção adicional possível; nos recursos, a folga em relação aos pares. Cumpre destacar que a folga financeira, expressa em R$ de 2025, indica **espaço de realocação, e não de corte**. Por fim, as metas financeiras não são publicadas quando a classificação orçamentária do município é inconsistente.
 :::
 
 ::: {.bloco}
 #### Escore esperado pelo contexto
 
-Porte, riqueza, densidade, distância aos polos e finanças municipais influenciam o que é possível produzir. O **escore esperado pelo contexto** estima o escore típico de um município com aquelas características; a **diferença** (observado − esperado, no segundo estágio) mostra se o município está **acima** ou **abaixo** do que o contexto prevê. Um município pequeno e isolado com escore modesto pode estar acima do esperado. A diferença usa o escore corrigido do segundo estágio, por isso não é a subtração direta das duas colunas publicadas. Não há escore esperado na média complexidade pela ótica do acesso nem para os hospitais fora do painel balanceado.
+O porte, a riqueza, a densidade, a distância aos polos e as finanças municipais condicionam o que é possível produzir. Nesse sentido, o **escore esperado pelo contexto** estima o escore típico de um município com aquelas características, e a **diferença** (observado − esperado), calculada no segundo estágio (SIMAR; WILSON, 2007), indica se o município se encontra **acima** ou **abaixo** do que o contexto prevê. Desse modo, um município pequeno e isolado com escore modesto pode situar-se acima do esperado. Ressalta-se que a diferença utiliza o escore corrigido do segundo estágio e, por isso, não corresponde à subtração direta das duas colunas publicadas. Não há escore esperado na média complexidade pela ótica do acesso nem para os hospitais fora do painel balanceado.
 :::
 
 ::: {.bloco}
 #### Evolução: índice de Malmquist
 
-O **índice de Malmquist** compara anos consecutivos e mede a mudança da produtividade, separada em dois movimentos: a **aproximação às melhores práticas** (mudança de eficiência, EC — o componente de gestão, publicado nas fichas) e o **deslocamento das melhores práticas** (TC — o estado como um todo produzindo mais ou menos com os mesmos recursos). Valores acima de 1 indicam melhora; o site os mostra como variação % ao ano. O TC só é publicado como agregado: em 2022–2025 (`r tc_txt`), ele pode refletir o **crescimento do registro de profissionais e equipamentos no CNES após 2022**, e não uma mudança real das melhores práticas. A tendência de cada município é rotulada como *melhora* ou *piora consistente* só quando ao menos duas transições têm IC inteiramente acima (abaixo) de 1 e a média da janela passa de ±`r num(100 * LIM_TEND, 0)`% ao ano.
+O **índice de Malmquist**, na formulação de Färe *et al.* (1994), compara anos consecutivos e mede a mudança da produtividade, decomposta em dois movimentos: a **aproximação às melhores práticas** (mudança de eficiência, EC, do inglês *efficiency change*), que constitui o componente de gestão e é publicada nas fichas, e o **deslocamento das melhores práticas** (TC, do inglês *technical change*), que expressa o estado como um todo produzindo mais ou menos com os mesmos recursos. Valores acima de 1 indicam melhora e são apresentados no site como variação percentual ao ano. O TC é publicado apenas de forma agregada; ressalta-se que, em 2022–2025 (`r tc_txt`), ele pode refletir o **crescimento do registro de profissionais e equipamentos no Cadastro Nacional de Estabelecimentos de Saúde (CNES) após 2022**, e não uma mudança real das melhores práticas. Por fim, a tendência de cada município somente é rotulada como *melhora* ou *piora consistente* quando ao menos duas transições apresentam IC inteiramente acima (ou abaixo) de 1 e a média da janela ultrapassa ±`r num(100 * LIM_TEND, 0)`% ao ano.
 :::
 
 :::
 
-**Sinalizações.** Nenhuma unidade é excluída por ser atípica. As fichas trazem sinais: *registro a verificar* (valor de origem implausível, a verificar com a SES-MT e o COSEMS-MT — a unidade não serve de par), *referência com alavancagem* (supereficiência muito alta — também não serve de par), *sem comparável em algum insumo* e *diagnóstico ordem-m* (informativos). Faixas e escores das unidades sinalizadas são publicados e devem ser lidos com essa ressalva.
+**Sinalizações.** Nenhuma unidade é excluída por ser atípica. Em vez disso, as fichas trazem sinais de leitura: *registro a verificar*, atribuído quando algum valor de origem é implausível e deve ser verificado com a SES-MT e o COSEMS-MT, caso em que a unidade não serve de par; *referência com alavancagem*, atribuído quando a supereficiência é muito alta, o que também impede o uso como par; e, em caráter apenas informativo, *sem comparável em algum insumo* e *diagnóstico ordem-m*, este último baseado na eficiência de ordem *m* (CAZALS; FLORENS; SIMAR, 2002). As faixas e os escores das unidades sinalizadas são publicados e devem ser interpretados com essa ressalva.
 
 ## Visão geral `r A` {#visao-geral}
 
@@ -92,40 +92,47 @@ O **índice de Malmquist** compara anos consecutivos e mede a mudança da produt
 cartoes_modelos(A)
 ```
 
-Em `r A`, na **atenção básica**, `r r1$n_fronteira` dos `r r1$n_avaliados` municípios avaliados estão na fronteira e a mediana do escore corrigido é `r f3(r1$mediana_escore)`; no **sistema municipal consolidado**, `r r0$n_fronteira` de `r r0$n_avaliados` (mediana `r f3(r0$mediana_escore)`). A **média complexidade pela produção local** avalia `r r2$n_avaliados` municípios com produção hospitalar de média complexidade em todos os anos; os demais são lidos pela **ótica do acesso** (`r r2a$n_avaliados` municípios em duas fronteiras: com e sem leito SUS). Nos **hospitais SUS**, `r rh$n_fronteira` de `r rh$n_avaliados` estão na fronteira (produtos da especificação principal: `r prod_h`, por decisão do coordenador de 08/10/2026). Na **alta complexidade**, o produto gerencial é o painel regional de acesso e produção das `r r3$n_unidades` regiões de saúde; o escore diagnóstico é publicado para `r r3$n_avaliados` regiões. Clique em um cartão para abrir a página do modelo.
+Os cartões acima sintetizam os resultados de `r A` por modelo, e cada um remete à página do respectivo modelo. Na **atenção básica**, observa-se que `r r1$n_fronteira` dos `r r1$n_avaliados` municípios avaliados estão na fronteira, com mediana do escore corrigido de `r f3(r1$mediana_escore)`; no **sistema municipal consolidado**, `r r0$n_fronteira` de `r r0$n_avaliados` estão na fronteira (mediana de `r f3(r0$mediana_escore)`). A **média complexidade pela produção local** avalia `r r2$n_avaliados` municípios com produção hospitalar de média complexidade em todos os anos, ao passo que os demais são analisados pela **ótica do acesso** (`r r2a$n_avaliados` municípios em duas fronteiras, com e sem leito SUS). Nos **hospitais SUS**, `r rh$n_fronteira` de `r rh$n_avaliados` unidades estão na fronteira, considerados os produtos da especificação principal (`r prod_h`), definidos por decisão do coordenador de 08/10/2026. Na **alta complexidade**, por fim, o produto gerencial é o painel regional de acesso e produção das `r r3$n_unidades` regiões de saúde, e o escore diagnóstico é publicado para `r r3$n_avaliados` regiões.
 
 ## Distribuição por faixa em cada modelo {#distribuicao}
+
+A Figura 1 apresenta a distribuição das unidades avaliadas em `r A` por faixa do escore corrigido, em cada modelo. Como as faixas correspondem a quartis das unidades situadas fora da fronteira, cada quartil reúne cerca de um quarto delas, de modo que a diferença entre os modelos reside sobretudo no **tamanho da fronteira**. Na média complexidade pela ótica do acesso, as faixas são calculadas dentro de cada fronteira (com e sem leito SUS) e somadas na figura.
 
 ```{r}
 faixas_por_modelo(A)
 ```
 
-Unidades avaliadas em `r A` por faixa do escore corrigido, em cada modelo (os rótulos levam à página do modelo). Como as faixas são quartis das unidades fora da fronteira, cada quartil reúne cerca de um quarto delas; a diferença entre modelos está sobretudo no **tamanho da fronteira**. Na média complexidade pela ótica do acesso, as faixas são calculadas dentro de cada fronteira (com e sem leito SUS) e somadas aqui.
+::: {.nota-fonte}
+Figura 1 – Unidades avaliadas por faixa do escore corrigido, segundo o modelo. Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT. Nota: os rótulos remetem à página de cada modelo.
+:::
 
 ## Tabela-resumo por modelo e ano {#resumo}
+
+A Tabela 1 reúne, para cada modelo, grupo e ano, o número de unidades e de unidades avaliadas, o tamanho da fronteira, a mediana e a média do escore corrigido, as unidades cujo IC cruza a faixa vizinha, as unidades com registro a verificar e as médias da aproximação às melhores práticas (EC) e do índice de Malmquist.
+
+**Tabela 1 – Resumo dos resultados de eficiência por modelo, grupo e ano**
 
 ```{r}
 tabela_resumo_modelos()
 ```
 
-Escore corrigido: mediana e média entre as unidades avaliadas do ano (as fronteiras são anuais; a diferença entre anos não mede melhora). *EC* e *Malmquist*: média geométrica da transição do ano anterior para o ano indicado, em % (transições com registro marcado ficam fora). Use os filtros do cabeçalho para escolher modelo, grupo ou ano.
+::: {.nota-fonte}
+Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT. Nota: o escore corrigido é resumido pela mediana e pela média entre as unidades avaliadas do ano; como as fronteiras são anuais, a diferença entre anos não mede melhora. As colunas *EC* e *Malmquist* trazem a média geométrica da transição do ano anterior para o ano indicado, em percentual, excluídas as transições com registro marcado. Os filtros do cabeçalho permitem selecionar o modelo, o grupo ou o ano.
+:::
 
 ## Ressalvas principais {#ressalvas}
 
 ::: {.ef-ressalva}
-- **Resultados da versão `r sub("^v", "", VERSAO_EF)` (`r DATA_EF`), em validação.** A lista de verificações de registro na origem (CNES, SIOPS, SISAB, SIA/SIH, IBGE) será encaminhada pela coordenação do projeto à SES-MT e ao COSEMS-MT; faixas e metas podem mudar após essa validação.
-- **Dados de registro a verificar estão sinalizados**, nunca escondidos: a unidade mantém escore e faixa, mas não serve de par de referência, e metas financeiras com classificação orçamentária inconsistente não são publicadas.
-- **COVID-19 (2020–2021).** A produção desses anos foi afetada pela pandemia; transições com quebra de registro ficam fora das médias de evolução.
-- **Internações em outros estados não entram nos modelos.** A ótica do acesso usa só internações em hospitais de Mato Grosso; as internações de residentes em hospitais de outras UF são medidas à parte, na página [Deslocamento](../deslocamento/index.html#fuga), e não alteram os escores.
-- **Pré-natal de `r A` indisponível** (SINASC ainda não consolidado para o ano); os indicadores de resultado das fichas usam o último período disponível.
-- **Eficiência não é qualidade**, e o escore não explica sozinho a distância até a fronteira: perfil da rede, porte e registro importam. Internações sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.
-- **Boa Esperança do Norte** (instalado em 2025) tem só o primeiro exercício, com marca de resultado parcial, e não aparece na malha municipal dos mapas.
-- **Hospitais:** com poucas unidades por variável, os intervalos de confiança são largos; a leitura por faixas substitui o ranking. **Alta complexidade:** só `r r3$n_avaliados` regiões têm escore diagnóstico publicável.
+**Resultados da versão `r sub("^v", "", VERSAO_EF)` (`r DATA_EF`), em validação.** A lista de verificações de registro na origem (CNES, SIOPS, SISAB, SIA/SIH e IBGE) será encaminhada pela coordenação do projeto à SES-MT e ao COSEMS-MT, de modo que faixas e metas podem mudar após essa validação. Os **dados de registro a verificar estão sinalizados**, e nunca ocultados: a unidade mantém o escore e a faixa, mas não serve de par de referência, e as metas financeiras com classificação orçamentária inconsistente não são publicadas.
+
+**COVID-19 (2020–2021).** A produção desses anos foi afetada pela pandemia, e as transições com quebra de registro ficam fora das médias de evolução. Ademais, **as internações em outros estados não entram nos modelos**: a ótica do acesso utiliza apenas as internações em hospitais de Mato Grosso, ao passo que as internações de residentes em hospitais de outras unidades da federação (UF) são medidas à parte, na página [Deslocamento](../deslocamento/index.html#fuga), e não alteram os escores. Registra-se, ainda, que o **pré-natal de `r A` está indisponível**, porque o Sistema de Informações sobre Nascidos Vivos (SINASC) ainda não foi consolidado para o ano, e os indicadores de resultado das fichas utilizam o último período disponível.
+
+Cumpre reiterar que **eficiência não é qualidade** e que o escore não explica, por si só, a distância até a fronteira, para a qual concorrem o perfil da rede, o porte e o registro. As internações sensíveis à atenção primária e as causas evitáveis não integram os modelos desta versão. **Boa Esperança do Norte**, instalado em 2025, dispõe apenas do primeiro exercício, com marca de resultado parcial, e não consta da malha municipal dos mapas. Quanto aos **hospitais**, o reduzido número de unidades por variável torna largos os intervalos de confiança, razão pela qual a leitura por faixas substitui o *ranking*; na **alta complexidade**, somente `r r3$n_avaliados` regiões têm escore diagnóstico publicável.
 :::
 
 ## Arquivos e método {#arquivos}
 
-As fichas completas, as metas por variável, os pares, o Malmquist por região e o dicionário de campos estão disponíveis em CSV (UTF-8, vírgula, ponto decimal):
+As fichas completas, as metas por variável, os pares, o índice de Malmquist por região e o dicionário de campos encontram-se disponíveis em formato CSV (codificação UTF-8, separador vírgula e ponto decimal), e as referências completas das obras citadas nesta página constam da [Metodologia](../metodologia.qmd#referencias):
 [fichas dos municípios](../arquivos/dados/eficiencia/fichas_municipio.csv) ·
 [metas dos municípios](../arquivos/dados/eficiencia/metas_municipio.csv) ·
 [pares dos municípios](../arquivos/dados/eficiencia/pares_municipio.csv) ·

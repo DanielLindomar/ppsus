@@ -196,22 +196,22 @@ nav_eficiencia <- function(atual = "index.html") {
 frase_versao_curta_ef <- function(href = "index.html#versao") {
   if (!nzchar(NOTA_VERSAO_EF) || !length(REESTIMADOS_EF) || !all(REESTIMADOS_EF %in% MODELOS_EF$modelo)) return("")
   nomes <- lista_e_ef(inicial_min(MODELOS_EF$curto[match(REESTIMADOS_EF, MODELOS_EF$modelo)]))
-  sprintf(paste0("Na versão %s, só o modelo de %s foi reestimado; os demais resultados são os da versão %s (%s) — ",
+  sprintf(paste0("Na versão %s, apenas o modelo de %s foi reestimado, e os demais resultados correspondem aos da versão %s (%s) — ",
                  "<a href=\"%s\">nota de versão</a>. "),
           sub("^v", "", VERSAO_EF), nomes, sub("^v", "", VERSAO_ANT_EF), DATA_ANT_EF, href)
 }
 
 faixa_versao_ef <- function(nota_curta = TRUE) faixa_versao(sprintf(paste0(
   "<b>Resultados da versão %s da estimação DEA/Malmquist (%s), em validação com a SES-MT e o COSEMS-MT.</b> %s",
-  "Leia por <b>faixas com intervalo de confiança</b>, não por posição pontual; dados de registro a verificar estão sinalizados. ",
-  "Janela 2020–%d; os anos de 2020–2021 refletem a pandemia de COVID-19."), sub("^v", "", VERSAO_EF), DATA_EF,
+  "Os resultados devem ser lidos por <b>faixas com intervalo de confiança</b>, e não por posição pontual, e os dados de registro a verificar estão sinalizados. ",
+  "A janela de análise é 2020–%d, e os anos de 2020–2021 refletem a pandemia de COVID-19."), sub("^v", "", VERSAO_EF), DATA_EF,
   if (isTRUE(nota_curta)) frase_versao_curta_ef() else "", ANO_EF))
 
-# Item de ressalva da atenção básica sobre a versão (Markdown "- ..."; vazio quando não há versão anterior)
+# Parágrafo de ressalva da atenção básica sobre a versão (Markdown; vazio quando não há versão anterior)
 ressalva_versao_m1 <- function() {
   if (!nzchar(NOTA_VERSAO_EF) || !"M1" %in% REESTIMADOS_EF) return("")
-  sprintf(paste0("- Resultados da versão %s (%s): o insumo de agentes comunitários de saúde conta só o ACS (CBO 515105). ",
-                 "As visitas domiciliares, um dos produtos do modelo, são registradas sobretudo pelos ACS; os agentes de combate ",
+  sprintf(paste0("**Resultados da versão %s (%s).** O insumo de agentes comunitários de saúde contabiliza apenas o ACS (CBO 515105). ",
+                 "As visitas domiciliares, um dos produtos do modelo, são registradas sobretudo pelos ACS; por sua vez, os agentes de combate ",
                  "às endemias e os agentes indígenas, que a versão %s somava ao insumo, deixaram de ser contados como recurso deste modelo."),
           sub("^v", "", VERSAO_EF), DATA_EF, sub("^v", "", VERSAO_ANT_EF))
 }
@@ -238,11 +238,11 @@ kpis_modelo <- function(modelo, grupo = NULL, ano = ANO_EF) {
     kpi_simples("Municípios avaliados", num(n_av), ref_txt,
                 if (n_av < nrow(f)) sprintf("%d fora do modelo (motivo na tabela de cada município)", nrow(f) - n_av)),
     kpi_simples("Na fronteira (melhores práticas)", num(n_fr), sprintf("%s dos avaliados · %d", pct_ef(100 * n_fr / max(n_av, 1)), ano),
-                "escore original = 1: ninguém, com recursos semelhantes, produziu mais"),
+                "escore original = 1: nenhum município com recursos semelhantes produziu mais"),
     kpi_simples("Escore corrigido — mediana", num(median(av$escore_bc, na.rm = TRUE), 3), sprintf("escala 0–1 · %d", ano),
                 sprintf("potencial mediano de expansão fora da fronteira: %s", pct_ef(median(av$potencial_expansao_pct, na.rm = TRUE)))),
     kpi_simples("Faixa incerta", num(sum(av$ic_cruza_faixa == 1, na.rm = TRUE)), sprintf("municípios cujo IC alcança a faixa vizinha · %d", ano),
-                "leia a faixa destes municípios como provisória"),
+                "a faixa destes municípios deve ser lida como provisória"),
     kpi_simples("Aproximação às melhores práticas", var_ano(ec$ec), "média anual 2022–2025 (EC, Malmquist)",
                 sprintf("%d com melhora consistente · %d com piora consistente", as.integer(ec$n_melhora_ec), as.integer(ec$n_piora_ec))),
     kpi_simples("Recursos que poderiam ser redirecionados", reais_txt(red), sprintf("R$ de 2025 · soma de %d municípios · %d", n_fin, ano),
@@ -376,12 +376,12 @@ ficha_detalhe <- function(cod, modelo, ano = ANO_EF, prefixo = "../municipios/")
   mt <- mt[order(mt$tipo != "produto"), ]
   fora_banda <- isTRUE(r$par_mais_semelhante_fora_banda == 1)
   pares <- if (nrow(pr)) tagList(
-      if (isTRUE(r$faixa == "fronteira")) p(class = "sub", "Referência alternativa: a posição na fronteira decorre de falta de comparável em algum recurso; frente aos municípios elegíveis como referência, estas são as práticas a observar."),
+      if (isTRUE(r$faixa == "fronteira")) p(class = "sub", "Referência alternativa: a posição na fronteira decorre da falta de comparável em algum recurso; em relação aos municípios elegíveis como referência, estas são as práticas a observar."),
       tags$ul(lapply(seq_len(nrow(pr)), function(j) tags$li(
       a(href = paste0(prefixo, pr$par_slug[j], ".html"), pr$par_municipio[j]), sprintf(" (%s · peso %s)", pr$par_regiao_saude[j], num(pr$peso[j], 2)),
       if (isTRUE(pr$mais_semelhante[j] == 1)) strong(if (fora_banda) " — maior peso; nenhum par na faixa de porte de 1/3 a 3 vezes" else " — mais semelhante em porte"))))) else
-      p(class = "sub", if (isTRUE(r$faixa == "fronteira")) sprintf("Na fronteira: não tem pares; é referência para %s município(s).", num(r$n_vezes_referencia)) else
-        "Sem pares listados: entre os municípios elegíveis como referência (registro plausível), nenhum supera este município com recursos semelhantes. O escore publicado vem da fronteira comum, que inclui unidades que não servem de par.")
+      p(class = "sub", if (isTRUE(r$faixa == "fronteira")) sprintf("Na fronteira: o município não tem pares e é referência para %s município(s).", num(r$n_vezes_referencia)) else
+        "Sem pares listados: entre os municípios elegíveis como referência (com registro plausível), nenhum supera este município com recursos semelhantes. O escore publicado provém da fronteira comum, que inclui unidades que não servem de par.")
   sem_lacuna <- nrow(mt) > 0 && all(!is.finite(mt$potencial_unidades) | abs(mt$potencial_unidades) < 1e-9)
   metas <- if (nrow(mt) && (!isTRUE(r$faixa == "fronteira") || nrow(pr) > 0) && !sem_lacuna) tags$table(
     tags$thead(tags$tr(tags$th("Variável"), tags$th("Unidade"), tags$th("Observado"), tags$th("Meta intermediária"), tags$th("Meta plena"), tags$th("Potencial"))),
@@ -435,7 +435,7 @@ tabela_eficiencia <- function(modelo, ano = ANO_EF, grupo = NULL, prefixo = "../
     div(class = "ef-botoes",
         tags$button(class = "btn btn-sm btn-outline-primary", type = "button",
                     onclick = sprintf("Reactable.downloadDataCSV('%s', '%s')", id_html, arq), "⭳ Baixar esta tabela (CSV)"),
-        span(class = "sub", "Clique em ▸ para abrir a ficha do município (frase-síntese, pares e metas). Ordem alfabética: as faixas não são ranking.")),
+        span(class = "sub", "Clique em ▸ para abrir a ficha do município (frase-síntese, pares e metas). A ordem é alfabética, pois as faixas não constituem ranking.")),
     div(class = "rolagem-x", reactable(d, elementId = id_html, searchable = TRUE, compact = TRUE, striped = TRUE, highlight = TRUE,
               defaultPageSize = 15, showPageSizeOptions = TRUE, pageSizeOptions = c(15, 50, nrow(d)), wrap = TRUE,
               columns = cols, details = function(i) ficha_detalhe(d$cod_mun6[i], modelo, ano, prefixo))))
@@ -496,10 +496,10 @@ texto_potencial <- function(modelo, ano = ANO_EF, grupo = NULL) {
   pr <- x[x$tipo == "produto", ]; fin <- x[x$tipo == "insumo" & grepl("^R\\$", x$unidade_abs), ]
   fin <- fin[which.max(fin$n), ]
   n_pot <- length(municipios_com_potencial(modelo, ano, grupo))
-  partes <- if (nrow(pr)) sprintf("Em %d, %d municípios têm potencial de melhoria frente aos seus pares plausíveis (alguma meta diferente do valor observado). Mantidos os recursos atuais, a produção desses municípios poderia crescer %s (meta plena); a meta intermediária corresponde a %s dessa distância e é a referência de curto prazo.",
+  partes <- if (nrow(pr)) sprintf("Em %d, %d municípios apresentam potencial de melhoria em relação aos seus pares plausíveis, isto é, têm alguma meta diferente do valor observado. Mantidos os recursos atuais, a produção desses municípios poderia crescer %s (meta plena), e a meta intermediária, que corresponde a %s dessa distância, constitui a referência de curto prazo.",
     ano, n_pot, if (nrow(pr) > 1) paste0("de ", pct_ef(min(pr$pct)), " a ", pct_ef(max(pr$pct)), ", conforme o serviço") else pct_ef(pr$pct), pct_ef(100 * FRACAO_META, 0)) else ""
   if (nrow(fin) == 1 && fin$reais > 0) partes <- paste(partes, sprintf(
-    "Na despesa (%s), a folga frente aos pares soma %s de 2025 em %d municípios (%s do gasto dos municípios com potencial de melhoria): é a parcela que os pares dispensam para obter o mesmo resultado e indica espaço de realocação, não um corte automático.",
+    "Na despesa (%s), a folga em relação aos pares soma %s de 2025 em %d municípios (%s do gasto dos municípios com potencial de melhoria). Essa folga corresponde à parcela que os pares dispensam para obter o mesmo resultado e indica espaço de realocação, e não um corte automático.",
     inicial_min(fin$nome_gerencial), reais_txt(fin$reais), fin$n_reais, pct_ef(100 * fin$reais / fin$observado)))
   partes
 }
@@ -604,11 +604,11 @@ tabela_resumo_modelos <- function() {
 # Rodapé de fontes da seção
 fonte_eficiencia <- function(prefixo = "../", extra = NULL) {
   p(class = "nota-fonte",
-    sprintf("Fonte: %s — estimação DEA (BCC orientado ao produto, escore corrigido por bootstrap, IC de %s%%) e índice de Malmquist, Projeto PPSUS-MT, a partir de SIOPS, CNES, SISAB, SI-PNI, SIA, SIH e IBGE, 2020–%d. Monetários em R$ de 2025 (IPCA). ",
+    sprintf("Fonte: %s — estimação DEA (modelo BCC orientado ao produto, escore corrigido por bootstrap, IC de %s%%) e índice de Malmquist, Projeto PPSUS-MT, com base em dados do SIOPS, CNES, SISAB, SI-PNI, SIA, SIH e IBGE, 2020–%d. Nota: os valores monetários estão expressos em R$ de 2025 (IPCA). ",
             CITACAO_EF, num(100 * IC_NIVEL, 0), ANO_EF), extra,
-    "Método em ", a(href = paste0(prefixo, "metodologia.html"), "Metodologia", .noWS = "after"),
-    "; arquivos completos (fichas, metas, pares, dicionário) em ", a(href = paste0(prefixo, "arquivos/dados/eficiencia/fichas_municipio.csv"), "fichas_municipio.csv", .noWS = "after"),
-    " e nos demais arquivos de ", a(href = paste0(prefixo, "dados/index.html"), "Dados", .noWS = "after"), ".")
+    "O método é descrito em ", a(href = paste0(prefixo, "metodologia.html"), "Metodologia", .noWS = "after"),
+    ", e os arquivos completos (fichas, metas, pares e dicionário) encontram-se em ", a(href = paste0(prefixo, "arquivos/dados/eficiencia/fichas_municipio.csv"), "fichas_municipio.csv", .noWS = "after"),
+    " e nos demais arquivos da página ", a(href = paste0(prefixo, "dados/index.html"), "Dados", .noWS = "after"), ".")
 }
 
 # Atalhos para as seções da própria página
