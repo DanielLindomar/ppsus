@@ -166,7 +166,7 @@ CATALOGO = [
     dict(id="pct_capital", rotulo="Despesa de capital", grupo="financiamento", unidade="% da despesa total", fmt="pct1", sentido=0,
          fonte="SIOPS (RREO)", num="desp_capital", den="desp_total_saude", mult=100, agg="razao",
          formula="100 × desp_capital / desp_total_saude",
-         nota="Expressa os investimentos (obras e equipamentos) em relação à despesa total e tende a oscilar muito de um ano para outro.",
+         nota="Expressa os investimentos (obras e equipamentos) em relação à despesa total e tende a oscilar consideravelmente de um ano para outro.",
          kpi=0, ano_max=2025, descricao="Parcela da despesa em saúde destinada a investimentos."),
 
     # ---- capacidade (CNES, média anual, vínculos SUS) ----
@@ -187,7 +187,7 @@ CATALOGO = [
          formula="1000 × fte_acs / populacao", kpi=0, ano_max=2025,
          nota=NOTA_FTE + " Contabiliza-se somente o agente comunitário de saúde (CBO 515105). Até a versão 0.2 do site (08/10/2026), o indicador "
               "somava toda a família CBO 5151, que inclui agentes de combate às endemias e agentes indígenas; o painel disponível para download "
-              "traz as duas medidas (fte_acs e fte_5151_familia).",
+              "contém as duas medidas (fte_acs e fte_5151_familia).",
          descricao="Agentes comunitários de saúde (CBO 515105), em equivalentes de 40 h semanais (FTE), por mil habitantes."),
     dict(id="fte_dentistas_p1000", rotulo="Dentistas SUS por mil habitantes", grupo="capacidade", unidade="FTE por mil hab.", fmt="dec2", sentido=1,
          fonte="CNES", num="fte_dentistas_sus", den="populacao", mult=1000, agg="razao",
@@ -201,7 +201,7 @@ CATALOGO = [
     dict(id="leitos_uti_sus", rotulo="Leitos de UTI SUS", grupo="capacidade", unidade="leitos", fmt="int", sentido=0,
          fonte="CNES", num="leitos_uti_sus", den=None, mult=1, agg="soma",
          formula="leitos_uti_sus (média das competências do ano)",
-         nota="Há sub-registro no CNES, uma vez que existem hospitais com UTI em funcionamento e zero leitos de UTI SUS declarados; em 2020–2021, o indicador inclui os leitos COVID.",
+         nota="Há sub-registro no CNES, uma vez que existem hospitais com UTI em funcionamento sem leitos de UTI SUS declarados; em 2020–2021, o indicador inclui os leitos destinados à COVID.",
          kpi=0, ano_max=2025, descricao="Leitos de UTI disponíveis ao SUS (média anual)."),
     dict(id="equip_sus_p10000", rotulo="Equipamentos SUS em uso por 10 mil habitantes", grupo="capacidade", unidade="equipamentos por 10 mil hab.", fmt="dec1", sentido=1,
          fonte="CNES", num="equip_sus_uso", den="populacao", mult=10000, agg="razao",
@@ -260,12 +260,12 @@ CATALOGO = [
     dict(id="doses_menor1_por_nv", rotulo="Doses de vacina em menores de 1 ano por nascido vivo", grupo="atencao_basica", unidade="doses por nascido vivo", fmt="dec2", sentido=1,
          fonte="SI-PNI / SINASC", num="sipni_doses_menor1_local", den="nascidos_vivos", mult=1, agg="razao",
          formula="sipni_doses_menor1_local / nascidos_vivos",
-         nota="Consideram-se as doses aplicadas no município (local de aplicação) em menores de 1 ano, sem COVID, por nascido vivo de mãe residente, com dados até 2024 (limite do SINASC). Ressalta-se que os municípios-polo aplicam doses em crianças de outros municípios.",
+         nota="Consideram-se as doses aplicadas no município (local de aplicação) em menores de 1 ano, excluídas as vacinas contra a COVID, por nascido vivo de mãe residente, com dados até 2024 (limite do SINASC). Ressalta-se que os municípios-polo aplicam doses em crianças de outros municípios.",
          kpi=0, ano_max=2024, descricao="Doses aplicadas em menores de 1 ano por nascido vivo residente."),
     dict(id="doses_pc", rotulo="Doses de vacina aplicadas por habitante", grupo="atencao_basica", unidade="doses por hab.", fmt="dec2", sentido=1,
          fonte="SI-PNI", num="sipni_doses_local", den="populacao", mult=1, agg="razao",
          formula="sipni_doses_local / populacao",
-         nota="Consideram-se as doses de todas as vacinas de rotina aplicadas no município, sem COVID.", kpi=0, ano_max=2025,
+         nota="Consideram-se as doses de todas as vacinas de rotina aplicadas no município, excluídas as vacinas contra a COVID.", kpi=0, ano_max=2025,
          descricao="Doses de vacina de rotina aplicadas no município por habitante."),
 
     # ---- média e alta complexidade (SIA/SIH) ----
@@ -297,7 +297,7 @@ CATALOGO = [
     dict(id="mortalidade_hosp_pct", rotulo="Mortalidade hospitalar", grupo="media_alta", unidade="% das internações locais", fmt="pct1", sentido=-1,
          fonte="SIH/SUS", num="obitos_hosp_local", den="internacoes_local", mult=100, agg="razao",
          formula="100 × obitos_hosp_local / internacoes_local",
-         nota="Consideram-se os óbitos nas internações realizadas no município, sem ajuste de risco, sendo que os hospitais de referência recebem casos mais graves. Em 2020–2021, o indicador refletiu a COVID-19. O campo permanece vazio onde não há internação local.",
+         nota="Consideram-se os óbitos nas internações realizadas no município, sem ajuste de risco, ressaltando-se que os hospitais de referência recebem casos mais graves. Em 2020–2021, o indicador refletiu a COVID-19. O campo permanece vazio onde não há internação local.",
          kpi=0, ano_max=2025, descricao="Parcela das internações realizadas no município que terminaram em óbito."),
     dict(id="permanencia_media", rotulo="Permanência média das internações", grupo="media_alta", unidade="dias", fmt="dec1", sentido=0,
          fonte="SIH/SUS", num="diarias_local", den="internacoes_local", mult=1, agg="razao",
@@ -334,7 +334,7 @@ CATALOGO = [
     dict(id="km_medio_internacao", rotulo="Distância média até a internação", grupo="deslocamento", unidade="km", fmt="dec1", sentido=0,
          fonte="SIH/SUS (AIH reduzida) + IBGE (Localidades 2022)", num="km_medio_internacao", den="internacoes_res", mult=1, agg="externo",
          formula="média ponderada da distância em linha reta entre as sedes municipais (IBGE, Localidades 2022) do município de residência e do município do hospital (0 km no próprio município)",
-         nota="Trata-se da distância geodésica (fórmula de haversine) entre as sedes municipais, em linha reta, que não corresponde à distância rodoviária, sendo o trajeto real maior. O campo permanece vazio quando não há internação de residentes no ano, como em Boa Esperança do Norte, ainda sem registros no SIH.",
+         nota="Trata-se da distância geodésica (fórmula de haversine) entre as sedes municipais, em linha reta, que não corresponde à distância rodoviária; o trajeto real, portanto, é maior. O campo permanece vazio quando não há internação de residentes no ano, como em Boa Esperança do Norte, ainda sem registros no SIH.",
          kpi=0, ano_max=2025, descricao="Distância média, em linha reta, percorrida pelos moradores para se internar."),
 
     # ---- resultados (SIM/SINASC, até 2024) ----
@@ -374,14 +374,14 @@ KPIS = {"desp_total_pc", "fte_medicos_p1000", "leitos_sus_p1000", "atend_individ
 assert {c["id"] for c in CATALOGO if c["kpi"] == 1} == KPIS, "kpi=1 deve estar exatamente nos 6 indicadores do briefing"
 # Ressalva curta, visível nos cartões-chave do perfil (coluna adicional ao contrato: nota_curta)
 NOTA_CURTA = {
-    "desp_total_pc": "R$ correntes, sem deflação; todas as fontes de recursos.",
-    "fte_medicos_p1000": "FTE de 40 h; o crescimento pode refletir melhoria do registro no CNES.",
-    "leitos_sus_p1000": "Zero onde não há hospital SUS; média das competências do ano.",
-    "atend_individual_pc": "Registro no SISAB cresce com a informatização; caiu em 2020.",
-    "pct_internacoes_fora_mun": "Não é 'ruim' em si: a alta complexidade é regionalizada; só hospitais de MT (outros estados à parte, em Deslocamento).",
-    "taxa_mortalidade_infantil": "Instável em municípios com menos de 100 nascidos vivos por ano; dados até 2024.",
-    "leitos_uti_sus": "Sub-registro conhecido no CNES.",
-    "mortalidade_hosp_pct": "Sem ajuste de risco.",
+    "desp_total_pc": "Valores em R$ correntes, sem deflação, que abrangem todas as fontes de recursos.",
+    "fte_medicos_p1000": "Equivalente em tempo integral (FTE) de 40 h; o crescimento pode refletir a melhoria do registro no CNES.",
+    "leitos_sus_p1000": "Média das competências do ano, com valor zero onde não há hospital SUS.",
+    "atend_individual_pc": "O registro no SISAB cresce com a informatização e apresentou queda em 2020.",
+    "pct_internacoes_fora_mun": "O deslocamento não é desfavorável por si só, pois a alta complexidade é regionalizada; consideram-se apenas hospitais de MT (os de outros estados constam à parte, em Deslocamento).",
+    "taxa_mortalidade_infantil": "Indicador instável em municípios com menos de 100 nascidos vivos por ano, com dados até 2024.",
+    "leitos_uti_sus": "Há sub-registro conhecido no CNES.",
+    "mortalidade_hosp_pct": "Indicador sem ajuste de risco.",
 }
 for c in CATALOGO:
     c["nota_curta"] = NOTA_CURTA.get(c["id"], "")
