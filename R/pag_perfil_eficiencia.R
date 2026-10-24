@@ -163,34 +163,61 @@ mediana_modelo <- function(modelo, ano, grupo = NA) {
   if (nrow(d) == 0) NA_real_ else median(d$escore_bc, na.rm = TRUE)
 }
 
-# Recursos → produção do modelo (especificação principal vigente)
+# Lista em oração, com "e" antes do último item
+ef_lista_e <- function(x) if (length(x) <= 1) paste(x, collapse = "") else paste(paste(x[-length(x)], collapse = ", "), x[length(x)], sep = " e ")
+# Nome gerencial no meio da oração: inicial minúscula ("Médicos SUS" → "médicos SUS"); siglas iniciais ficam
+ef_inicial_min <- function(x) ifelse(grepl("^[[:upper:]][[:lower:]]", x), paste0(tolower(substr(x, 1, 1)), substr(x, 2, nchar(x))), x)
+
+# Recursos e produção do modelo (especificação principal vigente), em oração completa (versão 0.5)
 texto_espec <- function(modelo, grupo = NA) {
   e <- EF_ESPEC[EF_ESPEC$modelo == modelo, ]
   if (!is.na(grupo) && nzchar(grupo)) e <- e[is.na(e$grupo) | !nzchar(e$grupo) | e$grupo == grupo, ]
   if (nrow(e) == 0) return("")
   e <- e[order(e$tipo, as.numeric(e$ordem)), ]
   ins <- unique(e$nome_gerencial[e$tipo == "insumo"]); pro <- unique(e$nome_gerencial[e$tipo == "produto"])
-  sprintf("Recursos: %s → produção: %s.", paste(ins, collapse = "; "), paste(pro, collapse = "; "))
+  sprintf("Os recursos considerados são %s, e a produção compreende %s.", ef_lista_e(ef_inicial_min(ins)), ef_lista_e(ef_inicial_min(pro)))
 }
 
 # Leitura do escore esperado pelo contexto (diferença com IC)
 texto_contexto <- function(r) {
   if (eh1(r$sem_contexto) || !is.finite(r$escore_esperado))
-    return("Escore esperado pelo contexto: não estimado para este modelo ou ano.")
-  lei <- if (is.finite(r$residuo_escore_ic_inf) && r$residuo_escore_ic_inf > 0) "<b>acima</b> do que o contexto prevê"
-         else if (is.finite(r$residuo_escore_ic_sup) && r$residuo_escore_ic_sup < 0) "<b>abaixo</b> do que o contexto prevê"
-         else "<b>compatível</b> com o que o contexto prevê (o intervalo inclui zero)"
-  sprintf("Escore esperado pelo contexto (porte, riqueza, densidade, distância e finanças): <b>%s</b>. Desempenho %s.",
+    return("O escore esperado pelo contexto não foi estimado para este modelo ou ano.")
+  lei <- if (is.finite(r$residuo_escore_ic_inf) && r$residuo_escore_ic_inf > 0) "situa-se <b>acima</b> do que o contexto prevê"
+         else if (is.finite(r$residuo_escore_ic_sup) && r$residuo_escore_ic_sup < 0) "situa-se <b>abaixo</b> do que o contexto prevê"
+         else "é <b>compatível</b> com o que o contexto prevê, uma vez que o intervalo de confiança da diferença inclui zero"
+  sprintf("O escore esperado pelo contexto (porte, riqueza, densidade, distância e finanças) é de <b>%s</b>, e o desempenho %s.",
           num2(r$escore_esperado), lei)
 }
 
 # Posição na região e na macrorregião: mesma régua da faixa estadual (fronteira à parte; quartis entre os
-# avaliados fora da fronteira; sem posição quando há poucos) — calculada em scripts/06_preparar_eficiencia.py
+# avaliados fora da fronteira; sem posição quando há poucos) — calculada em scripts/06_preparar_eficiencia.py.
+# Versão 0.5: oração completa; as faixas coincidentes são ditas uma só vez ("bem como na região ... e na macrorregião").
+.ef_pos <- function(v) {
+  if (is.na(v) || !nzchar(v)) return(list(tipo = "nd"))
+  if (v %in% names(.ef_faixa_loc)) return(list(tipo = "faixa", f = v))
+  m <- regmatches(v, regexec("^sem posição \\(poucos municípios avaliados fora da fronteira na (região|macrorregião): n = (\\d+)\\)$", v))[[1]]
+  if (length(m)) return(list(tipo = "sem", n = m[3]))
+  list(tipo = "outro", v = v)
+}
+.ef_pos_txt <- function(p) switch(p$tipo,
+  faixa = sprintf("situa-se na faixa %s", .ef_faixa_loc[[p$f]]),
+  sem = sprintf("não se atribui posição, por haver poucos municípios avaliados fora da fronteira (n = %s)", p$n),
+  nd = "a posição não é informada",
+  esc(p$v))
 texto_posicao <- function(r, nome_reg) {
-  grp <- if (!is.na(r$rotulo_grupo) && nzchar(r$rotulo_grupo)) sprintf(" (entre os %s)", r$rotulo_grupo) else ""
-  sprintf("No estado%s: <b>%s</b>, entre %s avaliados · na região de saúde %s: %s · na macrorregião: %s.",
-          grp, esc(rotulo_faixa(r$faixa)), num(r$n_dmus_ano), esc(nome_reg),
-          esc(ifelse(is.na(r$posicao_regiao), "—", r$posicao_regiao)), esc(ifelse(is.na(r$posicao_macro), "—", r$posicao_macro)))
+  fe <- r$faixa
+  grp_nome <- if (!is.na(r$rotulo_grupo) && nzchar(r$rotulo_grupo)) r$rotulo_grupo else "municípios"
+  est <- sprintf("no estado, entre os %s %s avaliados", num(r$n_dmus_ano), esc(grp_nome))
+  fx <- sprintf("na faixa <b>%s</b>", if (!is.na(fe) && fe %in% names(.ef_faixa_loc)) .ef_faixa_loc[[fe]] else esc(tolower(rotulo_faixa(fe))))
+  pr <- .ef_pos(r$posicao_regiao); pm <- .ef_pos(r$posicao_macro)
+  igual <- function(p) identical(p$tipo, "faixa") && identical(p$f, fe)
+  loc_r <- sprintf("na região de saúde %s", esc(nome_reg)); loc_m <- "na macrorregião"
+  if (igual(pr) && igual(pm)) return(sprintf("O município situa-se %s %s, bem como %s e %s.", fx, est, loc_r, loc_m))
+  if (igual(pr)) return(sprintf("O município situa-se %s %s, bem como %s; %s, %s.", fx, est, loc_r, loc_m, .ef_pos_txt(pm)))
+  if (igual(pm)) return(sprintf("O município situa-se %s %s, bem como %s; %s, %s.", fx, est, loc_m, loc_r, .ef_pos_txt(pr)))
+  if (identical(pr$tipo, "faixa") && identical(pm$tipo, "faixa") && identical(pr$f, pm$f))
+    return(sprintf("O município situa-se %s %s; %s e %s, situa-se na faixa %s.", fx, est, loc_r, loc_m, .ef_faixa_loc[[pr$f]]))
+  sprintf("O município situa-se %s %s; %s, %s; %s, %s.", fx, est, loc_r, .ef_pos_txt(pr), loc_m, .ef_pos_txt(pm))
 }
 
 # Pares de referência plausíveis (até 3) com link para o perfil
@@ -207,10 +234,10 @@ bloco_pares <- function(cod, modelo, r) {
   if (nrow(p) == 0) {
     txt <- if (eh1(r$fronteira)) {
       nref <- as.integer(r$n_vezes_referencia)
-      if (is.finite(nref) && nref > 0) sprintf("por situar-se na fronteira, o município não tem pares e serve de referência para %d %s neste modelo.", nref, if (nref == 1) "município" else "municípios")
-      else "por situar-se na fronteira, o município não tem pares."
-    } else "nenhum município é listado, uma vez que, entre os municípios elegíveis como referência (com registro plausível), nenhum produz mais com os mesmos recursos. O potencial indicado pelo escore provém da comparação com todos os municípios, que inclui unidades fora desse grupo."
-    return(sprintf('<p class="ef-linha"><b>Municípios de referência:</b> %s</p>', txt))
+      if (is.finite(nref) && nref > 0) sprintf("Por situar-se na fronteira, o município não tem pares e serve de referência para %d %s neste modelo.", nref, if (nref == 1) "município" else "municípios")
+      else "Por situar-se na fronteira, o município não tem pares."
+    } else "Nenhum município é listado, uma vez que, entre os municípios elegíveis como referência (com registro plausível), nenhum produz mais com os mesmos recursos. O potencial indicado pelo escore provém da comparação com todos os municípios, que inclui unidades fora desse grupo."
+    return(sprintf('<p class="ef-linha"><b>Municípios de referência.</b> %s</p>', txt))
   }
   itens <- sprintf('<li><a href="%s.html">%s</a> <span class="sub">(%s; %s hab.; peso %s%%)</span>%s</li>',
                    p$par_slug, esc(p$par_municipio), esc(p$par_regiao_saude), num(p$par_populacao),
@@ -257,17 +284,29 @@ bloco_metas <- function(cod, modelo, r) {
   fronteira <- eh1(r$fronteira)
   cm <- classificar_metas(cod, modelo, r)
   m <- cm$m; lac <- cm$lac; info <- cm$info; n_ok <- cm$n_ok
-  if (nrow(m) == 0) return('<p class="ef-linha"><b>Metas:</b> não publicadas para este modelo.</p>')
+  if (nrow(m) == 0) return('<p class="ef-linha"><b>Metas.</b> As metas não são publicadas para este modelo.</p>')
   notas <- nota_meta_gestor(unique(m$nota_meta[!is.na(m$nota_meta) & nzchar(m$nota_meta)]))
+  # Versão 0.5: quando a meta informativa decorre só da ausência de hospital SUS (nota_meta "sem hospital SUS"), a
+  # explicação entra uma vez, na nota da tabela, e sai da linha "Nota:" (e, em lista_sinais, da lista de sinais)
+  sem_hosp_var <- unique(m$variavel[!is.na(m$nota_meta) & grepl("^sem hospital SUS", m$nota_meta)])
+  info_sem_hosp <- nrow(info) > 0 && length(sem_hosp_var) > 0 && all(info$variavel %in% sem_hosp_var)
+  if (info_sem_hosp) notas <- notas[!grepl("^sem hospital SUS", notas)]
   if (nrow(cm$rec_polo)) notas <- c(notas, sprintf("%s, por se tratar de polo de alta complexidade: parte dos recursos atende moradores de outros municípios e a alta complexidade, razão pela qual a folga de recursos não é comparável e não é publicada",
                                                    if (nrow(cm$rec_polo) == 1) "omite-se a meta de recurso" else sprintf("omitem-se %d metas de recursos", nrow(cm$rec_polo))))
   txt_ok <- if (n_ok > 0) sprintf(" Além das variáveis da tabela, %d %s do modelo já %s na meta.", n_ok, if (n_ok == 1) "outra variável" else "outras variáveis", if (n_ok == 1) "está" else "estão") else ""
-  txt_info <- if (nrow(info)) sprintf(" %s: observado igual a zero no município, sem percentual de lacuna; a meta é apenas informativa.",
-                                      paste(esc(unique(info$nome_gerencial)), collapse = "; ")) else ""
+  nomes_info <- unique(info$nome_gerencial); n_info <- length(nomes_info)
+  txt_info <- if (info_sem_hosp)
+      sprintf(" %s %s, %s porque, sem hospital SUS no município, as internações locais são nulas por configuração da rede; por essa razão, não se calcula o percentual de lacuna, e a meta de internações tem caráter apenas informativo.",
+              if (n_info == 1) "Na variável" else "Nas variáveis", ef_lista_e(esc(nomes_info)),
+              if (n_info == 1) "o valor observado é igual a zero" else "os valores observados são iguais a zero")
+    else if (nrow(info)) sprintf(" %s %s, %s no município, razão pela qual não se calcula o percentual de lacuna, e %s caráter apenas informativo.",
+              if (n_info == 1) "Na variável" else "Nas variáveis", ef_lista_e(esc(nomes_info)),
+              if (n_info == 1) "o valor observado é igual a zero" else "os valores observados são iguais a zero",
+              if (n_info == 1) "a meta tem" else "as metas têm") else ""
   if (nrow(lac) == 0 && nrow(info) == 0) {
-    corpo <- if (fronteira) '<p class="ef-linha"><b>Metas 2025:</b> todas as variáveis do modelo já estão na meta (o município está na fronteira).</p>'
+    corpo <- if (fronteira) '<p class="ef-linha"><b>Metas 2025.</b> Todas as variáveis do modelo já estão na meta, uma vez que o município se situa na fronteira.</p>'
              else if (nrow(cm$rec_polo)) '<p class="ef-linha"><b>Metas 2025:</b> sem lacuna de produção em relação aos municípios elegíveis como referência.</p>'
-             else '<p class="ef-linha"><b>Metas 2025:</b> sem lacuna na comparação com os municípios elegíveis como referência (com registro plausível), dos quais derivam as metas; por isso, não há meta a publicar, embora o escore, calculado entre todos os municípios, indique potencial.</p>'
+             else '<p class="ef-linha"><b>Metas 2025.</b> Não há lacuna na comparação com os municípios elegíveis como referência (com registro plausível), dos quais derivam as metas; por essa razão, não há meta a publicar, embora o escore, calculado entre todos os municípios, indique potencial.</p>'
   } else {
     if (nrow(info)) { info$potencial_pct <- NA_real_; lac <- rbind(lac, info) }
     pot <- ifelse(!is.finite(lac$potencial_pct),
@@ -281,7 +320,7 @@ bloco_metas <- function(cod, modelo, r) {
                       esc(lac$nome_gerencial), ifelse(lac$tipo == "produto", "produção ▲", "recurso ▼"), esc(lac$unidade_abs),
                       fmt_unid(lac$observado_abs, lac$unidade_abs), fmt_unid(lac$meta_intermediaria_abs, lac$unidade_abs),
                       fmt_unid(lac$meta_radial_abs, lac$unidade_abs), pot)
-    corpo <- sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><caption>Metas 2025 (valores anuais do município)</caption><thead><tr><th>Variável</th><th class="num">Observado 2025</th><th class="num">Meta intermediária</th><th class="num">Meta plena</th><th class="num">Potencial de melhoria</th></tr></thead><tbody>%s</tbody></table></div><p class="nota-fonte">A meta plena corresponde ao que as melhores práticas comparáveis alcançam com os mesmos recursos, e a meta intermediária, à metade do caminho. Na produção, o potencial expressa o aumento possível; nos recursos, a folga que poderia ser redirecionada sem reduzir a produção.%s</p>',
+    corpo <- sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><caption>Metas 2025 (valores anuais do município)</caption><thead><tr><th>Variável</th><th class="num">Observado 2025</th><th class="num">Meta intermediária</th><th class="num">Meta plena</th><th class="num">Potencial de melhoria</th></tr></thead><tbody>%s</tbody></table></div><p class="nota-fonte">A meta plena corresponde ao que as melhores práticas comparáveis alcançam com os mesmos recursos, e a meta intermediária cobre metade da distância entre o valor observado e a meta plena. Na produção, o potencial expressa o aumento possível; nos recursos, a folga que poderia ser redirecionada sem reduzir a produção.%s</p>',
                      paste(linhas, collapse = ""), paste0(txt_ok, txt_info))
   }
   paste0(corpo, if (length(notas)) sprintf('<p class="nota-fonte">Nota: %s.</p>', esc(paste(notas, collapse = "; "))) else "")
@@ -307,17 +346,17 @@ acumulado_publicavel <- function(r) {
 REGRA_TENDENCIA <- "a regra exige ao menos duas transições anuais com IC inteiramente acima ou abaixo de 1"
 texto_evolucao <- function(r) {
   if (!is.finite(r$ec_2022_2025) && !is.finite(r$ec_2020_2025_acum))
-    return("sem transições anuais publicáveis suficientes para calcular a mudança de eficiência.")
+    return("Não há transições anuais publicáveis suficientes para calcular a mudança de eficiência.")
   ten <- r$tendencia_ec_2022_2025
   ten_txt <- if (is.na(ten) || !nzchar(ten)) "" else if (ten == "sem tendência definida")
-    sprintf(" — <b>sem tendência definida</b> <span class=\"sub\">(%s)</span>", REGRA_TENDENCIA) else sprintf(" — <b>%s</b>", esc(ten))
+    sprintf(", <b>sem tendência definida</b> <span class=\"sub\">(%s)</span>", REGRA_TENDENCIA) else sprintf(", com <b>%s</b>", esc(ten))
   # IC omitido quando instável (limite inferior abaixo de −50% ao ano: janela curta ou transição isolada)
   ic_ok <- is.finite(r$ec_ic_inf_2022_2025) && is.finite(r$ec_ic_sup_2022_2025) && r$ec_ic_inf_2022_2025 >= 0.5
   ic <- if (ic_ok) sprintf(" (IC 95%%: %s a %s)", pct_ec(r$ec_ic_inf_2022_2025, ""), pct_ec(r$ec_ic_sup_2022_2025, "")) else ""
-  paste0(if (is.finite(r$ec_2022_2025)) sprintf("Mudança de eficiência (aproximação às melhores práticas), média 2022–2025: <b>%s</b>%s%s.",
-                 pct_ec(r$ec_2022_2025), ic, ten_txt) else "Mudança de eficiência 2022–2025: sem transições publicáveis suficientes.",
-         if (acumulado_publicavel(r)) sprintf(" Acumulada 2020–2025: %s.", pct_ec(r$ec_2020_2025_acum, ""))
-         else if (is.finite(r$ec_2020_2025_acum)) " Acumulada 2020–2025: não publicada (série com ano sem escore ou transição com registro marcado)." else "")
+  paste0(if (is.finite(r$ec_2022_2025)) sprintf("No período 2022–2025, a mudança de eficiência (aproximação às melhores práticas) foi, em média, de <b>%s</b>%s%s.",
+                 pct_ec(r$ec_2022_2025), ic, ten_txt) else "No período 2022–2025, não há transições publicáveis suficientes para calcular a mudança de eficiência.",
+         if (acumulado_publicavel(r)) sprintf(" A variação acumulada no período 2020–2025 foi de %s.", pct_ec(r$ec_2020_2025_acum, ""))
+         else if (is.finite(r$ec_2020_2025_acum)) " A variação acumulada no período 2020–2025 não é publicada, uma vez que a série contém ano sem escore ou transição com registro marcado." else "")
 }
 
 # Sinais em linguagem de gestor (códigos da coluna sinal + flags informativas)
@@ -332,13 +371,16 @@ lista_sinais <- function(r) {
   if (eh1(r$registro_a_verificar) && !"registro_a_verificar" %in% cod) s <- c(EF_SINAIS[["registro_a_verificar"]], s)
   if (eh1(r$flag_polo_ac) && r$modelo %in% c("M2", "M2A"))
     s <- c(s, "Polo de alta complexidade: parte dos recursos atende à alta complexidade; por isso, o escore de média complexidade é conservador.")
-  if (eh1(r$flag_rede_sem_hospital) && r$modelo == "M0") s <- c(s, "Sem hospital SUS no município: internações locais nulas por configuração da rede (meta de internações apenas informativa).")
+  # Versão 0.5: o sinal de rede sem hospital sai da lista quando a nota das metas da ficha já o explica (bloco_metas)
+  if (eh1(r$flag_rede_sem_hospital) && r$modelo == "M0" &&
+      !any(grepl("^sem hospital SUS", metas_publicaveis(r$cod_mun6, r$modelo)$nota_meta)))
+    s <- c(s, "Sem hospital SUS no município: internações locais nulas por configuração da rede (meta de internações apenas informativa).")
   if (eh1(r$flag_visitas_baixas)) s <- c(s, "Visitas domiciliares abaixo do piso informativo (10% da mediana do ano): apenas sinalização, sem efeito no escore.")
   if (eh1(r$flag_sisab_incompleto)) s <- c(s, "Registro do SISAB incompleto no ano: produção da atenção básica anualizada.")
   if (eh1(r$flag_quebra_registro)) s <- c(s, "Quebra de registro na série do município (produção muito abaixo da dos demais anos).")
   if (eh1(r$transicao_marcada)) s <- c(s, "Há transição anual com registro marcado, que fica fora das médias de evolução.")
   s <- unique(s)
-  if (length(s) == 0) return('<p class="ef-linha"><b>Sinais de registro:</b> nenhum sinal neste modelo.</p>')
+  if (length(s) == 0) return('<p class="ef-linha">Não há sinais de registro ou de leitura neste modelo.</p>')
   sprintf('<div class="ef-sinais"><b>Sinais de registro e leitura</b><ul>%s</ul></div>', paste0("<li>", esc(s), "</li>", collapse = ""))
 }
 

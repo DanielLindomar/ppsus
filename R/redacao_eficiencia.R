@@ -47,6 +47,9 @@
 #            do quartil ...>[, e o intervalo de confiança cruza a faixa vizinha]; na região <reg>,
 #            situa-se na faixa <...> | não se atribui posição, por haver poucos municípios avaliados
 #            fora da fronteira na região (n = <n>)."
+#        (4ª rodada) quando a faixa da região coincide com a do estado: "O município situa-se na faixa <...>
+#            tanto no estado[, entre os municípios do grupo “<g>”,] quanto na região <reg>[; no estado, o
+#            intervalo de confiança cruza a faixa vizinha]."
 #   F07  "Municípios de referência plausíveis: <lista>; par mais semelhante: <par>."
 #        -> "Identifica-se o seguinte município de referência plausível: <lista>; o par mais semelhante
 #            é <par>." (no plural quando há mais de um município na lista, com "e" antes do último nome)
@@ -61,6 +64,8 @@
 #   F10  "Sinalizações: <s1>[; <s2>]." -> "A ficha apresenta a(s) seguinte(s) sinalização(ões): ..."
 #        (registro a verificar; sem comparável em algum insumo -> ausência de comparável em algum
 #        insumo; diagnóstico ordem-m -> diagnóstico de robustez de ordem-m; referência com alavancagem)
+#        (4ª rodada) quando o texto traz F05, "ausência de comparável em algum insumo" não se repete em F10;
+#        se for a única sinalização, a frase F10 não é exibida.
 #   F11  "Sem hospital SUS no município: internações locais iguais a zero por configuração da rede
 #         (meta de internações informativa)."
 #        -> "Na ausência de hospital SUS no município, as internações locais são iguais a zero por
@@ -102,8 +107,10 @@
 #         municípios do painel, e <mun>, instalado em <data>, não dispõe de série própria de
 #         internações de residentes (reagregado ao município de origem no Malmquist)."
 #   F21  "Hospital de outra esfera: despesa <s> baixa com internações locais relevantes (nota
-#         informativa; não restringe pares)." -> "Registra-se hospital de outra esfera, com despesa
-#         <s> baixa e internações locais relevantes (nota informativa, que não restringe os pares)."
+#         informativa; não restringe pares)." -> (4ª rodada) "Registra-se hospital mantido por outra esfera
+#         de governo; a despesa municipal na subfunção <s> é baixa, embora as internações locais sejam
+#         relevantes (nota informativa, que não restringe os pares)." (flag_302_outra_esfera de
+#         dea/v2_1/40_fichas_v2.py: despesa 302 do SIOPS municipal baixa com internações locais ≥ mediana)
 #   F22  "Primeiro exercício do município: registro possivelmente parcial (produtos SISAB
 #         anualizados); escore publicável com marca 'parcial'." -> "Por se tratar do primeiro
 #         exercício do município, o registro é possivelmente parcial (produtos do SISAB anualizados),
@@ -151,6 +158,12 @@ REDACAO_TEXTO_PADRAO <- list(
                                ")( \\(o intervalo cruza a faixa vizinha\\))?; na região (.+?): (", .ef_faixas_re,
                                "|sem posição \\(poucos municípios avaliados fora da fronteira na região: n = (\\d+)\\))\\.$"),
        f = function(g) {
+         # faixas coincidentes (4ª rodada): ditas uma só vez, "tanto no estado quanto na região <reg>"
+         if (identical(g[6], g[3]))
+           return(paste0("O município situa-se na faixa ", .ef_faixa_loc[[g[3]]], " tanto no estado",
+                         if (nzchar(g[1])) sprintf(", entre os municípios do grupo “%s”,", g[2]) else "",
+                         " quanto na região ", g[5],
+                         if (nzchar(g[4])) "; no estado, o intervalo de confiança cruza a faixa vizinha" else "", "."))
          estado <- paste0("No estado", if (nzchar(g[1])) sprintf(", entre os municípios do grupo “%s”", g[2]) else "",
                           ", o município situa-se na faixa ", .ef_faixa_loc[[g[3]]],
                           if (nzchar(g[4])) ", e o intervalo de confiança cruza a faixa vizinha" else "")
@@ -207,7 +220,7 @@ REDACAO_TEXTO_PADRAO <- list(
        f = function(g) sprintf("Em %s, %s não é avaliado neste modelo, uma vez que não integra o %s-acesso: o modelo-espelho avalia os %s municípios do painel, e %s, instalado em %s, não dispõe de série própria de internações de residentes (reagregado ao município de origem no Malmquist).",
                                g[2], g[1], g[3], g[4], g[5], g[6])),
   list(id = "F21", re = "^Hospital de outra esfera: despesa (\\d+) baixa com internações locais relevantes \\(nota informativa; não restringe pares\\)\\.$",
-       f = function(g) sprintf("Registra-se hospital de outra esfera, com despesa %s baixa e internações locais relevantes (nota informativa, que não restringe os pares).", g[1])),
+       f = function(g) sprintf("Registra-se hospital mantido por outra esfera de governo; a despesa municipal na subfunção %s é baixa, embora as internações locais sejam relevantes (nota informativa, que não restringe os pares).", g[1])),
   list(id = "F22", re = "^Primeiro exercício do município: registro possivelmente parcial \\(produtos SISAB anualizados\\); escore publicável com marca 'parcial'\\.$",
        f = function(g) "Por se tratar do primeiro exercício do município, o registro é possivelmente parcial (produtos do SISAB anualizados), e o escore é publicável com a marca “parcial”."),
   list(id = "F23", re = "^Flag de rede 'sem hospital SUS' ativa apesar de internações de média complexidade locais registradas no SIH: configuração da rede a verificar na origem \\(CNES/SIH\\)\\.$",
@@ -234,11 +247,20 @@ REDACAO_TEXTO_PADRAO <- list(
 redigir_texto_padrao <- function(x, detalhe = FALSE) {
   res <- lapply(x, function(t) {
     if (is.na(t) || !nzchar(t)) return(list(txt = t, ids = character(0)))
-    r <- lapply(.dividir_frases(t), .redigir_frase, familias = REDACAO_TEXTO_PADRAO)
+    fr <- .dividir_frases(t)
+    r <- lapply(fr, .redigir_frase, familias = REDACAO_TEXTO_PADRAO)
     ids <- vapply(r, function(z) z$id, character(1))
     if (anyNA(ids) && !detalhe) aviso("redação v0.5: frase do texto-padrão sem mapeamento, exibida como está: %s",
-                                      .dividir_frases(t)[is.na(ids)][1])
-    list(txt = paste(vapply(r, function(z) z$txt, character(1)), collapse = " "), ids = ids)
+                                      fr[is.na(ids)][1])
+    # 4ª rodada: depois de F05 (posição na fronteira por ausência de comparável em algum insumo), a mesma sinalização
+    # não se repete em F10; se for a única, a frase F10 sai (as demais sinalizações ficam, na mesma ordem)
+    if (any(ids %in% "F05")) for (k in which(ids %in% "F10")) {
+      s <- strsplit(sub("^Sinalizações: (.+)\\.$", "\\1", fr[k]), "; ", fixed = TRUE)[[1]]
+      s <- s[s != "sem comparável em algum insumo"]
+      r[[k]]$txt <- if (!length(s)) "" else REDACAO_TEXTO_PADRAO[[which(vapply(REDACAO_TEXTO_PADRAO, `[[`, "", "id") == "F10")]]$f(paste(s, collapse = "; "))
+    }
+    txts <- vapply(r, function(z) z$txt, character(1))
+    list(txt = paste(txts[nzchar(txts)], collapse = " "), ids = ids)
   })
   if (detalhe) return(res)
   vapply(res, function(z) z$txt, character(1), USE.NAMES = FALSE)
