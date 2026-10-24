@@ -31,8 +31,14 @@ Q <- EFX_QAC
 mud <- Q |> group_by(regiao_saude) |> arrange(ano) |>
   summarise(q0 = first(quadrante), q1 = last(quadrante), n = sum(quadrante != lag(quadrante), na.rm = TRUE), .groups = "drop")
 mud_ext <- mud[mud$q0 != mud$q1, ]
-frase_mud <- if (nrow(mud_ext) == 0) "nenhuma região terminou o período em quadrante diferente do inicial" else
-  paste(sprintf("%s (%s → %s)", mud_ext$regiao_saude, tolower(QUAD_ROT[mud_ext$q0]), tolower(QUAD_ROT[mud_ext$q1])), collapse = "; ")
+# versão 0.5: mudança de quadrante em prosa ("a região X passou de A a B"), sem seta
+quad_prosa <- c(polo = "polo", `em transição` = "região em transição", `dependente com acesso adequado` = "dependente com acesso adequado",
+                `dependente com baixo acesso` = "dependente com baixo acesso")
+frase_mud <- if (nrow(mud_ext) == 0) "nenhuma região terminou o período em quadrante diferente do inicial" else {
+  m_ <- sprintf("a região %s%s de %s a %s", mud_ext$regiao_saude, c(" passou", rep(",", nrow(mud_ext) - 1)),
+                quad_prosa[mud_ext$q0], quad_prosa[mud_ext$q1])
+  if (length(m_) > 1) m_[length(m_)] <- paste("e", m_[length(m_)])
+  paste(m_, collapse = "; ") }
 F3 <- efx_m3_dados(); F3a <- F3[F3$ano == A, ]
 dist_max <- D[which.max(D$dist_polo_ac_km), ]
 ```
@@ -92,7 +98,7 @@ Figura 1 – Quadrantes acesso × autossuficiência em alta complexidade, por re
 
 #### Quadrante de cada região, `r min(EFX_ANOS)`–`r A`
 
-No período de `r min(EFX_ANOS)` a `r A`, observa-se: `r frase_mud`. As regiões que alternam de quadrante situam-se perto dos limites (mediana do acesso ou 50% e 100% de autossuficiência) e devem ser interpretadas com base na série completa, apresentada na Tabela 2.
+No período de `r min(EFX_ANOS)` a `r A`, `r frase_mud`. As regiões que alternam de quadrante situam-se perto dos limites (mediana do acesso ou 50% e 100% de autossuficiência) e devem ser interpretadas com base na série completa, apresentada na Tabela 2.
 
 **Tabela 2 – Quadrante de cada região de saúde, por ano**
 

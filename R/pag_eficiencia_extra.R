@@ -517,10 +517,14 @@ efx_mq_serie <- function(chaves, titulo = "Aproximação às melhores práticas 
 # Lista dos hospitais com tendência consistente (melhora/piora) em 2022–2025
 efx_h_tendencias <- function(a = EFX_ANO, prefixo = "../municipios/") {
   d <- efx_h_ano(a); d <- d[!is.na(d$tendencia_ec_2022_2025) & grepl("consistente", d$tendencia_ec_2022_2025), ]
-  if (nrow(d) == 0) return(p("Nenhum hospital com tendência consistente em 2022–2025."))
+  if (nrow(d) == 0) return(p("Nenhum hospital apresentou tendência consistente em 2022–2025."))
   d <- d[order(d$tendencia_ec_2022_2025, -d$ec_2022_2025), ]
-  tags$ul(HTML(paste(sprintf('<li><b>%s</b>: %s (<a href="%s%s.html">%s</a>) — aproximação às melhores práticas de %s</li>',
-    esc(d$tendencia_ec_2022_2025), esc(d$nome_hospital), prefixo, d$slug, esc(d$municipio), efx_var(d$ec_2022_2025)), collapse = "")))
+  # versão 0.5: oração introdutória e itens em frase (nomes dos hospitais como no CNES)
+  fim <- c(rep(";", nrow(d) - 1), ".")
+  tagList(
+    p("Os hospitais com tendência consistente são os seguintes, acompanhados da variação anual média da aproximação às melhores práticas:"),
+    tags$ul(HTML(paste(sprintf('<li>%s (<a href="%s%s.html">%s</a>), com <b>%s</b> e aproximação às melhores práticas de %s%s</li>',
+      esc(d$nome_hospital), prefixo, d$slug, esc(d$municipio), esc(d$tendencia_ec_2022_2025), efx_var(d$ec_2022_2025), fim), collapse = ""))))
 }
 
 # ---- 4. Alta complexidade -----------------------------------------------------------------------
@@ -586,17 +590,17 @@ efx_ac_grade_quadrantes <- function(a = EFX_ANO) {
     x <- d[d$acesso_alto == alto & d$autossuf_alta == autos, ]
     x <- x[order(-x$internacoes_ac_res_p1000), ]
     div(class = "efx-quad", h5(titulo), p(texto),
-        if (nrow(x) == 0) p(em(sprintf("Nenhuma região em %d.", a))) else
-          tags$ul(lapply(seq_len(nrow(x)), function(i) tags$li(HTML(sprintf("%s — acesso %s por mil; autossuficiência %s %s",
+        if (nrow(x) == 0) p(em(sprintf("Nenhuma região se situou neste quadrante em %d.", a))) else
+          tags$ul(lapply(seq_len(nrow(x)), function(i) tags$li(HTML(sprintf("%s, com acesso de %s internações de AC por mil habitantes e autossuficiência de %s %s",
             esc(x$regiao_saude[i]), num(x$internacoes_ac_res_p1000[i], 2), efx_pct(x$autossuficiencia_ac_pct[i]), efx_chip_quad(x$quadrante[i])))))))
   }
   tagList(
     p(class = "nota-fonte", sprintf("Nas linhas, a autossuficiência (internações de AC realizadas na região ÷ internações de AC de residentes) é de pelo menos 50%% ou inferior a 50%%; nas colunas, o acesso dos residentes situa-se abaixo ou a partir da mediana estadual de %d (%s internações de AC por mil hab.).", a, num(med, 2))),
     div(class = "efx-quad-grade",
       celula(0, 1, "Autossuficiência ≥ 50% · acesso abaixo da mediana", "A região produz alta complexidade, mas seus residentes têm acesso inferior à mediana."),
-      celula(1, 1, "Autossuficiência ≥ 50% · acesso na mediana ou acima", "Polos (≥ 100%: atendem também outras regiões) e regiões em transição (50% a 100%)."),
-      celula(0, 0, "Autossuficiência < 50% · acesso abaixo da mediana", "Dependentes com baixo acesso: prioridade para regulação e pactuação de fluxos."),
-      celula(1, 0, "Autossuficiência < 50% · acesso na mediana ou acima", "Dependentes com acesso adequado: a rede de referência funciona para seus residentes.")))
+      celula(1, 1, "Autossuficiência ≥ 50% · acesso na mediana ou acima", "Reúnem-se nesta célula os polos, cuja autossuficiência é de pelo menos 100% e que atendem também outras regiões, e as regiões em transição, com autossuficiência de 50% a 100%."),
+      celula(0, 0, "Autossuficiência < 50% · acesso abaixo da mediana", "As regiões dependentes com baixo acesso constituem prioridade para a regulação e a pactuação de fluxos."),
+      celula(1, 0, "Autossuficiência < 50% · acesso na mediana ou acima", "Nas regiões dependentes com acesso adequado, a rede de referência funciona para os seus residentes.")))
 }
 
 # Painel gráfico dos quadrantes: por região (agrupada por quadrante), acesso (ponto) e autossuficiência (barra)
