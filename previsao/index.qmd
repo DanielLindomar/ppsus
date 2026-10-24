@@ -1,6 +1,6 @@
 ---
 title: "Previsão de demanda: internações respiratórias"
-description: "Nowcast e previsão semanal das internações por doenças respiratórias (CID-10 J00–J99) nas 16 regiões de saúde de Mato Grosso, desempenho dos modelos e alerta de alta pressão — resultados preliminares da atividade A5 do Projeto PPSUS-MT"
+description: "*Nowcast* e previsão semanal das internações por doenças respiratórias (CID-10 J00–J99) nas 16 regiões de saúde de Mato Grosso, desempenho dos modelos e alerta de alta pressão — resultados preliminares da atividade A5 do Projeto PPSUS-MT"
 page-layout: full
 toc: false
 ---
@@ -23,8 +23,8 @@ se_ult <- as.integer(sub("/.*", "", ULT_COMPL))
 semanas_atras <- SE_CORTE - se_ult
 frase_sit <- function(cod) switch(cod,
   alta = "a previsão pontual supera o limiar",
-  possivel = "a previsão pontual situa-se abaixo do limiar, mas o limite superior do intervalo de 80% o ultrapassa",
-  abaixo = "a previsão e o limite superior do intervalo de 80% situam-se abaixo do limiar",
+  possivel = "a previsão pontual se situa abaixo do limiar, mas o limite superior do intervalo de 80% o ultrapassa",
+  abaixo = "a previsão e o limite superior do intervalo de 80% se situam abaixo do limiar",
   "o limiar foi suprimido")
 # Baixada Cuiabana: semanas acima do limiar fixo no período de avaliação (série do baseline, sem células suprimidas)
 bx <- SERIE_OBS[SERIE_OBS$otica == "ocorrencia" & SERIE_OBS$cod_regiao == "51002" & SERIE_OBS$ano_se >= 2024, ]
@@ -36,7 +36,7 @@ n_alvos <- nrow(rl)
 alvo_ini <- se_txt(rl$se_alvo[1], rl$ano_se_alvo[1]); alvo_fim <- se_txt(tail(rl$se_alvo, 1), tail(rl$ano_se_alvo, 1))
 ord <- function(nv) MET_RES |> filter(otica == "ocorrencia", nivel == nv, h == 0, modelo %in% MODS_PRINC) |> arrange(mase)
 o_reg <- ord(NIV_REG); o_mt <- ord(NIV_MT)
-lista_mase <- function(o) lista_e_prev(sprintf("%s (%s)", rot_mod(o$modelo), dec2(o$mase)))
+lista_mase <- function(o) lista_e_prev(sprintf("%s (%s)", rot_txt(o$modelo), dec2(o$mase)))
 melhor_reg <- melhor_modelo(NIV_REG); melhor_mt <- melhor_modelo(NIV_MT); melhor_res <- melhor_modelo(NIV_REG, "residencia_total")
 cob <- cobertura_resumo()
 cb <- function(m, nv, col, tp = "empirico") cob[[col]][cob$modelo == m & cob$tipo == tp & cob$nivel == nv][1]
@@ -89,8 +89,9 @@ Comparam-se três tipos de modelos. O primeiro reúne as referências ingênuas,
 
 ```{r}
 tags$details(class = "mais", tags$summary("Ver a descrição de cada modelo"),
-  tags$ul(lapply(c(MODS_PRINC, "hgb_sem_exog", "hgb_pandemia", "sarima_soma_regioes"), function(m)
-    tags$li(tags$b(rot_mod(m)), sprintf(" (%s): %s.", FAM_MOD[[m]], DESC_MOD[[m]])))),
+  tags$ul(lapply(c(MODS_PRINC, "hgb_sem_exog", "hgb_pandemia", "sarima_soma_regioes"), function(m) {
+    art <- if (m %in% FEM_TXT) "A " else "O "
+    tags$li(HTML(sprintf("%s<b>%s</b> %s.", art, desc_nome(m), DESC_MOD[[m]]))) })),
   p(class = "nota-fonte", "Os ", tags$abbr(title = "Configurações dos modelos de aprendizado de máquina (por exemplo, número e profundidade das árvores), escolhidas antes de treinar", tabindex = "0", "hiperparâmetros"), " foram fixados antes da avaliação, sem busca. Os modelos de aprendizado de máquina são globais, isto é, um único modelo para as 16 regiões, e diretos, com um modelo por horizonte; a previsão de Mato Grosso corresponde à soma das previsões das regiões. As variantes HGB sem SRAG e clima, HGB com 2020–2021 e SARIMA (soma das regiões) constituem testes de sensibilidade."))
 ```
 
@@ -111,16 +112,16 @@ div(class = "kpi-grade",
               sprintf("internações J00–J99 na semana · limiar: %s", fmt_lim(mt5$lim)),
               sprintf("intervalo de 80%%: %s · %s", fmt_int_est(p1_5$lo80, p1_5$hi80), sub("^[^ ]+ ", "", STATUS_ROT[[sit_mt5$cod]]))),
   kpi_simples("Última semana completa no SIH", paste("SE", ULT_COMPL), sprintf("até %s · SIH até a competência %s", dmy(FIM_ULT_COMPL), COMPET_SIH),
-              sprintf("SE %d a %d/%d estimadas por nowcast", SE_NOW_INI, SE_CORTE, ANO_CORTE)))
+              HTML(sprintf("SE %d a %d/%d estimadas por <i>nowcast</i>", SE_NOW_INI, SE_CORTE, ANO_CORTE))))
 ```
 
 Em `r dmy(CORTE)`, a previsão para Mato Grosso nas SE `r SE_PREV_INI` a `r SE_PREV_FIM`/`r ANO_CORTE` corresponde a `r lista_e_prev(fmt_est(mt$pv$y_previsto))` internações respiratórias por semana. Considerando-se que o limiar de alta pressão do estado é de `r fmt_lim(mt$lim)` internações por semana, verifica-se que `r frase_sit(sit_mt$cod)`; a situação de Mato Grosso classifica-se, portanto, como **`r tolower(sub("^[^ ]+ ", "", STATUS_ROT[[sit_mt$cod]]))`**. Entre as regiões de saúde, `r if (n_alta) sprintf("%d %s alta pressão prevista (%s)", n_alta, if (n_alta == 1) "tem" else "têm", lista_e_prev(reg_de("alta"))) else "nenhuma tem alta pressão prevista"`, `r n_poss` encontram-se em situação possível (`r lista_e_prev(reg_de("possivel"))`) e `r n_abaixo` permanecem abaixo do limiar nas quatro semanas. Entre os menores de 5 anos, `r if (sum(sit_r5 == "alta")) sprintf("%s %d %s com alta pressão prevista (%s)", if (sum(sit_r5 == "alta") == 1) "identifica-se" else "identificam-se", sum(sit_r5 == "alta"), if (sum(sit_r5 == "alta") == 1) "região" else "regiões", lista_e_prev(reg_de5("alta"))) else "nenhuma região tem alta pressão prevista"`.
 
 ::: {.chave-prev}
-**Como ler a situação.** Em cada região, uma semana é considerada de **alta pressão** quando as internações superam o **limiar**, definido como o percentil 90 (P90) das 104 semanas de 2022–2023 da própria série, isto é, o nível que somente 10% das semanas daqueles dois anos ultrapassaram. Em cada uma das quatro semanas previstas, a situação classifica-se como **▲ alta pressão prevista** quando a previsão pontual supera o limiar; como **△ possível** quando somente o limite superior do intervalo de 80% o supera; e como **▽ abaixo do limiar** nos demais casos. A situação do conjunto das quatro semanas corresponde à mais alta entre elas. Ressalta-se que o limiar é fixo: como as internações cresceram depois de 2023, algumas regiões permanecem acima dele na maior parte das semanas recentes`r if (is.finite(bx_frac)) sprintf(" — na Baixada Cuiabana, em %s das %d semanas de 2024 à SE %s", pct(bx_frac), nrow(bx), ULT_BASE) else ""` —, razão pela qual a regra precisa ser revista com a SES-MT (limiar móvel ou vinculado à capacidade de leitos).
+**Interpretação da situação.** Em cada região, uma semana é considerada de **alta pressão** quando as internações superam o **limiar**, definido como o percentil 90 (P90) das 104 semanas de 2022–2023 da própria série, isto é, o nível que somente 10% das semanas daqueles dois anos ultrapassaram. Em cada uma das quatro semanas previstas, a situação classifica-se como **▲ alta pressão prevista** quando a previsão pontual supera o limiar; como **△ possível** quando somente o limite superior do intervalo de 80% o supera; e como **▽ abaixo do limiar** nos demais casos. A situação do conjunto das quatro semanas corresponde à mais alta entre elas. Ressalta-se que o limiar é fixo: como as internações cresceram depois de 2023, algumas regiões permanecem acima dele na maior parte das semanas recentes`r if (is.finite(bx_frac)) sprintf(" — na Baixada Cuiabana, em %s das %d semanas de 2024 à SE %s", pct(bx_frac), nrow(bx), ULT_BASE) else ""` —, razão pela qual a regra precisa ser revista com a SES-MT (limiar móvel ou vinculado à capacidade de leitos).
 :::
 
-### Série recente e previsão por região
+### Série recente e previsão por região {#gráfico-por-região}
 
 A Figura 2 apresenta as semanas completas desde o início de 2025, a contagem já processada no SIH nas semanas incompletas (linha pontilhada), o *nowcast* dessas semanas e a previsão das quatro semanas seguintes, com intervalos de 80% e 95%. A região pode ser escolhida no seletor ou nos cartões apresentados abaixo do gráfico.
 
@@ -178,10 +179,10 @@ fonte_prev("Nota: previsão encadeada (<i>nowcast</i> LightGBM seguido de LightG
 Os modelos foram avaliados como se tivessem sido utilizados no passado, por meio de validação com origem móvel (*rolling-origin*): a cada semana, cada modelo foi ajustado somente com os dados disponíveis até aquele momento e previu as 1 a 4 semanas seguintes, e as previsões foram comparadas com o que de fato ocorreu em `r n_alvos` semanas-alvo, de `r alvo_ini` a `r alvo_fim`, o que corresponde a duas temporadas respiratórias completas. Nesta etapa, os dados são completos, sem o atraso do SIH, cujo efeito é medido [mais adiante](#atraso).
 
 ::: {.chave-prev}
-**Medidas de erro.** O erro absoluto médio (MAE, do inglês *Mean Absolute Error*) é expresso em internações por semana. O **MASE** corresponde ao MAE dividido pela variação típica de uma semana para a seguinte em 2022–2023 na mesma série (HYNDMAN; KOEHLER, 2006), o que permite comparar e somar regiões de tamanhos diferentes; valores abaixo de 1 indicam que o modelo erra menos do que essa variação típica. O **rMAE** é o MAE do modelo dividido pelo do ingênuo sazonal, de modo que valores abaixo de 1 indicam desempenho superior ao da repetição do ano anterior. O **viés**, por fim, corresponde à média de (previsto − observado), e valores negativos indicam subestimação.
+**Medidas de erro.** O erro absoluto médio (MAE, do inglês *Mean Absolute Error*) é expresso em internações por semana. O **MASE** corresponde ao MAE dividido pela variação típica de uma semana para a seguinte em 2022–2023 na mesma série (HYNDMAN; KOEHLER, 2006), o que permite comparar e somar regiões de tamanhos diferentes; valores abaixo de 1 indicam erro médio inferior a essa variação típica. O **rMAE** é o MAE do modelo dividido pelo do ingênuo sazonal, de modo que valores abaixo de 1 indicam desempenho superior ao da repetição do ano anterior. O **viés**, por fim, corresponde à média de (previsto − observado), e valores negativos indicam subestimação.
 :::
 
-Nas 16 regiões, o menor MASE médio das previsões de 1 a 4 semanas é o do **`r rot_mod(melhor_reg)`**, e a ordenação crescente dos modelos é a seguinte: `r lista_mase(o_reg)`. Em Mato Grosso, o menor MASE também é o do **`r rot_mod(melhor_mt)`** (`r dec2(metr(melhor_mt, NIV_MT))`, com erro médio de `r dec1(metr(melhor_mt, NIV_MT, col = "mae"))` internações por semana), e a ordenação crescente é a seguinte: `r lista_mase(o_mt)`. Os quatro modelos de aprendizado de máquina apresentam MASE menor que o do SARIMA nas regiões; em Mato Grosso, contudo, o *Random Forest* e a rede neural ficam próximos do SARIMA. Isso ocorre porque, sendo o estado a soma das regiões, os erros regionais da mesma semana se compensam ou se acumulam, e, nesses dois modelos, tendem mais a ter o mesmo sinal. Observa-se, ainda, que os modelos de aprendizado subestimaram o observado em média (viés negativo), o que é coerente com o crescimento das internações depois de 2023. Sem SRAG e clima, o MASE médio do HGB nas regiões quase não se altera (`r dec2(metr("hgb"))` com essas variáveis e `r dec2(metr("hgb_sem_exog"))` sem elas), o que sugere que, com dados finais, as variáveis externas acrescentam pouco ao que a própria série informa. Na ótica de residência (internações dos moradores de cada região, em qualquer hospital), o menor MASE médio nas regiões é o do `r rot_mod(melhor_res)` (`r dec2(metr(melhor_res, otica = "residencia_total"))`). A Figura 4 e as Tabelas 3 a 5 detalham esses resultados.
+Nas 16 regiões, o menor MASE médio das previsões de 1 a 4 semanas é o do **`r rot_txt(melhor_reg)`**, e a ordenação crescente dos modelos é a seguinte: `r lista_mase(o_reg)`. Em Mato Grosso, o menor MASE também é o do **`r rot_txt(melhor_mt)`** (`r dec2(metr(melhor_mt, NIV_MT))`, com erro médio de `r dec1(metr(melhor_mt, NIV_MT, col = "mae"))` internações por semana), e a ordenação crescente é a seguinte: `r lista_mase(o_mt)`. Os quatro modelos de aprendizado de máquina apresentam MASE menor que o do SARIMA nas regiões; em Mato Grosso, contudo, o *Random Forest* e a rede neural ficam próximos do SARIMA. Isso ocorre porque, sendo o estado a soma das regiões, os erros regionais da mesma semana se compensam ou se acumulam, e, nesses dois modelos, tendem mais a ter o mesmo sinal. Observa-se, ainda, que os modelos de aprendizado subestimaram o observado em média (viés negativo), o que é coerente com o crescimento das internações depois de 2023. Sem SRAG e clima, o MASE médio do HGB nas regiões quase não se altera (`r dec2(metr("hgb"))` com essas variáveis e `r dec2(metr("hgb_sem_exog"))` sem elas), o que sugere que, com dados finais, as variáveis externas acrescentam pouco ao que a própria série informa. Na ótica de residência (internações dos moradores de cada região, em qualquer hospital), o menor MASE médio nas regiões é o do `r rot_txt(melhor_res)` (`r dec2(metr(melhor_res, otica = "residencia_total"))`). A Figura 4 e as Tabelas 3 a 5 detalham esses resultados.
 
 ::: {.dois-blocos}
 ::: {.bloco}
@@ -255,9 +256,9 @@ fonte_prev(sprintf("Nota: validação com origem móvel, Mato Grosso, alvos de %
            figura = "Figura 5 – Internações observadas e previstas com 1 e 4 semanas de antecedência, Mato Grosso")
 ```
 
-### Significância das diferenças entre os modelos
+### Significância das diferenças entre os modelos {#os-modelos-diferem-de-fato}
 
-Para verificar se as diferenças de desempenho são estatisticamente distinguíveis, emprega-se o **teste de Diebold-Mariano** (DIEBOLD; MARIANO, 1995), com a correção de Harvey, Leybourne e Newbold (1997), que avalia se a diferença de erro entre dois modelos, semana a semana, é maior do que o acaso explicaria; considera-se a diferença clara quando p < 0,05. Os principais resultados são apresentados a seguir.
+Para verificar se as diferenças de desempenho são estatisticamente distinguíveis, emprega-se o **teste de Diebold-Mariano** (DIEBOLD; MARIANO, 1995), com a correção de Harvey, Leybourne e Newbold (1997), que testa se a diferença média de erro entre dois modelos, calculada semana a semana, difere significativamente de zero; considera-se a diferença estatisticamente significativa quando p < 0,05. Os principais resultados são apresentados a seguir.
 
 ```{r}
 tags$ul(lapply(list(c("lgbm", "sarima"), c("lgbm", "hgb"), c("rf", "lgbm"), c("mlp", "lgbm"), c("rf", "sarima"), c("mlp", "sarima"),
@@ -270,7 +271,7 @@ Ressalta-se que os p-valores podem ser otimistas, uma vez que as perdas de seman
 tags$details(class = "mais", tags$summary("Ver todas as comparações (1 e 4 semanas à frente)"),
   p(tags$strong("Tabela 7 – Testes de Diebold-Mariano entre os modelos, previsões de 1 e 4 semanas à frente")),
   tabela_dm(),
-  p(class = "nota-fonte", "Nota: teste de Diebold-Mariano com a correção de Harvey, Leybourne e Newbold, aplicado ao erro absoluto (Mato Grosso) ou ao erro absoluto escalado médio das 16 regiões em cada semana-alvo; “limítrofe” indica p entre 0,05 e 0,10."))
+  p(class = "nota-fonte", "Nota: teste de Diebold-Mariano com a correção de Harvey, Leybourne e Newbold, aplicado ao erro absoluto (Mato Grosso) ou ao erro absoluto escalado médio das 16 regiões em cada semana-alvo; a diferença marginalmente significativa corresponde a p entre 0,05 e 0,10."))
 ```
 
 ### Intervalos de previsão
@@ -294,13 +295,13 @@ Em tempo real, a previsão parte de semanas ainda incompletas. Para reproduzir e
 No que se refere ao *nowcast*, verifica-se que, sem correção, a contagem já processada não se presta à estimação nas semanas recentes (MASE de `r dec2(nwc("parcial", "0-3"))` com 0 a 3 semanas de atraso, quando quase nada foi processado). Nessas semanas, o *nowcast* LightGBM apresenta MASE de `r dec2(nwc("ml", "0-3"))` nas regiões, contra `r dec2(nwc("prior", "0-3"))` do ingênuo sazonal ajustado; com 8 a 11 semanas de atraso, `r dec2(nwc("ml", "8-11"))` (*chain-ladder*: `r dec2(nwc("cl", "8-11"))`). Nas semanas quase completas (24 semanas ou mais de atraso), contudo, a simples correção pela curva de completude (*chain-ladder*) é superior: `r dec2(nwc("cl", "24+"))` contra `r dec2(nwc("ml", "24+"))`, conforme a Tabela 9.
 
 ```{r}
-tags$details(class = "mais", open = NA, tags$summary("MASE do nowcast por faixa de atraso (média das 16 regiões e Mato Grosso)"),
+tags$details(class = "mais", open = NA, tags$summary(HTML("MASE do <i>nowcast</i> por faixa de atraso (média das 16 regiões e Mato Grosso)")),
   p(tags$strong(HTML("Tabela 9 – MASE do <i>nowcast</i> por faixa de atraso e método: média das 16 regiões e Mato Grosso"))),
   tabela_nowcast(),
   p(class = "nota-fonte", HTML("Nota: com 0 a 3 semanas de atraso, a completude esperada fica abaixo de 0,2, e o <i>chain-ladder</i> e o Bornhuetter-Ferguson utilizam o próprio ingênuo sazonal ajustado (valores iguais). A variante LightGBM-BF foi acrescentada depois da observação dos resultados (<i>post hoc</i>) e não constitui o método principal. Cortes de SE 1/2024 a SE 52/2025; cenário principal de reconstrução.")))
 ```
 
-Quanto à previsão encadeada, a previsão das 1 a 4 semanas seguintes ao corte, feita a partir do *nowcast*, apresenta MASE de `r dec2(enc("encadeado_ml"))` nas regiões e `r dec2(enc("encadeado_ml", "MT"))` em Mato Grosso, contra `r dec2(enc("sem_nowcast_lgbm"))` e `r dec2(enc("sem_nowcast_lgbm", "MT"))` do LightGBM sem *nowcast* (que prevê a partir da última semana completa) e `r dec2(enc("ingenuo_sazonal"))` e `r dec2(enc("ingenuo_sazonal", "MT"))` do ingênuo sazonal. Com dados completos — situação inalcançável em tempo real —, o mesmo modelo teria `r dec2(enc("ref_sem_atraso_lgbm_sem_exog"))` e `r dec2(enc("ref_sem_atraso_lgbm_sem_exog", "MT"))`, o que indica que o *nowcast* recupera parte, mas não a totalidade, do desempenho perdido com o atraso. Na medida contínua de erro, o ganho sobre o LightGBM sem *nowcast* é pequeno e, com testes robustos e ajuste para comparações múltiplas, não é estatisticamente claro; ele se manifesta, contudo, na classificação das semanas de alta pressão (seção [Alerta](#alerta)). A previsão encadeada é, ainda, claramente superior ao ingênuo sazonal nas regiões (Tabelas 10 e 11).
+Quanto à previsão encadeada, a previsão das 1 a 4 semanas seguintes ao corte, feita a partir do *nowcast*, apresenta MASE de `r dec2(enc("encadeado_ml"))` nas regiões e `r dec2(enc("encadeado_ml", "MT"))` em Mato Grosso, contra `r dec2(enc("sem_nowcast_lgbm"))` e `r dec2(enc("sem_nowcast_lgbm", "MT"))` do LightGBM sem *nowcast* (que prevê a partir da última semana completa) e `r dec2(enc("ingenuo_sazonal"))` e `r dec2(enc("ingenuo_sazonal", "MT"))` do ingênuo sazonal. Com dados completos — situação inalcançável em tempo real —, o mesmo modelo teria `r dec2(enc("ref_sem_atraso_lgbm_sem_exog"))` e `r dec2(enc("ref_sem_atraso_lgbm_sem_exog", "MT"))`, o que indica que o *nowcast* recupera parte, mas não a totalidade, do desempenho perdido com o atraso. Na medida contínua de erro, o ganho sobre o LightGBM sem *nowcast* é pequeno e, com testes robustos e ajuste para comparações múltiplas, não é estatisticamente significativo; ele se manifesta, contudo, na classificação das semanas de alta pressão (seção [Alerta](#alerta)). A previsão encadeada é, ainda, claramente superior ao ingênuo sazonal nas regiões (Tabelas 10 e 11).
 
 **Tabela 10 – MASE da previsão encadeada por horizonte e método**
 
@@ -340,13 +341,13 @@ O alerta foi avaliado como um problema de **classificação**: para cada região
 ```{r}
 div(class = "kpi-grade",
   kpi_simples("Sensibilidade", pct(al("encadeado_ml", "sensibilidade")), "semanas de alta pressão antecipadas · 16 regiões",
-              sprintf("sem nowcast: %s · chain-ladder: %s", pct(al("sem_nowcast_lgbm", "sensibilidade")), pct(al("encadeado_cl", "sensibilidade")))),
+              HTML(sprintf("sem <i>nowcast</i>: %s · <i>chain-ladder</i>: %s", pct(al("sem_nowcast_lgbm", "sensibilidade")), pct(al("encadeado_cl", "sensibilidade"))))),
   kpi_simples("Especificidade", pct(al("encadeado_ml", "especificidade")), "semanas normais sem aviso",
-              sprintf("sem nowcast: %s", pct(al("sem_nowcast_lgbm", "especificidade")))),
+              HTML(sprintf("sem <i>nowcast</i>: %s", pct(al("sem_nowcast_lgbm", "especificidade"))))),
   kpi_simples("VPP", pct(al("encadeado_ml", "vpp")), "avisos que se confirmaram",
-              sprintf("sem nowcast: %s · chain-ladder: %s", pct(al("sem_nowcast_lgbm", "vpp")), pct(al("encadeado_cl", "vpp")))),
+              HTML(sprintf("sem <i>nowcast</i>: %s · <i>chain-ladder</i>: %s", pct(al("sem_nowcast_lgbm", "vpp")), pct(al("encadeado_cl", "vpp"))))),
   kpi_simples("F1", dec2(al("encadeado_ml", "f1")), "equilíbrio entre sensibilidade e VPP",
-              sprintf("sem nowcast: %s · chain-ladder: %s · ingênuo sazonal: %s", dec2(al("sem_nowcast_lgbm", "f1")), dec2(al("encadeado_cl", "f1")), dec2(al("ingenuo_sazonal", "f1")))),
+              HTML(sprintf("sem <i>nowcast</i>: %s · <i>chain-ladder</i>: %s · ingênuo sazonal: %s", dec2(al("sem_nowcast_lgbm", "f1")), dec2(al("encadeado_cl", "f1")), dec2(al("ingenuo_sazonal", "f1"))))),
   kpi_simples("Aviso antes do início do episódio", pct(an$pct_antes_inicio[1]), sprintf("dos %s episódios regionais de alta pressão", num(an$episodios[1], 0)),
               sprintf("antecedência média dos avisados: %s semanas", dec1(an$antecedencia_media_detectados[1]))))
 ```
@@ -450,7 +451,7 @@ p(class = "nota-fonte", HTML(paste0("Fonte: elaboração do Projeto PPSUS-MT (ve
 
 **Menores de 5 anos.** Trata-se de série menor e mais ruidosa: em várias regiões, as contagens semanais são pequenas e suprimidas, e o limiar de uma região é suprimido. Ademais, a ocupação equivalente de leitos pediátricos não constitui taxa de ocupação.
 
-**Validação e testes.** Os hiperparâmetros são fixos, sem busca, e os intervalos supõem que os erros futuros se assemelham aos da validação. Os testes de Diebold-Mariano podem ser otimistas, e há muitas comparações; parte das escolhas do *nowcast* e do alerta foi declarada como prévia à avaliação, sem possibilidade de verificação, e as variantes acrescentadas depois da observação dos resultados estão marcadas como *post hoc*. Na validação sem atraso, SRAG e clima entram com valores finais, o que pode superestimar o seu ganho.
+**Validação e testes.** Os hiperparâmetros são fixos, sem busca, e os intervalos supõem que os erros futuros se assemelhem aos da validação. Os testes de Diebold-Mariano podem ser otimistas, e há muitas comparações; parte das escolhas do *nowcast* e do alerta foi declarada como prévia à avaliação, sem possibilidade de verificação, e as variantes acrescentadas depois da observação dos resultados estão marcadas como *post hoc*. Na validação sem atraso, SRAG e clima entram com valores finais, o que pode superestimar o seu ganho.
 
 **Unidade de previsão.** A previsão é feita por região de saúde, e não por hospital; a previsão por hospital com leito pediátrico exigiria séries por estabelecimento, mais esparsas.
 

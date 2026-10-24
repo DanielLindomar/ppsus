@@ -78,20 +78,50 @@ FAM_MOD <- c(ingenuo_sazonal = "referência ingênua", ingenuo_sazonal_aj = "ref
              sarima = "estatístico", sarima_soma_regioes = "estatístico (sensibilidade)", hgb = "aprendizado de máquina",
              lgbm = "aprendizado de máquina", rf = "aprendizado de máquina", mlp = "aprendizado de máquina",
              hgb_sem_exog = "aprendizado de máquina (sensibilidade)", hgb_pandemia = "aprendizado de máquina (sensibilidade)")
-DESC_MOD <- c(ingenuo_sazonal = "repete o valor da mesma semana do ano anterior",
-              ingenuo_sazonal_aj = "mesma semana do ano anterior, corrigida pelo crescimento recente",
-              ingenuo_ultima = "repete o valor da última semana conhecida",
-              sarima = "modelo estatístico sazonal ajustado a cada série",
-              sarima_soma_regioes = "soma das previsões SARIMA das 16 regiões",
-              hgb = "árvores de decisão em sequência (scikit-learn), com SRAG, clima e calendário",
-              lgbm = "árvores de decisão em sequência (LightGBM), mesmas variáveis do HGB",
-              rf = "média de 500 árvores de decisão, mesmas variáveis do HGB",
-              mlp = "perceptron com duas camadas ocultas, média de 5 redes, mesmas variáveis do HGB",
-              hgb_sem_exog = "HGB só com a própria série e o calendário",
-              hgb_pandemia = "HGB treinado desde 2020, com indicadores da pandemia")
+# Descrição de cada modelo em oração completa (v0.5): sujeito (artigo e nome em negrito) seguido deste predicado
+DESC_MOD <- c(ingenuo_sazonal = "constitui a referência ingênua que repete o valor da mesma semana do ano anterior",
+              ingenuo_sazonal_aj = "constitui a referência ingênua que repete o valor da mesma semana do ano anterior, corrigido pelo crescimento recente",
+              ingenuo_ultima = "constitui a referência ingênua que repete o valor da última semana conhecida",
+              sarima = "é o modelo estatístico sazonal, ajustado a cada série",
+              sarima_soma_regioes = "constitui a variante de sensibilidade do modelo estatístico que soma as previsões SARIMA das 16 regiões",
+              hgb = "é um modelo de aprendizado de máquina que combina árvores de decisão em sequência, na implementação do scikit-learn, e utiliza a SRAG, o clima e o calendário",
+              lgbm = "é um modelo de aprendizado de máquina que combina árvores de decisão em sequência, na implementação LightGBM, com as mesmas variáveis do HGB",
+              rf = "é um modelo de aprendizado de máquina que calcula a média de 500 árvores de decisão, com as mesmas variáveis do HGB",
+              mlp = "é um modelo de aprendizado de máquina do tipo perceptron com duas camadas ocultas, que calcula a média de 5 redes, com as mesmas variáveis do HGB",
+              hgb_sem_exog = "constitui a variante de sensibilidade do aprendizado de máquina em que o HGB utiliza somente a própria série e o calendário",
+              hgb_pandemia = "constitui a variante de sensibilidade do aprendizado de máquina em que o HGB é treinado desde 2020, com indicadores da pandemia")
 MODS_PRINC <- c("ingenuo_sazonal", "ingenuo_ultima", "sarima", "hgb", "lgbm", "rf", "mlp")
 MOD_REF <- "lgbm"
 rot_mod <- function(m) ifelse(m %in% names(ROT_MOD), ROT_MOD[m], m)
+# Rótulo de interface com os termos estrangeiros em itálico, para os títulos em HTML (v0.5)
+rot_mod_html <- function(m) gsub("(Gradient boosting|Random Forest)", "<i>\\1</i>", esc(rot_mod(m)))
+# Nome do modelo como sujeito da descrição (inicial minúscula nos substantivos comuns)
+desc_nome <- function(m) {
+  x <- rot_mod_html(m)
+  if (m %in% c("ingenuo_sazonal", "ingenuo_sazonal_aj", "ingenuo_ultima", "hgb", "mlp")) x <- sub("^(<i>)?([[:upper:]])", "\\1\\L\\2", x, perl = TRUE)
+  x
+}
+# Rótulos para a prosa (v0.5): sem parênteses internos, com os termos estrangeiros em itálico (HTML) e com o gênero
+# do artigo; html = FALSE devolve o texto sem marcação (células de tabela)
+ROT_TXT <- c(ingenuo_sazonal = "ingênuo sazonal", ingenuo_sazonal_aj = "ingênuo sazonal ajustado",
+             ingenuo_ultima = "persistência da última semana", sarima = "SARIMA", sarima_soma_regioes = "SARIMA pela soma das regiões",
+             hgb = "HGB", lgbm = "LightGBM", rf = "<i>Random Forest</i>", mlp = "rede neural MLP",
+             hgb_sem_exog = "HGB sem SRAG e clima", hgb_pandemia = "HGB com 2020–2021",
+             ref_sem_atraso_lgbm_sem_exog = "referência sem atraso com as mesmas variáveis",
+             baseline_sem_atraso_lgbm = "referência sem atraso do LightGBM do <i>baseline</i>",
+             encadeado_ml = "previsão encadeada principal com <i>nowcast</i> LightGBM",
+             encadeado_cl = "previsão encadeada com <i>nowcast</i> <i>chain-ladder</i>",
+             encadeado_ml_bf = "previsão encadeada com <i>nowcast</i> LightGBM-BF (variante <i>post hoc</i>)",
+             sem_nowcast_lgbm = "LightGBM sem <i>nowcast</i>",
+             baseline_sem_atraso_ingenuo_sazonal = "referência sem atraso do ingênuo sazonal")
+FEM_TXT <- c("ingenuo_ultima", "mlp", "ref_sem_atraso_lgbm_sem_exog", "baseline_sem_atraso_lgbm", "encadeado_ml", "encadeado_cl",
+             "encadeado_ml_bf", "baseline_sem_atraso_ingenuo_sazonal")
+rot_txt <- function(m, html = TRUE) { x <- ifelse(m %in% names(ROT_TXT), ROT_TXT[m], m); if (html) x else gsub("<[^>]+>", "", x) }
+# Artigo definido ("o"/"a") ou contração com "a" ("ao"/"à") antes do rótulo da prosa
+art_txt <- function(m, html = TRUE, prep = FALSE) {
+  fem <- m %in% FEM_TXT
+  paste0(if (prep) ifelse(fem, "à ", "ao ") else ifelse(fem, "a ", "o "), rot_txt(m, html))
+}
 
 # Nowcast, previsão encadeada e alerta
 ROT_NC <- c(parcial = "Contagem já processada, sem correção", prior = "Ingênuo sazonal ajustado no corte",
@@ -255,9 +285,10 @@ svg_tempo <- function(series = list(), faixas = list(), hlinhas = list(), vlinha
   for (z in zonas) {
     x0 <- max(sx(z$x0), pl); x1 <- min(sx(z$x1), w - pr); if (x1 <= x0) next
     out <- c(out, sprintf('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>', x0, pt, x1 - x0, h - pt - pb, z$cor))
-    if (!mini && !is.null(z$rot)) out <- c(out, sprintf('<text x="%.1f" y="%d" font-size="%d" fill="#4b5563" text-anchor="%s">%s</text>',
+    if (!mini && !is.null(z$rot)) out <- c(out, sprintf('<text x="%.1f" y="%d" font-size="%d" fill="#4b5563" text-anchor="%s"%s>%s</text>',
                                                          if (isTRUE(z$fim)) x1 - 3 else (x0 + x1) / 2, h - pb - 6, fonte_px - 1,
-                                                         if (isTRUE(z$fim)) "end" else "middle", esc(z$rot)))
+                                                         if (isTRUE(z$fim)) "end" else "middle",
+                                                         if (isTRUE(z$italico)) ' font-style="italic"' else "", esc(z$rot)))
   }
   # grade e eixos
   if (!mini) {
@@ -303,14 +334,15 @@ svg_tempo <- function(series = list(), faixas = list(), hlinhas = list(), vlinha
   }
   svg <- sprintf('<svg viewBox="0 0 %d %d" role="img" aria-label="%s"><title>%s</title>%s</svg>', w, h, esc(titulo), esc(titulo), paste(out, collapse = ""))
   if (mini) return(svg)
-  # legenda
+  # legenda (nome_html, quando houver: o mesmo nome com os termos estrangeiros em itálico)
+  nome_leg <- function(x) if (!is.null(x$nome_html)) x$nome_html else esc(x$nome)
   leg <- c(
     vapply(Filter(function(s) !isFALSE(s$leg), series), function(s) sprintf(
       '<span class="leg-item"><svg width="24" height="10" aria-hidden="true"><line x1="0" x2="24" y1="5" y2="5" stroke="%s" stroke-width="%s"%s/></svg>%s</span>',
-      s$cor, s$larg, if (!is.null(s$dash) && nzchar(s$dash)) sprintf(' stroke-dasharray="%s"', s$dash) else "", esc(s$nome)), ""),
+      s$cor, s$larg, if (!is.null(s$dash) && nzchar(s$dash)) sprintf(' stroke-dasharray="%s"', s$dash) else "", nome_leg(s)), ""),
     vapply(Filter(function(f) !isFALSE(f$leg), faixas), function(f) sprintf(
       '<span class="leg-item"><svg width="16" height="12" aria-hidden="true"><rect width="16" height="12" fill="%s" fill-opacity="%.2f"/></svg>%s</span>',
-      f$cor, f$opac, esc(f$nome)), ""),
+      f$cor, f$opac, nome_leg(f)), ""),
     vapply(Filter(function(l) !is.null(l$leg), hlinhas), function(l) sprintf(
       '<span class="leg-item"><svg width="24" height="10" aria-hidden="true"><line x1="0" x2="24" y1="5" y2="5" stroke="%s" stroke-width="1.6" stroke-dasharray="%s"/></svg>%s</span>',
       l$cor, l$dash, esc(l$leg)), ""))
@@ -356,16 +388,18 @@ grafico_serie <- function(cod, alvo = "j00_j99", mini = FALSE) {
   series <- list(
     list(nome = "Internações (semanas completas)", x = mid(ob$inicio_se), y = ob$internacoes, cor = COR_OBS, larg = if (mini) 1.4 else 2),
     list(nome = "Já processado no SIH (incompleto)", x = mid(nc$inicio_se), y = nc$parcial_processado, cor = COR_PARC, larg = if (mini) 1 else 1.4, dash = "2,3", leg = !mini),
-    list(nome = "Nowcast (estimativa das semanas incompletas)", x = x_nc, y = y_nc, cor = COR_PREV, larg = if (mini) 1.4 else 2, dash = "5,3"),
+    list(nome = "Nowcast (estimativa das semanas incompletas)", nome_html = "<i>Nowcast</i> (estimativa das semanas incompletas)",
+         x = x_nc, y = y_nc, cor = COR_PREV, larg = if (mini) 1.4 else 2, dash = "5,3"),
     list(nome = "Previsão das próximas 4 semanas", x = x_pv, y = y_pv, cor = COR_PREV, larg = if (mini) 1.8 else 2.6, pontos = !mini))
   if (mini) series[[2]] <- NULL
   faixas <- list(
-    list(nome = "Intervalo de 80% (nowcast e previsão)", x = c(mid(nc$inicio_se), fx_pv), lo = c(nc$lo80, ult_nc$lo80, pv$lo80),
+    list(nome = "Intervalo de 80% (nowcast e previsão)", nome_html = "Intervalo de 80% (<i>nowcast</i> e previsão)",
+         x = c(mid(nc$inicio_se), fx_pv), lo = c(nc$lo80, ult_nc$lo80, pv$lo80),
          hi = c(nc$hi80, ult_nc$hi80, pv$hi80), cor = COR_PREV, opac = 0.22))
   if (!mini) faixas <- c(list(list(nome = "Intervalo de 95% (previsão)", x = mid(pv$inicio_se), lo = pv$lo95, hi = pv$hi95, cor = COR_PREV, opac = 0.10)), faixas)
   hl <- list(list(y = lim, cor = COR_LIM, dash = "6,4", rot = if (is.finite(lim)) paste0("limiar P90: ", num(lim, 1)) else NULL,
                   leg = "Limiar de alta pressão (P90 de 2022–2023)"))
-  zonas <- list(list(x0 = b1, x1 = b2, cor = "#f3f4f6", rot = if (!mini) "nowcast"), list(x0 = b2, x1 = xfim, cor = "#e3eef6", rot = if (!mini) "previsão", fim = TRUE))
+  zonas <- list(list(x0 = b1, x1 = b2, cor = "#f3f4f6", rot = if (!mini) "nowcast", italico = TRUE), list(x0 = b2, x1 = xfim, cor = "#e3eef6", rot = if (!mini) "previsão", fim = TRUE))
   vl <- if (mini) list() else list(list(x = b1, rot = paste0("última semana completa (", ULT_COMPL, ")"), cor = "#6b7280", esq = TRUE),
                                    list(x = b2, rot = paste0("hoje (", dm(CORTE), ")"), cor = "#374151", esq = TRUE))
   ymax <- max(c(ob$internacoes, nc$hi80, nc$parcial_processado, pv$hi80, if (!mini) pv$hi95, lim), na.rm = TRUE)
@@ -568,8 +602,10 @@ grafico_validacao <- function(m) {
   dd <- left_join(ob, select(h1, inicio_se_alvo, p1 = y_prev), by = "inicio_se_alvo") |> left_join(select(h4, inicio_se_alvo, p4 = y_prev), by = "inicio_se_alvo")
   svg_tempo(series = list(
     list(nome = "Observado", x = ob$inicio_se_alvo + 3, y = ob$y_obs, cor = COR_OBS, larg = 2.2),
-    list(nome = paste0(rot_mod(m), ": 1 semana à frente"), x = h1$inicio_se_alvo + 3, y = h1$y_prev, cor = COR_PREV, larg = 1.6),
-    list(nome = paste0(rot_mod(m), ": 4 semanas à frente"), x = h4$inicio_se_alvo + 3, y = h4$y_prev, cor = COR_LIM, larg = 1.6, dash = "5,3")),
+    list(nome = paste0(rot_mod(m), ": 1 semana à frente"), nome_html = paste0(rot_mod_html(m), ": 1 semana à frente"),
+         x = h1$inicio_se_alvo + 3, y = h1$y_prev, cor = COR_PREV, larg = 1.6),
+    list(nome = paste0(rot_mod(m), ": 4 semanas à frente"), nome_html = paste0(rot_mod_html(m), ": 4 semanas à frente"),
+         x = h4$inicio_se_alvo + 3, y = h4$y_prev, cor = COR_LIM, larg = 1.6, dash = "5,3")),
     dicas = tibble::tibble(x = dd$inicio_se_alvo + 3, txt = sprintf("%s: observado %s · 1 sem.: %s · 4 sem.: %s",
                                                                     se_txt(dd$se_alvo, dd$ano_se_alvo), fmt_obs(dd$y_obs), fmt_est(dd$p1), fmt_est(dd$p4))),
     titulo = sprintf("Validação em Mato Grosso: internações observadas e previstas pelo modelo %s com 1 e 4 semanas de antecedência", rot_mod(m)), h = 280)
@@ -593,22 +629,25 @@ grafico_historico <- function() {
             titulo = sprintf("Internações por doenças respiratórias (J00–J99) por semana epidemiológica, Mato Grosso, SE 1/2020 a SE %s", ULT_BASE), h = 250)
 }
 
-# Testes de Diebold-Mariano em linguagem simples
-dm_frase <- function(estat, p, a, b, limiar_limitrofe = 0.10) {
+# Testes de Diebold-Mariano em linguagem técnica (v0.5). a e b são os códigos dos modelos; o vencedor é o de menor perda
+# (estatística negativa = a). html = TRUE: rótulos com itálico e "<" escapado (lista em HTML); FALSE: texto simples (tabelas)
+dm_frase <- function(estat, p, a, b, html = TRUE, limiar_limitrofe = 0.10) {
+  pt <- if (html) esc(p_txt(p)) else p_txt(p)
+  v <- ifelse(estat < 0, a, b)
   ifelse(is.na(p), "—",
-  ifelse(p < 0.05, sprintf("%s erra menos (%s)", ifelse(estat < 0, a, b), p_txt(p)),
-  ifelse(p < limiar_limitrofe, sprintf("limítrofe (%s), a favor de %s", p_txt(p), ifelse(estat < 0, a, b)),
-         sprintf("sem diferença clara (%s)", p_txt(p)))))
+  ifelse(p < 0.05, sprintf("%s apresenta erro significativamente menor (%s)", art_txt(v, html), pt),
+  ifelse(p < limiar_limitrofe, sprintf("diferença marginalmente significativa (%s), favorável %s", pt, art_txt(v, html, prep = TRUE)),
+         sprintf("diferença não significativa (%s)", pt))))
 }
-dm_linha <- function(a, b, nivel, h) {
+dm_linha <- function(a, b, nivel, h, html = TRUE) {
   x <- DM_BASE[DM_BASE$otica == "ocorrencia" & DM_BASE$modelo_a == a & DM_BASE$modelo_b == b & DM_BASE$nivel == nivel & DM_BASE$h == h, ]
   if (!nrow(x)) return(NA_character_)
-  dm_frase(x$estat_hln[1], x$p_valor[1], rot_mod(a), rot_mod(b))
+  dm_frase(x$estat_hln[1], x$p_valor[1], a, b, html)
 }
-# Frase "A × B — nas 16 regiões: ... ; em MT: ..."
+# Frase "A × B. Nas 16 regiões, com 1 semana de antecedência, ...; com 4 semanas, .... Em Mato Grosso, ..."
 dm_resumo <- function(a, b) {
-  f <- function(nv) esc(sprintf("com 1 semana, %s; com 4 semanas, %s", dm_linha(a, b, nv, 1), dm_linha(a, b, nv, 4)))
-  sprintf("<b>%s × %s</b> — nas 16 regiões: %s. Em Mato Grosso: %s.", esc(rot_mod(a)), esc(rot_mod(b)), f("16 regioes"), f("MT"))
+  f <- function(nv) sprintf("com 1 semana de antecedência, %s; com 4 semanas, %s", dm_linha(a, b, nv, 1), dm_linha(a, b, nv, 4))
+  sprintf("<b>%s × %s</b>. Nas 16 regiões, %s. Em Mato Grosso, %s.", rot_mod_html(a), rot_mod_html(b), f("16 regioes"), f("MT"))
 }
 tabela_dm <- function() {
   x <- DM_BASE[DM_BASE$otica == "ocorrencia" & DM_BASE$h %in% c(1, 4), ]
@@ -616,7 +655,7 @@ tabela_dm <- function() {
   t <- bind_rows(lapply(seq_len(nrow(pares)), function(i) { a <- pares$modelo_a[i]; b <- pares$modelo_b[i]
     bind_rows(lapply(c("16 regioes", "MT"), function(nv) tibble::tibble(
       Comparação = sprintf("%s × %s", rot_mod(a), rot_mod(b)), Onde = if (nv == "MT") "Mato Grosso" else "16 regiões (média)",
-      h1 = dm_linha(a, b, nv, 1), h4 = dm_linha(a, b, nv, 4)))) }))
+      h1 = dm_linha(a, b, nv, 1, html = FALSE), h4 = dm_linha(a, b, nv, 4, html = FALSE)))) }))
   reactable(t, compact = TRUE, striped = TRUE, searchable = TRUE, defaultPageSize = 10, showPageSizeOptions = TRUE, pageSizeOptions = c(10, 20, 40),
             columns = list(Comparação = colDef(minWidth = 220), Onde = colDef(minWidth = 110),
                            h1 = colDef(name = "1 semana à frente", minWidth = 200), h4 = colDef(name = "4 semanas à frente", minWidth = 200)))
@@ -625,7 +664,7 @@ tabela_dm <- function() {
 dm_enc_linha <- function(a, b, nivel, h, alvo = "j00_j99") {
   x <- DM_ENC[DM_ENC$cenario == "S2" & DM_ENC$alvo == alvo & DM_ENC$modelo_a == a & DM_ENC$modelo_b == b & DM_ENC$nivel == nivel & DM_ENC$h == h, ]
   if (!nrow(x)) return(NA_character_)
-  paste0(dm_frase(x$estat_hln_nw[1], x$p_valor_nw[1], rot_enc(a), rot_enc(b)), "; após ajuste de Holm, ", p_txt(x$p_holm_nw[1]))
+  paste0(dm_frase(x$estat_hln_nw[1], x$p_valor_nw[1], a, b, html = FALSE), "; após ajuste de Holm, ", p_txt(x$p_holm_nw[1]))
 }
 tabela_dm_enc <- function(alvo = "j00_j99") {
   x <- DM_ENC[DM_ENC$cenario == "S2" & DM_ENC$alvo == alvo & DM_ENC$h %in% c(1, 4), ]
@@ -793,9 +832,10 @@ fonte_prev <- function(extra = NULL, figura = NULL) p(class = "nota-fonte", HTML
   "</code> e <code>", VERSAO_NC, "</code>), com base no SIH/SUS (DATASUS): AIH tipo 1, diagnóstico principal no capítulo J da CID-10 (J00–J99), ",
   "por semana epidemiológica da internação e região de saúde do hospital (ótica de ocorrência). ", if (!is.null(extra)) extra else "")))
 
+# Descrições em HTML (termos estrangeiros em itálico; v0.5)
 ARQS_PREV <- c(
   "previsao_proximas_semanas.csv" = "previsão das 4 semanas a partir da semana de corte, por região, faixa etária e método, com limiar e situação",
-  "previsao_nowcast_hoje.csv" = "nowcast das semanas ainda incompletas no SIH, por região, faixa etária e método",
+  "previsao_nowcast_hoje.csv" = "<i>nowcast</i> das semanas ainda incompletas no SIH, por região, faixa etária e método",
   "previsao_serie_semanal_carga_2026_10_17.csv" = "série semanal completa na carga do SIH de 17/10/2026 (2024 a 2026)",
   "previsao_serie_semanal_2020_2026.csv" = "série semanal observada desde 2020, nas óticas de ocorrência e de residência",
   "previsao_metricas_modelos.csv" = "erro dos modelos por horizonte (MT e média das regiões)",
@@ -803,8 +843,8 @@ ARQS_PREV <- c(
   "previsao_validacao_mt.csv" = "observado e previsto na validação, Mato Grosso",
   "previsao_testes_dm.csv" = "testes de Diebold-Mariano entre os modelos",
   "previsao_cobertura_intervalos.csv" = "cobertura e largura dos intervalos de previsão",
-  "previsao_baseline_4sem.csv" = "previsões do baseline para as SE 13 a 16/2026",
-  "previsao_metricas_nowcast.csv" = "erro do nowcast por faixa de atraso",
+  "previsao_baseline_4sem.csv" = "previsões do <i>baseline</i> para as SE 13 a 16/2026",
+  "previsao_metricas_nowcast.csv" = "erro do <i>nowcast</i> por faixa de atraso",
   "previsao_metricas_encadeado.csv" = "erro da previsão encadeada a partir da semana de corte",
   "previsao_testes_dm_encadeado.csv" = "testes de Diebold-Mariano da previsão encadeada",
   "previsao_metricas_menor5.csv" = "erro dos modelos para menores de 5 anos",
@@ -815,5 +855,5 @@ ARQS_PREV <- c(
   "previsao_dicionario.csv" = "dicionário: conteúdo, colunas, supressão e status de cada arquivo")
 lista_arquivos_prev <- function(prefixo = "../arquivos/dados/") {
   ok <- file.exists(file.path(RAIZ, "arquivos", "dados", names(ARQS_PREV)))
-  tags$ul(lapply(names(ARQS_PREV)[ok], function(f) tags$li(a(href = paste0(prefixo, f), f), " — ", ARQS_PREV[[f]])))
+  tags$ul(lapply(names(ARQS_PREV)[ok], function(f) tags$li(a(href = paste0(prefixo, f), f), " — ", HTML(ARQS_PREV[[f]]))))
 }
