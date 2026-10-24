@@ -1,6 +1,7 @@
 <script>
 // Siglas explicadas ao passar o cursor (ou tocar, no celular). Aplica-se a parágrafos, listas,
-// legendas e rótulos dos cartões. A primeira ocorrência de cada sigla em cada bloco recebe <abbr title>.
+// legendas e rótulos dos cartões. A primeira ocorrência de cada sigla em cada bloco recebe <abbr title>:
+// cada trecho de texto é percorrido até o fim, e não só até a primeira sigla encontrada nele.
 (function () {
   var G = {
     "SUS": "Sistema Único de Saúde",
@@ -40,6 +41,8 @@
     "par de referência": "Unidade da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, das quais as fichas mostram as 3 de maior peso",
     "pares de referência": "Unidades da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, das quais as fichas mostram as 3 de maior peso",
     "Municípios de referência plausíveis": "Pares de referência: municípios da fronteira, com registro plausível, cujas práticas compõem a meta; o peso indica a participação de cada um",
+    "municípios de referência plausíveis": "Pares de referência: municípios da fronteira, com registro plausível, cujas práticas compõem a meta; o peso indica a participação de cada um",
+    "município de referência plausível": "Pares de referência: municípios da fronteira, com registro plausível, cujas práticas compõem a meta; o peso indica a participação de cada um",
     "meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
     "Meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
     "meta intermediária": "Metade do caminho entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
@@ -62,6 +65,7 @@
     "referência com alavancagem": "Unidade da fronteira com supereficiência muito alta (acima de 2), que pesa demais na fronteira e, por isso, não é utilizada como par de outras",
     "Referência com grande peso na fronteira": "Unidade da fronteira com supereficiência muito alta (acima de 2), que pesa demais na fronteira e, por isso, não é utilizada como par de outras",
     "diagnóstico ordem-m": "Teste de robustez: a unidade situa-se acima das melhores práticas de amostras de unidades comparáveis; sinal informativo, que não impede o uso como referência",
+    "diagnóstico de robustez de ordem-m": "Teste de robustez: a unidade situa-se acima das melhores práticas de amostras de unidades comparáveis; sinal informativo, que não impede o uso como referência",
     "ordem-m": "Fronteira parcial de ordem m: compara a unidade com amostras de m unidades comparáveis, o que reduz a influência de valores extremos",
     "TMI": "Taxa de mortalidade infantil: óbitos de menores de 1 ano por mil nascidos vivos",
     "PPSUS": "Programa Pesquisa para o SUS: gestão compartilhada em saúde",
@@ -117,6 +121,7 @@
   };
   var chaves = Object.keys(G).sort(function (a, b) { return b.length - a.length; });
   var re = new RegExp("(^|[^\\wÀ-ú-])(" + chaves.map(function (k) { return k.replace(/[.*+?^${}()|[\]\\-]/g, "\\$&"); }).join("|") + ")(?![\\wÀ-ú-])");
+  var reG = new RegExp(re.source, "g");
   function marcar(el) {
     var usados = {};
     var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
@@ -128,11 +133,16 @@
     });
     var nos = []; while (w.nextNode()) nos.push(w.currentNode);
     nos.forEach(function (n) {
-      var m = n.nodeValue.match(re); if (!m || usados[m[2]]) return;
-      usados[m[2]] = true;
-      var i = m.index + m[1].length, depois = n.splitText(i); depois.splitText(m[2].length);
-      var ab = document.createElement("abbr"); ab.title = G[m[2]]; ab.tabIndex = 0; ab.textContent = m[2];
-      depois.parentNode.replaceChild(ab, depois);
+      while (n) {
+        var m, achado = null; reG.lastIndex = 0;
+        while ((m = reG.exec(n.nodeValue)) !== null) { if (!usados[m[2]]) { achado = m; break; } }
+        if (!achado) return;
+        usados[achado[2]] = true;
+        var i = achado.index + achado[1].length, depois = n.splitText(i), resto = depois.splitText(achado[2].length);
+        var ab = document.createElement("abbr"); ab.title = G[achado[2]]; ab.tabIndex = 0; ab.textContent = achado[2];
+        depois.parentNode.replaceChild(ab, depois);
+        n = resto;
+      }
     });
   }
   document.addEventListener("DOMContentLoaded", function () {
