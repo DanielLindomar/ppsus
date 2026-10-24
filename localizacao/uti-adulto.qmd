@@ -91,7 +91,7 @@ tabela_acesso_regioes(P)
 ```
 
 ::: {.nota-fonte}
-Fonte: elaboração do Projeto PPSUS-MT. População-alvo: `r INFO$pop` (RIPSA/SVS, `r ANO_OFERTA`). Leitos: `r INFO$fonte_oferta`. Demanda e deslocamento: `r INFO$fonte_dem`, 2024–2025. Nota: índice E2SFCA com decaimento gaussiano até 60 ou 120 minutos de tempo rodoviário (média ponderada pela população-alvo; Mato Grosso = 1); tempo médio ponderado somente pelos atendidos em Mato Grosso. "—" no próprio município indica região sem UTI adulto SUS, sem internação no próprio município.
+Fonte: elaboração do Projeto PPSUS-MT. População-alvo: `r INFO$pop`, segundo as estimativas da RIPSA e da Secretaria de Vigilância em Saúde (RIPSA/SVS) para `r ANO_OFERTA`. Leitos: `r INFO$fonte_oferta`. Demanda e deslocamento: `r INFO$fonte_dem`, 2024–2025. Nota: índice E2SFCA com decaimento gaussiano até 60 ou 120 minutos de tempo rodoviário (média ponderada pela população-alvo; Mato Grosso = 1); tempo médio ponderado somente pelos atendidos em Mato Grosso. "—" no próprio município indica região sem UTI adulto SUS, sem internação no próprio município.
 :::
 
 ### Por município de residência
@@ -139,9 +139,9 @@ Fonte: elaboração do Projeto PPSUS-MT, com base no SIH/SUS 2020–2025, na pop
 
 ## Validação dos modelos {#validacao}
 
-Antes de utilizar um modelo para comparar cenários de localização, é necessário conhecer a magnitude de seus erros. Para tanto, os modelos foram ajustados com os dados de 2020 a 2023 e testados em 2024 e 2025, anos que não utilizaram.
+Antes de utilizar um modelo para comparar cenários de localização, é necessário conhecer a magnitude de seus erros. Para tanto, os modelos foram ajustados com os dados de 2020 a 2023 e testados em 2024 e 2025, anos não utilizados no ajuste.
 
-### Demanda por município
+### Demanda por município {#quanta-demanda-haverá-por-município}
 
 **Tabela 5 – Erro dos modelos de demanda de UTI adulto no período de teste**
 
@@ -151,7 +151,7 @@ tabela_valid_demanda(P)
 
 A demanda de UTI cresceu entre 2023 e 2025, e todos os modelos sem tendência a subestimaram no teste (erro do total de Mato Grosso entre `r paste0("−", num(abs(max(sem_anc$erro_total_pct)), 1), "%")` e `r paste0("−", num(abs(min(sem_anc$erro_total_pct)), 1), "%")`, sem ancoragem), ao passo que o modelo com tendência linear extrapolou em excesso (`r paste0("+", num(tend$erro_total_pct, 1), "%")`). Adotou-se a **taxa histórica ancorada** (erro de `r pct_l(w_esc)` por município), escolhida no próprio teste pela regra de parcimônia; as métricas são, por essa razão, otimistas.
 
-### Escolha do hospital
+### Escolha do hospital {#para-onde-os-pacientes-vão-escolha-do-hospital}
 
 **Tabela 6 – Desempenho dos modelos de escolha do hospital no período de teste**
 
@@ -161,7 +161,7 @@ tabela_valid_escolha(P)
 
 Sem mudança na oferta, repetir as participações do ano anterior (persistência) é uma regra dificilmente superada: CPC de `r num(cpc("persistencia_2023"), 3)`, contra `r num(cpc("pivo_mnl"), 3)` do pivô do modelo gravitacional, utilizado nos cenários. Na UTI, a distância tem peso menor que no parto, porque a oferta é rara e o paciente é regulado, ao passo que o pertencimento à mesma região de saúde tem peso elevado.
 
-### Mudanças de oferta (experimentos naturais)
+### Mudanças de oferta (experimentos naturais) {#quando-a-oferta-muda-experimentos-naturais}
 
 Entre 2021 e 2023, com a COVID-19, municípios abriram, ampliaram, reduziram ou fecharam UTI adulto. Para cada evento, os modelos foram ajustados somente com os anos anteriores e comparados ao que de fato ocorreu com os pacientes dos municípios afetados, conforme a Figura 3 e as Tabelas 7 e 8.
 
@@ -336,7 +336,7 @@ A **permanência média em UTI** é a de cada município de destino (2024–2025
 ::: {.callout-warning title="Cuidados na interpretação"}
 **Preliminar e provisório.** A demanda de 2026–2030 depende de uma projeção populacional municipal provisória (método de razão sobre a projeção do IBGE para Mato Grosso), que não desloca as coortes: cada município herda o envelhecimento médio do estado, o que subestima o envelhecimento dos municípios hoje mais velhos. Os resultados serão refeitos quando houver projeção municipal por idade e sexo.
 
-**Não é recomendação.** Os cenários A e B e as demais soluções mostram as consequências de hipóteses e não indicam onde o estado deve abrir, habilitar ou fechar leitos.
+**Os cenários não constituem recomendação.** Tanto os cenários A e B quanto as demais soluções mostram as consequências de hipóteses e não indicam onde o estado deve abrir, habilitar ou fechar leitos.
 
 **Apenas a demanda SUS registrada.** O SIH não registra a demanda reprimida (pacientes que não chegam à UTI) nem a saúde suplementar, inclusive o uso dos leitos de UTI não SUS que já existem em municípios candidatos. Por essa razão, as regiões sem UTI ficam subestimadas na demanda, na necessidade de leitos e na otimização. A UTI coronariana ficou fora da análise.
 

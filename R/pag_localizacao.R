@@ -191,12 +191,14 @@ fonte_curta <- function(piloto, extra = NULL, figura = NULL) p(class = "nota-fon
 
 fonte_loc <- function(piloto = NULL, prefixo = "../", arquivos = TRUE) {
   pil <- if (is.null(piloto)) PIL else PIL[piloto]
+  # v0.5: o trecho textual é montado num único paste0, porque o p() do htmltools separa os filhos por quebra de
+  # linha, o que punha espaço antes de ";" e de ")"
   p(class = "nota-fonte",
-    "Fontes: ", paste(vapply(pil, function(x) x$fonte_dem, ""), collapse = "; "), "; ",
-    paste(vapply(pil, function(x) x$fonte_oferta, ""), collapse = "; "),
-    "; população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024), base da projeção municipal provisória; ",
-    "tempos rodoviários entre sedes municipais calculados com o OSRM sobre o OpenStreetMap (consulta de 08/10/2026; condições ideais de automóvel). ",
-    "Elaboração: Projeto PPSUS-MT, frente de localização de serviços (cadeia L1–L5, ", DATA_LOC, "). ",
+    paste0("Fontes: ", paste(vapply(pil, function(x) x$fonte_dem, ""), collapse = "; "), "; ",
+           paste(vapply(pil, function(x) x$fonte_oferta, ""), collapse = "; "),
+           "; população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024), base da projeção municipal provisória; ",
+           "tempos rodoviários entre sedes municipais calculados com o OSRM sobre o OpenStreetMap (consulta de 08/10/2026; condições ideais de automóvel). ",
+           "Elaboração: Projeto PPSUS-MT, frente de localização de serviços (cadeia L1–L5, ", DATA_LOC, "). "),
     if (arquivos) tagList("Arquivos em ", a(href = paste0(prefixo, "localizacao/index.html#arquivos"), "Localização: arquivos", .noWS = "after"),
                           "; definições gerais em ")
     else "Definições gerais em ", a(href = paste0(prefixo, "metodologia.html"), "Metodologia", .noWS = "after"), ".")
