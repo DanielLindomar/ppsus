@@ -105,7 +105,7 @@ fichas_municipio.csv,motivo_nao_par,Motivo de não elegibilidade,texto,flags que
 fichas_municipio.csv,posicao_extrema,Posição extrema,booleano,"supereficiência > 2, infactível ou ordem-m > 1,2 (substitui o rótulo 'outlier')",Projeto PPSUS-MT — estimação DEA v2.1 (16/10/2026)
 fichas_municipio.csv,super_infactivel,Sem comparável em algum insumo,booleano,supereficiência infactível (eficiente por ausência de comparável),Projeto PPSUS-MT — estimação DEA v2.1 (16/10/2026)
 fichas_municipio.csv,flag_rede_sem_hospital,Sem hospital SUS,booleano,internações locais = 0 por configuração da rede (D039); não exclui; meta de internações informativa,CNES/SIH
-fichas_municipio.csv,flag_polo_ac,Polo de alta complexidade,booleano,"share_ac ≥ 0,25 (parte dos insumos atende à alta complexidade; escore de MC conservador — informativa)",SIA/SIH
+fichas_municipio.csv,flag_polo_ac,Participação elevada da alta complexidade (sinal informativo),booleano,"share_ac ≥ 0,25: participação da alta complexidade no valor aprovado da produção de média e alta complexidade (SIA + SIH) realizada por estabelecimentos do município; informativa. Não identifica, por si só, polo de alta complexidade: em municípios sem hospital SUS, decorre apenas de procedimentos ambulatoriais.",SIA/SIH
 fichas_municipio.csv,share_ac,Participação da AC na produção valorada,proporção,valor aprovado de AC ÷ (MC + AC),SIA/SIH
 fichas_municipio.csv,flag_sisab_incompleto,SISAB incompleto,booleano,menos de 12 meses de registro no ano (produtos anualizados),SISAB
 fichas_municipio.csv,n_meses_sisab,Meses de SISAB,meses,meses com registro no SISAB no ano,SISAB

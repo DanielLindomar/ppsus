@@ -15,7 +15,9 @@
 #   5. texto_padrao   (fichas_regiao.csv)     — fichas das regiões na página Alta complexidade (4ª rodada,
 #                                               quadro R01–R11, junto de REDACAO_FICHA_REGIAO).
 # A versão 0.5 reescreve esses textos SOMENTE NA EXIBIÇÃO. O banco, o pipeline da DEA, o script 06
-# e os CSV (inclusive os de download) não mudam.
+# e os CSV (inclusive os de download) não mudam, com uma exceção (4ª rodada, Editor D, A CONFIRMAR): os
+# textos do sinal flag_polo_ac (nome gerencial e definição no dicionário, nota_meta e frase do texto_padrao)
+# são sobrescritos pelo scripts/06 só na saída do site, sem mudar o schema dea nem nenhum valor numérico.
 #
 # Regra do mapeamento: cada frase-modelo é uma expressão regular ancorada (^...$). Os grupos capturam
 # os trechos variáveis (números, nomes de municípios e regiões, rótulos de faixa) exatamente como
@@ -73,9 +75,15 @@
 #        -> "Na ausência de hospital SUS no município, as internações locais são iguais a zero por
 #            configuração da rede, e a meta de internações tem caráter apenas informativo."
 #   F12  "Polo de alta complexidade: parte dos insumos atende à alta complexidade (escore de média
-#         complexidade conservador)."
-#        -> "Por se tratar de polo de alta complexidade, parte dos insumos atende à alta complexidade,
-#            razão pela qual o escore de média complexidade é conservador."
+#         complexidade conservador)." (redação do schema dea) ou, desde a 4ª rodada (Editor D, A CONFIRMAR),
+#         a redação que o scripts/06 grava no lugar dela ("Participação elevada da alta complexidade na
+#         produção local: ao menos um quarto ... tende a ser conservador.", SINAL_AC_TEXTO_NOVO)
+#        -> "A alta complexidade responde por ao menos um quarto do valor aprovado dos procedimentos
+#            ambulatoriais e das internações de média e alta complexidade realizados no município, o que não
+#            caracteriza, por si só, um polo regional; como parte dos insumos pode atender à alta complexidade,
+#            o escore de média complexidade tende a ser conservador."
+#        (3ª rodada, A CONFIRMAR: o sinal flag_polo_ac = share_ac >= 0,25 mede só a participação da AC no
+#        valor aprovado da produção local de MC+AC, SIA + SIH, e marca também municípios sem hospital)
 #   F13  "Os dados de origem devem ser verificados (CNES/SIOPS/SISAB) antes de qualquer leitura; as
 #         sinalizações da ficha permanecem válidas." -> mantida (já em redação formal).
 #   F14  "<mun>, <ano>: escore não publicado — escore não publicado: <motivo> — registro a verificar
@@ -197,8 +205,12 @@ REDACAO_TEXTO_PADRAO <- list(
        }),
   list(id = "F11", re = "^Sem hospital SUS no município: internações locais iguais a zero por configuração da rede \\(meta de internações informativa\\)\\.$",
        f = function(g) "Na ausência de hospital SUS no município, as internações locais são iguais a zero por configuração da rede, e a meta de internações tem caráter apenas informativo."),
-  list(id = "F12", re = "^Polo de alta complexidade: parte dos insumos atende à alta complexidade \\(escore de média complexidade conservador\\)\\.$",
-       f = function(g) "Por se tratar de polo de alta complexidade, parte dos insumos atende à alta complexidade, razão pela qual o escore de média complexidade é conservador."),
+  list(id = "F12", re = paste0("^(?:Polo de alta complexidade: parte dos insumos atende à alta complexidade \\(escore de média complexidade conservador\\)",
+                               "|Participação elevada da alta complexidade na produção local: ao menos um quarto do valor aprovado dos procedimentos ",
+                               "ambulatoriais e das internações de média e alta complexidade realizados no município corresponde à alta complexidade, ",
+                               "o que não caracteriza, por si só, um polo regional; como parte dos insumos pode atender à alta complexidade, o escore ",
+                               "de média complexidade tende a ser conservador)\\.$"),
+       f = function(g) "A alta complexidade responde por ao menos um quarto do valor aprovado dos procedimentos ambulatoriais e das internações de média e alta complexidade realizados no município, o que não caracteriza, por si só, um polo regional; como parte dos insumos pode atender à alta complexidade, o escore de média complexidade tende a ser conservador."),
   list(id = "F13", re = "^Os dados de origem devem ser verificados \\(CNES/SIOPS/SISAB\\) antes de qualquer leitura; as sinalizações da ficha permanecem válidas\\.$",
        f = function(g) "Os dados de origem devem ser verificados (CNES/SIOPS/SISAB) antes de qualquer leitura; as sinalizações da ficha permanecem válidas."),
   list(id = "F14", re = "^(.+), (\\d{4}): escore não publicado — escore não publicado: (quebra de registro na série|SISAB com meses insuficientes|SISAB com valores implausíveis) — registro a verificar na origem\\.$",

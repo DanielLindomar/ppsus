@@ -1401,6 +1401,68 @@ def copiar_downloads(arqs: dict[str, pd.DataFrame]) -> None:
 
 
 # ----------------------------------------------------------------------------
+# Versão 0.5 do site (24/10/2026; rodada 4, Editor D) — A CONFIRMAR: textos do sinal flag_polo_ac
+# ----------------------------------------------------------------------------
+# O sinal flag_polo_ac (share_ac >= 0,25; dea/v2_1/01_base_v2.py) mede só a participação da alta complexidade no valor
+# aprovado da produção de média e alta complexidade (SIA + SIH) dos estabelecimentos do município e marca também
+# municípios sem hospital SUS (13 dos 23 de 2025), nos quais decorre apenas de procedimentos ambulatoriais. Os textos
+# que a DEA grava (nome gerencial e definição em dea.dicionario, nota_meta das metas de despesa e frase do texto_padrao)
+# o chamam de "polo de alta complexidade". Esta camada sobrescreve SÓ a saída do site (dados_site/eficiencia e
+# arquivos/dados/eficiencia), com a redação do diagnóstico de 24/10/2026 e a mesma descrição que o site exibe; o schema
+# dea não muda, e nenhum valor numérico muda (só a troca de textos idênticos aos antigos, célula a célula).
+SINAL_AC_TEXTO_ANTIGO = ("Polo de alta complexidade: parte dos insumos atende à alta complexidade (escore de média complexidade "
+                         "conservador).")
+SINAL_AC_TEXTO_NOVO = ("Participação elevada da alta complexidade na produção local: ao menos um quarto do valor aprovado dos "
+                       "procedimentos ambulatoriais e das internações de média e alta complexidade realizados no município "
+                       "corresponde à alta complexidade, o que não caracteriza, por si só, um polo regional; como parte dos insumos "
+                       "pode atender à alta complexidade, o escore de média complexidade tende a ser conservador.")
+SINAL_AC_NOTA_ANTIGA = "polo de alta complexidade (share_ac ≥ 0,25): parte dos insumos atende à AC; escore de MC conservador"
+SINAL_AC_NOTA_NOVA = ("participação elevada da alta complexidade (share_ac ≥ 0,25): parte dos insumos pode atender à AC; "
+                      "escore de MC tende a ser conservador")
+SINAL_AC_DIC_ANTIGO = ("Polo de alta complexidade",
+                       "share_ac ≥ 0,25 (parte dos insumos atende à alta complexidade; escore de MC conservador — informativa)")
+SINAL_AC_DIC_NOVO = ("Participação elevada da alta complexidade (sinal informativo)",
+                     "share_ac ≥ 0,25: participação da alta complexidade no valor aprovado da produção de média e alta complexidade "
+                     "(SIA + SIH) realizada por estabelecimentos do município; informativa. Não identifica, por si só, polo de alta "
+                     "complexidade: em municípios sem hospital SUS, decorre apenas de procedimentos ambulatoriais.")
+ARQS_SINAL_AC = ("fichas_municipio.csv", "metas_municipio.csv", "dicionario_eficiencia.csv")
+
+
+def aplica_textos_sinal_ac(nome: str, df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """Troca, no arquivo `nome`, os textos antigos do sinal flag_polo_ac pelos novos (constantes acima). Só troca texto
+    idêntico ao antigo; devolve (cópia do quadro, nº de células alteradas)."""
+    df = df.copy()
+    n = 0
+    if nome == "fichas_municipio.csv" and "texto_padrao" in df.columns:
+        m = df["texto_padrao"].map(lambda x: isinstance(x, str) and SINAL_AC_TEXTO_ANTIGO in x).astype(bool)
+        df.loc[m, "texto_padrao"] = df.loc[m, "texto_padrao"].map(lambda x: x.replace(SINAL_AC_TEXTO_ANTIGO, SINAL_AC_TEXTO_NOVO))
+        n = int(m.sum())
+    elif nome == "metas_municipio.csv" and "nota_meta" in df.columns:
+        m = df["nota_meta"].eq(SINAL_AC_NOTA_ANTIGA).fillna(False).astype(bool)
+        df.loc[m, "nota_meta"] = SINAL_AC_NOTA_NOVA
+        n = int(m.sum())
+    elif nome == "dicionario_eficiencia.csv":
+        m = (df["arquivo"].eq("fichas_municipio.csv") & df["campo"].eq("flag_polo_ac")
+             & df["nome_gerencial"].eq(SINAL_AC_DIC_ANTIGO[0]) & df["definicao"].eq(SINAL_AC_DIC_ANTIGO[1])).fillna(False).astype(bool)
+        df.loc[m, "nome_gerencial"] = SINAL_AC_DIC_NOVO[0]
+        df.loc[m, "definicao"] = SINAL_AC_DIC_NOVO[1]
+        n = 2 * int(m.sum())
+    return df, n
+
+
+def so_textos_sinal_ac(nome: str, antigo: bytes | None) -> bool:
+    """True quando o arquivo gravado agora (SAIDA/nome) difere do conteúdo anterior SÓ pelos textos do sinal
+    flag_polo_ac (aplica_textos_sinal_ac sobre o conteúdo anterior reproduz o novo, célula a célula)."""
+    if antigo is None or nome not in ARQS_SINAL_AC:
+        return False
+    import io
+    a = pd.read_csv(io.BytesIO(antigo), dtype=str, keep_default_na=False)
+    b = pd.read_csv(SAIDA / nome, dtype=str, keep_default_na=False)
+    a2, n = aplica_textos_sinal_ac(nome, a)
+    return n > 0 and list(a2.columns) == list(b.columns) and a2.reset_index(drop=True).equals(b.reset_index(drop=True))
+
+
+# ----------------------------------------------------------------------------
 def main() -> int:
     msg("06_preparar_eficiencia.py — resultados DEA %s", VERSAO)
     mun, reg, macro = ler_site()
@@ -1486,6 +1548,10 @@ def main() -> int:
     msg("[7] dicionário e validação")
     dic = preparar_dicionario(dic_db, arqs)
     arqs["dicionario_eficiencia.csv"] = dic
+    # versão 0.5 do site (A CONFIRMAR): textos do sinal flag_polo_ac só na saída do site (o schema dea não muda)
+    for nome in ARQS_SINAL_AC:
+        arqs[nome], n_sub = aplica_textos_sinal_ac(nome, arqs[nome])
+        msg("  sinal de participação da alta complexidade (flag_polo_ac): %d célula(s) de texto reescrita(s) em %s", n_sub, nome)
     cont = validar(arqs, mun, espec)
     cont.update(info_ref)
     cont["pares_fora_top3"] = fora_top3
@@ -1496,6 +1562,7 @@ def main() -> int:
     msg("[8] gravação")
     # 'gerado_em' só muda quando algum arquivo de dados muda (execuções repetidas não sujam o diff)
     antes = {n: hashlib.md5((SAIDA / n).read_bytes()).hexdigest() for n in arqs if (SAIDA / n).exists()}
+    antigos_sinal = {n: (SAIDA / n).read_bytes() for n in ARQS_SINAL_AC if (SAIDA / n).exists()}
     gerado_antigo = None
     if (SAIDA / "metadados.csv").exists():
         mdv = pd.read_csv(SAIDA / "metadados.csv", dtype=str)
@@ -1505,6 +1572,11 @@ def main() -> int:
         if nome != "metadados.csv":
             gravar(df, nome)
     mudou = [n for n in arqs if n != "metadados.csv" and antes.get(n) != hashlib.md5((SAIDA / n).read_bytes()).hexdigest()]
+    # versão 0.5 do site (A CONFIRMAR): a troca dos textos do sinal flag_polo_ac não é mudança de dados (gerado_em preservado)
+    so_sinal = [n for n in mudou if so_textos_sinal_ac(n, antigos_sinal.get(n))]
+    if so_sinal:
+        msg("  arquivos que mudaram só nos textos do sinal flag_polo_ac (não contam para gerado_em): %s", ", ".join(so_sinal))
+    mudou = [n for n in mudou if n not in so_sinal]
     gerado_em = gerado_antigo if (gerado_antigo and not mudou) else f"{dt.datetime.now():%d/%m/%Y %H:%M}"
     msg("  arquivos alterados nesta execução: %s", ", ".join(mudou) if mudou else "nenhum (gerado_em preservado)")
     md.loc[md["item"] == "gerado_em", "valor"] = gerado_em

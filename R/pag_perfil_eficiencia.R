@@ -253,9 +253,11 @@ bloco_pares <- function(cod, modelo, r) {
 }
 
 # Metas 2025: só variáveis publicáveis com lacuna; as demais já estão na meta
-# Notas das metas em linguagem de gestor (a nota de polo de AC já aparece nos sinais)
+# Notas das metas em linguagem de gestor (a nota de participação elevada da AC, flag_polo_ac, já aparece nos sinais)
 nota_meta_gestor <- function(n) {
-  n <- n[!grepl("^polo de alta complexidade", n)]
+  # a nota_meta do sinal vem do 06 como "participação elevada da alta complexidade (share_ac ≥ 0,25): …" (4ª rodada,
+  # Editor D, A CONFIRMAR); a redação do schema dea, "polo de alta complexidade (…)", continua filtrada
+  n <- n[!grepl("^(polo de alta complexidade|participação elevada da alta complexidade)", n)]
   out <- ifelse(grepl("pares restritos infact", n), "as metas foram calculadas na comparação com todos os municípios, uma vez que a comparação restrita aos elegíveis como referência não tem solução para este município",
          ifelse(grepl("^sem comparável entre os pares", n), "em alguma variável não há comparável entre os municípios elegíveis, razão pela qual a meta é igual ao valor observado",
          ifelse(grepl("meta financeira não publicada", n) & grepl("302", n), "meta financeira não publicada (despesa de média complexidade com registro a verificar)",
@@ -267,7 +269,8 @@ nota_meta_gestor <- function(n) {
 metas_publicaveis <- function(cod, modelo) EF_METAS[EF_METAS$cod_mun6 == cod & EF_METAS$modelo == modelo & EF_METAS$ano == EF_ANO &
                                                      !is.na(EF_METAS$meta_publicavel) & EF_METAS$meta_publicavel == 1, ]
 # Classifica as metas publicáveis: lacuna (potencial ≥ 0,5% e visível na unidade exibida), informativa (observado zero
-# com meta positiva: % indefinido) e recursos de polo de AC na ótica do acesso (folga não comparável)
+# com meta positiva: % indefinido) e recursos dos municípios com participação elevada da AC (flag_polo_ac) na ótica do
+# acesso (folga não diretamente comparável; regra rec_polo, inalterada)
 classificar_metas <- function(cod, modelo, r) {
   m <- metas_publicaveis(cod, modelo)
   info <- m[!is.finite(m$potencial_pct) & is.finite(m$potencial_unidades) & abs(m$potencial_unidades) > 0, ]
@@ -291,8 +294,11 @@ bloco_metas <- function(cod, modelo, r) {
   sem_hosp_var <- unique(m$variavel[!is.na(m$nota_meta) & grepl("^sem hospital SUS", m$nota_meta)])
   info_sem_hosp <- nrow(info) > 0 && length(sem_hosp_var) > 0 && all(info$variavel %in% sem_hosp_var)
   if (info_sem_hosp) notas <- notas[!grepl("^sem hospital SUS", notas)]
-  if (nrow(cm$rec_polo)) notas <- c(notas, sprintf("%s, por se tratar de polo de alta complexidade: parte dos recursos atende moradores de outros municípios e a alta complexidade, razão pela qual a folga de recursos não é comparável e não é publicada",
-                                                   if (nrow(cm$rec_polo) == 1) "omite-se a meta de recurso" else sprintf("omitem-se %d metas de recursos", nrow(cm$rec_polo))))
+  # flag_polo_ac (share_ac >= limiar): participação da alta complexidade no valor aprovado da produção local de média e alta
+  # complexidade (SIA + SIH), e não classificação de polo regional; as metas omitidas aqui constam da página e do download
+  if (nrow(cm$rec_polo)) notas <- c(notas, sprintf("%s neste perfil, porque ao menos um quarto do valor aprovado dos procedimentos ambulatoriais e das internações de média e alta complexidade realizados no município corresponde à alta complexidade, de modo que a folga de recursos de média complexidade não é diretamente comparável (%s da página Média complexidade, na ótica do acesso, e do arquivo metas_municipio.csv)",
+                                                   if (nrow(cm$rec_polo) == 1) "omite-se a meta de recurso" else sprintf("omitem-se %d metas de recursos", nrow(cm$rec_polo)),
+                                                   if (nrow(cm$rec_polo) == 1) "a meta consta" else "as metas constam"))
   txt_ok <- if (n_ok > 0) sprintf(" Além das variáveis da tabela, %d %s do modelo já %s na meta.", n_ok, if (n_ok == 1) "outra variável" else "outras variáveis", if (n_ok == 1) "está" else "estão") else ""
   nomes_info <- unique(info$nome_gerencial); n_info <- length(nomes_info)
   txt_info <- if (info_sem_hosp)
@@ -370,7 +376,7 @@ lista_sinais <- function(r) {
   s <- unname(ifelse(cod %in% names(EF_SINAIS), EF_SINAIS[cod], gsub("_", " ", cod)))
   if (eh1(r$registro_a_verificar) && !"registro_a_verificar" %in% cod) s <- c(EF_SINAIS[["registro_a_verificar"]], s)
   if (eh1(r$flag_polo_ac) && r$modelo %in% c("M2", "M2A"))
-    s <- c(s, "Polo de alta complexidade: parte dos recursos atende à alta complexidade; por isso, o escore de média complexidade é conservador.")
+    s <- c(s, "Participação elevada da alta complexidade na produção local: ao menos um quarto do valor aprovado dos procedimentos ambulatoriais e das internações de média e alta complexidade realizados no município corresponde à alta complexidade, o que não caracteriza, por si só, um polo regional; como parte dos recursos pode atender a esses procedimentos, o escore de média complexidade tende a ser conservador.")
   # Versão 0.5: o sinal de rede sem hospital sai da lista quando a nota das metas da ficha já o explica (bloco_metas)
   if (eh1(r$flag_rede_sem_hospital) && r$modelo == "M0" &&
       !any(grepl("^sem hospital SUS", metas_publicaveis(r$cod_mun6, r$modelo)$nota_meta)))
