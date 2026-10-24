@@ -85,7 +85,7 @@ kpis_nivel <- function(nivel = "total", ano = ANO_DESL) {
 barra_partes <- function(nivel = "total", ano = ANO_DESL) {
   r <- resumo_desl(ano, nivel); if (is.null(r)) return("")
   v <- c(r$pct_proprio_mun, r$pct_mesma_regiao, r$pct_outra_regiao); names(v) <- PARTES
-  HTML(svg_barra_empilhada(v, cores = COR_PARTES, titulo = sprintf("Onde se internaram os residentes de Mato Grosso — %s, %d", NIVEIS_DESL[[nivel]], ano)))
+  HTML(svg_barra_empilhada(v, cores = COR_PARTES, titulo = sprintf("Local de internação dos residentes de Mato Grosso — %s, %d", NIVEIS_DESL[[nivel]], ano)))
 }
 
 # Série 2020–2025 das três parcelas de um nível
@@ -157,7 +157,7 @@ matriz_regioes <- function(nivel = "total", ano = ANO_DESL) {
   })
   tagList(div(class = "rolagem-x", tags$table(class = "matriz-calor", `aria-label` = sprintf("Matriz de fluxos entre regiões de saúde — %s, %d", NIVEIS_DESL[[nivel]], ano),
                                               tags$thead(cabecalho), tags$tbody(linhas))),
-          p(class = "nota-fonte", sprintf("Fonte: SIH/SUS. Nota: Cada linha soma 100%% das internações dos residentes da região (%s, %d). A diagonal, em negrito e com borda, corresponde à parcela atendida na própria região de saúde, e a intensidade da cor segue a raiz quadrada da parcela, para que os fluxos pequenos permaneçam visíveis. O número de internações de cada célula pode ser consultado ao posicionar o cursor sobre ela.", NIVEIS_DESL[[nivel]], ano)))
+          p(class = "nota-fonte", sprintf("Fonte: SIH/SUS. Nota: cada linha soma 100%% das internações dos residentes da região (%s, %d). A diagonal, em negrito e com borda, corresponde à parcela atendida na própria região de saúde, e a intensidade da cor segue a raiz quadrada da parcela, para que os fluxos pequenos permaneçam visíveis. O número de internações de cada célula pode ser consultado ao posicionar o cursor sobre ela.", NIVEIS_DESL[[nivel]], ano)))
 }
 
 # ---- 5. Mapa de fluxos com seletor de nível ---------------------------------------------------
@@ -197,8 +197,13 @@ mapa_fluxos_niveis <- function(ano = ANO_DESL, n_max = 80, n_rot = 6, altura = 5
     if (nrow(pz)) {
       rmax <- max(pz$recebidas_de_fora)
       pz <- pz |> mutate(raio = 4 + 18 * sqrt(recebidas_de_fora / rmax),
-                         lab = sprintf("%s: %s internações recebidas de outros municípios (%s das %s recebidas; %s)",
-                                       nome_mun(cod_mun6), num(recebidas_de_fora), pct_txt(pct_recebidas_de_fora), num(internacoes_recebidas), g))
+                         # versão 0.5 (5ª rodada): concordância no singular quando a contagem é 1
+                         lab = sprintf("%s: %s %s de %s (%s %s %s %s; %s)",
+                                       nome_mun(cod_mun6), num(recebidas_de_fora),
+                                       ifelse(recebidas_de_fora == 1, "internação recebida", "internações recebidas"),
+                                       ifelse(recebidas_de_fora == 1, "outro município", "outros municípios"),
+                                       pct_txt(pct_recebidas_de_fora), ifelse(internacoes_recebidas == 1, "de", "das"), num(internacoes_recebidas),
+                                       ifelse(internacoes_recebidas == 1, "internação recebida", "recebidas"), g))
       m <- addCircleMarkers(m, data = pz, lng = ~lon, lat = ~lat, radius = ~raio, color = COR[["mun"]], weight = 1,
                             fillColor = COR[["mun"]], fillOpacity = 0.5, label = ~lab, group = g)
       rot <- head(pz, n_rot)
@@ -310,8 +315,8 @@ tabela_todos_municipios <- function(ano = ANO_DESL, prefixo = "../municipios/", 
                 sprintf("Baixar a tabela (CSV, %d)", ano)),
     div(class = "rolagem-x", reactable(t, elementId = id_html, compact = TRUE, striped = TRUE, highlight = TRUE, searchable = TRUE, defaultPageSize = 20,
               showPageSizeOptions = TRUE, pageSizeOptions = c(20, 50, nrow(t)),
-              columnGroups = list(colGroup(name = "Como residência (onde os moradores se internam)", columns = c("Internações de residentes", "% no próprio município", "% na mesma região", "% em outra região", "km médio", "Destino principal", "% no destino principal")),
-                                  colGroup(name = "Como atendimento (quem o município recebe)", columns = c("Internações recebidas", "Recebidas de fora", "% recebidas de fora", "Principal origem"))),
+              columnGroups = list(colGroup(name = "Como residência (local de internação dos moradores)", columns = c("Internações de residentes", "% no próprio município", "% na mesma região", "% em outra região", "km médio", "Destino principal", "% no destino principal")),
+                                  colGroup(name = "Como atendimento (origem dos pacientes atendidos)", columns = c("Internações recebidas", "Recebidas de fora", "% recebidas de fora", "Principal origem"))),
               columns = list(cod = colDef(show = FALSE),
                 Município = colDef(minWidth = 150, sticky = "left", cell = function(v, i) a(href = url_mun(t$cod[i], prefixo), v)),
                 `Região de saúde` = colDef(minWidth = 130), `População 2025` = num_col("População 2025"),
