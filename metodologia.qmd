@@ -48,7 +48,7 @@ Todas as fontes utilizadas são públicas e foram obtidas dos sistemas nacionais
 Fonte: elaboração própria.
 :::
 
-## Definições que valem em todo o site
+## Definições comuns {#definições-que-valem-em-todo-o-site}
 
 As definições a seguir aplicam-se a todas as páginas do Observatório. Os indicadores com sufixo *local* (ou "realizados no município") contabilizam o que foi feito nos estabelecimentos do município, inclusive para pacientes de outras localidades, enquanto os indicadores por *residência* contabilizam o que ocorreu com os moradores do município, onde quer que tenham sido atendidos em Mato Grosso. A diferença entre as duas óticas, **local × residência**, constitui a base da análise de [deslocamento](deslocamento/index.html).
 
