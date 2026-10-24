@@ -65,7 +65,7 @@ cartoes(
   cartao("previsao/index.html", "Previsão (preliminar)", "Internações por doenças respiratórias (CID-10 J00–J99) por região de saúde: estimativa das semanas que o SIH ainda não registrou, previsão das quatro semanas seguintes com a incerteza, desempenho dos modelos e alerta de alta pressão."),
   cartao("localizacao/index.html", "Localização (preliminar)", "Cenários de localização de serviços para apoiar a discussão sobre o deslocamento dos pacientes: acesso atual, demanda projetada para 2026–2030 (provisória) e cenários de otimização nos pilotos de atenção ao parto e UTI adulto. Não é recomendação oficial."),
   cartao("judicializacao/index.html", "Judicialização (preliminar)", "Ações judiciais de saúde em Mato Grosso pelo DataJud/CNJ (TJMT e TRF1): série desde 2020, taxas por comarca em 2022–2024, previsão de curto prazo e fatores associados, sem leitura causal."),
-  cartao("dados/index.html", "Dados", "Explorador com filtros por município, região, grupo e ano; download dos painéis, fluxos, hospitais, malhas e dos arquivos de previsão, localização e judicialização em CSV/GeoJSON."),
+  cartao("dados/index.html", "Dados", HTML("Explorador com filtros por município, região, grupo e ano; <em>download</em> dos painéis, fluxos, hospitais, malhas e dos arquivos de previsão, localização e judicialização em CSV/GeoJSON.")),
   cartao("metodologia.html", "Metodologia", "Fontes e períodos, definições, janela 2020–2025, anomalias conhecidas e o caminho dos dados até o site."),
   cartao("sobre.html", "Sobre", "O projeto, a equipe, os produtos previstos, o financiamento e como citar."))
 ```

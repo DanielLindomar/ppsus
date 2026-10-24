@@ -1,6 +1,6 @@
 ---
 title: "Dados"
-description: "Explorador de indicadores, arquivos para download (CSV e GeoJSON), dicionários, licença e como citar — Observatório PPSUS-MT"
+description: "Explorador de indicadores, arquivos para *download* (CSV e GeoJSON), dicionários, licença e como citar — Observatório PPSUS-MT"
 page-layout: full
 toc: false
 ---
@@ -44,9 +44,9 @@ explorador_dados()
 Fonte: elaboração própria com base em dados do DATASUS/Ministério da Saúde, do SIOPS e do IBGE. Nota: os valores estão arredondados às casas de exibição de cada indicador; a série com todas as casas decimais, e com os códigos das regiões, encontra-se em `serie_longa.csv` (abaixo). A definição, a fórmula, a fonte e as ressalvas de cada indicador constam do [dicionário](#dicionario) e da página [Indicadores](../indicadores/index.html). Boa Esperança do Norte (instalado em 2025) dispõe de valores somente em 2025.
 :::
 
-## Arquivos para download {#downloads}
+## Arquivos para *download* {#downloads}
 
-Disponibilizam-se `r n_arq` arquivos (`r fmt_bytes(tam_total)` no total), relacionados na Tabela 2, derivados dos painéis do *Data Lake* do projeto e, na versão 0.4, também de agregados das frentes de previsão (retrato fixo do corte de 17/10/2026), de localização (com tempos rodoviários calculados pelo OSRM sobre o OpenStreetMap) e de judicialização (API Pública do DataJud/CNJ). Os arquivos CSV estão codificados em UTF-8, com separador vírgula, decimal ponto e célula vazia quando o dado é indisponível, e as malhas GeoJSON estão no sistema WGS84 (EPSG:4326). As chaves de junção são `cod_mun6` (código IBGE do município, com 6 dígitos), `co_regsaud` (região de saúde), `cnes` (estabelecimento, com 7 dígitos e zeros à esquerda, que deve ser lido como texto) e `ano`. Para baixar um arquivo, basta clicar sobre o respectivo nome.
+Disponibilizam-se `r n_arq` arquivos (`r fmt_bytes(tam_total)` no total), relacionados na Tabela 2, derivados dos painéis do *Data Lake* do projeto e, na versão 0.4, também de agregados das frentes de previsão (retrato fixo do corte de 17/10/2026), de localização (com tempos rodoviários calculados pelo OSRM sobre o OpenStreetMap) e de judicialização (API Pública do DataJud/CNJ). Os arquivos CSV estão codificados em UTF-8, com separador vírgula, decimal ponto e célula vazia quando o dado é indisponível, e as malhas GeoJSON estão no sistema WGS84 (EPSG:4326). As chaves de junção são `cod_mun6` (código IBGE do município, com 6 dígitos), `co_regsaud` (região de saúde), `cnes` (estabelecimento, com 7 dígitos e zeros à esquerda, que deve ser lido como texto) e `ano`. O *download* de cada arquivo realiza-se mediante a seleção do respectivo nome.
 
 **Tabela 2 – Arquivos disponíveis para *download*, por tema**
 
@@ -91,7 +91,7 @@ As **despesas** (SIOPS) correspondem a valores liquidados em R$ correntes, sem d
 
 Os **profissionais** (CNES) são expressos em equivalentes de 40 horas semanais (FTE), pela média das competências do ano, e o crescimento ao longo da série pode refletir a melhoria do registro. Os leitos de UTI, por sua vez, apresentam sub-registro conhecido.
 
-As **internações** (SIH) correspondem às AIH do tipo 1, contadas pelo ano da alta. Os painéis, os indicadores e os fluxos utilizam somente o SIH de Mato Grosso, ao passo que as internações de residentes de MT em hospitais de outros estados constam dos arquivos `residentes_mt_outras_uf_*` e `saldo_internacoes_mt_outras_uf_2020_2025.csv` (SIH/SUS das 26 outras UF); os residentes de outras UFs atendidos em MT aparecem no resumo estadual do deslocamento e no saldo. Nesses arquivos, o valor soma todas as linhas da AIH, inclusive as de continuação. Cabe observar, ainda, que, nos arquivos de fluxos, os nomes das regiões de saúde trazem o sufixo ` - MT`.
+As **internações** (SIH) correspondem às AIH do tipo 1, contadas pelo ano da alta. Os painéis, os indicadores e os fluxos utilizam somente o SIH de Mato Grosso, ao passo que as internações de residentes de MT em hospitais de outros estados constam dos arquivos `residentes_mt_outras_uf_*` e `saldo_internacoes_mt_outras_uf_2020_2025.csv` (SIH/SUS das 26 outras UF); os residentes de outras UF atendidos em MT aparecem no resumo estadual do deslocamento e no saldo. Nesses arquivos, o valor soma todas as linhas da AIH, inclusive as de continuação. Cabe observar, ainda, que, nos arquivos de fluxos, os nomes das regiões de saúde trazem o sufixo ` - MT`.
 
 Quanto à **supressão de células pequenas**, nos arquivos de internações em outros estados por região de saúde, por município de residência e por município de destino, as contagens de 1 a 4 internações ficam vazias, assim como as células que permitiriam deduzi-las por diferença, e o motivo consta da coluna `nota_supressao`. A mesma regra aplica-se aos arquivos de previsão, localização e judicialização (versão 0.4), com as colunas de marcação descritas nos respectivos dicionários (`previsao_dicionario.csv`, `localizacao_dicionario.csv` e `judicializacao_dicionario.csv`); nesses arquivos, a célula vazia indica valor suprimido ou indisponível.
 
