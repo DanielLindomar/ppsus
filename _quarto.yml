@@ -86,6 +86,10 @@ website:
       [Versão 0.5 · atualizado em 24/10/2026 · Conteúdo sob licença CC BY 4.0, exceto os arquivos e gráficos derivados do DataJud/CNJ (uso não comercial) · [Código-fonte](https://github.com/daniellindomar/ppsus)]{.rodape-versao}
       ::::
 
+# Rótulo da ação do repositório exibida em todas as páginas (padrão do Quarto em pt: "Criar uma issue")
+language:
+  repo-action-links-issue: "Comunicar um problema"
+
 format:
   html:
     theme: [cosmo, estilo.scss]

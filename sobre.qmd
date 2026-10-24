@@ -31,7 +31,7 @@ A Tabela 1 sintetiza os produtos previstos no plano de trabalho, o conteúdo de 
 
 | Produto | Conteúdo | Situação |
 |---|---|---|
-| P1 · Data Lake do SUS-MT | Bases do SIOPS, CNES, SIA, SIH, SISAB, SI-PNI, SIM, SINASC e IBGE, tratadas e integradas | Em uso: alimenta as versões 0.1 a 0.5 deste site |
+| P1 · *Data Lake* do SUS-MT | Bases do SIOPS, CNES, SIA, SIH, SISAB, SI-PNI, SIM, SINASC e IBGE, tratadas e integradas | Em uso: alimenta as versões 0.1 a 0.5 deste site |
 | P2 · Escores de eficiência (DEA) | Municípios × níveis de atenção, hospitais e regiões de saúde, 2020–2025 | Versão 2.1, de 16/10/2026 (atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS; demais modelos da versão 2, de 08/10/2026), na seção [Eficiência](eficiencia/index.qmd); em validação com a SES-MT e o COSEMS-MT |
 | P3 · Índice de Malmquist | Variação da produtividade 2020–2025 | Versão 2.1, de 16/10/2026 ([Produtividade](eficiencia/produtividade.qmd)); em validação |
 | P4 · Previsão de demanda | Modelos por município e nível de atenção | Resultados preliminares de 17/10/2026 na seção [Previsão](previsao/index.qmd): internações por doenças respiratórias por região de saúde, com estimativa das semanas incompletas e alerta; especificação em validação |
@@ -86,7 +86,7 @@ Fonte: elaboração própria.
 
 ## Realização e financiamento
 
-O projeto é executado pela UNEMAT — Universidade do Estado de Mato Grosso, Campus de Sinop, e financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT.
+O projeto é executado pela UNEMAT, Campus de Sinop, e financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 —, com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT.
 
 **Realização**
 
@@ -110,7 +110,7 @@ A versão 0.4 acrescentou, em seções próprias e em caráter preliminar, a pre
 
 Quanto à proteção dos dados, publicam-se somente agregados por município, região de saúde, comarca ou estabelecimento, sendo os hospitais identificados pelo nome fantasia e pelo código do Cadastro Nacional de Estabelecimentos de Saúde (CNES), que constitui dado público. Nenhum microdado é divulgado. Além disso, nos recortes com contagens pequenas, não são publicados os valores de 1 a 4, nem as células que permitiriam deduzi-los.
 
-No que se refere à produção, o site é gerado com o [Quarto](https://quarto.org) e com a linguagem R a partir dos painéis do *Data Lake* do projeto e, na versão 0.4, também de agregados das frentes de previsão, localização e judicialização, que empregam fontes externas como o DataJud/CNJ e o OpenStreetMap; a publicação é feita no GitHub Pages, e o código-fonte encontra-se em [github.com/daniellindomar/ppsus](https://github.com/daniellindomar/ppsus). Eventuais erros ou sugestões podem ser comunicados por meio do link "Criar uma issue", no menu do GitHub, ou por mensagem à coordenação.
+No que se refere à produção, o site é gerado com o [Quarto](https://quarto.org) e com a linguagem R a partir dos painéis do *Data Lake* do projeto e, na versão 0.4, também de agregados das frentes de previsão, localização e judicialização, que empregam fontes externas como o DataJud/CNJ e o OpenStreetMap; a publicação é feita no GitHub Pages, e o código-fonte encontra-se em [github.com/daniellindomar/ppsus](https://github.com/daniellindomar/ppsus). Eventuais erros ou sugestões podem ser comunicados por meio do *link* "Comunicar um problema", identificado pelo ícone do GitHub em cada página, que abre o registro de *issues* do repositório, ou por mensagem à coordenação.
 
 **Contato:** lindomar.pegorini@unemat.br
 
