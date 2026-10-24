@@ -47,7 +47,7 @@ mapa_indicador(IND_ID, ano = A_, altura = 480, prefixo = "../municipios/")
 ranking_indicador(IND_ID, ano = A_, prefixo = "../municipios/", tamanho = 20)
 ```
 
-[Fonte: `r FONTE_`. Nota: a posição 1º corresponde ao maior valor, sem juízo de valor, e deve ser interpretada à luz do campo "Leitura" da ficha; os municípios empatados recebem a mesma posição. O campo de busca permite localizar um município, e o símbolo "—" indica município sem dado no ano.]{.nota-fonte}
+[Fonte: `r FONTE_`. Nota: a primeira posição (rótulo “1º”) corresponde ao maior valor, sem conotação de desempenho, e deve ser interpretada à luz do campo "Leitura" da ficha; os municípios empatados recebem a mesma posição. O campo de busca permite localizar um município, e o símbolo "—" indica município sem dado no ano.]{.nota-fonte}
 :::
 ::::
 
