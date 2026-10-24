@@ -51,7 +51,7 @@ Em 2022–2025, o TC fica abaixo de 1 em `r length(tc_baixo)` dos `r nrow(j22)` 
 
 ## Por modelo e janela {#modelos}
 
-A Tabela 1 apresenta os resultados de Mato Grosso, calculados como média geométrica das unidades avaliadas. Na média complexidade pela ótica do acesso, há duas fronteiras (municípios com e sem leito SUS) e, nos hospitais, dois grupos (públicos e privados/filantrópicos), mostrados separadamente.
+A Tabela 1 apresenta os resultados de Mato Grosso, calculados como média geométrica das unidades avaliadas. Na média complexidade pela ótica do acesso, há duas fronteiras (municípios com e sem leito SUS) e, nos hospitais, dois grupos (públicos e privados/filantrópicos), apresentados separadamente.
 
 **Tabela 1 – Aproximação às melhores práticas (EC), índice de Malmquist e deslocamento das melhores práticas (TC), por modelo e janela**
 
@@ -219,5 +219,5 @@ efx_arquivos(c("malmquist_regiao", "resumo_modelos", "fichas_municipio", "fichas
 ```
 
 ```{r}
-fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = sprintf("Os resultados de produtividade provêm de %s (%s), Projeto PPSUS-MT — índice de Malmquist com intervalo de confiança por bootstrap e médias geométricas por região e estado, com base em dados do SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025. ", EFX_ROTULO, EFX_DATA))
+fonte_rodape(prefixo = "../", eficiencia = TRUE, extra = tagList(sprintf("Os resultados de produtividade provêm de %s (%s), Projeto PPSUS-MT — índice de Malmquist com intervalo de confiança por ", EFX_ROTULO, EFX_DATA), tags$em("bootstrap", .noWS = "outside"), " e médias geométricas por região e estado, com base em dados do SIOPS, CNES, SISAB, SI-PNI, SIA e SIH/SUS, 2020–2025. "))
 ```

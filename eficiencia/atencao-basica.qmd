@@ -98,7 +98,7 @@ Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT. N
 
 ## Pares de referência mais usados {#pares}
 
-A Figura 3 identifica os municípios de registro plausível que mais aparecem como referência para os demais em `r A`, segundo o número de municípios para os quais constituem par plausível. Tais municípios constituem, portanto, bons interlocutores para a troca de experiências de organização da atenção básica.
+A Figura 3 identifica os municípios de registro plausível que mais aparecem como referência para os demais em `r A`, segundo o número de municípios para os quais constituem par plausível. Tais municípios tendem a constituir, portanto, interlocutores privilegiados para a troca de experiências de organização da atenção básica.
 
 ```{r}
 pares_mais_usados(M, A)

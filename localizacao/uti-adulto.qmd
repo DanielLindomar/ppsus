@@ -96,7 +96,7 @@ Fonte: elaboração do Projeto PPSUS-MT. População-alvo: `r INFO$pop` (RIPSA/S
 
 ### Por município de residência
 
-A Tabela 2 está ordenada pelo tempo até o serviço mais próximo, e a busca permite localizar um município. Em `r num(n_supr)` células de percentual, o valor não é mostrado ("suprimido"), porque a contagem correspondente fica entre 1 e 4 ou porque a célula foi escondida para que outra não pudesse ser deduzida por diferença.
+A Tabela 2 está ordenada pelo tempo até o serviço mais próximo, e a busca permite localizar um município. Em `r num(n_supr)` células de percentual, o valor não é apresentado ("suprimido"), porque a contagem correspondente fica entre 1 e 4 ou porque a célula foi ocultada para que outra não pudesse ser deduzida por diferença.
 
 **Tabela 2 – Acesso atual aos leitos SUS de UTI adulto, por município de residência**
 
@@ -139,7 +139,7 @@ Fonte: elaboração do Projeto PPSUS-MT, com base no SIH/SUS 2020–2025, na pop
 
 ## Validação dos modelos {#validacao}
 
-Os modelos foram ajustados com os dados de 2020 a 2023 e testados em 2024 e 2025, anos que não utilizaram.
+Antes de utilizar um modelo para comparar cenários de localização, é necessário conhecer a magnitude de seus erros. Para tanto, os modelos foram ajustados com os dados de 2020 a 2023 e testados em 2024 e 2025, anos que não utilizaram.
 
 ### Demanda por município
 
@@ -159,7 +159,7 @@ A demanda de UTI cresceu entre 2023 e 2025, e todos os modelos sem tendência a 
 tabela_valid_escolha(P)
 ```
 
-Sem mudança na oferta, repetir as participações do ano anterior (persistência) é uma regra dificilmente superada: CPC de `r num(cpc("persistencia_2023"), 3)`, contra `r num(cpc("pivo_mnl"), 3)` do pivô do modelo gravitacional, utilizado nos cenários. Na UTI, a distância pesa menos que no parto, porque a oferta é rara e o paciente é regulado, ao passo que pertencer à mesma região de saúde pesa muito.
+Sem mudança na oferta, repetir as participações do ano anterior (persistência) é uma regra dificilmente superada: CPC de `r num(cpc("persistencia_2023"), 3)`, contra `r num(cpc("pivo_mnl"), 3)` do pivô do modelo gravitacional, utilizado nos cenários. Na UTI, a distância tem peso menor que no parto, porque a oferta é rara e o paciente é regulado, ao passo que o pertencimento à mesma região de saúde tem peso elevado.
 
 ### Mudanças de oferta (experimentos naturais)
 
@@ -171,7 +171,7 @@ fonte_curta(P, "eventos de mudança de oferta identificados no CNES 2021–2025"
             figura = "Figura 3 – CPC médio do modelo pivô e da persistência nas origens afetadas por mudanças de oferta de UTI adulto, por tipo de evento")
 ```
 
-Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o pivô do gravitacional apresentou o maior CPC médio (`r num(ET$cpc_medio_pivo_mnl, 3)`, contra `r num(ET$cpc_medio_persistencia, 3)` da persistência) e superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e perdeu em `r num(ET$n_pivo_mnl_perde_margem)`. **A vantagem, contudo, concentra-se no ciclo da COVID-19**: `r num(sum(e2122$n_avaliaveis))` dos `r num(ET$n_avaliaveis)` eventos são de 2021 e 2022, e os do mesmo ano não são independentes; em 2023, o ano mais próximo da rotina, o pivô praticamente empata com a persistência (CPC de `r num(e23$cpc_medio_pivo_mnl, 3)` contra `r num(e23$cpc_medio_persistencia, 3)`). Nas aberturas de UTI, o modelo previu para a unidade nova mais pacientes do que ela recebeu nos dois primeiros anos, razão pela qual a captação prevista é dividida por 1,28 no filtro de candidatos da otimização.
+Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o pivô do gravitacional apresentou o maior CPC médio (`r num(ET$cpc_medio_pivo_mnl, 3)`, contra `r num(ET$cpc_medio_persistencia, 3)` da persistência) e superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e foi superado em `r num(ET$n_pivo_mnl_perde_margem)`. **A vantagem, contudo, concentra-se no ciclo da COVID-19**: `r num(sum(e2122$n_avaliaveis))` dos `r num(ET$n_avaliaveis)` eventos são de 2021 e 2022, e os do mesmo ano não são independentes; em 2023, o ano mais próximo da rotina, o pivô praticamente empata com a persistência (CPC de `r num(e23$cpc_medio_pivo_mnl, 3)` contra `r num(e23$cpc_medio_persistencia, 3)`). Nas aberturas de UTI, o modelo previu para a unidade nova mais pacientes do que ela recebeu nos dois primeiros anos, razão pela qual a captação prevista é dividida por 1,28 no filtro de candidatos da otimização.
 
 **Tabela 7 – CPC médio dos modelos de escolha nos experimentos naturais, por tipo de evento**
 
@@ -193,7 +193,7 @@ Fonte: validação da frente de localização do Projeto PPSUS-MT, com base no C
 
 A otimização busca os municípios nos quais 1 a 5 unidades novas de UTI adulto mais reduziriam o deslocamento em 2030, mantendo-se abertos os `r num(S$n_mun_serv)` municípios que já dispõem de UTI adulto SUS. Os candidatos são municípios sem UTI SUS, com hospital de ao menos 30 leitos SUS e captação esperada suficiente para ocupar ao menos um terço de um módulo de 10 leitos. Comparam-se quatro critérios. A **p-mediana** (HAKIMI, 1964; REVELLE; SWAIN, 1970) minimiza o tempo médio de viagem de todos os pacientes até a UTI mais próxima, e a **cobertura máxima** (`r sigla("MCLP", "Maximal Covering Location Problem: problema de localização de cobertura máxima")`, do inglês *Maximal Covering Location Problem*), proposta por Church e ReVelle (1974), maximiza a parcela da demanda a até 60 (ou 120) minutos de uma UTI. A versão **com capacidade** corresponde a uma p-mediana em que cada UTI somente atende até o limite dos seus leitos (ocupação-alvo de 85%), com penalização da demanda excedente, e a versão **regional**, a uma p-mediana com no máximo uma unidade nova por região de saúde, somente nas regiões sem UTI adulto SUS.
 
-Com as UTI atuais, o tempo médio até a mais próxima é de `r min_l(S0$tempo_medio, 1)`, e `r pct_l(S0$pct_ate_120)` da demanda de 2030 fica a até 120 minutos. A p-mediana direciona as unidades novas para os polos das regiões remotas: `r nomes_lista(PM1$nomes_abertos)` com k = 1 (`r min_l(PM1$tempo_medio, 1)`), seguida de `r lista_e_l(dif_sol(PM2$nomes_abertos, PM1$nomes_abertos))` (k = 2) e de `r lista_e_l(dif_sol(PM3$nomes_abertos, PM2$nomes_abertos))` (k = 3, `r min_l(PM3$tempo_medio, 1)`); com cinco unidades, o tempo médio cai para `r min_l(PM5$tempo_medio, 1)`. A lógica regional coincide com a p-mediana de k = 1 a 4. Quanto à capacidade, as UTI existentes atendem menos do que a demanda projetada para 2030: faltariam `r num(CP0$nao_atendida)` internações por ano, o equivalente a `r num(CP0$leitos_deficit, 0)` leitos; um módulo de 10 leitos reduz o déficit para `r num(CP1$leitos_deficit, 0)` leitos (`r nomes_lista(CP1$nomes_abertos)`), dois módulos, para `r num(CP2$leitos_deficit, 0)`, e três o eliminam (`r nomes_lista(CP3$nomes_abertos)`). Observa-se que as soluções do modelo com capacidade não são encaixadas: `r lista_e_l(dif_sol(CP1$nomes_abertos, CP3$nomes_abertos))` sai em k = 3.
+Com as UTI atuais, o tempo médio até a mais próxima é de `r min_l(S0$tempo_medio, 1)`, e `r pct_l(S0$pct_ate_120)` da demanda de 2030 fica a até 120 minutos. A p-mediana direciona as unidades novas para os polos das regiões remotas: `r nomes_lista(PM1$nomes_abertos)` com k = 1 (`r min_l(PM1$tempo_medio, 1)`), seguida de `r lista_e_l(dif_sol(PM2$nomes_abertos, PM1$nomes_abertos))` (k = 2) e de `r lista_e_l(dif_sol(PM3$nomes_abertos, PM2$nomes_abertos))` (k = 3, `r min_l(PM3$tempo_medio, 1)`); com cinco unidades, o tempo médio cai para `r min_l(PM5$tempo_medio, 1)`. A lógica regional coincide com a p-mediana de k = 1 a 4. Quanto à capacidade, as UTI existentes atendem menos do que a demanda projetada para 2030: faltariam `r num(CP0$nao_atendida)` internações por ano, o equivalente a `r num(CP0$leitos_deficit, 0)` leitos; um módulo de 10 leitos reduz o déficit para `r num(CP1$leitos_deficit, 0)` leitos (`r nomes_lista(CP1$nomes_abertos)`), dois módulos, para `r num(CP2$leitos_deficit, 0)`, e três o eliminam (`r nomes_lista(CP3$nomes_abertos)`). Observa-se que as soluções do modelo com capacidade não são encaixadas: `r lista_e_l(dif_sol(CP1$nomes_abertos, CP3$nomes_abertos))` deixa a solução em k = 3.
 
 ### Dois cenários para k = 3, sem recomendação
 
@@ -338,7 +338,7 @@ A **permanência média em UTI** é a de cada município de destino (2024–2025
 
 **Não é recomendação.** Os cenários A e B e as demais soluções mostram as consequências de hipóteses e não indicam onde o estado deve abrir, habilitar ou fechar leitos.
 
-**Só a demanda SUS registrada.** O SIH não registra a demanda reprimida (pacientes que não chegam à UTI) nem a saúde suplementar, inclusive o uso dos leitos de UTI não SUS que já existem em municípios candidatos. Por essa razão, as regiões sem UTI ficam subestimadas na demanda, na necessidade de leitos e na otimização. A UTI coronariana ficou fora da análise.
+**Apenas a demanda SUS registrada.** O SIH não registra a demanda reprimida (pacientes que não chegam à UTI) nem a saúde suplementar, inclusive o uso dos leitos de UTI não SUS que já existem em municípios candidatos. Por essa razão, as regiões sem UTI ficam subestimadas na demanda, na necessidade de leitos e na otimização. A UTI coronariana ficou fora da análise.
 
 **Validação concentrada na pandemia.** Os experimentos naturais da UTI provêm quase todos de 2021 e 2022; o modelo de escolha foi escolhido nos mesmos eventos em que foi avaliado, e o de demanda, no próprio período de teste. O desconto de 1,28, ademais, provém de poucas aberturas.
 
@@ -348,7 +348,7 @@ A **permanência média em UTI** é a de cada município de destino (2024–2025
 
 **Município de destino, não hospital.** O modelo não distingue hospitais do mesmo município, e a qualidade da UTI não entra na otimização.
 
-**Células pequenas suprimidas.** Os percentuais cuja contagem fica entre 1 e 4 não são mostrados, tampouco os que permitiriam deduzi-los por diferença; os tempos e os percentuais observados somente aparecem com ao menos 5 internações no município.
+**Células pequenas suprimidas.** Os percentuais cuja contagem fica entre 1 e 4 não são apresentados, tampouco os que permitiriam deduzi-los por diferença; os tempos e os percentuais observados somente aparecem com ao menos 5 internações no município.
 
 **Boa Esperança do Norte**, instalado em 2025, não tem internações registradas sob o novo código nem polígono na malha do mapa.
 :::

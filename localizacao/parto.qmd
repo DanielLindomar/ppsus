@@ -58,7 +58,7 @@ Este piloto organiza em **cenários, destinados a apoiar a discussão com a gest
 kpis_acesso(P)
 ```
 
-A oferta de leitos obstétricos distribui-se por todo o estado: em `r ANO_OFERTA`, `r num(S$n_mun_serv)` dos 142 municípios dispunham de ao menos meio leito obstétrico em média no ano, segundo o Cadastro Nacional de Estabelecimentos de Saúde (CNES), e `r pct_l(S$pop60)` das `r INFO$pop` moravam a até 60 minutos de um município com leito. O deslocamento efetivo, contudo, é bem maior que essa distância mínima: em 2024–2025, as gestantes atendidas em Mato Grosso percorreram em média `r min_l(S$tempo)` entre a sede do município de residência e a do município do parto (média ponderada pelos nascidos vivos), e `r pct_l(S$fora_reg)` dos partos ocorreram fora da região de saúde. Os maiores tempos médios observam-se em `r lista_e_l(sprintf("%s (%s)", sem_mt(rg_pior$nome_regsaud), min_l(rg_pior$tempo_medio_obs_min)))`; entre os municípios, em `r lista_e_l(sprintf("%s (%s)", mun_pior$nome_municipio, min_l(mun_pior$tempo_medio_obs_min)))`.
+A oferta de leitos obstétricos distribui-se por todo o estado: em `r ANO_OFERTA`, `r num(S$n_mun_serv)` dos 142 municípios dispunham de ao menos meio leito obstétrico em média no ano, segundo o Cadastro Nacional de Estabelecimentos de Saúde (CNES), e `r pct_l(S$pop60)` das `r INFO$pop` moravam a até 60 minutos de um município com leito. O deslocamento efetivo, contudo, é consideravelmente superior a essa distância mínima: em 2024–2025, as gestantes atendidas em Mato Grosso percorreram em média `r min_l(S$tempo)` entre a sede do município de residência e a do município do parto (média ponderada pelos nascidos vivos), e `r pct_l(S$fora_reg)` dos partos ocorreram fora da região de saúde. Os maiores tempos médios observam-se em `r lista_e_l(sprintf("%s (%s)", sem_mt(rg_pior$nome_regsaud), min_l(rg_pior$tempo_medio_obs_min)))`; entre os municípios, em `r lista_e_l(sprintf("%s (%s)", mun_pior$nome_municipio, min_l(mun_pior$tempo_medio_obs_min)))`.
 
 O **índice de acesso E2SFCA** (LUO; QI, 2009) compara os leitos disponíveis a até 60 ou 120 minutos com a população que disputa esses leitos (média de Mato Grosso = 1; a média estadual equivale a `r num(e2_media, 2)` `r INFO$e2_unid`). Em `r ANO_OFERTA`, `r num(S$sem60)` municípios não dispunham de nenhum leito obstétrico a até 60 minutos, e `r num(S$sem120)` não dispunham de leito a até 120 minutos.
 
@@ -86,7 +86,7 @@ Fonte: elaboração do Projeto PPSUS-MT. População-alvo: `r INFO$pop` (RIPSA/S
 
 ### Por município de residência
 
-A Tabela 2 está ordenada pelo tempo até o serviço mais próximo, e a busca permite localizar um município. Em `r num(n_supr)` células de percentual, o valor não é mostrado ("suprimido"), porque a contagem correspondente fica entre 1 e 4 ou porque a célula foi escondida para que outra não pudesse ser deduzida por diferença.
+A Tabela 2 está ordenada pelo tempo até o serviço mais próximo, e a busca permite localizar um município. Em `r num(n_supr)` células de percentual, o valor não é apresentado ("suprimido"), porque a contagem correspondente fica entre 1 e 4 ou porque a célula foi ocultada para que outra não pudesse ser deduzida por diferença.
 
 **Tabela 2 – Acesso atual aos leitos obstétricos, por município de residência**
 
@@ -160,7 +160,7 @@ fonte_curta(P, "eventos de mudança de oferta identificados no CNES 2021–2025"
 ```
 
 ::: {.callout-important title="Resultado desfavorável para o parto"}
-Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o modelo utilizado nos cenários (pivô do gravitacional) **ficou atrás da regra ingênua** de repetir o ano anterior, com CPC médio de `r num(ET$cpc_medio_pivo_mnl, 3)` contra `r num(ET$cpc_medio_persistencia, 3)`. O modelo superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e perdeu em `r num(ET$n_pivo_mnl_perde_margem)`, sobretudo nas reduções de leitos (perdeu em `r num(ERED$n_pivo_mnl_perde_margem)` de `r num(ERED$n_avaliaveis)`) e nos eventos de 2024–2025. As variações de leitos obstétricos no CNES nem sempre correspondem a mudança real de atividade, e o modelo parece reagir excessivamente a elas. Por essa razão, **os cenários do parto valem como ordem de grandeza**, e não como previsão do número de partos que cada unidade receberia.
+Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o modelo utilizado nos cenários (pivô do gravitacional) **apresentou desempenho inferior ao da regra ingênua** de repetir o ano anterior, com CPC médio de `r num(ET$cpc_medio_pivo_mnl, 3)` contra `r num(ET$cpc_medio_persistencia, 3)`. O modelo superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e foi superado em `r num(ET$n_pivo_mnl_perde_margem)`, sobretudo nas reduções de leitos (foi superado em `r num(ERED$n_pivo_mnl_perde_margem)` de `r num(ERED$n_avaliaveis)`) e nos eventos de 2024–2025. As variações de leitos obstétricos no CNES nem sempre correspondem a mudança real de atividade, e o modelo parece reagir excessivamente a elas. Por essa razão, **os cenários do parto valem como ordem de grandeza**, e não como previsão do número de partos que cada unidade receberia.
 :::
 
 **Tabela 7 – CPC médio dos modelos de escolha nos experimentos naturais, por tipo de evento**
@@ -282,7 +282,7 @@ Ressalta-se, por fim, que **a qualidade e a segurança não entram nos modelos**
 
 **Não é recomendação.** Os cenários mostram as consequências de hipóteses e não indicam onde o estado ou os municípios devem abrir ou fechar maternidades.
 
-**Os modelos de escolha erram quando a oferta muda.** No parto, o modelo dos cenários perdeu para a regra ingênua nos experimentos naturais, razão pela qual os ganhos devem ser lidos como ordem de grandeza.
+**Os modelos de escolha erram quando a oferta muda.** No parto, o modelo dos cenários apresentou desempenho inferior ao da regra ingênua nos experimentos naturais, razão pela qual os ganhos devem ser lidos como ordem de grandeza.
 
 **Escolhas no próprio teste.** O modelo de demanda foi escolhido no período de teste, e o de escolha, nos mesmos eventos em que foi avaliado; as métricas são, portanto, otimistas.
 
@@ -294,7 +294,7 @@ Ressalta-se, por fim, que **a qualidade e a segurança não entram nos modelos**
 
 **Município de destino, não hospital.** O modelo não distingue hospitais do mesmo município.
 
-**Células pequenas suprimidas.** Os percentuais cuja contagem fica entre 1 e 4 não são mostrados, tampouco os que permitiriam deduzi-los por diferença; os tempos e os percentuais observados somente aparecem com ao menos 5 nascidos vivos no município.
+**Células pequenas suprimidas.** Os percentuais cuja contagem fica entre 1 e 4 não são apresentados, tampouco os que permitiriam deduzi-los por diferença; os tempos e os percentuais observados somente aparecem com ao menos 5 nascidos vivos no município.
 
 **Boa Esperança do Norte**, instalado em 2025, ainda tem parte dos registros no município de origem e não possui polígono na malha do mapa.
 :::

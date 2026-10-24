@@ -519,8 +519,8 @@ bloco_hospitais_ef <- function(cod, ano = EF_ANO) {
   }, character(1))
   tagList(
     h4(paste0("Eficiência dos hospitais (modelo de hospitais, ", ano, ")")),
-    p(sprintf("O modelo compara cada hospital SUS com as melhores práticas entre os %s hospitais avaliados em Mato Grosso. %s A leitura é feita por faixa com intervalo de confiança, e não por ranking, e cumpre lembrar que eficiência não é qualidade.",
-              num(n_aval), texto_espec("H"))),
+    p(sprintf("O modelo compara cada hospital SUS com as melhores práticas entre os %s hospitais avaliados em Mato Grosso. %s A leitura é feita por faixa com intervalo de confiança, e não por ",
+              num(n_aval), texto_espec("H")), tags$em("ranking", .noWS = "outside"), ", e cumpre lembrar que eficiência não é qualidade."),
     HTML(sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><thead><tr><th>Hospital</th><th>Faixa no estado</th><th class="num">Escore corrigido (IC 95%%)</th><th>Mudança de eficiência 2022–2025</th></tr></thead><tbody>%s</tbody></table></div>',
                  paste(linhas, collapse = ""))),
     p(class = "nota-fonte", sprintf("Fonte: Projeto PPSUS-MT, Resultados DEA %s (%s), com base em dados do CNES e do SIH/SUS. Nota: os hospitais do município ausentes desta tabela não integram o modelo de hospitais. ",

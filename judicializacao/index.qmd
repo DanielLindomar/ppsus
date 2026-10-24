@@ -95,11 +95,11 @@ tags$nav(class = "nav-mun", `aria-label` = "Seções desta página",
          lapply(names(SECOES), function(id) a(class = "btn btn-sm btn-outline-primary", href = paste0("#", id), SECOES[[id]])))
 ```
 
-Quando um medicamento, uma cirurgia, um leito de unidade de terapia intensiva (UTI) ou um tratamento não é obtido pela via administrativa, parte dos pacientes recorre ao Poder Judiciário. Esta página mensura **quantas ações de saúde chegam ao Judiciário em Mato Grosso, sobre quais assuntos, em que localidades e com que tendência**, e testa se a judicialização acompanha as lacunas de oferta e a ineficiência medidas pelo próprio projeto. A fonte de dados é o DataJud, a Base Nacional de Dados do Poder Judiciário mantida pelo CNJ. As ressalvas, de grande peso para a interpretação, encontram-se ao longo do texto e estão reunidas em [Limitações](#limitacoes).
+Quando um medicamento, uma cirurgia, um leito de unidade de terapia intensiva (UTI) ou um tratamento não é obtido pela via administrativa, parte dos pacientes recorre ao Poder Judiciário. Esta página mensura **quantas ações de saúde chegam ao Judiciário em Mato Grosso, sobre quais assuntos, em que localidades e com que tendência**, e testa se a judicialização acompanha as lacunas de oferta e a ineficiência medidas pelo próprio projeto. A fonte de dados é o DataJud, a Base Nacional de Dados do Poder Judiciário mantida pelo Conselho Nacional de Justiça (CNJ). As ressalvas, de grande peso para a interpretação, encontram-se ao longo do texto e estão reunidas em [Limitações](#limitacoes).
 
 ## Objeto de medida e fonte dos dados {#medida}
 
-**Fonte.** Utiliza-se a API pública do DataJud (CNJ), nos índices do TJMT e do Tribunal Regional Federal da 1ª Região (TRF1), este nas sete subseções judiciárias de Mato Grosso, consultada em `r JUD_COLETA`. A API fornece somente **metadados processuais** — classe, assuntos, órgão julgador, data de ajuizamento, grau e movimentos — e não inclui partes, advogados, textos nem processos sob sigilo; o projeto não coletou nem armazena dados pessoais.
+**Fonte.** Utiliza-se a interface pública de programação de aplicações (API, do inglês *Application Programming Interface*) do DataJud (CNJ), nos índices do Tribunal de Justiça do Estado de Mato Grosso (TJMT) e do Tribunal Regional Federal da 1ª Região (TRF1), este nas sete subseções judiciárias de Mato Grosso, consultada em `r JUD_COLETA`. A API fornece somente **metadados processuais** — classe, assuntos, órgão julgador, data de ajuizamento, grau e movimentos — e não inclui partes, advogados, textos nem processos sob sigilo; o projeto não coletou nem armazena dados pessoais.
 
 **Assuntos de saúde.** Selecionaram-se os processos com pelo menos um dos 75 códigos de assunto de saúde da Tabela Processual Unificada (TPU) do CNJ, isto é, o ramo Direito da Saúde, criado em 2019, e os códigos antigos equivalentes, ainda presentes nos processos anteriores. Excluem-se a responsabilidade civil por erro médico, os benefícios de saúde de servidores, os temas de gestão do Sistema Único de Saúde (SUS), como repasses, convênios e tabela, e a vigilância sanitária.
 
@@ -140,7 +140,7 @@ Os indicadores acima referem-se às ações de saúde ajuizadas no 1º grau e no
 
 ## Série anual, 2020–2026 {#serie}
 
-Verifica-se, inicialmente, que o número de ações **quase triplicou**: foram `r num(tot_per)` ações de saúde em 2020–2025, de `r num(A20$acoes_saude)` em 2020 para `r num(A25$acoes_saude)` em 2025 (`r vezes(A25$acoes_saude, A20$acoes_saude)`). Até 11/09/2026, já eram `r num(A26$acoes_saude)` ações, o equivalente a `r pct_j(100 * A26$acoes_saude / A25$acoes_saude, 0)` do total de 2025 em pouco mais de oito meses. **A saúde suplementar cresce mais depressa**: as ações sobre planos de saúde passaram de `r num(A20$suplementar)` para `r num(A25$suplementar)` (`r vezes(A25$suplementar, A20$suplementar)`), contra `r vezes(A25$publica, A20$publica)` na saúde pública (de `r num(A20$publica)` para `r num(A25$publica)`). Ainda assim, a saúde pública responde por `r pct_j(100 * A25$publica / A25$acoes_saude, 0)` das ações de 2025.
+Verifica-se, inicialmente, que o número de ações **quase triplicou**: foram `r num(tot_per)` ações de saúde em 2020–2025, de `r num(A20$acoes_saude)` em 2020 para `r num(A25$acoes_saude)` em 2025 (`r vezes(A25$acoes_saude, A20$acoes_saude)`). Até 11/09/2026, já eram `r num(A26$acoes_saude)` ações, o equivalente a `r pct_j(100 * A26$acoes_saude / A25$acoes_saude, 0)` do total de 2025 em pouco mais de oito meses. **A saúde suplementar cresce em ritmo mais acelerado**: as ações sobre planos de saúde passaram de `r num(A20$suplementar)` para `r num(A25$suplementar)` (`r vezes(A25$suplementar, A20$suplementar)`), contra `r vezes(A25$publica, A20$publica)` na saúde pública (de `r num(A20$publica)` para `r num(A25$publica)`). Ainda assim, a saúde pública responde por `r pct_j(100 * A25$publica / A25$acoes_saude, 0)` das ações de 2025.
 
 **Na saúde pública, predominam o tratamento e a internação.** Em 2025, `r num(A25$pub_tratamento)` ações tiveram como assunto principal o tratamento médico-hospitalar (consultas, cirurgias, diálise), e `r num(A25$pub_internacao_uti)`, a internação, o leito ou a UTI, grupo que cresceu `r vezes(A25$pub_internacao_uti, A20$pub_internacao_uti)` desde 2020 e `r pct_j(100 * (A25$pub_internacao_uti / A24$pub_internacao_uti - 1), 0)` somente de 2024 para 2025. **As ações de medicamentos, em contrapartida, caem no TJMT desde 2025**: passaram de `r num(A24$pub_medicamentos)` em 2024 para `r num(A25$pub_medicamentos)` em 2025 e `r num(A26$pub_medicamentos)` até 11/09/2026, enquanto crescem na Justiça Federal em Mato Grosso (ver [Justiça Federal](#federal)).
 
@@ -234,7 +234,7 @@ tabela_ranking()
 ```
 
 ::: {.nota-fonte}
-Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`; população: IBGE. Nota: ações atribuíveis são as ações com comarca de origem identificada (ver [Centralização](#centralizacao)). A taxa bruta corresponde à média anual de ações por 100 mil habitantes, e a taxa suavizada, ao estimador bayesiano empírico local, arredondada a 5. “Suprimido” indica que a divisão entre saúde pública e suplementar foi escondida em `r n_sup_pub` comarcas (pública) e `r n_sup_sup` (suplementar), porque uma das duas tinha menos de 5 ações ou porque permitiria deduzir uma contagem pequena por diferença — inclusive o número de ações mistas, com assunto público e suplementar, que corresponde a pública + suplementar − total; o total de cada comarca nunca foi suprimido no período.
+Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`; população: IBGE. Nota: ações atribuíveis são as ações com comarca de origem identificada (ver [Centralização](#centralizacao)). A taxa bruta corresponde à média anual de ações por 100 mil habitantes, e a taxa suavizada, ao estimador bayesiano empírico local, arredondada a 5. “Suprimido” indica que a divisão entre saúde pública e suplementar foi ocultada em `r n_sup_pub` comarcas (pública) e `r n_sup_sup` (suplementar), porque uma das duas tinha menos de 5 ações ou porque permitiria deduzir uma contagem pequena por diferença — inclusive o número de ações mistas, com assunto público e suplementar, que corresponde a pública + suplementar − total; o total de cada comarca nunca foi suprimido no período.
 :::
 
 ### Consulta por município
@@ -262,7 +262,7 @@ tabela_faixas_ano()
 ```
 
 ::: {.nota-fonte}
-Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`. Nota: “suprimido” indica comarca com menos de 5 ações atribuíveis no ano, ou escondida para que outra contagem pequena não possa ser deduzida por diferença (com o total do período 2022–2024 ou com o total atribuível do estado); a marca consta da coluna `suprimido` do arquivo por comarca e ano.
+Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`. Nota: “suprimido” indica comarca com menos de 5 ações atribuíveis no ano, ou ocultada para que outra contagem pequena não possa ser deduzida por diferença (com o total do período 2022–2024 ou com o total atribuível do estado); a marca consta da coluna `suprimido` do arquivo por comarca e ano.
 :::
 
 ## Previsão para setembro a novembro de 2026 {#previsao}
@@ -414,7 +414,7 @@ Fonte: modelos J2 do Projeto PPSUS-MT (versão j2_2026-10-17_rev1), com ações 
 
 ## Justiça Federal e o Tema 1.234 do STF {#federal}
 
-A Justiça Federal em Mato Grosso (TRF1, sete subseções judiciárias) recebe bem menos ações de saúde que o TJMT — os documentos do TRF1 equivalem a cerca de `r num(pct_trf1, 0)`% dos do TJMT na coleta —, concentradas na subseção de Cuiabá. O TRF1 apresenta as mesmas limitações do TJMT (sem partes e sem município do autor), e a jurisdição publicada das subseções está incompleta; por essa razão, a Justiça Federal entra apenas como série estadual descritiva, sem atribuição a comarca ou município.
+A Justiça Federal em Mato Grosso (TRF1, sete subseções judiciárias) recebe número consideravelmente menor de ações de saúde que o TJMT — os documentos do TRF1 equivalem a cerca de `r num(pct_trf1, 0)`% dos do TJMT na coleta —, concentradas na subseção de Cuiabá. O TRF1 apresenta as mesmas limitações do TJMT (sem partes e sem município do autor), e a jurisdição publicada das subseções está incompleta; por essa razão, a Justiça Federal entra apenas como série estadual descritiva, sem atribuição a comarca ou município.
 
 O movimento recente merece atenção: as ações novas de medicamentos na Justiça Federal em Mato Grosso cresceram fortemente de 2024 para 2025 (conforme o relatório técnico da frente, na seção sobre a Justiça Federal; a contagem ainda está em conciliação e não é reproduzida aqui), enquanto as do TJMT caíram de `r num(A24$pub_medicamentos)` para `r num(A25$pub_medicamentos)` e somaram `r num(A26$pub_medicamentos)` até 11/09/2026. A mudança é coerente com a redistribuição de competência entre a Justiça Estadual e a Justiça Federal nas ações de fornecimento de medicamentos depois do julgamento do **Tema 1.234 pelo Supremo Tribunal Federal**, em 2024. Trata-se, contudo, de uma **hipótese**, ainda a confirmar com a equipe jurídica do projeto, uma vez que os dados mostram somente a coincidência no tempo.
 
@@ -431,7 +431,7 @@ Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`. Nota: na Justiça Federal, consi
 
 **Centralização.** Entre `r pct_j(min(sem_origem), 0)` e `r pct_j(max(sem_origem), 0)` das ações de 2022–2026 não têm comarca de origem identificável; essa fração não é aleatória, pode distorcer o mapa perto da capital e mudou de patamar em 2025. Somente um dado com a residência do autor (TJMT, Procuradoria-Geral do Estado ou Secretaria de Estado de Saúde de Mato Grosso, SES-MT) resolveria essa limitação.
 
-**Judicializar não equivale a faltar serviço.** A taxa de ações reflete também a propensão a litigar, que pode variar com a presença de advogados, da Defensoria Pública e do Ministério Público e com práticas locais, e não apenas com a necessidade de saúde.
+**A judicialização não equivale à falta de serviço.** A taxa de ações reflete também a propensão a litigar, que pode variar com a presença de advogados, da Defensoria Pública e do Ministério Público e com práticas locais, e não apenas com a necessidade de saúde.
 
 **Réu desconhecido.** Sem as partes, não é possível separar as ações contra o Estado, contra os municípios e contra as operadoras, e a esfera deriva somente do assunto.
 
@@ -456,9 +456,9 @@ Esta seção descreve os cuidados éticos, de proteção de dados pessoais, nos 
 
 **Desfecho não modelado.** O projeto não prevê o resultado das ações (deferimento de liminar ou procedência), por ser eticamente delicado e mais útil a litigantes do que à gestão.
 
-**Controle de divulgação.** Os arquivos desta página passaram por supressão primária (contagens de 1 a 4) e por **supressão complementar auditada**: as contagens ligam-se por somas (anos → período, comarcas → total do estado, meses → ano, grupos → esfera) e pela identidade das ações mistas (pública + suplementar − total), e células adicionais foram escondidas para que nenhuma contagem pequena pudesse ser recalculada por diferença. A auditoria verificou `r aud_val("celulas de contagem publicadas")` células publicadas e `r aud_val("relacoes aditivas")` relações de soma, com `r aud_val("supressao primaria")` supressões primárias, `r aud_val("contagens derivaveis")` contagens deriváveis por diferença protegidas como primárias e `r aud_val("supressao complementar")` supressões complementares, e constatou que **nenhuma célula é recuperável** — nem por programação linear, nem no pior caso em que se sabe quais células vazias são primárias. Por essa razão, as taxas suavizadas por comarca e ano aparecem somente em faixas, e a taxa numérica, somente no período 2022–2024, arredondada a 5.
+**Controle de divulgação.** Os arquivos desta página passaram por supressão primária (contagens de 1 a 4) e por **supressão complementar auditada**: as contagens ligam-se por somas (anos → período, comarcas → total do estado, meses → ano, grupos → esfera) e pela identidade das ações mistas (pública + suplementar − total), e células adicionais foram ocultadas para que nenhuma contagem pequena pudesse ser recalculada por diferença. A auditoria verificou `r aud_val("celulas de contagem publicadas")` células publicadas e `r aud_val("relacoes aditivas")` relações de soma, com `r aud_val("supressao primaria")` supressões primárias, `r aud_val("contagens derivaveis")` contagens deriváveis por diferença protegidas como primárias e `r aud_val("supressao complementar")` supressões complementares, e constatou que **nenhuma célula é recuperável** — nem por programação linear, nem no pior caso em que se sabe quais células vazias são primárias. Por essa razão, as taxas suavizadas por comarca e ano aparecem somente em faixas, e a taxa numérica, somente no período 2022–2024, arredondada a 5.
 
-**Nesta página, nenhum valor suprimido é recalculado nem mostrado:** onde o arquivo traz uma célula vazia, a página registra “suprimido”.
+**Nesta página, nenhum valor suprimido é recalculado nem apresentado:** onde o arquivo traz uma célula vazia, a página registra “suprimido”.
 
 ## Arquivos {#arquivos}
 

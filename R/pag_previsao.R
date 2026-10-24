@@ -794,7 +794,7 @@ fonte_prev <- function(extra = NULL, figura = NULL) p(class = "nota-fonte", HTML
   "por semana epidemiológica da internação e região de saúde do hospital (ótica de ocorrência). ", if (!is.null(extra)) extra else "")))
 
 ARQS_PREV <- c(
-  "previsao_proximas_semanas.csv" = "previsão das 4 semanas a partir de hoje, por região, faixa etária e método, com limiar e situação",
+  "previsao_proximas_semanas.csv" = "previsão das 4 semanas a partir da semana de corte, por região, faixa etária e método, com limiar e situação",
   "previsao_nowcast_hoje.csv" = "nowcast das semanas ainda incompletas no SIH, por região, faixa etária e método",
   "previsao_serie_semanal_carga_2026_10_17.csv" = "série semanal completa na carga do SIH de 17/10/2026 (2024 a 2026)",
   "previsao_serie_semanal_2020_2026.csv" = "série semanal observada desde 2020, nas óticas de ocorrência e de residência",

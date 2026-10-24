@@ -435,7 +435,7 @@ tabela_eficiencia <- function(modelo, ano = ANO_EF, grupo = NULL, prefixo = "../
     div(class = "ef-botoes",
         tags$button(class = "btn btn-sm btn-outline-primary", type = "button",
                     onclick = sprintf("Reactable.downloadDataCSV('%s', '%s')", id_html, arq), "⭳ Baixar esta tabela (CSV)"),
-        span(class = "sub", "Clique em ▸ para abrir a ficha do município (frase-síntese, pares e metas). A ordem é alfabética, pois as faixas não constituem ranking.")),
+        span(class = "sub", "Clique em ▸ para abrir a ficha do município (frase-síntese, pares e metas). A ordem é alfabética, pois as faixas não constituem ", tags$em("ranking", .noWS = "outside"), ".")),
     div(class = "rolagem-x", reactable(d, elementId = id_html, searchable = TRUE, compact = TRUE, striped = TRUE, highlight = TRUE,
               defaultPageSize = 15, showPageSizeOptions = TRUE, pageSizeOptions = c(15, 50, nrow(d)), wrap = TRUE,
               columns = cols, details = function(i) ficha_detalhe(d$cod_mun6[i], modelo, ano, prefixo))))
@@ -604,8 +604,9 @@ tabela_resumo_modelos <- function() {
 # Rodapé de fontes da seção
 fonte_eficiencia <- function(prefixo = "../", extra = NULL) {
   p(class = "nota-fonte",
-    sprintf("Fonte: %s — estimação DEA (modelo BCC orientado ao produto, escore corrigido por bootstrap, IC de %s%%) e índice de Malmquist, Projeto PPSUS-MT, com base em dados do SIOPS, CNES, SISAB, SI-PNI, SIA, SIH e IBGE, 2020–%d. Nota: os valores monetários estão expressos em R$ de 2025 (IPCA). ",
-            CITACAO_EF, num(100 * IC_NIVEL, 0), ANO_EF), extra,
+    sprintf("Fonte: %s — estimação DEA (modelo BCC orientado ao produto, escore corrigido por ", CITACAO_EF), tags$em("bootstrap", .noWS = "outside"),
+    sprintf(", IC de %s%%) e índice de Malmquist, Projeto PPSUS-MT, com base em dados do SIOPS, CNES, SISAB, SI-PNI, SIA, SIH e IBGE, 2020–%d. Nota: os valores monetários estão expressos em R$ de 2025 (IPCA). ",
+            num(100 * IC_NIVEL, 0), ANO_EF), extra,
     "O método é descrito em ", a(href = paste0(prefixo, "metodologia.html"), "Metodologia", .noWS = "after"),
     ", e os arquivos completos (fichas, metas, pares e dicionário) encontram-se em ", a(href = paste0(prefixo, "arquivos/dados/eficiencia/fichas_municipio.csv"), "fichas_municipio.csv", .noWS = "after"),
     " e nos demais arquivos da página ", a(href = paste0(prefixo, "dados/index.html"), "Dados", .noWS = "after"), ".")

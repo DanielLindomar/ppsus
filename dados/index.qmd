@@ -41,12 +41,12 @@ explorador_dados()
 ```
 
 ::: {.nota-fonte}
-Fonte: elaboração própria com base em dados do DATASUS/Ministério da Saúde, do SIOPS e do IBGE. Nota: os valores estão arredondados às casas de exibição de cada indicador; a série com todas as casas decimais, e com os códigos das regiões, encontra-se em `serie_longa.csv` (abaixo). A definição, a fórmula, a fonte e as ressalvas de cada indicador constam do [dicionário](#dicionario) e da página [Indicadores](../indicadores/index.html). Boa Esperança do Norte (instalado em 2025) só tem valores em 2025.
+Fonte: elaboração própria com base em dados do DATASUS/Ministério da Saúde, do SIOPS e do IBGE. Nota: os valores estão arredondados às casas de exibição de cada indicador; a série com todas as casas decimais, e com os códigos das regiões, encontra-se em `serie_longa.csv` (abaixo). A definição, a fórmula, a fonte e as ressalvas de cada indicador constam do [dicionário](#dicionario) e da página [Indicadores](../indicadores/index.html). Boa Esperança do Norte (instalado em 2025) dispõe de valores somente em 2025.
 :::
 
 ## Arquivos para download {#downloads}
 
-Disponibilizam-se `r n_arq` arquivos (`r fmt_bytes(tam_total)` no total), relacionados na Tabela 2, derivados dos painéis do *Data Lake* do projeto e, na versão 0.4, também de agregados das frentes de previsão (foto fixa do corte de 17/10/2026), de localização (com tempos rodoviários calculados pelo OSRM sobre o OpenStreetMap) e de judicialização (API Pública do DataJud/CNJ). Os arquivos CSV estão codificados em UTF-8, com separador vírgula, decimal ponto e célula vazia quando o dado é indisponível, e as malhas GeoJSON estão no sistema WGS84 (EPSG:4326). As chaves de junção são `cod_mun6` (código IBGE do município, com 6 dígitos), `co_regsaud` (região de saúde), `cnes` (estabelecimento, com 7 dígitos e zeros à esquerda, que deve ser lido como texto) e `ano`. Para baixar um arquivo, basta clicar sobre o respectivo nome.
+Disponibilizam-se `r n_arq` arquivos (`r fmt_bytes(tam_total)` no total), relacionados na Tabela 2, derivados dos painéis do *Data Lake* do projeto e, na versão 0.4, também de agregados das frentes de previsão (retrato fixo do corte de 17/10/2026), de localização (com tempos rodoviários calculados pelo OSRM sobre o OpenStreetMap) e de judicialização (API Pública do DataJud/CNJ). Os arquivos CSV estão codificados em UTF-8, com separador vírgula, decimal ponto e célula vazia quando o dado é indisponível, e as malhas GeoJSON estão no sistema WGS84 (EPSG:4326). As chaves de junção são `cod_mun6` (código IBGE do município, com 6 dígitos), `co_regsaud` (região de saúde), `cnes` (estabelecimento, com 7 dígitos e zeros à esquerda, que deve ser lido como texto) e `ano`. Para baixar um arquivo, basta clicar sobre o respectivo nome.
 
 **Tabela 2 – Arquivos disponíveis para *download*, por tema**
 

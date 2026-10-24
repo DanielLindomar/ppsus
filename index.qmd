@@ -40,7 +40,7 @@ div(class = "kpi-grade",
   kpi_mt("taxa_mortalidade_infantil", 2024L))
 ```
 
-Os cartões apresentam valores do estado, obtidos pela soma ou pela razão dos totais estaduais. A despesa corresponde ao valor liquidado declarado ao SIOPS, em R$ correntes; os médicos são contados em equivalente de 40 horas semanais (CNES); as internações provêm do SIH e são atribuídas ao ano da alta; e a mortalidade infantil é expressa por mil nascidos vivos (SIM/SINASC, com dados até 2024).
+Os cartões apresentam valores do estado, obtidos pela soma ou pela razão dos totais estaduais. A despesa corresponde ao valor liquidado declarado ao Sistema de Informações sobre Orçamentos Públicos em Saúde (SIOPS), em R$ correntes; os médicos são contados em equivalente de 40 horas semanais, segundo o Cadastro Nacional de Estabelecimentos de Saúde (CNES); as internações provêm do Sistema de Informações Hospitalares (SIH) e são atribuídas ao ano da alta; e a mortalidade infantil é expressa por mil nascidos vivos, com base no Sistema de Informações sobre Mortalidade (SIM) e no Sistema de Informações sobre Nascidos Vivos (SINASC), com dados até 2024.
 
 ## Municípios
 

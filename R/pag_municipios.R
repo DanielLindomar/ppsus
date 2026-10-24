@@ -240,7 +240,7 @@ texto_hospitais <- function(cod, ano = ANO_REF) {
                  ano, r$n, if (r$n == 1) "estabelecimento hospitalar" else "estabelecimentos hospitalares", nome, media_txt, num(round(r$leitos)), num(round(r$uti))),
          if (r$internacoes > 0) sprintf("Esses estabelecimentos realizaram %s internações SUS no ano (SIH, ano da alta), inclusive de residentes de outros estados. ", num(r$internacoes)) else "",
          if (r$sem_sih > 0) sprintf("Dos estabelecimentos registrados, %d %s sem produção registrada no SIH no ano, constando apenas no CNES. ", r$sem_sih,
-                                    if (r$sem_sih == 1) "estabelecimento permaneceu" else "estabelecimentos permaneceram") else "",
+                                    if (r$sem_sih == 1) "permaneceu" else "permaneceram") else "",
          "Na tabela por estabelecimento, os leitos e os médicos correspondem às médias dos meses em que cada estabelecimento constou no CNES, a mortalidade não tem ajuste de risco e a ocupação dos leitos SUS é expressa em percentual (%).")
 }
 

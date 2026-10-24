@@ -300,7 +300,7 @@ A partir da versão 0.3, o Observatório passou a mensurar também as internaç�
 kpis_fuga(A)
 ```
 
-Embora pequena no total, a saída para outros estados mostra-se relevante na alta complexidade: em `r A`, `r pct_txt(F25$pct_outra_uf)` das internações dos residentes de Mato Grosso ocorreram fora do estado, contra `r pct_txt(FAC25$pct_outra_uf)` das internações de alta complexidade (`r pct_txt(FAC20$pct_outra_uf)` em 2020). Entre as internações em outros estados, `r pct_txt(fuga_ac_share)` foram de alta complexidade, contra `r pct_txt(mt_ac_share)` das internações dos residentes em hospitais de Mato Grosso; além disso, `r pct_txt(F25$pct_eletivas_outra_uf)` foram eletivas, contra `r pct_txt(F25$pct_eletivas_mt)` em Mato Grosso. Depreende-se, portanto, que os procedimentos programados pesam muito mais nas internações em outros estados do que nas realizadas em Mato Grosso.
+Embora pequena no total, a saída para outros estados mostra-se relevante na alta complexidade: em `r A`, `r pct_txt(F25$pct_outra_uf)` das internações dos residentes de Mato Grosso ocorreram fora do estado, contra `r pct_txt(FAC25$pct_outra_uf)` das internações de alta complexidade (`r pct_txt(FAC20$pct_outra_uf)` em 2020). Entre as internações em outros estados, `r pct_txt(fuga_ac_share)` foram de alta complexidade, contra `r pct_txt(mt_ac_share)` das internações dos residentes em hospitais de Mato Grosso; além disso, `r pct_txt(F25$pct_eletivas_outra_uf)` foram eletivas, contra `r pct_txt(F25$pct_eletivas_mt)` em Mato Grosso. Depreende-se, portanto, que os procedimentos programados têm peso consideravelmente maior nas internações em outros estados do que nas realizadas em Mato Grosso.
 
 ### Para onde vão
 
