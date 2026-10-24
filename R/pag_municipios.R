@@ -230,7 +230,8 @@ bloco_atende <- function(cod, ano = ANO_REF) {
                                                if (saldo > 0) "+" else "", num(saldo),
                                                if (saldo > 0) "o município atende mais do que os moradores demandam"
                                                else if (saldo < 0) "os moradores demandam mais do que o município realiza" else "há equilíbrio entre ambas") else ""
-  frase_ac <- if (is.finite(ac_rec) && ac_rec > 0) sprintf(" Na alta complexidade, realizaram-se %s internações no município.", num(ac_rec)) else ""
+  frase_ac <- if (is.finite(ac_rec) && ac_rec > 0) sprintf(if (isTRUE(ac_rec == 1)) " Na alta complexidade, realizou-se %s internação no município."
+                                                           else " Na alta complexidade, realizaram-se %s internações no município.", num(ac_rec)) else ""
   nota_hosp <- if (!tem_hosp) p(class = "nota-fonte", "O CNES não classifica como hospital nenhum estabelecimento SUS do município; as internações, portanto, foram realizadas em outros tipos de estabelecimento (por exemplo, unidades mistas).")
   ser <- DESL[DESL$cod_mun6 == cod & DESL$ano %in% ANOS & is.finite(DESL$internacoes_recebidas), ]
   g <- if (nrow(ser) >= 2) svg_linhas(list(
