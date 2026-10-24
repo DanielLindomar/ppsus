@@ -89,6 +89,8 @@ website:
 # Rótulo da ação do repositório exibida em todas as páginas (padrão do Quarto em pt: "Criar uma issue")
 language:
   repo-action-links-issue: "Comunicar um problema"
+  toggle-navigation: "Mostrar ou ocultar a navegação"
+  search-copy-link-title: "Copiar o endereço desta busca"
 
 format:
   html:
