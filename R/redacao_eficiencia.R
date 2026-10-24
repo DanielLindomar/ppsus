@@ -61,6 +61,9 @@
 #         o município fica <d> acima|abaixo do esperado."
 #        -> "O escore esperado pelo contexto (<fatores>) é de <x>; no segundo estágio, com escore
 #            corrigido de <e>, o município situa-se <d> acima|abaixo do esperado."
+#        (5ª rodada) na lista de fatores, "perfil de polo" (share_ac no segundo estágio) é exibido como
+#        "participação da alta complexidade na produção local", a mesma descrição do sinal flag_polo_ac
+#        (.ef_fatores; só na exibição: o CSV mantém a redação do schema dea)
 #   F09  "Evolução <a1>–<a2>: aproximação às melhores práticas (componente de gestão) <v>% ao ano
 #         (<tendência>)."
 #        -> "No período <a1>–<a2>, a aproximação às melhores práticas (componente de gestão) foi de
@@ -117,10 +120,12 @@
 #         municípios do painel, e <mun>, instalado em <data>, não dispõe de série própria de
 #         internações de residentes (reagregado ao município de origem no Malmquist)."
 #   F21  "Hospital de outra esfera: despesa <s> baixa com internações locais relevantes (nota
-#         informativa; não restringe pares)." -> (4ª rodada) "Registra-se hospital mantido por outra esfera
-#         de governo; a despesa municipal na subfunção <s> é baixa, embora as internações locais sejam
-#         relevantes (nota informativa, que não restringe os pares)." (flag_302_outra_esfera de
-#         dea/v2_1/40_fichas_v2.py: despesa 302 do SIOPS municipal baixa com internações locais ≥ mediana)
+#         informativa; não restringe pares)." -> (5ª rodada) "A ficha traz a nota informativa “hospital de
+#         outra esfera”, atribuída quando a despesa municipal na subfunção <s> é baixa e as internações
+#         locais são relevantes; a nota não restringe os pares." (flag_302_outra_esfera de
+#         dea/v2_1/40_fichas_v2.py: despesa 302 do SIOPS municipal baixa com internações locais ≥ mediana; o
+#         sinal é inferido da despesa e das internações e não consulta a esfera do hospital no CNES, razão pela
+#         qual a frase não afirma a existência de hospital de outra esfera)
 #   F22  "Primeiro exercício do município: registro possivelmente parcial (produtos SISAB
 #         anualizados); escore publicável com marca 'parcial'." -> "Por se tratar do primeiro
 #         exercício do município, o registro é possivelmente parcial (produtos do SISAB anualizados),
@@ -147,6 +152,8 @@
                 `SISAB com meses insuficientes` = "meses insuficientes no SISAB",
                 `SISAB com valores implausíveis` = "valores implausíveis no SISAB")
 .ef_faixas_re <- "fronteira|quartil superior|terceiro quartil|segundo quartil|quartil inferior"
+# Fatores do escore esperado pelo contexto (F08): "perfil de polo" é a participação da alta complexidade (share_ac)
+.ef_fatores <- function(x) sub("perfil de polo", "participação da alta complexidade na produção local", x, fixed = TRUE)
 
 # Cada família: id, expressão regular ancorada e função que recebe os grupos capturados (g[1], g[2], ...)
 # e devolve a redação nova (ou NULL, quando um trecho capturado não pertence ao vocabulário mapeado).
@@ -191,7 +198,7 @@ REDACAO_TEXTO_PADRAO <- list(
        }),
   list(id = "F08", re = "^Escore esperado pelo contexto \\((.+?)\\): (.+?); no segundo estágio \\(escore corrigido (.+?)\\), o município fica (.+?) (acima|abaixo) do esperado\\.$",
        f = function(g) sprintf("O escore esperado pelo contexto (%s) é de %s; no segundo estágio, com escore corrigido de %s, o município situa-se %s %s do esperado.",
-                               g[1], g[2], g[3], g[4], g[5])),
+                               .ef_fatores(g[1]), g[2], g[3], g[4], g[5])),
   list(id = "F09", re = "^Evolução (\\d{4})–(\\d{4}): aproximação às melhores práticas \\(componente de gestão\\) (.+?)% ao ano \\((sem tendência definida|melhora consistente|piora consistente)\\)\\.$",
        f = function(g) sprintf("No período %s–%s, a aproximação às melhores práticas (componente de gestão) foi de %s%% ao ano, %s.",
                                g[1], g[2], g[3], .ef_tendencia[[g[4]]])),
@@ -234,7 +241,7 @@ REDACAO_TEXTO_PADRAO <- list(
        f = function(g) sprintf("Em %s, %s não é avaliado neste modelo, uma vez que não integra o %s-acesso: o modelo-espelho avalia os %s municípios do painel, e %s, instalado em %s, não dispõe de série própria de internações de residentes (reagregado ao município de origem no Malmquist).",
                                g[2], g[1], g[3], g[4], g[5], g[6])),
   list(id = "F21", re = "^Hospital de outra esfera: despesa (\\d+) baixa com internações locais relevantes \\(nota informativa; não restringe pares\\)\\.$",
-       f = function(g) sprintf("Registra-se hospital mantido por outra esfera de governo; a despesa municipal na subfunção %s é baixa, embora as internações locais sejam relevantes (nota informativa, que não restringe os pares).", g[1])),
+       f = function(g) sprintf("A ficha traz a nota informativa “hospital de outra esfera”, atribuída quando a despesa municipal na subfunção %s é baixa e as internações locais são relevantes; a nota não restringe os pares.", g[1])),
   list(id = "F22", re = "^Primeiro exercício do município: registro possivelmente parcial \\(produtos SISAB anualizados\\); escore publicável com marca 'parcial'\\.$",
        f = function(g) "Por se tratar do primeiro exercício do município, o registro é possivelmente parcial (produtos do SISAB anualizados), e o escore é publicável com a marca “parcial”."),
   list(id = "F23", re = "^Flag de rede 'sem hospital SUS' ativa apesar de internações de média complexidade locais registradas no SIH: configuração da rede a verificar na origem \\(CNES/SIH\\)\\.$",
@@ -290,18 +297,18 @@ redigir_texto_padrao <- function(x, detalhe = FALSE) {
 #           residentes por mil habitantes, ante a mediana estadual de <m>, e realizou dentro da própria região o
 #           equivalente a <p>% dessas internações."
 #   R02 "Quadrante: polo — região-polo: realiza mais internações de AC do que as de seus residentes (atende outras
-#        regiões)." -> "A região classifica-se no quadrante polo, uma vez que realiza mais internações de AC do que
+#        regiões)." -> "A região classifica-se no quadrante “polo”, uma vez que realiza mais internações de AC do que
 #        as de seus residentes e, portanto, atende também outras regiões."
 #   R03 "Quadrante: em transição — autossuficiência parcial (<a>–<b>%): parte da AC de residentes ainda é realizada
-#        fora." -> "A região classifica-se no quadrante em transição, com autossuficiência parcial (<a>–<b>%), de
+#        fora." -> "A região classifica-se no quadrante “em transição”, com autossuficiência parcial (<a>–<b>%), de
 #        modo que parte da AC de residentes ainda é realizada fora da região."
 #   R04 "Quadrante: dependente com acesso adequado — depende de outras regiões (autossuficiência < <a>%), mas o
 #        acesso dos residentes está na mediana estadual ou acima." -> "A região classifica-se no quadrante
-#        dependente com acesso adequado, uma vez que depende de outras regiões (autossuficiência inferior a <a>%),
+#        “dependente com acesso adequado”, uma vez que depende de outras regiões (autossuficiência inferior a <a>%),
 #        embora o acesso dos residentes se situe na mediana estadual ou acima dela."
 #   R05 "Quadrante: dependente com baixo acesso — depende de outras regiões e o acesso dos residentes está abaixo
 #        da mediana estadual — prioridade para regulação e pactuação de fluxos." -> "A região classifica-se no
-#        quadrante dependente com baixo acesso, uma vez que depende de outras regiões e o acesso dos residentes se
+#        quadrante “dependente com baixo acesso”, uma vez que depende de outras regiões e o acesso dos residentes se
 #        situa abaixo da mediana estadual, razão pela qual constitui prioridade para a regulação e a pactuação de
 #        fluxos."
 #   R06 "Tendência do acesso <a1>–<a2>: <v>% ao ano." -> "No período <a1>–<a2>, a tendência do acesso foi de <v>%
@@ -328,13 +335,13 @@ REDACAO_FICHA_REGIAO <- list(
        f = function(g) sprintf("Em %s, a região %s, com %s habitantes, registrou %s internações de alta complexidade de residentes por mil habitantes, ante a mediana estadual de %s, e realizou dentro da própria região o equivalente a %s%% dessas internações.",
                                g[1], g[2], g[3], g[4], g[5], g[6])),
   list(id = "R02", re = "^Quadrante: polo — região-polo: realiza mais internações de AC do que as de seus residentes \\(atende outras regiões\\)\\.$",
-       f = function(g) "A região classifica-se no quadrante polo, uma vez que realiza mais internações de AC do que as de seus residentes e, portanto, atende também outras regiões."),
+       f = function(g) "A região classifica-se no quadrante “polo”, uma vez que realiza mais internações de AC do que as de seus residentes e, portanto, atende também outras regiões."),
   list(id = "R03", re = "^Quadrante: em transição — autossuficiência parcial \\((\\d+)–(\\d+)%\\): parte da AC de residentes ainda é realizada fora\\.$",
-       f = function(g) sprintf("A região classifica-se no quadrante em transição, com autossuficiência parcial (%s–%s%%), de modo que parte da AC de residentes ainda é realizada fora da região.", g[1], g[2])),
+       f = function(g) sprintf("A região classifica-se no quadrante “em transição”, com autossuficiência parcial (%s–%s%%), de modo que parte da AC de residentes ainda é realizada fora da região.", g[1], g[2])),
   list(id = "R04", re = "^Quadrante: dependente com acesso adequado — depende de outras regiões \\(autossuficiência < (\\d+)%\\), mas o acesso dos residentes está na mediana estadual ou acima\\.$",
-       f = function(g) sprintf("A região classifica-se no quadrante dependente com acesso adequado, uma vez que depende de outras regiões (autossuficiência inferior a %s%%), embora o acesso dos residentes se situe na mediana estadual ou acima dela.", g[1])),
+       f = function(g) sprintf("A região classifica-se no quadrante “dependente com acesso adequado”, uma vez que depende de outras regiões (autossuficiência inferior a %s%%), embora o acesso dos residentes se situe na mediana estadual ou acima dela.", g[1])),
   list(id = "R05", re = "^Quadrante: dependente com baixo acesso — depende de outras regiões e o acesso dos residentes está abaixo da mediana estadual — prioridade para regulação e pactuação de fluxos\\.$",
-       f = function(g) "A região classifica-se no quadrante dependente com baixo acesso, uma vez que depende de outras regiões e o acesso dos residentes se situa abaixo da mediana estadual, razão pela qual constitui prioridade para a regulação e a pactuação de fluxos."),
+       f = function(g) "A região classifica-se no quadrante “dependente com baixo acesso”, uma vez que depende de outras regiões e o acesso dos residentes se situa abaixo da mediana estadual, razão pela qual constitui prioridade para a regulação e a pactuação de fluxos."),
   list(id = "R06", re = "^Tendência do acesso (\\d{4})–(\\d{4}): (.+?)% ao ano\\.$",
        f = function(g) sprintf("No período %s–%s, a tendência do acesso foi de %s%% ao ano.", g[1], g[2], g[3])),
   list(id = "R07", re = paste0("^Escore DEA diagnóstico da produção de AC: ([0-9.,]+) \\(IC 95% de ([0-9.,]+) a ([0-9.,]+); faixa (", .ef_faixas_re,
@@ -369,10 +376,13 @@ redigir_ficha_regiao <- function(x, detalhe = FALSE) {
 # composto por até três partes, mapeadas como um todo.
 #   E1 "o deslocamento das melhores práticas (TC) fica no relatório técnico, com nota sobre o crescimento
 #       de registro do CNES após <ano>" -> "o deslocamento das melhores práticas (TC) é apresentado no
-#       relatório técnico, com nota sobre o crescimento do registro no CNES após <ano>"
+#       relatório técnico e, de forma agregada, na página Produtividade, com nota sobre o crescimento do
+#       registro no CNES após <ano>" (5ª rodada: acrescenta-se a página do site em que o TC agregado é
+#       publicado, eficiencia/produtividade.qmd; o relatório técnico continua citado)
 #   E2 "transição(ões) com registro marcado (<transições>): excluída(s) das médias regionais; leitura com
 #       reserva; " -> "a(s) transição(ões) com registro marcado (<transições>) foi(ram) excluída(s) das
-#       médias regionais e deve(m) ser interpretada(s) com reserva; "
+#       médias regionais e deve(m) ser interpretada(s) com reserva; " (5ª rodada: nos períodos das
+#       transições, o hífen do arquivo, "2020-2021", é exibido como travessão curto, "2020–2021")
 #   E3 "série <ano> inclui a parcela de <mun> (instalado em <ano>; reagregação ao município de origem); "
 #       -> "a série de <ano> inclui a parcela de <mun> (instalado em <ano>, com reagregação ao município
 #       de origem); "
@@ -380,20 +390,21 @@ redigir_ficha_regiao <- function(x, detalhe = FALSE) {
 #       -> "não há série própria, uma vez que o município foi instalado em <ano> (reagregado a <municípios>
 #       no painel do Malmquist)"
 .re_e1 <- "o deslocamento das melhores práticas \\(TC\\) fica no relatório técnico, com nota sobre o crescimento de registro do CNES após (\\d{4})"
+.txt_e1 <- function(a) sprintf("o deslocamento das melhores práticas (TC) é apresentado no relatório técnico e, de forma agregada, na página Produtividade, com nota sobre o crescimento do registro no CNES após %s", a)
 REDACAO_NOTA_EVOLUCAO <- list(
   list(id = "E1", re = paste0("^", .re_e1, "$"),
-       f = function(g) sprintf("o deslocamento das melhores práticas (TC) é apresentado no relatório técnico, com nota sobre o crescimento do registro no CNES após %s", g[1])),
+       f = function(g) .txt_e1(g[1])),
   list(id = "E2", re = paste0("^(transição|transições) com registro marcado \\(([^)]+)\\): (excluída|excluídas) das médias regionais; leitura com reserva; ", .re_e1, "$"),
        f = function(g) {
          if ((g[1] == "transição") != (g[3] == "excluída")) return(NULL)
-         sprintf("%s com registro marcado (%s) %s das médias regionais e %s com reserva; o deslocamento das melhores práticas (TC) é apresentado no relatório técnico, com nota sobre o crescimento do registro no CNES após %s",
-                 if (g[1] == "transição") "a transição" else "as transições", g[2],
+         sprintf("%s com registro marcado (%s) %s das médias regionais e %s com reserva; %s",
+                 if (g[1] == "transição") "a transição" else "as transições", gsub("(\\d{4})-(\\d{4})", "\\1–\\2", g[2]),
                  if (g[1] == "transição") "foi excluída" else "foram excluídas",
-                 if (g[1] == "transição") "deve ser interpretada" else "devem ser interpretadas", g[4])
+                 if (g[1] == "transição") "deve ser interpretada" else "devem ser interpretadas", .txt_e1(g[4]))
        }),
   list(id = "E3", re = paste0("^série (\\d{4}) inclui a parcela de (.+?) \\(instalado em (\\d{4}); reagregação ao município de origem\\); ", .re_e1, "$"),
-       f = function(g) sprintf("a série de %s inclui a parcela de %s (instalado em %s, com reagregação ao município de origem); o deslocamento das melhores práticas (TC) é apresentado no relatório técnico, com nota sobre o crescimento do registro no CNES após %s",
-                               g[1], g[2], g[3], g[4])),
+       f = function(g) sprintf("a série de %s inclui a parcela de %s (instalado em %s, com reagregação ao município de origem); %s",
+                               g[1], g[2], g[3], .txt_e1(g[4]))),
   list(id = "E4", re = "^sem série própria: município instalado em (\\d{4}) \\(reagregado a (.+) no painel do Malmquist\\)$",
        f = function(g) sprintf("não há série própria, uma vez que o município foi instalado em %s (reagregado a %s no painel do Malmquist)", g[1], g[2]))
 )

@@ -71,7 +71,7 @@ EF_DATA <- ef_meta("data_resultados")   # data dos resultados (08/10/2026 na v2;
 EF_VERSAO <- ef_meta("versao_resultados")
 # Frase curta da nota de versão (vazia quando não há versão anterior): o que mudou frente à versão anterior
 EF_NOTA_CURTA <- if (!is.na(ef_meta("nota_versao")) && nzchar(ef_meta("nota_versao")) && identical(ef_meta("modelos_reestimados"), "M1"))
-  sprintf(" Na versão %s, apenas a atenção básica foi reestimada, com o insumo de agentes comunitários restrito ao ACS (CBO 515105) — [nota de versão](%sindex.html#versao).",
+  sprintf(" Na versão %s, apenas a atenção básica foi reestimada, com o insumo de agentes comunitários restrito ao ACS (CBO 515105), conforme a [nota de versão](%sindex.html#versao).",
           sub("^v", "", EF_VERSAO), EF_PREFIXO) else ""
 
 # Modelos municipais na ordem da ficha: rótulo curto (aba) e página da seção Eficiência
@@ -447,7 +447,7 @@ ficha_modelo <- function(cod, modelo, nome, nome_reg) {
   pag <- paste0(EF_PREFIXO, EF_PAGINA[[modelo]], ".html")
   if (is.null(r)) return(sprintf('<p class="nota-fonte">Não há ficha de %s para %s.</p>', tolower(EF_MODELOS[[modelo]]), esc(nome)))
   if (!r$situacao %in% "avaliado")
-    return(sprintf('<div class="ef-ficha"><p><b>Não avaliado em %d:</b> %s</p><p class="nota-fonte"><a href="%s">Como o modelo funciona →</a></p></div>',
+    return(sprintf('<div class="ef-ficha"><p><b>Não avaliado em %d:</b> %s</p><p class="nota-fonte"><a href="%s">Descrição do modelo →</a></p></div>',
                    EF_ANO, esc(motivo_gestor(r)), pag))
   grp <- if (!is.na(r$grupo) && nzchar(r$grupo)) r$grupo else NA
   intro_acesso <- if (modelo == "M2A") sprintf('<p class="ef-linha">O modelo compara os recursos municipais de média complexidade com as internações de média complexidade dos moradores, onde quer que tenham ocorrido em Mato Grosso, em uma fronteira composta apenas pelos <b>%s</b>.%s</p>',
@@ -527,7 +527,7 @@ secao_eficiencia <- function(cod) {
   sem_m2 <- !is.null(r2) && !r2$situacao %in% "avaliado"
   html <- function(x) cat("\n```{=html}\n", x, "\n```\n\n", sep = "")
   html(as.character(ef_estilo()))
-  cat(sprintf("Os escores comparam o que %s produz com os recursos que utiliza, tendo como referência as **melhores práticas observadas em municípios de Mato Grosso** no mesmo ano, estimadas por Análise Envoltória de Dados (DEA, do inglês *Data Envelopment Analysis*) com orientação ao produto. A leitura deve ser feita por **faixa com intervalo de confiança**, e não por posição exata. Cumpre ressaltar que o escore mede a eficiência técnica, **e não a qualidade do cuidado**, e que os resultados em saúde constam das abas acima. Os resultados correspondem à versão %s da estimação (%s) e encontram-se em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT) e o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT).%s A forma de leitura é detalhada em [Eficiência — visão geral](%sindex.html).\n\n",
+  cat(sprintf("Os escores comparam o que %s produz com os recursos que utiliza, tendo como referência as **melhores práticas observadas em municípios de Mato Grosso** no mesmo ano, estimadas por Análise Envoltória de Dados (DEA, do inglês *Data Envelopment Analysis*) com orientação ao produto. A leitura deve ser feita por **faixa com intervalo de confiança**, e não por posição exata. Cumpre ressaltar que o escore mede a eficiência técnica, **e não a qualidade do cuidado**, e que os resultados em saúde constam das abas acima. Os resultados correspondem à versão %s da estimação (%s) e encontram-se em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT) e o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT).%s A forma de leitura é detalhada em [Eficiência: interpretação dos resultados e visão geral](%sindex.html).\n\n",
               nome, ifelse(is.na(EF_VERSAO), "2", sub("^v", "", EF_VERSAO)), ifelse(is.na(EF_DATA), "", EF_DATA), EF_NOTA_CURTA, EF_PREFIXO))
   if (primeiro) cat(sprintf("::: {.callout-note}\n**Primeiro exercício.** %s foi instalado em 1º/01/2025, razão pela qual há resultado apenas para 2025, marcado como parcial (produção da atenção básica anualizada e registro possivelmente incompleto). O município ainda não serve de referência a outros e não dispõe de evolução (Malmquist) nem de escore esperado pelo contexto.\n:::\n\n", nome))
   if (sem_m2 && !primeiro) cat(sprintf("Por não dispor de hospital SUS com produção de média complexidade em todos os anos, %s não integra o modelo de média complexidade pela produção local; nesse caso, a média complexidade é analisada **pela ótica do acesso**, isto é, pelas internações de média complexidade dos moradores, onde quer que tenham ocorrido em Mato Grosso.\n\n", nome))

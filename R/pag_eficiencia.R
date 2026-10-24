@@ -106,6 +106,16 @@ pct_ef <- function(x, d = 1) ifelse(is.na(x), "—", paste0(num(x, d), "%"))
 var_ano <- function(i, d = 1, sufixo = " ao ano") ifelse(is.na(i), "—",
   paste0(ifelse(i >= 1 | round(abs(100 * (i - 1)), d) == 0, "+", "−"), num(abs(100 * (i - 1)), d), "%", sufixo))
 reais_txt <- function(x) ifelse(is.na(x), "—", escala(x, "R$ "))
+# Versão 0.5 (5ª rodada): o mesmo valor de reais_txt, com a unidade por extenso, para o texto corrido
+# ("R$ 143,5 milhões" no lugar de "R$ 143,5 mi"; os cartões continuam com reais_txt)
+reais_prosa <- function(x) {
+  a <- abs(x)
+  ifelse(is.na(x), "—",
+  ifelse(a >= 1e9, paste0("R$ ", num(x / 1e9, 1), if (isTRUE(round(a / 1e9, 1) < 2)) " bilhão" else " bilhões"),
+  ifelse(a >= 1e6, paste0("R$ ", num(x / 1e6, 1), if (isTRUE(round(a / 1e6, 1) < 2)) " milhão" else " milhões"),
+  ifelse(a >= 1e4, paste0("R$ ", num(x / 1e3, 1), " mil"),
+         paste0("R$ ", num(x, 0))))))
+}
 rot_faixa <- function(f) ifelse(is.na(f) | !f %in% FAIXAS, "fora do modelo", ROT_FAIXA[f])
 mais_ou_menos <- function(x) ifelse(is.na(x), "—", paste0(ifelse(x >= 0, "+", "−"), num(abs(x), 3)))
 
@@ -196,14 +206,14 @@ nav_eficiencia <- function(atual = "index.html") {
 frase_versao_curta_ef <- function(href = "index.html#versao") {
   if (!nzchar(NOTA_VERSAO_EF) || !length(REESTIMADOS_EF) || !all(REESTIMADOS_EF %in% MODELOS_EF$modelo)) return("")
   nomes <- lista_e_ef(inicial_min(MODELOS_EF$curto[match(REESTIMADOS_EF, MODELOS_EF$modelo)]))
-  sprintf(paste0("Na versão %s, apenas o modelo de %s foi reestimado, e os demais resultados correspondem aos da versão %s (%s) — ",
-                 "<a href=\"%s\">nota de versão</a>. "),
+  sprintf(paste0("Na versão %s, apenas o modelo de %s foi reestimado, e os demais resultados correspondem aos da versão %s (%s), ",
+                 "conforme a <a href=\"%s\">nota de versão</a>. "),
           sub("^v", "", VERSAO_EF), nomes, sub("^v", "", VERSAO_ANT_EF), DATA_ANT_EF, href)
 }
 
 faixa_versao_ef <- function(nota_curta = TRUE) faixa_versao(sprintf(paste0(
   "<b>Resultados da versão %s da estimação DEA/Malmquist (%s), em validação com a SES-MT e o COSEMS-MT.</b> %s",
-  "Os resultados devem ser lidos por <b>faixas com intervalo de confiança</b>, e não por posição pontual, e os dados de registro a verificar estão sinalizados. ",
+  "Os resultados devem ser lidos por <b>faixas com intervalo de confiança</b>, e não por posição pontual, e as unidades com dados a verificar na origem recebem o sinal <i>registro a verificar</i>. ",
   "A janela de análise é 2020–%d, e os anos de 2020–2021 refletem a pandemia de COVID-19."), sub("^v", "", VERSAO_EF), DATA_EF,
   if (isTRUE(nota_curta)) frase_versao_curta_ef() else "", ANO_EF))
 
@@ -384,7 +394,7 @@ ficha_detalhe <- function(cod, modelo, ano = ANO_EF, prefixo = "../municipios/")
           # n_vezes_referencia = municípios que mostram esta unidade entre os seus pares publicados (scripts/06); com 0,
           # a frase dispensa o número ("nenhum outro município")
           nref <- suppressWarnings(as.numeric(r$n_vezes_referencia))
-          if (isTRUE(nref == 0)) "Por situar-se na fronteira, o município não tem pares e, embora pertença às melhores práticas, não serve de referência para nenhum outro município, pois não figura entre os pares publicados dos demais."
+          if (isTRUE(nref == 0)) "Por situar-se na fronteira, o município não tem pares e não figura entre os pares publicados de nenhum outro município."
           else sprintf("Por situar-se na fronteira, o município não tem pares e serve de referência para %s %s.", num(r$n_vezes_referencia),
                        if (isTRUE(nref == 1)) "município" else "municípios")
         } else
@@ -503,11 +513,11 @@ texto_potencial <- function(modelo, ano = ANO_EF, grupo = NULL) {
   pr <- x[x$tipo == "produto", ]; fin <- x[x$tipo == "insumo" & grepl("^R\\$", x$unidade_abs), ]
   fin <- fin[which.max(fin$n), ]
   n_pot <- length(municipios_com_potencial(modelo, ano, grupo))
-  partes <- if (nrow(pr)) sprintf("Em %d, %d municípios apresentam potencial de melhoria em relação aos seus pares plausíveis, isto é, têm alguma meta diferente do valor observado. Mantidos os recursos atuais, a produção desses municípios poderia crescer %s (meta plena), e a meta intermediária, que corresponde a %s dessa distância, constitui a referência de curto prazo.",
+  partes <- if (nrow(pr)) sprintf("Em %d, %d municípios apresentam potencial de melhoria em relação aos seus pares plausíveis, isto é, têm alguma meta diferente do valor observado. Mantidos os recursos atuais, a produção desses municípios poderia crescer %s (meta plena), e a meta intermediária, que cobre %s da distância entre o valor observado e a meta plena, constitui a referência de curto prazo.",
     ano, n_pot, if (nrow(pr) > 1) paste0("de ", pct_ef(min(pr$pct)), " a ", pct_ef(max(pr$pct)), ", conforme o serviço") else pct_ef(pr$pct), pct_ef(100 * FRACAO_META, 0)) else ""
   if (nrow(fin) == 1 && fin$reais > 0) partes <- paste(partes, sprintf(
-    "Na despesa (%s), a folga em relação aos pares soma %s de 2025 em %d municípios (%s do gasto dos municípios com potencial de melhoria). Essa folga corresponde à parcela que os pares dispensam para obter o mesmo resultado e indica espaço de realocação, e não um corte automático.",
-    inicial_min(fin$nome_gerencial), reais_txt(fin$reais), fin$n_reais, pct_ef(100 * fin$reais / fin$observado)))
+    "Na despesa (%s), a folga em relação aos pares soma %s (valores de 2025) em %d municípios, o que corresponde a %s do gasto dos municípios com potencial de melhoria. Essa folga corresponde à parcela que os pares dispensam para obter o mesmo resultado e indica espaço de realocação, e não um corte automático.",
+    inicial_min(fin$nome_gerencial), reais_prosa(fin$reais), fin$n_reais, pct_ef(100 * fin$reais / fin$observado)))
   partes
 }
 

@@ -35,7 +35,7 @@ secoes_pagina(c(`como-ler` = "Interpretação", `visao-geral` = paste("Visão ge
 Esta seção apresenta **a relação entre o que cada município, hospital e região de saúde de Mato Grosso produz e os recursos de que dispõe, tomando como referência as melhores práticas observadas no próprio estado**. Os resultados provêm da versão `r sub("^v", "", VERSAO_EF)` da estimação por Análise Envoltória de Dados (DEA, do inglês *Data Envelopment Analysis*) e pelo índice de Malmquist conduzida no Projeto PPSUS-MT (`r CITACAO_EF`), referem-se ao período 2020–`r A` e encontram-se em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT) e o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT). Organizam-se em cinco leituras complementares — a **atenção básica**, o **sistema municipal consolidado**, a **média complexidade** (pela produção local e pela ótica do acesso dos moradores), os **hospitais SUS** e a **alta complexidade por região de saúde** —, às quais se soma a **evolução da produtividade** ao longo do período. Recomenda-se, antes do exame dos números, a leitura das orientações de interpretação apresentadas a seguir.
 
 ```{r}
-nota_versao_ef(extra = '<a href="atencao-basica.html">Ver a atenção básica</a>.')
+nota_versao_ef(extra = 'Os detalhes constam da página <a href="atencao-basica.html">Atenção básica</a>.')
 ```
 
 ## Interpretação dos resultados {#como-ler}
@@ -123,16 +123,16 @@ Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT. N
 ## Ressalvas principais {#ressalvas}
 
 ::: {.ef-ressalva}
-**Os resultados da versão `r sub("^v", "", VERSAO_EF)` (`r DATA_EF`) encontram-se em validação.** A lista de verificações de registro na origem (CNES, SIOPS, SISAB, SIA/SIH e IBGE) será encaminhada pela coordenação do projeto à SES-MT e ao COSEMS-MT, de modo que faixas e metas podem mudar após essa validação. Os **dados de registro a verificar estão sinalizados**, e nunca ocultados: a unidade mantém o escore e a faixa, mas não serve de par de referência, e as metas financeiras com classificação orçamentária inconsistente não são publicadas.
+**Os resultados da versão `r sub("^v", "", VERSAO_EF)` (`r DATA_EF`) encontram-se em validação.** A lista de verificações de registro na origem (CNES, SIOPS, SISAB, SIA/SIH e IBGE) será encaminhada pela coordenação do projeto à SES-MT e ao COSEMS-MT, de modo que faixas e metas podem mudar após essa validação. As **unidades com dados a verificar na origem recebem o sinal *registro a verificar***, e nunca são ocultadas: cada uma mantém o escore e a faixa, mas não serve de par de referência, e as metas financeiras com classificação orçamentária inconsistente não são publicadas.
 
-**COVID-19 (2020–2021).** A produção desses anos foi afetada pela pandemia, e as transições com quebra de registro ficam fora das médias de evolução. Ademais, **as internações em outros estados não entram nos modelos**: a ótica do acesso utiliza apenas as internações em hospitais de Mato Grosso, ao passo que as internações de residentes em hospitais de outras unidades da federação (UF) são medidas à parte, na página [Deslocamento](../deslocamento/index.html#fuga), e não alteram os escores. Registra-se, ainda, que o **pré-natal de `r A` está indisponível**, porque o Sistema de Informações sobre Nascidos Vivos (SINASC) ainda não foi consolidado para o ano, e os indicadores de resultado das fichas utilizam o último período disponível.
+**COVID-19 (2020–2021).** A produção desses anos foi afetada pela pandemia, e as transições com quebra de registro são excluídas das médias de evolução. Ademais, **as internações em outros estados não integram os modelos**: a ótica do acesso utiliza apenas as internações em hospitais de Mato Grosso, ao passo que as internações de residentes em hospitais de outras unidades da Federação (UF) são medidas à parte, na página [Deslocamento](../deslocamento/index.html#fuga), e não alteram os escores. Registra-se, ainda, que o **pré-natal de `r A` está indisponível**, porque o Sistema de Informações sobre Nascidos Vivos (SINASC) ainda não foi consolidado para o ano, e os indicadores de resultado das fichas utilizam o último período disponível.
 
 Cumpre reiterar que **eficiência não é qualidade** e que o escore não explica, por si só, a distância até a fronteira, para a qual concorrem o perfil da rede, o porte e o registro. As internações sensíveis à atenção primária e as causas evitáveis não integram os modelos desta versão. **Boa Esperança do Norte**, instalado em 2025, dispõe apenas do primeiro exercício, com marca de resultado parcial, e não consta da malha municipal dos mapas. Quanto aos **hospitais**, o reduzido número de unidades por variável torna largos os intervalos de confiança, razão pela qual a leitura por faixas substitui o *ranking*; na **alta complexidade**, somente `r r3$n_avaliados` regiões têm escore diagnóstico publicável.
 :::
 
 ## Arquivos e método {#arquivos}
 
-As fichas completas, as metas por variável, os pares, o índice de Malmquist por região e o dicionário de campos encontram-se disponíveis em formato CSV (codificação UTF-8, separador vírgula e ponto decimal), e as referências completas das obras citadas nesta página constam da [Metodologia](../metodologia.qmd#referencias):
+As fichas completas, as metas por variável, os pares, o índice de Malmquist por região e o dicionário de campos encontram-se disponíveis em formato CSV (codificação UTF-8, separador vírgula e ponto decimal), nos seguintes arquivos:
 [fichas dos municípios](../arquivos/dados/eficiencia/fichas_municipio.csv) ·
 [metas dos municípios](../arquivos/dados/eficiencia/metas_municipio.csv) ·
 [pares dos municípios](../arquivos/dados/eficiencia/pares_municipio.csv) ·
@@ -140,6 +140,7 @@ As fichas completas, as metas por variável, os pares, o índice de Malmquist po
 [Malmquist por região](../arquivos/dados/eficiencia/malmquist_regiao.csv) ·
 [especificações dos modelos](../arquivos/dados/eficiencia/especificacoes_modelos.csv) ·
 [dicionário](../arquivos/dados/eficiencia/dicionario_eficiencia.csv).
+As referências completas das obras citadas nesta página constam da [Metodologia](../metodologia.qmd#referencias).
 
 ```{r}
 fonte_eficiencia("../")
