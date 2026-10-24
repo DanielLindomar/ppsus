@@ -380,8 +380,14 @@ ficha_detalhe <- function(cod, modelo, ano = ANO_EF, prefixo = "../municipios/")
       tags$ul(lapply(seq_len(nrow(pr)), function(j) tags$li(
       a(href = paste0(prefixo, pr$par_slug[j], ".html"), pr$par_municipio[j]), sprintf(" (%s · peso %s)", pr$par_regiao_saude[j], num(pr$peso[j], 2)),
       if (isTRUE(pr$mais_semelhante[j] == 1)) strong(if (fora_banda) " — maior peso; nenhum par na faixa de porte de 1/3 a 3 vezes" else " — mais semelhante em porte"))))) else
-      p(class = "sub", if (isTRUE(r$faixa == "fronteira")) sprintf("Por situar-se na fronteira, o município não tem pares e serve de referência para %s %s.", num(r$n_vezes_referencia),
-                                                                   if (isTRUE(suppressWarnings(as.numeric(r$n_vezes_referencia)) == 1)) "município" else "municípios") else
+      p(class = "sub", if (isTRUE(r$faixa == "fronteira")) {
+          # n_vezes_referencia = municípios que mostram esta unidade entre os seus pares publicados (scripts/06); com 0,
+          # a frase dispensa o número ("nenhum outro município")
+          nref <- suppressWarnings(as.numeric(r$n_vezes_referencia))
+          if (isTRUE(nref == 0)) "Por situar-se na fronteira, o município não tem pares e, embora pertença às melhores práticas, não serve de referência para nenhum outro município, pois não figura entre os pares publicados dos demais."
+          else sprintf("Por situar-se na fronteira, o município não tem pares e serve de referência para %s %s.", num(r$n_vezes_referencia),
+                       if (isTRUE(nref == 1)) "município" else "municípios")
+        } else
         "Sem pares listados: entre os municípios elegíveis como referência (com registro plausível), nenhum supera este município com recursos semelhantes. O escore publicado provém da fronteira comum, que inclui unidades que não servem de par.")
   sem_lacuna <- nrow(mt) > 0 && all(!is.finite(mt$potencial_unidades) | abs(mt$potencial_unidades) < 1e-9)
   metas <- if (nrow(mt) && (!isTRUE(r$faixa == "fronteira") || nrow(pr) > 0) && !sem_lacuna) tags$table(
