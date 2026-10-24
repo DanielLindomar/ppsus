@@ -249,6 +249,14 @@ italico_tags <- function(x) {
   pecas <- regmatches(x, m, invert = NA)[[1]]
   tagList(lapply(seq_along(pecas), function(k) if (k %% 2 == 0) tags$em(pecas[k]) else if (nzchar(pecas[k])) pecas[k]))
 }
+# Termos estrangeiros em itálico nos rótulos e legendas dos gráficos (v0.5); as dicas (data-tip) e os <title> dos SVG
+# são atributos ou texto puro e ficam sem itálico
+TERMOS_ITALICO_GRAF <- c("Random Forest", "Gradient boosting", "gradient boosting", "home care", "per capita", "Nowcast", "nowcast")
+RE_TERMOS_ITALICO_GRAF <- paste0("\\b(", paste(TERMOS_ITALICO_GRAF, collapse = "|"), ")\\b")
+# Rótulo de SVG já escapado: termos em <tspan font-style="italic">
+italico_svg <- function(x) gsub(RE_TERMOS_ITALICO_GRAF, '<tspan font-style="italic">\\1</tspan>', x, perl = TRUE)
+# Legenda HTML de gráfico já escapada: termos em <em>
+italico_leg <- function(x) gsub(RE_TERMOS_ITALICO_GRAF, "<em>\\1</em>", x, perl = TRUE)
 
 # Ordinal pt-BR: 3 → "3º"
 ordinal <- function(n) ifelse(is.na(n), "—", paste0(n, "º"))
@@ -531,7 +539,7 @@ svg_barras_h <- function(rotulos, valores, fmt, titulo = "", cor = COR[["sec"]],
   sx <- function(x) pl + (x - lim[1]) / diff(lim) * (w - pl - pr)
   y0 <- (seq_len(n) - 1) * lh
   if (is.null(dicas)) dicas <- paste0(rotulos, ": ", fmt_valor(valores, fmt))
-  txt <- sprintf('<text x="%d" y="%.1f" text-anchor="end" font-size="12" fill="#1f2937">%s</text>', pl - 8, y0 + 17, esc(rotulos))
+  txt <- sprintf('<text x="%d" y="%.1f" text-anchor="end" font-size="12" fill="#1f2937">%s</text>', pl - 8, y0 + 17, italico_svg(esc(rotulos)))
   if (!is.null(hrefs)) txt <- sprintf('<a href="%s">%s</a>', hrefs, txt)
   barras <- paste(sprintf('%s<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="%s" data-tip="%s"/><text x="%.1f" y="%.1f" font-size="11" fill="#374151">%s</text>',
                           txt, pmin(sx(0), sx(valores)), y0 + 5, abs(sx(valores) - sx(0)), lh - 8, cor, esc(dicas),
@@ -589,7 +597,13 @@ serie_indicador <- function(id, co_reg = NULL, com_municipios = FALSE) {
 }
 
 # ---- 6. Mapas leaflet (GeoJSON embutido, sem tiles externos) ------------------------------
-mapa_vazio <- function(altura) leaflet(height = altura, options = leafletOptions(zoomSnap = 0.25, attributionControl = FALSE))
+# Controle de zoom em português: título e aria-label dos botões (o padrão do Leaflet é "Zoom in"/"Zoom out")
+JS_ZOOM_PT <- "function(el, x) {
+  var t = {'leaflet-control-zoom-in': 'Aproximar', 'leaflet-control-zoom-out': 'Afastar'};
+  Object.keys(t).forEach(function(c) { var b = el.querySelector('.' + c); if (b) { b.title = t[c]; b.setAttribute('aria-label', t[c]); } });
+}"
+mapa_vazio <- function(altura) leaflet(height = altura, options = leafletOptions(zoomSnap = 0.25, attributionControl = FALSE)) |>
+  htmlwidgets::onRender(JS_ZOOM_PT)
 sem_mapa <- function() p(class = "nota-fonte", "Mapa indisponível: malha municipal não carregada.")
 
 # Clique em um polígono com layerId (slug) abre prefixo + slug + ".html"

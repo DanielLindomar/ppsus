@@ -195,7 +195,7 @@ svg_linhas_jud <- function(series, titulo, xt, xl, tip_x, w = 680, h = 270, x_pa
   leg <- paste(vapply(series, function(s) {
     dash <- if (!is.null(s$dash) && nzchar(s$dash)) sprintf(' stroke-dasharray="%s"', s$dash) else ""
     sprintf('<span class="leg-item"><svg width="24" height="8" aria-hidden="true"><line x1="0" x2="24" y1="4" y2="4" stroke="%s" stroke-width="%s"%s/></svg>%s</span>',
-            s$cor, s$larg, dash, esc(s$nome)) }, character(1)), collapse = "")
+            s$cor, s$larg, dash, italico_leg(esc(s$nome))) }, character(1)), collapse = "")
   if (!is.null(leg_extra)) leg <- paste0(leg, leg_extra)
   sprintf('<figure class="grafico-svg"><svg viewBox="0 0 %d %d" width="100%%" role="img" aria-label="%s"><title>%s</title>%s%s%s%s</svg><figcaption class="legenda-svg">%s</figcaption></figure>',
           w, h, esc(titulo), esc(titulo), grade, eixo_x, band, paste(linhas, collapse = ""), leg)
@@ -258,7 +258,7 @@ svg_irr <- function(dep, w = 420, lh = 40) {
         '<text x="%d" y="%.1f" font-size="12.5" fill="#1f2937" %s>%s <tspan fill="#4b5563">· %s (%s–%s)</tspan></text>',
         '<line x1="%.1f" x2="%.1f" y1="%.1f" y2="%.1f" stroke="%s" stroke-width="2.2"/>',
         '<rect x="%.1f" y="%.1f" width="10" height="10" fill="%s" stroke="%s" stroke-width="2" data-tip="%s"/>'),
-        pl + 4, y + 13, halo, esc(J2_VAR[[r$variavel]]), dec2(r$irr), dec2(r$irr_li), dec2(r$irr_ls),
+        pl + 4, y + 13, halo, italico_svg(esc(J2_VAR[[r$variavel]])), dec2(r$irr), dec2(r$irr_li), dec2(r$irr_ls),
         sx(r$irr_li), sx(r$irr_ls), y + 27, y + 27, COR_BLOCO[[b]],
         sx(r$irr) - 5, y + 22, if (cheio) COR_BLOCO[[b]] else "#ffffff", COR_BLOCO[[b]], esc(tip)))
       y <- y + lh
