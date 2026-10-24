@@ -59,7 +59,7 @@ css_indicadores <- function() tags$style(HTML("
 
 # Cartões de um grupo de indicadores (índice): rótulo, definição curta, unidade · fonte · período
 cartoes_indicadores <- function(x, prefixo = "") {
-  if (nrow(x) == 0) return(p(class = "nota-fonte", "Nenhum indicador neste grupo."))
+  if (nrow(x) == 0) return(p(class = "nota-fonte", "Não há indicadores neste grupo."))
   div(class = "lista-ind", lapply(seq_len(nrow(x)), function(j) {
     r <- x[j, ]
     a(class = "cartao cartao-ind", href = paste0(prefixo, r$id, ".html"),
@@ -108,7 +108,7 @@ variacao_mt <- function(id, ano, fmt) {
 # Cartões do estado: agregado MT, mediana municipal, maior e menor valor (com município)
 kpis_indicador <- function(id, ano = NULL, prefixo_mun = "../municipios/") {
   r <- info_ind(id); if (is.null(ano)) ano <- ano_ult(id)
-  if (is.na(ano)) return(p(class = "nota-fonte", "Sem dados para este indicador."))
+  if (is.na(ano)) return(p(class = "nota-fonte", "Não há dados para este indicador."))
   v <- valores_ano(id, ano); v <- v[is.finite(v$valor), ]
   mt <- valor_mt(id, ano); md <- mediana_mt(id, ano)
   meta <- paste0(r$unidade, " · ", ano)
@@ -131,7 +131,7 @@ kpis_indicador <- function(id, ano = NULL, prefixo_mun = "../municipios/") {
 # um gráfico por região é gerado em R e só o escolhido fica visível (sem biblioteca JS).
 serie_indicador_regioes <- function(id) {
   base <- serie_indicador(id)
-  if (!nzchar(base)) return(p(class = "nota-fonte", "Série insuficiente para o gráfico (menos de dois anos com dado)."))
+  if (!nzchar(base)) return(p(class = "nota-fonte", "A série não é suficiente para o gráfico, uma vez que há menos de dois anos com dado."))
   regs <- REG[ordem_nome(REG$regiao_saude), ]
   blocos <- c(list(div(`data-reg` = "", HTML(base))),
               lapply(seq_len(nrow(regs)), function(j)

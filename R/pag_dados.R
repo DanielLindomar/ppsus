@@ -62,7 +62,7 @@ celula_ptbr <- JS("function(cellInfo) {
 
 explorador_dados <- function(id_tab = "explorador", arquivo = "observatorio-ppsus-mt_recorte.csv", anos = ANOS) {
   d <- dados_explorador(anos)
-  if (is.null(d) || nrow(d) == 0) return(p(class = "nota-fonte", "Séries ainda não carregadas (dados_site/serie.csv)."))
+  if (is.null(d) || nrow(d) == 0) return(p(class = "nota-fonte", "As séries ainda não foram carregadas (dados_site/serie.csv)."))
   ind <- IND[!is.na(IND$grupo) & IND$grupo %in% names(GRUPOS), ]
   if (!"ordem" %in% names(ind)) ind$ordem <- seq_len(nrow(ind))
   anos_c <- as.character(anos)
@@ -129,7 +129,7 @@ catalogo_downloads <- function() {
 }
 
 tabela_downloads <- function(prefixo = "../arquivos/", cat_b = catalogo_downloads()) {
-  if (is.null(cat_b)) return(p(class = "nota-fonte", "Catálogo de arquivos ainda não gerado (scripts/05_downloads.py)."))
+  if (is.null(cat_b)) return(p(class = "nota-fonte", "O catálogo de arquivos ainda não foi gerado (scripts/05_downloads.py)."))
   ordem_grupos <- c("Painéis e indicadores", "Deslocamento residência × atendimento", "Internações de residentes de MT em outros estados", "Hospitais",
                     "Previsão de demanda (preliminar)", "Localização de serviços (preliminar)", "Judicialização da saúde (preliminar)",  # versão 0.4
                     "Dicionários e referências", "Malhas (GeoJSON)")
@@ -157,7 +157,7 @@ tabela_downloads <- function(prefixo = "../arquivos/", cat_b = catalogo_download
 # ---- Dicionário de indicadores -------------------------------------------------------------------
 tabela_dicionario <- function(prefixo_ind = "../indicadores/") {
   ind <- IND[!is.na(IND$grupo), ]
-  if (nrow(ind) == 0) return(p(class = "nota-fonte", "Catálogo de indicadores ainda não carregado."))
+  if (nrow(ind) == 0) return(p(class = "nota-fonte", "O catálogo de indicadores ainda não foi carregado."))
   if (!"descricao" %in% names(ind)) ind$descricao <- ind$rotulo
   if (!"ordem" %in% names(ind)) ind$ordem <- seq_len(nrow(ind))
   sent <- c(`1` = "▲ maior é melhor", `-1` = "▼ menor é melhor", `0` = "contexto (sem juízo)")
@@ -215,7 +215,7 @@ JS_GRUPO_EF <- "function(cellInfo) { return cellInfo.value + ' (' + cellInfo.sub
 JS_GRUPO_CAMPOS <- "function(cellInfo) { return cellInfo.value + ' (' + cellInfo.subRows.length + ' campos)' }"
 
 tabela_downloads_eficiencia <- function(prefixo = "../arquivos/", cat_e = catalogo_eficiencia()) {
-  if (is.null(cat_e)) return(p(class = "nota-fonte", "Arquivos de eficiência ainda não gerados (scripts/06_preparar_eficiencia.py)."))
+  if (is.null(cat_e)) return(p(class = "nota-fonte", "Os arquivos de eficiência ainda não foram gerados (scripts/06_preparar_eficiencia.py)."))
   ordem_temas <- c("Municípios", "Hospitais", "Alta complexidade (regiões e macrorregiões)", "Resumos e produtividade", "Método, parâmetros e dicionário")
   d <- cat_e |>
     mutate(nome = basename(arquivo), Tema = TEMA_EF(nome), o = match(nome, ORDEM_EF)) |>
@@ -237,7 +237,7 @@ tabela_downloads_eficiencia <- function(prefixo = "../arquivos/", cat_e = catalo
 
 tabela_dicionario_eficiencia <- function() {
   f <- ARQ("dados", "eficiencia", "dicionario_eficiencia.csv")
-  if (!file.exists(f)) return(p(class = "nota-fonte", "Dicionário de eficiência ainda não gerado."))
+  if (!file.exists(f)) return(p(class = "nota-fonte", "O dicionário de eficiência ainda não foi gerado."))
   d <- tibble::as_tibble(data.table::fread(f, encoding = "UTF-8", na.strings = "", colClasses = "character"))
   d <- d |> mutate(o = match(arquivo, ORDEM_EF)) |> arrange(o, arquivo) |>
     transmute(Arquivo = arquivo, Campo = campo, `Nome gerencial` = nome_gerencial,

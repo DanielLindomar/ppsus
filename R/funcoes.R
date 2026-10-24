@@ -403,7 +403,7 @@ kpi_ind <- function(id, cod, prefixo_ind = "../indicadores/") {
 # Grade com os KPIs do catálogo (kpi = 1) ou com os ids informados
 grade_kpis <- function(cod, ids = NULL, prefixo_ind = "../indicadores/") {
   if (is.null(ids)) ids <- IND$id[!is.na(IND$kpi) & IND$kpi == 1]
-  if (length(ids) == 0) return(p(class = "nota-fonte", "Catálogo de indicadores ainda não carregado."))
+  if (length(ids) == 0) return(p(class = "nota-fonte", "O catálogo de indicadores ainda não foi carregado."))
   div(class = "kpi-grade", lapply(ids, kpi_ind, cod = cod, prefixo_ind = prefixo_ind))
 }
 
@@ -604,7 +604,7 @@ JS_ZOOM_PT <- "function(el, x) {
 }"
 mapa_vazio <- function(altura) leaflet(height = altura, options = leafletOptions(zoomSnap = 0.25, attributionControl = FALSE)) |>
   htmlwidgets::onRender(JS_ZOOM_PT)
-sem_mapa <- function() p(class = "nota-fonte", "Mapa indisponível: malha municipal não carregada.")
+sem_mapa <- function() p(class = "nota-fonte", "O mapa não está disponível, uma vez que a malha municipal não foi carregada.")
 
 # Clique em um polígono com layerId (slug) abre prefixo + slug + ".html"
 js_clique <- function(prefixo) sprintf("function(el, x) { var map = this; map.eachLayer(function(l) {
@@ -696,7 +696,7 @@ mapa_fluxos <- function(fluxos, polos = NULL, n_max = 60, altura = 520, prefixo 
 # Ranking dos 142 municípios em um indicador (posição, município com link, região, valor)
 ranking_indicador <- function(id, ano = NULL, prefixo = "../municipios/", tamanho = 20) {
   r <- info_ind(id); if (is.null(ano)) ano <- ano_ult(id)
-  if (is.na(ano)) return(p(class = "nota-fonte", "Sem dados para este indicador."))
+  if (is.na(ano)) return(p(class = "nota-fonte", "Não há dados para este indicador."))
   u <- valores_ano(id, ano) |> left_join(select(MUN, cod_mun6, municipio, regiao_saude, slug), by = "cod_mun6") |>
     arrange(desc(valor), municipio) |>
     # posição por competição (empatados recebem a mesma posição), igual a posicao() usada nos perfis
@@ -715,7 +715,7 @@ ranking_indicador <- function(id, ano = NULL, prefixo = "../municipios/", tamanh
 # na região, medianas, minissérie e situação ▲/▼ pelo sentido; detalhe = série comparada.
 tabela_grupo <- function(grupo, cod, prefixo_ind = "../indicadores/") {
   ids <- IND$id[!is.na(IND$grupo) & IND$grupo == grupo]
-  if (length(ids) == 0) return(p(class = "nota-fonte", "Nenhum indicador deste grupo no catálogo."))
+  if (length(ids) == 0) return(p(class = "nota-fonte", "Não há indicadores deste grupo no catálogo."))
   linhas <- lapply(ids, function(id) {
     r <- info_ind(id); s <- resumo_ind(id, cod); sit <- situacao(s$valor, s$med_mt, r$sentido)
     ser <- serie_mun(id, cod)
@@ -745,7 +745,7 @@ tabela_grupo <- function(grupo, cod, prefixo_ind = "../indicadores/") {
             details = function(i) {
               g <- serie_comparada(d$id[i], cod)
               div(class = "detalhe-ind",
-                  if (nzchar(g)) HTML(g) else p(class = "sub", "Indicador sem série suficiente para o gráfico."),
+                  if (nzchar(g)) HTML(g) else p(class = "sub", "A série do município neste indicador não tem anos suficientes para o gráfico."),
                   if (nzchar(d$nota_txt[i])) p(class = "nota-fonte", strong("Nota: "), italico_tags(d$nota_txt[i])),
                   p(class = "nota-fonte", a(href = url_ind(d$id[i], prefixo_ind), "Ver este indicador para todos os municípios →")))
             })
@@ -754,7 +754,7 @@ tabela_grupo <- function(grupo, cod, prefixo_ind = "../indicadores/") {
 # Tabela por região de saúde para um indicador (agregado da região e mediana dos municípios)
 tabela_regioes_indicador <- function(id, ano = NULL) {
   r <- info_ind(id); if (is.null(ano)) ano <- ano_ult(id)
-  if (is.na(ano) || nrow(REG) == 0) return(p(class = "nota-fonte", "Sem dados por região."))
+  if (is.na(ano) || nrow(REG) == 0) return(p(class = "nota-fonte", "Não há dados por região de saúde para este indicador."))
   v <- valores_ano(id, ano) |> left_join(select(MUN, cod_mun6, co_regsaud), by = "cod_mun6")
   d <- REG |> select(co_regsaud, `Região de saúde` = regiao_saude, Macrorregião = macrorregiao, Municípios = n_municipios) |>
     left_join(SERR[SERR$indicador == id & SERR$ano == ano, c("co_regsaud", "valor")], by = "co_regsaud") |>
@@ -768,7 +768,7 @@ tabela_regioes_indicador <- function(id, ano = NULL) {
 
 # Lista dos 142 municípios com região, população, despesa/hab, médicos/mil, % internações fora e link
 tabela_municipios <- function(prefixo = "", ano = ANO_REF) {
-  if (nrow(MUN) == 0) return(p(class = "nota-fonte", "Lista de municípios ainda não carregada."))
+  if (nrow(MUN) == 0) return(p(class = "nota-fonte", "A lista de municípios ainda não foi carregada."))
   col <- function(id) sapply(MUN$cod_mun6, function(m) valor_ind(id, m, ano))
   d <- tibble::tibble(Município = MUN$municipio, slug = MUN$slug, `Região de saúde` = MUN$regiao_saude,
                       População = MUN$populacao_2025, `Despesa/hab.` = col("desp_total_pc"),
@@ -787,7 +787,7 @@ tabela_municipios <- function(prefixo = "", ano = ANO_REF) {
 # Hospitais SUS (hospitais.csv) de um município (ou todos) em um ano
 tabela_hospitais <- function(cod = NULL, ano = ANO_REF) {
   h <- HOSP[HOSP$ano == ano, ]; if (!is.null(cod)) h <- h[h$cod_mun6 == cod, ]
-  if (nrow(h) == 0) return(p(class = "nota-fonte", if (is.null(cod)) "Sem hospitais carregados." else
+  if (nrow(h) == 0) return(p(class = "nota-fonte", if (is.null(cod)) "Os dados de hospitais ainda não foram carregados." else
     sprintf("Nenhum hospital SUS registrado no CNES para este município em %d.", ano)))
   d <- h |> arrange(desc(internacoes)) |>
     transmute(Estabelecimento = nome_fantasia, CNES = cnes, Município = municipio, Esfera = esfera,
