@@ -34,6 +34,9 @@ botoes_download_mun(M)
 sem_zoom_rolagem(mapa_municipio(MUN_ID, altura = 320, prefixo = ""))
 ```
 ```{r}
+legenda_mapa_perfil(MUN_ID)
+```
+```{r}
 nota_malha(MUN_ID)
 ```
 :::
@@ -54,31 +57,31 @@ As tabelas a seguir reúnem os indicadores do município por grupo temático. Ao
 ### Financiamento
 
 ```{r}
-tabela_grupo("financiamento", MUN_ID)
+tabela_grupo_perfil("financiamento", MUN_ID)
 ```
 
 ### Capacidade instalada
 
 ```{r}
-tabela_grupo("capacidade", MUN_ID)
+tabela_grupo_perfil("capacidade", MUN_ID)
 ```
 
 ### Atenção básica
 
 ```{r}
-tabela_grupo("atencao_basica", MUN_ID)
+tabela_grupo_perfil("atencao_basica", MUN_ID)
 ```
 
 ### Média e alta complexidade
 
 ```{r}
-tabela_grupo("media_alta", MUN_ID)
+tabela_grupo_perfil("media_alta", MUN_ID)
 ```
 
 ### Resultados em saúde
 
 ```{r}
-tabela_grupo("resultados", MUN_ID)
+tabela_grupo_perfil("resultados", MUN_ID)
 ```
 
 :::
@@ -103,7 +106,7 @@ div(class = "dois-blocos", bloco_moradores(MUN_ID), bloco_atende(MUN_ID))
 ```
 
 ```{r}
-tabela_grupo("deslocamento", MUN_ID)
+tabela_grupo_perfil("deslocamento", MUN_ID)
 ```
 
 ## Hospitais SUS do município
@@ -111,7 +114,7 @@ tabela_grupo("deslocamento", MUN_ID)
 `r texto_hospitais(MUN_ID)`
 
 ```{r}
-if (resumo_hospitais(MUN_ID)$n > 0) tabela_hospitais(MUN_ID)
+if (resumo_hospitais(MUN_ID)$n > 0) tabela_hospitais_perfil(MUN_ID)
 ```
 
 ```{r}

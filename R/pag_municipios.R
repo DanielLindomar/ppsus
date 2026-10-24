@@ -11,7 +11,37 @@
 #   2. Deslocamento — KPIs, "Local de internação dos moradores", "Origem dos pacientes atendidos"
 #   3. Hospitais SUS do município (resumo para o texto)
 #   4. Botões de download e notas condicionais
+#   5. Numeração de tabelas e figuras do perfil (versão 0.5)
 # =============================================================================
+
+# ---- 5. Numeração de tabelas e figuras do perfil (versão 0.5) ----------------------------
+# Como nas demais páginas do site: "Tabela N – título" acima da tabela e "Figura N – título. Fonte: ..." abaixo da
+# figura. Cada perfil é renderizado numa sessão própria do R e os blocos são avaliados na ordem em que aparecem na
+# página, de modo que os contadores numeram na ordem de leitura; os blocos ausentes (sem hospital, sem série,
+# modelo não avaliado) não consomem número.
+NUM_PERFIL <- new.env()
+NUM_PERFIL$tab <- 0L
+NUM_PERFIL$fig <- 0L
+prox_tab <- function() { NUM_PERFIL$tab <- NUM_PERFIL$tab + 1L; NUM_PERFIL$tab }
+prox_fig <- function() { NUM_PERFIL$fig <- NUM_PERFIL$fig + 1L; NUM_PERFIL$fig }
+titulo_tab <- function(txt) p(strong(sprintf("Tabela %d – %s", prox_tab(), txt)))
+legenda_fig <- function(txt, fonte) p(class = "nota-fonte", sprintf("Figura %d – %s. Fonte: %s", prox_fig(), txt, fonte))
+FONTE_IND_PERFIL <- "Fonte: elaboração própria, com base nas fontes de cada indicador, indicadas na respectiva página e na Metodologia."
+# Tabela de indicadores de um grupo, com título numerado e fonte
+GRUPO_TITULO <- c(financiamento = "financiamento", capacidade = "capacidade instalada", atencao_basica = "atenção básica",
+                  media_alta = "média e alta complexidade", resultados = "resultados em saúde", deslocamento = "deslocamento para internação")
+tabela_grupo_perfil <- function(grupo, cod) {
+  tagList(titulo_tab(sprintf("Indicadores de %s de %s", GRUPO_TITULO[[grupo]], nome_mun(cod))),
+          tabela_grupo(grupo, cod), p(class = "nota-fonte", FONTE_IND_PERFIL))
+}
+# Mapa de localização no topo do perfil, com legenda numerada
+legenda_mapa_perfil <- function(cod) legenda_fig(sprintf("Município de %s e região de saúde %s no mapa de Mato Grosso", nome_mun(cod), nome_regiao(regiao_de(cod))),
+                                                 "IBGE (malha municipal simplificada).")
+# Hospitais SUS do município (tabela de funcoes.R), com título numerado e fonte
+tabela_hospitais_perfil <- function(cod) {
+  tagList(titulo_tab("Estabelecimentos hospitalares com atendimento SUS no município"), tabela_hospitais(cod),
+          p(class = "nota-fonte", "Fonte: CNES; SIH/SUS."))
+}
 
 # ---- 0. Ajustes de exibição em HOSP (usados por tabela_hospitais, de funcoes.R) -----------
 # 58 CNES não têm nome fantasia no mart: mostrar um texto em vez de célula vazia; esfera
@@ -167,15 +197,16 @@ bloco_moradores <- function(cod, ano = ANO_REF) {
                             "%s em outro município da mesma região de saúde e %s em outra região. %s%s"),
                      ano, num(d$internacoes_res), esc(nome), fmt_valor(d$pct_proprio_mun, "pct1"), fmt_valor(d$pct_mesma_regiao, "pct1"),
                      fmt_valor(d$pct_outra_regiao, "pct1"), dist, ac))),
-      HTML(svg_barra_empilhada(partes, titulo = paste0("Local de internação dos moradores de ", nome, " em ", ano))),
+      { gb <- svg_barra_empilhada(partes, titulo = paste0("Local de internação dos moradores de ", nome, " em ", ano))
+        if (nzchar(gb)) tagList(HTML(gb), legenda_fig(sprintf("Distribuição das internações SUS de moradores de %s segundo o local de internação", nome), "SIH/SUS.")) },
       if (nrow(td)) tagList(
-        h5(sprintf("Principais destinos fora do município (%d)", ano)),
+        titulo_tab(sprintf("Principais destinos dos moradores internados fora do município (%d)", ano)),
         tabela_fluxo_html("Município de destino", td$destino, paste0(slug_mun(td$cod_destino), ".html"), td$internacoes, td$pct,
                           km = km_entre(cod, td$cod_destino), rotulo_pct = "% das internações de moradores"),
-        p(class = "nota-fonte", sprintf("Fonte: SIH/SUS; IBGE. Nota: No total, as internações de moradores fora do município distribuíram-se por %d %s; a distância é medida em linha reta entre as sedes municipais (IBGE, Localidades 2022), e não pela malha rodoviária.",
+        p(class = "nota-fonte", sprintf("Fonte: SIH/SUS; IBGE. Nota: no total, as internações de moradores fora do município distribuíram-se por %d %s; a distância é medida em linha reta entre as sedes municipais (IBGE, Localidades 2022), e não pela malha rodoviária.",
                                         d$n_destinos, if (d$n_destinos == 1) "município de destino" else "municípios de destino")))
       else p(class = "nota-fonte", sprintf("Em %d, a totalidade das internações de moradores ocorreu no próprio município.", ano)),
-      { g <- serie_fora_mun(cod); if (nzchar(g)) tagList(h5("Evolução da parcela internada fora do município"), HTML(g)) })
+      { g <- serie_fora_mun(cod); if (nzchar(g)) tagList(HTML(g), legenda_fig("Evolução da parcela das internações de moradores realizadas fora do município de residência", "SIH/SUS.")) })
 }
 
 # Bloco "Origem dos pacientes atendidos" (hospital ← residência)
@@ -214,11 +245,12 @@ bloco_atende <- function(cod, ano = ANO_REF) {
                      d$n_origens, if (d$n_origens == 1) "outro município" else "outros municípios", frase_saldo, frase_ac))),
       nota_hosp,
       if (nrow(to)) tagList(
-        h5(sprintf("Principais origens dos pacientes de fora (%d)", ano)),
+        titulo_tab(sprintf("Principais municípios de origem dos pacientes de outros municípios (%d)", ano)),
         tabela_fluxo_html("Município de residência", to$origem, paste0(slug_mun(to$cod_origem), ".html"), to$internacoes, to$pct,
-                          km = km_entre(cod, to$cod_origem), rotulo_pct = "% dos pacientes de fora"))
+                          km = km_entre(cod, to$cod_origem), rotulo_pct = "% dos pacientes de fora"),
+        p(class = "nota-fonte", "Fonte: SIH/SUS; IBGE."))
       else p(class = "nota-fonte", sprintf("Em %d, a totalidade das internações realizadas no município correspondeu a moradores do próprio município.", ano)),
-      if (nzchar(g)) tagList(h5("Evolução das internações realizadas"), HTML(g)))
+      if (nzchar(g)) tagList(HTML(g), legenda_fig("Internações SUS realizadas no município, no total e de moradores de outros municípios", "SIH/SUS.")))
 }
 
 # ---- 3. Hospitais SUS ------------------------------------------------------------------

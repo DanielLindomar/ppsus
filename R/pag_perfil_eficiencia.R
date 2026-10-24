@@ -320,8 +320,8 @@ bloco_metas <- function(cod, modelo, r) {
                       esc(lac$nome_gerencial), ifelse(lac$tipo == "produto", "produção ▲", "recurso ▼"), esc(lac$unidade_abs),
                       fmt_unid(lac$observado_abs, lac$unidade_abs), fmt_unid(lac$meta_intermediaria_abs, lac$unidade_abs),
                       fmt_unid(lac$meta_radial_abs, lac$unidade_abs), pot)
-    corpo <- sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><caption>Metas 2025 (valores anuais do município)</caption><thead><tr><th>Variável</th><th class="num">Observado 2025</th><th class="num">Meta intermediária</th><th class="num">Meta plena</th><th class="num">Potencial de melhoria</th></tr></thead><tbody>%s</tbody></table></div><p class="nota-fonte">A meta plena corresponde ao que as melhores práticas comparáveis alcançam com os mesmos recursos, e a meta intermediária cobre metade da distância entre o valor observado e a meta plena. Na produção, o potencial expressa o aumento possível; nos recursos, a folga que poderia ser redirecionada sem reduzir a produção.%s</p>',
-                     paste(linhas, collapse = ""), paste0(txt_ok, txt_info))
+    corpo <- sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><caption>Tabela %d – Metas 2025 %s (valores anuais do município)</caption><thead><tr><th>Variável</th><th class="num">Observado 2025</th><th class="num">Meta intermediária</th><th class="num">Meta plena</th><th class="num">Potencial de melhoria</th></tr></thead><tbody>%s</tbody></table></div><p class="nota-fonte">Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT. Nota: a meta plena corresponde ao que as melhores práticas comparáveis alcançam com os mesmos recursos, e a meta intermediária cobre metade da distância entre o valor observado e a meta plena. Na produção, o potencial expressa o aumento possível; nos recursos, a folga que poderia ser redirecionada sem reduzir a produção.%s</p>',
+                     prox_tab(), EF_DESCR[[modelo]], paste(linhas, collapse = ""), paste0(txt_ok, txt_info))
   }
   paste0(corpo, if (length(notas)) sprintf('<p class="nota-fonte">Nota: %s.</p>', esc(paste(notas, collapse = "; "))) else "")
 }
@@ -453,7 +453,9 @@ ficha_modelo <- function(cod, modelo, nome, nome_reg) {
   paste0('<div class="ef-ficha">',
          sprintf('<p class="ef-sintese">%s</p>', esc(frase_sintese(r, nome))),
          topo,
-         regua_escore(r, mediana_modelo(modelo, EF_ANO, grp)),
+         { rg <- regua_escore(r, mediana_modelo(modelo, EF_ANO, grp))   # figura numerada (versão 0.5)
+           if (nzchar(rg)) paste0(rg, sprintf('<p class="nota-fonte">Figura %d – Escore corrigido e intervalo de confiança de %s %s. Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT.</p>',
+                                             prox_fig(), esc(nome), EF_DESCR[[modelo]])) else "" },
          sprintf('<p class="ef-linha"><b>Especificação do modelo.</b> %s</p>', esc(texto_espec(modelo, grp))),
          intro_acesso,
          sprintf('<p class="ef-linha"><b>Posição.</b> %s</p>', texto_posicao(r, nome_reg)),
@@ -481,8 +483,8 @@ resumo_ef <- function(cod) {
             nm, glifo_faixa(r$faixa), esc(rotulo_faixa(r$faixa)), if (eh1(r$ic_cruza_faixa)) " <span class='sub'>· IC cruza a faixa vizinha</span>" else "",
             num2(r$escore_bc), num2(r$ic_inf), num2(r$ic_sup), esc(ten))
   }, character(1))
-  sprintf('<div class="ef-tab-wrap"><table class="ef-tab ef-resumo"><caption>Eficiência em %d por modelo</caption><thead><tr><th>Modelo</th><th>Faixa no estado</th><th class="num">Escore corrigido (IC 95%%)</th><th>Tendência 2022–2025</th></tr></thead><tbody>%s</tbody></table></div>',
-          EF_ANO, paste(linhas, collapse = ""))
+  sprintf('<div class="ef-tab-wrap"><table class="ef-tab ef-resumo"><caption>Tabela %d – Eficiência de %s em %d, por modelo</caption><thead><tr><th>Modelo</th><th>Faixa no estado</th><th class="num">Escore corrigido (IC 95%%)</th><th>Tendência 2022–2025</th></tr></thead><tbody>%s</tbody></table></div><p class="nota-fonte">Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT.</p>',
+          prox_tab(), esc(nome_mun(cod)), EF_ANO, paste(linhas, collapse = ""))
 }
 
 ef_estilo <- function() tags$style(HTML("
@@ -563,6 +565,7 @@ bloco_hospitais_ef <- function(cod, ano = EF_ANO) {
     h4(paste0("Eficiência dos hospitais (modelo de hospitais, ", ano, ")")),
     p(sprintf("O modelo compara cada hospital SUS com as melhores práticas entre os %s hospitais avaliados em Mato Grosso. %s A leitura é feita por faixa com intervalo de confiança, e não por ",
               num(n_aval), texto_espec("H")), tags$em("ranking", .noWS = "outside"), ", e cumpre lembrar que eficiência não é qualidade."),
+    titulo_tab("Faixa, escore corrigido e mudança de eficiência dos hospitais do município no modelo de hospitais"),
     HTML(sprintf('<div class="ef-tab-wrap"><table class="ef-tab"><thead><tr><th>Hospital</th><th>Faixa no estado</th><th class="num">Escore corrigido (IC 95%%)</th><th>Mudança de eficiência 2022–2025</th></tr></thead><tbody>%s</tbody></table></div>',
                  paste(linhas, collapse = ""))),
     p(class = "nota-fonte", sprintf("Fonte: Projeto PPSUS-MT, Resultados DEA %s (%s), com base em dados do CNES e do SIH/SUS. Nota: os hospitais do município ausentes desta tabela não integram o modelo de hospitais. ",
