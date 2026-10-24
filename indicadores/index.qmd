@@ -1,6 +1,6 @@
 ---
 title: "Indicadores"
-description: "Catálogo dos indicadores do Observatório PPSUS-MT, por grupo, com definição curta e a página de cada um (mapa, ranking, evolução e regiões de saúde)"
+description: "Catálogo dos indicadores do Observatório PPSUS-MT, por grupo, com definição curta e a página de cada um (mapa, *ranking*, evolução e regiões de saúde)"
 ---
 
 ```{r}

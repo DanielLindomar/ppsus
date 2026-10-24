@@ -124,6 +124,42 @@ GRUPOS = {"contexto": "Contexto", "financiamento": "Financiamento", "capacidade"
           "atencao_basica": "Atenção básica", "media_alta": "Média e alta complexidade",
           "deslocamento": "Deslocamento", "resultados": "Resultados em saúde"}
 
+# Unidade do catálogo redigida para a oração da descrição (v0.5; mesma regra de scripts/04_gerar_indicadores.py). O catálogo não muda; muda só a redação:
+# "hab." por extenso (o ponto da abreviatura deixava ponto duplo no fim da oração), "%" como "percentual",
+# contagens como "número de …" e "km" por extenso.
+CONTAGENS = {"habitantes", "leitos", "unidades", "hospitais", "estabelecimentos", "equipes"}
+
+
+def unidade_na_oracao(unidade: str) -> str:
+    u = (unidade or "").strip()
+    if u.endswith("mil hab."):
+        u = u[: -len("hab.")] + "habitantes"
+    elif u.endswith("por hab."):
+        u = u[: -len("hab.")] + "habitante"
+    if u.startswith("% "):
+        u = "percentual " + u[2:]
+    if u in CONTAGENS:
+        u = "número de " + u
+    if u == "km":
+        u = "quilômetros"
+    return u.rstrip(".")
+
+
+def descricao_indicador(grupo: str, unidade: str, ano_fim) -> str:
+    """Descrição YAML (subtítulo e meta description) em oração: "Indicador do grupo X, expresso em Y. A página…".
+    O Quarto renderiza o Markdown do subtítulo (*ranking* em itálico) e retira a marcação da meta description."""
+    u = unidade_na_oracao(unidade)
+    if grupo and u:
+        ab = f"Indicador do grupo {grupo}, expresso em {u}. "
+    elif grupo:
+        ab = f"Indicador do grupo {grupo}. "
+    elif u:
+        ab = f"Indicador expresso em {u}. "
+    else:
+        ab = ""
+    return ab + (f"A página apresenta o mapa dos 142 municípios de Mato Grosso, a classificação municipal (*ranking*), "
+                 f"a evolução 2020–{ano_fim} e os valores por região de saúde.")
+
 
 def pagina_indicador(r: pd.Series) -> str:
     """Mesmo formato das páginas de indicador do modelo indicadores/_indicador.qmd:
@@ -136,7 +172,7 @@ def pagina_indicador(r: pd.Series) -> str:
         ano_fim = int(float(r.get("ano_max")))
     except (TypeError, ValueError):
         ano_fim = 2025
-    desc = f"{grupo} · {unidade}. A página apresenta o mapa dos 142 municípios de Mato Grosso, o ranking municipal, a evolução 2020–{ano_fim} e os valores por região de saúde."
+    desc = descricao_indicador(grupo, unidade, ano_fim)
     return "\n".join([
         "---",
         f"title: {yaml_str(r.rotulo)}",

@@ -1,6 +1,6 @@
 ---
 title: "Hospitais SUS"
-description: "Capacidade instalada · hospitais. A página apresenta o mapa dos 142 municípios de Mato Grosso, o ranking municipal, a evolução 2020–2025 e os valores por região de saúde."
+description: "Indicador do grupo Capacidade instalada, expresso em número de hospitais. A página apresenta o mapa dos 142 municípios de Mato Grosso, a classificação municipal (*ranking*), a evolução 2020–2025 e os valores por região de saúde."
 toc: false
 page-layout: full
 ---

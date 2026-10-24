@@ -1,6 +1,6 @@
 ---
 title: "Valor das internações realizadas no município por habitante"
-description: "Média e alta complexidade · R$ por habitante. A página apresenta o mapa dos 142 municípios de Mato Grosso, o ranking municipal, a evolução 2020–2025 e os valores por região de saúde."
+description: "Indicador do grupo Média e alta complexidade, expresso em R$ por habitante. A página apresenta o mapa dos 142 municípios de Mato Grosso, a classificação municipal (*ranking*), a evolução 2020–2025 e os valores por região de saúde."
 toc: false
 page-layout: full
 ---
