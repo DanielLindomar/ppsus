@@ -1,6 +1,6 @@
 ---
 title: "Dados"
-description: "Explorador de indicadores, arquivos para *download* (CSV e GeoJSON), dicionários, licença e como citar — Observatório PPSUS-MT"
+description: "Explorador de indicadores, arquivos para *download* (CSV e GeoJSON), dicionários, licença e forma de citação — Observatório PPSUS-MT"
 page-layout: full
 toc: false
 ---
@@ -46,7 +46,7 @@ Fonte: elaboração própria com base em dados do DATASUS/Ministério da Saúde,
 
 ## Arquivos para *download* {#downloads}
 
-Disponibilizam-se `r n_arq` arquivos (`r fmt_bytes(tam_total)` no total), relacionados na Tabela 2, derivados dos painéis do *Data Lake* do projeto e, na versão 0.4, também de agregados das frentes de previsão (retrato fixo do corte de 17/10/2026), de localização (com tempos rodoviários calculados pelo OSRM sobre o OpenStreetMap) e de judicialização (API Pública do DataJud/CNJ). Os arquivos CSV estão codificados em UTF-8, com separador vírgula, decimal ponto e célula vazia quando o dado é indisponível, e as malhas GeoJSON estão no sistema WGS84 (EPSG:4326). As chaves de junção são `cod_mun6` (código IBGE do município, com 6 dígitos), `co_regsaud` (região de saúde), `cnes` (estabelecimento, com 7 dígitos e zeros à esquerda, que deve ser lido como texto) e `ano`. O *download* de cada arquivo realiza-se mediante a seleção do respectivo nome.
+Disponibilizam-se `r n_arq` arquivos (`r fmt_bytes(tam_total)` no total), relacionados na Tabela 2, derivados dos painéis do *Data Lake* do projeto e, na versão 0.4, também de agregados dos estudos de previsão (retrato fixo do corte de 17/10/2026), de localização (com tempos rodoviários calculados pelo OSRM sobre o OpenStreetMap) e de judicialização (API Pública do DataJud/CNJ). Os arquivos CSV estão codificados em UTF-8, com separador vírgula, decimal ponto e célula vazia quando o dado é indisponível, e as malhas GeoJSON estão no sistema WGS84 (EPSG:4326). As chaves de junção são `cod_mun6` (código IBGE do município, com 6 dígitos), `co_regsaud` (região de saúde), `cnes` (estabelecimento, com 7 dígitos e zeros à esquerda, que deve ser lido como texto) e `ano`. O *download* de cada arquivo realiza-se mediante a seleção do respectivo nome.
 
 **Tabela 2 – Arquivos disponíveis para *download*, por tema**
 
@@ -141,7 +141,7 @@ Fonte: elaboração própria.
 
 **Eficiência não equivale a qualidade.** Os indicadores de resultado das fichas (mortalidade infantil, pré-natal e mortalidade hospitalar padronizada) são apresentados ao lado do escore e não o alteram.
 
-As **linhas sem escore** apresentam `situacao` diferente de "avaliado", com o motivo registrado em `motivo_situacao`, e as metas somente devem ser utilizadas quando `meta_publicavel = 1`. O escore esperado pelo contexto não existe para a ótica do acesso (M2A), para os hospitais fora do painel balanceado e para Boa Esperança do Norte, cujo primeiro exercício ocorreu em 2025. O sinal **registro a verificar** (`registro_a_verificar = 1`), por sua vez, indica dado de origem atípico: a unidade permanece avaliada, mas não serve de referência e pode ter a meta financeira omitida. A lista de verificações será encaminhada à SES-MT e ao COSEMS-MT.
+As **linhas sem escore** apresentam `situacao` diferente de "avaliado", com o motivo registrado em `motivo_situacao`, e as metas somente devem ser utilizadas quando `meta_publicavel = 1`. O escore esperado pelo contexto não existe para a ótica do acesso (M2A), para os hospitais fora do painel balanceado e para Boa Esperança do Norte, cujo primeiro exercício ocorreu em 2025. O sinal ***registro a verificar*** (`registro_a_verificar = 1`), por sua vez, indica dado de origem atípico: a unidade permanece avaliada, mas não serve de referência e pode ter a meta financeira omitida. A lista de verificações será encaminhada à SES-MT e ao COSEMS-MT.
 
 Quanto à **evolução**, como as fronteiras são anuais, o nível do escore não é comparável entre anos, devendo-se utilizar a mudança de eficiência (`ec_*`) e o índice de Malmquist (`mi_*`). O deslocamento tecnológico aparece somente de forma agregada (`resumo_modelos.csv` e `malmquist_regiao.csv`), com a ressalva do crescimento do registro no CNES após 2022. O método, os modelos e as ressalvas estão descritos em [Metodologia](../metodologia.html#eficiencia) e em [Eficiência: interpretação dos resultados e visão geral](../eficiencia/index.html).
 :::
@@ -174,17 +174,17 @@ tabela_dicionario()
 Fonte: elaboração própria.
 :::
 
-## Licença e como citar {#licenca}
+## Licença e forma de citação {#licenca}
 
-Os indicadores, os textos e os arquivos derivados publicados neste site estão sob a licença [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.pt-br), que permite copiá-los, redistribuí-los, transformá-los e utilizá-los para qualquer fim, inclusive comercial, desde que o projeto seja citado e as alterações sejam indicadas. Constituem exceção os arquivos e os gráficos de judicialização (arquivos `judicializacao_*` e aba Judicialização), derivados do DataJud/CNJ, que somente podem ser utilizados para fins não comerciais, conforme se detalha adiante. Os dados de origem são públicos (DATASUS/Ministério da Saúde, SIOPS e IBGE) e devem ser citados como fontes primárias ao lado do Observatório.
+Os indicadores, os textos e os arquivos derivados publicados neste site estão sob a licença [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.pt-br), que permite copiá-los, redistribuí-los, transformá-los e utilizá-los para qualquer fim, inclusive comercial, desde que o projeto seja citado e as alterações sejam indicadas. Constituem exceção os arquivos e os gráficos de judicialização (arquivos `judicializacao_*` e seção Judicialização), derivados do DataJud/CNJ, que somente podem ser utilizados para fins não comerciais, conforme se detalha adiante. Os dados de origem são públicos (DATASUS/Ministério da Saúde, SIOPS e IBGE) e devem ser citados como fontes primárias ao lado do Observatório.
 
 Nos arquivos da versão 0.4, devem ser citadas também as fontes primárias próprias de cada seção. Na **previsão de demanda**, citam-se o SIH/SUS (DATASUS), o SIVEP-Gripe (Ministério da Saúde), o INMET e o InfoDengue (clima). Na **localização de serviços**, citam-se o SINASC, o SIH/SUS e o CNES (DATASUS), a RIPSA e o IBGE (população); os tempos e as distâncias rodoviários derivam do OpenStreetMap (© colaboradores do OpenStreetMap), disponível sob a licença Open Database License (ODbL), e foram calculados com o OSRM.
 
 Na **judicialização da saúde**, citam-se o DataJud — Base Nacional de Dados do Poder Judiciário (CNJ), consultado pela API Pública conforme o seu Termo de Uso (versão 1.2), e o TJMT (Corregedoria-Geral da Justiça), para a correspondência entre comarcas e municípios, devendo o DataJud/CNJ ser citado como fonte primária. O Termo de Uso da API veda a exploração comercial da API e das informações dela derivadas (itens 3.3 e 3.8); por essa razão, os arquivos `judicializacao_*` são disponibilizados **somente para uso não comercial**, com citação do DataJud/CNJ e do Observatório, e não se aplica a eles a permissão de uso comercial da licença CC BY 4.0.
 
-**Como citar o site:** DANIEL, L. P. et al. *Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso*. Versão `r VERSAO_SITE`. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.
+**Citação do site:** DANIEL, L. P. et al. *Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso*. Versão `r VERSAO_SITE`. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.
 
-**Como citar um arquivo:** acrescentam-se o nome do arquivo e a data de acesso, como no exemplo a seguir: *painel_municipal_2020_2025.csv*, Observatório PPSUS-MT, versão `r VERSAO_SITE` (`r DATA_VERSAO`), acesso em dd/mm/aaaa.
+**Citação de um arquivo:** acrescentam-se o nome do arquivo e a data de acesso, como no exemplo a seguir: *painel_municipal_2020_2025.csv*, Observatório PPSUS-MT, versão `r VERSAO_SITE` (`r DATA_VERSAO`), acesso em dd/mm/aaaa.
 
 Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT. Erros ou sugestões podem ser comunicados por meio de uma *issue* no [repositório do site](https://github.com/daniellindomar/ppsus) ou pelo endereço lindomar.pegorini@unemat.br.
 
