@@ -197,9 +197,9 @@ details.mais > summary { cursor: pointer; color: #0E5A5E; font-weight: 600; font
 # Faixa do topo: resultados preliminares
 faixa_preliminar <- function() div(class = "faixa-prelim", HTML(sprintf(paste0(
   "<b>Resultados preliminares.</b> Previsão de demanda do Projeto PPSUS-MT (atividade A5), versões <code>%s</code> e ",
-  "<code>%s</code>. A especificação dos modelos ainda está em validação pelo coordenador do projeto, e a regra do alerta ",
-  "não foi pactuada com a SES-MT: os números desta página <b>não são recomendação oficial nem alerta operacional</b>. ",
-  "Corte de %s (SE %d/%d), com o SIH até a competência %s."),
+  "<code>%s</code>. A especificação dos modelos encontra-se em validação pelo coordenador do projeto, e a regra do alerta ",
+  "não foi pactuada com a SES-MT; por essa razão, os números desta página <b>não constituem recomendação oficial nem alerta operacional</b>. ",
+  "Corte de %s (SE %d/%d), com o SIH disponível até a competência %s."),
   VERSAO_BASE, VERSAO_NC, dmy(CORTE), SE_CORTE, ANO_CORTE, COMPET_SIH)))
 
 # Atalhos para as seções da página
@@ -410,8 +410,8 @@ detalhe_serie <- function(cod, alvo = "j00_j99", visivel = FALSE) {
       HTML(grafico_serie(cod, alvo)),
       quadro_4sem(cod, alvo),
       p(class = "nota-fonte", HTML(sprintf(paste0(
-        "Nowcast das %s a %s (%s semanas ainda incompletas no SIH): na semana de hoje (%s), %s; ",
-        "já processado no SIH: %s. Passe o cursor (ou toque) sobre o gráfico para ver os valores de cada semana."),
+        "<i>Nowcast</i> das %s a %s (%s semanas ainda incompletas no SIH): na semana do corte (%s), %s; ",
+        "contagem já processada no SIH: %s. Os valores de cada semana podem ser consultados ao passar o cursor sobre o gráfico (ou ao tocá-lo)."),
         se_txt(min(nc$se), ANO_CORTE), se_txt(max(nc$se), ANO_CORTE), nrow(nc), se_txt(nc_ult$se, nc_ult$ano_se),
         if (is.na(nc_ult$y_nowcast)) "estimativa suprimida (contagem pequena na região)" else
           sprintf("estimativa de %s (intervalo de 80%%: %s)", est_h(nc_ult$y_nowcast), int_h(nc_ult$lo80, nc_ult$hi80)),
@@ -453,7 +453,7 @@ fim(document);window.addEventListener('load',function(){fim(document);});})();"
                                                          if (c == "MT") "Mato Grosso (soma das 16 regiões)" else nome_reg_prev(c))))),
     div(id = "prev-detalhe", lapply(cods, function(c) detalhe_serie(c, "j00_j99", visivel = c == "MT"))),
     h4("Todas as regiões de saúde — próximas 4 semanas"),
-    p(class = "nota-fonte", "Toque ou clique em um cartão para abrir o gráfico detalhado da região. Minigráficos desde a SE 1/2026: linha contínua escura = semanas completas; tracejada = nowcast; faixa = intervalo de 80%; linha laranja tracejada = limiar de alta pressão."),
+    p(class = "nota-fonte", HTML("Ao tocar ou clicar em um cartão, abre-se o gráfico detalhado da região. Nos minigráficos, desde a SE 1/2026, a linha contínua escura representa as semanas completas; a tracejada, o <i>nowcast</i>; a faixa, o intervalo de 80%; e a linha laranja tracejada, o limiar de alta pressão.")),
     div(class = "prev-cards", lapply(cods, cartao_serie)),
     tags$script(HTML(js)))
 }
@@ -786,10 +786,12 @@ tabela_pediatrica <- function() {
 }
 
 # ---- 6. Fontes e arquivos ------------------------------------------------------------------------------
-fonte_prev <- function(extra = NULL) p(class = "nota-fonte", HTML(paste0(
-  "Fonte: SIH/SUS (DATASUS), AIH tipo 1, diagnóstico principal no capítulo J da CID-10 (J00–J99), por semana epidemiológica da internação e ",
-  "região de saúde do hospital (ótica de ocorrência); Projeto PPSUS-MT, previsão de demanda (atividade A5), resultados preliminares — ",
-  "versões <code>", VERSAO_BASE, "</code> e <code>", VERSAO_NC, "</code>. ", if (!is.null(extra)) extra else "")))
+# figura: título da figura ("Figura N – ..."), escrito abaixo do gráfico, antes da fonte (convenção do site)
+fonte_prev <- function(extra = NULL, figura = NULL) p(class = "nota-fonte", HTML(paste0(
+  if (!is.null(figura)) paste0(figura, ". ") else "",
+  "Fonte: elaboração do Projeto PPSUS-MT (previsão de demanda, atividade A5; resultados preliminares, versões <code>", VERSAO_BASE,
+  "</code> e <code>", VERSAO_NC, "</code>), com base no SIH/SUS (DATASUS): AIH tipo 1, diagnóstico principal no capítulo J da CID-10 (J00–J99), ",
+  "por semana epidemiológica da internação e região de saúde do hospital (ótica de ocorrência). ", if (!is.null(extra)) extra else "")))
 
 ARQS_PREV <- c(
   "previsao_proximas_semanas.csv" = "previsão das 4 semanas a partir de hoje, por região, faixa etária e método, com limiar e situação",

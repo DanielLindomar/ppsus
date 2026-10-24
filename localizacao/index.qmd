@@ -20,19 +20,19 @@ css_loc()
 faixa_versao()
 faixa_loc()
 nav_loc("index.html")
-secoes_loc(c(problema = "O problema", cadeia = "A cadeia L1–L5", pilotos = "Os dois pilotos", ler = "Como ler",
-             limitacoes = "Limitações", arquivos = "Arquivos"))
+secoes_loc(c(problema = "O problema", cadeia = "A cadeia L1–L5", pilotos = "Os dois pilotos", ler = "Conceitos e medidas",
+             limitacoes = "Limitações", arquivos = "Arquivos", referencias = "Referências"))
 ```
 
-## O problema {#problema}
+## Problema e objetivo {#problema}
 
-Mato Grosso tem 142 municípios espalhados por um território extenso, e muitos serviços de saúde só existem em poucos deles. Para o gestor, a pergunta prática é: **se for possível abrir ou ampliar um serviço, onde ele mais reduziria o deslocamento dos pacientes, considerando a demanda dos próximos anos?** Esta seção do Observatório organiza essa pergunta em **cenários, para apoiar a discussão**, com uma cadeia de modelos aplicada a dois pilotos: **atenção ao parto** (abertura ou qualificação de maternidades) e **UTI adulto** (leitos SUS de terapia intensiva).
+Mato Grosso possui 142 municípios distribuídos por um território extenso, e muitos serviços de saúde existem somente em poucos deles. Do ponto de vista da gestão, a questão prática consiste em identificar, **caso seja possível abrir ou ampliar um serviço, onde ele mais reduziria o deslocamento dos pacientes, considerando-se a demanda dos próximos anos**. Esta seção do Observatório organiza essa questão em **cenários, destinados a apoiar a discussão**, por meio de uma cadeia de modelos aplicada a dois pilotos: a **atenção ao parto** (abertura ou qualificação de maternidades) e a **unidade de terapia intensiva (UTI) adulto** (leitos SUS de terapia intensiva).
 
-A localização de serviços passou a ser objetivo do projeto em 17/10/2026, por decisão da coordenação. Os resultados desta versão são **preliminares**: a demanda futura usa uma projeção populacional municipal provisória, e os cenários dependem de parâmetros de pesquisa que não são normas. Eles servem para organizar a discussão com a gestão do SUS, **não como recomendação oficial** de abertura, habilitação ou fechamento de serviços.
+A localização de serviços passou a integrar os objetivos do projeto em 17/10/2026, por decisão da coordenação. Os resultados desta versão são **preliminares**, uma vez que a demanda futura utiliza uma projeção populacional municipal provisória e os cenários dependem de parâmetros de pesquisa que não constituem normas. Destinam-se, portanto, a organizar a discussão com a gestão do Sistema Único de Saúde (SUS) e **não constituem recomendação oficial** de abertura, habilitação ou fechamento de serviços.
 
-## A cadeia L1–L5 {#cadeia}
+## A cadeia de modelos L1–L5 {#cadeia}
 
-O problema é de otimização (escolher locais), mas a otimização só é tão boa quanto as estimativas que a alimentam. Por isso, a cadeia tem cinco elos; o aprendizado de máquina entra em dois deles, para estimar a demanda e o comportamento dos pacientes.
+Trata-se de um problema de otimização, que consiste em escolher locais; contudo, a qualidade da otimização depende das estimativas que a alimentam. Por essa razão, a cadeia compõe-se de cinco elos, apresentados a seguir, e o aprendizado de máquina participa de dois deles, na estimação da demanda e do comportamento dos pacientes.
 
 ```{r}
 passo <- function(cod, titulo, texto, ml = NULL) div(class = "loc-passo", span(class = "loc-cod", cod), h4(titulo), p(texto), if (!is.null(ml)) div(class = "loc-ml", ml))
@@ -46,7 +46,7 @@ div(class = "loc-cadeia",
   passo("L5", "O que muda?", "Os fluxos de 2030 são redistribuídos com o modelo de escolha: quanto tempo cada município poupa e quantos pacientes as unidades novas recebem."))
 ```
 
-Cada elo é testado antes de alimentar o seguinte: a demanda, em anos que o modelo não usou; a escolha dos pacientes, em mudanças reais de oferta ocorridas entre 2021 e 2025 (aberturas, ampliações, reduções e fechamentos de leitos), os chamados **experimentos naturais**. As soluções da otimização são recalculadas com oito variantes da demanda para mostrar quais são robustas e quais são **quase-empates**.
+Do ponto de vista metodológico, a demanda (L1) é estimada por modelos de contagem (CAMERON; TRIVEDI, 2013) e pelo LightGBM (KE *et al.*, 2017); o acesso (L3) é medido, entre outros indicadores, pelo método aprimorado de áreas de captação flutuantes em duas etapas (E2SFCA, do inglês *Enhanced Two-Step Floating Catchment Area*), proposto por Luo e Qi (2009); e a otimização (L4) emprega os modelos de p-mediana (HAKIMI, 1964; REVELLE; SWAIN, 1970) e de cobertura máxima (CHURCH; REVELLE, 1974). Cada elo é testado antes de alimentar o seguinte. A demanda é avaliada em anos que o modelo não utilizou, e a escolha dos pacientes, em mudanças reais de oferta ocorridas entre 2021 e 2025 (aberturas, ampliações, reduções e fechamentos de leitos), os chamados **experimentos naturais**. As soluções da otimização, por sua vez, são recalculadas com oito variantes da demanda, a fim de evidenciar quais são robustas e quais constituem **quase-empates**.
 
 ## Os dois pilotos {#pilotos}
 
@@ -56,51 +56,59 @@ cartoes(
   cartao("uti-adulto.html", "UTI adulto", "Acesso aos leitos SUS de UTI adulto, internações projetadas, cenários com e sem capacidade dos leitos e necessidade de leitos por região de saúde."))
 ```
 
+A Tabela 1 sintetiza os principais resultados dos dois pilotos, detalhados nas respectivas páginas.
+
+**Tabela 1 – Síntese dos pilotos de localização de serviços: atenção ao parto e UTI adulto**
+
 ```{r}
 tabela_resumo_pilotos()
 ```
 
 ::: {.nota-fonte}
-Fontes: SINASC e SIH/SUS (demanda e deslocamento, 2024–2025), CNES (leitos, 2025), RIPSA/SVS (população, 2025), tempos rodoviários entre sedes (OSRM/OpenStreetMap). Demanda de 2030 e tempos da otimização dependem da projeção populacional municipal provisória.
+Fonte: elaboração do Projeto PPSUS-MT, com base no Sistema de Informações sobre Nascidos Vivos (SINASC) e no Sistema de Informações Hospitalares do SUS (SIH/SUS), quanto à demanda e ao deslocamento (2024–2025); no Cadastro Nacional de Estabelecimentos de Saúde (CNES), quanto aos leitos (2025); nas estimativas da RIPSA/SVS, quanto à população (2025); e nos tempos rodoviários entre sedes (OSRM/OpenStreetMap). Nota: a demanda de 2030 e os tempos da otimização dependem da projeção populacional municipal provisória.
 :::
 
-O que os pilotos mostram, em resumo:
+Em síntese, os pilotos evidenciam dois padrões distintos.
 
-- **A malha de maternidades já é densa; o desafio é a escolha das gestantes.** `r pct_l(SP$pop60)` das mulheres de 15 a 49 anos moram a até 60 minutos de um leito obstétrico, mas o tempo médio efetivamente percorrido (`r min_l(SP$tempo)`) é bem maior que o tempo até a unidade mais próxima. Quase todos os municípios que aparecem nas soluções da otimização já têm leitos obstétricos. As escolhas são frágeis (com uma unidade, `r nomes_lista(PP1$nomes_abertos)` e `r nomes_lista(PP1$segunda_nomes)` praticamente empatam), e o modelo de escolha **não superou a regra ingênua** de repetir o ano anterior quando a oferta mudou (CPC de `r num(EP$cpc_medio_pivo_mnl, 3)` contra `r num(EP$cpc_medio_persistencia, 3)`): os cenários do parto valem como ordem de grandeza.
-- **A UTI adulto do SUS está concentrada, e o deslocamento é longo.** Só `r num(SU$n_mun_serv)` municípios tinham UTI adulto SUS em 2025; `r pct_l(SU$pop120)` dos adultos moram a até 120 minutos dela, e o tempo médio percorrido foi de `r tempo_l(SU$tempo)`. A otimização leva as unidades novas para os polos das regiões remotas, e as soluções são estáveis. Dois cenários de três unidades são comparados sem recomendação: a p-mediana (`r nomes_lista(UP3$nomes_abertos)`) e a versão que respeita a capacidade dos leitos (`r nomes_lista(UC3$nomes_abertos)`). Quando a oferta mudou, o modelo de escolha acertou mais que a regra ingênua (CPC de `r num(EU$cpc_medio_pivo_mnl, 3)` contra `r num(EU$cpc_medio_persistencia, 3)`), mas a vantagem vem do ciclo da COVID-19.
+**No parto, a malha de maternidades já é densa, e o desafio reside na escolha das gestantes.** Observa-se que `r pct_l(SP$pop60)` das mulheres de 15 a 49 anos moram a até 60 minutos de um leito obstétrico, mas o tempo médio efetivamente percorrido (`r min_l(SP$tempo)`) é bem maior que o tempo até a unidade mais próxima, e quase todos os municípios que aparecem nas soluções da otimização já dispõem de leitos obstétricos. As escolhas são frágeis — com uma unidade, `r nomes_lista(PP1$nomes_abertos)` e `r nomes_lista(PP1$segunda_nomes)` praticamente empatam —, e o modelo de escolha **não superou a regra ingênua** de repetir o ano anterior quando a oferta mudou (índice de parte comum dos fluxos, CPC, do inglês *Common Part of Commuters*, de `r num(EP$cpc_medio_pivo_mnl, 3)` contra `r num(EP$cpc_medio_persistencia, 3)`). Por essa razão, os cenários do parto valem como ordem de grandeza.
 
-## Como ler {#ler}
+**Na UTI adulto, a oferta do SUS é concentrada, e o deslocamento é longo.** Somente `r num(SU$n_mun_serv)` municípios dispunham de UTI adulto SUS em 2025; `r pct_l(SU$pop120)` dos adultos moram a até 120 minutos dela, e o tempo médio percorrido foi de `r tempo_l(SU$tempo)`. A otimização direciona as unidades novas para os polos das regiões remotas, e as soluções são estáveis. Comparam-se, sem recomendação, dois cenários de três unidades: a p-mediana (`r nomes_lista(UP3$nomes_abertos)`) e a versão que respeita a capacidade dos leitos (`r nomes_lista(UC3$nomes_abertos)`). Quando a oferta mudou, o modelo de escolha acertou mais que a regra ingênua (CPC de `r num(EU$cpc_medio_pivo_mnl, 3)` contra `r num(EU$cpc_medio_persistencia, 3)`); essa vantagem, contudo, decorre do ciclo da COVID-19.
 
-- **Tempo até o serviço**: tempo rodoviário, de automóvel e em condições ideais, entre a sede do município de residência e a sede do município mais próximo que tem o serviço (`r sigla("OSRM", "Open Source Routing Machine: cálculo de rotas sobre o mapa colaborativo OpenStreetMap")`). Dentro do próprio município, conta zero.
-- **Índice de acesso (`r sigla("E2SFCA", "Enhanced two-step floating catchment area: método de áreas de captação flutuantes em duas etapas, com peso que diminui com o tempo de viagem")`)**: leitos disponíveis a até 60 ou 120 minutos, divididos pela população que disputa esses leitos, com peso menor para o que fica mais longe. A média de Mato Grosso vale 1; abaixo de 0,5, o acesso é menos da metade da média do estado; zero, nenhum leito ao alcance.
-- **Tempo médio percorrido**: média do tempo entre a sede do município de residência e a do município onde o paciente foi atendido, em 2024–2025.
-- **Unidades novas (k)**: número de municípios que recebem o serviço no cenário (1 a 5), além dos que já o têm.
-- **p-mediana**: escolhe os municípios que tornam mínimo o tempo médio de viagem até a unidade mais próxima. **Cobertura máxima**: escolhe os que tornam máxima a parcela da demanda a até 60 ou 120 minutos.
-- **Modelo de escolha (pivô do gravitacional)**: parte de para onde os pacientes de cada município foram em 2025 e ajusta essas parcelas conforme a nova oferta. **Persistência**: regra ingênua que só repete o ano anterior.
-- **`r sigla("CPC", "Common Part of Commuters: parte comum entre os fluxos previstos e os observados")`**: parte comum entre os fluxos previstos e os observados; 1 é previsão perfeita.
-- **Erro médio (`r sigla("WMAPE", "Erro absoluto médio ponderado: soma dos erros absolutos dividida pela soma observada")`)**: soma dos erros absolutos dividida pela soma observada.
-- **Intervalo de 80%**: faixa em que se espera o valor em 8 de cada 10 situações, dadas a incerteza da população e o erro observado no teste.
-- **Quase-empate**: duas soluções praticamente equivalentes para o critério do modelo; a escolha entre elas depende de fatores que o modelo não tem.
-- **PROVISÓRIO**: depende da projeção populacional municipal provisória e será refeito quando houver projeção municipal por idade e sexo.
-- **"suprimido"**: contagem de 1 a 4 não mostrada, ou célula escondida para que outra não pudesse ser deduzida por diferença.
+## Conceitos e medidas {#ler}
+
+O **tempo até o serviço** corresponde ao tempo rodoviário, de automóvel e em condições ideais, entre a sede do município de residência e a sede do município mais próximo que dispõe do serviço, calculado pelo `r sigla("OSRM", "Open Source Routing Machine: cálculo de rotas sobre o mapa colaborativo OpenStreetMap")` (*Open Source Routing Machine*), descrito por Luxen e Vetter (2011); dentro do próprio município, considera-se zero. O **tempo médio percorrido**, por sua vez, é a média do tempo entre a sede do município de residência e a do município onde o paciente foi atendido, em 2024–2025.
+
+O **índice de acesso (`r sigla("E2SFCA", "Enhanced two-step floating catchment area: método de áreas de captação flutuantes em duas etapas, com peso que diminui com o tempo de viagem")`)** relaciona os leitos disponíveis a até 60 ou 120 minutos à população que disputa esses leitos, com peso menor para o que fica mais longe. A média de Mato Grosso vale 1; valores abaixo de 0,5 indicam acesso inferior à metade da média do estado, e o valor zero indica ausência de leito ao alcance.
+
+Nos cenários, as **unidades novas (k)** correspondem ao número de municípios que recebem o serviço (1 a 5), além dos que já o possuem. A **p-mediana** escolhe os municípios que tornam mínimo o tempo médio de viagem até a unidade mais próxima, ao passo que a **cobertura máxima** escolhe os que tornam máxima a parcela da demanda a até 60 ou 120 minutos. Denomina-se **quase-empate** a situação em que duas soluções são praticamente equivalentes para o critério do modelo, de modo que a escolha entre elas depende de fatores que o modelo não contempla.
+
+O **modelo de escolha (pivô do gravitacional)** parte dos destinos dos pacientes de cada município em 2025 e ajusta essas parcelas conforme a nova oferta, enquanto a **persistência** constitui a regra ingênua que apenas repete o ano anterior. O desempenho desses modelos é medido pelo **`r sigla("CPC", "Common Part of Commuters: parte comum entre os fluxos previstos e os observados")`**, que corresponde à parte comum entre os fluxos previstos e os observados, em que 1 indica previsão perfeita. O **erro médio** da demanda é medido pelo erro percentual absoluto médio ponderado (`r sigla("WMAPE", "Erro absoluto médio ponderado: soma dos erros absolutos dividida pela soma observada")`, do inglês *Weighted Mean Absolute Percentage Error*), isto é, pela soma dos erros absolutos dividida pela soma observada. O **intervalo de 80%**, por fim, representa a faixa em que se espera o valor em 8 de cada 10 situações, dadas a incerteza da população e o erro observado no teste.
+
+Duas marcas acompanham os resultados. A marca **PROVISÓRIO** indica dependência da projeção populacional municipal provisória, a ser refeita quando houver projeção municipal por idade e sexo. A marca **"suprimido"** indica contagem de 1 a 4 não mostrada, ou célula escondida para que outra não pudesse ser deduzida por diferença.
 
 ## Limitações {#limitacoes}
 
 ::: {.callout-warning title="Comuns aos dois pilotos"}
-- **Projeção populacional provisória.** A população municipal de 2026–2030 aplica a participação de cada município (por sexo e faixa etária) à projeção do IBGE para Mato Grosso; não desloca as coortes, e cada município herda o envelhecimento médio do estado.
-- **Demanda e oferta nas sedes.** Os sistemas informam o município, não o endereço; o deslocamento dentro do município conta zero, e municípios extensos têm o acesso superestimado.
-- **Tempos em condições ideais.** Sem balsas, estradas sazonais, transporte sanitário, regulação ou espera; algumas rotas estão em validação com a SES-MT.
-- **Modelos escolhidos no próprio teste.** As métricas de validação são otimistas, e os experimentos naturais são poucos e correlacionados.
-- **Município de destino, não hospital.** A localização é feita entre municípios; a qualidade e a segurança do serviço não entram nos modelos.
-- **Parâmetros não normativos.** Ocupação-alvo, tamanho do módulo de leitos, filtros de candidatos e limiares de demanda são escolhas da pesquisa, apresentadas em cada página.
-- **Sem recomendação.** Os cenários mostram consequências de hipóteses para a discussão com a gestão; não indicam onde abrir, habilitar ou fechar serviços.
+**Projeção populacional provisória.** A população municipal de 2026–2030 resulta da aplicação da participação de cada município (por sexo e faixa etária) à projeção do Instituto Brasileiro de Geografia e Estatística (IBGE) para Mato Grosso; o método não desloca as coortes, de modo que cada município herda o envelhecimento médio do estado.
+
+**Demanda e oferta nas sedes.** Os sistemas informam o município, e não o endereço; por essa razão, o deslocamento dentro do município conta zero, e os municípios extensos têm o acesso superestimado.
+
+**Tempos em condições ideais.** Não se consideram balsas, estradas sazonais, transporte sanitário, regulação ou espera, e algumas rotas encontram-se em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT).
+
+**Modelos escolhidos no próprio teste.** As métricas de validação são otimistas, e os experimentos naturais são poucos e correlacionados.
+
+**Município de destino, não hospital.** A localização é feita entre municípios, e a qualidade e a segurança do serviço não entram nos modelos.
+
+**Parâmetros não normativos.** A ocupação-alvo, o tamanho do módulo de leitos, os filtros de candidatos e os limiares de demanda constituem escolhas da pesquisa, apresentadas em cada página.
+
+**Sem recomendação.** Os cenários mostram as consequências de hipóteses para a discussão com a gestão e não indicam onde abrir, habilitar ou fechar serviços.
 :::
 
-Para onde os moradores de cada município se internam, em todas as especialidades, está na seção [Deslocamento](../deslocamento/index.html); o quanto cada município e hospital produz com os recursos que tem, na seção [Eficiência](../eficiencia/index.html).
+Os destinos das internações dos moradores de cada município, em todas as especialidades, são apresentados na seção [Deslocamento](../deslocamento/index.html), e a produção de cada município e hospital em relação aos recursos de que dispõe, na seção [Eficiência](../eficiencia/index.html).
 
 ## Arquivos {#arquivos}
 
-Arquivos agregados da frente de localização (CSV, UTF-8, separador vírgula, decimal ponto; células suprimidas vazias, com a coluna `suprimido`). Projeções e cenários de 2026–2030 são provisórios (coluna `provisorio`). Contagens observadas de 1 a 4 não são publicadas, nem as colunas que permitiriam estimá-las.
+Disponibilizam-se, a seguir, os arquivos agregados da frente de localização, em formato CSV (UTF-8, separador vírgula e decimal ponto), com as células suprimidas vazias e assinaladas na coluna `suprimido`. As projeções e os cenários de 2026–2030 são provisórios, conforme indica a coluna `provisorio`. Ressalta-se que as contagens observadas de 1 a 4 não são publicadas, tampouco as colunas que permitiriam estimá-las.
 
 ```{r}
 lista_arquivos_loc("../")
@@ -109,3 +117,23 @@ lista_arquivos_loc("../")
 ```{r}
 fonte_loc(arquivos = FALSE)
 ```
+
+## Referências {#referencias}
+
+Relacionam-se a seguir, segundo as normas da Associação Brasileira de Normas Técnicas (ABNT), as obras citadas nesta página e nas páginas dos pilotos; as referências dos demais métodos do Observatório encontram-se em [Metodologia](../metodologia.html#referencias).
+
+::: {.referencias}
+CAMERON, A. C.; TRIVEDI, P. K. **Regression analysis of count data**. 2. ed. Cambridge: Cambridge University Press, 2013. DOI: <https://doi.org/10.1017/CBO9781139013567>.
+
+CHURCH, R.; REVELLE, C. The maximal covering location problem. **Papers of the Regional Science Association**, v. 32, n. 1, p. 101-118, 1974. DOI: <https://doi.org/10.1007/BF01942293>.
+
+HAKIMI, S. L. Optimum locations of switching centers and the absolute centers and medians of a graph. **Operations Research**, v. 12, n. 3, p. 450-459, 1964. DOI: <https://doi.org/10.1287/opre.12.3.450>.
+
+KE, G.; MENG, Q.; FINLEY, T.; WANG, T.; CHEN, W.; MA, W.; YE, Q.; LIU, T.-Y. LightGBM: a highly efficient gradient boosting decision tree. In: CONFERENCE ON NEURAL INFORMATION PROCESSING SYSTEMS, 31., 2017, Long Beach. **Advances in Neural Information Processing Systems 30**. Red Hook: Curran Associates, 2017. p. 3146-3154.
+
+LUO, W.; QI, Y. An enhanced two-step floating catchment area (E2SFCA) method for measuring spatial accessibility to primary care physicians. **Health & Place**, v. 15, n. 4, p. 1100-1107, 2009. DOI: <https://doi.org/10.1016/j.healthplace.2009.06.002>.
+
+LUXEN, D.; VETTER, C. Real-time routing with OpenStreetMap data. In: ACM SIGSPATIAL INTERNATIONAL CONFERENCE ON ADVANCES IN GEOGRAPHIC INFORMATION SYSTEMS, 19., 2011, Chicago. **Proceedings** [...]. New York: ACM, 2011. p. 513-516. DOI: <https://doi.org/10.1145/2093973.2094062>.
+
+REVELLE, C. S.; SWAIN, R. W. Central facilities location. **Geographical Analysis**, v. 2, n. 1, p. 30-42, 1970. DOI: <https://doi.org/10.1111/j.1538-4632.1970.tb00142.x>.
+:::

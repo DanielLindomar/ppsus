@@ -159,6 +159,7 @@ body.fullcontent main.content { min-width: 0; }
 .tab-loc th { font-weight: 600; color: #374151; background: #f6f9f9; text-align: left; }
 .tab-loc td.num, .tab-loc th.num { text-align: right; white-space: nowrap; }
 .tab-loc tr.destaque td { background: #e8f2f2; font-weight: 600; }
+.tab-loc > caption { caption-side: bottom; padding-top: .3rem; }
 .selo-prov { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: #7c4a03; background: #fdf1dc; border: 1px solid #f2d39b; border-radius: 4px; padding: 0 .35rem; vertical-align: 2px; }
 .supr { color: #6b7280; font-style: italic; }
 "))
@@ -167,8 +168,8 @@ selo_prov <- function(txt = "PROVISÓRIO") span(class = "selo-prov", txt)
 
 faixa_loc <- function() faixa_construcao(paste0(
   "<b>Resultados preliminares</b> (versão de ", DATA_LOC, "), divulgados para discussão com a gestão do SUS. ",
-  "A demanda de 2026–2030 usa uma projeção populacional municipal <b>provisória</b>; os cenários de localização de ",
-  "serviços, para apoiar a discussão, dependem de parâmetros de pesquisa que <b>não são normas</b> e <b>não constituem recomendação oficial</b> ",
+  "A demanda de 2026–2030 utiliza uma projeção populacional municipal <b>provisória</b>, e os cenários de localização de ",
+  "serviços, destinados a apoiar a discussão, dependem de parâmetros de pesquisa que <b>não são normas</b> e <b>não constituem recomendação oficial</b> ",
   "do projeto, da SES-MT ou dos municípios."))
 
 nav_loc <- function(atual = "index.html") {
@@ -181,8 +182,10 @@ nav_loc <- function(atual = "index.html") {
 secoes_loc <- function(secoes) tags$nav(class = "nav-mun", `aria-label` = "Seções desta página",
   lapply(names(secoes), function(id) a(class = "btn btn-sm btn-outline-secondary", href = paste0("#", id), secoes[[id]])))
 
-# Fonte curta para logo abaixo de gráficos e tabelas
-fonte_curta <- function(piloto, extra = NULL) p(class = "nota-fonte", paste0(
+# Fonte curta para logo abaixo de gráficos e tabelas; figura: título da figura ("Figura N – ..."), escrito
+# abaixo do gráfico, antes da fonte (convenção do site)
+fonte_curta <- function(piloto, extra = NULL, figura = NULL) p(class = "nota-fonte", paste0(
+  if (!is.null(figura)) paste0(figura, ". ") else "",
   "Fonte: ", if (piloto == "parto") "SINASC" else "SIH/SUS", " 2020–2025, CNES 2025 e tempos rodoviários OSRM/OpenStreetMap (consulta de 08/10/2026)",
   if (!is.null(extra)) paste0("; ", extra) else "", ". Elaboração: Projeto PPSUS-MT."))
 
@@ -381,8 +384,8 @@ mapa_loc <- function(piloto, cenarios = "p_mediana_k3", altura = 520) {
     m,
     lapply(seq_along(vistas), function(k) div(class = "leg-mapa", `data-legenda` = id, `data-vista` = k - 1,
                                               style = if (k > 1) "display:none" else NULL, vistas[[k]]$leg)),
-    p(class = "nota-fonte", "Passe o cursor (ou toque) sobre um município para ver todas as medidas. ",
-      "Boa Esperança do Norte (instalado em 2025) não tem polígono na malha do IBGE usada no mapa; aparece nas tabelas."))
+    p(class = "nota-fonte", "As medidas de cada município podem ser consultadas ao passar o cursor sobre ele (ou ao tocá-lo). ",
+      "Boa Esperança do Norte, instalado em 2025, não tem polígono na malha do IBGE utilizada no mapa e aparece somente nas tabelas."))
 }
 
 # Tabela por região de saúde (acesso atual)
@@ -533,7 +536,7 @@ tabela_valid_demanda <- function(piloto) {
     tags$td(class = "num", pct_l(d$w0[i])), tags$td(class = "num", pct_l(d$w1[i])), tags$td(class = "num", pct_l(d$wr1[i])),
     tags$td(class = "num", paste0(if (d$et1[i] >= 0) "+" else "−", num(abs(d$et1[i]), 1), "%"))))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Erro médio por município (WMAPE): soma dos erros absolutos dividida pela soma observada; treino 2020–2023, teste 2024–2025."),
+    tags$caption(class = "nota-fonte", "Nota: erro médio por município (WMAPE), isto é, soma dos erros absolutos dividida pela soma observada; treino em 2020–2023 e teste em 2024–2025."),
     tags$thead(tags$tr(tags$th("Modelo"), tags$th(class = "num", "Erro por município"), tags$th(class = "num", "Erro por município, ancorado"),
                        tags$th(class = "num", "Erro por região, ancorado"), tags$th(class = "num", "Erro do total de MT, ancorado"))),
     tags$tbody(linhas)))
@@ -548,7 +551,7 @@ tabela_valid_escolha <- function(piloto) {
     tags$td(class = "num", num(v$cpc[i], 3)), tags$td(class = "num", pct_l(100 * v$acerto_principal_destino[i])),
     tags$td(class = "num", paste0(num(v$tempo_medio_prev[i], 1), " (obs. ", num(v$tempo_medio_obs[i], 1), ")"))))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "CPC: parte comum entre fluxos previstos e observados (1 = previsão perfeita). Treino 2020–2023, teste 2024–2025, sem mudança de oferta além da observada."),
+    tags$caption(class = "nota-fonte", "Nota: o CPC é a parte comum entre fluxos previstos e observados (1 = previsão perfeita). Treino em 2020–2023 e teste em 2024–2025, sem mudança de oferta além da observada."),
     tags$thead(tags$tr(tags$th("Modelo"), tags$th(class = "num", "CPC"), tags$th(class = "num", "Acerto do destino principal"),
                        tags$th(class = "num", "Tempo médio previsto (min)"))),
     tags$tbody(linhas)))
@@ -596,7 +599,7 @@ tabela_experimentos <- function(piloto) {
     tags$td(class = "num", tags$b(num(e$cpc_medio_persistencia[i], 3))),
     tags$td(class = "num", sprintf("%s / %s / %s", num(e$n_pivo_mnl_vence_margem[i]), num(e$n_pivo_mnl_empata_margem[i]), num(e$n_pivo_mnl_perde_margem[i])))))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "CPC médio nas origens afetadas. Vence / empata / perde: eventos (mudanças de oferta de leitos no CNES, não pacientes) em que o pivô do gravitacional supera a persistência por 0,005 de CPC ou mais, fica a menos de 0,005 ou perde por 0,005 ou mais."),
+    tags$caption(class = "nota-fonte", "Nota: CPC médio nas origens afetadas. Vence / empata / perde: número de eventos (mudanças de oferta de leitos no CNES, e não pacientes) em que o pivô do gravitacional supera a persistência por 0,005 de CPC ou mais, fica a menos de 0,005 ou perde por 0,005 ou mais."),
     tags$thead(tags$tr(tags$th("Tipo de evento"), tags$th(class = "num", "Eventos avaliáveis"), tags$th(class = "num", "Gravitacional"),
                        tags$th(class = "num", "LightGBM nos pares"), tags$th(class = "num", "Pivô do LightGBM"), tags$th(class = "num", "Pivô do gravitacional"),
                        tags$th(class = "num", "Persistência"), tags$th(class = "num", "Pivô: vence / empata / perde"))),
@@ -612,7 +615,7 @@ tabela_experimentos_ano <- function(piloto) {
     tags$td(class = "num", num(e$cpc_medio_pivo_mnl[i], 3)), tags$td(class = "num", num(e$cpc_medio_persistencia[i], 3)),
     tags$td(class = "num", sprintf("%s / %s / %s", num(e$n_pivo_vence_margem[i]), num(e$n_empate_margem[i]), num(e$n_pivo_perde_margem[i])))))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Eventos do mesmo ano usam o mesmo ajuste e a mesma janela de teste: não são independentes."),
+    tags$caption(class = "nota-fonte", "Nota: os eventos do mesmo ano utilizam o mesmo ajuste e a mesma janela de teste e, portanto, não são independentes."),
     tags$thead(tags$tr(tags$th("Ano do evento"), tags$th("Ajuste"), tags$th("Teste"), tags$th("Eventos avaliáveis por tipo"),
                        tags$th(class = "num", "CPC do pivô"), tags$th(class = "num", "CPC da persistência"), tags$th(class = "num", "Vence / empata / perde"))),
     tags$tbody(linhas)))
@@ -699,7 +702,7 @@ tabela_escolhidos <- function(piloto, modelos) {
     lapply(nomes_mod, function(mm) { v <- w$ks[w$mun == tot$mun[i] & w$modelo == mm]; tags$td(class = "num", if (length(v)) v else "—") }),
     tags$td(class = "num", tot$n[i])))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Cada célula lista os valores de k (número de unidades novas) em que o município está na solução daquele modelo."),
+    tags$caption(class = "nota-fonte", "Nota: cada célula lista os valores de k (número de unidades novas) em que o município integra a solução daquele modelo."),
     tags$thead(tags$tr(tags$th("Município"), lapply(nomes_mod, function(mm) tags$th(class = "num", mm)), tags$th(class = "num", "Soluções em que aparece"))),
     tags$tbody(linhas)))
 }
@@ -719,7 +722,7 @@ tabela_sensibilidade <- function(piloto) {
       tags$td(if (isTRUE(r$quase_empate)) tags$b("sim") else "não"), tags$td(outras))
   })
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Quase-empate: na p-mediana e na regional, diferença entre a melhor e a segunda melhor solução menor que 1% do tempo médio; na cobertura máxima, menor que 10% do ganho de cobertura. Oito variantes de demanda; candidatos fixos; força bruta."),
+    tags$caption(class = "nota-fonte", "Nota: considera-se quase-empate, na p-mediana e na regional, a diferença entre a melhor e a segunda melhor solução menor que 1% do tempo médio e, na cobertura máxima, menor que 10% do ganho de cobertura. Oito variantes de demanda; candidatos fixos; busca exaustiva (força bruta)."),
     tags$thead(tags$tr(tags$th("Modelo"), tags$th(class = "num", "k"), tags$th("Melhor solução"), tags$th("Segunda melhor"),
                        tags$th(class = "num", "Diferença (% do objetivo)"), tags$th(class = "num", "Diferença (% do ganho)"),
                        tags$th("Quase-empate"), tags$th("Variantes de demanda com outra solução"))),
@@ -747,7 +750,7 @@ tabela_necessidade_uti <- function() {
                  tags$td(class = "num", num(sum(d$demanda_residentes_2030))), tags$td(class = "num", num(sum(d$leitos_necessarios_2030), 1)),
                  tags$td(class = "num", sald(sum(d$leitos_uti_sus_2025) - sum(d$leitos_necessarios_2030))))
   div(class = "rolagem-x", tags$table(class = "tab-loc",
-    tags$caption(class = "nota-fonte", "Leitos necessários = internações dos residentes atendidas em MT × permanência média em UTI adulto (6,95 dias, 2024–2025) ÷ (365 × 0,85). Critério empírico do estudo, não parâmetro normativo. ▲ sobra / ▼ déficit em relação aos leitos SUS existentes na região."),
+    tags$caption(class = "nota-fonte", "Nota: leitos necessários = internações dos residentes atendidas em MT × permanência média em UTI adulto (6,95 dias, 2024–2025) ÷ (365 × 0,85). Trata-se de critério empírico do estudo, e não de parâmetro normativo. ▲ sobra / ▼ déficit em relação aos leitos SUS existentes na região."),
     tags$thead(tags$tr(tags$th("Região de saúde"), tags$th(class = "num", "Leitos SUS de UTI adulto (2025)"),
                        tags$th(class = "num", "Internações observadas 2025 (em MT)"), tags$th(class = "num", "Leitos necessários, 2025"),
                        tags$th(class = "num", "Saldo, 2025"), tags$th(class = "num", tagList("Internações projetadas 2030 ", selo_prov())),

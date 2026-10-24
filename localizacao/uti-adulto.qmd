@@ -55,12 +55,12 @@ css_loc()
 faixa_versao()
 faixa_loc()
 nav_loc("uti-adulto.html")
-secoes_loc(c(acesso = "Acesso atual", demanda = "Demanda projetada", validacao = "Os modelos acertam?",
+secoes_loc(c(acesso = "Acesso atual", demanda = "Demanda projetada", validacao = "Validação dos modelos",
              onde = "Otimização", leitos = "Leitos por região", cenarios = "Cenários com a escolha",
              sensibilidade = "Sensibilidade", parametros = "Parâmetros", ressalvas = "Ressalvas", arquivos = "Arquivos"))
 ```
 
-Este piloto organiza em **cenários, para apoiar a discussão com a gestão do SUS**, a pergunta sobre onde novas unidades de terapia intensiva (UTI) adulto do SUS reduziriam o deslocamento dos pacientes graves, considerando a demanda esperada para os próximos anos e a capacidade dos leitos. Mostra o acesso atual, a demanda de internações com UTI adulto projetada para 2026–2030, quanto os modelos acertam, os cenários de otimização com 1 a 5 unidades novas (inclusive uma versão que respeita a capacidade dos leitos), a necessidade de leitos por região de saúde e o efeito dos cenários sobre o tempo de viagem de cada município. A demanda é a de **internações SUS com UTI adulto de residentes de Mato Grosso** (SIH/SUS), e o tempo é o **rodoviário entre as sedes municipais**. Os resultados são preliminares; as ressalvas estão ao final da página.
+Este piloto organiza em **cenários, destinados a apoiar a discussão com a gestão do SUS**, a questão sobre onde novas unidades de terapia intensiva (UTI) adulto do SUS reduziriam o deslocamento dos pacientes graves, considerando-se a demanda esperada para os próximos anos e a capacidade dos leitos. Apresentam-se o acesso atual, a demanda de internações com UTI adulto projetada para 2026–2030, o desempenho dos modelos, os cenários de otimização com 1 a 5 unidades novas (inclusive uma versão que respeita a capacidade dos leitos), a necessidade de leitos por região de saúde e o efeito dos cenários sobre o tempo de viagem de cada município. A demanda considerada é a de **internações SUS com UTI adulto de residentes de Mato Grosso**, registradas no Sistema de Informações Hospitalares do SUS (SIH/SUS), e o tempo é o **rodoviário entre as sedes municipais**. Os resultados são preliminares, e as ressalvas encontram-se ao final da página.
 
 ## Acesso atual {#acesso}
 
@@ -68,48 +68,58 @@ Este piloto organiza em **cenários, para apoiar a discussão com a gestão do S
 kpis_acesso(P)
 ```
 
-A UTI adulto do SUS é concentrada: em `r ANO_OFERTA`, só `r num(S$n_mun_serv)` dos 142 municípios tinham leitos SUS de UTI adulto (CNES), e `r num(n_reg_sem)` das 16 regiões de saúde não tinham nenhum. `r pct_l(S$pop60)` dos `r INFO$pop` moravam a até 60 minutos de um município com UTI SUS e `r pct_l(S$pop120)` a até 120 minutos. Em 2024–2025, os pacientes internados com UTI em Mato Grosso percorreram em média `r tempo_l(S$tempo)` entre a sede do município de residência e a do hospital, e `r pct_l(S$fora_reg)` das internações ocorreram fora da região de saúde. O acesso se concentra na Baixada Cuiabana (índice de 120 minutos igual a `r dec_l(rg_bx$indice_120)` e `r min_l(rg_bx$tempo_medio_obs_min)` de deslocamento médio). Os residentes de `r lista_e_l(sprintf("%s (%s)", sem_mt(rg_pior$nome_regsaud), tempo_l2(rg_pior$tempo_medio_obs_min)))` percorrem as maiores distâncias; `r lista_e_l(mun_1100$nome_municipio)` passam de 1.100 minutos.
+A UTI adulto do SUS é concentrada: em `r ANO_OFERTA`, somente `r num(S$n_mun_serv)` dos 142 municípios dispunham de leitos SUS de UTI adulto, segundo o Cadastro Nacional de Estabelecimentos de Saúde (CNES), e `r num(n_reg_sem)` das 16 regiões de saúde não dispunham de nenhum. Do total de `r INFO$pop`, `r pct_l(S$pop60)` moravam a até 60 minutos de um município com UTI SUS, e `r pct_l(S$pop120)`, a até 120 minutos. Em 2024–2025, os pacientes internados com UTI em Mato Grosso percorreram em média `r tempo_l(S$tempo)` entre a sede do município de residência e a do hospital, e `r pct_l(S$fora_reg)` das internações ocorreram fora da região de saúde. O acesso concentra-se na Baixada Cuiabana (índice de 120 minutos igual a `r dec_l(rg_bx$indice_120)` e `r min_l(rg_bx$tempo_medio_obs_min)` de deslocamento médio). Os residentes de `r lista_e_l(sprintf("%s (%s)", sem_mt(rg_pior$nome_regsaud), tempo_l2(rg_pior$tempo_medio_obs_min)))` percorrem as maiores distâncias, e os de `r lista_e_l(mun_1100$nome_municipio)` ultrapassam 1.100 minutos.
 
-O **índice de acesso E2SFCA** compara os leitos SUS de UTI adulto a até 60 ou 120 minutos com a população adulta que disputa esses leitos (média de Mato Grosso = 1; a média estadual equivale a `r num(e2_media, 2)` `r INFO$e2_unid`). Em `r ANO_OFERTA`, `r num(S$sem60)` municípios não tinham nenhum leito a até 60 minutos e `r num(S$sem120)` não tinham a até 120 minutos.
+O **índice de acesso E2SFCA** (LUO; QI, 2009) compara os leitos SUS de UTI adulto a até 60 ou 120 minutos com a população adulta que disputa esses leitos (média de Mato Grosso = 1; a média estadual equivale a `r num(e2_media, 2)` `r INFO$e2_unid`). Em `r ANO_OFERTA`, `r num(S$sem60)` municípios não dispunham de nenhum leito a até 60 minutos, e `r num(S$sem120)` não dispunham de leito a até 120 minutos.
 
 ### Mapa {#mapa}
 
-Use os botões para trocar o que o mapa mostra: o tempo até o município mais próximo com UTI adulto SUS, o índice de acesso, o tempo médio efetivamente percorrido em 2024–2025 ou o ganho de tempo nos dois cenários de 2030 comparados na seção [Otimização](#onde).
+A Figura 1 permite alternar, por meio dos botões, entre o tempo até o município mais próximo com UTI adulto SUS, o índice de acesso, o tempo médio efetivamente percorrido em 2024–2025 e o ganho de tempo nos dois cenários de 2030 comparados na seção [Otimização](#onde).
 
 ```{r}
 mapa_loc(P, cenarios = c("p_mediana_k3", "uti_capacitado_k3"))
+fonte_curta(P, "malha municipal do IBGE; cenários de 2030 provisórios",
+            figura = "Figura 1 – Acesso aos leitos SUS de UTI adulto por município de residência: tempo até o serviço, índice de acesso, tempo médio percorrido e ganho nos cenários de 2030")
 ```
 
 ### Por região de saúde de residência
+
+**Tabela 1 – Acesso atual aos leitos SUS de UTI adulto, por região de saúde de residência**
 
 ```{r}
 tabela_acesso_regioes(P)
 ```
 
 ::: {.nota-fonte}
-População-alvo: `r INFO$pop` (RIPSA/SVS, `r ANO_OFERTA`). Leitos: `r INFO$fonte_oferta`. Índice E2SFCA com decaimento gaussiano até 60 ou 120 minutos de tempo rodoviário (média ponderada pela população-alvo; Mato Grosso = 1). Demanda e deslocamento: `r INFO$fonte_dem`, 2024–2025; tempo médio ponderado só pelos atendidos em Mato Grosso. "—" no próprio município: região sem UTI adulto SUS, sem internação no próprio município.
+Fonte: elaboração do Projeto PPSUS-MT. População-alvo: `r INFO$pop` (RIPSA/SVS, `r ANO_OFERTA`). Leitos: `r INFO$fonte_oferta`. Demanda e deslocamento: `r INFO$fonte_dem`, 2024–2025. Nota: índice E2SFCA com decaimento gaussiano até 60 ou 120 minutos de tempo rodoviário (média ponderada pela população-alvo; Mato Grosso = 1); tempo médio ponderado somente pelos atendidos em Mato Grosso. "—" no próprio município indica região sem UTI adulto SUS, sem internação no próprio município.
 :::
 
 ### Por município de residência
 
-A tabela está ordenada pelo tempo até o serviço mais próximo; use a busca para encontrar um município. Em `r num(n_supr)` células de percentual o valor não é mostrado ("suprimido"): a contagem correspondente fica entre 1 e 4, ou a célula foi escondida para que outra não pudesse ser deduzida por diferença.
+A Tabela 2 está ordenada pelo tempo até o serviço mais próximo, e a busca permite localizar um município. Em `r num(n_supr)` células de percentual, o valor não é mostrado ("suprimido"), porque a contagem correspondente fica entre 1 e 4 ou porque a célula foi escondida para que outra não pudesse ser deduzida por diferença.
+
+**Tabela 2 – Acesso atual aos leitos SUS de UTI adulto, por município de residência**
 
 ```{r}
 tabela_acesso_municipios(P)
+fonte_curta(P)
 ```
 
 ## Demanda projetada 2026–2030 `r selo_prov("PROVISÓRIA")` {#demanda}
 
-A demanda de cada município foi projetada com a **taxa histórica do município** (internações com UTI adulto por adulto de 20 anos ou mais, a partir de 2022, com ajuste para a região de saúde), aplicada a uma projeção populacional municipal **provisória** (participação de cada município no total de Mato Grosso, por sexo e faixa etária, aplicada à projeção do IBGE para o estado, Revisão 2024) e ancorada ao nível observado de cada região de saúde em 2025. O total estadual passa de `r num(p26$demanda_proj)` internações em 2026 para `r num(p30$demanda_proj)` em 2030 (`r paste0(if (cresc >= 0) "+" else "−", num(abs(cresc), 1), "%")`), com intervalo de 80% de `r num(p30$li80)` a `r num(p30$ls80)` em 2030. O intervalo é largo porque incorpora o erro do total estadual no teste de 2024–2025 (`r paste0(if (e_tot < 0) "−" else "+", num(abs(e_tot), 1), "%")` no modelo escolhido).
+A demanda de cada município foi projetada com base na **taxa histórica do município** (internações com UTI adulto por adulto de 20 anos ou mais, a partir de 2022, com ajuste para a região de saúde), aplicada a uma projeção populacional municipal **provisória** (participação de cada município no total de Mato Grosso, por sexo e faixa etária, aplicada à projeção do IBGE para o estado, Revisão 2024) e ancorada ao nível observado de cada região de saúde em 2025. Conforme a Figura 2, o total estadual passa de `r num(p26$demanda_proj)` internações em 2026 para `r num(p30$demanda_proj)` em 2030 (`r paste0(if (cresc >= 0) "+" else "−", num(abs(cresc), 1), "%")`), com intervalo de 80% de `r num(p30$li80)` a `r num(p30$ls80)` em 2030. O intervalo é largo porque incorpora o erro do total estadual no teste de 2024–2025 (`r paste0(if (e_tot < 0) "−" else "+", num(abs(e_tot), 1), "%")` no modelo escolhido).
 
-Essa projeção deve ser lida como **piso plausível**: cresce só com o número de adultos e não incorpora o envelhecimento dentro da população adulta nem a expansão recente do uso de UTI. Além disso, a demanda registrada no SIH é menor onde a UTI é longe, o que subestima a necessidade nas regiões remotas.
+Essa projeção deve ser interpretada como um **piso plausível**, uma vez que cresce somente com o número de adultos e não incorpora o envelhecimento dentro da população adulta nem a expansão recente do uso de UTI. Além disso, a demanda registrada no SIH é menor onde a UTI é distante, o que tende a subestimar a necessidade nas regiões remotas.
 
 ```{r}
 svg_projecao(P)
-fonte_curta(P, "população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024); demanda de 2026–2030 provisória")
+fonte_curta(P, "população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024); demanda de 2026–2030 provisória",
+            figura = "Figura 2 – Internações com UTI adulto projetadas para residentes de Mato Grosso (provisório), com intervalo de 80%")
 ```
 
 #### Por região de saúde de residência
+
+**Tabela 3 – Internações com UTI adulto projetadas por região de saúde de residência (provisório)**
 
 ```{r}
 tabela_projecao_regioes(P)
@@ -117,82 +127,90 @@ tabela_projecao_regioes(P)
 
 #### Por município de residência
 
+**Tabela 4 – Internações com UTI adulto projetadas por município de residência (provisório)**
+
 ```{r}
 tabela_projecao_municipios(P)
 ```
 
 ::: {.nota-fonte}
-Fonte: SIH/SUS 2020–2025; população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024). Internações SUS com UTI adulto projetadas para residentes de Mato Grosso, atendidas no estado ou fora dele. Projeção do projeto, modelo de taxa histórica ancorada; valores provisórios, porque a projeção populacional oficial por município não existe. Limites inferiores do intervalo abaixo de 5 aparecem como "< 5".
+Fonte: elaboração do Projeto PPSUS-MT, com base no SIH/SUS 2020–2025, na população da RIPSA/SVS de 2025 e na projeção do IBGE para Mato Grosso (Revisão 2024). Nota: internações SUS com UTI adulto projetadas para residentes de Mato Grosso, atendidas no estado ou fora dele; projeção do projeto pelo modelo de taxa histórica ancorada, com valores provisórios, porque não existe projeção populacional oficial por município. Os limites inferiores do intervalo abaixo de 5 aparecem como "< 5".
 :::
 
-## Os modelos acertam? {#validacao}
+## Validação dos modelos {#validacao}
 
-Os modelos foram ajustados com os dados de 2020 a 2023 e testados em 2024 e 2025, que não usaram.
+Os modelos foram ajustados com os dados de 2020 a 2023 e testados em 2024 e 2025, anos que não utilizaram.
 
-### Quanta demanda haverá (por município)
+### Demanda por município
+
+**Tabela 5 – Erro dos modelos de demanda de UTI adulto no período de teste**
 
 ```{r}
 tabela_valid_demanda(P)
 ```
 
-A demanda de UTI cresceu entre 2023 e 2025, e todos os modelos sem tendência a subestimaram no teste (erro do total de Mato Grosso entre `r paste0("−", num(abs(max(sem_anc$erro_total_pct)), 1), "%")` e `r paste0("−", num(abs(min(sem_anc$erro_total_pct)), 1), "%")`, sem ancoragem); o modelo com tendência linear extrapolou demais (`r paste0("+", num(tend$erro_total_pct, 1), "%")`). Ficou a **taxa histórica ancorada** (erro de `r pct_l(w_esc)` por município), escolhida no próprio teste pela regra de parcimônia; as métricas são, por isso, otimistas.
+A demanda de UTI cresceu entre 2023 e 2025, e todos os modelos sem tendência a subestimaram no teste (erro do total de Mato Grosso entre `r paste0("−", num(abs(max(sem_anc$erro_total_pct)), 1), "%")` e `r paste0("−", num(abs(min(sem_anc$erro_total_pct)), 1), "%")`, sem ancoragem), ao passo que o modelo com tendência linear extrapolou em excesso (`r paste0("+", num(tend$erro_total_pct, 1), "%")`). Adotou-se a **taxa histórica ancorada** (erro de `r pct_l(w_esc)` por município), escolhida no próprio teste pela regra de parcimônia; as métricas são, por essa razão, otimistas.
 
-### Para onde os pacientes vão (escolha do hospital)
+### Escolha do hospital
+
+**Tabela 6 – Desempenho dos modelos de escolha do hospital no período de teste**
 
 ```{r}
 tabela_valid_escolha(P)
 ```
 
-Sem mudança na oferta, repetir as participações do ano anterior (persistência) é difícil de bater: CPC de `r num(cpc("persistencia_2023"), 3)`, contra `r num(cpc("pivo_mnl"), 3)` do pivô do modelo gravitacional, o usado nos cenários. Na UTI, a distância pesa menos que no parto, porque a oferta é rara e o paciente é regulado; estar na mesma região de saúde pesa muito.
+Sem mudança na oferta, repetir as participações do ano anterior (persistência) é uma regra dificilmente superada: CPC de `r num(cpc("persistencia_2023"), 3)`, contra `r num(cpc("pivo_mnl"), 3)` do pivô do modelo gravitacional, utilizado nos cenários. Na UTI, a distância pesa menos que no parto, porque a oferta é rara e o paciente é regulado, ao passo que pertencer à mesma região de saúde pesa muito.
 
-### Quando a oferta muda (experimentos naturais)
+### Mudanças de oferta (experimentos naturais)
 
-Entre 2021 e 2023, com a COVID-19, municípios abriram, ampliaram, reduziram ou fecharam UTI adulto. Para cada evento, os modelos foram ajustados só com os anos anteriores e comparados ao que de fato aconteceu com os pacientes dos municípios afetados.
+Entre 2021 e 2023, com a COVID-19, municípios abriram, ampliaram, reduziram ou fecharam UTI adulto. Para cada evento, os modelos foram ajustados somente com os anos anteriores e comparados ao que de fato ocorreu com os pacientes dos municípios afetados, conforme a Figura 3 e as Tabelas 7 e 8.
 
 ```{r}
 svg_experimentos(P)
-fonte_curta(P, "eventos de mudança de oferta identificados no CNES 2021–2025")
+fonte_curta(P, "eventos de mudança de oferta identificados no CNES 2021–2025",
+            figura = "Figura 3 – CPC médio do modelo pivô e da persistência nas origens afetadas por mudanças de oferta de UTI adulto, por tipo de evento")
 ```
 
-Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o pivô do gravitacional teve o maior CPC médio (`r num(ET$cpc_medio_pivo_mnl, 3)`, contra `r num(ET$cpc_medio_persistencia, 3)` da persistência) e superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e perdeu em `r num(ET$n_pivo_mnl_perde_margem)`. **A vantagem está concentrada no ciclo da COVID-19** (`r num(sum(e2122$n_avaliaveis))` dos `r num(ET$n_avaliaveis)` eventos são de 2021 e 2022, e os do mesmo ano não são independentes); em 2023, o ano mais próximo da rotina, o pivô praticamente empata com a persistência (CPC de `r num(e23$cpc_medio_pivo_mnl, 3)` contra `r num(e23$cpc_medio_persistencia, 3)`). Nas aberturas de UTI, o modelo previu para a unidade nova mais pacientes do que ela recebeu nos dois primeiros anos; por isso, a captação prevista é dividida por 1,28 no filtro de candidatos da otimização.
+Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o pivô do gravitacional apresentou o maior CPC médio (`r num(ET$cpc_medio_pivo_mnl, 3)`, contra `r num(ET$cpc_medio_persistencia, 3)` da persistência) e superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e perdeu em `r num(ET$n_pivo_mnl_perde_margem)`. **A vantagem, contudo, concentra-se no ciclo da COVID-19**: `r num(sum(e2122$n_avaliaveis))` dos `r num(ET$n_avaliaveis)` eventos são de 2021 e 2022, e os do mesmo ano não são independentes; em 2023, o ano mais próximo da rotina, o pivô praticamente empata com a persistência (CPC de `r num(e23$cpc_medio_pivo_mnl, 3)` contra `r num(e23$cpc_medio_persistencia, 3)`). Nas aberturas de UTI, o modelo previu para a unidade nova mais pacientes do que ela recebeu nos dois primeiros anos, razão pela qual a captação prevista é dividida por 1,28 no filtro de candidatos da otimização.
+
+**Tabela 7 – CPC médio dos modelos de escolha nos experimentos naturais, por tipo de evento**
 
 ```{r}
 tabela_experimentos(P)
 ```
+
+**Tabela 8 – CPC médio do pivô e da persistência nos experimentos naturais, por ano do evento**
 
 ```{r}
 tabela_experimentos_ano(P)
 ```
 
 ::: {.nota-fonte}
-Validação da frente de localização (CNES, SIH/SUS 2020–2025). O modelo dos cenários foi escolhido nos mesmos eventos em que foi avaliado (o de maior CPC médio entre os que respondem à mudança de oferta); não há amostra reservada para confirmar o desempenho.
+Fonte: validação da frente de localização do Projeto PPSUS-MT, com base no CNES e no SIH/SUS 2020–2025. Nota: o modelo dos cenários foi escolhido nos mesmos eventos em que foi avaliado (o de maior CPC médio entre os que respondem à mudança de oferta), e não há amostra reservada para confirmar o desempenho.
 :::
 
 ## Cenários de localização (otimização) {#onde}
 
-A otimização procura os municípios onde 1 a 5 unidades novas de UTI adulto mais reduziriam o deslocamento em 2030, mantendo abertos os `r num(S$n_mun_serv)` municípios que já têm UTI adulto SUS. Os candidatos são municípios sem UTI SUS, com hospital de ao menos 30 leitos SUS e captação esperada suficiente para ocupar ao menos um terço de um módulo de 10 leitos. Quatro critérios são comparados:
+A otimização busca os municípios nos quais 1 a 5 unidades novas de UTI adulto mais reduziriam o deslocamento em 2030, mantendo-se abertos os `r num(S$n_mun_serv)` municípios que já dispõem de UTI adulto SUS. Os candidatos são municípios sem UTI SUS, com hospital de ao menos 30 leitos SUS e captação esperada suficiente para ocupar ao menos um terço de um módulo de 10 leitos. Comparam-se quatro critérios. A **p-mediana** (HAKIMI, 1964; REVELLE; SWAIN, 1970) minimiza o tempo médio de viagem de todos os pacientes até a UTI mais próxima, e a **cobertura máxima** (`r sigla("MCLP", "Maximal Covering Location Problem: problema de localização de cobertura máxima")`, do inglês *Maximal Covering Location Problem*), proposta por Church e ReVelle (1974), maximiza a parcela da demanda a até 60 (ou 120) minutos de uma UTI. A versão **com capacidade** corresponde a uma p-mediana em que cada UTI somente atende até o limite dos seus leitos (ocupação-alvo de 85%), com penalização da demanda excedente, e a versão **regional**, a uma p-mediana com no máximo uma unidade nova por região de saúde, somente nas regiões sem UTI adulto SUS.
 
-- **p-mediana**: minimiza o tempo médio de viagem de todos os pacientes até a UTI mais próxima;
-- **cobertura máxima** (`r sigla("MCLP", "Maximal Covering Location Problem: problema de localização de cobertura máxima")`): maximiza a parcela da demanda a até 60 (ou 120) minutos de uma UTI;
-- **com capacidade**: p-mediana em que cada UTI só atende até o limite dos seus leitos (ocupação-alvo de 85%), e a demanda excedente é penalizada;
-- **regional**: p-mediana com no máximo uma unidade nova por região de saúde, só nas regiões sem UTI adulto SUS.
-
-Com as UTI atuais, o tempo médio até a mais próxima é de `r min_l(S0$tempo_medio, 1)` e `r pct_l(S0$pct_ate_120)` da demanda de 2030 fica a até 120 minutos. A p-mediana leva as unidades novas para os polos das regiões remotas: `r nomes_lista(PM1$nomes_abertos)` com k = 1 (`r min_l(PM1$tempo_medio, 1)`), depois `r lista_e_l(dif_sol(PM2$nomes_abertos, PM1$nomes_abertos))` (k = 2) e `r lista_e_l(dif_sol(PM3$nomes_abertos, PM2$nomes_abertos))` (k = 3, `r min_l(PM3$tempo_medio, 1)`); com cinco unidades, o tempo médio cai para `r min_l(PM5$tempo_medio, 1)`. A lógica regional coincide com a p-mediana de k = 1 a 4. Pela capacidade, as UTI existentes atendem menos do que a demanda projetada para 2030: faltariam `r num(CP0$nao_atendida)` internações por ano, o equivalente a `r num(CP0$leitos_deficit, 0)` leitos; um módulo de 10 leitos reduz o déficit para `r num(CP1$leitos_deficit, 0)` leitos (`r nomes_lista(CP1$nomes_abertos)`), dois para `r num(CP2$leitos_deficit, 0)`, e três o eliminam (`r nomes_lista(CP3$nomes_abertos)`). As soluções do modelo com capacidade não são encaixadas: `r lista_e_l(dif_sol(CP1$nomes_abertos, CP3$nomes_abertos))` sai em k = 3.
+Com as UTI atuais, o tempo médio até a mais próxima é de `r min_l(S0$tempo_medio, 1)`, e `r pct_l(S0$pct_ate_120)` da demanda de 2030 fica a até 120 minutos. A p-mediana direciona as unidades novas para os polos das regiões remotas: `r nomes_lista(PM1$nomes_abertos)` com k = 1 (`r min_l(PM1$tempo_medio, 1)`), seguida de `r lista_e_l(dif_sol(PM2$nomes_abertos, PM1$nomes_abertos))` (k = 2) e de `r lista_e_l(dif_sol(PM3$nomes_abertos, PM2$nomes_abertos))` (k = 3, `r min_l(PM3$tempo_medio, 1)`); com cinco unidades, o tempo médio cai para `r min_l(PM5$tempo_medio, 1)`. A lógica regional coincide com a p-mediana de k = 1 a 4. Quanto à capacidade, as UTI existentes atendem menos do que a demanda projetada para 2030: faltariam `r num(CP0$nao_atendida)` internações por ano, o equivalente a `r num(CP0$leitos_deficit, 0)` leitos; um módulo de 10 leitos reduz o déficit para `r num(CP1$leitos_deficit, 0)` leitos (`r nomes_lista(CP1$nomes_abertos)`), dois módulos, para `r num(CP2$leitos_deficit, 0)`, e três o eliminam (`r nomes_lista(CP3$nomes_abertos)`). Observa-se que as soluções do modelo com capacidade não são encaixadas: `r lista_e_l(dif_sol(CP1$nomes_abertos, CP3$nomes_abertos))` sai em k = 3.
 
 ### Dois cenários para k = 3, sem recomendação
 
-A p-mediana e a versão com capacidade chegam a conjuntos diferentes com três unidades novas. Os dois são mostrados como **cenários**: nenhum é recomendação do projeto, e a escolha depende de critérios que o modelo não tem (profissionais, financiamento, gestão hospitalar, regulação, habilitação de leitos).
+A p-mediana e a versão com capacidade chegam a conjuntos diferentes com três unidades novas. Ambos são apresentados como **cenários**: nenhum constitui recomendação do projeto, e a escolha entre eles depende de critérios que o modelo não contempla (profissionais, financiamento, gestão hospitalar, regulação e habilitação de leitos).
 
 ```{r}
 cenarios_lado_a_lado("uti", 3L)
 fonte_curta(P, "cenários de 2030 provisórios")
 ```
 
-Parte das "unidades novas" pode corresponder à habilitação ou contratação SUS de leitos de UTI adulto que já existem fora do SUS, ou à reabertura de UTI fechadas depois da pandemia: mais da metade dos leitos de UTI adulto existentes em Mato Grosso não é SUS, e o uso desses leitos pago fora do SUS não aparece no SIH (CNES e SIH, 2021–2025, relatório técnico da frente).
+Parte das "unidades novas" pode corresponder à habilitação ou à contratação SUS de leitos de UTI adulto que já existem fora do SUS, ou à reabertura de UTI fechadas depois da pandemia. Mais da metade dos leitos de UTI adulto existentes em Mato Grosso não é SUS, e o uso desses leitos pago fora do SUS não aparece no SIH (CNES e SIH, 2021–2025, relatório técnico da frente).
 
 ::: {.panel-tabset}
 
 #### p-mediana
+
+**Tabela 9 – Soluções da p-mediana por número de unidades novas, demanda de 2030 (provisória)**
 
 ```{r}
 tabela_solucoes(P, "p_mediana")
@@ -200,11 +218,15 @@ tabela_solucoes(P, "p_mediana")
 
 #### Cobertura máxima, 60 min
 
+**Tabela 10 – Soluções da cobertura máxima a 60 minutos por número de unidades novas, demanda de 2030 (provisória)**
+
 ```{r}
 tabela_solucoes(P, "mclp", 60)
 ```
 
 #### Cobertura máxima, 120 min
+
+**Tabela 11 – Soluções da cobertura máxima a 120 minutos por número de unidades novas, demanda de 2030 (provisória)**
 
 ```{r}
 tabela_solucoes(P, "mclp", 120)
@@ -212,55 +234,66 @@ tabela_solucoes(P, "mclp", 120)
 
 #### Com capacidade
 
+**Tabela 12 – Soluções da p-mediana com capacidade por número de unidades novas, demanda de 2030 (provisória)**
+
 ```{r}
 tabela_solucoes(P, "uti_capacitado")
 ```
 
-A linha k = 0 mostra a situação de 2025 com a capacidade: a demanda acima da capacidade existente e o tempo médio da demanda que pode ser atendida. Com k = 3, o tempo médio da demanda atendida sobe, porque passam a ser atendidos residentes distantes que antes ficavam acima da capacidade.
+A linha k = 0 mostra a situação de 2025 com a capacidade, isto é, a demanda acima da capacidade existente e o tempo médio da demanda que pode ser atendida. Com k = 3, o tempo médio da demanda atendida aumenta, porque passam a ser atendidos residentes distantes que antes ficavam acima da capacidade.
 
 #### Regional
+
+**Tabela 13 – Soluções da lógica regional por número de unidades novas, demanda de 2030 (provisória)**
 
 ```{r}
 tabela_solucoes(P, "uti_regional")
 ```
 
-Com k = 5, a lógica regional troca `r lista_e_l(dif_sol(PM5$nomes_abertos, RG5$nomes_abertos))` por `r lista_e_l(dif_sol(RG5$nomes_abertos, PM5$nomes_abertos))`.
+Com k = 5, a lógica regional substitui `r lista_e_l(dif_sol(PM5$nomes_abertos, RG5$nomes_abertos))` por `r lista_e_l(dif_sol(RG5$nomes_abertos, PM5$nomes_abertos))`.
 
 :::
 
 ```{r}
 svg_curvas_k(P, MODS)
-fonte_curta(P, "demanda de 2030 provisória")
+fonte_curta(P, "demanda de 2030 provisória",
+            figura = "Figura 4 – Tempo médio até a UTI adulto mais próxima, por número de unidades novas e critério de otimização")
 ```
 
 #### Municípios que aparecem nas soluções
+
+**Tabela 14 – Municípios que aparecem nas soluções, por critério e número de unidades novas**
 
 ```{r}
 tabela_escolhidos(P, lapply(MODS, function(m) m[c("modelo", "limiar", "nome")]))
 ```
 
 ::: {.nota-fonte}
-Demanda de 2030 projetada (provisória) por município, descontada a parcela observada atendida fora de Mato Grosso; demanda e candidatos nas sedes municipais; custo = tempo rodoviário entre sedes. Soluções exatas por programação inteira (HiGHS), conferidas por enumeração completa para k = 1 e 2.
+Nota: demanda de 2030 projetada (provisória) por município, descontada a parcela observada atendida fora de Mato Grosso; demanda e candidatos nas sedes municipais; custo igual ao tempo rodoviário entre sedes. Soluções exatas por programação inteira (HiGHS), conferidas por enumeração completa para k = 1 e 2.
 :::
 
 ## Leitos por região de saúde {#leitos}
 
-Uma medida simples de necessidade compara os leitos SUS de UTI adulto de cada região com os leitos que bastariam para as internações dos seus próprios residentes, com a permanência média de 6,95 dias e ocupação de 85%. É um **critério empírico do estudo, não parâmetro normativo**: os parâmetros normativos de planejamento de leitos não foram aplicados nesta versão.
+Uma medida simples de necessidade compara os leitos SUS de UTI adulto de cada região com os leitos que bastariam para as internações dos seus próprios residentes, com a permanência média de 6,95 dias e ocupação de 85%. Trata-se de um **critério empírico do estudo, e não de parâmetro normativo**: os parâmetros normativos de planejamento de leitos não foram aplicados nesta versão.
+
+**Tabela 15 – Leitos SUS de UTI adulto existentes e necessários, por região de saúde (2025 e 2030)**
 
 ```{r}
 tabela_necessidade_uti()
 fonte_curta(P, "permanência média em UTI 2024–2025; demanda de 2030 provisória e demanda observada de 2025")
 ```
 
-No estado, os `r num(leitos_tot)` leitos SUS de 2025 ficam abaixo dos `r num(nec_tot30, 1)` necessários pela demanda projetada de 2030 (provisória) e acima dos `r num(nec_tot25, 1)` necessários pela demanda observada em 2025: com a demanda de hoje, o déficit é regional. A Baixada Cuiabana tem sobra de `r num(bx$saldo_leitos_2025_obs, 0)` leitos em relação aos próprios residentes porque atende o estado inteiro; o déficit se concentra no Sul Matogrossense (`r num(-sul$saldo_leitos_2025_obs, 0)` leitos com a demanda de 2025, `r num(-sul$saldo_leitos, 0)` em 2030) e nas `r num(n_reg_sem)` regiões sem UTI adulto SUS, onde a demanda registrada tende a subestimar a necessidade.
+Conforme a Tabela 15, no estado, os `r num(leitos_tot)` leitos SUS de 2025 ficam abaixo dos `r num(nec_tot30, 1)` necessários pela demanda projetada de 2030 (provisória) e acima dos `r num(nec_tot25, 1)` necessários pela demanda observada em 2025, o que indica que, com a demanda atual, o déficit é regional. A Baixada Cuiabana apresenta sobra de `r num(bx$saldo_leitos_2025_obs, 0)` leitos em relação aos próprios residentes porque atende o estado inteiro, ao passo que o déficit se concentra no Sul Matogrossense (`r num(-sul$saldo_leitos_2025_obs, 0)` leitos com a demanda de 2025 e `r num(-sul$saldo_leitos, 0)` em 2030) e nas `r num(n_reg_sem)` regiões sem UTI adulto SUS, onde a demanda registrada tende a subestimar a necessidade.
 
 ## Cenários com a escolha dos pacientes {#cenarios}
 
-A otimização supõe que cada paciente vá à UTI mais próxima. Nos cenários, um modelo de escolha (pivô do gravitacional, estimado com os fluxos de 2020–2025) redistribui as internações de 2030 entre as UTI existentes e as novas, cada nova com 10 leitos SUS. Sem unidade nova, o tempo médio esperado em 2030 é de `r tempo_l(REF$tempo_medio_esperado)`.
+A otimização supõe que cada paciente se dirija à UTI mais próxima. Nos cenários, um modelo de escolha (pivô do gravitacional, estimado com os fluxos de 2020–2025) redistribui as internações de 2030 entre as UTI existentes e as novas, cada nova com 10 leitos SUS. Sem unidade nova, o tempo médio esperado em 2030 é de `r tempo_l(REF$tempo_medio_esperado)`.
 
-Como os residentes das regiões remotas hoje vão a polos distantes, sobretudo Cuiabá, o ganho com a escolha supera o da premissa da UTI mais próxima. Com as três unidades da p-mediana (`r nomes_lista(C3$nomes_abertos)`), o tempo médio esperado cai para `r tempo_l(C3$tempo_medio_esperado)` (`r num(C3$ganho_tempo_esperado_min, 1)` minutos a menos, contra `r num(C3$ganho_tempo_mais_proximo_min, 1)` pela premissa da UTI mais próxima). Os maiores ganhos por paciente ficam em `r lista_e_l(maiores_ganhos(P, "p_mediana_k3"))`; com k = 1, em `r lista_e_l(maiores_ganhos(P, "p_mediana_k1", 2))`. As unidades novas receberiam `r cont_l(C3$fluxo_para_novas)` internações por ano com k = 3, `r cont_l(C3$fluxo_para_novas_proprios_residentes)` delas de residentes dos próprios municípios.
+Como os residentes das regiões remotas hoje se dirigem a polos distantes, sobretudo Cuiabá, o ganho com a escolha supera o da premissa da UTI mais próxima. Com as três unidades da p-mediana (`r nomes_lista(C3$nomes_abertos)`), o tempo médio esperado cai para `r tempo_l(C3$tempo_medio_esperado)` (`r num(C3$ganho_tempo_esperado_min, 1)` minutos a menos, contra `r num(C3$ganho_tempo_mais_proximo_min, 1)` pela premissa da UTI mais próxima). Os maiores ganhos por paciente concentram-se em `r lista_e_l(maiores_ganhos(P, "p_mediana_k3"))`; com k = 1, em `r lista_e_l(maiores_ganhos(P, "p_mediana_k1", 2))`. As unidades novas receberiam `r cont_l(C3$fluxo_para_novas)` internações por ano com k = 3, das quais `r cont_l(C3$fluxo_para_novas_proprios_residentes)` de residentes dos próprios municípios.
 
-**Capacidade.** O modelo de escolha não respeita a capacidade dos leitos: na referência de 2030, `r num(REF$destinos_ocupacao_acima_100pct)` municípios de destino ficariam com ocupação implícita acima de 100%; com a p-mediana de k = 3, `r num(C3$destinos_ocupacao_acima_100pct)`, e com a versão com capacidade, `r num(CC3$destinos_ocupacao_acima_100pct)`. Na variante que limita a ocupação de cada destino a 100%, o tempo de referência sobe para `r min_l(REF$tempo_medio_esperado_capacidade, 1)` e os ganhos ficam praticamente iguais (`r num(C3$ganho_tempo_esperado_capacidade_min, 1)` minutos com a p-mediana de k = 3): a conclusão não depende de os hospitais absorverem a demanda excedente, mas os tempos absolutos sem restrição supõem essa absorção. A regional coincide com a p-mediana em k = 1 e 3 e não é repetida na tabela.
+No que se refere à **capacidade**, o modelo de escolha não respeita o limite dos leitos: na referência de 2030, `r num(REF$destinos_ocupacao_acima_100pct)` municípios de destino ficariam com ocupação implícita acima de 100%; com a p-mediana de k = 3, `r num(C3$destinos_ocupacao_acima_100pct)`; e, com a versão com capacidade, `r num(CC3$destinos_ocupacao_acima_100pct)`. Na variante que limita a ocupação de cada destino a 100%, o tempo de referência sobe para `r min_l(REF$tempo_medio_esperado_capacidade, 1)`, e os ganhos ficam praticamente iguais (`r num(C3$ganho_tempo_esperado_capacidade_min, 1)` minutos com a p-mediana de k = 3). Desse modo, a conclusão não depende de os hospitais absorverem a demanda excedente, mas os tempos absolutos sem restrição supõem essa absorção. A lógica regional coincide com a p-mediana em k = 1 e 3 e não é repetida na Tabela 16.
+
+**Tabela 16 – Cenários de 2030 com a escolha dos pacientes: tempo médio esperado, ganhos e ocupação (provisório)**
 
 ```{r}
 tabela_cenarios(P)
@@ -269,19 +302,23 @@ fonte_curta(P, "cenários de 2030 provisórios")
 
 #### Ganho por município de residência
 
-Minutos poupados por paciente em 2030 em cada cenário (negativo = tempo maior), ordenados pela versão com capacidade de k = 3. O mapa da seção [Acesso atual](#mapa) mostra os dois cenários de k = 3. Em alguns municípios o tempo esperado aumenta um pouco, porque o modelo atribui à unidade nova parte dos pacientes para os quais ela fica mais longe que o destino habitual.
+A Tabela 17 apresenta os minutos poupados por paciente em 2030 em cada cenário (valores negativos indicam tempo maior), ordenados pela versão com capacidade de k = 3. O mapa da seção [Acesso atual](#mapa) representa os dois cenários de k = 3. Em alguns municípios, o tempo esperado aumenta ligeiramente, porque o modelo atribui à unidade nova parte dos pacientes para os quais ela fica mais distante que o destino habitual.
+
+**Tabela 17 – Ganho de tempo por paciente em 2030, por município de residência e cenário (provisório)**
 
 ```{r}
 tabela_ganho_municipios(P, CENS)
 ```
 
 ::: {.nota-fonte}
-Cenários de 2030 (provisórios): demanda projetada atendida em Mato Grosso; participações observadas em 2025 como ponto de partida; a parcela atendida fora de Mato Grosso fica constante. Ocupação implícita = internações previstas × permanência média do destino ÷ (leitos SUS × 365).
+Nota: cenários de 2030 (provisórios), com a demanda projetada atendida em Mato Grosso e as participações observadas em 2025 como ponto de partida; a parcela atendida fora de Mato Grosso permanece constante. A ocupação implícita corresponde a internações previstas × permanência média do destino ÷ (leitos SUS × 365).
 :::
 
 ## Sensibilidade {#sensibilidade}
 
-Cada solução de k = 1 a 3 foi recalculada com oito variantes da demanda, inclusive a **demanda observada em 2025**, que não depende da projeção. `r if (pm_estavel) "As soluções da p-mediana e da lógica regional são estáveis: as mesmas nas oito variantes, sem quase-empate." else "As soluções da p-mediana e da lógica regional mudam em alguma variante (ver a tabela)."` Há quase-empate em `r num(SR$empates)` das `r num(SR$n)` soluções: `r qe_txt`.
+Cada solução de k = 1 a 3 foi recalculada com oito variantes da demanda, inclusive a **demanda observada em 2025**, que não depende da projeção. `r if (pm_estavel) "As soluções da p-mediana e da lógica regional são estáveis: as mesmas nas oito variantes, sem quase-empate." else "As soluções da p-mediana e da lógica regional mudam em alguma variante (ver a tabela)."` Conforme a Tabela 18, há quase-empate em `r num(SR$empates)` das `r num(SR$n)` soluções: `r qe_txt`.
+
+**Tabela 18 – Sensibilidade das soluções às variantes de demanda**
 
 ```{r}
 tabela_sensibilidade(P)
@@ -290,33 +327,35 @@ fonte_curta(P, "demanda de 2030 provisória; demanda observada de 2025")
 
 ## Parâmetros dos cenários {#parametros}
 
-Os cenários dependem de escolhas da pesquisa, documentadas no relatório técnico e **sem valor normativo** (não confirmadas em norma da SES-MT ou do Ministério da Saúde). Mudar qualquer uma delas muda as soluções.
+Os cenários dependem de escolhas da pesquisa, documentadas no relatório técnico e **sem valor normativo** (não confirmadas em norma da SES-MT ou do Ministério da Saúde), de modo que a alteração de qualquer uma delas modifica as soluções. Adota-se **ocupação-alvo de 85%** dos leitos SUS de UTI adulto, tanto na capacidade quanto na necessidade de leitos, e **módulo de 10 leitos** SUS de UTI adulto por unidade nova. O **filtro de captação dos candidatos** exige hospital com ao menos 30 leitos SUS e captação esperada de ao menos **um terço** da capacidade anual do módulo, prevista pelo modelo de escolha para 2030 e **dividida por 1,28**, uma vez que, nas aberturas de UTI dos experimentos naturais, o modelo previu 28% a mais do que as unidades receberam.
 
-- **Ocupação-alvo de 85%** dos leitos SUS de UTI adulto, na capacidade e na necessidade de leitos.
-- **Módulo de 10 leitos** SUS de UTI adulto por unidade nova.
-- **Filtro de captação dos candidatos**: hospital com ao menos 30 leitos SUS e captação esperada de ao menos **um terço** da capacidade anual do módulo, prevista pelo modelo de escolha para 2030 e **dividida por 1,28** (nas aberturas de UTI dos experimentos naturais, o modelo previu 28% a mais do que as unidades receberam).
-- **Permanência média em UTI** de cada município de destino (2024–2025); 6,95 dias para as unidades novas e na necessidade regional.
-- **Cobertura**: limiares de 60 e 120 minutos de tempo rodoviário entre sedes.
-- **Regional**: no máximo uma unidade nova por região de saúde, só nas regiões sem UTI adulto SUS.
-- **Demanda**: internações projetadas para 2030 (provisórias), descontada a parcela observada atendida fora de Mato Grosso.
+A **permanência média em UTI** é a de cada município de destino (2024–2025), adotando-se 6,95 dias para as unidades novas e na necessidade regional. A **cobertura** utiliza limiares de 60 e 120 minutos de tempo rodoviário entre sedes; a lógica **regional** admite no máximo uma unidade nova por região de saúde, somente nas regiões sem UTI adulto SUS; e a **demanda** corresponde às internações projetadas para 2030 (provisórias), descontada a parcela observada atendida fora de Mato Grosso.
 
 ## Ressalvas {#ressalvas}
 
 ::: {.callout-warning title="Leia antes de interpretar"}
-- **Preliminar e provisório.** A demanda de 2026–2030 depende de uma projeção populacional municipal provisória (método de razão sobre a projeção do IBGE para Mato Grosso), que não desloca as coortes: cada município herda o envelhecimento médio do estado, o que subestima o envelhecimento dos municípios hoje mais velhos. Os resultados serão refeitos quando houver projeção municipal por idade e sexo.
-- **Não é recomendação.** Os cenários A e B e as demais soluções mostram consequências de hipóteses; não indicam onde o estado deve abrir, habilitar ou fechar leitos.
-- **Só a demanda SUS registrada.** O SIH não registra a demanda reprimida (pacientes que não chegam à UTI) nem a saúde suplementar, inclusive o uso dos leitos de UTI não SUS que já existem em municípios candidatos. As regiões sem UTI ficam subestimadas na demanda, na necessidade de leitos e na otimização. A UTI coronariana ficou fora.
-- **Validação concentrada na pandemia.** Os experimentos naturais da UTI vêm quase todos de 2021 e 2022; o modelo de escolha foi escolhido nos mesmos eventos em que foi avaliado, e o de demanda no próprio período de teste. O desconto de 1,28 vem de poucas aberturas.
-- **Demanda concentrada na sede.** SIH e CNES informam o município, não o endereço: o deslocamento dentro do município conta zero e municípios extensos têm o acesso superestimado.
-- **Tempo rodoviário em condições ideais.** Os tempos do OSRM são de automóvel, sem balsas, estradas sazonais, transporte sanitário, regulação ou espera; servem para comparar alternativas, não como tempo-resposta. Algumas rotas ainda estão em validação com a SES-MT.
-- **Município de destino, não hospital.** O modelo não separa hospitais do mesmo município, e a qualidade da UTI não entra na otimização.
-- **Células pequenas suprimidas.** Percentuais cuja contagem fica entre 1 e 4 não são mostrados, nem os que permitiriam deduzi-los por diferença; tempos e percentuais observados só aparecem com ao menos 5 internações no município.
-- **Boa Esperança do Norte**, instalado em 2025, não tem internações registradas sob o novo código nem polígono na malha do mapa.
+**Preliminar e provisório.** A demanda de 2026–2030 depende de uma projeção populacional municipal provisória (método de razão sobre a projeção do IBGE para Mato Grosso), que não desloca as coortes: cada município herda o envelhecimento médio do estado, o que subestima o envelhecimento dos municípios hoje mais velhos. Os resultados serão refeitos quando houver projeção municipal por idade e sexo.
+
+**Não é recomendação.** Os cenários A e B e as demais soluções mostram as consequências de hipóteses e não indicam onde o estado deve abrir, habilitar ou fechar leitos.
+
+**Só a demanda SUS registrada.** O SIH não registra a demanda reprimida (pacientes que não chegam à UTI) nem a saúde suplementar, inclusive o uso dos leitos de UTI não SUS que já existem em municípios candidatos. Por essa razão, as regiões sem UTI ficam subestimadas na demanda, na necessidade de leitos e na otimização. A UTI coronariana ficou fora da análise.
+
+**Validação concentrada na pandemia.** Os experimentos naturais da UTI provêm quase todos de 2021 e 2022; o modelo de escolha foi escolhido nos mesmos eventos em que foi avaliado, e o de demanda, no próprio período de teste. O desconto de 1,28, ademais, provém de poucas aberturas.
+
+**Demanda concentrada na sede.** O SIH e o CNES informam o município, e não o endereço: o deslocamento dentro do município conta zero, e os municípios extensos têm o acesso superestimado.
+
+**Tempo rodoviário em condições ideais.** Os tempos do OSRM são de automóvel, sem balsas, estradas sazonais, transporte sanitário, regulação ou espera, e servem para comparar alternativas, e não como tempo-resposta. Algumas rotas ainda se encontram em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT).
+
+**Município de destino, não hospital.** O modelo não distingue hospitais do mesmo município, e a qualidade da UTI não entra na otimização.
+
+**Células pequenas suprimidas.** Os percentuais cuja contagem fica entre 1 e 4 não são mostrados, tampouco os que permitiriam deduzi-los por diferença; os tempos e os percentuais observados somente aparecem com ao menos 5 internações no município.
+
+**Boa Esperança do Norte**, instalado em 2025, não tem internações registradas sob o novo código nem polígono na malha do mapa.
 :::
 
 ## Arquivos {#arquivos}
 
-Os arquivos agregados desta página, com dicionário de colunas, estão em [Localização: arquivos](index.html#arquivos): acesso por município e por região, demanda projetada, soluções da otimização, sensibilidade, necessidade de leitos por região, cenários e validação dos modelos.
+Os arquivos agregados desta página, acompanhados de dicionário de colunas, encontram-se em [Localização: arquivos](index.html#arquivos) e abrangem o acesso por município e por região, a demanda projetada, as soluções da otimização, a sensibilidade, a necessidade de leitos por região, os cenários e a validação dos modelos. As referências das obras citadas nesta página encontram-se em [Localização: referências](index.html#referencias).
 
 ```{r}
 fonte_loc(P)

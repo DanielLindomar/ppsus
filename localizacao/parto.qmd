@@ -45,12 +45,12 @@ css_loc()
 faixa_versao()
 faixa_loc()
 nav_loc("parto.html")
-secoes_loc(c(acesso = "Acesso atual", demanda = "Demanda projetada", validacao = "Os modelos acertam?",
+secoes_loc(c(acesso = "Acesso atual", demanda = "Demanda projetada", validacao = "Validação dos modelos",
              onde = "Otimização", cenarios = "Cenários com a escolha", sensibilidade = "Quase-empates",
              parametros = "Parâmetros", ressalvas = "Ressalvas", arquivos = "Arquivos"))
 ```
 
-Este piloto organiza em **cenários, para apoiar a discussão com a gestão do SUS**, a pergunta sobre onde a abertura ou a qualificação de maternidades reduziria o deslocamento das gestantes, considerando a demanda esperada para os próximos anos. Mostra, nesta ordem, o acesso atual aos leitos obstétricos, a demanda de partos projetada para 2026–2030, quanto os modelos acertam quando testados em anos que não usaram, os cenários de otimização com 1 a 5 unidades novas e o efeito desses cenários sobre o tempo de viagem de cada município. A demanda é a de **partos hospitalares de mães residentes em Mato Grosso** (SINASC, partos do SUS e da saúde suplementar), e o tempo é o **rodoviário entre as sedes municipais**. Os resultados são preliminares; as ressalvas estão ao final da página.
+Este piloto organiza em **cenários, destinados a apoiar a discussão com a gestão do SUS**, a questão sobre onde a abertura ou a qualificação de maternidades reduziria o deslocamento das gestantes, considerando-se a demanda esperada para os próximos anos. Apresentam-se, nesta ordem, o acesso atual aos leitos obstétricos, a demanda de partos projetada para 2026–2030, o desempenho dos modelos quando testados em anos que não utilizaram, os cenários de otimização com 1 a 5 unidades novas e o efeito desses cenários sobre o tempo de viagem de cada município. A demanda considerada é a de **partos hospitalares de mães residentes em Mato Grosso**, registrados no Sistema de Informações sobre Nascidos Vivos (SINASC), tanto do SUS quanto da saúde suplementar, e o tempo é o **rodoviário entre as sedes municipais**. Os resultados são preliminares, e as ressalvas encontram-se ao final da página.
 
 ## Acesso atual {#acesso}
 
@@ -58,46 +58,56 @@ Este piloto organiza em **cenários, para apoiar a discussão com a gestão do S
 kpis_acesso(P)
 ```
 
-A oferta de leitos obstétricos é espalhada pelo estado: em `r ANO_OFERTA`, `r num(S$n_mun_serv)` dos 142 municípios tinham ao menos meio leito obstétrico em média no ano (CNES), e `r pct_l(S$pop60)` das `r INFO$pop` moravam a até 60 minutos de um município com leito. O deslocamento efetivo é bem maior que essa distância mínima: em 2024–2025, as gestantes atendidas em Mato Grosso percorreram em média `r min_l(S$tempo)` entre a sede do município de residência e a do município do parto (ponderado pelos nascidos vivos), e `r pct_l(S$fora_reg)` dos partos ocorreram fora da região de saúde. Os maiores tempos médios estão em `r lista_e_l(sprintf("%s (%s)", sem_mt(rg_pior$nome_regsaud), min_l(rg_pior$tempo_medio_obs_min)))`; entre os municípios, em `r lista_e_l(sprintf("%s (%s)", mun_pior$nome_municipio, min_l(mun_pior$tempo_medio_obs_min)))`.
+A oferta de leitos obstétricos distribui-se por todo o estado: em `r ANO_OFERTA`, `r num(S$n_mun_serv)` dos 142 municípios dispunham de ao menos meio leito obstétrico em média no ano, segundo o Cadastro Nacional de Estabelecimentos de Saúde (CNES), e `r pct_l(S$pop60)` das `r INFO$pop` moravam a até 60 minutos de um município com leito. O deslocamento efetivo, contudo, é bem maior que essa distância mínima: em 2024–2025, as gestantes atendidas em Mato Grosso percorreram em média `r min_l(S$tempo)` entre a sede do município de residência e a do município do parto (média ponderada pelos nascidos vivos), e `r pct_l(S$fora_reg)` dos partos ocorreram fora da região de saúde. Os maiores tempos médios observam-se em `r lista_e_l(sprintf("%s (%s)", sem_mt(rg_pior$nome_regsaud), min_l(rg_pior$tempo_medio_obs_min)))`; entre os municípios, em `r lista_e_l(sprintf("%s (%s)", mun_pior$nome_municipio, min_l(mun_pior$tempo_medio_obs_min)))`.
 
-O **índice de acesso E2SFCA** compara os leitos disponíveis a até 60 ou 120 minutos com a população que disputa esses leitos (média de Mato Grosso = 1; a média estadual equivale a `r num(e2_media, 2)` `r INFO$e2_unid`). Em `r ANO_OFERTA`, `r num(S$sem60)` municípios não tinham nenhum leito obstétrico a até 60 minutos e `r num(S$sem120)` não tinham a até 120 minutos.
+O **índice de acesso E2SFCA** (LUO; QI, 2009) compara os leitos disponíveis a até 60 ou 120 minutos com a população que disputa esses leitos (média de Mato Grosso = 1; a média estadual equivale a `r num(e2_media, 2)` `r INFO$e2_unid`). Em `r ANO_OFERTA`, `r num(S$sem60)` municípios não dispunham de nenhum leito obstétrico a até 60 minutos, e `r num(S$sem120)` não dispunham de leito a até 120 minutos.
 
 ### Mapa {#mapa}
 
-Use os botões para trocar o que o mapa mostra: o tempo até o município mais próximo com leito obstétrico, o índice de acesso, o tempo médio efetivamente percorrido em 2024–2025 ou o ganho de tempo nos cenários de 2030 (seção [Cenários com a escolha](#cenarios)).
+A Figura 1 permite alternar, por meio dos botões, entre o tempo até o município mais próximo com leito obstétrico, o índice de acesso, o tempo médio efetivamente percorrido em 2024–2025 e o ganho de tempo nos cenários de 2030 (seção [Cenários com a escolha](#cenarios)).
 
 ```{r}
 mapa_loc(P, cenarios = c("p_mediana_k3"))
+fonte_curta(P, "malha municipal do IBGE; cenário de 2030 provisório",
+            figura = "Figura 1 – Acesso aos leitos obstétricos por município de residência: tempo até o serviço, índice de acesso, tempo médio percorrido e ganho no cenário de 2030")
 ```
 
 ### Por região de saúde de residência
+
+**Tabela 1 – Acesso atual aos leitos obstétricos, por região de saúde de residência**
 
 ```{r}
 tabela_acesso_regioes(P)
 ```
 
 ::: {.nota-fonte}
-População-alvo: `r INFO$pop` (RIPSA/SVS, `r ANO_OFERTA`). Leitos: `r INFO$fonte_oferta`. Índice E2SFCA com decaimento gaussiano até 60 ou 120 minutos de tempo rodoviário (média ponderada pela população-alvo; Mato Grosso = 1). Demanda e deslocamento: `r INFO$fonte_dem`, 2024–2025; tempo médio ponderado só pelos atendidos em Mato Grosso.
+Fonte: elaboração do Projeto PPSUS-MT. População-alvo: `r INFO$pop` (RIPSA/SVS, `r ANO_OFERTA`). Leitos: `r INFO$fonte_oferta`. Demanda e deslocamento: `r INFO$fonte_dem`, 2024–2025. Nota: índice E2SFCA com decaimento gaussiano até 60 ou 120 minutos de tempo rodoviário (média ponderada pela população-alvo; Mato Grosso = 1); tempo médio ponderado somente pelos atendidos em Mato Grosso.
 :::
 
 ### Por município de residência
 
-A tabela está ordenada pelo tempo até o serviço mais próximo; use a busca para encontrar um município. Em `r num(n_supr)` células de percentual o valor não é mostrado ("suprimido"): a contagem correspondente fica entre 1 e 4, ou a célula foi escondida para que outra não pudesse ser deduzida por diferença.
+A Tabela 2 está ordenada pelo tempo até o serviço mais próximo, e a busca permite localizar um município. Em `r num(n_supr)` células de percentual, o valor não é mostrado ("suprimido"), porque a contagem correspondente fica entre 1 e 4 ou porque a célula foi escondida para que outra não pudesse ser deduzida por diferença.
+
+**Tabela 2 – Acesso atual aos leitos obstétricos, por município de residência**
 
 ```{r}
 tabela_acesso_municipios(P)
+fonte_curta(P)
 ```
 
 ## Demanda projetada 2026–2030 `r selo_prov("PROVISÓRIA")` {#demanda}
 
-A demanda de partos de cada município foi projetada com a **taxa histórica do município** (partos por mulher de 15 a 49 anos, com ajuste para a região de saúde), aplicada a uma projeção populacional municipal **provisória**: a participação de cada município no total de Mato Grosso, por sexo e faixa etária, aplicada à projeção do IBGE para o estado (Revisão 2024), em dois cenários (participação constante e em tendência). A projeção é ancorada ao nível observado de cada região de saúde em 2025. O total estadual passa de `r num(p26$demanda_proj)` partos em 2026 para `r num(p30$demanda_proj)` em 2030 (`r paste0(if (cresc >= 0) "+" else "−", num(abs(cresc), 1), "%")`), com intervalo de 80% de `r num(p30$li80)` a `r num(p30$ls80)` em 2030. O modelo mantém as taxas municipais e acompanha o número de mulheres em idade fértil; a projeção do IBGE embute queda da fecundidade, e o total calibrado a ela fica em `r num(p30$demanda_proj_calib_ibge)` partos em 2030, dentro do intervalo.
+A demanda de partos de cada município foi projetada com base na **taxa histórica do município** (partos por mulher de 15 a 49 anos, com ajuste para a região de saúde), aplicada a uma projeção populacional municipal **provisória**, obtida pela aplicação da participação de cada município no total de Mato Grosso, por sexo e faixa etária, à projeção do IBGE para o estado (Revisão 2024), em dois cenários (participação constante e em tendência). A projeção é ancorada ao nível observado de cada região de saúde em 2025. Conforme a Figura 2, o total estadual passa de `r num(p26$demanda_proj)` partos em 2026 para `r num(p30$demanda_proj)` em 2030 (`r paste0(if (cresc >= 0) "+" else "−", num(abs(cresc), 1), "%")`), com intervalo de 80% de `r num(p30$li80)` a `r num(p30$ls80)` em 2030. Cumpre observar que o modelo mantém as taxas municipais e acompanha o número de mulheres em idade fértil, ao passo que a projeção do IBGE incorpora queda da fecundidade; o total calibrado a ela situa-se em `r num(p30$demanda_proj_calib_ibge)` partos em 2030, dentro do intervalo.
 
 ```{r}
 svg_projecao(P)
-fonte_curta(P, "população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024); demanda de 2026–2030 provisória")
+fonte_curta(P, "população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024); demanda de 2026–2030 provisória",
+            figura = "Figura 2 – Partos projetados para residentes de Mato Grosso (provisório), com intervalo de 80%")
 ```
 
 #### Por região de saúde de residência
+
+**Tabela 3 – Partos projetados por região de saúde de residência (provisório)**
 
 ```{r}
 tabela_projecao_regioes(P)
@@ -105,71 +115,81 @@ tabela_projecao_regioes(P)
 
 #### Por município de residência
 
+**Tabela 4 – Partos projetados por município de residência (provisório)**
+
 ```{r}
 tabela_projecao_municipios(P)
 ```
 
 ::: {.nota-fonte}
-Fonte: SINASC 2020–2025; população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024). Partos hospitalares projetados de mães residentes (cada parto conta uma vez, inclusive o de gêmeos), atendidos em Mato Grosso ou em outros estados. Projeção do projeto, modelo de taxa histórica ancorada; valores provisórios, porque a projeção populacional oficial por município não existe. Limites inferiores do intervalo abaixo de 5 aparecem como "< 5".
+Fonte: elaboração do Projeto PPSUS-MT, com base no SINASC 2020–2025, na população da RIPSA/SVS de 2025 e na projeção do IBGE para Mato Grosso (Revisão 2024). Nota: partos hospitalares projetados de mães residentes (cada parto conta uma vez, inclusive o de gêmeos), atendidos em Mato Grosso ou em outros estados; projeção do projeto pelo modelo de taxa histórica ancorada, com valores provisórios, porque não existe projeção populacional oficial por município. Os limites inferiores do intervalo abaixo de 5 aparecem como "< 5".
 :::
 
-## Os modelos acertam? {#validacao}
+## Validação dos modelos {#validacao}
 
-Antes de usar um modelo para comparar cenários de localização, é preciso saber quanto ele erra. Os modelos foram ajustados com os dados de 2020 a 2023 e testados em 2024 e 2025, que não usaram.
+Antes de utilizar um modelo para comparar cenários de localização, é necessário conhecer a magnitude de seus erros. Para tanto, os modelos foram ajustados com os dados de 2020 a 2023 e testados em 2024 e 2025, anos que não utilizaram.
 
-### Quanta demanda haverá (por município)
+### Demanda por município
+
+**Tabela 5 – Erro dos modelos de demanda de partos no período de teste**
 
 ```{r}
 tabela_valid_demanda(P)
 ```
 
-Os cinco modelos (taxa histórica, regressões de Poisson e binomial negativa, Poisson com tendência e LightGBM) erram praticamente o mesmo: entre `r pct_l(100 * min(V1$wmape))` e `r pct_l(100 * max(V1$wmape))` da demanda por município, e diferenças desse tamanho não distinguem modelos. Pela regra de parcimônia (o modelo mais simples a até 0,5 ponto percentual do menor erro), ficou a **taxa histórica ancorada** (`r pct_l(w_esc)`). Como a escolha usou o próprio período de teste, o erro relatado é otimista. Todos superestimaram o total de 2024–2025 (entre `r paste0("+", num(min(V1$erro_total_pct), 1), "%")` e `r paste0("+", num(max(V1$erro_total_pct), 1), "%")`), em parte pela queda atípica dos nascimentos em 2024.
+Verifica-se que os cinco modelos — taxa histórica, regressões de Poisson e binomial negativa (CAMERON; TRIVEDI, 2013), Poisson com tendência e LightGBM — apresentam erros praticamente iguais, entre `r pct_l(100 * min(V1$wmape))` e `r pct_l(100 * max(V1$wmape))` da demanda por município, e diferenças dessa magnitude não distinguem os modelos. Pela regra de parcimônia, que seleciona o modelo mais simples a até 0,5 ponto percentual do menor erro, adotou-se a **taxa histórica ancorada** (`r pct_l(w_esc)`). Como a escolha utilizou o próprio período de teste, o erro relatado é otimista. Ademais, todos os modelos superestimaram o total de 2024–2025 (entre `r paste0("+", num(min(V1$erro_total_pct), 1), "%")` e `r paste0("+", num(max(V1$erro_total_pct), 1), "%")`), em parte em razão da queda atípica dos nascimentos em 2024.
 
-### Para onde as gestantes vão (escolha do local do parto)
+### Escolha do local do parto
+
+**Tabela 6 – Desempenho dos modelos de escolha do local do parto no período de teste**
 
 ```{r}
 tabela_valid_escolha(P)
 ```
 
-Sem mudança na oferta, o padrão de referência obstétrica é muito estável, e a regra ingênua de **repetir as participações do ano anterior** (persistência) é difícil de bater: CPC de `r num(cpc("persistencia_2023"), 3)`, contra `r num(cpc("pivo_mnl"), 3)` do pivô do modelo gravitacional, que é o usado nos cenários. O teste que importa para a localização é outro: o que acontece quando a oferta muda. O tempo médio observado desta tabela (`r min_l(V2$tempo_medio_obs[V2$modelo == "pivo_mnl"])`) conta cada parto uma vez (os gêmeos somam um parto); o do cartão de acesso (`r min_l(S$tempo)`) conta nascidos vivos, a unidade dos arquivos de acesso, e por isso difere um pouco.
+Sem mudança na oferta, o padrão de referência obstétrica é muito estável, e a regra ingênua de **repetir as participações do ano anterior** (persistência) dificilmente é superada: CPC de `r num(cpc("persistencia_2023"), 3)`, contra `r num(cpc("pivo_mnl"), 3)` do pivô do modelo gravitacional, utilizado nos cenários. O teste relevante para a localização, contudo, é outro, a saber, o comportamento dos modelos quando a oferta muda. Cumpre esclarecer que o tempo médio observado da Tabela 6 (`r min_l(V2$tempo_medio_obs[V2$modelo == "pivo_mnl"])`) conta cada parto uma vez (os gêmeos somam um parto), ao passo que o do cartão de acesso (`r min_l(S$tempo)`) conta nascidos vivos, a unidade dos arquivos de acesso, razão pela qual os dois diferem ligeiramente.
 
-### Quando a oferta muda (experimentos naturais)
+### Mudanças de oferta (experimentos naturais)
 
-Entre 2021 e 2025, municípios abriram, ampliaram, reduziram ou fecharam leitos obstétricos. Para cada um desses eventos, os modelos foram ajustados só com os anos anteriores e comparados ao que de fato aconteceu com os partos dos municípios afetados.
+Entre 2021 e 2025, municípios abriram, ampliaram, reduziram ou fecharam leitos obstétricos. Para cada um desses eventos, os modelos foram ajustados somente com os anos anteriores e comparados ao que de fato ocorreu com os partos dos municípios afetados, conforme a Figura 3 e as Tabelas 7 e 8.
 
 ```{r}
 svg_experimentos(P)
-fonte_curta(P, "eventos de mudança de oferta identificados no CNES 2021–2025")
+fonte_curta(P, "eventos de mudança de oferta identificados no CNES 2021–2025",
+            figura = "Figura 3 – CPC médio do modelo pivô e da persistência nas origens afetadas por mudanças de oferta de leitos obstétricos, por tipo de evento")
 ```
 
 ::: {.callout-important title="Resultado desfavorável para o parto"}
-Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o modelo usado nos cenários (pivô do gravitacional) **ficou atrás da regra ingênua** de repetir o ano anterior: CPC médio de `r num(ET$cpc_medio_pivo_mnl, 3)` contra `r num(ET$cpc_medio_persistencia, 3)`. Superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e perdeu em `r num(ET$n_pivo_mnl_perde_margem)`, sobretudo nas reduções de leitos (perdeu em `r num(ERED$n_pivo_mnl_perde_margem)` de `r num(ERED$n_avaliaveis)`) e nos eventos de 2024–2025. As variações de leitos obstétricos no CNES nem sempre correspondem a mudança real de atividade, e o modelo parece reagir demais a elas. Por isso, **os cenários do parto valem como ordem de grandeza**, não como previsão do número de partos que cada unidade receberia.
+Nos `r num(ET$n_avaliaveis)` eventos avaliáveis, o modelo utilizado nos cenários (pivô do gravitacional) **ficou atrás da regra ingênua** de repetir o ano anterior, com CPC médio de `r num(ET$cpc_medio_pivo_mnl, 3)` contra `r num(ET$cpc_medio_persistencia, 3)`. O modelo superou a persistência em `r num(ET$n_pivo_mnl_vence_margem)` eventos, empatou em `r num(ET$n_pivo_mnl_empata_margem)` e perdeu em `r num(ET$n_pivo_mnl_perde_margem)`, sobretudo nas reduções de leitos (perdeu em `r num(ERED$n_pivo_mnl_perde_margem)` de `r num(ERED$n_avaliaveis)`) e nos eventos de 2024–2025. As variações de leitos obstétricos no CNES nem sempre correspondem a mudança real de atividade, e o modelo parece reagir excessivamente a elas. Por essa razão, **os cenários do parto valem como ordem de grandeza**, e não como previsão do número de partos que cada unidade receberia.
 :::
+
+**Tabela 7 – CPC médio dos modelos de escolha nos experimentos naturais, por tipo de evento**
 
 ```{r}
 tabela_experimentos(P)
 ```
+
+**Tabela 8 – CPC médio do pivô e da persistência nos experimentos naturais, por ano do evento**
 
 ```{r}
 tabela_experimentos_ano(P)
 ```
 
 ::: {.nota-fonte}
-Validação da frente de localização (CNES, SINASC 2020–2025). O modelo dos cenários foi escolhido nos mesmos eventos em que foi avaliado (o de maior CPC médio entre os que respondem à mudança de oferta); não há amostra reservada para confirmar o desempenho.
+Fonte: validação da frente de localização do Projeto PPSUS-MT, com base no CNES e no SINASC 2020–2025. Nota: o modelo dos cenários foi escolhido nos mesmos eventos em que foi avaliado (o de maior CPC médio entre os que respondem à mudança de oferta), e não há amostra reservada para confirmar o desempenho.
 :::
 
 ## Cenários de localização (otimização) {#onde}
 
-A otimização procura os municípios onde 1 a 5 unidades novas mais reduziriam o deslocamento em 2030, mantendo abertas as maternidades em funcionamento (município com leito obstétrico e ao menos 52 partos em 2025, cerca de um por semana). Os candidatos são municípios sem maternidade em funcionamento, com hospital de ao menos 15 leitos SUS e demanda própria projetada de ao menos 100 partos por ano. Dois critérios são comparados:
+A otimização busca os municípios nos quais 1 a 5 unidades novas mais reduziriam o deslocamento em 2030, mantendo-se abertas as maternidades em funcionamento (município com leito obstétrico e ao menos 52 partos em 2025, cerca de um por semana). Os candidatos são municípios sem maternidade em funcionamento, com hospital de ao menos 15 leitos SUS e demanda própria projetada de ao menos 100 partos por ano. Comparam-se dois critérios: a **p-mediana** (HAKIMI, 1964; REVELLE; SWAIN, 1970), que escolhe os municípios que minimizam o tempo médio de viagem de todas as gestantes até a maternidade mais próxima, e a **cobertura máxima** (`r sigla("MCLP", "Maximal Covering Location Problem: problema de localização de cobertura máxima")`, do inglês *Maximal Covering Location Problem*), proposta por Church e ReVelle (1974), que escolhe os municípios que maximizam a parcela da demanda a até 60 (ou 120) minutos de uma maternidade.
 
-- **p-mediana**: escolhe os municípios que minimizam o tempo médio de viagem de todas as gestantes até a maternidade mais próxima;
-- **cobertura máxima** (`r sigla("MCLP", "Maximal Covering Location Problem: problema de localização de cobertura máxima")`): escolhe os municípios que maximizam a parcela da demanda a até 60 (ou 120) minutos de uma maternidade.
-
-Com as maternidades atuais, o tempo médio até a mais próxima é de `r min_l(S0$tempo_medio, 1)` e `r pct_l(S0$pct_ate_60)` da demanda de 2030 fica a até 60 minutos. A malha já é densa: cinco unidades novas escolhidas pela p-mediana (`r nomes_lista(PM5$nomes_abertos)`) reduziriam o tempo médio para `r min_l(PM5$tempo_medio, 1)` (`r num(PM5$ganho_tempo_medio_min, 1)` minutos a menos) e levariam a cobertura de 60 minutos a `r pct_l(PM5$pct_ate_60)`. `r num(com_leito)` dos `r num(length(esc_pm))` municípios que aparecem em alguma solução já têm leitos obstétricos no CNES em `r ANO_OFERTA`.
+Com as maternidades atuais, o tempo médio até a mais próxima é de `r min_l(S0$tempo_medio, 1)`, e `r pct_l(S0$pct_ate_60)` da demanda de 2030 fica a até 60 minutos. Como a malha já é densa, cinco unidades novas escolhidas pela p-mediana (`r nomes_lista(PM5$nomes_abertos)`) reduziriam o tempo médio para `r min_l(PM5$tempo_medio, 1)` (`r num(PM5$ganho_tempo_medio_min, 1)` minutos a menos) e elevariam a cobertura de 60 minutos a `r pct_l(PM5$pct_ate_60)`. Observa-se, ademais, que `r num(com_leito)` dos `r num(length(esc_pm))` municípios que aparecem em alguma solução já dispõem de leitos obstétricos no CNES em `r ANO_OFERTA` (Tabelas 9 a 12 e Figura 4).
 
 ::: {.panel-tabset}
 
 #### p-mediana
+
+**Tabela 9 – Soluções da p-mediana por número de unidades novas, demanda de 2030 (provisória)**
 
 ```{r}
 tabela_solucoes(P, "p_mediana")
@@ -177,11 +197,15 @@ tabela_solucoes(P, "p_mediana")
 
 #### Cobertura máxima, 60 min
 
+**Tabela 10 – Soluções da cobertura máxima a 60 minutos por número de unidades novas, demanda de 2030 (provisória)**
+
 ```{r}
 tabela_solucoes(P, "mclp", 60)
 ```
 
 #### Cobertura máxima, 120 min
+
+**Tabela 11 – Soluções da cobertura máxima a 120 minutos por número de unidades novas, demanda de 2030 (provisória)**
 
 ```{r}
 tabela_solucoes(P, "mclp", 120)
@@ -191,24 +215,29 @@ tabela_solucoes(P, "mclp", 120)
 
 ```{r}
 svg_curvas_k(P, MODS)
-fonte_curta(P, "demanda de 2030 provisória")
+fonte_curta(P, "demanda de 2030 provisória",
+            figura = "Figura 4 – Tempo médio até a maternidade mais próxima, por número de unidades novas e critério de otimização")
 ```
 
 #### Municípios que aparecem nas soluções
+
+**Tabela 12 – Municípios que aparecem nas soluções, por critério e número de unidades novas**
 
 ```{r}
 tabela_escolhidos(P, lapply(MODS, function(m) m[c("modelo", "limiar", "nome")]))
 ```
 
 ::: {.nota-fonte}
-Demanda de 2030 projetada (provisória) por município, descontada a parcela observada atendida fora de Mato Grosso; demanda e candidatos nas sedes municipais; custo = tempo rodoviário entre sedes. Soluções exatas por programação inteira (HiGHS), conferidas por enumeração completa para k = 1 e 2.
+Nota: demanda de 2030 projetada (provisória) por município, descontada a parcela observada atendida fora de Mato Grosso; demanda e candidatos nas sedes municipais; custo igual ao tempo rodoviário entre sedes. Soluções exatas por programação inteira (HiGHS), conferidas por enumeração completa para k = 1 e 2.
 :::
 
 ## Cenários com a escolha das gestantes {#cenarios}
 
-A otimização supõe que cada gestante vá à maternidade mais próxima, o que não acontece: o tempo médio esperado em 2030 com a escolha observada (`r min_l(REF$tempo_medio_esperado, 1)`) é cerca de `r num(REF$tempo_medio_esperado / S0$tempo_medio, 0)` vezes o tempo até a maternidade em funcionamento mais próxima (`r min_l(S0$tempo_medio, 1)`). Nos cenários, um modelo de escolha (pivô do gravitacional, estimado com os fluxos de 2020–2025) redistribui os partos de 2030 entre as maternidades existentes e as novas, cada nova com `r num(C3$modulo_leitos, 2)` leitos obstétricos.
+A otimização supõe que cada gestante se dirija à maternidade mais próxima, o que não ocorre na prática: o tempo médio esperado em 2030 com a escolha observada (`r min_l(REF$tempo_medio_esperado, 1)`) corresponde a cerca de `r num(REF$tempo_medio_esperado / S0$tempo_medio, 0)` vezes o tempo até a maternidade em funcionamento mais próxima (`r min_l(S0$tempo_medio, 1)`). Nos cenários, um modelo de escolha (pivô do gravitacional, estimado com os fluxos de 2020–2025) redistribui os partos de 2030 entre as maternidades existentes e as novas, cada nova com `r num(C3$modulo_leitos, 2)` leitos obstétricos.
 
-Com as três unidades da p-mediana (`r nomes_lista(C3$nomes_abertos)`), o tempo médio esperado cai `r num(C3$ganho_tempo_esperado_min, 2)` minuto. Pela premissa da ida à maternidade mais próxima, com a mesma oferta, o ganho seria de `r num(C3$ganho_tempo_mais_proximo_min, 2)` min, porque esses municípios já têm leitos obstétricos; contra as maternidades em funcionamento, seria de `r num(C3$ganho_tempo_mais_proximo_l4_min, 2)` min. O ganho com a escolha fica entre os dois porque vem de tornar atraentes unidades que hoje quase não fazem partos. As unidades novas receberiam `r cont_l(C3$fluxo_para_novas)` partos por ano, `r cont_l(C3$fluxo_para_novas_proprios_residentes)` deles de residentes dos próprios municípios. Os maiores ganhos por parto ficam em `r lista_e_l(maiores_ganhos(P, "p_mediana_k3"))`; em `r num(n_perde(P, "p_mediana_k3"))` municípios o tempo esperado aumenta mais de 1 minuto, porque o modelo atribui à unidade nova parte das gestantes para as quais ela fica mais longe que o destino habitual. **Lembrete:** no parto, esse modelo não superou a regra ingênua nos experimentos naturais; os números são ordem de grandeza.
+Com as três unidades da p-mediana (`r nomes_lista(C3$nomes_abertos)`), o tempo médio esperado diminui `r num(C3$ganho_tempo_esperado_min, 2)` minuto. Pela premissa da ida à maternidade mais próxima, com a mesma oferta, o ganho seria de `r num(C3$ganho_tempo_mais_proximo_min, 2)` min, porque esses municípios já dispõem de leitos obstétricos; em relação às maternidades em funcionamento, seria de `r num(C3$ganho_tempo_mais_proximo_l4_min, 2)` min. O ganho com a escolha situa-se entre os dois porque decorre de tornar atraentes unidades que hoje quase não realizam partos. As unidades novas receberiam `r cont_l(C3$fluxo_para_novas)` partos por ano, dos quais `r cont_l(C3$fluxo_para_novas_proprios_residentes)` de residentes dos próprios municípios. Os maiores ganhos por parto concentram-se em `r lista_e_l(maiores_ganhos(P, "p_mediana_k3"))`; em `r num(n_perde(P, "p_mediana_k3"))` municípios, o tempo esperado aumenta mais de 1 minuto, porque o modelo atribui à unidade nova parte das gestantes para as quais ela fica mais distante que o destino habitual. **Ressalta-se que, no parto, esse modelo não superou a regra ingênua nos experimentos naturais, razão pela qual os números devem ser lidos como ordem de grandeza.**
+
+**Tabela 13 – Cenários de 2030 com a escolha das gestantes: tempo médio esperado e ganhos (provisório)**
 
 ```{r}
 tabela_cenarios(P)
@@ -217,19 +246,23 @@ fonte_curta(P, "cenários de 2030 provisórios")
 
 #### Ganho por município de residência
 
-Minutos poupados por parto em 2030 em cada cenário (negativo = tempo maior), ordenados pelo cenário p-mediana com k = 3. O mapa da seção [Acesso atual](#mapa) mostra esse cenário (botão "Cenário 2030").
+A Tabela 14 apresenta os minutos poupados por parto em 2030 em cada cenário (valores negativos indicam tempo maior), ordenados pelo cenário da p-mediana com k = 3. O mapa da seção [Acesso atual](#mapa) representa esse cenário (botão "Cenário 2030").
+
+**Tabela 14 – Ganho de tempo por parto em 2030, por município de residência e cenário (provisório)**
 
 ```{r}
 tabela_ganho_municipios(P, CENS)
 ```
 
 ::: {.nota-fonte}
-Cenários de 2030 (provisórios): demanda projetada atendida em Mato Grosso; participações observadas em 2025 como ponto de partida; a parcela atendida fora de Mato Grosso fica constante. No parto, a capacidade dos leitos não é restritiva nos cenários (`r num(S$leitos)` leitos obstétricos em `r ANO_OFERTA` para `r num(p26$demanda_proj)` partos projetados em 2026).
+Nota: cenários de 2030 (provisórios), com a demanda projetada atendida em Mato Grosso e as participações observadas em 2025 como ponto de partida; a parcela atendida fora de Mato Grosso permanece constante. No parto, a capacidade dos leitos não é restritiva nos cenários (`r num(S$leitos)` leitos obstétricos em `r ANO_OFERTA` para `r num(p26$demanda_proj)` partos projetados em 2026).
 :::
 
 ## Quase-empates (sensibilidade) {#sensibilidade}
 
-Cada solução foi recalculada com oito variantes da demanda: a principal, os dois cenários populacionais, o total calibrado ao IBGE, os limites do intervalo de 80%, a versão anterior sem ancoragem regional e a **demanda observada em 2025**, que não depende da projeção. As escolhas do parto são frágeis: em `r num(SR$empates)` das `r num(SR$n)` soluções com k = 1 a 3, a melhor e a segunda melhor praticamente empatam. Com k = 1, `r nomes_lista(s_pm1$nomes_abertos)` e `r nomes_lista(s_pm1$segunda_nomes)` diferem em `r pct_l(s_pm1$dif_pct_objetivo, 2)` do tempo médio, e com a demanda observada de 2025 vence `r nomes_lista(obs_pm1$nomes_abertos)`; com k = 3, a unidade que muda entre a melhor e a segunda melhor solução (`r lista_e_l(dif_sol(s_pm3$nomes_abertos, s_pm3$segunda_nomes))` ou `r lista_e_l(dif_sol(s_pm3$segunda_nomes, s_pm3$nomes_abertos))`) é um empate de `r pct_l(s_pm3$dif_pct_objetivo, 2)`. **Quase-empate significa que os dois municípios são equivalentes para o critério do modelo**: a escolha entre eles depende de fatores que o modelo não tem.
+Cada solução foi recalculada com oito variantes da demanda: a principal, os dois cenários populacionais, o total calibrado ao IBGE, os limites do intervalo de 80%, a versão anterior sem ancoragem regional e a **demanda observada em 2025**, que não depende da projeção. Conforme a Tabela 15, as escolhas do parto são frágeis, pois em `r num(SR$empates)` das `r num(SR$n)` soluções com k = 1 a 3 a melhor e a segunda melhor praticamente empatam. Com k = 1, `r nomes_lista(s_pm1$nomes_abertos)` e `r nomes_lista(s_pm1$segunda_nomes)` diferem em `r pct_l(s_pm1$dif_pct_objetivo, 2)` do tempo médio, e, com a demanda observada de 2025, prevalece `r nomes_lista(obs_pm1$nomes_abertos)`; com k = 3, a unidade que muda entre a melhor e a segunda melhor solução (`r lista_e_l(dif_sol(s_pm3$nomes_abertos, s_pm3$segunda_nomes))` ou `r lista_e_l(dif_sol(s_pm3$segunda_nomes, s_pm3$nomes_abertos))`) configura um empate de `r pct_l(s_pm3$dif_pct_objetivo, 2)`. **Quase-empate significa que os dois municípios são equivalentes para o critério do modelo**, de modo que a escolha entre eles depende de fatores que o modelo não contempla.
+
+**Tabela 15 – Sensibilidade das soluções às variantes de demanda**
 
 ```{r}
 tabela_sensibilidade(P)
@@ -238,33 +271,37 @@ fonte_curta(P, "demanda de 2030 provisória; demanda observada de 2025")
 
 ## Parâmetros dos cenários {#parametros}
 
-Os cenários dependem de escolhas da pesquisa, documentadas no relatório técnico e **sem valor normativo**. Mudar qualquer uma delas muda as soluções.
+Os cenários dependem de escolhas da pesquisa, documentadas no relatório técnico e **sem valor normativo**, de modo que a alteração de qualquer uma delas modifica as soluções. Considera-se **maternidade em funcionamento**, sempre aberta na otimização, o município com leito obstétrico e ao menos **52 partos** ocorridos em 2025, e **município candidato** aquele sem maternidade em funcionamento, com hospital de ao menos **15 leitos SUS** e demanda própria projetada de ao menos **100 partos por ano**. A **unidade nova** dos cenários corresponde a `r INFO$modulo`. A **cobertura** adota limiares de **60 e 120 minutos** de tempo rodoviário entre sedes, e a **demanda** corresponde aos partos projetados para 2030 (provisórios), descontada a parcela observada atendida fora de Mato Grosso.
 
-- **Maternidade em funcionamento** (sempre aberta na otimização): município com leito obstétrico e ao menos **52 partos** ocorridos em 2025.
-- **Município candidato**: sem maternidade em funcionamento, com hospital de ao menos **15 leitos SUS** e demanda própria projetada de ao menos **100 partos por ano**.
-- **Unidade nova nos cenários**: `r INFO$modulo`.
-- **Cobertura**: limiares de **60 e 120 minutos** de tempo rodoviário entre sedes.
-- **Demanda**: partos projetados para 2030 (provisórios), descontada a parcela observada atendida fora de Mato Grosso.
-- **Qualidade e segurança não entram**: o volume mínimo de partos para a segurança de uma maternidade não é critério do modelo e precisa de discussão clínica à parte.
+Ressalta-se, por fim, que **a qualidade e a segurança não entram nos modelos**: o volume mínimo de partos para a segurança de uma maternidade não constitui critério do modelo e requer discussão clínica à parte.
 
 ## Ressalvas {#ressalvas}
 
 ::: {.callout-warning title="Leia antes de interpretar"}
-- **Preliminar e provisório.** A demanda de 2026–2030 depende de uma projeção populacional municipal provisória (método de razão sobre a projeção do IBGE para Mato Grosso), que não desloca as coortes: cada município herda o ritmo de envelhecimento médio do estado. Os resultados serão refeitos quando houver projeção municipal por idade e sexo.
-- **Não é recomendação.** Os cenários mostram consequências de hipóteses; não indicam onde o estado ou os municípios devem abrir ou fechar maternidades.
-- **Os modelos de escolha erram quando a oferta muda.** No parto, o modelo dos cenários perdeu para a regra ingênua nos experimentos naturais; os ganhos são ordem de grandeza.
-- **Escolhas no próprio teste.** O modelo de demanda foi escolhido no período de teste e o de escolha nos mesmos eventos em que foi avaliado; as métricas são otimistas.
-- **Demanda concentrada na sede.** SINASC e CNES informam o município, não o endereço: toda a demanda e toda a oferta ficam na sede, e o deslocamento dentro do município conta zero. Municípios extensos têm o acesso superestimado.
-- **Tempo rodoviário em condições ideais.** Os tempos do OSRM são de automóvel, sem balsas, estradas sazonais, transporte sanitário ou espera; servem para comparar alternativas, não como tempo-resposta. Algumas rotas ainda estão em validação com a SES-MT.
-- **Partos SUS e não SUS.** O SINASC registra todos os nascimentos hospitalares; os leitos considerados são os obstétricos existentes, SUS e não SUS.
-- **Município de destino, não hospital.** O modelo não separa hospitais do mesmo município.
-- **Células pequenas suprimidas.** Percentuais cuja contagem fica entre 1 e 4 não são mostrados, nem os que permitiriam deduzi-los por diferença; tempos e percentuais observados só aparecem com ao menos 5 nascidos vivos no município.
-- **Boa Esperança do Norte**, instalado em 2025, ainda tem parte dos registros no município de origem e não tem polígono na malha do mapa.
+**Preliminar e provisório.** A demanda de 2026–2030 depende de uma projeção populacional municipal provisória (método de razão sobre a projeção do IBGE para Mato Grosso), que não desloca as coortes, de modo que cada município herda o ritmo de envelhecimento médio do estado. Os resultados serão refeitos quando houver projeção municipal por idade e sexo.
+
+**Não é recomendação.** Os cenários mostram as consequências de hipóteses e não indicam onde o estado ou os municípios devem abrir ou fechar maternidades.
+
+**Os modelos de escolha erram quando a oferta muda.** No parto, o modelo dos cenários perdeu para a regra ingênua nos experimentos naturais, razão pela qual os ganhos devem ser lidos como ordem de grandeza.
+
+**Escolhas no próprio teste.** O modelo de demanda foi escolhido no período de teste, e o de escolha, nos mesmos eventos em que foi avaliado; as métricas são, portanto, otimistas.
+
+**Demanda concentrada na sede.** O SINASC e o CNES informam o município, e não o endereço: toda a demanda e toda a oferta ficam na sede, e o deslocamento dentro do município conta zero. Por essa razão, os municípios extensos têm o acesso superestimado.
+
+**Tempo rodoviário em condições ideais.** Os tempos do OSRM são de automóvel, sem balsas, estradas sazonais, transporte sanitário ou espera, e servem para comparar alternativas, e não como tempo-resposta. Algumas rotas ainda se encontram em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT).
+
+**Partos SUS e não SUS.** O SINASC registra todos os nascimentos hospitalares, e os leitos considerados são os obstétricos existentes, SUS e não SUS.
+
+**Município de destino, não hospital.** O modelo não distingue hospitais do mesmo município.
+
+**Células pequenas suprimidas.** Os percentuais cuja contagem fica entre 1 e 4 não são mostrados, tampouco os que permitiriam deduzi-los por diferença; os tempos e os percentuais observados somente aparecem com ao menos 5 nascidos vivos no município.
+
+**Boa Esperança do Norte**, instalado em 2025, ainda tem parte dos registros no município de origem e não possui polígono na malha do mapa.
 :::
 
 ## Arquivos {#arquivos}
 
-Os arquivos agregados desta página, com dicionário de colunas, estão em [Localização: arquivos](index.html#arquivos): acesso por município e por região, demanda projetada, soluções da otimização, sensibilidade, cenários e validação dos modelos.
+Os arquivos agregados desta página, acompanhados de dicionário de colunas, encontram-se em [Localização: arquivos](index.html#arquivos) e abrangem o acesso por município e por região, a demanda projetada, as soluções da otimização, a sensibilidade, os cenários e a validação dos modelos. As referências das obras citadas nesta página encontram-se em [Localização: referências](index.html#referencias).
 
 ```{r}
 fonte_loc(P)
