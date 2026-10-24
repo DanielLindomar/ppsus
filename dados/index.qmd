@@ -28,27 +28,35 @@ tam_total <- if (is.null(cat_b)) NA_real_ else sum(cat_b$bytes, na.rm = TRUE)
 faixa_versao()
 ```
 
-Esta página reúne tudo o que o Observatório publica em forma de arquivo: um [explorador](#explorador) para consultar e baixar recortes dos `r n_ind` indicadores por município, os [arquivos completos para download](#downloads) (painéis, séries, fluxos de internação, internações em outros estados, hospitais, malhas e, desde a versão 0.4, os resultados preliminares de previsão de demanda, localização de serviços e judicialização da saúde), os [resultados de eficiência e produtividade](#eficiencia) (fichas, metas, pares e painéis regionais), o [dicionário dos indicadores](#dicionario) e as condições de [uso e citação](#licenca). Só são publicados agregados por município, região de saúde ou estabelecimento; nenhum microdado é divulgado.
+Esta página reúne todo o conteúdo que o Observatório disponibiliza em forma de arquivo. Inicialmente, apresenta-se um [explorador](#explorador) que permite consultar e baixar recortes dos `r n_ind` indicadores por município. Em seguida, disponibilizam-se os [arquivos completos para *download*](#downloads), que abrangem painéis, séries, fluxos de internação, internações em outros estados, hospitais, malhas e, desde a versão 0.4, os resultados preliminares de previsão de demanda, localização de serviços e judicialização da saúde, bem como os [resultados de eficiência e produtividade](#eficiencia) (fichas, metas, pares e painéis regionais), o [dicionário dos indicadores](#dicionario) e as condições de [uso e citação](#licenca). Ressalta-se que somente são publicados agregados por município, região de saúde ou estabelecimento, de modo que nenhum microdado é divulgado.
 
 ## Explorador de indicadores {#explorador}
 
-A tabela traz os `r n_ind` indicadores do site para os `r nrow(MUN)` municípios de Mato Grosso, com os valores de 2020 a 2025 lado a lado (uma linha por município e indicador). As listas nos cabeçalhos filtram por município, região de saúde, grupo ou indicador; a caixa de busca procura qualquer texto; o seletor **Ano** mostra apenas a coluna escolhida. O botão baixa exatamente o recorte visível, em CSV (UTF-8, separador vírgula, decimal ponto). Os indicadores de resultados (SIM/SINASC) e as doses por nascido vivo vão até 2024; o traço (—) indica valor indisponível.
+A Tabela 1 apresenta os `r n_ind` indicadores do site para os `r nrow(MUN)` municípios de Mato Grosso, com os valores de 2020 a 2025 dispostos lado a lado, em uma linha por município e indicador. As listas dos cabeçalhos permitem filtrar por município, região de saúde, grupo ou indicador; a caixa de busca localiza qualquer texto; e o seletor **Ano** exibe apenas a coluna escolhida. O botão de *download* baixa exatamente o recorte visível, em formato CSV (UTF-8, separador vírgula e decimal ponto). Os indicadores de resultados (SIM/SINASC) e as doses por nascido vivo estendem-se até 2024, e o traço (—) indica valor indisponível.
+
+**Tabela 1 – Explorador dos indicadores por município e ano**
 
 ```{r}
 explorador_dados()
 ```
 
 ::: {.nota-fonte}
-Valores arredondados às casas de exibição de cada indicador; a série com todas as casas, e com os códigos das regiões, está em `serie_longa.csv` (abaixo). Definição, fórmula, fonte e ressalvas de cada indicador no [dicionário](#dicionario) e na página [Indicadores](../indicadores/index.html). Boa Esperança do Norte (instalado em 2025) só tem valores em 2025.
+Fonte: elaboração própria com base em dados do DATASUS/Ministério da Saúde, do SIOPS e do IBGE. Nota: os valores estão arredondados às casas de exibição de cada indicador; a série com todas as casas decimais, e com os códigos das regiões, encontra-se em `serie_longa.csv` (abaixo). A definição, a fórmula, a fonte e as ressalvas de cada indicador constam do [dicionário](#dicionario) e da página [Indicadores](../indicadores/index.html). Boa Esperança do Norte (instalado em 2025) só tem valores em 2025.
 :::
 
 ## Arquivos para download {#downloads}
 
-São `r n_arq` arquivos (`r fmt_bytes(tam_total)` no total), derivados dos painéis do Data Lake do projeto e, na versão 0.4, também de agregados das frentes de previsão (foto fixa do corte de 17/10/2026), localização (com tempos rodoviários do OSRM sobre o OpenStreetMap) e judicialização (API Pública do DataJud/CNJ). Os CSV estão em UTF-8, com separador vírgula, decimal ponto e célula vazia quando o dado é indisponível; as malhas GeoJSON estão em WGS84 (EPSG:4326). As chaves de junção são `cod_mun6` (código IBGE do município com 6 dígitos), `co_regsaud` (região de saúde), `cnes` (estabelecimento, 7 dígitos com zeros à esquerda: leia como texto) e `ano`. Clique no nome do arquivo para baixar.
+Disponibilizam-se `r n_arq` arquivos (`r fmt_bytes(tam_total)` no total), relacionados na Tabela 2, derivados dos painéis do *Data Lake* do projeto e, na versão 0.4, também de agregados das frentes de previsão (foto fixa do corte de 17/10/2026), de localização (com tempos rodoviários calculados pelo OSRM sobre o OpenStreetMap) e de judicialização (API Pública do DataJud/CNJ). Os arquivos CSV estão codificados em UTF-8, com separador vírgula, decimal ponto e célula vazia quando o dado é indisponível, e as malhas GeoJSON estão no sistema WGS84 (EPSG:4326). As chaves de junção são `cod_mun6` (código IBGE do município, com 6 dígitos), `co_regsaud` (região de saúde), `cnes` (estabelecimento, com 7 dígitos e zeros à esquerda, que deve ser lido como texto) e `ano`. Para baixar um arquivo, basta clicar sobre o respectivo nome.
+
+**Tabela 2 – Arquivos disponíveis para *download*, por tema**
 
 ```{r}
 tabela_downloads(cat_b = cat_b)
 ```
+
+::: {.nota-fonte}
+Fonte: elaboração própria; a fonte primária de cada arquivo consta da coluna Fonte.
+:::
 
 ::: {.callout-note collapse="true"}
 ## Como ler os arquivos em R e Python
@@ -79,16 +87,23 @@ mapa   = malha.merge(painel[painel.ano == 2025], on="cod_mun6")</pre>
 ::: {.callout-warning collapse="true"}
 ## Ressalvas que acompanham os arquivos
 
-- **Despesas** (SIOPS) são valores liquidados em R$ correntes, sem deflação; a classificação por subfunção é pouco confiável em alguns municípios (Várzea Grande, Cuiabá, Rondolândia, Alto Boa Vista e Planalto da Serra lançam grande parte da despesa em "outras subfunções"). Dois lançamentos negativos de recursos próprios (Novo Santo Antônio em 2020 e Peixoto de Azevedo em 2021) foram anulados no indicador `pct_recursos_proprios`, mas permanecem como estão na coluna bruta `desp_recursos_proprios` do painel.
-- **Profissionais** (CNES) estão em equivalentes de 40 horas semanais (FTE), média das competências do ano; o crescimento ao longo da série pode refletir melhoria do registro. Leitos de UTI têm sub-registro conhecido.
-- **Internações** (SIH) contam AIH do tipo 1 pelo ano da alta. Os painéis, os indicadores e os fluxos usam só o SIH de Mato Grosso. As internações de residentes de MT em hospitais de outros estados estão nos arquivos `residentes_mt_outras_uf_*` e `saldo_internacoes_mt_outras_uf_2020_2025.csv` (SIH/SUS das 26 outras UF); os residentes de outras UFs atendidos em MT aparecem no resumo estadual do deslocamento e no saldo. Nesses arquivos, o valor soma todas as linhas da AIH, inclusive as de continuação. Nos arquivos de fluxos, os nomes das regiões de saúde trazem o sufixo ` - MT`.
-- **Supressão de células pequenas.** Nos arquivos de internações em outros estados por região de saúde, por município de residência e por município de destino, contagens de 1 a 4 internações ficam vazias, assim como as células que permitiriam deduzi-las por diferença; o motivo está na coluna `nota_supressao`. A mesma regra vale para os arquivos de previsão, localização e judicialização (versão 0.4), com as colunas de marcação descritas nos respectivos dicionários (`previsao_dicionario.csv`, `localizacao_dicionario.csv` e `judicializacao_dicionario.csv`); vazio = suprimido ou indisponível.
-- **Previsão de demanda** (arquivos `previsao_*`): resultados **preliminares** da previsão semanal das internações por doenças respiratórias (CID-10 J00–J99), corte de 17/10/2026, com a especificação ainda em validação; não são recomendação oficial nem alerta operacional. As previsões e os intervalos são estimativas de modelo; as semanas recentes dependem do *nowcast*, porque o SIH ainda não as registrou por completo. Método em [Metodologia](../metodologia.html#previsao).
-- **Localização de serviços** (arquivos `localizacao_*`): a demanda de 2026–2030 é **provisória** (projeção populacional municipal pelo método de razão) e os cenários de otimização dependem de parâmetros de pesquisa que não são normas (ocupação-alvo de 85%, módulo de 10 leitos, filtro de captação, limiares de 52 e 100 partos por ano); não são recomendação de abertura, habilitação ou fechamento de serviços. Os tempos e distâncias rodoviários foram calculados com o OSRM sobre dados do OpenStreetMap (© colaboradores do OpenStreetMap, licença ODbL). Método em [Metodologia](../metodologia.html#localizacao).
-- **Judicialização da saúde** (arquivos `judicializacao_*`): agregados derivados da API Pública do DataJud (CNJ), coleta de 17/10/2026, com ações ajuizadas até 11/09/2026 (2026 parcial). A atribuição das ações às comarcas é uma proposta do projeto, em validação; 2022–2024 é o período principal de comparação, e 2025–2026 são afetados pela centralização de ações no Núcleo de Justiça 4.0; as taxas de Cuiabá e Várzea Grande são limites inferiores. As taxas por comarca são publicadas suavizadas e arredondadas a 5 por 100 mil (2022–2024) ou em faixas (por ano). Os fatores associados são associações, não causas. Método em [Metodologia](../metodologia.html#judicializacao).
-- **Distâncias** do deslocamento são em linha reta entre as sedes municipais (IBGE, Localidades do Brasil 2022), não pela malha viária: a distância rodoviária é maior. Boa Esperança do Norte (510183) tem a coordenada da sede, mas não tem polígono na malha do IBGE usada nos mapas e, no SIH, ainda não aparece como residência nem como sede de estabelecimento (distância vazia por ausência de internações).
-- **Resultados em saúde** (SIM/SINASC) vão até 2024 e são instáveis em municípios com menos de 100 nascidos vivos por ano. Os anos de 2020 e 2021 foram afetados pela COVID-19 em todas as fontes.
-- A lista completa de anomalias conhecidas está em [Metodologia](../metodologia.html).
+As **despesas** (SIOPS) correspondem a valores liquidados em R$ correntes, sem deflação, e a sua classificação por subfunção é pouco confiável em alguns municípios, como Várzea Grande, Cuiabá, Rondolândia, Alto Boa Vista e Planalto da Serra, que lançam grande parte da despesa em "outras subfunções". Além disso, dois lançamentos negativos de recursos próprios (Novo Santo Antônio, em 2020, e Peixoto de Azevedo, em 2021) foram anulados no indicador `pct_recursos_proprios`, embora permaneçam como registrados na coluna bruta `desp_recursos_proprios` do painel.
+
+Os **profissionais** (CNES) são expressos em equivalentes de 40 horas semanais (FTE), pela média das competências do ano, e o crescimento ao longo da série pode refletir a melhoria do registro. Os leitos de UTI, por sua vez, apresentam sub-registro conhecido.
+
+As **internações** (SIH) correspondem às AIH do tipo 1, contadas pelo ano da alta. Os painéis, os indicadores e os fluxos utilizam somente o SIH de Mato Grosso, ao passo que as internações de residentes de MT em hospitais de outros estados constam dos arquivos `residentes_mt_outras_uf_*` e `saldo_internacoes_mt_outras_uf_2020_2025.csv` (SIH/SUS das 26 outras UF); os residentes de outras UFs atendidos em MT aparecem no resumo estadual do deslocamento e no saldo. Nesses arquivos, o valor soma todas as linhas da AIH, inclusive as de continuação. Cabe observar, ainda, que, nos arquivos de fluxos, os nomes das regiões de saúde trazem o sufixo ` - MT`.
+
+Quanto à **supressão de células pequenas**, nos arquivos de internações em outros estados por região de saúde, por município de residência e por município de destino, as contagens de 1 a 4 internações ficam vazias, assim como as células que permitiriam deduzi-las por diferença, e o motivo consta da coluna `nota_supressao`. A mesma regra aplica-se aos arquivos de previsão, localização e judicialização (versão 0.4), com as colunas de marcação descritas nos respectivos dicionários (`previsao_dicionario.csv`, `localizacao_dicionario.csv` e `judicializacao_dicionario.csv`); nesses arquivos, a célula vazia indica valor suprimido ou indisponível.
+
+Os arquivos de **previsão de demanda** (`previsao_*`) contêm resultados **preliminares** da previsão semanal das internações por doenças respiratórias (CID-10 J00–J99), com corte em 17/10/2026 e especificação ainda em validação, e não constituem recomendação oficial nem alerta operacional. As previsões e os intervalos são estimativas de modelo, e as semanas recentes dependem do *nowcast*, porque o SIH ainda não as registrou por completo. O método está descrito em [Metodologia](../metodologia.html#previsao).
+
+Nos arquivos de **localização de serviços** (`localizacao_*`), a demanda de 2026–2030 é **provisória**, pois decorre de projeção populacional municipal pelo método de razão, e os cenários de otimização dependem de parâmetros de pesquisa que não constituem normas (ocupação-alvo de 85%, módulo de 10 leitos, filtro de captação e limiares de 52 e 100 partos por ano); por conseguinte, esses resultados não representam recomendação de abertura, habilitação ou fechamento de serviços. Os tempos e as distâncias rodoviários foram calculados com o OSRM sobre dados do OpenStreetMap (© colaboradores do OpenStreetMap, licença ODbL). O método está descrito em [Metodologia](../metodologia.html#localizacao).
+
+Os arquivos de **judicialização da saúde** (`judicializacao_*`) reúnem agregados derivados da API Pública do DataJud (CNJ), com coleta em 17/10/2026 e ações ajuizadas até 11/09/2026 (2026 parcial). A atribuição das ações às comarcas constitui uma proposta do projeto, ainda em validação; o período 2022–2024 é o principal para comparação, e os anos de 2025–2026 são afetados pela centralização de ações no Núcleo de Justiça 4.0; além disso, as taxas de Cuiabá e de Várzea Grande são limites inferiores. As taxas por comarca são publicadas suavizadas e arredondadas a 5 por 100 mil (2022–2024) ou em faixas (por ano), e os fatores associados representam associações, e não causas. O método está descrito em [Metodologia](../metodologia.html#judicializacao).
+
+As **distâncias** do deslocamento são medidas em linha reta entre as sedes municipais (IBGE, Localidades do Brasil 2022), e não pela malha viária, de modo que a distância rodoviária é maior. Boa Esperança do Norte (510183) dispõe da coordenada da sede, mas não tem polígono na malha do IBGE usada nos mapas e, no SIH, ainda não aparece como residência nem como sede de estabelecimento, razão pela qual a sua distância fica vazia, por ausência de internações.
+
+Os **resultados em saúde** (SIM/SINASC) estendem-se até 2024 e são instáveis em municípios com menos de 100 nascidos vivos por ano. Os anos de 2020 e 2021, por sua vez, foram afetados pela COVID-19 em todas as fontes. A relação completa das anomalias conhecidas encontra-se em [Metodologia](../metodologia.html).
 :::
 
 ## Eficiência e produtividade (DEA e Malmquist) {#eficiencia}
@@ -103,58 +118,75 @@ meta_ef <- if (file.exists(md_ef)) data.table::fread(md_ef, encoding = "UTF-8", 
 data_ef <- if (is.null(meta_ef)) "" else meta_ef$valor[meta_ef$item == "data_resultados"][1]
 versao_ef <- if (is.null(meta_ef)) "v2" else meta_ef$valor[meta_ef$item == "versao_resultados"][1]
 nota_ef <- if (is.null(meta_ef) || !any(meta_ef$item == "nota_versao")) "" else meta_ef$valor[meta_ef$item == "nota_versao"][1]
-nota_ef <- if (is.na(nota_ef) || !nzchar(nota_ef)) "" else paste0(" ", nota_ef, " A nota completa está em [Eficiência](../eficiencia/index.html#versao).")
+nota_ef <- if (is.na(nota_ef) || !nzchar(nota_ef)) "" else paste0(" ", nota_ef, " A nota completa encontra-se em [Eficiência](../eficiencia/index.html#versao).")
 n_col_painel <- length(names(data.table::fread(file.path(RAIZ, "arquivos", "dados", "painel_municipal_2020_2025.csv"), nrows = 0, encoding = "UTF-8")))
 ```
 
-Resultados da versão `r sub("^v", "", versao_ef)` da estimação de eficiência (Resultados DEA `r versao_ef`, `r data_ef`), publicados na seção [Eficiência](../eficiencia/index.html) e nos perfis municipais: `r n_ef` arquivos (`r fmt_bytes(tam_ef)` no total), no mesmo formato dos demais (CSV UTF-8, separador vírgula, decimal ponto, célula vazia = indisponível ou não publicável; booleanos em 0/1). Chaves de junção: `cod_mun6` + `modelo` + `ano` nos municípios (modelos M1 atenção básica, M0 consolidado, M2 média complexidade e M2A média complexidade pela ótica do acesso), `cnes` + `ano` nos hospitais (CNES como texto de 7 dígitos) e `co_regsaud` + `ano` nas regiões de saúde. Valores monetários em R$ de 2025 (IPCA).`r nota_ef`
+Esta seção reúne os resultados da versão `r sub("^v", "", versao_ef)` da estimação de eficiência (Resultados DEA `r versao_ef`, `r data_ef`), publicados na seção [Eficiência](../eficiencia/index.html) e nos perfis municipais. São `r n_ef` arquivos (`r fmt_bytes(tam_ef)` no total), relacionados na Tabela 3, no mesmo formato dos demais (CSV UTF-8, separador vírgula e decimal ponto, com célula vazia para valor indisponível ou não publicável e booleanos em 0/1). As chaves de junção são `cod_mun6` + `modelo` + `ano` nos municípios (modelos M1, de atenção básica; M0, consolidado; M2, de média complexidade; e M2A, de média complexidade pela ótica do acesso), `cnes` + `ano` nos hospitais (CNES como texto de 7 dígitos) e `co_regsaud` + `ano` nas regiões de saúde. Os valores monetários estão expressos em R$ de 2025 (IPCA).`r nota_ef`
+
+**Tabela 3 – Arquivos de eficiência e produtividade disponíveis para *download***
 
 ```{r}
 tabela_downloads_eficiencia()
 ```
 
+::: {.nota-fonte}
+Fonte: elaboração própria.
+:::
+
 ::: {.callout-warning collapse="true"}
 ## Como usar os arquivos de eficiência
 
-- **Leia por faixa, não por posição exata.** `faixa` é a fronteira ou o quartil do escore corrigido (`escore_bc`) entre as unidades avaliadas no ano; `ic_inf`–`ic_sup` é o intervalo de confiança de 95%, e `ic_cruza_faixa = 1` indica posição incerta entre duas faixas. Não ordene as unidades pelo escore para montar rankings.
-- **Eficiência não é qualidade.** Os indicadores de resultado das fichas (mortalidade infantil, pré-natal, mortalidade hospitalar padronizada) ficam ao lado do escore e não o alteram.
-- **Linhas sem escore** têm `situacao` diferente de "avaliado", com o motivo em `motivo_situacao`. Metas só devem ser usadas quando `meta_publicavel = 1`. O escore esperado pelo contexto não existe para a ótica do acesso (M2A), para hospitais fora do painel balanceado e para Boa Esperança do Norte (primeiro exercício em 2025).
-- **Registro a verificar** (`registro_a_verificar = 1`) indica dado de origem atípico: a unidade segue avaliada, mas não serve de referência e pode ter a meta financeira omitida. A lista de verificações será encaminhada à SES-MT e ao COSEMS-MT.
-- **Evolução:** as fronteiras são anuais, então o nível do escore não se compara entre anos; use a mudança de eficiência (`ec_*`) e o Malmquist (`mi_*`). O deslocamento tecnológico só aparece de forma agregada (`resumo_modelos.csv`, `malmquist_regiao.csv`), com a ressalva do crescimento do registro no CNES após 2022.
-- Método, modelos e ressalvas em [Metodologia](../metodologia.html#eficiencia) e em [Eficiência — como ler](../eficiencia/index.html).
+**A leitura deve ser feita por faixa, e não por posição exata.** O campo `faixa` indica a fronteira ou o quartil do escore corrigido (`escore_bc`) entre as unidades avaliadas no ano; `ic_inf`–`ic_sup` corresponde ao intervalo de confiança de 95%; e `ic_cruza_faixa = 1` indica posição incerta entre duas faixas. Por essa razão, não se recomenda ordenar as unidades pelo escore para montar *rankings*.
+
+**Eficiência não equivale a qualidade.** Os indicadores de resultado das fichas (mortalidade infantil, pré-natal e mortalidade hospitalar padronizada) são apresentados ao lado do escore e não o alteram.
+
+As **linhas sem escore** apresentam `situacao` diferente de "avaliado", com o motivo registrado em `motivo_situacao`, e as metas somente devem ser utilizadas quando `meta_publicavel = 1`. O escore esperado pelo contexto não existe para a ótica do acesso (M2A), para os hospitais fora do painel balanceado e para Boa Esperança do Norte, cujo primeiro exercício ocorreu em 2025. O sinal **registro a verificar** (`registro_a_verificar = 1`), por sua vez, indica dado de origem atípico: a unidade permanece avaliada, mas não serve de referência e pode ter a meta financeira omitida. A lista de verificações será encaminhada à SES-MT e ao COSEMS-MT.
+
+Quanto à **evolução**, como as fronteiras são anuais, o nível do escore não é comparável entre anos, devendo-se utilizar a mudança de eficiência (`ec_*`) e o índice de Malmquist (`mi_*`). O deslocamento tecnológico aparece somente de forma agregada (`resumo_modelos.csv` e `malmquist_regiao.csv`), com a ressalva do crescimento do registro no CNES após 2022. O método, os modelos e as ressalvas estão descritos em [Metodologia](../metodologia.html#eficiencia) e em [Eficiência — como ler](../eficiencia/index.html).
 :::
 
 ### Dicionário dos campos de eficiência
 
-Todos os campos dos arquivos acima, por arquivo: nome gerencial, unidade, definição e fonte. Clique no nome do arquivo para abrir a lista; a busca procura em todos os campos. O mesmo conteúdo está em [`dicionario_eficiencia.csv`](../arquivos/dados/eficiencia/dicionario_eficiencia.csv).
+A Tabela 4 descreve todos os campos dos arquivos acima, organizados por arquivo, com o nome gerencial, a unidade, a definição e a fonte de cada um. Para abrir a lista, basta clicar no nome do arquivo, e a busca abrange todos os campos. O mesmo conteúdo encontra-se em [`dicionario_eficiencia.csv`](../arquivos/dados/eficiencia/dicionario_eficiencia.csv).
+
+**Tabela 4 – Dicionário dos campos de eficiência, por arquivo**
 
 ```{r}
 tabela_dicionario_eficiencia()
 ```
 
+::: {.nota-fonte}
+Fonte: elaboração própria.
+:::
+
 ## Dicionário dos indicadores {#dicionario}
 
-Os `r n_ind` indicadores do site, por grupo: identificador usado nos arquivos, descrição, unidade, fonte, sentido de leitura (▲ maior é melhor, ▼ menor é melhor, ou contexto) e último ano disponível. Clique em ▶ para ver a fórmula e a nota de cada um, e no nome para abrir a página do indicador. O mesmo conteúdo está em [`indicadores_dicionario.csv`](../arquivos/dados/indicadores_dicionario.csv); as `r n_col_painel` colunas do painel largo estão descritas em [`painel_municipal_dicionario.csv`](../arquivos/dados/painel_municipal_dicionario.csv).
+A Tabela 5 apresenta os `r n_ind` indicadores do site, organizados por grupo, com o identificador usado nos arquivos, a descrição, a unidade, a fonte, o sentido de leitura (▲ maior é melhor, ▼ menor é melhor, ou contexto) e o último ano disponível. Ao clicar em ▶, exibem-se a fórmula e a nota de cada indicador, e, ao clicar no nome, abre-se a página correspondente. O mesmo conteúdo encontra-se em [`indicadores_dicionario.csv`](../arquivos/dados/indicadores_dicionario.csv), e as `r n_col_painel` colunas do painel largo estão descritas em [`painel_municipal_dicionario.csv`](../arquivos/dados/painel_municipal_dicionario.csv).
+
+**Tabela 5 – Dicionário dos indicadores, por grupo**
 
 ```{r}
 tabela_dicionario()
 ```
 
+::: {.nota-fonte}
+Fonte: elaboração própria.
+:::
+
 ## Licença e como citar {#licenca}
 
-Os indicadores, os textos e os arquivos derivados publicados neste site estão sob a licença [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.pt-br): podem ser copiados, redistribuídos, transformados e usados para qualquer fim, inclusive comercial, desde que o projeto seja citado e as alterações sejam indicadas. A exceção são os arquivos e os gráficos de judicialização (arquivos `judicializacao_*` e aba Judicialização), derivados do DataJud/CNJ, que só podem ser usados para fins não comerciais (ver abaixo). Os dados de origem são públicos (DATASUS/Ministério da Saúde, SIOPS e IBGE) e devem ser citados como fontes primárias ao lado do Observatório.
+Os indicadores, os textos e os arquivos derivados publicados neste site estão sob a licença [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.pt-br), que permite copiá-los, redistribuí-los, transformá-los e utilizá-los para qualquer fim, inclusive comercial, desde que o projeto seja citado e as alterações sejam indicadas. Constituem exceção os arquivos e os gráficos de judicialização (arquivos `judicializacao_*` e aba Judicialização), derivados do DataJud/CNJ, que somente podem ser utilizados para fins não comerciais, conforme se detalha adiante. Os dados de origem são públicos (DATASUS/Ministério da Saúde, SIOPS e IBGE) e devem ser citados como fontes primárias ao lado do Observatório.
 
-Nos arquivos da versão 0.4, cite também as fontes primárias próprias de cada seção:
+Nos arquivos da versão 0.4, devem ser citadas também as fontes primárias próprias de cada seção. Na **previsão de demanda**, citam-se o SIH/SUS (DATASUS), o SIVEP-Gripe (Ministério da Saúde), o INMET e o InfoDengue (clima). Na **localização de serviços**, citam-se o SINASC, o SIH/SUS e o CNES (DATASUS), a RIPSA e o IBGE (população); os tempos e as distâncias rodoviários derivam do OpenStreetMap (© colaboradores do OpenStreetMap), disponível sob a licença Open Database License (ODbL), e foram calculados com o OSRM.
 
-- **Previsão de demanda:** SIH/SUS (DATASUS), SIVEP-Gripe (Ministério da Saúde), INMET e InfoDengue (clima).
-- **Localização de serviços:** SINASC, SIH/SUS e CNES (DATASUS), RIPSA e IBGE (população); os tempos e distâncias rodoviários derivam do OpenStreetMap (© colaboradores do OpenStreetMap), disponível sob a licença Open Database License (ODbL), e foram calculados com o OSRM.
-- **Judicialização da saúde:** DataJud — Base Nacional de Dados do Poder Judiciário (CNJ), consultada pela API Pública conforme o seu Termo de Uso (versão 1.2); e TJMT (Corregedoria-Geral da Justiça) para a correspondência entre comarcas e municípios. Cite o DataJud/CNJ como fonte primária. O Termo de Uso da API veda a exploração comercial da API e das informações derivadas dela (itens 3.3 e 3.8); por isso, os arquivos `judicializacao_*` são disponibilizados **somente para uso não comercial**, com citação do DataJud/CNJ e do Observatório, e não se aplica a eles a permissão de uso comercial da licença CC BY 4.0.
+Na **judicialização da saúde**, citam-se o DataJud — Base Nacional de Dados do Poder Judiciário (CNJ), consultado pela API Pública conforme o seu Termo de Uso (versão 1.2), e o TJMT (Corregedoria-Geral da Justiça), para a correspondência entre comarcas e municípios, devendo o DataJud/CNJ ser citado como fonte primária. O Termo de Uso da API veda a exploração comercial da API e das informações dela derivadas (itens 3.3 e 3.8); por essa razão, os arquivos `judicializacao_*` são disponibilizados **somente para uso não comercial**, com citação do DataJud/CNJ e do Observatório, e não se aplica a eles a permissão de uso comercial da licença CC BY 4.0.
 
 **Como citar o site:** DANIEL, L. P. et al. *Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso*. Versão `r VERSAO_SITE`. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.
 
-**Como citar um arquivo:** acrescente o nome do arquivo e a data de acesso, por exemplo: *painel_municipal_2020_2025.csv*, Observatório PPSUS-MT, versão `r VERSAO_SITE` (`r DATA_VERSAO`), acesso em dd/mm/aaaa.
+**Como citar um arquivo:** acrescentam-se o nome do arquivo e a data de acesso, como no exemplo a seguir: *painel_municipal_2020_2025.csv*, Observatório PPSUS-MT, versão `r VERSAO_SITE` (`r DATA_VERSAO`), acesso em dd/mm/aaaa.
 
-Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT. Erros ou sugestões: abra uma *issue* no [repositório do site](https://github.com/daniellindomar/ppsus) ou escreva para lindomar.pegorini@unemat.br.
+Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT. Erros ou sugestões podem ser comunicados por meio de uma *issue* no [repositório do site](https://github.com/daniellindomar/ppsus) ou pelo endereço lindomar.pegorini@unemat.br.
 
 ```{r}
 fonte_rodape()

@@ -97,7 +97,7 @@ explorador_dados <- function(id_tab = "explorador", arquivo = "observatorio-ppsu
                         lapply(anos_c, function(a) tags$option(value = a, a)))),
         tags$button(type = "button", class = "btn btn-sm btn-primary", onclick = "explBaixar()",
                     "Baixar o recorte filtrado (CSV)"),
-        span(class = "nota-fonte", sprintf("%s linhas (município × indicador); as listas nos cabeçalhos filtram a tabela e o arquivo baixado.", num(nrow(d))))),
+        span(class = "nota-fonte", sprintf("%s linhas (município × indicador); as listas dos cabeçalhos filtram tanto a tabela quanto o arquivo baixado.", num(nrow(d))))),
     reactable(d, elementId = id_tab, filterable = TRUE, searchable = TRUE, compact = TRUE, striped = TRUE,
               highlight = TRUE, defaultPageSize = 20, showPageSizeOptions = TRUE, pageSizeOptions = c(20, 50, 100, 500),
               columns = colunas, wrap = TRUE, resizable = TRUE),

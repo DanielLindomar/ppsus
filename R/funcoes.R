@@ -335,13 +335,13 @@ situacao <- function(valor, ref, sentido) {
 span_sit <- function(sit) span(class = paste("sit", sit$cls), sit$txt)
 
 # ---- 4. Componentes htmltools --------------------------------------------------------
-TEXTO_VERSAO <- paste0("<b>Versão ", VERSAO_SITE, "</b> (", DATA_VERSAO, ") — dados e indicadores 2020–2025, deslocamento nas internações ",
-                       "(inclusive as de residentes de Mato Grosso em hospitais de outros estados), escores de eficiência (DEA) ",
-                       "e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da ",
-                       "versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT; ",
-                       "e, em caráter preliminar, a previsão de demanda das internações respiratórias, a localização de serviços de saúde ",
-                       "(pilotos de atenção ao parto e UTI adulto) e a judicialização da saúde (DataJud/CNJ). ",
-                       "Cada valor mostra a fonte e o ano a que se refere.")
+TEXTO_VERSAO <- paste0("<b>Versão ", VERSAO_SITE, "</b> (", DATA_VERSAO, "). Esta versão reúne os dados e indicadores de 2020–2025, o deslocamento nas internações ",
+                       "(inclusive as de residentes de Mato Grosso em hospitais de outros estados) e os escores de eficiência (DEA) ",
+                       "e de produtividade (Malmquist) dos municípios, dos hospitais e das regiões de saúde, com resultados de eficiência da ",
+                       "versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT. ",
+                       "Apresenta, ainda, em caráter preliminar, a previsão de demanda das internações respiratórias, a localização de serviços de saúde ",
+                       "(pilotos de atenção ao parto e de UTI adulto) e a judicialização da saúde (DataJud/CNJ). ",
+                       "Cada valor é acompanhado da fonte e do ano a que se refere.")
 faixa_versao <- function(texto = TEXTO_VERSAO) div(class = "faixa-versao", HTML(texto))
 faixa_construcao <- function(texto) div(class = "faixa-construcao", HTML(texto))
 
@@ -814,12 +814,12 @@ resumo_desl <- function(ano, nivel = "total") {
 # eficiencia = TRUE: páginas com valores de eficiência (em R$ de 2025, IPCA) ao lado dos indicadores (R$ correntes)
 fonte_rodape <- function(prefixo = "../", extra = NULL, eficiencia = FALSE) {
   p(class = "nota-fonte",
-    "Fontes: DATASUS/Ministério da Saúde (CNES, SIA, SIH, SISAB, SI-PNI, SIM, SINASC), SIOPS e IBGE, tratados pelo ",
-    "Projeto PPSUS-MT (Data Lake do SUS-MT). ",
-    if (eficiencia) "Indicadores em R$ correntes (despesa liquidada); valores de eficiência em R$ de 2025 (IPCA); "
-    else "Despesas em R$ correntes (liquidadas); ",
-    "produção hospitalar pelo ano da alta; ",
-    "medianas calculadas entre os municípios de Mato Grosso no ano indicado. ", extra,
-    "Definições, ressalvas e anomalias conhecidas em ", a(href = paste0(prefixo, "metodologia.html"), "Metodologia", .noWS = "after"),
-    "; arquivos completos em ", a(href = paste0(prefixo, "dados/index.html"), "Dados", .noWS = "after"), ".")
+    "Fonte: elaboração própria com base em dados do DATASUS/Ministério da Saúde (CNES, SIA, SIH, SISAB, SI-PNI, SIM, SINASC), do SIOPS e do IBGE, tratados pelo ",
+    "Projeto PPSUS-MT (", tags$em("Data Lake", .noWS = "outside"), " do SUS-MT). ",
+    if (eficiencia) "Nota: os indicadores estão expressos em R$ correntes (despesa liquidada), e os valores de eficiência, em R$ de 2025 (IPCA); "
+    else "Nota: as despesas estão expressas em R$ correntes (valores liquidados); ",
+    "a produção hospitalar é atribuída ao ano da alta; ",
+    "e as medianas são calculadas entre os municípios de Mato Grosso no ano indicado. ", extra,
+    "As definições, as ressalvas e as anomalias conhecidas encontram-se em ", a(href = paste0(prefixo, "metodologia.html"), "Metodologia", .noWS = "after"),
+    ", e os arquivos completos, em ", a(href = paste0(prefixo, "dados/index.html"), "Dados", .noWS = "after"), ".")
 }

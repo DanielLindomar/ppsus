@@ -1,6 +1,6 @@
 ---
 title: "Metodologia"
-description: "Fontes, definições, janela 2020–2025, anomalias conhecidas e pipeline dos dados do Observatório PPSUS-MT"
+description: "Fontes, definições, janela 2020–2025, anomalias conhecidas, métodos, referências e fluxo de processamento dos dados do Observatório PPSUS-MT"
 toc-depth: 3
 ---
 
@@ -21,57 +21,70 @@ fuga_pct <- function(nivel, ano = 2025L) {
 faixa_versao()
 ```
 
-Esta página explica de onde vêm os números do site, o que cada um significa, por que a janela é 2020–2025 e quais problemas conhecidos dos dados exigem cautela na leitura. É a referência para todas as demais páginas; o dicionário completo dos indicadores está em [Dados](dados/index.html).
+Esta página descreve a origem dos números apresentados no Observatório, o significado de cada um, as razões para a adoção da janela 2020–2025 e os problemas conhecidos dos dados que exigem cautela na leitura. Apresentam-se, também, os métodos empregados nas seções de eficiência, previsão, localização e judicialização, com as respectivas referências bibliográficas, reunidas ao final. Trata-se, portanto, da referência metodológica para todas as demais páginas, ao passo que o dicionário completo dos indicadores encontra-se em [Dados](dados/index.html).
 
 ## Fontes de dados
 
-Todas as fontes são públicas e foram obtidas dos sistemas nacionais do SUS (DATASUS/Ministério da Saúde), do SIOPS e do IBGE. Os arquivos brutos foram carregados em um repositório único do projeto (Data Lake do SUS-MT), validados e reorganizados em painéis por município e ano. As seções da versão 0.4 usam também fontes de fora do SUS (SIVEP-Gripe, INMET, InfoDengue, OpenStreetMap e DataJud/CNJ), descritas adiante em [Previsão](#previsao), [Localização](#localizacao) e [Judicialização](#judicializacao).
+Todas as fontes utilizadas são públicas e foram obtidas dos sistemas nacionais do Sistema Único de Saúde (SUS), mantidos pelo Departamento de Informação e Informática do SUS (DATASUS) do Ministério da Saúde, do Sistema de Informações sobre Orçamentos Públicos em Saúde (SIOPS) e do Instituto Brasileiro de Geografia e Estatística (IBGE). Os arquivos brutos foram carregados em um repositório único do projeto (*Data Lake* do SUS-MT), validados e reorganizados em painéis por município e ano. As seções introduzidas na versão 0.4 utilizam, adicionalmente, fontes externas ao SUS (SIVEP-Gripe, INMET, InfoDengue, OpenStreetMap e DataJud/CNJ), descritas adiante em [Previsão](#previsao), [Localização](#localizacao) e [Judicialização](#judicializacao). A Tabela 1 sintetiza, para cada fonte, o seu conteúdo, o período utilizado e as informações extraídas.
+
+**Tabela 1 – Fontes de dados, períodos utilizados e informações extraídas**
 
 ::: {.rolagem-x}
 | Fonte | O que é | Período usado | O que se extrai |
 |---|---|---|---|
-| **SIOPS** | Declarações orçamentárias dos municípios em saúde (RREO) | 2020–2025 | Despesa liquidada total e por subfunção (atenção básica, média e alta complexidade, outras), despesa corrente e de capital, parcela com recursos próprios |
-| **CNES** | Cadastro de estabelecimentos, leitos, equipamentos e profissionais | 2020–2025 (média das competências mensais) | Profissionais SUS em equivalente de 40 h (médicos, enfermeiros, técnicos, dentistas, agentes comunitários de saúde — CBO 515105), leitos SUS e de UTI, equipamentos em uso, unidades básicas, hospitais, UPA, equipes de saúde da família, de atenção primária e de saúde bucal |
-| **SIA** | Produção ambulatorial aprovada | 2020–2025 (competência de realização) | Quantidade e valor de procedimentos de média e alta complexidade, pelo município do estabelecimento e pelo de residência |
-| **SIH** | Internações pagas por AIH | 2020–2025 (ano da alta) | Internações por complexidade, diárias, diárias de UTI, óbitos, urgência, valor; pelo município do hospital e pelo de residência; fluxos entre municípios |
+| **SIOPS** | Declarações orçamentárias dos municípios em saúde, por meio do Relatório Resumido da Execução Orçamentária (RREO) | 2020–2025 | Despesa liquidada total e por subfunção (atenção básica, média e alta complexidade, outras), despesa corrente e de capital, parcela com recursos próprios |
+| **CNES** | Cadastro Nacional de Estabelecimentos de Saúde: estabelecimentos, leitos, equipamentos e profissionais | 2020–2025 (média das competências mensais) | Profissionais SUS em equivalente de 40 h (médicos, enfermeiros, técnicos, dentistas, agentes comunitários de saúde — CBO 515105), leitos SUS e de UTI, equipamentos em uso, unidades básicas, hospitais, UPA, equipes de saúde da família, de atenção primária e de saúde bucal |
+| **SIA** | Sistema de Informações Ambulatoriais do SUS: produção ambulatorial aprovada | 2020–2025 (competência de realização) | Quantidade e valor de procedimentos de média e alta complexidade, pelo município do estabelecimento e pelo de residência |
+| **SIH** | Sistema de Informações Hospitalares do SUS: internações pagas por Autorização de Internação Hospitalar (AIH) | 2020–2025 (ano da alta) | Internações por complexidade, diárias, diárias de UTI, óbitos, urgência, valor; pelo município do hospital e pelo de residência; fluxos entre municípios |
 | **SIH (outras UF)** | Internações pagas por AIH em hospitais das outras 26 unidades da federação (arquivos RD de cada estado), filtradas a residentes de Mato Grosso | 2020–2025 (ano da alta) | Internações de residentes de Mato Grosso fora do estado, por estado e município de destino e por complexidade; saldo de internações com cada estado (página [Deslocamento](deslocamento/index.html#fuga)) |
-| **SISAB** | Produção das equipes de atenção básica | 2020–2025 | Atendimentos individuais, odontológicos, procedimentos, visitas domiciliares; atendimentos por médico e por enfermeiro |
-| **SI-PNI** | Doses de vacina aplicadas | 2020–2025 (sem COVID-19) | Doses aplicadas no município, doses em menores de 1 ano |
-| **SIM** | Óbitos por residência | 2020–2024 | Óbitos totais e de menores de 1 ano; taxas de mortalidade geral e infantil |
-| **SINASC** | Nascidos vivos por residência da mãe | 2020–2024 | Nascidos vivos, pré-natal com 7+ consultas, baixo peso, cesáreas, mães adolescentes |
+| **SISAB** | Sistema de Informação em Saúde para a Atenção Básica: produção das equipes de atenção básica | 2020–2025 | Atendimentos individuais, odontológicos, procedimentos, visitas domiciliares; atendimentos por médico e por enfermeiro |
+| **SI-PNI** | Sistema de Informação do Programa Nacional de Imunizações: doses de vacina aplicadas | 2020–2025 (sem COVID-19) | Doses aplicadas no município, doses em menores de 1 ano |
+| **SIM** | Sistema de Informações sobre Mortalidade: óbitos por residência | 2020–2024 | Óbitos totais e de menores de 1 ano; taxas de mortalidade geral e infantil |
+| **SINASC** | Sistema de Informações sobre Nascidos Vivos: nascidos vivos por residência da mãe | 2020–2024 | Nascidos vivos, pré-natal com 7+ consultas, baixo peso, cesáreas, mães adolescentes |
 | **IBGE** | População, malha e sedes municipais | 2020–2025 | Estimativas anuais (Censo em 2022; 2023 interpolada entre o Censo e 2024), malha municipal (mapas) e coordenadas das sedes municipais (Localidades do Brasil 2022), usadas nas distâncias em linha reta do deslocamento |
+:::
+
+::: {.nota-fonte}
+Fonte: elaboração própria.
 :::
 
 ## Definições que valem em todo o site
 
-- **Local × residência.** Indicadores com sufixo *local* (ou "realizados no município") contam o que foi feito nos estabelecimentos do município, inclusive para pacientes de fora. Indicadores por *residência* contam o que aconteceu com os moradores do município, onde quer que tenham sido atendidos em Mato Grosso. A diferença entre os dois é a base da análise de [deslocamento](deslocamento/index.html).
-- **Despesa liquidada.** Valor do SIOPS na fase de liquidação (serviço prestado e reconhecido), acumulado no ano, em reais correntes — sem correção pela inflação. Comparações entre anos devem considerar a inflação do período; nos modelos de eficiência (DEA), os valores são deflacionados para reais de 2025 pelo IPCA.
-- **FTE (equivalente de 40 horas).** Profissionais contados pela carga horária semanal contratada dividida por 40, somente vínculos com atendimento SUS, na média das competências do ano. Um médico com 20 horas conta como 0,5.
-- **Complexidade.** Média complexidade (MC) e alta complexidade (AC) seguem a classificação dos procedimentos no SIA e no SIH. A atenção básica é medida pelo SISAB, não pelo SIA.
-- **Ano da alta.** As internações são atribuídas ao ano em que o paciente recebeu alta, e cada AIH de tipo 1 conta uma internação, sem duplicar as continuidades.
-- **Distância residência–hospital.** Linha reta (haversine) entre as sedes municipais do IBGE (Localidades do Brasil 2022) do município de residência e do município do hospital, ponderada pelas internações; zero no próprio município. Não é distância rodoviária: o trajeto real é maior.
-- **Per capita.** Razão entre o total do ano e a população estimada do mesmo ano. Para regiões e para o estado, a razão é recalculada com os totais agregados, e não pela média dos municípios.
-- **Mediana dos municípios.** Valor que divide os 142 municípios ao meio; usada como referência nos perfis porque é menos sensível a valores extremos que a média.
-- **Sentido do indicador.** Nos perfis, ▲/▼ e as cores indicam se o município está acima ou abaixo da mediana e se isso é favorável (verde), desfavorável (vermelho) ou apenas contexto (cinza). A cor nunca é o único sinal.
+As definições a seguir aplicam-se a todas as páginas do Observatório. Os indicadores com sufixo *local* (ou "realizados no município") contabilizam o que foi feito nos estabelecimentos do município, inclusive para pacientes de outras localidades, enquanto os indicadores por *residência* contabilizam o que ocorreu com os moradores do município, onde quer que tenham sido atendidos em Mato Grosso. A diferença entre as duas óticas, **local × residência**, constitui a base da análise de [deslocamento](deslocamento/index.html).
 
-## Por que 2020–2025
+No que se refere aos insumos, a **despesa liquidada** corresponde ao valor registrado no SIOPS na fase de liquidação, isto é, quando o serviço foi prestado e reconhecido, acumulado no ano e expresso em reais correntes, sem correção pela inflação. Por essa razão, as comparações entre anos devem considerar a inflação do período; nos modelos de eficiência (DEA), os valores são deflacionados para reais de 2025 pelo Índice Nacional de Preços ao Consumidor Amplo (IPCA). Os profissionais, por sua vez, são contados em **equivalente de tempo integral de 40 horas** (FTE, do inglês *full-time equivalent*), obtido pela divisão da carga horária semanal contratada por 40, considerando somente os vínculos com atendimento SUS e a média das competências do ano; assim, um médico com 20 horas semanais equivale a 0,5.
 
-A janela começa em 2020 porque é o primeiro ano com SIOPS, SISAB e SIH completos e comparáveis no repositório do projeto (2019 tem SISAB e qualidade, mas não tem SIOPS nem SIH processados). Termina em 2025 porque 2026 está em curso e é parcial em todas as fontes. Dentro da janela, SIM e SINASC vão até 2024 (o processamento nacional dos óbitos e nascimentos fecha com um ano de atraso), por isso os indicadores de resultado mostram 2024 como último ano. Em 2020–2025, 141 municípios têm série completa; Boa Esperança do Norte existe a partir de 2025.
+Quanto à **complexidade**, a média complexidade (MC) e a alta complexidade (AC) seguem a classificação dos procedimentos no SIA e no SIH, ao passo que a atenção básica é medida pelo SISAB, e não pelo SIA. As internações são atribuídas ao **ano da alta**, isto é, ao ano em que o paciente recebeu alta, e cada AIH de tipo 1 corresponde a uma internação, sem duplicação das continuidades. A **distância residência–hospital** é medida em linha reta, pela fórmula de haversine, entre as sedes municipais do IBGE (Localidades do Brasil 2022) do município de residência e do município do hospital, ponderada pelas internações e igual a zero no próprio município. Ressalta-se que essa medida não corresponde à distância rodoviária, uma vez que o trajeto real é maior.
+
+Os indicadores ***per capita*** correspondem à razão entre o total do ano e a população estimada do mesmo ano; para as regiões e para o estado, a razão é recalculada com os totais agregados, e não pela média dos municípios. A **mediana dos municípios**, valor que divide os 142 municípios em duas metades, é empregada como referência nos perfis por ser menos sensível a valores extremos do que a média. Por fim, quanto ao **sentido do indicador**, os símbolos ▲/▼ e as cores dos perfis indicam se o município está acima ou abaixo da mediana e se essa posição é favorável (verde), desfavorável (vermelho) ou apenas de contexto (cinza), de modo que a cor nunca constitui o único sinal.
+
+## Janela analítica: justificativa do período 2020–2025 {#por-que-20202025}
+
+A janela analítica inicia-se em 2020 por ser o primeiro ano em que o SIOPS, o SISAB e o SIH se encontram completos e comparáveis no repositório do projeto; em 2019, há dados do SISAB e de qualidade, mas não há SIOPS nem SIH processados. O término em 2025 justifica-se porque 2026 está em curso e é parcial em todas as fontes. Dentro da janela, os dados do SIM e do SINASC estendem-se até 2024, uma vez que o processamento nacional dos óbitos e dos nascimentos é concluído com um ano de atraso; por essa razão, os indicadores de resultado apresentam 2024 como último ano. Em 2020–2025, 141 municípios dispõem de série completa, ao passo que Boa Esperança do Norte existe somente a partir de 2025.
 
 ## Anomalias e limitações conhecidas
 
-Os problemas abaixo foram identificados na validação dos painéis e estão em ordem de importância para a leitura dos indicadores e para os modelos de eficiência. Nenhum deles foi "corrigido" silenciosamente: o site mostra o dado como declarado e avisa.
+Os problemas descritos a seguir foram identificados na validação dos painéis e são apresentados em ordem de importância para a leitura dos indicadores e para os modelos de eficiência. Destaca-se que nenhum deles foi "corrigido" silenciosamente: o site apresenta o dado tal como declarado e sinaliza a limitação correspondente.
 
-1. **A divisão da despesa por subfunção não é confiável em alguns municípios.** Várzea Grande lança cerca de 83% da despesa em "outras subfunções" (menos de 1% em atenção básica); Cuiabá, cerca de 40%; Rondolândia, Alto Boa Vista e Planalto da Serra, mais da metade. Nesses casos, a despesa em atenção básica e em média e alta complexidade por habitante está subestimada. **Use a despesa total em saúde como referência**; a quebra por subfunção serve para os demais municípios e será tratada com análise de sensibilidade no DEA.
-2. **A atenção básica migrou do SIA para o SISAB.** A parcela da atenção básica na produção do SIA caiu de 40% para 20% entre 2019 e 2025, porque o registro passou a ser feito no SISAB. Por isso a produção da atenção básica é medida pelo SISAB; o SIA fica restrito à média e alta complexidade.
-3. **A residência do paciente no SIA melhorou ao longo do tempo.** A parcela de procedimentos ambulatoriais com residência ignorada caiu de 79% (2019) para 49% (2025) com a mudança do registro consolidado para o individualizado. Os indicadores ambulatoriais por residência não são comparáveis entre anos e por isso não são publicados; a análise de deslocamento usa somente as internações (SIH), em que a residência é bem preenchida.
-4. **As internações em outros estados ficam fora dos indicadores municipais.** Os indicadores por residência, os fluxos entre municípios e os modelos de eficiência usam a produção realizada em Mato Grosso. Desde a versão 0.3, as internações de residentes de Mato Grosso em hospitais das outras 26 unidades da federação são medidas com o SIH desses estados e aparecem na página [Deslocamento](deslocamento/index.html#fuga): `r fuga_pct("total")` das internações dos residentes em 2025, mas `r fuga_pct("AC")` das de alta complexidade. Os indicadores por residência subestimam, portanto, a demanda hospitalar, sobretudo na alta complexidade e nos municípios de fronteira (Rondolândia é o caso extremo). A AIH não traz o Cartão Nacional de Saúde: a contagem é de internações, não de pessoas. Atendimentos ambulatoriais em outros estados não estão no site.
-5. **COVID-19 em 2020 e 2021.** A mortalidade hospitalar chegou a 5,8% em 2021, os leitos de UTI foram ampliados temporariamente, a mortalidade geral subiu e a produção da atenção básica caiu em 2020. Comparações que envolvem esses anos devem ser lidas com essa lente; o índice de Malmquist será calculado com e sem 2020–2021.
-6. **Leitos de UTI SUS sub-registrados no CNES.** O cadastro informa cerca de 490 leitos de UTI SUS para um parque de mais de 1.300 leitos existentes, e há hospitais com UTI em funcionamento e zero leitos SUS declarados. O número de leitos de UTI aparece como contexto; as diárias de UTI do SIH são a medida mais confiável do uso.
-7. **Municípios pequenos oscilam muito.** Em 2019–2024, em 308 dos 846 município-anos (141 municípios × 6 anos) houve menos de 100 nascidos vivos, o que torna a taxa de mortalidade infantil instável (um óbito a mais muda a taxa em vários pontos). Há também valores per capita extremos (Araguainha, R$ 7.748 por habitante em despesa; Nova Nazaré, 113 procedimentos por habitante por registro consolidado). Nos perfis esses valores aparecem como estão, com nota; nos modelos serão suavizados ou limitados.
-8. **O crescimento dos registros do CNES pode ser melhoria de cadastro, não só expansão real.** Os médicos SUS em equivalente de 40 horas cresceram 96% entre 2019 e 2025 e os equipamentos em uso dobraram. Parte desse crescimento é atualização do cadastro; a leitura de tendências de capacidade e do Malmquist deve considerar isso.
-9. **Muitos municípios não têm hospital SUS.** Em 2025, 53 municípios não tinham hospital SUS e 61 não tiveram internação local (60 com internações de residentes, mais Boa Esperança do Norte, ainda sem registros no SIH). Para eles, os indicadores "locais" de internação ficam vazios ou zerados, e a leitura relevante é a de acesso: quantas internações os moradores tiveram, onde e a que distância.
-10. **Cobertura das bordas da janela.** Boa Esperança do Norte só existe a partir de 2025 e não entra na malha do IBGE usada nos mapas (tem, porém, a coordenada da sede nas Localidades 2022, usada nas distâncias); 2026 é parcial em todas as fontes e não é publicado; SIM e SINASC param em 2024.
+**A divisão da despesa por subfunção não é confiável em alguns municípios.** Várzea Grande lança cerca de 83% da despesa em "outras subfunções" (menos de 1% em atenção básica); Cuiabá, cerca de 40%; e Rondolândia, Alto Boa Vista e Planalto da Serra, mais da metade. Nesses casos, a despesa por habitante em atenção básica e em média e alta complexidade encontra-se subestimada. **Recomenda-se, por isso, adotar a despesa total em saúde como referência**, reservando-se a desagregação por subfunção aos demais municípios; essa limitação será tratada com análise de sensibilidade na DEA.
+
+**O registro da atenção básica migrou do SIA para o SISAB.** A parcela da atenção básica na produção do SIA caiu de 40% para 20% entre 2019 e 2025, uma vez que o registro passou a ser feito no SISAB. Em consequência, a produção da atenção básica é medida pelo SISAB, e o uso do SIA restringe-se à média e à alta complexidade.
+
+**O preenchimento da residência do paciente no SIA melhorou ao longo do tempo.** A parcela de procedimentos ambulatoriais com residência ignorada caiu de 79% (2019) para 49% (2025), em razão da mudança do registro consolidado para o individualizado. Por conseguinte, os indicadores ambulatoriais por residência não são comparáveis entre anos e não são publicados; a análise de deslocamento utiliza somente as internações (SIH), nas quais a residência é bem preenchida.
+
+**As internações em outros estados não integram os indicadores municipais.** Os indicadores por residência, os fluxos entre municípios e os modelos de eficiência utilizam a produção realizada em Mato Grosso. Desde a versão 0.3, as internações de residentes de Mato Grosso em hospitais das outras 26 unidades da federação são medidas com o SIH desses estados e apresentadas na página [Deslocamento](deslocamento/index.html#fuga): elas representam `r fuga_pct("total")` das internações dos residentes em 2025, mas `r fuga_pct("AC")` das de alta complexidade. Os indicadores por residência subestimam, portanto, a demanda hospitalar, sobretudo na alta complexidade e nos municípios de fronteira, dos quais Rondolândia constitui o caso extremo. Ademais, como a AIH não registra o Cartão Nacional de Saúde (CNS), a contagem refere-se a internações, e não a pessoas. Os atendimentos ambulatoriais realizados em outros estados não constam do site.
+
+**A pandemia de COVID-19 afetou os anos de 2020 e 2021.** A mortalidade hospitalar chegou a 5,8% em 2021, os leitos de Unidade de Terapia Intensiva (UTI) foram ampliados temporariamente, a mortalidade geral aumentou e a produção da atenção básica caiu em 2020. Assim, as comparações que envolvem esses anos devem ser interpretadas à luz desse contexto, e o índice de Malmquist será calculado com e sem o período 2020–2021.
+
+**Os leitos de UTI SUS são sub-registrados no CNES.** O cadastro informa cerca de 490 leitos de UTI SUS para um parque de mais de 1.300 leitos existentes, e há hospitais com UTI em funcionamento sem nenhum leito SUS declarado. Por essa razão, o número de leitos de UTI é apresentado apenas como contexto, sendo as diárias de UTI registradas no SIH a medida mais confiável do uso.
+
+**Os indicadores dos municípios pequenos oscilam muito.** Em 2019–2024, 308 dos 846 município-anos (141 municípios × 6 anos) registraram menos de 100 nascidos vivos, o que torna a taxa de mortalidade infantil instável, uma vez que um óbito a mais altera a taxa em vários pontos. Observam-se também valores *per capita* extremos, como os de Araguainha (R$ 7.748 por habitante em despesa) e de Nova Nazaré (113 procedimentos por habitante, por registro consolidado). Nos perfis, esses valores são apresentados como registrados, acompanhados de nota; nos modelos, serão suavizados ou limitados.
+
+**O crescimento dos registros do CNES pode refletir a melhoria do cadastro, e não apenas a expansão real.** Os médicos SUS em equivalente de 40 horas cresceram 96% entre 2019 e 2025, e os equipamentos em uso dobraram. Como parte desse crescimento decorre da atualização do cadastro, a leitura das tendências de capacidade e do índice de Malmquist deve levar esse fator em consideração.
+
+**Muitos municípios não dispõem de hospital SUS.** Em 2025, 53 municípios não tinham hospital SUS e 61 não registraram internação local (60 com internações de residentes, além de Boa Esperança do Norte, ainda sem registros no SIH). Para esses municípios, os indicadores "locais" de internação ficam vazios ou zerados, e a leitura relevante passa a ser a do acesso, isto é, quantas internações os moradores tiveram, onde e a que distância.
+
+**A cobertura nas bordas da janela é incompleta.** Boa Esperança do Norte existe somente a partir de 2025 e não consta da malha do IBGE usada nos mapas, embora disponha da coordenada da sede nas Localidades 2022, utilizada no cálculo das distâncias. Além disso, o ano de 2026 é parcial em todas as fontes e não é publicado, e as séries do SIM e do SINASC encerram-se em 2024.
 
 ## Eficiência e produtividade (DEA e Malmquist) {#eficiencia}
 
@@ -105,28 +118,37 @@ tab_modelos <- function() {
 }
 ```
 
-A seção [Eficiência](eficiencia/index.html) publica os escores de eficiência técnica e a evolução da produtividade dos municípios, dos hospitais SUS e das regiões de saúde, calculados pelo projeto a partir dos mesmos painéis deste site. Os números vêm da versão `r sub("^v", "", meta_ef("versao_resultados"))` da estimação (`r meta_ef("data_resultados")`), aprovada pelo coordenador e em validação com a SES-MT e o COSEMS-MT.`r if (!is.na(meta_ef("versao_anterior")) && nzchar(meta_ef("versao_anterior"))) sprintf(" Na versão %s, o modelo de atenção básica foi reestimado com o insumo de agentes comunitários de saúde restrito ao ACS (CBO 515105), em vez de toda a família 5151 (que inclui agentes de combate às endemias e agentes indígenas), usada na versão %s. Os demais modelos são os da versão %s, descritos no relatório técnico *%s*.", sub("^v", "", meta_ef("versao_resultados")), sub("^v", "", meta_ef("versao_anterior")), sub("^v", "", meta_ef("versao_anterior")), meta_ef("relatorio_tecnico")) else ""`
+A seção [Eficiência](eficiencia/index.html) publica os escores de eficiência técnica e a evolução da produtividade dos municípios, dos hospitais SUS e das regiões de saúde, calculados pelo projeto a partir dos mesmos painéis deste site. Os números provêm da versão `r sub("^v", "", meta_ef("versao_resultados"))` da estimação (`r meta_ef("data_resultados")`), aprovada pelo coordenador e em validação com a SES-MT e com o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT).`r if (!is.na(meta_ef("versao_anterior")) && nzchar(meta_ef("versao_anterior"))) sprintf(" Na versão %s, o modelo de atenção básica foi reestimado com o insumo de agentes comunitários de saúde restrito ao ACS (CBO 515105), em substituição a toda a família 5151, que inclui agentes de combate às endemias e agentes indígenas e havia sido utilizada na versão %s. Os demais modelos correspondem aos da versão %s, descritos no relatório técnico *%s*.", sub("^v", "", meta_ef("versao_resultados")), sub("^v", "", meta_ef("versao_anterior")), sub("^v", "", meta_ef("versao_anterior")), meta_ef("relatorio_tecnico")) else ""`
 
-- **O que o escore mede.** A Análise Envoltória de Dados (DEA) compara o que cada unidade produz com os recursos que usa, frente às melhores práticas observadas no mesmo ano em Mato Grosso, que formam a fronteira de eficiência. Usa-se o modelo BCC orientado ao produto: a pergunta é quanto a produção poderia crescer com os mesmos recursos, comparando unidades de porte semelhante. O escore vai de 0 a 1 (1 = fronteira). Ele mede eficiência técnica, **não a qualidade do cuidado**: os resultados em saúde ficam ao lado, sem alterar o escore.
-- **Faixas com intervalo de confiança, não ranking.** O escore é corrigido do viés da estimação por reamostragem (bootstrap, `r num(par_ef("b_bootstrap"))` réplicas), com intervalo de confiança de 95%. A leitura é por faixa: fronteira ou quartil do escore corrigido entre as unidades avaliadas; quando o intervalo alcança a faixa vizinha, a posição é incerta. As fronteiras são anuais, por isso o nível do escore não se compara entre anos — a evolução é lida pelo Malmquist.
-- **Pares e metas.** Pares de referência e metas vêm de uma fronteira formada só por unidades com registro plausível. A meta plena é o que as melhores práticas comparáveis alcançam com os mesmos recursos; a meta intermediária cobre `r num(100 * par_ef("meta_intermediaria_fracao"))`% da distância até ela; o potencial de melhoria é a diferença em unidades, em % e, nos recursos financeiros, em R$ de `r as.integer(par_ef("ano_base_precos"))` (IPCA).
-- **Contexto.** Um segundo estágio estima o escore esperado pelo contexto — porte, riqueza, densidade, distância e finanças, fatores fora do controle do gestor —, e a diferença entre o observado e o esperado indica se o desempenho está acima, abaixo ou dentro do previsto. A eficiência condicional (comparação só entre unidades semelhantes) entra como informação complementar.
-- **Produtividade (Malmquist).** Mede a variação entre dois anos e se divide em mudança de eficiência (aproximação às melhores práticas, componente atribuível à gestão, publicado por unidade) e deslocamento tecnológico (movimento da própria fronteira, publicado só de forma agregada e com ressalva, porque após 2022 pode refletir o crescimento do registro no CNES). Tendências só são rotuladas quando a variação supera ±`r num(100 * par_ef("tendencia_limiar"))`% ao ano de forma consistente.
-- **Alta complexidade.** O produto gerencial é o painel das 16 regiões de saúde (acesso dos moradores, produção realizada na região e autossuficiência). O escore DEA de alta complexidade é diagnóstico e só é publicado para as regiões com oferta contínua e registro plausível: `r lista_pt(reg_m3)`.
+A Análise Envoltória de Dados (DEA, do inglês *Data Envelopment Analysis*), proposta por Charnes, Cooper e Rhodes (1978), compara o que cada unidade produz com os recursos que utiliza, tendo como referência as melhores práticas observadas no mesmo ano em Mato Grosso, que formam a fronteira de eficiência. Adota-se o modelo BCC (BANKER; CHARNES; COOPER, 1984), com retornos variáveis de escala e orientação ao produto, de modo que a questão investigada é quanto a produção poderia crescer com os mesmos recursos, na comparação entre unidades de porte semelhante. O escore varia de 0 a 1, sendo 1 o valor correspondente à fronteira. Cumpre ressaltar que o escore mede a eficiência técnica, **e não a qualidade do cuidado**: os resultados em saúde são apresentados ao lado, sem alterar o escore.
+
+A leitura dos resultados é feita por faixas com intervalo de confiança, e não por *ranking*. O escore é corrigido do viés de estimação por reamostragem (*bootstrap*), conforme o procedimento de Simar e Wilson (1998), com `r num(par_ef("b_bootstrap"))` réplicas e intervalo de confiança de 95%. Cada unidade é classificada na fronteira ou em um quartil do escore corrigido entre as unidades avaliadas e, quando o intervalo de confiança alcança a faixa vizinha, a posição é considerada incerta. Como as fronteiras são anuais, o nível do escore não é comparável entre anos, razão pela qual a evolução é avaliada pelo índice de Malmquist.
+
+Os pares de referência e as metas, por sua vez, derivam de uma fronteira formada apenas por unidades com registro plausível. A meta plena corresponde ao que as melhores práticas comparáveis alcançam com os mesmos recursos; a meta intermediária cobre `r num(100 * par_ef("meta_intermediaria_fracao"))`% da distância até ela; e o potencial de melhoria corresponde à diferença entre a meta plena e o valor observado, expressa em unidades, em percentual e, no caso dos recursos financeiros, em R$ de `r as.integer(par_ef("ano_base_precos"))` (IPCA).
+
+O contexto em que cada unidade opera é considerado em um segundo estágio, conduzido segundo o procedimento de Simar e Wilson (2007), que estima o escore esperado em função do porte, da riqueza, da densidade, da distância e das finanças, fatores que escapam ao controle do gestor. A diferença entre o escore observado e o esperado indica se o desempenho está acima, abaixo ou dentro do previsto. A eficiência condicional de ordem *m*, que compara cada unidade apenas com unidades de contexto semelhante (CAZALS; FLORENS; SIMAR, 2002; DARAIO; SIMAR, 2005), entra como informação complementar.
+
+A produtividade é acompanhada pelo índice de Malmquist (CAVES; CHRISTENSEN; DIEWERT, 1982), na formulação de Färe *et al.* (1994), que mede a variação entre dois anos e se decompõe em dois componentes. O primeiro, a mudança de eficiência, expressa a aproximação às melhores práticas e constitui o componente atribuível à gestão, publicado por unidade; o segundo, o deslocamento tecnológico, expressa o movimento da própria fronteira e é publicado apenas de forma agregada e com ressalva, porque, após 2022, pode refletir o crescimento do registro no CNES. As tendências somente são rotuladas quando a variação supera ±`r num(100 * par_ef("tendencia_limiar"))`% ao ano de forma consistente.
+
+Na alta complexidade, o produto gerencial é o painel das 16 regiões de saúde, que reúne o acesso dos moradores, a produção realizada na região e a autossuficiência. O escore DEA de alta complexidade tem caráter diagnóstico e somente é publicado para as regiões com oferta contínua e registro plausível: `r lista_pt(reg_m3)`. A Tabela 2 apresenta os modelos estimados, o número de unidades avaliadas em cada um e as respectivas variáveis.
+
+**Tabela 2 – Modelos de eficiência e variáveis da especificação principal vigente**
 
 ```{r}
 tab_modelos()
 ```
 
 ::: {.nota-fonte}
-Modelos e variáveis da especificação principal vigente (arquivo `especificacoes_modelos.csv` em [Dados](dados/index.html#eficiencia)). Municípios: valores por mil habitantes; hospitais: valores absolutos. Despesas em R$ de 2025 (IPCA).
+Fonte: elaboração própria, com base no arquivo `especificacoes_modelos.csv`, disponível em [Dados](dados/index.html#eficiencia). Nota: nos municípios, as variáveis são expressas por mil habitantes e, nos hospitais, em valores absolutos; as despesas estão em R$ de 2025 (IPCA).
 :::
 
-**Ressalvas da eficiência.** Unidades com dados de registro atípicos recebem o sinal "registro a verificar": continuam avaliadas, mas não servem de referência a outras e podem ter a meta financeira omitida; a lista de verificações será encaminhada à SES-MT e ao COSEMS-MT. Valem também as limitações acima: as internações de moradores em outros estados não entram nos modelos (são medidas à parte, na página [Deslocamento](deslocamento/index.html#fuga)); 2020–2021 foram afetados pela COVID-19; a classificação da despesa por subfunção é frágil em alguns municípios; o pré-natal de 2025 ainda não está disponível. Internações por condições sensíveis à atenção primária e causas evitáveis não entram nos modelos desta versão.
+**Ressalvas da eficiência.** As unidades com dados de registro atípicos recebem o sinal "registro a verificar": permanecem avaliadas, mas não servem de referência a outras e podem ter a meta financeira omitida, e a lista de verificações será encaminhada à SES-MT e ao COSEMS-MT. Aplicam-se, ainda, as limitações descritas anteriormente: as internações de moradores em outros estados não integram os modelos, sendo medidas à parte na página [Deslocamento](deslocamento/index.html#fuga); os anos de 2020–2021 foram afetados pela COVID-19; a classificação da despesa por subfunção é frágil em alguns municípios; e o pré-natal de 2025 ainda não está disponível. Por fim, as internações por condições sensíveis à atenção primária e as causas evitáveis não integram os modelos desta versão.
 
 ## Previsão de demanda (preliminar) {#previsao}
 
-A seção [Previsão](previsao/index.html) aplica a previsão de demanda ao caso escolhido no Marco Zero do projeto (25/05/2026): as internações semanais por doenças do aparelho respiratório (CID-10 J00–J99, diagnóstico principal) nos hospitais de cada uma das 16 regiões de saúde, pela semana epidemiológica (SE) da internação, para todas as idades e, à parte, para menores de 5 anos. Os resultados são **preliminares**: a especificação do modelo (série-alvo, horizontes, variáveis e critério de escolha) ainda está em validação pela coordenação.
+A seção [Previsão](previsao/index.html) aplica a previsão de demanda ao caso escolhido no Marco Zero do projeto (25/05/2026), isto é, às internações semanais por doenças do aparelho respiratório (códigos J00–J99 da Classificação Internacional de Doenças, CID-10, no diagnóstico principal) nos hospitais de cada uma das 16 regiões de saúde, segundo a semana epidemiológica (SE) da internação, para todas as idades e, separadamente, para menores de 5 anos. Os resultados são **preliminares**, uma vez que a especificação do modelo (série-alvo, horizontes, variáveis e critério de escolha) ainda se encontra em validação pela coordenação. A Tabela 3 apresenta as fontes utilizadas.
+
+**Tabela 3 – Fontes de dados da previsão de demanda**
 
 ::: {.rolagem-x}
 | Fonte | Período usado | O que se extrai |
@@ -137,14 +159,23 @@ A seção [Previsão](previsao/index.html) aplica a previsão de demanda ao caso
 | **RIPSA/IBGE e CNES** | 2020–2025 | População das regiões; leitos pediátricos SUS, usados como contexto do alerta |
 :::
 
-- **Modelos.** Referências ingênuas (repetir a mesma semana do ano anterior ou a última semana conhecida), o modelo estatístico SARIMA e quatro modelos de aprendizado de máquina: *gradient boosting* (HGB e LightGBM), Random Forest e rede neural (perceptron multicamadas). Os modelos são treinados com as semanas a partir de 2022, porque 2020–2021 foram distorcidos pela COVID-19, e testados no passado com origem móvel, de 2024 a 2026, para horizontes de 1 a 4 semanas. O critério é o erro médio escalado (MASE), que compara o erro de cada modelo com o de uma previsão ingênua; o LightGBM é a referência desta versão por ter o menor MASE.
-- **Atraso do SIH.** Uma semana só fica praticamente completa no SIH cerca de quatro competências depois, e os arquivos mensais são republicados com mais registros. Por isso a previsão tem duas etapas: o *nowcast* estima as semanas ainda incompletas e a previsão encadeada projeta, a partir dele, as quatro semanas seguintes, com intervalos de 80% e 95%.
-- **Alerta.** Uma semana é de alta pressão quando as internações da região passam do percentil 90 das semanas de 2022–2023 (limiar P90). O alerta é avaliado como classificação, com sensibilidade, especificidade, valor preditivo positivo e F1. O ganho do alerta vem de ter algum *nowcast*: com o método atuarial chain-ladder no lugar do LightGBM, o desempenho é praticamente o mesmo. A regra do alerta não foi pactuada com a SES-MT e não é alerta operacional.
-- **Supressão.** Contagens observadas de 1 a 4 por região e semana não são publicadas. Para que não sejam deduzidas pelo total de Mato Grosso, outras regiões da mesma semana também ficam vazias até que nenhuma contagem pequena possa ser recalculada (supressão complementar conferida por programação inteira); na semana em que o próprio total do estado é suprimido, todas as regiões também são. As previsões dos modelos ingênuos que copiariam uma contagem suprimida ficam vazias, e os arquivos marcam só se a célula foi suprimida, não o motivo.
+::: {.nota-fonte}
+Fonte: elaboração própria.
+:::
+
+Comparam-se referências ingênuas, que repetem a mesma semana do ano anterior ou a última semana conhecida, o modelo estatístico autorregressivo integrado de médias móveis sazonal (SARIMA, do inglês *Seasonal Autoregressive Integrated Moving Average*), na tradição de Box e Jenkins (1970), e quatro modelos de aprendizado de máquina: o *gradient boosting* (FRIEDMAN, 2001), nas implementações por histogramas (HGB, do inglês *histogram-based gradient boosting*) e LightGBM (KE *et al.*, 2017); o *Random Forest* (BREIMAN, 2001); e a rede neural do tipo perceptron multicamadas (MLP, do inglês *multilayer perceptron*), treinada por retropropagação (RUMELHART; HINTON; WILLIAMS, 1986). Os modelos são treinados com as semanas a partir de 2022, porque 2020–2021 foram distorcidos pela COVID-19, e testados no passado com origem móvel, de 2024 a 2026, para horizontes de 1 a 4 semanas. O critério de escolha é o erro absoluto médio escalado (MASE, do inglês *Mean Absolute Scaled Error*), proposto por Hyndman e Koehler (2006), que compara o erro de cada modelo com o de uma previsão ingênua; nesta versão, o LightGBM é adotado como referência por apresentar o menor MASE.
+
+Cumpre considerar, ainda, o atraso de registro do SIH: uma semana somente se torna praticamente completa cerca de quatro competências depois, e os arquivos mensais são republicados com mais registros. Por essa razão, a previsão compreende duas etapas. Na primeira, o *nowcast* estima as semanas ainda incompletas; na segunda, a previsão encadeada projeta, a partir dele, as quatro semanas seguintes, com intervalos de 80% e 95%.
+
+Uma semana é classificada como de alta pressão quando as internações da região superam o percentil 90 das semanas de 2022–2023 (limiar P90). O alerta é avaliado como problema de classificação, por meio da sensibilidade, da especificidade, do valor preditivo positivo (VPP) e da medida F1. Verifica-se que o ganho do alerta decorre da existência de algum *nowcast*, já que, com o método atuarial *chain-ladder* no lugar do LightGBM, o desempenho é praticamente o mesmo. Ressalta-se que a regra do alerta não foi pactuada com a SES-MT e não constitui alerta operacional.
+
+Quanto à divulgação, as contagens observadas de 1 a 4 por região e semana não são publicadas. Para que não possam ser deduzidas a partir do total de Mato Grosso, outras regiões da mesma semana também são deixadas vazias até que nenhuma contagem pequena possa ser recalculada (supressão complementar, conferida por programação inteira); na semana em que o próprio total do estado é suprimido, todas as regiões também o são. Do mesmo modo, as previsões dos modelos ingênuos que copiariam uma contagem suprimida ficam vazias, e os arquivos indicam apenas se a célula foi suprimida, sem informar o motivo.
 
 ## Localização de serviços (preliminar) {#localizacao}
 
-A seção [Localização](localizacao/index.html) organiza em cenários, para apoiar a discussão com a gestão, a pergunta sobre onde a abertura ou a ampliação de um serviço reduziria mais o deslocamento dos pacientes, considerando a demanda dos próximos anos, com dois pilotos: [atenção ao parto](localizacao/parto.html) e [UTI adulto](localizacao/uti-adulto.html). A resposta vem de uma cadeia de cinco modelos: demanda por município de residência em 2026–2030 (L1), escolha do estabelecimento pelo paciente (L2), acesso atual (L3), otimização da localização de unidades novas — p-mediana, cobertura máxima e, na UTI, uma versão com capacidade (L4) — e cenários que combinam a otimização com a escolha do paciente (L5).
+A seção [Localização](localizacao/index.html) organiza em cenários, para apoiar a discussão com a gestão, a questão sobre onde a abertura ou a ampliação de um serviço reduziria mais o deslocamento dos pacientes, considerando a demanda dos próximos anos, com dois pilotos: [atenção ao parto](localizacao/parto.html) e [UTI adulto](localizacao/uti-adulto.html). A análise apoia-se em uma cadeia de cinco modelos: a demanda por município de residência em 2026–2030 (L1); a escolha do estabelecimento pelo paciente (L2); o acesso atual (L3), medido, entre outros indicadores, pelo método aprimorado de áreas de captação flutuantes em duas etapas (E2SFCA, do inglês *Enhanced Two-Step Floating Catchment Area*), de Luo e Qi (2009); a otimização da localização de unidades novas (L4), por meio dos modelos de p-mediana (HAKIMI, 1964; REVELLE; SWAIN, 1970), de cobertura máxima (CHURCH; REVELLE, 1974) e, na UTI, de uma versão com capacidade; e os cenários que combinam a otimização com a escolha do paciente (L5). A Tabela 4 apresenta as fontes utilizadas.
+
+**Tabela 4 – Fontes de dados da localização de serviços**
 
 ::: {.rolagem-x}
 | Fonte | Período usado | O que se extrai |
@@ -156,14 +187,19 @@ A seção [Localização](localizacao/index.html) organiza em cenários, para ap
 | **OSRM / OpenStreetMap** | Consulta de 08/10/2026 | Tempo e distância rodoviários de automóvel entre as sedes municipais (© colaboradores do OpenStreetMap, licença ODbL) |
 :::
 
-- **Projeção populacional provisória.** A população municipal de 2026–2030 aplica a participação de cada município, por sexo e faixa etária, à projeção do IBGE para o estado (método de razão). A demanda de 2030 é, por isso, **provisória** e será refeita quando houver projeção municipal por idade e sexo.
-- **Parâmetros de cenário, não normas.** A ocupação-alvo de 85%, o módulo de 10 leitos de UTI, o filtro de candidatos pela captação esperada (com o desconto de 1,28 medido nas aberturas de UTI) e os limiares de 52 e 100 partos por ano são parâmetros de pesquisa para montar cenários, não critérios normativos de habilitação. Na UTI adulto, as soluções da p-mediana e da versão com capacidade aparecem lado a lado como cenários; no parto, várias soluções quase empatam e devem ser lidas como ordem de grandeza.
-- **Tempos em condições ideais.** Os tempos do OSRM não incluem balsas, estradas sazonais, transporte sanitário, regulação ou espera; servem para comparar alternativas.
-- **Divulgação.** Contagens são publicadas em números inteiros; percentuais municipais e regionais de deslocamento com contagem de 1 a 4 ficam vazios, assim como os que permitiriam deduzi-los por diferença (inclusive pelo total de Mato Grosso, publicado na linha do estado); a supressão é conferida por programação inteira. Os resultados não são recomendação oficial de abertura, habilitação ou fechamento de serviços.
+::: {.nota-fonte}
+Fonte: elaboração própria.
+:::
+
+Os resultados dependem de pressupostos que convém explicitar. Em primeiro lugar, a população municipal de 2026–2030 foi obtida pela aplicação da participação de cada município, por sexo e faixa etária, à projeção do IBGE para o estado (método de razão); por isso, a demanda de 2030 é **provisória** e será refeita quando houver projeção municipal por idade e sexo. Em segundo lugar, a ocupação-alvo de 85%, o módulo de 10 leitos de UTI, o filtro de candidatos pela captação esperada (com o desconto de 1,28 medido nas aberturas de UTI) e os limiares de 52 e 100 partos por ano constituem **parâmetros de pesquisa destinados à montagem de cenários, e não critérios normativos** de habilitação. Na UTI adulto, as soluções da p-mediana e da versão com capacidade são apresentadas lado a lado, como cenários; no parto, várias soluções quase empatam e devem ser interpretadas como ordem de grandeza. Em terceiro lugar, os tempos calculados com o *Open Source Routing Machine* (OSRM), descrito por Luxen e Vetter (2011), correspondem a condições ideais, pois não incluem balsas, estradas sazonais, transporte sanitário, regulação ou espera, e servem apenas para comparar alternativas.
+
+Quanto à divulgação, as contagens são publicadas em números inteiros, e os percentuais municipais e regionais de deslocamento com contagem de 1 a 4 ficam vazios, assim como aqueles que permitiriam deduzi-los por diferença, inclusive a partir do total de Mato Grosso, publicado na linha do estado; a supressão é conferida por programação inteira. Ressalta-se que os resultados não constituem recomendação oficial de abertura, habilitação ou fechamento de serviços.
 
 ## Judicialização da saúde (preliminar) {#judicializacao}
 
-A seção [Judicialização](judicializacao/index.html) descreve as ações judiciais de saúde em Mato Grosso, compara as comarcas, prevê o volume dos meses seguintes e testa se a judicialização se associa à oferta e à eficiência dos serviços.
+A seção [Judicialização](judicializacao/index.html) descreve as ações judiciais de saúde em Mato Grosso, compara as comarcas, prevê o volume dos meses seguintes e testa se a judicialização se associa à oferta e à eficiência dos serviços. Os dados provêm da interface pública de programação de aplicações (API, do inglês *Application Programming Interface*) do DataJud, complementada pelas informações de jurisdição das comarcas e pela população do IBGE, conforme se apresenta na Tabela 5.
+
+**Tabela 5 – Fontes de dados da judicialização da saúde**
 
 ::: {.rolagem-x}
 | Fonte | Período usado | O que se extrai |
@@ -173,29 +209,34 @@ A seção [Judicialização](judicializacao/index.html) descreve as ações judi
 | **IBGE** | 2020–2026 | População das comarcas, para as taxas por 100 mil habitantes |
 :::
 
-- **Unidade.** Ação nova de saúde no 1º grau e nos juizados, contada uma vez por processo, pelo ano de ajuizamento. A coleta reproduz de 87% a 97% dos casos novos de saúde do painel do CNJ, contados na unidade do painel.
-- **Atribuição territorial.** A comarca vem do código da unidade de origem no número do processo; o município herda a taxa da comarca. A regra é uma **proposta** do projeto, em validação.
-- **Período de comparação.** As comarcas são comparadas em 2022–2024. Em 2025 e 2026, a centralização de ações de saúde pública no Núcleo de Justiça 4.0 deixou parte das ações sem comarca de origem, e por isso esses anos são marcados como afetados pela centralização. As taxas de Cuiabá e Várzea Grande são limites inferiores.
-- **Taxas suavizadas e supressão.** As taxas por comarca são suavizadas (Bayes empírico) e publicadas arredondadas a 5 por 100 mil no período 2022–2024 e só em faixas por ano. Contagens de 1 a 4 não são publicadas, nem as que se deduzem por diferença (inclusive as ações mistas, que entram na saúde pública e na suplementar), e a supressão complementar foi auditada por programação linear para que nenhuma célula suprimida possa ser recalculada.
-- **Previsão e fatores associados.** A previsão mensal compara ETS, SARIMA, LightGBM e referências ingênuas pelo MASE. Os fatores associados vêm de um modelo de contagem (binomial negativo) por comarca e ano, com razões de taxas: são **associações, não causas**, e os dados não sustentam a hipótese de que oferta insuficiente ou ineficiência levem a mais judicialização.
-- **Uso dos dados.** A coleta seguiu o Termo de Uso da API Pública do DataJud (versão 1.2): uso não comercial, sem dados pessoais e dentro do limite de requisições.
+::: {.nota-fonte}
+Fonte: elaboração própria.
+:::
 
-## Pipeline: do dado bruto ao site
+A unidade de análise é a ação nova de saúde no 1º grau e nos juizados, contada uma vez por processo, segundo o ano de ajuizamento. A coleta seguiu o Termo de Uso da API Pública do DataJud (versão 1.2), o que implica uso não comercial, ausência de dados pessoais e respeito ao limite de requisições, e reproduz de 87% a 97% dos casos novos de saúde do painel do CNJ, contados na unidade do painel. A comarca é identificada pelo código da unidade de origem no número do processo, e o município herda a taxa da comarca; essa regra de atribuição territorial constitui uma **proposta** do projeto, ainda em validação.
 
-1. **Data Lake (camada bruta):** arquivos originais do DATASUS (FTP), do SIOPS e do IBGE, carregados sem alteração em PostgreSQL, com registro de origem e data.
-2. **Camada tratada (`trusted`):** tipos corrigidos, datas validadas (fora de 1900–2027 anuladas), duplicidades removidas, chaves de município padronizadas; perdas inferiores a 0,001% dos registros.
-3. **Painéis analíticos (`mart`):** uma linha por município e ano (e por hospital e ano) com insumos, produção e resultados, per capita e sinalizadores de completude. É a base do DEA e deste site.
-4. **Site:** scripts em Python extraem dos painéis os arquivos públicos (CSV e GeoJSON) e geram as páginas; o Quarto renderiza tudo em HTML estático, publicado no GitHub Pages. Nenhum microdado sai do repositório. Nas seções de previsão, localização e judicialização, os arquivos chegam já agregados e com supressão pelas frentes de pesquisa do projeto; os scripts do site conferem de novo a supressão (e a completam quando necessário) antes de copiá-los.
+As comarcas são comparadas no período 2022–2024. Em 2025 e 2026, a centralização de ações de saúde pública no Núcleo de Justiça 4.0 deixou parte das ações sem comarca de origem, razão pela qual esses anos são marcados como afetados pela centralização. As taxas de Cuiabá e de Várzea Grande, por sua vez, constituem limites inferiores.
 
-Os dados são somente de leitura em todas as etapas posteriores à carga; a reprodução do site depende apenas dos arquivos publicados em [Dados](dados/index.html).
+As taxas por comarca são suavizadas pelo estimador bayesiano empírico de Marshall (1991) e publicadas arredondadas a 5 por 100 mil no período 2022–2024 e apenas em faixas, quando apresentadas por ano. As contagens de 1 a 4 não são publicadas, nem aquelas que se deduzem por diferença, inclusive as ações mistas, que entram tanto na saúde pública quanto na suplementar; a supressão complementar foi auditada por programação linear, de modo que nenhuma célula suprimida possa ser recalculada.
+
+A previsão mensal compara, com base no MASE, o modelo de suavização exponencial com erro, tendência e sazonalidade (ETS, do inglês *Error, Trend, Seasonality*), na formulação em espaço de estados de Hyndman *et al.* (2002), o SARIMA, o LightGBM e referências ingênuas. Os fatores associados, por sua vez, provêm de um modelo de contagem binomial negativo (CAMERON; TRIVEDI, 2013), estimado por comarca e ano, com resultados expressos em razões de taxas. Tais resultados representam **associações, e não causas**, e cumpre destacar que os dados não sustentam a hipótese de que a oferta insuficiente ou a ineficiência levem a mais judicialização.
+
+## Fluxo de processamento: do dado bruto ao site {#pipeline-do-dado-bruto-ao-site}
+
+O processamento dos dados (*pipeline*) organiza-se em quatro camadas sucessivas. Na primeira, o *Data Lake* (camada bruta) recebe os arquivos originais do DATASUS, obtidos por protocolo de transferência de arquivos (FTP, do inglês *File Transfer Protocol*), do SIOPS e do IBGE, carregados sem alteração em PostgreSQL, com registro de origem e data. Na segunda, a camada tratada (`trusted`) corrige os tipos, valida as datas (anulando as que se situam fora de 1900–2027), remove as duplicidades e padroniza as chaves de município, com perdas inferiores a 0,001% dos registros. Na terceira, os painéis analíticos (`mart`) organizam uma linha por município e ano (e por hospital e ano) com insumos, produção e resultados, valores *per capita* e sinalizadores de completude, constituindo a base da DEA e deste site. Na quarta, *scripts* em Python extraem dos painéis os arquivos públicos (CSV e GeoJSON) e geram as páginas, que o Quarto converte em HTML estático, publicado no GitHub Pages; nenhum microdado sai do repositório.
+
+Nas seções de previsão, localização e judicialização, os arquivos chegam já agregados e com supressão aplicada pelas frentes de pesquisa do projeto, e os *scripts* do site conferem novamente a supressão, completando-a quando necessário, antes de copiá-los. Em todas as etapas posteriores à carga, os dados permanecem somente de leitura, e a reprodução do site depende apenas dos arquivos publicados em [Dados](dados/index.html).
 
 ## Glossário de siglas
 
-As siglas também são explicadas ao passar o cursor sobre elas em qualquer página.
+A Tabela 6 reúne as siglas utilizadas no Observatório, com os respectivos significados e, quando estrangeiras, com a expressão original. Em qualquer página, as siglas são também explicadas quando se posiciona o cursor sobre elas.
+
+**Tabela 6 – Siglas e significados**
 
 | Sigla | Significado |
 |---|---|
 | SUS | Sistema Único de Saúde |
+| DATASUS | Departamento de Informação e Informática do SUS (Ministério da Saúde) |
 | SIOPS | Sistema de Informações sobre Orçamentos Públicos em Saúde |
 | RREO | Relatório Resumido da Execução Orçamentária (demonstrativo bimestral que alimenta o SIOPS) |
 | BPA-C | Boletim de Produção Ambulatorial consolidado (registro do SIA sem identificação do paciente) |
@@ -203,7 +244,7 @@ As siglas também são explicadas ao passar o cursor sobre elas em qualquer pág
 | OMS | Organização Mundial da Saúde |
 | UF / UFs | Unidade(s) da Federação (estados e Distrito Federal) |
 | p.p. | Ponto(s) percentual(is): diferença entre dois percentuais |
-| WGS84 / EPSG:4326 | Sistema de referência geodésico mundial usado nas malhas (latitude e longitude em graus) |
+| WGS84 / EPSG:4326 | Sistema geodésico mundial de referência (*World Geodetic System*) usado nas malhas, com latitude e longitude em graus |
 | CNES | Cadastro Nacional de Estabelecimentos de Saúde |
 | SIA | Sistema de Informações Ambulatoriais do SUS |
 | SIH | Sistema de Informações Hospitalares do SUS |
@@ -220,12 +261,12 @@ As siglas também são explicadas ao passar o cursor sobre elas em qualquer pág
 | eSB | Equipe de Saúde Bucal |
 | ACS | Agente Comunitário de Saúde (CBO 515105; não inclui os agentes de combate às endemias nem as demais ocupações da família 5151) |
 | CBO | Classificação Brasileira de Ocupações (código da ocupação do profissional no CNES) |
-| FTE | Equivalente em tempo integral (40 horas semanais) |
+| FTE | Equivalente em tempo integral (*full-time equivalent*), correspondente a 40 horas semanais |
 | MC / AC | Média complexidade / alta complexidade |
 | UTI | Unidade de Terapia Intensiva |
 | CIR | Comissão Intergestores Regional (região de saúde) |
 | PDR | Plano Diretor de Regionalização |
-| DEA | Análise Envoltória de Dados |
+| DEA | Análise Envoltória de Dados (*Data Envelopment Analysis*) |
 | BCC | Modelo DEA de Banker, Charnes e Cooper (retornos variáveis de escala) |
 | IC | Intervalo de confiança (de 95%, nos escores de eficiência) |
 | EC | Mudança de eficiência (componente do índice de Malmquist) |
@@ -238,20 +279,20 @@ As siglas também são explicadas ao passar o cursor sobre elas em qualquer pág
 | SRAG | Síndrome respiratória aguda grave |
 | SIVEP-Gripe | Sistema de Informação de Vigilância Epidemiológica da Gripe (notificações de SRAG) |
 | INMET | Instituto Nacional de Meteorologia |
-| SARIMA | Modelo estatístico de série temporal com sazonalidade (autorregressivo integrado de médias móveis sazonal) |
-| HGB | *Histogram gradient boosting*, modelo de aprendizado de máquina por árvores de decisão em sequência (como o LightGBM) |
-| MLP | Perceptron multicamadas (rede neural) |
-| MASE | Erro absoluto médio escalado: erro do modelo dividido pelo de uma previsão ingênua (abaixo de 1, melhor que ela) |
+| SARIMA | Modelo autorregressivo integrado de médias móveis sazonal (*Seasonal Autoregressive Integrated Moving Average*), modelo estatístico de série temporal com sazonalidade |
+| HGB | *Gradient boosting* baseado em histogramas (*histogram-based gradient boosting*), modelo de aprendizado de máquina por árvores de decisão em sequência, como o LightGBM |
+| MLP | Perceptron multicamadas (*multilayer perceptron*), um tipo de rede neural artificial |
+| MASE | Erro absoluto médio escalado (*mean absolute scaled error*): erro do modelo dividido pelo de uma previsão ingênua, de modo que valores abaixo de 1 indicam desempenho superior ao dela |
 | P90 | Percentil 90: valor superado em 10% das semanas de referência |
 | VPP | Valor preditivo positivo: parcela dos alertas emitidos que se confirmaram |
-| OSRM | Open Source Routing Machine: cálculo de rotas sobre o mapa colaborativo OpenStreetMap |
-| E2SFCA | Índice de acesso por áreas de captação flutuantes em duas etapas, com peso que diminui com o tempo de viagem |
+| OSRM | *Open Source Routing Machine*: sistema de cálculo de rotas sobre o mapa colaborativo OpenStreetMap |
+| E2SFCA | Método aprimorado de áreas de captação flutuantes em duas etapas (*Enhanced Two-Step Floating Catchment Area*): índice de acesso com peso que diminui com o tempo de viagem |
 | CNJ | Conselho Nacional de Justiça |
 | DataJud | Base Nacional de Dados do Poder Judiciário (CNJ) |
 | TJMT | Tribunal de Justiça do Estado de Mato Grosso |
 | TRF1 | Tribunal Regional Federal da 1ª Região (Justiça Federal, que abrange Mato Grosso) |
 | TPU | Tabelas Processuais Unificadas do Poder Judiciário (classes e assuntos) |
-| ETS | Modelo de suavização exponencial (erro, tendência e sazonalidade) |
+| ETS | Modelo de suavização exponencial com erro, tendência e sazonalidade (*Error, Trend, Seasonality*) |
 | PPSUS | Programa Pesquisa para o SUS: gestão compartilhada em saúde |
 | FAPEMAT | Fundação de Amparo à Pesquisa do Estado de Mato Grosso |
 | CNPq | Conselho Nacional de Desenvolvimento Científico e Tecnológico |
@@ -261,6 +302,66 @@ As siglas também são explicadas ao passar o cursor sobre elas em qualquer pág
 | SES-MT | Secretaria de Estado de Saúde de Mato Grosso |
 | UNEMAT | Universidade do Estado de Mato Grosso |
 | IBGE | Instituto Brasileiro de Geografia e Estatística |
+| API | Interface de programação de aplicações (*Application Programming Interface*) |
+| CID-10 | Classificação Internacional de Doenças, décima revisão |
+| FTP | Protocolo de transferência de arquivos (*File Transfer Protocol*) |
+| ODbL | Licença aberta de bases de dados (*Open Database License*), adotada pelo OpenStreetMap |
+| RIPSA | Rede Interagencial de Informações para a Saúde |
+| SVS | Secretaria de Vigilância em Saúde (Ministério da Saúde) |
+
+::: {.nota-fonte}
+Fonte: elaboração própria.
+:::
+
+## Referências {#referencias}
+
+Relacionam-se a seguir, segundo as normas da Associação Brasileira de Normas Técnicas (ABNT), as obras de referência dos métodos citados nesta página.
+
+::: {.referencias}
+BANKER, R. D.; CHARNES, A.; COOPER, W. W. Some models for estimating technical and scale inefficiencies in data envelopment analysis. **Management Science**, v. 30, n. 9, p. 1078-1092, 1984. DOI: <https://doi.org/10.1287/mnsc.30.9.1078>.
+
+BOX, G. E. P.; JENKINS, G. M. **Time series analysis**: forecasting and control. San Francisco: Holden-Day, 1970.
+
+BREIMAN, L. Random forests. **Machine Learning**, v. 45, n. 1, p. 5-32, 2001. DOI: <https://doi.org/10.1023/A:1010933404324>.
+
+CAMERON, A. C.; TRIVEDI, P. K. **Regression analysis of count data**. 2. ed. Cambridge: Cambridge University Press, 2013. DOI: <https://doi.org/10.1017/CBO9781139013567>.
+
+CAVES, D. W.; CHRISTENSEN, L. R.; DIEWERT, W. E. The economic theory of index numbers and the measurement of input, output, and productivity. **Econometrica**, v. 50, n. 6, p. 1393-1414, 1982. DOI: <https://doi.org/10.2307/1913388>.
+
+CAZALS, C.; FLORENS, J.-P.; SIMAR, L. Nonparametric frontier estimation: a robust approach. **Journal of Econometrics**, v. 106, n. 1, p. 1-25, 2002. DOI: <https://doi.org/10.1016/S0304-4076(01)00080-X>.
+
+CHARNES, A.; COOPER, W. W.; RHODES, E. Measuring the efficiency of decision making units. **European Journal of Operational Research**, v. 2, n. 6, p. 429-444, 1978. DOI: <https://doi.org/10.1016/0377-2217(78)90138-8>.
+
+CHURCH, R.; REVELLE, C. The maximal covering location problem. **Papers of the Regional Science Association**, v. 32, n. 1, p. 101-118, 1974. DOI: <https://doi.org/10.1007/BF01942293>.
+
+DARAIO, C.; SIMAR, L. Introducing environmental variables in nonparametric frontier models: a probabilistic approach. **Journal of Productivity Analysis**, v. 24, n. 1, p. 93-121, 2005. DOI: <https://doi.org/10.1007/s11123-005-3042-8>.
+
+FÄRE, R.; GROSSKOPF, S.; NORRIS, M.; ZHANG, Z. Productivity growth, technical progress, and efficiency change in industrialized countries. **American Economic Review**, v. 84, n. 1, p. 66-83, 1994.
+
+FRIEDMAN, J. H. Greedy function approximation: a gradient boosting machine. **The Annals of Statistics**, v. 29, n. 5, p. 1189-1232, 2001. DOI: <https://doi.org/10.1214/aos/1013203451>.
+
+HAKIMI, S. L. Optimum locations of switching centers and the absolute centers and medians of a graph. **Operations Research**, v. 12, n. 3, p. 450-459, 1964. DOI: <https://doi.org/10.1287/opre.12.3.450>.
+
+HYNDMAN, R. J.; KOEHLER, A. B. Another look at measures of forecast accuracy. **International Journal of Forecasting**, v. 22, n. 4, p. 679-688, 2006. DOI: <https://doi.org/10.1016/j.ijforecast.2006.03.001>.
+
+HYNDMAN, R. J.; KOEHLER, A. B.; SNYDER, R. D.; GROSE, S. A state space framework for automatic forecasting using exponential smoothing methods. **International Journal of Forecasting**, v. 18, n. 3, p. 439-454, 2002. DOI: <https://doi.org/10.1016/S0169-2070(01)00110-8>.
+
+KE, G.; MENG, Q.; FINLEY, T.; WANG, T.; CHEN, W.; MA, W.; YE, Q.; LIU, T.-Y. LightGBM: a highly efficient gradient boosting decision tree. In: CONFERENCE ON NEURAL INFORMATION PROCESSING SYSTEMS, 31., 2017, Long Beach. **Advances in Neural Information Processing Systems 30**. Red Hook: Curran Associates, 2017. p. 3146-3154.
+
+LUO, W.; QI, Y. An enhanced two-step floating catchment area (E2SFCA) method for measuring spatial accessibility to primary care physicians. **Health & Place**, v. 15, n. 4, p. 1100-1107, 2009. DOI: <https://doi.org/10.1016/j.healthplace.2009.06.002>.
+
+LUXEN, D.; VETTER, C. Real-time routing with OpenStreetMap data. In: ACM SIGSPATIAL INTERNATIONAL CONFERENCE ON ADVANCES IN GEOGRAPHIC INFORMATION SYSTEMS, 19., 2011, Chicago. **Proceedings** [...]. New York: ACM, 2011. p. 513-516. DOI: <https://doi.org/10.1145/2093973.2094062>.
+
+MARSHALL, R. J. Mapping disease and mortality rates using empirical Bayes estimators. **Journal of the Royal Statistical Society: Series C (Applied Statistics)**, v. 40, n. 2, p. 283-294, 1991. DOI: <https://doi.org/10.2307/2347593>.
+
+REVELLE, C. S.; SWAIN, R. W. Central facilities location. **Geographical Analysis**, v. 2, n. 1, p. 30-42, 1970. DOI: <https://doi.org/10.1111/j.1538-4632.1970.tb00142.x>.
+
+RUMELHART, D. E.; HINTON, G. E.; WILLIAMS, R. J. Learning representations by back-propagating errors. **Nature**, v. 323, n. 6088, p. 533-536, 1986. DOI: <https://doi.org/10.1038/323533a0>.
+
+SIMAR, L.; WILSON, P. W. Sensitivity analysis of efficiency scores: how to bootstrap in nonparametric frontier models. **Management Science**, v. 44, n. 1, p. 49-61, 1998. DOI: <https://doi.org/10.1287/mnsc.44.1.49>.
+
+SIMAR, L.; WILSON, P. W. Estimation and inference in two-stage, semi-parametric models of production processes. **Journal of Econometrics**, v. 136, n. 1, p. 31-64, 2007. DOI: <https://doi.org/10.1016/j.jeconom.2005.07.009>.
+:::
 
 ```{r}
 fonte_rodape(prefixo = "")
