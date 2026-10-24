@@ -210,8 +210,8 @@ faixa_versao_ef <- function(nota_curta = TRUE) faixa_versao(sprintf(paste0(
 # Parágrafo de ressalva da atenção básica sobre a versão (Markdown; vazio quando não há versão anterior)
 ressalva_versao_m1 <- function() {
   if (!nzchar(NOTA_VERSAO_EF) || !"M1" %in% REESTIMADOS_EF) return("")
-  sprintf(paste0("**Resultados da versão %s (%s).** O insumo de agentes comunitários de saúde contabiliza apenas o ACS (CBO 515105). ",
-                 "As visitas domiciliares, um dos produtos do modelo, são registradas sobretudo pelos ACS; por sua vez, os agentes de combate ",
+  sprintf(paste0("**Os resultados correspondem à versão %s (%s).** O insumo de agentes comunitários de saúde contabiliza apenas o ACS (CBO 515105). ",
+                 "As visitas domiciliares, um dos produtos do modelo, são registradas sobretudo pelos ACS; por essa razão, os agentes de combate ",
                  "às endemias e os agentes indígenas, que a versão %s somava ao insumo, deixaram de ser contados como recurso deste modelo."),
           sub("^v", "", VERSAO_EF), DATA_EF, sub("^v", "", VERSAO_ANT_EF))
 }

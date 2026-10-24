@@ -128,7 +128,7 @@ tabela_janelas(M)
 Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT.
 :::
 
-A Figura 4 e a Tabela 3 mostram que, na média do estado, a aproximação às melhores práticas (EC) foi de `r var_ano(j$ec)` em 2022–2025 (`r var_ano(j0$ec)` em 2020–2022), com `r j$n_melhora_ec` municípios em melhora consistente e `r j$n_piora_ec` em piora consistente. O índice de Malmquist combina esse movimento com o deslocamento das melhores práticas (TC), que pode refletir o crescimento do registro no CNES após 2022, razão pela qual se destaca o componente de gestão. Os detalhes por modelo e por região de saúde encontram-se na página [Produtividade](produtividade.qmd).
+A Figura 4 e a Tabela 3 mostram que, na média do estado, a aproximação às melhores práticas (EC) foi de `r var_ano(j$ec)` em 2022–2025 (`r var_ano(j0$ec)` em 2020–2022), com `r j$n_melhora_ec` municípios em melhora consistente e `r if (isTRUE(j$n_piora_ec == 0)) "nenhum" else j$n_piora_ec` em piora consistente. O índice de Malmquist combina esse movimento com o deslocamento das melhores práticas (TC), que pode refletir o crescimento do registro no CNES após 2022, razão pela qual se destaca o componente de gestão. Os detalhes por modelo e por região de saúde encontram-se na página [Produtividade](produtividade.qmd).
 
 ```{r}
 ec_por_regiao(M)
