@@ -108,7 +108,7 @@ ROT_TXT <- c(ingenuo_sazonal = "ingênuo sazonal", ingenuo_sazonal_aj = "ingênu
              hgb = "HGB", lgbm = "LightGBM", rf = "<i>Random Forest</i>", mlp = "rede neural MLP",
              hgb_sem_exog = "HGB sem SRAG e clima", hgb_pandemia = "HGB com 2020–2021",
              ref_sem_atraso_lgbm_sem_exog = "referência sem atraso com as mesmas variáveis",
-             baseline_sem_atraso_lgbm = "referência sem atraso do LightGBM do <i>baseline</i>",
+             baseline_sem_atraso_lgbm = "referência sem atraso do LightGBM do modelo de referência",
              encadeado_ml = "previsão encadeada principal com <i>nowcast</i> LightGBM",
              encadeado_cl = "previsão encadeada com <i>nowcast</i> <i>chain-ladder</i>",
              encadeado_ml_bf = "previsão encadeada com <i>nowcast</i> LightGBM-BF (variante <i>post hoc</i>)",
@@ -128,7 +128,7 @@ ROT_NC <- c(parcial = "Contagem já processada, sem correção", prior = "Ingên
             cl = "Chain-ladder (curva de completude)", bf = "Bornhuetter-Ferguson", ml = "LightGBM (principal)",
             ml_bf = "LightGBM com base Bornhuetter-Ferguson (post hoc)")
 ROT_ENC <- c(ref_sem_atraso_lgbm_sem_exog = "Referência sem atraso, mesmas variáveis (inalcançável em tempo real)",
-             baseline_sem_atraso_lgbm = "Referência sem atraso: LightGBM do baseline (inalcançável em tempo real)",
+             baseline_sem_atraso_lgbm = "Referência sem atraso: LightGBM do modelo de referência (inalcançável em tempo real)",
              encadeado_ml = "Nowcast LightGBM + LightGBM (principal)", encadeado_cl = "Nowcast chain-ladder + LightGBM",
              encadeado_ml_bf = "Nowcast LightGBM-BF + LightGBM (post hoc)", sem_nowcast_lgbm = "LightGBM sem nowcast",
              ingenuo_sazonal = "Ingênuo sazonal", ingenuo_sazonal_aj = "Ingênuo sazonal ajustado",
@@ -636,8 +636,8 @@ dm_frase <- function(estat, p, a, b, html = TRUE, limiar_limitrofe = 0.10) {
   v <- ifelse(estat < 0, a, b)
   ifelse(is.na(p), "—",
   ifelse(p < 0.05, sprintf("%s apresenta erro significativamente menor (%s)", art_txt(v, html), pt),
-  ifelse(p < limiar_limitrofe, sprintf("diferença marginalmente significativa (%s), favorável %s", pt, art_txt(v, html, prep = TRUE)),
-         sprintf("diferença não significativa (%s)", pt))))
+  ifelse(p < limiar_limitrofe, sprintf("a diferença é marginalmente significativa (%s), favorável %s", pt, art_txt(v, html, prep = TRUE)),
+         sprintf("a diferença não é significativa (%s)", pt))))
 }
 dm_linha <- function(a, b, nivel, h, html = TRUE) {
   x <- DM_BASE[DM_BASE$otica == "ocorrencia" & DM_BASE$modelo_a == a & DM_BASE$modelo_b == b & DM_BASE$nivel == nivel & DM_BASE$h == h, ]
