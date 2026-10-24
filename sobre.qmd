@@ -31,11 +31,11 @@ A Tabela 1 sintetiza os produtos previstos no plano de trabalho, o conteúdo de 
 
 | Produto | Conteúdo | Situação |
 |---|---|---|
-| P1 · Data Lake do SUS-MT | Bases do SIOPS, CNES, SIA, SIH, SISAB, SI-PNI, SIM, SINASC e IBGE, tratadas e integradas | Em uso: alimenta as versões 0.1 a 0.4 deste site |
+| P1 · Data Lake do SUS-MT | Bases do SIOPS, CNES, SIA, SIH, SISAB, SI-PNI, SIM, SINASC e IBGE, tratadas e integradas | Em uso: alimenta as versões 0.1 a 0.5 deste site |
 | P2 · Escores de eficiência (DEA) | Municípios × níveis de atenção, hospitais e regiões de saúde, 2020–2025 | Versão 2.1, de 16/10/2026 (atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS; demais modelos da versão 2, de 08/10/2026), na seção [Eficiência](eficiencia/index.qmd); em validação com a SES-MT e o COSEMS-MT |
 | P3 · Índice de Malmquist | Variação da produtividade 2020–2025 | Versão 2.1, de 16/10/2026 ([Produtividade](eficiencia/produtividade.qmd)); em validação |
 | P4 · Previsão de demanda | Modelos por município e nível de atenção | Resultados preliminares de 17/10/2026 na seção [Previsão](previsao/index.qmd): internações por doenças respiratórias por região de saúde, com estimativa das semanas incompletas e alerta; especificação em validação |
-| P5 · Aplicativo web | Este observatório, ampliado com os escores e as previsões | Versão 0.4 (17/10/2026) |
+| P5 · Aplicativo web | Este observatório, ampliado com os escores e as previsões | Versão 0.5 (24/10/2026) |
 | P6 · Artigos e relatórios | Publicações científicas e relatórios técnicos | Previsto |
 | Localização de serviços (incorporada em outubro de 2026) | Acesso atual, demanda projetada e cenários de localização de serviços para apoiar a discussão | Pilotos de atenção ao parto e UTI adulto, resultados preliminares de 17/10/2026 na seção [Localização](localizacao/index.qmd) |
 | Judicialização da saúde (incorporada em outubro de 2026) | Ações judiciais de saúde por comarca, previsão de curto prazo e fatores associados (DataJud/CNJ) | Resultados preliminares de 17/10/2026 na seção [Judicialização](judicializacao/index.qmd) |
@@ -76,6 +76,7 @@ A Tabela 2 apresenta os principais marcos do projeto e das versões do Observat�
 | Versão 0.2.1: resultados da versão 2.1 da estimação de eficiência (atenção básica reestimada com o insumo de agentes comunitários restrito ao ACS, CBO 515105) | 16/10/2026; em validação com a SES-MT e o COSEMS-MT |
 | Versão 0.3: internações de residentes de Mato Grosso em hospitais de outros estados (SIH/SUS das outras 26 unidades da federação), na página de deslocamento | 16/10/2026 |
 | Versão 0.4: previsão de demanda das internações por doenças respiratórias, localização de serviços (pilotos de atenção ao parto e UTI adulto) e judicialização da saúde (DataJud/CNJ), em seções próprias | 17/10/2026; resultados preliminares |
+| Versão 0.5: revisão dos textos em linguagem científica, sem alteração de dados ou resultados | 24/10/2026 |
 | Versão final dos modelos de previsão de demanda, depois da validação da especificação; ampliação do aplicativo | Previsto |
 | Artigos, relatórios e devolutiva aos gestores | Previsto |
 
@@ -105,7 +106,7 @@ O projeto é executado pela UNEMAT — Universidade do Estado de Mato Grosso, Ca
 
 O site é atualizado a cada etapa concluída do projeto, e as suas versões registram a incorporação progressiva dos resultados. A versão 0.1 publicou os dados e indicadores de 2020–2025 e a análise de deslocamento entre residência e atendimento nas internações. A versão 0.2 acrescentou os escores de eficiência (DEA) e a produtividade (Malmquist) dos municípios, dos hospitais SUS e das regiões de saúde, com fichas destinadas ao gestor, correspondentes aos resultados da versão 2 da estimação, em validação com a SES-MT e com o Conselho de Secretarias Municipais de Saúde de Mato Grosso (COSEMS-MT). A versão 0.2.1 incorporou a versão 2.1 da estimação, na qual o modelo de atenção básica foi reestimado com o insumo de agentes comunitários de saúde restrito ao ACS (CBO 515105), mantidos inalterados os demais modelos. A versão 0.3, por sua vez, acrescentou à análise de deslocamento as internações de residentes de Mato Grosso em hospitais de outros estados, medidas com o SIH/SUS das outras 26 unidades da federação.
 
-A versão 0.4 acrescenta, em seções próprias e em caráter preliminar, a previsão de demanda das internações por doenças respiratórias, a localização de serviços de saúde (pilotos de atenção ao parto e de UTI adulto) e a judicialização da saúde, analisada a partir dos dados públicos do DataJud/CNJ. Cumpre destacar que esses resultados se destinam à discussão de métodos e cenários com a gestão e não constituem recomendação oficial.
+A versão 0.4 acrescentou, em seções próprias e em caráter preliminar, a previsão de demanda das internações por doenças respiratórias, a localização de serviços de saúde (pilotos de atenção ao parto e de UTI adulto) e a judicialização da saúde, analisada a partir dos dados públicos do DataJud/CNJ. Cumpre destacar que esses resultados se destinam à discussão de métodos e cenários com a gestão e não constituem recomendação oficial. Por fim, a versão 0.5 revisou os textos do site em linguagem científica, sem alteração de dados ou resultados.
 
 Quanto à proteção dos dados, publicam-se somente agregados por município, região de saúde, comarca ou estabelecimento, sendo os hospitais identificados pelo nome fantasia e pelo código do Cadastro Nacional de Estabelecimentos de Saúde (CNES), que constitui dado público. Nenhum microdado é divulgado. Além disso, nos recortes com contagens pequenas, não são publicados os valores de 1 a 4, nem as células que permitiriam deduzi-los.
 
@@ -113,6 +114,6 @@ No que se refere à produção, o site é gerado com o [Quarto](https://quarto.o
 
 **Contato:** lindomar.pegorini@unemat.br
 
-**Como citar:** DANIEL, L. P. et al. *Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso*. Versão 0.4. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.
+**Como citar:** DANIEL, L. P. et al. *Observatório PPSUS-MT: dados, indicadores e eficiência do SUS nos municípios de Mato Grosso*. Versão 0.5. Sinop: UNEMAT, 2026. Disponível em: https://daniellindomar.github.io/ppsus/. Projeto PPSUS 004/2025 FAPEMAT.
 
 O conteúdo, os indicadores e os arquivos derivados estão sob a licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br), que permite o uso livre com citação do projeto, **exceto** os arquivos e os gráficos derivados do DataJud/CNJ (arquivos `judicializacao_*` e aba [Judicialização](judicializacao/index.qmd)), que seguem o Termo de Uso da API Pública do DataJud e admitem somente uso não comercial (itens 3.3 e 3.8). Os dados de origem são públicos (DATASUS, SIOPS, IBGE e, nas seções da versão 0.4, também SIVEP-Gripe, INMET, InfoDengue, OpenStreetMap e DataJud/CNJ), e as condições de cada fonte estão descritas em [Dados](dados/index.qmd#licenca).

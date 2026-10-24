@@ -40,8 +40,8 @@ ds    <- function(...) file.path(RAIZ, "dados_site", ...)
 aviso <- function(...) message("[funcoes.R] ", sprintf(...))
 
 # ---- 0. Constantes ------------------------------------------------------------
-VERSAO_SITE <- "0.4"
-DATA_VERSAO <- "17/10/2026"
+VERSAO_SITE <- "0.5"
+DATA_VERSAO <- "24/10/2026"
 ANOS        <- 2020:2025           # janela analítica publicada
 ANO_REF     <- 2025L               # ano de referência dos KPIs (resultados: 2024)
 
