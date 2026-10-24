@@ -314,7 +314,7 @@ svg_tempo <- function(series = list(), faixas = list(), hlinhas = list(), vlinha
     vapply(Filter(function(l) !is.null(l$leg), hlinhas), function(l) sprintf(
       '<span class="leg-item"><svg width="24" height="10" aria-hidden="true"><line x1="0" x2="24" y1="5" y2="5" stroke="%s" stroke-width="1.6" stroke-dasharray="%s"/></svg>%s</span>',
       l$cor, l$dash, esc(l$leg)), ""))
-  sprintf('<figure class="grafico-prev"><div class="dica-rolar" aria-hidden="true">&#8596; Deslize o gráfico para o lado para ver todo o período.</div><div class="rolar-svg">%s</div><figcaption class="legenda-svg">%s</figcaption></figure>', svg, paste(leg, collapse = ""))
+  sprintf('<figure class="grafico-prev"><div class="dica-rolar" aria-hidden="true">&#8596; O deslizamento lateral do gráfico exibe todo o período.</div><div class="rolar-svg">%s</div><figcaption class="legenda-svg">%s</figcaption></figure>', svg, paste(leg, collapse = ""))
 }
 
 # ---- 3. Situação agora ----------------------------------------------------------------------------------
