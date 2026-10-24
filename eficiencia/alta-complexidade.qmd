@@ -187,7 +187,7 @@ Fonte: elaboração própria, com base na estimação DEA do Projeto PPSUS-MT.
 ```{r}
 #| results: asis
 for (i in seq_len(nrow(F3a))) {
-  cat(sprintf('\n::: {.efx-ficha}\n##### %s, %d\n%s\n:::\n', F3a$regiao_saude[i], A, efx_limpa(F3a$texto_padrao[i])))
+  cat(sprintf('\n::: {.efx-ficha}\n##### %s, %d\n%s\n:::\n', F3a$regiao_saude[i], A, redigir_ficha_regiao(efx_limpa(F3a$texto_padrao[i]))))
 }
 ```
 

@@ -776,7 +776,7 @@ efx_fichas_regioes <- function(a = EFX_ANO) {
   tagList(lapply(seq_len(nrow(f)), function(i) tags$details(class = "efx-ficha",
     tags$summary(HTML(sprintf("<b>%s</b> %s%s", esc(f$regiao_saude[i]), efx_chip_quad(f$quadrante[i]),
                               if (isTRUE(f$publicavel_m3[i] == 1)) " · com escore diagnóstico" else ""))),
-    p(efx_limpa(f$texto_padrao[i])))))
+    p(redigir_ficha_regiao(efx_limpa(f$texto_padrao[i]))))))  # redação científica só na exibição (R/redacao_eficiencia.R)
 }
 
 # ---- 5. Produtividade ----------------------------------------------------------------------------

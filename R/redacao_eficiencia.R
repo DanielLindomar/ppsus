@@ -11,7 +11,9 @@
 #   3. nota_versao    (metadados.csv)         — nota de versão da estimação 2.1 (caixa da seção
 #                                               Eficiência e página Dados);
 #   4. descricao      (catalogo_eficiencia.csv) — descrições dos arquivos de eficiência (DESCR do 06),
-#                                               na página Dados e nas listas de arquivos da seção.
+#                                               na página Dados e nas listas de arquivos da seção;
+#   5. texto_padrao   (fichas_regiao.csv)     — fichas das regiões na página Alta complexidade (4ª rodada,
+#                                               quadro R01–R11, junto de REDACAO_FICHA_REGIAO).
 # A versão 0.5 reescreve esses textos SOMENTE NA EXIBIÇÃO. O banco, o pipeline da DEA, o script 06
 # e os CSV (inclusive os de download) não mudam.
 #
@@ -261,6 +263,90 @@ redigir_texto_padrao <- function(x, detalhe = FALSE) {
     }
     txts <- vapply(r, function(z) z$txt, character(1))
     list(txt = paste(txts[nzchar(txts)], collapse = " "), ids = ids)
+  })
+  if (detalhe) return(res)
+  vapply(res, function(z) z$txt, character(1), USE.NAMES = FALSE)
+}
+
+# Fichas regionais da alta complexidade (4ª rodada): texto_padrao de fichas_regiao.csv, exibido nas "Fichas das
+# regiões" da página Alta complexidade (efx_fichas_regioes, em R/pag_eficiencia_extra.R) depois de efx_limpa, que
+# retira as remissões internas "(seção ...)". Mapeamento só de exibição, frase a frase (R01–R11); o CSV, o 06 e o
+# schema dea não mudam. Quadro:
+#   R01 "Em <ano>, a região <reg> (<pop> hab.) teve <x> internações de alta complexidade de residentes por mil hab.
+#        (mediana estadual <m>) e realizou <p>% dessas internações dentro da própria região."
+#       -> "Em <ano>, a região <reg>, com <pop> habitantes, registrou <x> internações de alta complexidade de
+#           residentes por mil habitantes, ante a mediana estadual de <m>, e realizou dentro da própria região o
+#           equivalente a <p>% dessas internações."
+#   R02 "Quadrante: polo — região-polo: realiza mais internações de AC do que as de seus residentes (atende outras
+#        regiões)." -> "A região classifica-se no quadrante polo, uma vez que realiza mais internações de AC do que
+#        as de seus residentes e, portanto, atende também outras regiões."
+#   R03 "Quadrante: em transição — autossuficiência parcial (<a>–<b>%): parte da AC de residentes ainda é realizada
+#        fora." -> "A região classifica-se no quadrante em transição, com autossuficiência parcial (<a>–<b>%), de
+#        modo que parte da AC de residentes ainda é realizada fora da região."
+#   R04 "Quadrante: dependente com acesso adequado — depende de outras regiões (autossuficiência < <a>%), mas o
+#        acesso dos residentes está na mediana estadual ou acima." -> "A região classifica-se no quadrante
+#        dependente com acesso adequado, uma vez que depende de outras regiões (autossuficiência inferior a <a>%),
+#        embora o acesso dos residentes se situe na mediana estadual ou acima dela."
+#   R05 "Quadrante: dependente com baixo acesso — depende de outras regiões e o acesso dos residentes está abaixo
+#        da mediana estadual — prioridade para regulação e pactuação de fluxos." -> "A região classifica-se no
+#        quadrante dependente com baixo acesso, uma vez que depende de outras regiões e o acesso dos residentes se
+#        situa abaixo da mediana estadual, razão pela qual constitui prioridade para a regulação e a pactuação de
+#        fluxos."
+#   R06 "Tendência do acesso <a1>–<a2>: <v>% ao ano." -> "No período <a1>–<a2>, a tendência do acesso foi de <v>%
+#        ao ano."
+#   R07 "Escore DEA diagnóstico da produção de AC: <e> (IC 95% de <a> a <b>; faixa <faixa> entre as região-anos com
+#        oferta contínua) — leitura complementar ao painel." -> "O escore DEA diagnóstico da produção de AC é de <e>
+#        (intervalo de confiança de 95%: <a> a <b>), na faixa <da fronteira|do ...> entre as região-anos com oferta
+#        contínua, e constitui leitura complementar ao painel."
+#   R08 "Sem escore de eficiência: a região não tem oferta hospitalar contínua de AC; a leitura é o acesso dos
+#        residentes e a dependência de outras regiões." -> "Não se calcula escore de eficiência para a região, que
+#        não dispõe de oferta hospitalar contínua de AC; a leitura, nesse caso, baseia-se no acesso dos residentes
+#        e na dependência de outras regiões."
+#   R09 "Mortalidade hospitalar padronizada dos estabelecimentos da região: <x>." -> "A mortalidade hospitalar
+#        padronizada dos estabelecimentos da região é de <x>."
+#   R10 "Registro a verificar: despesa <s> atribuída à AC ínfima." -> "O registro deve ser verificado, uma vez que
+#        a despesa municipal na subfunção <s> atribuída à AC é ínfima." (insumo "Despesa municipal 302 atribuída à
+#        alta complexidade" do M3, em especificacoes_modelos.csv)
+#   R11 "Perfil da rede: sem oferta hospitalar contínua de alta complexidade (característica da rede regionalizada,
+#        não erro de registro)." -> "Quanto ao perfil da rede, a ausência de oferta hospitalar contínua de alta
+#        complexidade constitui característica da rede regionalizada, e não erro de registro."
+REDACAO_FICHA_REGIAO <- list(
+  list(id = "R01", re = "^Em (\\d{4}), a região (.+?) \\(([0-9.]+) hab\\.\\) teve ([0-9.,]+) internações de alta complexidade de residentes por mil hab\\. \\(mediana estadual ([0-9.,]+)\\) e realizou ([0-9.,]+)% dessas internações dentro da própria região\\.$",
+       f = function(g) sprintf("Em %s, a região %s, com %s habitantes, registrou %s internações de alta complexidade de residentes por mil habitantes, ante a mediana estadual de %s, e realizou dentro da própria região o equivalente a %s%% dessas internações.",
+                               g[1], g[2], g[3], g[4], g[5], g[6])),
+  list(id = "R02", re = "^Quadrante: polo — região-polo: realiza mais internações de AC do que as de seus residentes \\(atende outras regiões\\)\\.$",
+       f = function(g) "A região classifica-se no quadrante polo, uma vez que realiza mais internações de AC do que as de seus residentes e, portanto, atende também outras regiões."),
+  list(id = "R03", re = "^Quadrante: em transição — autossuficiência parcial \\((\\d+)–(\\d+)%\\): parte da AC de residentes ainda é realizada fora\\.$",
+       f = function(g) sprintf("A região classifica-se no quadrante em transição, com autossuficiência parcial (%s–%s%%), de modo que parte da AC de residentes ainda é realizada fora da região.", g[1], g[2])),
+  list(id = "R04", re = "^Quadrante: dependente com acesso adequado — depende de outras regiões \\(autossuficiência < (\\d+)%\\), mas o acesso dos residentes está na mediana estadual ou acima\\.$",
+       f = function(g) sprintf("A região classifica-se no quadrante dependente com acesso adequado, uma vez que depende de outras regiões (autossuficiência inferior a %s%%), embora o acesso dos residentes se situe na mediana estadual ou acima dela.", g[1])),
+  list(id = "R05", re = "^Quadrante: dependente com baixo acesso — depende de outras regiões e o acesso dos residentes está abaixo da mediana estadual — prioridade para regulação e pactuação de fluxos\\.$",
+       f = function(g) "A região classifica-se no quadrante dependente com baixo acesso, uma vez que depende de outras regiões e o acesso dos residentes se situa abaixo da mediana estadual, razão pela qual constitui prioridade para a regulação e a pactuação de fluxos."),
+  list(id = "R06", re = "^Tendência do acesso (\\d{4})–(\\d{4}): (.+?)% ao ano\\.$",
+       f = function(g) sprintf("No período %s–%s, a tendência do acesso foi de %s%% ao ano.", g[1], g[2], g[3])),
+  list(id = "R07", re = paste0("^Escore DEA diagnóstico da produção de AC: ([0-9.,]+) \\(IC 95% de ([0-9.,]+) a ([0-9.,]+); faixa (", .ef_faixas_re,
+                               ") entre as região-anos com oferta contínua\\) — leitura complementar ao painel\\.$"),
+       f = function(g) sprintf("O escore DEA diagnóstico da produção de AC é de %s (intervalo de confiança de 95%%: %s a %s), na faixa %s entre as região-anos com oferta contínua, e constitui leitura complementar ao painel.",
+                               g[1], g[2], g[3], .ef_faixa_loc[[g[4]]])),
+  list(id = "R08", re = "^Sem escore de eficiência: a região não tem oferta hospitalar contínua de AC; a leitura é o acesso dos residentes e a dependência de outras regiões\\.$",
+       f = function(g) "Não se calcula escore de eficiência para a região, que não dispõe de oferta hospitalar contínua de AC; a leitura, nesse caso, baseia-se no acesso dos residentes e na dependência de outras regiões."),
+  list(id = "R09", re = "^Mortalidade hospitalar padronizada dos estabelecimentos da região: ([0-9.,]+)\\.$",
+       f = function(g) sprintf("A mortalidade hospitalar padronizada dos estabelecimentos da região é de %s.", g[1])),
+  list(id = "R10", re = "^Registro a verificar: despesa (\\d+) atribuída à AC ínfima\\.$",
+       f = function(g) sprintf("O registro deve ser verificado, uma vez que a despesa municipal na subfunção %s atribuída à AC é ínfima.", g[1])),
+  list(id = "R11", re = "^Perfil da rede: sem oferta hospitalar contínua de alta complexidade \\(característica da rede regionalizada, não erro de registro\\)\\.$",
+       f = function(g) "Quanto ao perfil da rede, a ausência de oferta hospitalar contínua de alta complexidade constitui característica da rede regionalizada, e não erro de registro.")
+)
+# Texto da ficha regional (já sem as remissões internas, por efx_limpa) em redação científica; com detalhe = TRUE,
+# devolve também as famílias aplicadas (uso da conferência). Frase sem mapeamento é exibida como está e gera aviso.
+redigir_ficha_regiao <- function(x, detalhe = FALSE) {
+  res <- lapply(x, function(t) {
+    if (is.na(t) || !nzchar(t)) return(list(txt = t, ids = character(0)))
+    fr <- .dividir_frases(t)
+    r <- lapply(fr, .redigir_frase, familias = REDACAO_FICHA_REGIAO)
+    ids <- vapply(r, function(z) z$id, character(1))
+    if (anyNA(ids) && !detalhe) aviso("redação v0.5: frase da ficha regional sem mapeamento, exibida como está: %s", fr[is.na(ids)][1])
+    list(txt = paste(vapply(r, function(z) z$txt, character(1)), collapse = " "), ids = ids)
   })
   if (detalhe) return(res)
   vapply(res, function(z) z$txt, character(1), USE.NAMES = FALSE)
