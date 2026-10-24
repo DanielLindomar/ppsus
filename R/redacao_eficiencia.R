@@ -15,9 +15,11 @@
 #   5. texto_padrao   (fichas_regiao.csv)     — fichas das regiões na página Alta complexidade (4ª rodada,
 #                                               quadro R01–R11, junto de REDACAO_FICHA_REGIAO).
 # A versão 0.5 reescreve esses textos SOMENTE NA EXIBIÇÃO. O banco, o pipeline da DEA, o script 06
-# e os CSV (inclusive os de download) não mudam, com uma exceção (4ª rodada, Editor D, A CONFIRMAR): os
-# textos do sinal flag_polo_ac (nome gerencial e definição no dicionário, nota_meta e frase do texto_padrao)
-# são sobrescritos pelo scripts/06 só na saída do site, sem mudar o schema dea nem nenhum valor numérico.
+# e os CSV (inclusive os de download) não mudam, com duas exceções: os textos do sinal flag_polo_ac (4ª rodada,
+# Editor D; nome gerencial e definição no dicionário, nota_meta e frase do texto_padrao) e (5ª rodada, A CONFIRMAR)
+# os do par sem par na banda de porte (frase F07 do texto_padrao e definição de mais_semelhante de
+# pares_municipio.csv no dicionário) são sobrescritos pelo scripts/06 só na saída do site, sem mudar o schema dea
+# nem nenhum valor numérico.
 #
 # Regra do mapeamento: cada frase-modelo é uma expressão regular ancorada (^...$). Os grupos capturam
 # os trechos variáveis (números, nomes de municípios e regiões, rótulos de faixa) exatamente como
@@ -57,6 +59,15 @@
 #   F07  "Municípios de referência plausíveis: <lista>; par mais semelhante: <par>."
 #        -> "Identifica-se o seguinte município de referência plausível: <lista>; o par mais semelhante
 #            é <par>." (no plural quando há mais de um município na lista, com "e" antes do último nome)
+#        (4ª e 5ª rodadas, A CONFIRMAR) quando nenhum par plausível se situa na banda de porte
+#        (par_mais_semelhante_fora_banda = 1, argumento fora_banda de redigir_texto_padrao), o par indicado é
+#        o de maior peso (dea/v2_1/dea_lib_v2.py, pares_referencia: "sem par na banda, maior λ plausível"); o
+#        scripts/06 grava, nessas fichas, "...; par de maior peso (nenhum par na banda de porte): <par>.", que a
+#        expressão também reconhece:
+#        -> "...: <lista>; como nenhum par se situa na faixa de porte de 1/3 a 3 vezes a população do município,
+#            indica-se o de maior peso, <par>." e, com um único par, "...: <par>; esse par não se situa na faixa
+#            de porte de 1/3 a 3 vezes a população do município." (acrescenta os números da banda de porte, 1/3 e
+#            3, já publicados no selo da lista de pares)
 #   F08  "Escore esperado pelo contexto (<fatores>): <x>; no segundo estágio (escore corrigido <e>),
 #         o município fica <d> acima|abaixo do esperado."
 #        -> "O escore esperado pelo contexto (<fatores>) é de <x>; no segundo estágio, com escore
@@ -155,6 +166,19 @@
 # Fatores do escore esperado pelo contexto (F08): "perfil de polo" é a participação da alta complexidade (share_ac)
 .ef_fatores <- function(x) sub("perfil de polo", "participação da alta complexidade na produção local", x, fixed = TRUE)
 
+# F07 sem par na banda de porte (5ª rodada, A CONFIRMAR): g[1] = lista dos pares, g[3] = par indicado (o de maior peso).
+# A causa (nenhum par na faixa) vem antes da indicação, e a faixa diz de quê (a população do município); com um
+# único par, a frase não repete o nome.
+.f07_fora_banda <- function(g) {
+  n <- length(strsplit(g[1], ", ", fixed = TRUE)[[1]])
+  if (n == 1 && identical(g[1], g[3]))
+    return(sprintf("Identifica-se o seguinte município de referência plausível: %s; esse par não se situa na faixa de porte de 1/3 a 3 vezes a população do município.", g[1]))
+  sprintf("%s: %s; como nenhum par se situa na faixa de porte de 1/3 a 3 vezes a população do município, indica-se o de maior peso, %s.",
+          if (n == 1) "Identifica-se o seguinte município de referência plausível"
+          else "Identificam-se os seguintes municípios de referência plausíveis",
+          if (n == 1) g[1] else sub(", ([^,]+)$", " e \\1", g[1]), g[3])
+}
+
 # Cada família: id, expressão regular ancorada e função que recebe os grupos capturados (g[1], g[2], ...)
 # e devolve a redação nova (ou NULL, quando um trecho capturado não pertence ao vocabulário mapeado).
 REDACAO_TEXTO_PADRAO <- list(
@@ -189,13 +213,18 @@ REDACAO_TEXTO_PADRAO <- list(
            else sprintf("na região %s, situa-se na faixa %s", g[5], .ef_faixa_loc[[g[6]]])
          paste0(estado, "; ", regiao, ".")
        }),
-  list(id = "F07", re = "^Municípios de referência plausíveis: (.+); par mais semelhante: (.+)\\.$",
+  list(id = "F07", re = "^Municípios de referência plausíveis: (.+); (par mais semelhante|par de maior peso \\(nenhum par na banda de porte\\)): (.+)\\.$",
        f = function(g) {
+         # o texto gravado pelo scripts/06 já indica a ausência de par na banda (5ª rodada)
+         if (startsWith(g[2], "par de maior peso")) return(.f07_fora_banda(g))
          n <- length(strsplit(g[1], ", ", fixed = TRUE)[[1]])
-         if (n == 1) sprintf("Identifica-se o seguinte município de referência plausível: %s; o par mais semelhante é %s.", g[1], g[2])
+         if (n == 1) sprintf("Identifica-se o seguinte município de referência plausível: %s; o par mais semelhante é %s.", g[1], g[3])
          else sprintf("Identificam-se os seguintes municípios de referência plausíveis: %s; o par mais semelhante é %s.",
-                      sub(", ([^,]+)$", " e \\1", g[1]), g[2])
-       }),
+                      sub(", ([^,]+)$", " e \\1", g[1]), g[3])
+       },
+       # (4ª e 5ª rodadas, A CONFIRMAR) nenhum par plausível na banda de porte: o par indicado é o de maior peso;
+       # usada por redigir_texto_padrao(fora_banda = TRUE)
+       f_fora_banda = function(g) .f07_fora_banda(g)),
   list(id = "F08", re = "^Escore esperado pelo contexto \\((.+?)\\): (.+?); no segundo estágio \\(escore corrigido (.+?)\\), o município fica (.+?) (acima|abaixo) do esperado\\.$",
        f = function(g) sprintf("O escore esperado pelo contexto (%s) é de %s; no segundo estágio, com escore corrigido de %s, o município situa-se %s %s do esperado.",
                                .ef_fatores(g[1]), g[2], g[3], g[4], g[5])),
@@ -264,9 +293,13 @@ REDACAO_TEXTO_PADRAO <- list(
 .dividir_frases <- function(t) strsplit(t, "(?<=[.)])\\s+(?=[A-ZÁÉÍÓÚÂÊÔÃÕÇ])", perl = TRUE)[[1]]
 
 # Texto-padrão da ficha municipal em redação científica. Com detalhe = TRUE, devolve também as famílias
-# aplicadas (uso da conferência).
-redigir_texto_padrao <- function(x, detalhe = FALSE) {
-  res <- lapply(x, function(t) {
+# aplicadas (uso da conferência). fora_banda (lógico, reciclado; 4ª rodada, Editor D, A CONFIRMAR): TRUE quando
+# par_mais_semelhante_fora_banda = 1, caso em que a frase F07 indica o par de maior peso (f_fora_banda de F07).
+redigir_texto_padrao <- function(x, detalhe = FALSE, fora_banda = FALSE) {
+  fb <- rep_len(as.logical(fora_banda), length(x))
+  fb <- !is.na(fb) & fb
+  res <- lapply(seq_along(x), function(i) {
+    t <- x[i]
     if (is.na(t) || !nzchar(t)) return(list(txt = t, ids = character(0)))
     fr <- .dividir_frases(t)
     r <- lapply(fr, .redigir_frase, familias = REDACAO_TEXTO_PADRAO)
@@ -279,6 +312,11 @@ redigir_texto_padrao <- function(x, detalhe = FALSE) {
       s <- strsplit(sub("^Sinalizações: (.+)\\.$", "\\1", fr[k]), "; ", fixed = TRUE)[[1]]
       s <- s[s != "sem comparável em algum insumo"]
       r[[k]]$txt <- if (!length(s)) "" else REDACAO_TEXTO_PADRAO[[which(vapply(REDACAO_TEXTO_PADRAO, `[[`, "", "id") == "F10")]]$f(paste(s, collapse = "; "))
+    }
+    # 4ª rodada (Editor D, A CONFIRMAR): sem par plausível na banda de porte, F07 indica o par de maior peso
+    if (fb[i]) for (k in which(ids %in% "F07")) {
+      f07 <- REDACAO_TEXTO_PADRAO[[which(vapply(REDACAO_TEXTO_PADRAO, `[[`, "", "id") == "F07")]]
+      r[[k]]$txt <- f07$f_fora_banda(regmatches(fr[k], regexec(f07$re, fr[k], perl = TRUE))[[1]][-1])
     }
     txts <- vapply(r, function(z) z$txt, character(1))
     list(txt = paste(txts[nzchar(txts)], collapse = " "), ids = ids)

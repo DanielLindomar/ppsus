@@ -1463,6 +1463,60 @@ def so_textos_sinal_ac(nome: str, antigo: bytes | None) -> bool:
 
 
 # ----------------------------------------------------------------------------
+# Versão 0.5 do site (24/10/2026; rodada 5) — A CONFIRMAR: par de maior peso quando não há par na banda de porte
+# ----------------------------------------------------------------------------
+# Sem par plausível na banda de porte (par_mais_semelhante_fora_banda = 1), o par indicado pela DEA é o de maior λ entre
+# os plausíveis (dea/v2_1/dea_lib_v2.py, pares_referencia), e não um par "mais semelhante" em porte. Esta camada corrige
+# SÓ a saída do site (dados_site/eficiencia e arquivos/dados/eficiencia): a frase F07 do texto_padrao dessas fichas e a
+# definição de mais_semelhante de pares_municipio.csv no dicionário. O schema dea não muda, e nenhum valor numérico muda
+# (as frases novas não acrescentam números; só a troca de textos idênticos aos antigos, célula a célula).
+PAR_F07_ANTIGO = "; par mais semelhante: "
+PAR_F07_NOVO = "; par de maior peso (nenhum par na banda de porte): "
+RE_PAR_F07 = re.compile(r"(Municípios de referência plausíveis: [^.]*?)" + re.escape(PAR_F07_ANTIGO))
+PAR_DIC_ANTIGO = "1 = par de maior peso dentro da banda de porte (1/3 a 3 vezes o porte da unidade avaliada)"
+PAR_DIC_NOVO = ("1 = par de maior peso dentro da banda de porte (1/3 a 3 vezes o porte da unidade avaliada); quando nenhum "
+                "par plausível se situa na banda, o par de maior peso (par_mais_semelhante_fora_banda, em fichas_municipio.csv)")
+ARQS_PAR = ("fichas_municipio.csv", "dicionario_eficiencia.csv")
+
+
+def _sim(x) -> bool:
+    return str(x).strip().lower() in ("1", "1.0", "true")
+
+
+def aplica_textos_par(nome: str, df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """Troca, no arquivo `nome`, os textos do par sem par na banda de porte (constantes acima). Só troca texto idêntico ao
+    antigo; devolve (cópia do quadro, nº de células alteradas)."""
+    df = df.copy()
+    n = 0
+    if nome == "fichas_municipio.csv" and {"texto_padrao", "par_mais_semelhante_fora_banda"} <= set(df.columns):
+        m = (df["par_mais_semelhante_fora_banda"].map(_sim)
+             & df["texto_padrao"].map(lambda x: isinstance(x, str) and RE_PAR_F07.search(x) is not None)).astype(bool)
+        df.loc[m, "texto_padrao"] = df.loc[m, "texto_padrao"].map(
+            lambda x: RE_PAR_F07.sub(lambda g: g.group(1) + PAR_F07_NOVO, x, count=1))
+        n = int(m.sum())
+    elif nome == "dicionario_eficiencia.csv":
+        m = (df["arquivo"].eq("pares_municipio.csv") & df["campo"].eq("mais_semelhante")
+             & df["definicao"].eq(PAR_DIC_ANTIGO)).fillna(False).astype(bool)
+        df.loc[m, "definicao"] = PAR_DIC_NOVO
+        n = int(m.sum())
+    return df, n
+
+
+def so_textos_site(nome: str, antigo: bytes | None) -> bool:
+    """True quando o arquivo gravado agora (SAIDA/nome) difere do conteúdo anterior SÓ pelos textos que esta camada
+    sobrescreve (sinal flag_polo_ac e par sem par na banda): aplicar as duas trocas ao conteúdo anterior reproduz o novo,
+    célula a célula."""
+    if antigo is None or nome not in set(ARQS_SINAL_AC) | set(ARQS_PAR):
+        return False
+    import io
+    a = pd.read_csv(io.BytesIO(antigo), dtype=str, keep_default_na=False)
+    b = pd.read_csv(SAIDA / nome, dtype=str, keep_default_na=False)
+    a2, n1 = aplica_textos_sinal_ac(nome, a) if nome in ARQS_SINAL_AC else (a, 0)
+    a3, n2 = aplica_textos_par(nome, a2) if nome in ARQS_PAR else (a2, 0)
+    return (n1 + n2) > 0 and list(a3.columns) == list(b.columns) and a3.reset_index(drop=True).equals(b.reset_index(drop=True))
+
+
+# ----------------------------------------------------------------------------
 def main() -> int:
     msg("06_preparar_eficiencia.py — resultados DEA %s", VERSAO)
     mun, reg, macro = ler_site()
@@ -1552,6 +1606,10 @@ def main() -> int:
     for nome in ARQS_SINAL_AC:
         arqs[nome], n_sub = aplica_textos_sinal_ac(nome, arqs[nome])
         msg("  sinal de participação da alta complexidade (flag_polo_ac): %d célula(s) de texto reescrita(s) em %s", n_sub, nome)
+    # versão 0.5 do site (rodada 5, A CONFIRMAR): par de maior peso quando não há par na banda de porte (só na saída do site)
+    for nome in ARQS_PAR:
+        arqs[nome], n_sub = aplica_textos_par(nome, arqs[nome])
+        msg("  par de maior peso sem par na banda de porte: %d célula(s) de texto reescrita(s) em %s", n_sub, nome)
     cont = validar(arqs, mun, espec)
     cont.update(info_ref)
     cont["pares_fora_top3"] = fora_top3
@@ -1562,7 +1620,7 @@ def main() -> int:
     msg("[8] gravação")
     # 'gerado_em' só muda quando algum arquivo de dados muda (execuções repetidas não sujam o diff)
     antes = {n: hashlib.md5((SAIDA / n).read_bytes()).hexdigest() for n in arqs if (SAIDA / n).exists()}
-    antigos_sinal = {n: (SAIDA / n).read_bytes() for n in ARQS_SINAL_AC if (SAIDA / n).exists()}
+    antigos_sinal = {n: (SAIDA / n).read_bytes() for n in set(ARQS_SINAL_AC) | set(ARQS_PAR) if (SAIDA / n).exists()}
     gerado_antigo = None
     if (SAIDA / "metadados.csv").exists():
         mdv = pd.read_csv(SAIDA / "metadados.csv", dtype=str)
@@ -1572,10 +1630,11 @@ def main() -> int:
         if nome != "metadados.csv":
             gravar(df, nome)
     mudou = [n for n in arqs if n != "metadados.csv" and antes.get(n) != hashlib.md5((SAIDA / n).read_bytes()).hexdigest()]
-    # versão 0.5 do site (A CONFIRMAR): a troca dos textos do sinal flag_polo_ac não é mudança de dados (gerado_em preservado)
-    so_sinal = [n for n in mudou if so_textos_sinal_ac(n, antigos_sinal.get(n))]
+    # versão 0.5 do site (A CONFIRMAR): a troca dos textos do sinal flag_polo_ac e (rodada 5) do par sem par na banda de
+    # porte não é mudança de dados (gerado_em preservado)
+    so_sinal = [n for n in mudou if so_textos_site(n, antigos_sinal.get(n))]
     if so_sinal:
-        msg("  arquivos que mudaram só nos textos do sinal flag_polo_ac (não contam para gerado_em): %s", ", ".join(so_sinal))
+        msg("  arquivos que mudaram só nos textos do sinal flag_polo_ac ou do par (não contam para gerado_em): %s", ", ".join(so_sinal))
     mudou = [n for n in mudou if n not in so_sinal]
     gerado_em = gerado_antigo if (gerado_antigo and not mudou) else f"{dt.datetime.now():%d/%m/%Y %H:%M}"
     msg("  arquivos alterados nesta execução: %s", ", ".join(mudou) if mudou else "nenhum (gerado_em preservado)")

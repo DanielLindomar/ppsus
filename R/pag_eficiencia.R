@@ -407,7 +407,7 @@ ficha_detalhe <- function(cod, modelo, ano = ANO_EF, prefixo = "../municipios/")
               tags$td(num(x$observado, 1)), tags$td(num(x$meta_intermediaria, 1)), tags$td(num(x$meta_radial, 1)),
               tags$td(pct_ef(x$potencial_pct))) }))) else NULL
   div(class = "ef-ficha",
-      if (!is.na(r$texto_padrao)) p(class = "sintese", redigir_texto_padrao(r$texto_padrao)),
+      if (!is.na(r$texto_padrao)) p(class = "sintese", redigir_texto_padrao(r$texto_padrao, fora_banda = fora_banda)),
       h5("Pares de referência plausíveis"), pares,
       if (!is.null(metas)) tagList(h5(sprintf("Metas %d (por mil habitantes; meta intermediária = %s da distância até a meta plena)", ano, pct_ef(100 * FRACAO_META, 0))), metas),
       if (!is.na(r$nota_evolucao) && nzchar(r$nota_evolucao)) p(class = "sub", strong("Evolução: "), redigir_nota_evolucao(r$nota_evolucao)),

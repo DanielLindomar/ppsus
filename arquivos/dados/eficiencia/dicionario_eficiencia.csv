@@ -162,7 +162,7 @@ pares_municipio.csv,par_slug,Par — endereço do perfil,—,identificador da p�
 pares_municipio.csv,par_regiao_saude,Par — região de saúde,—,região de saúde do par,SES-MT (PDR)
 pares_municipio.csv,par_populacao,Par — população,habitantes,população do par no ano,IBGE
 pares_municipio.csv,peso,Peso do par,proporção (0–1),λ normalizado: participação do par na projeção que define a meta (soma 1 entre todos os pares),Projeto PPSUS-MT — estimação DEA v2.1 (16/10/2026)
-pares_municipio.csv,mais_semelhante,Par mais semelhante,0/1,1 = par de maior peso dentro da banda de porte (1/3 a 3 vezes o porte da unidade avaliada),Projeto PPSUS-MT — estimação DEA v2.1 (16/10/2026)
+pares_municipio.csv,mais_semelhante,Par mais semelhante,0/1,"1 = par de maior peso dentro da banda de porte (1/3 a 3 vezes o porte da unidade avaliada); quando nenhum par plausível se situa na banda, o par de maior peso (par_mais_semelhante_fora_banda, em fichas_municipio.csv)",Projeto PPSUS-MT — estimação DEA v2.1 (16/10/2026)
 pares_municipio.csv,n_pares_plausiveis,Número de pares plausíveis,n,"pares elegíveis (sem flag de plausibilidade nem supereficiência > 2), não autorreferidos",Projeto PPSUS-MT — estimação DEA v2.1 (16/10/2026)
 pares_municipio.csv,pares_fonte,Fonte dos pares,—,especificação de origem dos pares (fronteira restrita; fronteira comum quando o programa restrito é infactível),Projeto PPSUS-MT — estimação DEA v2.1 (16/10/2026)
 fichas_hospital.csv,cnes,CNES,—,código do estabelecimento no CNES,CNES
