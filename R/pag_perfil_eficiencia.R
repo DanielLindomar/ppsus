@@ -305,7 +305,7 @@ bloco_metas <- function(cod, modelo, r) {
               if (n_info == 1) "a meta tem" else "as metas têm") else ""
   if (nrow(lac) == 0 && nrow(info) == 0) {
     corpo <- if (fronteira) '<p class="ef-linha"><b>Metas 2025.</b> Todas as variáveis do modelo já estão na meta, uma vez que o município se situa na fronteira.</p>'
-             else if (nrow(cm$rec_polo)) '<p class="ef-linha"><b>Metas 2025:</b> sem lacuna de produção em relação aos municípios elegíveis como referência.</p>'
+             else if (nrow(cm$rec_polo)) '<p class="ef-linha"><b>Metas 2025.</b> Não há lacuna de produção em relação aos municípios elegíveis como referência.</p>'
              else '<p class="ef-linha"><b>Metas 2025.</b> Não há lacuna na comparação com os municípios elegíveis como referência (com registro plausível), dos quais derivam as metas; por essa razão, não há meta a publicar, embora o escore, calculado entre todos os municípios, indique potencial.</p>'
   } else {
     if (nrow(info)) { info$potencial_pct <- NA_real_; lac <- rbind(lac, info) }
