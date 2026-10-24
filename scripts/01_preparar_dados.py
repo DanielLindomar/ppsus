@@ -378,7 +378,7 @@ NOTA_CURTA = {
     "desp_total_pc": "Valores em R$ correntes, sem deflação, que abrangem todas as fontes de recursos.",
     "fte_medicos_p1000": "Equivalente em tempo integral (FTE, do inglês full-time equivalent) de 40 h; o crescimento pode refletir a melhoria do registro no CNES.",
     "leitos_sus_p1000": "Média das competências do ano, com valor zero onde não há hospital SUS.",
-    "atend_individual_pc": "O registro no SISAB cresce com a informatização e apresentou queda em 2020.",
+    "atend_individual_pc": "O registro no SISAB tende a crescer com a informatização e apresentou queda em 2020.",
     "pct_internacoes_fora_mun": "O deslocamento não é desfavorável por si só, pois a alta complexidade é regionalizada; consideram-se apenas hospitais de MT (os de outros estados constam à parte, em Deslocamento).",
     "taxa_mortalidade_infantil": "Indicador instável em municípios com menos de 100 nascidos vivos por ano, com dados até 2024.",
     "leitos_uti_sus": "Há sub-registro conhecido no CNES.",
