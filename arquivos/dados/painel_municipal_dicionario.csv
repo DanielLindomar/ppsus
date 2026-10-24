@@ -34,8 +34,8 @@ posicao,coluna,descricao,unidade,fonte,bloco,indicador_site
 33,n_hospitais_sus,Número de hospitais com atendimento SUS (média anual).,hospitais,CNES,indicador do site (capacidade),n_hospitais_sus
 34,n_upa,Número de unidades de pronto atendimento (UPA e pronto atendimento) com atendimento SUS (média anual).,unidades,CNES,indicador do site (capacidade),n_upa
 35,n_equipes_esf,Equipes de Saúde da Família (média anual),equipes,CNES,capacidade,
-36,n_equipes_eap,"Número de equipes de atenção primária (modalidade eAP), pela média anual.",equipes,CNES,indicador do site (capacidade),n_equipes_eap
-37,n_equipes_esb,"Número de equipes de saúde bucal (eSB), pela média anual.",equipes,CNES,indicador do site (capacidade),n_equipes_esb
+36,n_equipes_eap,Número médio anual de equipes de atenção primária na modalidade eAP.,equipes,CNES,indicador do site (capacidade),n_equipes_eap
+37,n_equipes_esb,Número médio anual de equipes de saúde bucal (eSB).,equipes,CNES,indicador do site (capacidade),n_equipes_esb
 38,sisab_atend_individual,Atendimentos individuais registrados pelas equipes de atenção básica no ano,atendimentos,SISAB,atenção básica,
 39,sisab_atend_odonto,Atendimentos odontológicos individuais registrados no ano,atendimentos,SISAB,atenção básica,
 40,sisab_procedimentos,Procedimentos registrados pelas equipes de atenção básica no ano,procedimentos,SISAB,atenção básica,

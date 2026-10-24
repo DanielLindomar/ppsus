@@ -129,7 +129,8 @@ NOTA_SUBFUNCAO = (
     "parte da despesa em 'outras subfunções'; recomenda-se, por isso, utilizar a despesa total nas comparações."
 )
 NOTA_FTE = (
-    "O FTE (equivalente em tempo integral) corresponde aos vínculos com atendimento SUS convertidos em equivalente a "
+    "O equivalente em tempo integral (FTE, do inglês full-time equivalent) corresponde aos vínculos com atendimento SUS "
+    "convertidos em equivalente a "
     "40 h semanais, pela média das competências do ano (CNES). O crescimento ao longo do tempo pode refletir a melhoria "
     "do registro, e não apenas a expansão real."
 )
@@ -148,7 +149,7 @@ CATALOGO = [
     dict(id="desp_total_pc", rotulo="Despesa em saúde por habitante", grupo="financiamento", unidade="R$ por habitante", fmt="brl", sentido=0,
          fonte="SIOPS (RREO)", num="desp_total_saude", den="populacao", mult=1, agg="razao",
          formula="desp_total_saude / populacao",
-         nota="Corresponde à despesa liquidada do município na função Saúde, acumulada no ano, em R$ correntes (sem deflação), e inclui todas as fontes de recursos (recursos próprios e transferências).",
+         nota="O indicador corresponde à despesa liquidada do município na função Saúde, acumulada no ano, em R$ correntes (sem deflação), e inclui todas as fontes de recursos (recursos próprios e transferências).",
          kpi=1, ano_max=2025, descricao="Despesa liquidada pelo município em saúde no ano, por habitante."),
     dict(id="desp_ab_pc", rotulo="Despesa em atenção básica por habitante", grupo="financiamento", unidade="R$ por habitante", fmt="brl", sentido=0,
          fonte="SIOPS (RREO)", num="desp_301_atencao_basica", den="populacao", mult=1, agg="razao",
@@ -161,12 +162,12 @@ CATALOGO = [
     dict(id="pct_recursos_proprios", rotulo="Despesa com recursos próprios", grupo="financiamento", unidade="% da despesa total", fmt="pct1", sentido=0,
          fonte="SIOPS (RREO)", num="desp_recursos_proprios", den="desp_total_saude", mult=100, agg="razao",
          formula="100 × desp_recursos_proprios / desp_total_saude",
-         nota="Mede a parcela da despesa em saúde financiada com receitas próprias do município (impostos e transferências constitucionais), e não com transferências do SUS. Os valores fora do intervalo de 0–100%, decorrentes de lançamentos negativos no SIOPS (Novo Santo Antônio, em 2020, e Peixoto de Azevedo, em 2021), foram anulados.",
+         nota="O indicador mede a parcela da despesa em saúde financiada com receitas próprias do município (impostos e transferências constitucionais), e não com transferências do SUS. Os valores fora do intervalo de 0–100%, decorrentes de lançamentos negativos no SIOPS (Novo Santo Antônio, em 2020, e Peixoto de Azevedo, em 2021), foram anulados.",
          kpi=0, ano_max=2025, descricao="Parcela da despesa em saúde financiada com receitas próprias do município."),
     dict(id="pct_capital", rotulo="Despesa de capital", grupo="financiamento", unidade="% da despesa total", fmt="pct1", sentido=0,
          fonte="SIOPS (RREO)", num="desp_capital", den="desp_total_saude", mult=100, agg="razao",
          formula="100 × desp_capital / desp_total_saude",
-         nota="Expressa os investimentos (obras e equipamentos) em relação à despesa total e tende a oscilar consideravelmente de um ano para outro.",
+         nota="O indicador expressa os investimentos (obras e equipamentos) em relação à despesa total e tende a oscilar consideravelmente de um ano para outro.",
          kpi=0, ano_max=2025, descricao="Parcela da despesa em saúde destinada a investimentos."),
 
     # ---- capacidade (CNES, média anual, vínculos SUS) ----
@@ -223,7 +224,7 @@ CATALOGO = [
          descricao="Número de unidades de pronto atendimento (UPA e pronto atendimento) com atendimento SUS (média anual)."),
     dict(id="n_estab_sus", rotulo="Estabelecimentos com atendimento SUS", grupo="capacidade", unidade="estabelecimentos", fmt="int", sentido=0,
          fonte="CNES", num="n_estab_sus", den=None, mult=1, agg="soma",
-         formula="n_estab_sus (média das competências do ano)", nota="Abrange todos os tipos de estabelecimento com atendimento SUS.",
+         formula="n_estab_sus (média das competências do ano)", nota="Consideram-se todos os tipos de estabelecimento com atendimento SUS.",
          kpi=0, ano_max=2025, descricao="Número de estabelecimentos de saúde com atendimento SUS (média anual)."),
     dict(id="equipes_esf_p10000", rotulo="Equipes de Saúde da Família por 10 mil habitantes", grupo="capacidade", unidade="equipes por 10 mil hab.", fmt="dec2", sentido=1,
          fonte="CNES", num="n_equipes_esf", den="populacao", mult=10000, agg="razao",
@@ -233,11 +234,11 @@ CATALOGO = [
     dict(id="n_equipes_eap", rotulo="Equipes de atenção primária (eAP)", grupo="capacidade", unidade="equipes", fmt="int", sentido=0,
          fonte="CNES", num="n_equipes_eap", den=None, mult=1, agg="soma",
          formula="n_equipes_eap (média das competências do ano)", nota="", kpi=0, ano_max=2025,
-         descricao="Número de equipes de atenção primária (modalidade eAP), pela média anual."),
+         descricao="Número médio anual de equipes de atenção primária na modalidade eAP."),
     dict(id="n_equipes_esb", rotulo="Equipes de saúde bucal", grupo="capacidade", unidade="equipes", fmt="int", sentido=0,
          fonte="CNES", num="n_equipes_esb", den=None, mult=1, agg="soma",
          formula="n_equipes_esb (média das competências do ano)", nota="", kpi=0, ano_max=2025,
-         descricao="Número de equipes de saúde bucal (eSB), pela média anual."),
+         descricao="Número médio anual de equipes de saúde bucal (eSB)."),
 
     # ---- atenção básica (SISAB, SI-PNI) ----
     dict(id="atend_individual_pc", rotulo="Atendimentos individuais na atenção básica por habitante", grupo="atencao_basica", unidade="atendimentos por hab.", fmt="dec2", sentido=1,
@@ -292,17 +293,17 @@ CATALOGO = [
     dict(id="pct_urgencia", rotulo="Internações de urgência", grupo="media_alta", unidade="% das internações locais", fmt="pct1", sentido=0,
          fonte="SIH/SUS", num="internacoes_urgencia_local", den="internacoes_local", mult=100, agg="razao",
          formula="100 × internacoes_urgencia_local / internacoes_local",
-         nota="Considera-se o caráter de internação diferente de eletivo, nas internações realizadas no município; o campo permanece vazio onde não há internação local.",
+         nota="Considera-se o caráter de internação diferente de eletivo, nas internações realizadas no município; o campo permanece vazio quando não há internação local.",
          kpi=0, ano_max=2025, descricao="Parcela das internações realizadas no município com caráter de urgência."),
     dict(id="mortalidade_hosp_pct", rotulo="Mortalidade hospitalar", grupo="media_alta", unidade="% das internações locais", fmt="pct1", sentido=-1,
          fonte="SIH/SUS", num="obitos_hosp_local", den="internacoes_local", mult=100, agg="razao",
          formula="100 × obitos_hosp_local / internacoes_local",
-         nota="Consideram-se os óbitos nas internações realizadas no município, sem ajuste de risco, ressaltando-se que os hospitais de referência recebem casos mais graves. Em 2020–2021, o indicador refletiu a COVID-19. O campo permanece vazio onde não há internação local.",
+         nota="Consideram-se os óbitos nas internações realizadas no município, sem ajuste de risco, ressaltando-se que os hospitais de referência recebem casos mais graves. Em 2020–2021, o indicador refletiu a COVID-19. O campo permanece vazio quando não há internação local.",
          kpi=0, ano_max=2025, descricao="Parcela das internações realizadas no município que terminaram em óbito."),
     dict(id="permanencia_media", rotulo="Permanência média das internações", grupo="media_alta", unidade="dias", fmt="dec1", sentido=0,
          fonte="SIH/SUS", num="diarias_local", den="internacoes_local", mult=1, agg="razao",
          formula="diarias_local / internacoes_local",
-         nota="Corresponde às diárias pagas por internação nos hospitais do município; o campo permanece vazio onde não há internação local.",
+         nota="O indicador corresponde às diárias pagas por internação nos hospitais do município; o campo permanece vazio quando não há internação local.",
          kpi=0, ano_max=2025, descricao="Média de dias por internação nos hospitais do município."),
     dict(id="diarias_uti_p1000", rotulo="Diárias de UTI por mil habitantes", grupo="media_alta", unidade="diárias por mil hab.", fmt="dec1", sentido=0,
          fonte="SIH/SUS", num="diarias_uti_local", den="populacao", mult=1000, agg="razao",
@@ -312,19 +313,19 @@ CATALOGO = [
     dict(id="valor_sih_local_pc", rotulo="Valor das internações realizadas no município por habitante", grupo="media_alta", unidade="R$ por habitante", fmt="brl", sentido=0,
          fonte="SIH/SUS", num="valor_sih_local", den="populacao", mult=1, agg="razao",
          formula="valor_sih_local / populacao",
-         nota="Corresponde ao valor aprovado das AIH pagas a hospitais do município, em R$ correntes, e expressa produção, e não despesa.", kpi=0, ano_max=2025,
+         nota="O indicador corresponde ao valor aprovado das AIH pagas a hospitais do município, em R$ correntes, e expressa produção, e não despesa.", kpi=0, ano_max=2025,
          descricao="Valor pago pelo SUS às internações realizadas no município, por habitante."),
     dict(id="valor_sih_res_pc", rotulo="Valor das internações de residentes por habitante", grupo="media_alta", unidade="R$ por habitante", fmt="brl", sentido=0,
          fonte="SIH/SUS", num="valor_sih_res", den="populacao", mult=1, agg="razao",
          formula="valor_sih_res / populacao",
-         nota="Corresponde ao valor aprovado das AIH de moradores do município, independentemente do local de internação em Mato Grosso, em R$ correntes.", kpi=0, ano_max=2025,
+         nota="O indicador corresponde ao valor aprovado das AIH de moradores do município, independentemente do local de internação em Mato Grosso, em R$ correntes.", kpi=0, ano_max=2025,
          descricao="Valor pago pelo SUS às internações de moradores do município, por habitante."),
 
     # ---- deslocamento (SIH, residentes) ----
     dict(id="pct_internacoes_fora_mun", rotulo="Internações fora do município de residência", grupo="deslocamento", unidade="% das internações de residentes", fmt="pct1", sentido=-1,
          fonte="SIH/SUS", num="internacoes_res_fora", den="internacoes_res", mult=100, agg="razao",
          formula="100 × internacoes_res_fora / internacoes_res",
-         nota="Mede a parcela dos moradores internados em hospitais de outro município de Mato Grosso. Embora o menor valor indique mais atendimento local, o deslocamento não é desfavorável por si só, uma vez que a alta complexidade é regionalizada por desenho. O campo permanece vazio quando não há internação de residentes.",
+         nota="O indicador mede a parcela dos moradores internados em hospitais de outro município de Mato Grosso. Embora o menor valor indique mais atendimento local, o deslocamento não é desfavorável por si só, uma vez que a alta complexidade é regionalizada por desenho. O campo permanece vazio quando não há internação de residentes.",
          kpi=1, ano_max=2025, descricao="Parcela das internações de moradores realizadas em outro município."),
     dict(id="pct_internacoes_fora_regiao", rotulo="Internações fora da região de saúde", grupo="deslocamento", unidade="% das internações de residentes", fmt="pct1", sentido=0,
          fonte="SIH/SUS (AIH reduzida)", num="outra_regiao", den="internacoes_res", mult=100, agg="externo",
@@ -375,7 +376,7 @@ assert {c["id"] for c in CATALOGO if c["kpi"] == 1} == KPIS, "kpi=1 deve estar e
 # Ressalva curta, visível nos cartões-chave do perfil (coluna adicional ao contrato: nota_curta)
 NOTA_CURTA = {
     "desp_total_pc": "Valores em R$ correntes, sem deflação, que abrangem todas as fontes de recursos.",
-    "fte_medicos_p1000": "Equivalente em tempo integral (FTE) de 40 h; o crescimento pode refletir a melhoria do registro no CNES.",
+    "fte_medicos_p1000": "Equivalente em tempo integral (FTE, do inglês full-time equivalent) de 40 h; o crescimento pode refletir a melhoria do registro no CNES.",
     "leitos_sus_p1000": "Média das competências do ano, com valor zero onde não há hospital SUS.",
     "atend_individual_pc": "O registro no SISAB cresce com a informatização e apresentou queda em 2020.",
     "pct_internacoes_fora_mun": "O deslocamento não é desfavorável por si só, pois a alta complexidade é regionalizada; consideram-se apenas hospitais de MT (os de outros estados constam à parte, em Deslocamento).",
