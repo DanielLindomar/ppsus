@@ -59,7 +59,7 @@ Fonte: elaboração própria; a fonte primária de cada arquivo consta da coluna
 :::
 
 ::: {.callout-note collapse="true"}
-## Como ler os arquivos em R e Python
+## Leitura dos arquivos em R e Python
 
 Os códigos de município e de estabelecimento devem ser lidos como texto ou inteiro, nunca como número decimal, para preservar os zeros à esquerda do CNES e permitir a junção entre arquivos.
 
@@ -135,7 +135,7 @@ Fonte: elaboração própria.
 :::
 
 ::: {.callout-warning collapse="true"}
-## Como usar os arquivos de eficiência
+## Uso dos arquivos de eficiência
 
 **A leitura deve ser feita por faixa, e não por posição exata.** O campo `faixa` indica a fronteira ou o quartil do escore corrigido (`escore_bc`) entre as unidades avaliadas no ano; `ic_inf`–`ic_sup` corresponde ao intervalo de confiança de 95%; e `ic_cruza_faixa = 1` indica posição incerta entre duas faixas. Por essa razão, não se recomenda ordenar as unidades pelo escore para montar *rankings*.
 
@@ -143,7 +143,7 @@ Fonte: elaboração própria.
 
 As **linhas sem escore** apresentam `situacao` diferente de "avaliado", com o motivo registrado em `motivo_situacao`, e as metas somente devem ser utilizadas quando `meta_publicavel = 1`. O escore esperado pelo contexto não existe para a ótica do acesso (M2A), para os hospitais fora do painel balanceado e para Boa Esperança do Norte, cujo primeiro exercício ocorreu em 2025. O sinal **registro a verificar** (`registro_a_verificar = 1`), por sua vez, indica dado de origem atípico: a unidade permanece avaliada, mas não serve de referência e pode ter a meta financeira omitida. A lista de verificações será encaminhada à SES-MT e ao COSEMS-MT.
 
-Quanto à **evolução**, como as fronteiras são anuais, o nível do escore não é comparável entre anos, devendo-se utilizar a mudança de eficiência (`ec_*`) e o índice de Malmquist (`mi_*`). O deslocamento tecnológico aparece somente de forma agregada (`resumo_modelos.csv` e `malmquist_regiao.csv`), com a ressalva do crescimento do registro no CNES após 2022. O método, os modelos e as ressalvas estão descritos em [Metodologia](../metodologia.html#eficiencia) e em [Eficiência — como ler](../eficiencia/index.html).
+Quanto à **evolução**, como as fronteiras são anuais, o nível do escore não é comparável entre anos, devendo-se utilizar a mudança de eficiência (`ec_*`) e o índice de Malmquist (`mi_*`). O deslocamento tecnológico aparece somente de forma agregada (`resumo_modelos.csv` e `malmquist_regiao.csv`), com a ressalva do crescimento do registro no CNES após 2022. O método, os modelos e as ressalvas estão descritos em [Metodologia](../metodologia.html#eficiencia) e em [Eficiência: interpretação dos resultados e visão geral](../eficiencia/index.html).
 :::
 
 ### Dicionário dos campos de eficiência
