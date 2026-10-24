@@ -768,7 +768,7 @@ efx_m3_tabela <- function() {
     Escore = colDef(name = "Escore corrigido (IC 95%)", align = "right", minWidth = 140, html = TRUE,
                     cell = function(v, i) sprintf('<b>%s</b><div class="sub">%s</div>', efx_esc(v), efx_ic(t$ic_inf[i], t$ic_sup[i]))),
     ic_inf = colDef(show = FALSE), ic_sup = colDef(show = FALSE), cruza = colDef(show = FALSE),
-    Faixa = colDef(name = "Faixa (entre as região-anos com escore)", minWidth = 150, html = TRUE, cell = function(v, i) efx_chip(v, t$cruza[i])),
+    Faixa = colDef(name = "Faixa (entre as regiões-ano com escore)", minWidth = 150, html = TRUE, cell = function(v, i) efx_chip(v, t$cruza[i])),
     Quadrante = colDef(name = "Quadrante no ano", minWidth = 190, html = TRUE, cell = function(v) efx_chip_quad(v)))))
 }
 

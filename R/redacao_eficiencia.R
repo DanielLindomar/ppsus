@@ -296,8 +296,9 @@ redigir_texto_padrao <- function(x, detalhe = FALSE) {
 #        ao ano."
 #   R07 "Escore DEA diagnóstico da produção de AC: <e> (IC 95% de <a> a <b>; faixa <faixa> entre as região-anos com
 #        oferta contínua) — leitura complementar ao painel." -> "O escore DEA diagnóstico da produção de AC é de <e>
-#        (intervalo de confiança de 95%: <a> a <b>), na faixa <da fronteira|do ...> entre as região-anos com oferta
-#        contínua, e constitui leitura complementar ao painel."
+#        (intervalo de confiança de 95%: <a> a <b>), na faixa <da fronteira|do ...> entre as regiões-ano com oferta
+#        contínua, e constitui leitura complementar ao painel." (o CSV mantém "as região-anos"; a exibição usa o
+#        plural do composto, "as regiões-ano")
 #   R08 "Sem escore de eficiência: a região não tem oferta hospitalar contínua de AC; a leitura é o acesso dos
 #        residentes e a dependência de outras regiões." -> "Não se calcula escore de eficiência para a região, que
 #        não dispõe de oferta hospitalar contínua de AC; a leitura, nesse caso, baseia-se no acesso dos residentes
@@ -326,7 +327,7 @@ REDACAO_FICHA_REGIAO <- list(
        f = function(g) sprintf("No período %s–%s, a tendência do acesso foi de %s%% ao ano.", g[1], g[2], g[3])),
   list(id = "R07", re = paste0("^Escore DEA diagnóstico da produção de AC: ([0-9.,]+) \\(IC 95% de ([0-9.,]+) a ([0-9.,]+); faixa (", .ef_faixas_re,
                                ") entre as região-anos com oferta contínua\\) — leitura complementar ao painel\\.$"),
-       f = function(g) sprintf("O escore DEA diagnóstico da produção de AC é de %s (intervalo de confiança de 95%%: %s a %s), na faixa %s entre as região-anos com oferta contínua, e constitui leitura complementar ao painel.",
+       f = function(g) sprintf("O escore DEA diagnóstico da produção de AC é de %s (intervalo de confiança de 95%%: %s a %s), na faixa %s entre as regiões-ano com oferta contínua, e constitui leitura complementar ao painel.",
                                g[1], g[2], g[3], .ef_faixa_loc[[g[4]]])),
   list(id = "R08", re = "^Sem escore de eficiência: a região não tem oferta hospitalar contínua de AC; a leitura é o acesso dos residentes e a dependência de outras regiões\\.$",
        f = function(g) "Não se calcula escore de eficiência para a região, que não dispõe de oferta hospitalar contínua de AC; a leitura, nesse caso, baseia-se no acesso dos residentes e na dependência de outras regiões."),
