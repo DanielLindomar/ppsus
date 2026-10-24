@@ -128,7 +128,7 @@ cor_calor <- function(p) {
 matriz_regioes <- function(nivel = "total", ano = ANO_DESL) {
   f <- FLUXOREG[FLUXOREG$ano == ano, ]
   if (nivel != "total") f <- f[f$nivel == nivel, ]
-  if (nrow(f) == 0 || nrow(REG) == 0) return(p(class = "nota-fonte", "Sem fluxos entre regiões para este nível."))
+  if (nrow(f) == 0 || nrow(REG) == 0) return(p(class = "nota-fonte", "Não há fluxos entre regiões de saúde para este nível."))
   regs <- REG[ordem_nome(REG$regiao_saude), ]
   cod <- regs$co_regsaud; nm <- regs$regiao_saude; k <- length(cod)
   a <- f |> filter(co_reg_origem %in% cod, co_reg_destino %in% cod) |>
@@ -215,7 +215,7 @@ mapa_fluxos_niveis <- function(ano = ANO_DESL, n_max = 80, n_rot = 6, altura = 5
     }
   }
   legenda <- sprintf(paste0(
-    "<div style='font-size:.78rem;line-height:1.3;max-width:230px'><b>Como ler</b><br>",
+    "<div style='font-size:.78rem;line-height:1.3;max-width:230px'><b>Legenda</b><br>",
     "<svg width='40' height='10' aria-hidden='true'><line x1='0' x2='40' y1='5' y2='5' stroke='%s' stroke-width='4' opacity='.7'/></svg> ",
     "%d maiores fluxos entre municípios em %d (espessura ∝ internações)<br>",
     "<svg width='14' height='14' aria-hidden='true'><circle cx='7' cy='7' r='6' fill='%s' fill-opacity='.5' stroke='%s'/></svg> ",
@@ -243,7 +243,7 @@ cobertura_fluxos <- function(ano = ANO_DESL, n_max = 80) {
 # Ranking dos polos de atendimento (reactable)
 tabela_polos <- function(nivel = "total", ano = ANO_DESL, prefixo = "../municipios/", tamanho = 15) {
   pl <- polos_nivel(nivel, ano)
-  if (nrow(pl) == 0) return(p(class = "nota-fonte", "Sem polos para este nível."))
+  if (nrow(pl) == 0) return(p(class = "nota-fonte", "Não há polos de atendimento para este nível."))
   d <- pl |> transmute(Posição = pos, cod = cod_mun6, Município = nome_mun(cod_mun6), `Região de saúde` = regiao_mun(cod_mun6),
                       Recebidas = internacoes_recebidas, `De fora` = recebidas_de_fora, `% de fora` = pct_recebidas_de_fora,
                       Origens = n_origens, `Principal origem` = ifelse(is.na(origem_principal), "—", sprintf("%s (%s)", origem_principal, pct_txt(pct_origem_principal))),
@@ -276,7 +276,7 @@ tabela_dependentes <- function(criterio = c("pct", "km"), ano = ANO_DESL, n = 10
   d <- desl_ano(ano) |> filter(internacoes_res >= min_int)
   d <- if (criterio == "pct") d |> filter(no_proprio_mun > 0) |> arrange(desc(pct_internacoes_fora_mun)) else d |> arrange(desc(km_medio_internacao))
   d <- head(d, n)
-  if (nrow(d) == 0) return(p(class = "nota-fonte", "Sem dados."))
+  if (nrow(d) == 0) return(p(class = "nota-fonte", "Não há municípios que atendam a este critério no ano."))
   t <- d |> transmute(cod = cod_mun6, Município = municipio, `Região de saúde` = regiao_saude, População = populacao_2025,
                       Internações = internacoes_res, `% fora` = pct_internacoes_fora_mun, `km médio` = km_medio_internacao,
                       Destino = ifelse(is.na(destino_principal_nome), "—", sprintf("%s (%s)", destino_principal_nome, pct_txt(pct_destino_principal))))
@@ -296,7 +296,7 @@ tabela_dependentes <- function(criterio = c("pct", "km"), ano = ANO_DESL, n = 10
 # Todos os municípios no ano (residência e atendimento), com busca, ordenação e download
 tabela_todos_municipios <- function(ano = ANO_DESL, prefixo = "../municipios/", id_html = "tab-desl-mun") {
   d <- desl_ano(ano) |> arrange(ordem_nome(municipio))
-  if (nrow(d) == 0) return(p(class = "nota-fonte", "Sem dados."))
+  if (nrow(d) == 0) return(p(class = "nota-fonte", "Não há dados de deslocamento para o ano."))
   t <- d |> transmute(cod = cod_mun6, Município = municipio, `Região de saúde` = regiao_saude, `População 2025` = populacao_2025,
                       `Hospital SUS` = ifelse(is.na(tem_hospital_sus_2025), "—", ifelse(tem_hospital_sus_2025 == 1, "sim", "não")),
                       `Internações de residentes` = internacoes_res, `% no próprio município` = pct_proprio_mun,
@@ -489,7 +489,7 @@ tabela_fuga_saldo <- function(ano = ANO_DESL) {
 # somado quando nenhum ano da região está suprimido)
 tabela_fuga_regioes <- function(ano = ANO_DESL) {
   r <- FUGAREG[FUGAREG$ano == ano, ]
-  if (nrow(r) == 0) return(p(class = "nota-fonte", "Sem dados por região."))
+  if (nrow(r) == 0) return(p(class = "nota-fonte", "Não há dados por região de saúde para o ano."))
   per <- FUGAREG[FUGAREG$ano %in% ANOS, ] |> group_by(co_regsaud) |>
     summarise(fora_p = if (any(is.na(internacoes_outra_uf))) NA_real_ else sum(internacoes_outra_uf),
               tot_p = if (any(is.na(internacoes_total_res))) NA_real_ else sum(internacoes_total_res), .groups = "drop")
@@ -513,7 +513,7 @@ tabela_fuga_regioes <- function(ano = ANO_DESL) {
 
 # Municípios de residência, 2020–2025 somado (supressão já aplicada no arquivo)
 tabela_fuga_municipios <- function(prefixo = "../municipios/", id_html = "tab-fuga-mun") {
-  if (nrow(FUGAMUN) == 0) return(p(class = "nota-fonte", "Sem dados por município."))
+  if (nrow(FUGAMUN) == 0) return(p(class = "nota-fonte", "Não há dados por município de residência."))
   d <- FUGAMUN |> left_join(select(MUN, cod_mun6, populacao_2025), by = "cod_mun6") |>
     transmute(cod = cod_mun6, Município = municipio, Região = nome_regiao(co_regsaud), pop = populacao_2025,
               tot = internacoes_total_res, fora = internacoes_outra_uf, pct = pct_outra_uf,
@@ -543,7 +543,7 @@ fuga_mun_top <- function(n = 5, min_tot = 500) {
 
 # Principais municípios de destino fora de MT (2020–2025)
 tabela_fuga_destinos <- function() {
-  if (nrow(FUGADEST) == 0) return(p(class = "nota-fonte", "Sem dados de destinos."))
+  if (nrow(FUGADEST) == 0) return(p(class = "nota-fonte", "Não há dados sobre os municípios de destino."))
   d <- FUGADEST |> arrange(posicao) |>
     transmute(Posição = posicao, Município = sprintf("%s (%s)", municipio, uf), int = internacoes, pct = pct_do_total_fora,
               ac = internacoes_ac, pct_ac = pct_ac)

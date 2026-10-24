@@ -849,7 +849,7 @@ ARQS_PREV <- c(
   "previsao_testes_dm_encadeado.csv" = "testes de Diebold-Mariano da previsão encadeada",
   "previsao_metricas_menor5.csv" = "erro dos modelos para menores de 5 anos",
   "previsao_alerta_limiares.csv" = "limiares de alta pressão (P80 e P90 de 2022–2023)",
-  "previsao_alerta_medidas.csv" = "sensibilidade, especificidade, VPP, VPN e F1 do alerta",
+  "previsao_alerta_medidas.csv" = "sensibilidade, especificidade, VPP, valor preditivo negativo (VPN) e F1 do alerta",
   "previsao_alerta_antecedencia.csv" = "antecedência do primeiro aviso nos episódios de alta pressão",
   "previsao_contexto_pediatrico.csv" = "limiar de menores de 5 anos, leitos pediátricos e ocupação equivalente",
   "previsao_dicionario.csv" = "dicionário: conteúdo, colunas, supressão e status de cada arquivo")
