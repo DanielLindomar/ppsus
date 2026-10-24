@@ -340,9 +340,9 @@ A **permanência média em UTI** é a de cada município de destino (2024–2025
 
 **Apenas a demanda SUS registrada.** O SIH não registra a demanda reprimida (pacientes que não chegam à UTI) nem a saúde suplementar, inclusive o uso dos leitos de UTI não SUS que já existem em municípios candidatos. Por essa razão, as regiões sem UTI ficam subestimadas na demanda, na necessidade de leitos e na otimização. A UTI coronariana ficou fora da análise.
 
-**Validação concentrada na pandemia.** Os experimentos naturais da UTI provêm quase todos de 2021 e 2022; o modelo de escolha foi escolhido nos mesmos eventos em que foi avaliado, e o de demanda, no próprio período de teste. O desconto de 1,28, ademais, provém de poucas aberturas.
+**Validação concentrada na pandemia.** Os experimentos naturais da UTI provêm quase todos de 2021 e 2022; o modelo de escolha foi selecionado nos mesmos eventos em que foi avaliado, e o de demanda, no próprio período de teste. O desconto de 1,28, ademais, provém de poucas aberturas.
 
-**Demanda concentrada na sede.** O SIH e o CNES informam o município, e não o endereço: o deslocamento dentro do município conta zero, e os municípios extensos têm o acesso superestimado.
+**Demanda concentrada na sede.** O SIH e o CNES informam o município, e não o endereço: o deslocamento dentro do município é computado como zero, e os municípios extensos têm o acesso superestimado.
 
 **Tempo rodoviário em condições ideais.** Os tempos do OSRM são de automóvel, sem balsas, estradas sazonais, transporte sanitário, regulação ou espera, e servem para comparar alternativas, e não como tempo-resposta. Algumas rotas ainda se encontram em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT).
 

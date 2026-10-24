@@ -148,7 +148,7 @@ Quanto à **evolução**, como as fronteiras são anuais, o nível do escore nã
 
 ### Dicionário dos campos de eficiência
 
-A Tabela 4 descreve todos os campos dos arquivos acima, organizados por arquivo, com o nome gerencial, a unidade, a definição e a fonte de cada um. Para abrir a lista, basta clicar no nome do arquivo, e a busca abrange todos os campos. O mesmo conteúdo encontra-se em [`dicionario_eficiencia.csv`](../arquivos/dados/eficiencia/dicionario_eficiencia.csv).
+A Tabela 4 descreve todos os campos dos arquivos acima, organizados por arquivo, com o nome gerencial, a unidade, a definição e a fonte de cada um. A lista de campos de cada arquivo é exibida mediante a seleção do respectivo nome, e a busca abrange todos os campos. O mesmo conteúdo encontra-se em [`dicionario_eficiencia.csv`](../arquivos/dados/eficiencia/dicionario_eficiencia.csv).
 
 **Tabela 4 – Dicionário dos campos de eficiência, por arquivo**
 

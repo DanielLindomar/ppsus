@@ -44,7 +44,7 @@ Os cartões apresentam valores do estado, obtidos pela soma ou pela razão dos t
 
 ## Municípios
 
-O mapa a seguir dá acesso ao perfil de cada município, que reúne os indicadores por grupo, a comparação com a região de saúde e com o estado, a eficiência por modelo, o deslocamento para internação e os hospitais SUS. Para abrir o perfil, basta clicar sobre o município desejado.
+O mapa a seguir dá acesso ao perfil de cada município, que reúne os indicadores por grupo, a comparação com a região de saúde e com o estado, a eficiência por modelo, o deslocamento para internação e os hospitais SUS. A seleção de um município no mapa abre o respectivo perfil.
 
 ```{r}
 mapa_municipio(NULL, altura = 420, prefixo = "municipios/")

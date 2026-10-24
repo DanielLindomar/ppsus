@@ -425,9 +425,9 @@ Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`. Nota: na Justiça Federal, consi
 ## Limitações {#limitacoes}
 
 ::: {.callout-warning title="Cuidados na interpretação"}
-**Cobertura do DataJud.** A API pública reproduz cerca de `r pct_j(100 * mean(cob), 0)` dos casos novos de saúde do painel oficial do CNJ (contados por grau, média de 2020–2026), exclui os processos sob sigilo e somente é comparável a partir de 2020, de modo que o nível das taxas está subestimado. Há, ainda, atraso de cerca de cinco semanas na carga: 2026 vai somente até 11/09, e os meses mais recentes podem ser revistos.
+**Cobertura do DataJud.** A API pública reproduz cerca de `r pct_j(100 * mean(cob), 0)` dos casos novos de saúde do painel oficial do CNJ (contados por grau, média de 2020–2026), exclui os processos sob sigilo e somente é comparável a partir de 2020, de modo que o nível das taxas está subestimado. Há, ainda, atraso de cerca de cinco semanas na carga, de modo que a série de 2026 se estende somente até 11/09, e os meses mais recentes podem ser revistos.
 
-**Comarca, não município.** O município herda a taxa da comarca, `r n_fora` dos 142 municípios não são sede de comarca, e o DataJud não informa a residência de quem ajuíza a ação. A atribuição de Planalto da Serra depende de confirmação da Corregedoria do TJMT.
+**Comarca, não município.** O município herda a taxa da comarca; ressalta-se que `r n_fora` dos 142 municípios não são sede de comarca e que o DataJud não informa a residência de quem ajuíza a ação. A atribuição de Planalto da Serra depende de confirmação da Corregedoria do TJMT.
 
 **Centralização.** Entre `r pct_j(min(sem_origem), 0)` e `r pct_j(max(sem_origem), 0)` das ações de 2022–2026 não têm comarca de origem identificável; essa fração não é aleatória, pode distorcer o mapa perto da capital e mudou de patamar em 2025. Somente um dado com a residência do autor (TJMT, Procuradoria-Geral do Estado ou Secretaria de Estado de Saúde de Mato Grosso, SES-MT) resolveria essa limitação.
 

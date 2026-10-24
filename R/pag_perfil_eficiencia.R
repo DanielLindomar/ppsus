@@ -207,9 +207,9 @@ bloco_pares <- function(cod, modelo, r) {
   if (nrow(p) == 0) {
     txt <- if (eh1(r$fronteira)) {
       nref <- as.integer(r$n_vezes_referencia)
-      if (is.finite(nref) && nref > 0) sprintf("Na fronteira: o município não tem pares e serve de referência para %d %s neste modelo.", nref, if (nref == 1) "município" else "municípios")
-      else "Na fronteira: o município não tem pares."
-    } else "nenhum listado: entre os municípios elegíveis como referência (com registro plausível), nenhum produz mais com os mesmos recursos. O potencial indicado pelo escore provém da comparação com todos os municípios, que inclui unidades fora desse grupo."
+      if (is.finite(nref) && nref > 0) sprintf("por situar-se na fronteira, o município não tem pares e serve de referência para %d %s neste modelo.", nref, if (nref == 1) "município" else "municípios")
+      else "por situar-se na fronteira, o município não tem pares."
+    } else "nenhum município é listado, uma vez que, entre os municípios elegíveis como referência (com registro plausível), nenhum produz mais com os mesmos recursos. O potencial indicado pelo escore provém da comparação com todos os municípios, que inclui unidades fora desse grupo."
     return(sprintf('<p class="ef-linha"><b>Municípios de referência:</b> %s</p>', txt))
   }
   itens <- sprintf('<li><a href="%s.html">%s</a> <span class="sub">(%s; %s hab.; peso %s%%)</span>%s</li>',
@@ -229,8 +229,8 @@ bloco_pares <- function(cod, modelo, r) {
 # Notas das metas em linguagem de gestor (a nota de polo de AC já aparece nos sinais)
 nota_meta_gestor <- function(n) {
   n <- n[!grepl("^polo de alta complexidade", n)]
-  out <- ifelse(grepl("pares restritos infact", n), "metas calculadas na comparação com todos os municípios, porque a comparação restrita aos elegíveis como referência não tem solução para este município",
-         ifelse(grepl("^sem comparável entre os pares", n), "em alguma variável não há comparável entre os municípios elegíveis: meta igual ao observado",
+  out <- ifelse(grepl("pares restritos infact", n), "as metas foram calculadas na comparação com todos os municípios, uma vez que a comparação restrita aos elegíveis como referência não tem solução para este município",
+         ifelse(grepl("^sem comparável entre os pares", n), "em alguma variável não há comparável entre os municípios elegíveis, razão pela qual a meta é igual ao valor observado",
          ifelse(grepl("meta financeira não publicada", n) & grepl("302", n), "meta financeira não publicada (despesa de média complexidade com registro a verificar)",
          ifelse(grepl("meta financeira não publicada", n), "meta financeira não publicada (classificação orçamentária a verificar)",
          ifelse(grepl("^sem hospital SUS", n), "sem hospital SUS no município, as internações locais são nulas por configuração da rede, e a meta de internações é apenas informativa", n)))))
@@ -259,9 +259,9 @@ bloco_metas <- function(cod, modelo, r) {
   m <- cm$m; lac <- cm$lac; info <- cm$info; n_ok <- cm$n_ok
   if (nrow(m) == 0) return('<p class="ef-linha"><b>Metas:</b> não publicadas para este modelo.</p>')
   notas <- nota_meta_gestor(unique(m$nota_meta[!is.na(m$nota_meta) & nzchar(m$nota_meta)]))
-  if (nrow(cm$rec_polo)) notas <- c(notas, sprintf("%s: polo de alta complexidade — parte dos recursos atende moradores de outros municípios e a alta complexidade; por isso, a folga de recursos não é comparável e não é publicada",
-                                                   if (nrow(cm$rec_polo) == 1) "meta de recurso omitida" else sprintf("%d metas de recursos omitidas", nrow(cm$rec_polo))))
-  txt_ok <- if (n_ok > 0) sprintf(" %d %s do modelo já %s na meta.", n_ok, if (n_ok == 1) "outra variável" else "outras variáveis", if (n_ok == 1) "está" else "estão") else ""
+  if (nrow(cm$rec_polo)) notas <- c(notas, sprintf("%s, por se tratar de polo de alta complexidade: parte dos recursos atende moradores de outros municípios e a alta complexidade, razão pela qual a folga de recursos não é comparável e não é publicada",
+                                                   if (nrow(cm$rec_polo) == 1) "omite-se a meta de recurso" else sprintf("omitem-se %d metas de recursos", nrow(cm$rec_polo))))
+  txt_ok <- if (n_ok > 0) sprintf(" Além das variáveis da tabela, %d %s do modelo já %s na meta.", n_ok, if (n_ok == 1) "outra variável" else "outras variáveis", if (n_ok == 1) "está" else "estão") else ""
   txt_info <- if (nrow(info)) sprintf(" %s: observado igual a zero no município, sem percentual de lacuna; a meta é apenas informativa.",
                                       paste(esc(unique(info$nome_gerencial)), collapse = "; ")) else ""
   if (nrow(lac) == 0 && nrow(info) == 0) {
@@ -348,9 +348,9 @@ frase_sintese <- function(r, nome) {
   if (!r$situacao %in% "avaliado") return(sprintf("Em %d, %s não tem escore publicado neste modelo.", EF_ANO, nome))
   f1 <- if (eh1(r$fronteira)) {
     nref <- suppressWarnings(as.integer(r$n_vezes_referencia))
-    paste0(sprintf("Em %d, %s está entre as melhores práticas do estado %s (faixa fronteira)", EF_ANO, nome, alvo),
+    paste0(sprintf("Em %d, %s situa-se entre as melhores práticas do estado %s (faixa da fronteira)", EF_ANO, nome, alvo),
            if (is.finite(nref) && nref > 0) sprintf(" e serve de referência para %d %s", nref, if (nref == 1) "município" else "municípios") else "",
-           if (eh1(r$super_infactivel) || grepl("sem_comparavel", ifelse(is.na(r$sinal), "", r$sinal))) "; a posição deve ser lida com reserva, porque falta comparável em algum recurso." else ".")
+           if (eh1(r$super_infactivel) || grepl("sem_comparavel", ifelse(is.na(r$sinal), "", r$sinal))) "; essa posição, contudo, deve ser interpretada com reserva, em razão da ausência de comparável em algum recurso." else ".")
   } else {
     # Duas comparações: a meta plena vem dos municípios elegíveis como referência (registro plausível); o escore,
     # da comparação com todos os municípios. Quando há meta de produção, ela vem primeiro.
@@ -358,11 +358,11 @@ frase_sintese <- function(r, nome) {
     pr <- cm$lac[cm$lac$tipo == "produto", ]
     esc_txt <- sprintf("%s%% (entre %s%% e %s%%)", num(r$potencial_expansao_pct, 0), num(r$potencial_expansao_min_pct, 0), num(r$potencial_expansao_max_pct, 0))
     paste0(if (nrow(pr))
-             sprintf("Em %d, em relação aos municípios de referência com registro plausível, %s poderia ampliar %s em %s %s%% com os mesmos recursos (meta plena); na comparação com todos os municípios, o escore indica cerca de %s. Faixa no estado: %s",
+             sprintf("Em %d, em relação aos municípios de referência com registro plausível, %s poderia ampliar %s em %s %s%% com os mesmos recursos (meta plena); na comparação com todos os municípios, o escore indica cerca de %s. No estado, o município situa-se na faixa do %s",
                      EF_ANO, nome, EF_PROD[[r$modelo]], if (nrow(pr) > 1) "até" else "cerca de", num(max(pr$potencial_pct), 0), esc_txt, tolower(rotulo_faixa(r$faixa)))
-           else sprintf("Em %d, com os mesmos recursos, %s poderia ampliar %s em cerca de %s, segundo o escore calculado entre todos os municípios; faixa no estado: %s",
+           else sprintf("Em %d, com os mesmos recursos, %s poderia ampliar %s em cerca de %s, segundo o escore calculado entre todos os municípios; no estado, o município situa-se na faixa do %s",
                         EF_ANO, nome, EF_PROD[[r$modelo]], esc_txt, tolower(rotulo_faixa(r$faixa))),
-           if (eh1(r$ic_cruza_faixa)) " (posição incerta entre esta faixa e a vizinha)." else ".")
+           if (eh1(r$ic_cruza_faixa)) ", com posição incerta entre esta faixa e a vizinha." else ".")
   }
   ten <- ifelse(is.na(r$tendencia_ec_2022_2025), "", r$tendencia_ec_2022_2025)
   f2 <- switch(ten,

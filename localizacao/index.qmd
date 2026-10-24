@@ -89,7 +89,7 @@ Duas marcas acompanham os resultados. A marca **PROVISÓRIO** indica dependênci
 ::: {.callout-warning title="Comuns aos dois pilotos"}
 **Projeção populacional provisória.** A população municipal de 2026–2030 resulta da aplicação da participação de cada município (por sexo e faixa etária) à projeção do Instituto Brasileiro de Geografia e Estatística (IBGE) para Mato Grosso; o método não desloca as coortes, de modo que cada município herda o envelhecimento médio do estado.
 
-**Demanda e oferta nas sedes.** Os sistemas informam o município, e não o endereço; por essa razão, o deslocamento dentro do município conta zero, e os municípios extensos têm o acesso superestimado.
+**Demanda e oferta nas sedes.** Os sistemas informam o município, e não o endereço; por essa razão, o deslocamento dentro do município é computado como zero, e os municípios extensos têm o acesso superestimado.
 
 **Tempos em condições ideais.** Não se consideram balsas, estradas sazonais, transporte sanitário, regulação ou espera, e algumas rotas encontram-se em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT).
 

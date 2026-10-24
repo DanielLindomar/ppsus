@@ -284,9 +284,9 @@ Ressalta-se, por fim, que **a qualidade e a segurança não entram nos modelos**
 
 **Os modelos de escolha erram quando a oferta muda.** No parto, o modelo dos cenários apresentou desempenho inferior ao da regra ingênua nos experimentos naturais, razão pela qual os ganhos devem ser lidos como ordem de grandeza.
 
-**Escolhas no próprio teste.** O modelo de demanda foi escolhido no período de teste, e o de escolha, nos mesmos eventos em que foi avaliado; as métricas são, portanto, otimistas.
+**Escolhas no próprio teste.** O modelo de demanda foi selecionado no período de teste, e o de escolha, nos mesmos eventos em que foi avaliado; as métricas são, portanto, otimistas.
 
-**Demanda concentrada na sede.** O SINASC e o CNES informam o município, e não o endereço: toda a demanda e toda a oferta ficam na sede, e o deslocamento dentro do município conta zero. Por essa razão, os municípios extensos têm o acesso superestimado.
+**Demanda concentrada na sede.** O SINASC e o CNES informam o município, e não o endereço: toda a demanda e toda a oferta ficam na sede, e o deslocamento dentro do município é computado como zero. Por essa razão, os municípios extensos têm o acesso superestimado.
 
 **Tempo rodoviário em condições ideais.** Os tempos do OSRM são de automóvel, sem balsas, estradas sazonais, transporte sanitário ou espera, e servem para comparar alternativas, e não como tempo-resposta. Algumas rotas ainda se encontram em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT).
 

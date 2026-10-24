@@ -43,13 +43,13 @@
 #   F06  "Faixa no estado[ (entre os municípios do grupo '<g>')]: <faixa>[ (o intervalo cruza a faixa
 #         vizinha)]; na região <reg>: <faixa2> | sem posição (poucos municípios avaliados fora da
 #         fronteira na região: n = <n>)."
-#        -> "No estado[, entre os municípios do grupo '<g>'], o município situa-se na faixa <da fronteira|
+#        -> "No estado[, entre os municípios do grupo “<g>”], o município situa-se na faixa <da fronteira|
 #            do quartil ...>[, e o intervalo de confiança cruza a faixa vizinha]; na região <reg>,
 #            situa-se na faixa <...> | não se atribui posição, por haver poucos municípios avaliados
 #            fora da fronteira na região (n = <n>)."
 #   F07  "Municípios de referência plausíveis: <lista>; par mais semelhante: <par>."
 #        -> "Identifica-se o seguinte município de referência plausível: <lista>; o par mais semelhante
-#            é <par>." (no plural quando há mais de um município na lista)
+#            é <par>." (no plural quando há mais de um município na lista, com "e" antes do último nome)
 #   F08  "Escore esperado pelo contexto (<fatores>): <x>; no segundo estágio (escore corrigido <e>),
 #         o município fica <d> acima|abaixo do esperado."
 #        -> "O escore esperado pelo contexto (<fatores>) é de <x>; no segundo estágio, com escore
@@ -151,7 +151,7 @@ REDACAO_TEXTO_PADRAO <- list(
                                ")( \\(o intervalo cruza a faixa vizinha\\))?; na região (.+?): (", .ef_faixas_re,
                                "|sem posição \\(poucos municípios avaliados fora da fronteira na região: n = (\\d+)\\))\\.$"),
        f = function(g) {
-         estado <- paste0("No estado", if (nzchar(g[1])) sprintf(", entre os municípios do grupo '%s'", g[2]) else "",
+         estado <- paste0("No estado", if (nzchar(g[1])) sprintf(", entre os municípios do grupo “%s”", g[2]) else "",
                           ", o município situa-se na faixa ", .ef_faixa_loc[[g[3]]],
                           if (nzchar(g[4])) ", e o intervalo de confiança cruza a faixa vizinha" else "")
          regiao <- if (startsWith(g[6], "sem posição"))
@@ -163,7 +163,8 @@ REDACAO_TEXTO_PADRAO <- list(
        f = function(g) {
          n <- length(strsplit(g[1], ", ", fixed = TRUE)[[1]])
          if (n == 1) sprintf("Identifica-se o seguinte município de referência plausível: %s; o par mais semelhante é %s.", g[1], g[2])
-         else sprintf("Identificam-se os seguintes municípios de referência plausíveis: %s; o par mais semelhante é %s.", g[1], g[2])
+         else sprintf("Identificam-se os seguintes municípios de referência plausíveis: %s; o par mais semelhante é %s.",
+                      sub(", ([^,]+)$", " e \\1", g[1]), g[2])
        }),
   list(id = "F08", re = "^Escore esperado pelo contexto \\((.+?)\\): (.+?); no segundo estágio \\(escore corrigido (.+?)\\), o município fica (.+?) (acima|abaixo) do esperado\\.$",
        f = function(g) sprintf("O escore esperado pelo contexto (%s) é de %s; no segundo estágio, com escore corrigido de %s, o município situa-se %s %s do esperado.",
@@ -208,9 +209,9 @@ REDACAO_TEXTO_PADRAO <- list(
   list(id = "F21", re = "^Hospital de outra esfera: despesa (\\d+) baixa com internações locais relevantes \\(nota informativa; não restringe pares\\)\\.$",
        f = function(g) sprintf("Registra-se hospital de outra esfera, com despesa %s baixa e internações locais relevantes (nota informativa, que não restringe os pares).", g[1])),
   list(id = "F22", re = "^Primeiro exercício do município: registro possivelmente parcial \\(produtos SISAB anualizados\\); escore publicável com marca 'parcial'\\.$",
-       f = function(g) "Por se tratar do primeiro exercício do município, o registro é possivelmente parcial (produtos do SISAB anualizados), e o escore é publicável com a marca 'parcial'."),
+       f = function(g) "Por se tratar do primeiro exercício do município, o registro é possivelmente parcial (produtos do SISAB anualizados), e o escore é publicável com a marca “parcial”."),
   list(id = "F23", re = "^Flag de rede 'sem hospital SUS' ativa apesar de internações de média complexidade locais registradas no SIH: configuração da rede a verificar na origem \\(CNES/SIH\\)\\.$",
-       f = function(g) "A marcação de rede 'sem hospital SUS' está ativa, apesar de haver internações de média complexidade locais registradas no SIH, de modo que a configuração da rede deve ser verificada na origem (CNES/SIH).")
+       f = function(g) "A marcação de rede “sem hospital SUS” está ativa, apesar de haver internações de média complexidade locais registradas no SIH, de modo que a configuração da rede deve ser verificada na origem (CNES/SIH).")
 )
 
 # Aplica a primeira família cuja expressão casa com a frase inteira; devolve list(txt, id) (id = NA sem mapeamento)
