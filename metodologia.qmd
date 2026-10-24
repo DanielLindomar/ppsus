@@ -30,13 +30,13 @@ Todas as fontes utilizadas são públicas e foram obtidas dos sistemas nacionais
 **Tabela 1 – Fontes de dados, períodos utilizados e informações extraídas**
 
 ::: {.rolagem-x}
-| Fonte | O que é | Período usado | O que se extrai |
+| Fonte | Descrição | Período usado | Informações extraídas |
 |---|---|---|---|
 | **SIOPS** | Declarações orçamentárias dos municípios em saúde, por meio do Relatório Resumido da Execução Orçamentária (RREO) | 2020–2025 | Despesa liquidada total e por subfunção (atenção básica, média e alta complexidade, outras), despesa corrente e de capital, parcela com recursos próprios |
 | **CNES** | Cadastro Nacional de Estabelecimentos de Saúde: estabelecimentos, leitos, equipamentos e profissionais | 2020–2025 (média das competências mensais) | Profissionais SUS em equivalente de 40 h (médicos, enfermeiros, técnicos, dentistas, agentes comunitários de saúde — CBO 515105), leitos SUS e de UTI, equipamentos em uso, unidades básicas, hospitais, UPA, equipes de saúde da família, de atenção primária e de saúde bucal |
 | **SIA** | Sistema de Informações Ambulatoriais do SUS: produção ambulatorial aprovada | 2020–2025 (competência de realização) | Quantidade e valor de procedimentos de média e alta complexidade, pelo município do estabelecimento e pelo de residência |
 | **SIH** | Sistema de Informações Hospitalares do SUS: internações pagas por Autorização de Internação Hospitalar (AIH) | 2020–2025 (ano da alta) | Internações por complexidade, diárias, diárias de UTI, óbitos, urgência, valor; pelo município do hospital e pelo de residência; fluxos entre municípios |
-| **SIH (outras UF)** | Internações pagas por AIH em hospitais das outras 26 unidades da federação (arquivos RD de cada estado), filtradas a residentes de Mato Grosso | 2020–2025 (ano da alta) | Internações de residentes de Mato Grosso fora do estado, por estado e município de destino e por complexidade; saldo de internações com cada estado (página [Deslocamento](deslocamento/index.html#fuga)) |
+| **SIH (outras UF)** | Internações pagas por AIH em hospitais das outras 26 unidades da Federação (arquivos RD de cada estado), restritas aos residentes de Mato Grosso | 2020–2025 (ano da alta) | Internações de residentes de Mato Grosso fora do estado, por estado e município de destino e por complexidade; saldo de internações com cada estado (página [Deslocamento](deslocamento/index.html#fuga)) |
 | **SISAB** | Sistema de Informação em Saúde para a Atenção Básica: produção das equipes de atenção básica | 2020–2025 | Atendimentos individuais, odontológicos, procedimentos, visitas domiciliares; atendimentos por médico e por enfermeiro |
 | **SI-PNI** | Sistema de Informação do Programa Nacional de Imunizações: doses de vacina aplicadas | 2020–2025 (sem COVID-19) | Doses aplicadas no município, doses em menores de 1 ano |
 | **SIM** | Sistema de Informações sobre Mortalidade: óbitos por residência | 2020–2024 | Óbitos totais e de menores de 1 ano; taxas de mortalidade geral e infantil |
@@ -60,7 +60,7 @@ Os indicadores ***per capita*** correspondem à razão entre o total do ano e a 
 
 ## Janela analítica: justificativa do período 2020–2025 {#por-que-20202025}
 
-A janela analítica inicia-se em 2020 por ser o primeiro ano em que o SIOPS, o SISAB e o SIH se encontram completos e comparáveis no repositório do projeto; em 2019, há dados do SISAB e de qualidade, mas não há SIOPS nem SIH processados. O término em 2025 justifica-se porque 2026 está em curso e é parcial em todas as fontes. Dentro da janela, os dados do SIM e do SINASC estendem-se até 2024, uma vez que o processamento nacional dos óbitos e dos nascimentos é concluído com um ano de atraso; por essa razão, os indicadores de resultado apresentam 2024 como último ano. Em 2020–2025, 141 municípios dispõem de série completa, ao passo que Boa Esperança do Norte existe somente a partir de 2025.
+A janela analítica inicia-se em 2020 por ser o primeiro ano em que o SIOPS, o SISAB e o SIH se encontram completos e comparáveis no repositório do projeto; em 2019, há dados do SISAB e dos indicadores de qualidade (SIM e SINASC), mas não há SIOPS nem SIH processados. O término em 2025 justifica-se porque 2026 está em curso e é parcial em todas as fontes. Dentro da janela, os dados do SIM e do SINASC estendem-se até 2024, uma vez que o processamento nacional dos óbitos e dos nascimentos é concluído com um ano de atraso; por essa razão, os indicadores de resultado apresentam 2024 como último ano. Em 2020–2025, 141 municípios dispõem de série completa, ao passo que Boa Esperança do Norte existe somente a partir de 2025.
 
 ## Anomalias e limitações conhecidas
 
@@ -72,7 +72,7 @@ Os problemas descritos a seguir foram identificados na validação dos painéis 
 
 **O preenchimento da residência do paciente no SIA melhorou ao longo do tempo.** A parcela de procedimentos ambulatoriais com residência ignorada caiu de 79% (2019) para 49% (2025), em razão da mudança do registro consolidado para o individualizado. Por conseguinte, os indicadores ambulatoriais por residência não são comparáveis entre anos e não são publicados; a análise de deslocamento utiliza somente as internações (SIH), nas quais a residência é bem preenchida.
 
-**As internações em outros estados não integram os indicadores municipais.** Os indicadores por residência, os fluxos entre municípios e os modelos de eficiência utilizam a produção realizada em Mato Grosso. Desde a versão 0.3, as internações de residentes de Mato Grosso em hospitais das outras 26 unidades da federação são medidas com o SIH desses estados e apresentadas na página [Deslocamento](deslocamento/index.html#fuga): elas representam `r fuga_pct("total")` das internações dos residentes em 2025, mas `r fuga_pct("AC")` das de alta complexidade. Os indicadores por residência subestimam, portanto, a demanda hospitalar, sobretudo na alta complexidade e nos municípios de fronteira, dos quais Rondolândia constitui o caso extremo. Ademais, como a AIH não registra o Cartão Nacional de Saúde (CNS), a contagem refere-se a internações, e não a pessoas. Os atendimentos ambulatoriais realizados em outros estados não constam do site.
+**As internações em outros estados não integram os indicadores municipais.** Os indicadores por residência, os fluxos entre municípios e os modelos de eficiência utilizam a produção realizada em Mato Grosso. Desde a versão 0.3, as internações de residentes de Mato Grosso em hospitais das outras 26 unidades da Federação são medidas com o SIH desses estados e apresentadas na página [Deslocamento](deslocamento/index.html#fuga): elas representam `r fuga_pct("total")` das internações dos residentes em 2025, mas `r fuga_pct("AC")` das de alta complexidade. Os indicadores por residência subestimam, portanto, a demanda hospitalar, sobretudo na alta complexidade e nos municípios de fronteira, dos quais Rondolândia constitui o caso extremo. Ademais, como a AIH não registra o Cartão Nacional de Saúde (CNS), a contagem refere-se a internações, e não a pessoas. Os atendimentos ambulatoriais realizados em outros estados não constam do site.
 
 **A pandemia de COVID-19 afetou os anos de 2020 e 2021.** A mortalidade hospitalar chegou a 5,8% em 2021, os leitos de Unidade de Terapia Intensiva (UTI) foram ampliados temporariamente, a mortalidade geral aumentou e a produção da atenção básica caiu em 2020. Assim, as comparações que envolvem esses anos devem ser interpretadas à luz desse contexto, e o índice de Malmquist será calculado com e sem o período 2020–2021.
 
@@ -151,7 +151,7 @@ A seção [Previsão](previsao/index.html) aplica a previsão de demanda ao caso
 **Tabela 3 – Fontes de dados da previsão de demanda**
 
 ::: {.rolagem-x}
-| Fonte | Período usado | O que se extrai |
+| Fonte | Período usado | Informações extraídas |
 |---|---|---|
 | **SIH/SUS de Mato Grosso** (AIH reduzida) | Internações de 2020 a 2026; competência de processamento até 08/2026, carga de 17/10/2026 | Série semanal das internações J00–J99 (AIH tipo 1) e o atraso de registro de cada semana |
 | **SIVEP-Gripe** | 2020–2026 (arquivos de 2025 e 2026 na versão de 12/10/2026) | Hospitalizações por síndrome respiratória aguda grave (SRAG), por região de residência e semana de início dos sintomas, como sinal antecipado |
@@ -173,12 +173,12 @@ Quanto à divulgação, as contagens observadas de 1 a 4 por região e semana n�
 
 ## Localização de serviços (preliminar) {#localizacao}
 
-A seção [Localização](localizacao/index.html) organiza em cenários, para apoiar a discussão com a gestão, a questão sobre onde a abertura ou a ampliação de um serviço reduziria mais o deslocamento dos pacientes, considerando a demanda dos próximos anos, com dois pilotos: [atenção ao parto](localizacao/parto.html) e [UTI adulto](localizacao/uti-adulto.html). A análise apoia-se em uma cadeia de cinco modelos: a demanda por município de residência em 2026–2030 (L1); a escolha do estabelecimento pelo paciente (L2); o acesso atual (L3), medido, entre outros indicadores, pelo método aprimorado de áreas de captação flutuantes em duas etapas (E2SFCA, do inglês *Enhanced Two-Step Floating Catchment Area*), de Luo e Qi (2009); a otimização da localização de unidades novas (L4), por meio dos modelos de p-mediana (HAKIMI, 1964; REVELLE; SWAIN, 1970), de cobertura máxima (CHURCH; REVELLE, 1974) e, na UTI, de uma versão com capacidade; e os cenários que combinam a otimização com a escolha do paciente (L5). A Tabela 4 apresenta as fontes utilizadas.
+A seção [Localização](localizacao/index.html) examina, por meio de cenários destinados a apoiar a discussão com a gestão, onde a abertura ou a ampliação de um serviço reduziria mais o deslocamento dos pacientes, considerada a demanda dos próximos anos, em dois pilotos: [atenção ao parto](localizacao/parto.html) e [UTI adulto](localizacao/uti-adulto.html). A análise apoia-se em uma cadeia de cinco modelos: a demanda por município de residência em 2026–2030 (L1); a escolha do estabelecimento pelo paciente (L2); o acesso atual (L3), medido, entre outros indicadores, pelo método aprimorado de áreas de captação flutuantes em duas etapas (E2SFCA, do inglês *Enhanced Two-Step Floating Catchment Area*), de Luo e Qi (2009); a otimização da localização de unidades novas (L4), por meio dos modelos de *p*-mediana (HAKIMI, 1964; REVELLE; SWAIN, 1970), de cobertura máxima (CHURCH; REVELLE, 1974) e, na UTI, de uma versão com capacidade; e os cenários que combinam a otimização com a escolha do paciente (L5). A Tabela 4 apresenta as fontes utilizadas.
 
 **Tabela 4 – Fontes de dados da localização de serviços**
 
 ::: {.rolagem-x}
-| Fonte | Período usado | O que se extrai |
+| Fonte | Período usado | Informações extraídas |
 |---|---|---|
 | **SINASC** | 2020–2025 (2025 preliminar); deslocamento em 2024–2025 | Nascidos vivos hospitalares de mães residentes em Mato Grosso, por município de residência e de nascimento |
 | **SIH/SUS de MT e das outras UF** | 2020–2025; deslocamento em 2024–2025 | Internações SUS com UTI adulto de residentes de Mato Grosso, por município de residência e do hospital |
@@ -191,7 +191,7 @@ A seção [Localização](localizacao/index.html) organiza em cenários, para ap
 Fonte: elaboração própria.
 :::
 
-Os resultados dependem de pressupostos que convém explicitar. Em primeiro lugar, a população municipal de 2026–2030 foi obtida pela aplicação da participação de cada município, por sexo e faixa etária, à projeção do IBGE para o estado (método de razão); por isso, a demanda de 2030 é **provisória** e será refeita quando houver projeção municipal por idade e sexo. Em segundo lugar, a ocupação-alvo de 85%, o módulo de 10 leitos de UTI, o filtro de candidatos pela captação esperada (com o desconto de 1,28 medido nas aberturas de UTI) e os limiares de 52 e 100 partos por ano constituem **parâmetros de pesquisa destinados à montagem de cenários, e não critérios normativos** de habilitação. Na UTI adulto, as soluções da p-mediana e da versão com capacidade são apresentadas lado a lado, como cenários; no parto, várias soluções quase empatam e devem ser interpretadas como ordem de grandeza. Em terceiro lugar, os tempos calculados com o *Open Source Routing Machine* (OSRM), descrito por Luxen e Vetter (2011), correspondem a condições ideais, pois não incluem balsas, estradas sazonais, transporte sanitário, regulação ou espera, e servem apenas para comparar alternativas.
+Os resultados dependem de pressupostos que convém explicitar. Em primeiro lugar, a população municipal de 2026–2030 foi obtida pela aplicação da participação de cada município, por sexo e faixa etária, à projeção do IBGE para o estado (método de razão); por isso, a demanda de 2030 é **provisória** e será refeita quando houver projeção municipal por idade e sexo. Em segundo lugar, a ocupação-alvo de 85%, o módulo de 10 leitos de UTI, o filtro de candidatos pela captação esperada (com o desconto de 1,28 medido nas aberturas de UTI) e os limiares de 52 e 100 partos por ano constituem **parâmetros de pesquisa destinados à montagem de cenários, e não critérios normativos** de habilitação. Na UTI adulto, as soluções da *p*-mediana e da versão com capacidade são apresentadas lado a lado, como cenários; no parto, várias soluções apresentam valores praticamente equivalentes e devem ser interpretadas como ordem de grandeza. Em terceiro lugar, os tempos calculados com o *Open Source Routing Machine* (OSRM), descrito por Luxen e Vetter (2011), correspondem a condições ideais, pois não incluem balsas, estradas sazonais, transporte sanitário, regulação ou espera, e servem apenas para comparar alternativas.
 
 Quanto à divulgação, as contagens são publicadas em números inteiros, e os percentuais municipais e regionais de deslocamento com contagem de 1 a 4 ficam vazios, assim como aqueles que permitiriam deduzi-los por diferença, inclusive a partir do total de Mato Grosso, publicado na linha do estado; a supressão é conferida por programação inteira. Ressalta-se que os resultados não constituem recomendação oficial de abertura, habilitação ou fechamento de serviços.
 
@@ -202,7 +202,7 @@ A seção [Judicialização](judicializacao/index.html) descreve as ações judi
 **Tabela 5 – Fontes de dados da judicialização da saúde**
 
 ::: {.rolagem-x}
-| Fonte | Período usado | O que se extrai |
+| Fonte | Período usado | Informações extraídas |
 |---|---|---|
 | **DataJud (CNJ), API Pública** | Ações ajuizadas de 2020 a 11/09/2026 (coleta de 17/10/2026) | Metadados das ações com assuntos de saúde da Tabela Processual Unificada no TJMT e na Justiça Federal em Mato Grosso (TRF1): classe, assuntos, grau, mês de ajuizamento, unidade de origem e decisões liminares. Sem nomes das partes, sem texto e sem processos sigilosos |
 | **TJMT, Corregedoria-Geral da Justiça** | Jurisdição vigente das comarcas | Municípios abrangidos por cada comarca |
@@ -225,7 +225,7 @@ A previsão mensal compara, com base no MASE, o modelo de suavização exponenci
 
 O processamento dos dados (*pipeline*) organiza-se em quatro camadas sucessivas. Na primeira, o *Data Lake* (camada bruta) recebe os arquivos originais do DATASUS, obtidos por protocolo de transferência de arquivos (FTP, do inglês *File Transfer Protocol*), do SIOPS e do IBGE, carregados sem alteração em PostgreSQL, com registro de origem e data. Na segunda, a camada tratada (`trusted`) corrige os tipos, valida as datas (anulando as que se situam fora de 1900–2027), remove as duplicidades e padroniza as chaves de município, com perdas inferiores a 0,001% dos registros. Na terceira, os painéis analíticos (`mart`) organizam uma linha por município e ano (e por hospital e ano) com insumos, produção e resultados, valores *per capita* e sinalizadores de completude, constituindo a base da DEA e deste site. Na quarta, *scripts* em Python extraem dos painéis os arquivos públicos (CSV e GeoJSON) e geram as páginas, que o Quarto converte em HTML estático, publicado no GitHub Pages; nenhum microdado sai do repositório.
 
-Nas seções de previsão, localização e judicialização, os arquivos chegam já agregados e com supressão aplicada pelas frentes de pesquisa do projeto, e os *scripts* do site conferem novamente a supressão, completando-a quando necessário, antes de copiá-los. Em todas as etapas posteriores à carga, os dados permanecem somente de leitura, e a reprodução do site depende apenas dos arquivos publicados em [Dados](dados/index.html).
+Nas seções de previsão, localização e judicialização, os arquivos chegam já agregados e com supressão aplicada pelos respectivos estudos do projeto, e os *scripts* do site conferem novamente a supressão, completando-a quando necessário, antes de copiá-los. Em todas as etapas posteriores à carga, os dados permanecem somente de leitura, e a reprodução do site depende apenas dos arquivos publicados em [Dados](dados/index.html).
 
 ## Glossário de siglas
 
