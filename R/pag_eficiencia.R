@@ -292,7 +292,7 @@ mapa_faixas <- function(modelo, ano = ANO_EF, altura = 500, prefixo = "../munici
                           f3(g$escore_bc), fmt_ic(g$ic_inf, g$ic_sup),
                           ifelse(is.na(g$escore_esperado), "", paste0("<br>Escore esperado pelo contexto: ", f3(g$escore_esperado)))))
   sinal <- ifelse(is.na(g$sinal_gerencial) | !nzchar(g$sinal_gerencial), "", paste0("<br><span style='color:#6b7280'>Sinalização: ", esc(g$sinal_gerencial), "</span>"))
-  rot <- sprintf("<b>%s</b> · <span style='color:#6b7280'>%s</span>%s<br>%s%s<br><i>clique para abrir o perfil</i>",
+  rot <- sprintf("<b>%s</b> · <span style='color:#6b7280'>%s</span>%s<br>%s%s<br><i>o clique abre o perfil</i>",
                  esc(g$municipio), esc(ifelse(is.na(g$regiao_saude), "", g$regiao_saude)), grp, corpo, sinal)
   cont <- sapply(FAIXAS, function(x) sum(f$faixa == x, na.rm = TRUE))
   n_fora <- sum(is.na(match(f$faixa, FAIXAS)) & f$cod_mun6 %in% GEO$cod_mun6)
@@ -435,7 +435,7 @@ tabela_eficiencia <- function(modelo, ano = ANO_EF, grupo = NULL, prefixo = "../
     div(class = "ef-botoes",
         tags$button(class = "btn btn-sm btn-outline-primary", type = "button",
                     onclick = sprintf("Reactable.downloadDataCSV('%s', '%s')", id_html, arq), "⭳ Baixar esta tabela (CSV)"),
-        span(class = "sub", "Clique em ▸ para abrir a ficha do município (frase-síntese, pares e metas). A ordem é alfabética, pois as faixas não constituem ", tags$em("ranking", .noWS = "outside"), ".")),
+        span(class = "sub", "O símbolo ▸ abre a ficha do município (frase-síntese, pares e metas). A ordem é alfabética, pois as faixas não constituem ", tags$em("ranking", .noWS = "outside"), ".")),
     div(class = "rolagem-x", reactable(d, elementId = id_html, searchable = TRUE, compact = TRUE, striped = TRUE, highlight = TRUE,
               defaultPageSize = 15, showPageSizeOptions = TRUE, pageSizeOptions = c(15, 50, nrow(d)), wrap = TRUE,
               columns = cols, details = function(i) ficha_detalhe(d$cod_mun6[i], modelo, ano, prefixo))))

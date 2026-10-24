@@ -170,7 +170,7 @@ mapa_fluxos_niveis <- function(ano = ANO_DESL, n_max = 80, n_rot = 6, altura = 5
   bb <- bbox_num(GEO)
   m <- mapa_vazio(altura) |>
     addPolygons(data = GEO, layerId = ~slug, fillColor = COR[["claro"]], fillOpacity = 1, color = "#ffffff", weight = 0.8,
-                label = ~paste0(municipio, " · ", regiao_saude, " — clique para abrir o perfil")) |>
+                label = ~paste0(municipio, " · ", regiao_saude, " — o clique abre o perfil")) |>
     fitBounds(bb[1], bb[2], bb[3], bb[4])
   cobertura <- c()
   for (nv in names(NIVEIS_DESL)) {
@@ -220,7 +220,7 @@ mapa_fluxos_niveis <- function(ano = ANO_DESL, n_max = 80, n_rot = 6, altura = 5
     "%d maiores fluxos entre municípios em %d (espessura ∝ internações)<br>",
     "<svg width='14' height='14' aria-hidden='true'><circle cx='7' cy='7' r='6' fill='%s' fill-opacity='.5' stroke='%s'/></svg> ",
     "polo de atendimento (tamanho ∝ internações recebidas de outros municípios)<br>",
-    "Passe o cursor para ver os valores; clique em um município para abrir o perfil.</div>"),
+    "O posicionamento do cursor exibe os valores, e o clique em um município abre o perfil.</div>"),
     COR[["sec"]], n_max, ano, COR[["mun"]], COR[["mun"]])
   m <- m |>
     addLayersControl(baseGroups = unname(NIVEIS_DESL), position = "topleft", options = layersControlOptions(collapsed = FALSE)) |>

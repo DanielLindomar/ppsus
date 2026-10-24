@@ -389,7 +389,7 @@ seletor_municipios <- function(id_html = "ir-mun", prefixo = "municipios/", rotu
   div(tags$label(`for` = id_html, rotulo),
       tags$select(id = id_html, class = "form-select", `aria-label` = rotulo,
                   onchange = "if (this.value) window.location = this.value",
-                  tags$option(value = "", sprintf("Escolha um dos %d municípios…", nrow(MUN))),
+                  tags$option(value = "", sprintf("Selecionar um dos %d municípios…", nrow(MUN))),
                   lapply(seq_len(nrow(MUN)), function(j) tags$option(value = paste0(prefixo, MUN$slug[j], ".html"), MUN$municipio[j]))))
 }
 seletor_indicadores <- function(id_html = "ir-ind", prefixo = "indicadores/", rotulo = "Ir para um indicador", atual = NULL) {
@@ -398,7 +398,7 @@ seletor_indicadores <- function(id_html = "ir-ind", prefixo = "indicadores/", ro
   div(tags$label(`for` = id_html, rotulo),
       tags$select(id = id_html, class = "form-select", `aria-label` = rotulo,
                   onchange = "if (this.value) window.location = this.value",
-                  tags$option(value = "", sprintf("Escolha um dos %d indicadores…", nrow(ind))),
+                  tags$option(value = "", sprintf("Selecionar um dos %d indicadores…", nrow(ind))),
                   lapply(grupos, function(g) { x <- ind[ind$grupo == g, ]
                     tags$optgroup(label = GRUPOS[[g]], lapply(seq_len(nrow(x)), function(j)
                       tags$option(value = paste0(prefixo, x$id[j], ".html"),
@@ -590,7 +590,7 @@ mapa_municipio <- function(cod = NULL, altura = 360, prefixo = "", zoom_regiao =
   bb <- if (zoom_regiao && any(na_reg)) bbox_num(g[na_reg, ]) else bbox_num(g)
   mapa_vazio(altura) |>
     addPolygons(data = g, layerId = ~slug, fillColor = cor, fillOpacity = 1, color = "#ffffff", weight = 1,
-                label = paste0(rot, " — clique para abrir o perfil")) |>
+                label = paste0(rot, " — o clique abre o perfil")) |>
     fitBounds(bb[1] - 0.2, bb[2] - 0.2, bb[3] + 0.2, bb[4] + 0.2) |>
     htmlwidgets::onRender(js_clique(prefixo))
 }
@@ -615,7 +615,7 @@ mapa_indicador <- function(id, ano = NULL, altura = 460, prefixo = "../municipio
   bb <- bbox_num(g)
   mapa_vazio(altura) |>
     addPolygons(data = g, layerId = ~slug, fillColor = pal(v), fillOpacity = 0.95, color = "#ffffff", weight = 1,
-                label = lapply(paste0(rot, "<br><i>clique para abrir o perfil</i>"), HTML)) |>
+                label = lapply(paste0(rot, "<br><i>o clique abre o perfil</i>"), HTML)) |>
     addLegend("bottomright", pal = pal, values = v, title = esc(r$unidade), opacity = 0.9, na.label = "sem dado",
               labFormat = function(type, cuts, p) {
                 if (type == "bin") { n <- length(cuts); paste0(fmt_valor(cuts[-n], r$fmt), " – ", fmt_valor(cuts[-1], r$fmt)) }
@@ -638,7 +638,7 @@ mapa_fluxos <- function(fluxos, polos = NULL, n_max = 60, altura = 520, prefixo 
   bb <- bbox_num(GEO)
   m <- mapa_vazio(altura) |>
     addPolygons(data = GEO, layerId = ~slug, fillColor = COR[["claro"]], fillOpacity = 1, color = "#ffffff", weight = 0.8,
-                label = ~paste0(municipio, " — clique para abrir o perfil")) |>
+                label = ~paste0(municipio, " — o clique abre o perfil")) |>
     fitBounds(bb[1], bb[2], bb[3], bb[4])
   if (nrow(f)) {
     vmax <- max(f$internacoes)

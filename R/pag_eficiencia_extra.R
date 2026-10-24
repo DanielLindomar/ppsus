@@ -336,7 +336,7 @@ efx_mapa_hospitais <- function(a = EFX_ANO, altura = 560, prefixo = "../municipi
     mutate(i = row_number() - 1, k = n()) |> ungroup() |>
     mutate(r = ifelse(k == 1, 0, 0.05 * sqrt(i + 0.5)), ang = i * 2.39996,
            lon2 = lon + r * cos(ang) / cos(lat * pi / 180), lat2 = lat + r * sin(ang))
-  rot <- sprintf("<b>%s</b> (CNES %s)<br>%s · região %s<br>%s · %s<br>Faixa %d: <b>%s</b>%s<br>Escore corrigido: %s (IC 95%%: %s)<br><i>clique para abrir o perfil do município</i>",
+  rot <- sprintf("<b>%s</b> (CNES %s)<br>%s · região %s<br>%s · %s<br>Faixa %d: <b>%s</b>%s<br>Escore corrigido: %s (IC 95%%: %s)<br><i>o clique abre o perfil do município</i>",
                  esc(d$nome_hospital), d$cnes, esc(d$municipio), esc(d$regiao_saude), efx_grupo_txt(d$grupo2_ano), efx_perfil_txt(d$perfil_oferta),
                  a, FAIXA_ROT[d$faixa2], ifelse(!is.na(d$ic_cruza_faixa) & d$ic_cruza_faixa == 1, " (intervalo alcança a faixa vizinha)", ""),
                  efx_esc(d$escore_bc), efx_ic(d$ic_inf, d$ic_sup))
@@ -344,7 +344,7 @@ efx_mapa_hospitais <- function(a = EFX_ANO, altura = 560, prefixo = "../municipi
   bb <- bbox_num(GEO)
   m <- mapa_vazio(altura) |>
     addPolygons(data = GEO, layerId = ~slug, fillColor = "#e4ecec", fillOpacity = 1, color = "#ffffff", weight = 0.8,
-                label = ~paste0(municipio, " — clique para abrir o perfil")) |>
+                label = ~paste0(municipio, " — o clique abre o perfil")) |>
     addCircleMarkers(data = d, lng = ~lon2, lat = ~lat2, layerId = paste0(d$slug, "|", d$cnes),
                      radius = ~raio,
                      color = "#10393b", weight = 1, fillColor = unname(COR_FAIXA[d$faixa2]), fillOpacity = 0.95,
