@@ -80,14 +80,14 @@ body.fullcontent main.content { min-width: 0; }
 ```{r}
 faixa_construcao(paste0(
   "<b>Resultados preliminares</b> do estudo de judicialização da saúde, incluído entre os objetivos do projeto em 17/10/2026. ",
-  "Utilizam-se metadados processuais da interface pública de programação de aplicações (API) do DataJud, mantido pelo Conselho Nacional de Justiça (CNJ), coletados em ",
-  JUD_COLETA, ": ações ajuizadas no Tribunal de Justiça de Mato Grosso (TJMT) ",
+  "Utilizam-se metadados processuais da interface pública de programação de aplicações (API, do inglês <i>Application Programming Interface</i>) do DataJud, mantido pelo Conselho Nacional de Justiça (CNJ), coletados em ",
+  JUD_COLETA, ": ações ajuizadas no Tribunal de Justiça do Estado de Mato Grosso (TJMT) ",
   "de 2020 a 11/09/2026 e, de forma descritiva, na Justiça Federal em Mato Grosso (TRF1). A regra de atribuição territorial por comarca constitui uma ",
   "<b>proposta</b> do projeto, ainda em validação. Os números descrevem a judicialização; não avaliam gestores, tribunais ou decisões e não constituem recomendação."))
 ```
 
 ```{r}
-SECOES <- c(medida = "O que é medido", panorama = "Panorama", serie = "Série anual", mensal = "Série mensal",
+SECOES <- c(medida = "Objeto de medida", panorama = "Panorama", serie = "Série anual", mensal = "Série mensal",
             centralizacao = "Centralização (Núcleo 4.0)", comarcas = "Comarcas e municípios", previsao = "Previsão set–nov/2026",
             fatores = "Fatores associados", federal = "Justiça Federal", limitacoes = "Limitações", etica = "Ética e LGPD", arquivos = "Arquivos",
             referencias = "Referências")
@@ -95,11 +95,11 @@ tags$nav(class = "nav-mun", `aria-label` = "Seções desta página",
          lapply(names(SECOES), function(id) a(class = "btn btn-sm btn-outline-primary", href = paste0("#", id), SECOES[[id]])))
 ```
 
-Quando um medicamento, uma cirurgia, um leito de unidade de terapia intensiva (UTI) ou um tratamento não é obtido pela via administrativa, parte dos pacientes recorre ao Poder Judiciário. Esta página mensura **quantas ações de saúde chegam ao Judiciário em Mato Grosso, sobre quais assuntos, em que localidades e com que tendência**, e testa se a judicialização acompanha as lacunas de oferta e a ineficiência medidas pelo próprio projeto. A fonte de dados é o DataJud, a Base Nacional de Dados do Poder Judiciário mantida pelo Conselho Nacional de Justiça (CNJ). As ressalvas, de grande peso para a interpretação, encontram-se ao longo do texto e estão reunidas em [Limitações](#limitacoes).
+Quando um medicamento, uma cirurgia, um leito de unidade de terapia intensiva (UTI) ou um tratamento não é obtido pela via administrativa, parte dos pacientes recorre ao Poder Judiciário. Esta página mensura **quantas ações de saúde chegam ao Judiciário em Mato Grosso, sobre quais assuntos, em que localidades e com que tendência**, e testa se a judicialização acompanha as lacunas de oferta e a ineficiência medidas pelo próprio projeto. A fonte de dados é o DataJud, a Base Nacional de Dados do Poder Judiciário mantida pelo CNJ. As ressalvas, de grande peso para a interpretação, encontram-se ao longo do texto e estão reunidas em [Limitações](#limitacoes).
 
 ## Objeto de medida e fonte dos dados {#medida}
 
-**Fonte.** Utiliza-se a interface pública de programação de aplicações (API, do inglês *Application Programming Interface*) do DataJud (CNJ), nos índices do Tribunal de Justiça do Estado de Mato Grosso (TJMT) e do Tribunal Regional Federal da 1ª Região (TRF1), este nas sete subseções judiciárias de Mato Grosso, consultada em `r JUD_COLETA`. A API fornece somente **metadados processuais** — classe, assuntos, órgão julgador, data de ajuizamento, grau e movimentos — e não inclui partes, advogados, textos nem processos sob sigilo; o projeto não coletou nem armazena dados pessoais.
+**Fonte.** Utiliza-se a API pública do DataJud (CNJ), nos índices do TJMT e do Tribunal Regional Federal da 1ª Região (TRF1), este nas sete subseções judiciárias de Mato Grosso, consultada em `r JUD_COLETA`. A API fornece somente **metadados processuais** — classe, assuntos, órgão julgador, data de ajuizamento, grau e movimentos — e não inclui partes, advogados, textos nem processos sob sigilo; o projeto não coletou nem armazena dados pessoais.
 
 **Assuntos de saúde.** Selecionaram-se os processos com pelo menos um dos 75 códigos de assunto de saúde da Tabela Processual Unificada (TPU) do CNJ, isto é, o ramo Direito da Saúde, criado em 2019, e os códigos antigos equivalentes, ainda presentes nos processos anteriores. Excluem-se a responsabilidade civil por erro médico, os benefícios de saúde de servidores, os temas de gestão do Sistema Único de Saúde (SUS), como repasses, convênios e tabela, e a vigilância sanitária.
 
@@ -136,7 +136,7 @@ Fonte: Tabela Processual Unificada de assuntos do CNJ (versão de 11/09/2025). N
 kpis_jud()
 ```
 
-Os indicadores acima referem-se às ações de saúde ajuizadas no 1º grau e nos juizados do TJMT, por ano de ajuizamento, e têm como fonte o `r JUD_FONTE`, com coleta de `r JUD_COLETA`. A concessão de liminar ou tutela é inferida dos códigos de movimento lançados no processo e tem caráter apenas descritivo, uma vez que o projeto não modela nem prevê o desfecho das ações. A taxa por 100 mil habitantes, por sua vez, utiliza somente as ações com comarca de origem identificada (ver [Centralização](#centralizacao)) e constitui, por isso, um limite inferior da judicialização total.
+Os indicadores acima referem-se às ações de saúde ajuizadas no 1º grau e nos juizados do TJMT, por ano de ajuizamento, e têm como fonte o DataJud/CNJ (API pública), o TJMT e o TRF1, com coleta de `r JUD_COLETA`. A concessão de liminar ou tutela é inferida dos códigos de movimento lançados no processo e tem caráter apenas descritivo, uma vez que o projeto não modela nem prevê o desfecho das ações. A taxa por 100 mil habitantes, por sua vez, utiliza somente as ações com comarca de origem identificada (ver [Centralização](#centralizacao)) e constitui, por isso, um limite inferior da judicialização total.
 
 ## Série anual, 2020–2026 {#serie}
 
@@ -164,7 +164,7 @@ tabela_anual()
 ```
 
 ::: {.nota-fonte}
-Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`; elaboração do Projeto PPSUS-MT. Nota: processos distintos de 1º grau e juizados do TJMT, classes de ação nova, por ano de ajuizamento, incluídas as ações sem comarca de origem identificável. Pública e suplementar somam mais que o total porque as ações com os dois tipos de assunto entram nas duas colunas; os grupos correspondem ao assunto principal da saúde pública e não incluem os grupos menores (outros e genéricos). “Suprimido” indica menos de 5 ações (tratamento domiciliar em 2020), conforme a regra de divulgação do projeto. Em 2026, consideram-se os ajuizamentos até 11/09/2026.
+Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`; elaboração do Projeto PPSUS-MT. Nota: contam-se os processos distintos de 1º grau e dos juizados do TJMT, das classes de ação nova, por ano de ajuizamento, incluídas as ações sem comarca de origem identificável. Pública e suplementar somam mais que o total porque as ações com os dois tipos de assunto entram nas duas colunas; os grupos correspondem ao assunto principal da saúde pública e não incluem os grupos menores (outros e genéricos). “Suprimido” indica menos de 5 ações (tratamento domiciliar em 2020), conforme a regra de divulgação do projeto. Em 2026, consideram-se os ajuizamentos até 11/09/2026.
 :::
 
 ## Série mensal por grupo {#mensal}
@@ -174,10 +174,10 @@ serie_mensal()
 ```
 
 ::: {.nota-fonte}
-Figura 2 – Ações de saúde ajuizadas no 1º grau do TJMT por mês e grupo de assunto. Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`. Nota: ações de saúde do 1º grau do TJMT por mês de ajuizamento, jan/2020 a ago/2026, inclusive as sem comarca de origem; nenhuma célula mensal foi suprimida.
+Figura 2 – Ações de saúde ajuizadas no 1º grau do TJMT por mês e grupo de assunto. Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`. Nota: contam-se as ações de saúde do 1º grau do TJMT por mês de ajuizamento, de janeiro de 2020 a agosto de 2026, inclusive as sem comarca de origem, e nenhuma célula mensal foi suprimida.
 :::
 
-Conforme a Figura 2, nos primeiros anos, os picos de internação, leito e UTI coincidem com as ondas da pandemia de COVID-19: foram `r num(JUD_MES$acoes[JUD_MES$grupo == "internacao_uti" & JUD_MES$ano == 2021 & JUD_MES$mes == 3])` ações em março de 2021, na segunda onda, contra `r num(JUD_MES$acoes[JUD_MES$grupo == "internacao_uti" & JUD_MES$ano == 2021 & JUD_MES$mes == 1])` em janeiro. A média foi de `r num(med25)` ações por mês em 2025 e de `r num(med26)` por mês de janeiro a agosto de 2026, e o maior mês da série foi `r mes_rot(maxm$ano, maxm$mes)`, com `r num(maxm$n)` ações. Setembro de 2026 não é apresentado, uma vez que a API ainda não havia carregado as ações ajuizadas depois de 11/09/2026, e o mês incompleto daria a falsa impressão de queda. Os grupos seguem o assunto principal: *outros da saúde pública* reúne insumos, *home care*, saúde mental, outros e os não especificados, e *saúde suplementar* inclui as ações mistas cujo assunto principal é o plano de saúde.
+Conforme a Figura 2, nos primeiros anos, os picos de internação, leito e UTI coincidem com as ondas da pandemia de COVID-19: foram `r num(JUD_MES$acoes[JUD_MES$grupo == "internacao_uti" & JUD_MES$ano == 2021 & JUD_MES$mes == 3])` ações em março de 2021, na segunda onda, contra `r num(JUD_MES$acoes[JUD_MES$grupo == "internacao_uti" & JUD_MES$ano == 2021 & JUD_MES$mes == 1])` em janeiro. A média foi de `r num(med25)` ações por mês em 2025 e de `r num(med26)` por mês de janeiro a agosto de 2026, e o maior mês da série foi `r mes_extenso(maxm$ano, maxm$mes)`, com `r num(maxm$n)` ações. Setembro de 2026 não é apresentado, uma vez que a API ainda não havia carregado as ações ajuizadas depois de 11/09/2026, e o mês incompleto daria a falsa impressão de queda. Os grupos seguem o assunto principal: *outros da saúde pública* reúne insumos, *home care*, saúde mental, outros e os não especificados, e *saúde suplementar* inclui as ações mistas cujo assunto principal é o plano de saúde.
 
 ## Centralização das ações de saúde pública: o Núcleo de Justiça 4.0 {#centralizacao}
 
@@ -193,14 +193,14 @@ HTML(svg_atribuicao())
 Figura 3 – Ações de saúde no 1º grau do TJMT atribuíveis a uma comarca e sem comarca de origem identificável, por ano. Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`.
 :::
 
-**Os anos de 2020 e 2021 não servem para comparar comarcas**, pois somente `r pct_j(A20$pct_atribuivel)` e `r pct_j(A21$pct_atribuivel)` das ações tinham comarca de origem identificável, uma vez que quase toda a saúde pública tramitava na vara centralizada de Várzea Grande. **O período 2022–2024 é, por isso, o principal**: a parcela atribuível situou-se entre `r pct_j(A24$pct_atribuivel)` e `r pct_j(A22$pct_atribuivel)`, e as comparações entre comarcas utilizam esses três anos somados.
+**Os anos de 2020 e 2021 não se prestam à comparação entre comarcas**, pois somente `r pct_j(A20$pct_atribuivel)` e `r pct_j(A21$pct_atribuivel)` das ações tinham comarca de origem identificável, uma vez que quase toda a saúde pública tramitava na vara centralizada de Várzea Grande. **O período 2022–2024 é, por isso, o principal**: a parcela atribuível situou-se entre `r pct_j(A24$pct_atribuivel)` e `r pct_j(A22$pct_atribuivel)`, e as comparações entre comarcas utilizam esses três anos somados.
 
 **Os anos de 2025 e 2026 são afetados por uma quebra.** O ajuizamento direto no Núcleo 4.0, sem passagem pela comarca, passou de `r num(nuc(2022))` ações em 2022 e `r num(nuc(2023))` em 2023 para `r num(nuc(2024))` em 2024, `r num(nuc(2025))` em 2025 e `r num(nuc(2026))` até 11/09/2026 (coluna de ações do Núcleo 4.0 sem origem no arquivo anual). Esse movimento retira ações das comarcas de forma **desigual**: Tangará da Serra, por exemplo, teve `r num(tg$acoes_saude[tg$ano == 2022])`, `r num(tg$acoes_saude[tg$ano == 2023])` e `r num(tg$acoes_saude[tg$ano == 2024])` ações atribuíveis em 2022, 2023 e 2024 e `r num(tg$acoes_saude[tg$ano == 2025])` em 2025, enquanto Sinop passou de `r num(sn$acoes_saude[sn$ano == 2024])`, em 2024, para `r num(sn$acoes_saude[sn$ano == 2025])`, em 2025. Por essa razão, **os valores de 2025 e 2026 por comarca não se comparam com os anos anteriores**, uma vez que uma queda pode refletir apenas a mudança do local de ajuizamento.
 
 **Cuiabá e Várzea Grande são limites inferiores.** As ações de seus moradores ajuizadas diretamente nas unidades centralizadas ficam sem origem; além disso, como o autor escolhe o local de ajuizamento, a fração de ações sem comarca de origem identificável não é aleatória e tende a crescer perto da capital. As taxas dessas duas comarcas, e dos municípios que elas abrangem, subestimam, portanto, a judicialização real.
 
 ::: {.nota-fonte}
-Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`; regras de competência: Corregedoria-Geral da Justiça do TJMT, “Competências das Varas” (19/02/2025). Nota: comarca de origem identificada pelo código da unidade de origem do número do processo, associado à comarca pelos nomes dos órgãos julgadores locais (`r num(n_cod)` códigos, dos quais `r num(n_cod_c)` associados às 79 comarcas instaladas). A regra de atribuição territorial constitui uma proposta do projeto e encontra-se em validação.
+Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`; regras de competência: Corregedoria-Geral da Justiça do TJMT, “Competências das Varas” (19/02/2025). Nota: a comarca de origem é identificada pelo código da unidade de origem do número do processo, associado à comarca pelos nomes dos órgãos julgadores locais (`r num(n_cod)` códigos, dos quais `r num(n_cod_c)` associados às 79 comarcas instaladas). A regra de atribuição territorial constitui uma proposta do projeto e encontra-se em validação.
 :::
 
 ## Comarcas e municípios, 2022–2024 {#comarcas}
@@ -221,7 +221,7 @@ mapa_comarcas(altura = 620)
 Figura 4 – Taxa suavizada de ações de saúde por comarca, 2022–2024 (ações atribuíveis por 100 mil habitantes por ano). Fonte: `r JUD_FONTE` (coleta de `r JUD_COLETA`); população: IBGE; comarcas: Corregedoria-Geral da Justiça do TJMT. Nota: as cores representam a faixa da taxa suavizada de 2022–2024, calculada com a taxa antes do arredondamento; por isso, uma comarca com taxa arredondada de 300 (Sapezal) aparece na faixa de 200 a 300. O contorno tracejado assinala Cuiabá e Várzea Grande, limites inferiores. A malha corresponde aos municípios do IBGE dissolvidos por comarca; Boa Esperança do Norte, instalado em 2025, não consta da malha e pertence à comarca de Sorriso.
 :::
 
-Observa-se, na Figura 4, um padrão regional. As maiores taxas suavizadas encontram-se no médio-norte, no oeste e no norte do estado: `r lista_e_j(sprintf("%s (%s)", top5$comarca, num(top5$taxa_eb_local_100mil)))` ações por 100 mil habitantes por ano. As menores situam-se sobretudo no leste e no nordeste: `r lista_e_j(sprintf("%s (%s)", bot5$comarca, num(bot5$taxa_eb_local_100mil)))`, com empate no valor publicado entre as últimas. Cuiabá (`r num(cba$taxa_eb_local_100mil)`, `r cba$pos`ª posição) e Várzea Grande (`r num(vg$taxa_eb_local_100mil)`, `r vg$pos`ª) aparecem no meio ou abaixo do meio da lista, mas constituem limites inferiores. Parte desse padrão pode refletir práticas locais, como a atuação da Defensoria Pública, do Ministério Público e da advocacia e a escolha entre ajuizar na comarca ou diretamente no Núcleo 4.0, e não apenas a necessidade de saúde. Ademais, o ordenamento é apenas moderadamente estável de um ano para outro (correlação de postos da taxa suavizada de `r num(rho2224, 2)` entre 2022 e 2024).
+Observa-se, na Figura 4, um padrão regional. As maiores taxas suavizadas encontram-se no médio-norte, no oeste e no norte do estado: `r lista_e_j(sprintf("%s (%s)", top5$comarca, num(top5$taxa_eb_local_100mil)))` ações por 100 mil habitantes por ano. As menores situam-se sobretudo no leste e no nordeste: `r lista_e_j(sprintf("%s (%s)", bot5$comarca, num(bot5$taxa_eb_local_100mil)))`, com empate no valor publicado entre as últimas. Cuiabá (`r num(cba$taxa_eb_local_100mil)`, `r cba$pos`ª posição) e Várzea Grande (`r num(vg$taxa_eb_local_100mil)`, `r vg$pos`ª) situam-se em posições intermediárias ou inferiores da lista, mas constituem limites inferiores. Parte desse padrão pode refletir práticas locais, como a atuação da Defensoria Pública, do Ministério Público e da advocacia e a escolha entre ajuizar na comarca ou diretamente no Núcleo 4.0, e não apenas a necessidade de saúde. Ademais, o ordenamento é apenas moderadamente estável de um ano para outro (correlação de postos da taxa suavizada de `r num(rho2224, 2)` entre 2022 e 2024).
 
 ### *Ranking* das comarcas
 
@@ -334,15 +334,15 @@ tabela_metricas()
 
 No total, o ETS apresentou o menor erro: `r num(mt_ets$mae, 1)` ações por mês em média, cerca de `r pct_j(100 * mt_ets$mae / media_aval, 0)` da média mensal de `r num(media_aval)` ações no período avaliado, contra `r num(mt_lgb$mae, 1)` do LightGBM, `r num(mt_sar$mae, 1)` do SARIMA, `r num(mt_per$mae, 1)` da persistência e `r num(mt_ing$mae, 1)` do ingênuo sazonal, que subestima sistematicamente a série, uma vez que esta cresce cerca de `r num(cagr, 0)`% ao ano (média de 2020 a 2025). A previsão do trimestre é de `r num(pt_tri)` ações, com intervalo de 80% de `r num(pt_li)` a `r num(pt_ls)`.
 
-**ETS, LightGBM e SARIMA empatam estatisticamente no total.** O teste de Diebold-Mariano (DIEBOLD; MARIANO, 1995), com a correção de Harvey, Leybourne e Newbold (1997), não distingue os três modelos (p entre `r num(dm_min, 2)` e `r num(dm_max, 2)` nos três horizontes), e todos superam o ingênuo sazonal. Ressalta-se que escolher o modelo e medir o erro nas mesmas origens introduz um otimismo leve; contudo, quando a escolha é feita somente nas 13 primeiras origens e a avaliação nas 13 últimas, a escolha se repete em todos os grupos, exceto em *outros da saúde pública*.
+**ETS, LightGBM e SARIMA não diferem estatisticamente no total.** O teste de Diebold-Mariano (DIEBOLD; MARIANO, 1995), com a correção de Harvey, Leybourne e Newbold (1997), não distingue os três modelos (p entre `r num(dm_min, 2)` e `r num(dm_max, 2)` nos três horizontes), e todos superam o ingênuo sazonal. Ressalta-se que escolher o modelo e medir o erro nas mesmas origens introduz um otimismo leve; contudo, quando a escolha é feita somente nas 13 primeiras origens e a avaliação nas 13 últimas, a escolha se repete em todos os grupos, exceto em *outros da saúde pública*.
 
-**Os grupos outros da saúde pública e saúde suplementar são mais incertos.** Nesses grupos, o MASE de todos os modelos fica acima de 1, porque as séries mudaram de patamar a partir de 2025; ainda assim, os modelos escolhidos reduzem o erro do ingênuo sazonal no período avaliado. Quanto à **interpretação do intervalo**, o intervalo de 80% deriva dos erros observados na validação, e o do trimestre corresponde à soma dos limites mensais, sendo, portanto, conservador. Os grupos não somam o total, porque cada um utiliza o seu melhor modelo.
+**Os grupos *outros da saúde pública* e *saúde suplementar* apresentam maior incerteza.** Nesses grupos, o MASE de todos os modelos situa-se acima de 1, porque as séries mudaram de patamar a partir de 2025; ainda assim, os modelos escolhidos reduzem o erro do ingênuo sazonal no período avaliado. Quanto à **interpretação do intervalo**, o intervalo de 80% deriva dos erros observados na validação, e o do trimestre corresponde à soma dos limites mensais, sendo, portanto, conservador. Os grupos não somam o total, porque cada um utiliza o seu melhor modelo.
 
 ::: {.nota-fonte}
-Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`; modelos de previsão (J3) do Projeto PPSUS-MT (versão j3_2026-10-17_rev1, sementes fixas), série mensal de jan/2020 a ago/2026. Nota: previsões e intervalos arredondados à unidade; o trimestre e seu intervalo são somas dos valores mensais publicados. Os modelos não incorporam decisões futuras dos tribunais superiores (como os Temas 6 e 1.234 do Supremo Tribunal Federal, STF), mudanças de competência ou de organização judiciária, nem o atraso de carga da API, que pode rever os meses mais recentes.
+Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`; modelos de previsão (J3) do Projeto PPSUS-MT (versão j3_2026-10-17_rev1, sementes fixas), série mensal de jan/2020 a ago/2026. Nota: as previsões e os intervalos são arredondados à unidade, e o trimestre e seu intervalo correspondem às somas dos valores mensais publicados. Os modelos não incorporam decisões futuras dos tribunais superiores (como os Temas 6 e 1.234 do Supremo Tribunal Federal, STF), mudanças de competência ou de organização judiciária, nem o atraso de carga da API, que pode rever os meses mais recentes.
 :::
 
-## Fatores associados: a judicialização acompanha as lacunas de oferta? {#fatores}
+## Fatores associados: oferta e eficiência dos serviços {#fatores}
 
 ::: {.callout-note title="Achado principal: os dados não sustentam a hipótese"}
 O projeto testou se as comarcas com menor oferta de serviços do SUS ou com municípios menos eficientes, segundo a Análise Envoltória de Dados (DEA, do inglês *Data Envelopment Analysis*) do próprio projeto, apresentam mais ações de saúde pública. **Os dados agregados disponíveis não sustentam essa hipótese.** O conjunto das variáveis de oferta tem associação estatística com a taxa de ações, mas nenhuma variável isolada resiste à correção para comparações múltiplas, a ineficiência medida pela DEA não apresenta associação detectável, e o sinal mais forte aponta no sentido oposto ao esperado. Trata-se de resultados de **associação, e não de causa**, que não permitem afirmar que alguma variável aumenta ou reduz a judicialização. Ademais, “não sustentar” não equivale a refutar: com 77 comarcas e quatro anos, efeitos pequenos podem passar despercebidos.
@@ -374,7 +374,7 @@ HTML(svg_irr("acoes_publica"))
 Figura 6 – Razões de taxas por um desvio-padrão, com intervalo de confiança de 95%: saúde pública. Fonte: elaboração do Projeto PPSUS-MT, com os modelos de fatores associados (J2) e as ações de `r JUD_FONTE`.
 :::
 
-**Tabela 8 – Razões de taxas e p-valores do modelo binomial negativo: saúde pública**
+**Tabela 8 – Razões de taxas e valores de *p* do modelo binomial negativo: saúde pública**
 
 ```{r}
 tabela_j2("acoes_publica")
@@ -390,7 +390,7 @@ HTML(svg_irr("acoes_suplementar"))
 Figura 7 – Razões de taxas por um desvio-padrão, com intervalo de confiança de 95%: saúde suplementar (placebo). Fonte: elaboração do Projeto PPSUS-MT, com os modelos de fatores associados (J2) e as ações de `r JUD_FONTE`.
 :::
 
-**Tabela 9 – Razões de taxas e p-valores do modelo binomial negativo: saúde suplementar (placebo)**
+**Tabela 9 – Razões de taxas e valores de *p* do modelo binomial negativo: saúde suplementar (placebo)**
 
 ```{r}
 tabela_j2("acoes_suplementar")
@@ -409,7 +409,7 @@ tabela_j2_grupos()
 :::
 
 ::: {.nota-fonte}
-Fonte: modelos de fatores associados (J2) do Projeto PPSUS-MT (versão j2_2026-10-17_rev1), com ações de `r JUD_FONTE` (coleta de `r JUD_COLETA`); oferta e eficiência: CNES, SIH/SUS e escores DEA v2.1 do projeto; contexto: IBGE; acesso à justiça: contagens gerais de processos na API pública do DataJud. Nota: regressão binomial negativa (NB2), 2022–2025, 77 comarcas e 308 observações; intervalo de confiança (IC) de 95% com erros agrupados por comarca; p ajustados na família de 42 testes do bloco (Holm e Benjamini-Hochberg). As indicadoras de entrância ficam fora do gráfico (intervalos muito largos) e constam da tabela. Os resultados mantêm-se sem 2025 (2022–2024). Nenhum desses resultados identifica efeito causal, uma vez que a oferta pode responder à própria judicialização, há erro de medida (fração não atribuível, cobertura do DataJud e escores estimados) e existem fatores não medidos, como a atuação da Defensoria e do Ministério Público em cada comarca.
+Fonte: modelos de fatores associados (J2) do Projeto PPSUS-MT (versão j2_2026-10-17_rev1), com ações de `r JUD_FONTE` (coleta de `r JUD_COLETA`); oferta e eficiência: CNES, SIH/SUS e escores DEA v2.1 do projeto; contexto: IBGE; acesso à justiça: contagens gerais de processos na API pública do DataJud. Nota: estima-se uma regressão binomial negativa (NB2) para 2022–2025, com 77 comarcas e 308 observações, intervalo de confiança (IC) de 95% com erros agrupados por comarca e valores de *p* ajustados na família de 42 testes do bloco (Holm e Benjamini-Hochberg). As indicadoras de entrância não são representadas no gráfico (intervalos muito largos) e constam da tabela. Os resultados mantêm-se sem 2025 (2022–2024). Nenhum desses resultados identifica efeito causal, uma vez que a oferta pode responder à própria judicialização, há erro de medida (fração não atribuível, cobertura do DataJud e escores estimados) e existem fatores não medidos, como a atuação da Defensoria e do Ministério Público em cada comarca.
 :::
 
 ## Justiça Federal e o Tema 1.234 do STF {#federal}
@@ -443,7 +443,7 @@ Fonte: `r JUD_FONTE`, coleta de `r JUD_COLETA`. Nota: na Justiça Federal, consi
 
 **Previsão.** A série é curta (80 meses), houve mudança de patamar em 2025–2026, e há efeitos de decisões dos tribunais superiores que os modelos não incorporam.
 
-**O que se pede.** O CNJ mantém um painel público de estatísticas das notas técnicas do e-NatJus, emitidas pelos núcleos de apoio técnico ao Judiciário, por diagnóstico e tecnologia. Seus números somente podem ser lidos manualmente no painel, sem exportação auditável, razão pela qual não são reproduzidos aqui. A classificação do item pedido em cada ação (medicamento incorporado ou não ao SUS, leito, cirurgia, insumo) depende de uma extração institucional junto ao CNJ ou ao NatJus-MT.
+**Itens pedidos nas ações.** O CNJ mantém um painel público de estatísticas das notas técnicas do e-NatJus, emitidas pelos núcleos de apoio técnico ao Judiciário, por diagnóstico e tecnologia. Seus números somente podem ser lidos manualmente no painel, sem exportação auditável, razão pela qual não são reproduzidos aqui. A classificação do item pedido em cada ação (medicamento incorporado ou não ao SUS, leito, cirurgia, insumo) depende de uma extração institucional junto ao CNJ ou ao NatJus-MT.
 :::
 
 ## Ética, LGPD e controle de divulgação {#etica}
@@ -475,7 +475,7 @@ Os arquivos relacionados a seguir são cópias conferidas dos arquivos agregados
 - [Indicadores citados no texto (CSV)](../arquivos/dados/judicializacao_indicadores_complementares.csv) — cobertura frente ao painel do CNJ, peso da Justiça Federal, códigos de origem, estabilidade do ordenamento e validação dos modelos.
 - [Dicionário de colunas (CSV)](../arquivos/dados/judicializacao_dicionario.csv) e [resultado da auditoria de supressão (CSV)](../arquivos/dados/judicializacao_auditoria_supressao.csv).
 
-**Licença.** Os arquivos e os gráficos desta aba derivam da API Pública do DataJud e seguem o seu Termo de Uso. Admite-se, assim, **uso somente não comercial**, com citação do Projeto PPSUS-MT e da fonte primária (DataJud/CNJ), e o Termo veda a exploração comercial da API e das informações dela derivadas (itens 3.3 e 3.8). O restante do Observatório está sob licença CC BY 4.0, e as condições de uso dos demais arquivos encontram-se em [Dados](../dados/index.html#licenca).
+**Licença.** Os arquivos e os gráficos desta página derivam da API Pública do DataJud e seguem o seu Termo de Uso. Admite-se, assim, **uso somente não comercial**, com citação do Projeto PPSUS-MT e da fonte primária (DataJud/CNJ), e o Termo veda a exploração comercial da API e das informações dela derivadas (itens 3.3 e 3.8). O restante do Observatório está sob licença CC BY 4.0, e as condições de uso dos demais arquivos encontram-se em [Dados](../dados/index.html#licenca).
 
 ::: {.nota-fonte}
 **Fonte: DataJud/CNJ — [Termo de Uso da API pública](`r URL_DATAJUD`).** Base Nacional de Dados do Poder Judiciário (Portaria CNJ nº 160/2020), índices do TJMT e do TRF1, consultados em `r JUD_COLETA`; Tabela Processual Unificada do CNJ; Mapa das Comarcas da Corregedoria-Geral da Justiça do TJMT; população e malha municipal: IBGE. Elaboração: Projeto PPSUS-MT (UNEMAT). Os resultados são preliminares e não constituem posição do CNJ, do TJMT, do TRF1 ou da SES-MT. As definições gerais do Observatório encontram-se em [Metodologia](../metodologia.html), e os demais arquivos, em [Dados](../dados/index.html).

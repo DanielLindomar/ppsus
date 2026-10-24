@@ -134,6 +134,9 @@ p_txt   <- function(p) ifelse(is.na(p), "—", ifelse(p < 0.001, "< 0,001", num(
 sigla_j <- function(s, titulo) as.character(tags$abbr(title = titulo, tabindex = "0", s))
 lista_e_j <- function(x) if (length(x) <= 1) paste(x, collapse = "") else paste(paste(x[-length(x)], collapse = ", "), x[length(x)], sep = " e ")
 mes_rot <- function(ano, mes) paste0(MESES_PT[mes], "/", ano)
+# Versão 0.5 (5ª rodada): mês por extenso para o texto corrido ("julho de 2026"; os rótulos de gráfico seguem com mes_rot)
+MESES_EXT <- c("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
+mes_extenso <- function(ano, mes) paste0(MESES_EXT[mes], " de ", ano)
 sem_mt  <- function(x) sub(" - MT$", "", x)
 vezes   <- function(a, b) paste0(num(a / b, 1), " vezes")
 por_extenso <- function(n) { e <- c("um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"); ifelse(n >= 1 & n <= 10, e[pmax(1, pmin(n, 10))], as.character(n)) }
@@ -250,7 +253,7 @@ svg_irr <- function(dep, w = 420, lh = 40) {
     y <- y + 26
     for (i in seq_len(nrow(db))) {
       r <- db[i, ]
-      tip <- sprintf("%s: razão de taxas %s (IC 95%% %s–%s) por 1 desvio-padrão; p bruto %s%s",
+      tip <- sprintf("%s: razão de taxas %s (IC 95%%: %s–%s) por 1 desvio-padrão; p bruto %s%s",
                      J2_VAR[[r$variavel]], dec2(r$irr), dec2(r$irr_li), dec2(r$irr_ls), p_txt(r$p),
                      if (!is.na(r$p_holm)) sprintf("; p ajustado: Holm %s, Benjamini-Hochberg %s", p_txt(r$p_holm), p_txt(r$p_bh)) else "")
       cheio <- !is.na(r$p) && r$p < 0.05
@@ -579,7 +582,7 @@ tabela_j2_grupos <- function() {
 
 # Valor de uma linha do J2 (para o texto)
 j2 <- function(dep, var) { r <- JUD_J2[JUD_J2$dependente == dep & JUD_J2$variavel == var, ]; if (nrow(r)) r[1, ] else NULL }
-irr_txt <- function(r, extra = "") sprintf("%s (IC 95%% %s–%s%s)", dec2(r$irr), dec2(r$irr_li), dec2(r$irr_ls), extra)
+irr_txt <- function(r, extra = "") sprintf("%s (IC 95%%: %s–%s%s)", dec2(r$irr), dec2(r$irr_li), dec2(r$irr_ls), extra)
 # Mesma razão para uso DENTRO de parênteses (v0.5: sem parênteses aninhados): "1,18; IC 95%: 1,03–1,35"
 irr_par <- function(r) sprintf("%s; IC 95%%: %s–%s", dec2(r$irr), dec2(r$irr_li), dec2(r$irr_ls))
 
