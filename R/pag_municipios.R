@@ -282,8 +282,10 @@ texto_hospitais <- function(cod, ano = ANO_REF) {
          if (r$internacoes > 0) sprintf("%s %s %s SUS no ano (SIH, ano da alta), inclusive de residentes de outros estados. ",
                                         if (r$n == 1) "Esse estabelecimento realizou" else "Esses estabelecimentos realizaram", num(r$internacoes),
                                         if (isTRUE(r$internacoes == 1)) "internação" else "internações") else "",
-         if (r$sem_sih > 0) sprintf("Dos estabelecimentos registrados, %d %s sem produção registrada no SIH no ano, constando apenas no CNES. ", r$sem_sih,
-                                    if (r$sem_sih == 1) "permaneceu" else "permaneceram") else "",
+         # com um único estabelecimento (r$n == 1), sem o partitivo no plural; a contagem continua exibida
+         if (r$sem_sih > 0 && r$n == 1) sprintf("Do total registrado, %d estabelecimento permaneceu sem produção registrada no SIH no ano, constando apenas no CNES. ", r$sem_sih)
+         else if (r$sem_sih > 0) sprintf("Dos estabelecimentos registrados, %d %s sem produção registrada no SIH no ano, constando apenas no CNES. ", r$sem_sih,
+                                         if (r$sem_sih == 1) "permaneceu" else "permaneceram") else "",
          "Na tabela por estabelecimento, os leitos e os médicos correspondem às médias dos meses em que cada estabelecimento constou no CNES, a mortalidade não tem ajuste de risco e a ocupação dos leitos SUS é expressa em percentual (%).")
 }
 
