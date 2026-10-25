@@ -388,12 +388,12 @@ nota_curta_ind <- function(r) {
   if (is.na(n) || !nzchar(n)) "" else n
 }
 # Versão 0.5 (5ª rodada): ressalvas curtas do catálogo em oração completa, SÓ NA EXIBIÇÃO dos cartões (o CSV não muda;
-# os mesmos números). Texto sem mapeamento é exibido como está.
+# os mesmos números). Texto sem mapeamento é exibido como está. A ressalva da FTE (fte_medicos_p1000) fica de fora de
+# propósito: a forma em oração alongava o cartão além do limite dos elementos de interface, que continuam curtos, e o
+# cartão exibe o texto do catálogo (com o desdobramento da sigla e a inicial minúscula depois de "Ressalva:").
 NOTA_CURTA_ORACAO <- c(
   `Valores em R$ correntes, sem deflação, que abrangem todas as fontes de recursos.` =
     "Os valores estão em R$ correntes, sem deflação, e abrangem todas as fontes de recursos.",
-  `Equivalente em tempo integral (FTE, do inglês full-time equivalent) de 40 h; o crescimento pode refletir a melhoria do registro no CNES.` =
-    "O indicador é expresso em equivalente em tempo integral (FTE, do inglês full-time equivalent) de 40 h, e o crescimento pode refletir a melhoria do registro no CNES.",
   `Média das competências do ano, com valor zero onde não há hospital SUS.` =
     "O valor corresponde à média das competências do ano e é igual a zero quando não há hospital SUS.",
   `Indicador sem ajuste de risco.` = "O indicador não tem ajuste de risco.",
