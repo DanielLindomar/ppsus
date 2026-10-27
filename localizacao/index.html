@@ -61,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
-    "search-copy-link-title": "Copiar link para a busca",
+    "search-copy-link-title": "Copiar o endereço desta busca",
     "search-hide-matches-text": "Esconder correspondências adicionais",
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Procurar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Mostrar ou ocultar a navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-eficiência">    
         <li>
     <a class="dropdown-item" href="../eficiencia/index.html">
- <span class="dropdown-text">Como ler e visão geral</span></a>
+ <span class="dropdown-text">Interpretação dos resultados e visão geral</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../eficiencia/atencao-basica.html">
@@ -262,15 +262,16 @@ body.fullcontent main.content { min-width: 0; }
 .tab-loc th { font-weight: 600; color: #374151; background: #f6f9f9; text-align: left; }
 .tab-loc td.num, .tab-loc th.num { text-align: right; white-space: nowrap; }
 .tab-loc tr.destaque td { background: #e8f2f2; font-weight: 600; }
+.tab-loc > caption { caption-side: bottom; padding-top: .3rem; }
 .selo-prov { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: #7c4a03; background: #fdf1dc; border: 1px solid #f2d39b; border-radius: 4px; padding: 0 .35rem; vertical-align: 2px; }
 .supr { color: #6b7280; font-style: italic; }
 </style>
 </div>
 <div class="cell-output-display">
-<div class="faixa-versao"><b>Versão 0.4</b> (17/10/2026) — dados e indicadores 2020–2025, deslocamento nas internações (inclusive as de residentes de Mato Grosso em hospitais de outros estados), escores de eficiência (DEA) e produtividade (Malmquist) dos municípios, hospitais e regiões de saúde; resultados de eficiência da versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT; e, em caráter preliminar, a previsão de demanda das internações respiratórias, a localização de serviços de saúde (pilotos de atenção ao parto e UTI adulto) e a judicialização da saúde (DataJud/CNJ). Cada valor mostra a fonte e o ano a que se refere.</div>
+<div class="faixa-versao"><b>Versão 0.5</b> (24/10/2026). Esta versão reúne os dados e indicadores de 2020–2025, o deslocamento nas internações (inclusive as de residentes de Mato Grosso em hospitais de outros estados) e os escores de eficiência (DEA) e de produtividade (Malmquist) dos municípios, dos hospitais e das regiões de saúde, com resultados de eficiência da versão 2.1 da estimação (atenção básica reestimada em 16/10/2026), em validação com a SES-MT e o COSEMS-MT. Apresenta, ainda, em caráter preliminar, a previsão de demanda das internações respiratórias, a localização de serviços de saúde (pilotos de atenção ao parto e de UTI adulto) e a judicialização da saúde (DataJud/CNJ). Cada valor é acompanhado da fonte e do ano a que se refere.</div>
 </div>
 <div class="cell-output-display">
-<div class="faixa-construcao"><b>Resultados preliminares</b> (versão de 17/10/2026), divulgados para discussão com a gestão do SUS. A demanda de 2026–2030 usa uma projeção populacional municipal <b>provisória</b>; os cenários de localização de serviços, para apoiar a discussão, dependem de parâmetros de pesquisa que <b>não são normas</b> e <b>não constituem recomendação oficial</b> do projeto, da SES-MT ou dos municípios.</div>
+<div class="faixa-construcao"><b>Resultados preliminares</b> (versão de 17/10/2026), divulgados para discussão com a gestão do SUS. A demanda de 2026–2030 utiliza uma projeção populacional municipal <b>provisória</b>, e os cenários de localização de serviços, destinados a apoiar a discussão, dependem de parâmetros de pesquisa que <b>não são normas</b> e <b>não constituem recomendação oficial</b> do projeto, da SES-MT ou dos municípios.</div>
 </div>
 <div class="cell-output-display">
 <nav class="nav-mun" aria-label="Páginas da seção Localização">
@@ -281,57 +282,58 @@ body.fullcontent main.content { min-width: 0; }
 </div>
 <div class="cell-output-display">
 <nav class="nav-mun" aria-label="Seções desta página">
-<a class="btn btn-sm btn-outline-secondary" href="#problema">O problema</a>
+<a class="btn btn-sm btn-outline-secondary" href="#problema">Problema e objetivo</a>
 <a class="btn btn-sm btn-outline-secondary" href="#cadeia">A cadeia L1–L5</a>
 <a class="btn btn-sm btn-outline-secondary" href="#pilotos">Os dois pilotos</a>
-<a class="btn btn-sm btn-outline-secondary" href="#ler">Como ler</a>
+<a class="btn btn-sm btn-outline-secondary" href="#ler">Conceitos e medidas</a>
 <a class="btn btn-sm btn-outline-secondary" href="#limitacoes">Limitações</a>
 <a class="btn btn-sm btn-outline-secondary" href="#arquivos">Arquivos</a>
+<a class="btn btn-sm btn-outline-secondary" href="#referencias">Referências</a>
 </nav>
 </div>
 </div>
 <section id="problema" class="level2">
-<h2 class="anchored" data-anchor-id="problema">O problema</h2>
-<p>Mato Grosso tem 142 municípios espalhados por um território extenso, e muitos serviços de saúde só existem em poucos deles. Para o gestor, a pergunta prática é: <strong>se for possível abrir ou ampliar um serviço, onde ele mais reduziria o deslocamento dos pacientes, considerando a demanda dos próximos anos?</strong> Esta seção do Observatório organiza essa pergunta em <strong>cenários, para apoiar a discussão</strong>, com uma cadeia de modelos aplicada a dois pilotos: <strong>atenção ao parto</strong> (abertura ou qualificação de maternidades) e <strong>UTI adulto</strong> (leitos SUS de terapia intensiva).</p>
-<p>A localização de serviços passou a ser objetivo do projeto em 17/10/2026, por decisão da coordenação. Os resultados desta versão são <strong>preliminares</strong>: a demanda futura usa uma projeção populacional municipal provisória, e os cenários dependem de parâmetros de pesquisa que não são normas. Eles servem para organizar a discussão com a gestão do SUS, <strong>não como recomendação oficial</strong> de abertura, habilitação ou fechamento de serviços.</p>
+<h2 class="anchored" data-anchor-id="problema">Problema e objetivo</h2>
+<p>Mato Grosso possui 142 municípios distribuídos por um território extenso, e muitos serviços de saúde existem somente em poucos deles. Do ponto de vista da gestão, a questão prática consiste em identificar, <strong>caso seja possível abrir ou ampliar um serviço, onde ele mais reduziria o deslocamento dos pacientes, considerando-se a demanda dos próximos anos</strong>. Esta seção do Observatório organiza essa questão em <strong>cenários, destinados a apoiar a discussão</strong>, por meio de uma cadeia de modelos aplicada a dois pilotos: a <strong>atenção ao parto</strong> (abertura ou qualificação de maternidades) e a <strong>unidade de terapia intensiva (UTI) adulto</strong> (leitos SUS de terapia intensiva).</p>
+<p>A localização de serviços passou a integrar os objetivos do projeto em 17/10/2026, por decisão da coordenação. Os resultados desta versão são <strong>preliminares</strong>, uma vez que a demanda futura utiliza uma projeção populacional municipal provisória e os cenários dependem de parâmetros de pesquisa que não constituem normas. Destinam-se, portanto, a organizar a discussão com a gestão do Sistema Único de Saúde (SUS) e <strong>não constituem recomendação oficial</strong> de abertura, habilitação ou fechamento de serviços.</p>
 </section>
 <section id="cadeia" class="level2">
-<h2 class="anchored" data-anchor-id="cadeia">A cadeia L1–L5</h2>
-<p>O problema é de otimização (escolher locais), mas a otimização só é tão boa quanto as estimativas que a alimentam. Por isso, a cadeia tem cinco elos; o aprendizado de máquina entra em dois deles, para estimar a demanda e o comportamento dos pacientes.</p>
+<h2 class="anchored" data-anchor-id="cadeia">A cadeia de modelos L1–L5</h2>
+<p>Trata-se de um problema de otimização, que consiste em escolher locais; contudo, a qualidade da otimização depende das estimativas que a alimentam. Por essa razão, a cadeia compõe-se de cinco elos, apresentados a seguir, e o aprendizado de máquina participa de dois deles, na estimação da demanda e do comportamento dos pacientes.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="loc-cadeia">
 <div class="loc-passo">
 <span class="loc-cod">L1</span>
-<h4 class="anchored">Quanta demanda haverá?</h4>
-<p>Demanda de cada município de residência em 2026–2030, a partir da história do município e da população projetada.</p>
+<h4 class="anchored">Projeção da demanda</h4>
+<p>Projeta-se a demanda de cada município de residência em 2026–2030 a partir da história do município e da população projetada.</p>
 <div class="loc-ml">modelos de contagem e LightGBM, testados em 2024–2025</div>
 </div>
 <div class="loc-passo">
 <span class="loc-cod">L2</span>
-<h4 class="anchored">Para onde os pacientes vão?</h4>
-<p>Probabilidade de um morador escolher cada município de atendimento, conforme o tempo de viagem, o tamanho da oferta e a região de saúde.</p>
+<h4 class="anchored">Escolha do local de atendimento</h4>
+<p>Estima-se a probabilidade de um morador escolher cada município de atendimento, conforme o tempo de viagem, o tamanho da oferta e a região de saúde.</p>
 <div class="loc-ml">modelo gravitacional e LightGBM, testados quando a oferta mudou</div>
 </div>
 <div class="loc-passo">
 <span class="loc-cod">L3</span>
-<h4 class="anchored">Como está o acesso hoje?</h4>
-<p>Tempo até o serviço mais próximo, índice de acesso que compara leitos e população (E2SFCA) e deslocamento observado em 2024–2025.</p>
+<h4 class="anchored">Acesso atual</h4>
+<p>Medem-se o tempo até o serviço mais próximo, o índice de acesso que compara leitos e população (E2SFCA) e o deslocamento observado em 2024–2025.</p>
 </div>
 <div class="loc-passo">
 <span class="loc-cod">L4</span>
-<h4 class="anchored">Que locais reduzem o deslocamento?</h4>
-<p>Municípios que mais reduzem o tempo médio de viagem (p-mediana) ou que mais ampliam a cobertura a até 60 ou 120 minutos, para 1 a 5 unidades novas.</p>
+<h4 class="anchored">Otimização da localização</h4>
+<p>Identificam-se os municípios que mais reduzem o tempo médio de viagem (<i>p</i>-mediana) ou que mais ampliam a cobertura a até 60 ou 120 minutos, para 1 a 5 unidades novas.</p>
 </div>
 <div class="loc-passo">
 <span class="loc-cod">L5</span>
-<h4 class="anchored">O que muda?</h4>
-<p>Os fluxos de 2030 são redistribuídos com o modelo de escolha: quanto tempo cada município poupa e quantos pacientes as unidades novas recebem.</p>
+<h4 class="anchored">Redistribuição dos fluxos</h4>
+<p>Os fluxos de 2030 são redistribuídos com o modelo de escolha, e estimam-se o ganho de tempo de cada município e o número de pacientes que as unidades novas recebem.</p>
 </div>
 </div>
 </div>
 </div>
-<p>Cada elo é testado antes de alimentar o seguinte: a demanda, em anos que o modelo não usou; a escolha dos pacientes, em mudanças reais de oferta ocorridas entre 2021 e 2025 (aberturas, ampliações, reduções e fechamentos de leitos), os chamados <strong>experimentos naturais</strong>. As soluções da otimização são recalculadas com oito variantes da demanda para mostrar quais são robustas e quais são <strong>quase-empates</strong>.</p>
+<p>Do ponto de vista metodológico, a demanda (L1) é projetada pelo modelo selecionado entre alternativas que incluem modelos de contagem (CAMERON; TRIVEDI, 2013) e o LightGBM (KE <em>et al.</em>, 2017); o acesso (L3) é medido, entre outros indicadores, pelo método aprimorado de áreas de captação flutuantes em duas etapas (E2SFCA, do inglês <em>Enhanced Two-Step Floating Catchment Area</em>), proposto por Luo e Qi (2009); e a otimização (L4) emprega os modelos de <em>p</em>-mediana (HAKIMI, 1964; REVELLE; SWAIN, 1970) e de cobertura máxima (CHURCH; REVELLE, 1974). Cada elo é testado antes de alimentar o seguinte. A demanda é avaliada em anos não utilizados no ajuste, e a escolha dos pacientes, em mudanças reais de oferta ocorridas entre 2021 e 2025 (aberturas, ampliações, reduções e fechamentos de leitos), os chamados <strong>experimentos naturais</strong>. As soluções da otimização, por sua vez, são recalculadas com oito variantes da demanda, a fim de evidenciar quais são robustas e quais constituem <strong>quase-empates</strong>.</p>
 </section>
 <section id="pilotos" class="level2">
 <h2 class="anchored" data-anchor-id="pilotos">Os dois pilotos</h2>
@@ -349,6 +351,8 @@ body.fullcontent main.content { min-width: 0; }
 </div>
 </div>
 </div>
+<p>A Tabela 1 sintetiza os principais resultados dos dois pilotos, detalhados nas respectivas páginas.</p>
+<p><strong>Tabela 1 – Síntese dos pilotos de localização de serviços: atenção ao parto e UTI adulto</strong></p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="rolagem-x">
@@ -442,30 +446,18 @@ experimentos naturais 2021–2025; maior é melhor
 </div>
 </div>
 <div class="nota-fonte">
-<p>Fontes: SINASC e SIH/SUS (demanda e deslocamento, 2024–2025), CNES (leitos, 2025), RIPSA/SVS (população, 2025), tempos rodoviários entre sedes (OSRM/OpenStreetMap). Demanda de 2030 e tempos da otimização dependem da projeção populacional municipal provisória.</p>
+<p>Fonte: elaboração do Projeto PPSUS-MT, com base no Sistema de Informações sobre Nascidos Vivos (SINASC) e no Sistema de Informações Hospitalares do SUS (SIH/SUS), quanto à demanda e ao deslocamento (2024–2025); no Cadastro Nacional de Estabelecimentos de Saúde (CNES), quanto aos leitos (2025); nas estimativas da RIPSA e da Secretaria de Vigilância em Saúde (RIPSA/SVS), quanto à população (2025); e nos tempos rodoviários entre sedes (OSRM/OpenStreetMap). Nota: a demanda de 2030 e os tempos da otimização dependem da projeção populacional municipal provisória.</p>
 </div>
-<p>O que os pilotos mostram, em resumo:</p>
-<ul>
-<li><strong>A malha de maternidades já é densa; o desafio é a escolha das gestantes.</strong> 96,6% das mulheres de 15 a 49 anos moram a até 60 minutos de um leito obstétrico, mas o tempo médio efetivamente percorrido (32,2 min) é bem maior que o tempo até a unidade mais próxima. Quase todos os municípios que aparecem nas soluções da otimização já têm leitos obstétricos. As escolhas são frágeis (com uma unidade, Tapurah e Marcelândia praticamente empatam), e o modelo de escolha <strong>não superou a regra ingênua</strong> de repetir o ano anterior quando a oferta mudou (CPC de 0,880 contra 0,900): os cenários do parto valem como ordem de grandeza.</li>
-<li><strong>A UTI adulto do SUS está concentrada, e o deslocamento é longo.</strong> Só 11 municípios tinham UTI adulto SUS em 2025; 70,6% dos adultos moram a até 120 minutos dela, e o tempo médio percorrido foi de 134,6 min (cerca de 2 h). A otimização leva as unidades novas para os polos das regiões remotas, e as soluções são estáveis. Dois cenários de três unidades são comparados sem recomendação: a p-mediana (Confresa; Juína; Pontes e Lacerda) e a versão que respeita a capacidade dos leitos (Confresa; Juína; Peixoto de Azevedo). Quando a oferta mudou, o modelo de escolha acertou mais que a regra ingênua (CPC de 0,804 contra 0,745), mas a vantagem vem do ciclo da COVID-19.</li>
-</ul>
+<p>Em síntese, os pilotos evidenciam dois padrões distintos. <strong>No parto, a malha de maternidades já é densa, e o desafio reside na escolha das gestantes.</strong> Observa-se que 96,6% das mulheres de 15 a 49 anos moram a até 60 minutos de um leito obstétrico, mas o tempo médio efetivamente percorrido (32,2 min) é consideravelmente superior ao tempo até a unidade mais próxima, e quase todos os municípios que aparecem nas soluções da otimização já dispõem de leitos obstétricos. As escolhas são frágeis — com uma unidade, Tapurah e Marcelândia apresentam valores praticamente equivalentes —, e o modelo de escolha <strong>não superou a regra ingênua</strong> de repetir o ano anterior quando a oferta mudou (índice de parte comum dos fluxos, CPC, do inglês <em>Common Part of Commuters</em>, de 0,880 contra 0,900). Por essa razão, os cenários do parto devem ser interpretados como ordem de grandeza.</p>
+<p><strong>Na UTI adulto, a oferta do SUS é concentrada, e o deslocamento é longo.</strong> Somente 11 municípios dispunham de UTI adulto SUS em 2025; 70,6% dos adultos moram a até 120 minutos dela, e o tempo médio percorrido foi de 134,6 min (cerca de 2 h). A otimização direciona as unidades novas para os polos das regiões remotas, e as soluções são estáveis. Comparam-se, sem recomendação, dois cenários de três unidades: a <em>p</em>-mediana (Confresa; Juína; Pontes e Lacerda) e a versão que respeita a capacidade dos leitos (Confresa; Juína; Peixoto de Azevedo). Quando a oferta mudou, o modelo de escolha apresentou desempenho superior ao da regra ingênua (CPC de 0,804 contra 0,745); essa vantagem, contudo, decorre do ciclo da COVID-19.</p>
 </section>
 <section id="ler" class="level2">
-<h2 class="anchored" data-anchor-id="ler">Como ler</h2>
-<ul>
-<li><strong>Tempo até o serviço</strong>: tempo rodoviário, de automóvel e em condições ideais, entre a sede do município de residência e a sede do município mais próximo que tem o serviço (<abbr title="Open Source Routing Machine: cálculo de rotas sobre o mapa colaborativo OpenStreetMap" tabindex="0">OSRM</abbr>). Dentro do próprio município, conta zero.</li>
-<li><strong>Índice de acesso (<abbr title="Enhanced two-step floating catchment area: método de áreas de captação flutuantes em duas etapas, com peso que diminui com o tempo de viagem" tabindex="0">E2SFCA</abbr>)</strong>: leitos disponíveis a até 60 ou 120 minutos, divididos pela população que disputa esses leitos, com peso menor para o que fica mais longe. A média de Mato Grosso vale 1; abaixo de 0,5, o acesso é menos da metade da média do estado; zero, nenhum leito ao alcance.</li>
-<li><strong>Tempo médio percorrido</strong>: média do tempo entre a sede do município de residência e a do município onde o paciente foi atendido, em 2024–2025.</li>
-<li><strong>Unidades novas (k)</strong>: número de municípios que recebem o serviço no cenário (1 a 5), além dos que já o têm.</li>
-<li><strong>p-mediana</strong>: escolhe os municípios que tornam mínimo o tempo médio de viagem até a unidade mais próxima. <strong>Cobertura máxima</strong>: escolhe os que tornam máxima a parcela da demanda a até 60 ou 120 minutos.</li>
-<li><strong>Modelo de escolha (pivô do gravitacional)</strong>: parte de para onde os pacientes de cada município foram em 2025 e ajusta essas parcelas conforme a nova oferta. <strong>Persistência</strong>: regra ingênua que só repete o ano anterior.</li>
-<li><strong><abbr title="Common Part of Commuters: parte comum entre os fluxos previstos e os observados" tabindex="0">CPC</abbr></strong>: parte comum entre os fluxos previstos e os observados; 1 é previsão perfeita.</li>
-<li><strong>Erro médio (<abbr title="Erro absoluto médio ponderado: soma dos erros absolutos dividida pela soma observada" tabindex="0">WMAPE</abbr>)</strong>: soma dos erros absolutos dividida pela soma observada.</li>
-<li><strong>Intervalo de 80%</strong>: faixa em que se espera o valor em 8 de cada 10 situações, dadas a incerteza da população e o erro observado no teste.</li>
-<li><strong>Quase-empate</strong>: duas soluções praticamente equivalentes para o critério do modelo; a escolha entre elas depende de fatores que o modelo não tem.</li>
-<li><strong>PROVISÓRIO</strong>: depende da projeção populacional municipal provisória e será refeito quando houver projeção municipal por idade e sexo.</li>
-<li><strong>“suprimido”</strong>: contagem de 1 a 4 não mostrada, ou célula escondida para que outra não pudesse ser deduzida por diferença.</li>
-</ul>
+<h2 class="anchored" data-anchor-id="ler">Conceitos e medidas</h2>
+<p>O <strong>tempo até o serviço</strong> corresponde ao tempo rodoviário, de automóvel e em condições ideais, entre a sede do município de residência e a sede do município mais próximo que dispõe do serviço, calculado pelo <abbr title="Open Source Routing Machine: cálculo de rotas sobre o mapa colaborativo OpenStreetMap" tabindex="0">OSRM</abbr> (<em>Open Source Routing Machine</em>), descrito por Luxen e Vetter (2011); dentro do próprio município, considera-se zero. O <strong>tempo médio percorrido</strong>, por sua vez, é a média do tempo entre a sede do município de residência e a do município onde o paciente foi atendido, em 2024–2025.</p>
+<p>O <strong>índice de acesso (<abbr title="Enhanced two-step floating catchment area: método de áreas de captação flutuantes em duas etapas, com peso que diminui com o tempo de viagem" tabindex="0">E2SFCA</abbr>)</strong> corresponde aos leitos disponíveis a até 60 ou 120 minutos divididos pela população que disputa esses leitos, com peso decrescente com o tempo de viagem. A média de Mato Grosso é igual a 1; valores abaixo de 0,5 indicam acesso inferior à metade da média do estado, e o valor zero indica ausência de leito ao alcance.</p>
+<p>Nos cenários, as <strong>unidades novas (k)</strong> correspondem ao número de municípios que recebem o serviço (1 a 5), além dos que já o possuem. A <strong><em>p</em>-mediana</strong> escolhe os municípios que tornam mínimo o tempo médio de viagem até a unidade mais próxima, ao passo que a <strong>cobertura máxima</strong> escolhe os que tornam máxima a parcela da demanda a até 60 ou 120 minutos. Denomina-se <strong>quase-empate</strong> a situação em que duas soluções são praticamente equivalentes para o critério do modelo, de modo que a escolha entre elas depende de fatores que o modelo não contempla.</p>
+<p>O <strong>modelo de escolha (pivô do gravitacional)</strong> parte dos destinos dos pacientes de cada município em 2025 e ajusta essas parcelas conforme a nova oferta, enquanto a <strong>persistência</strong> constitui a regra ingênua que apenas repete o ano anterior. O desempenho desses modelos é medido pelo <strong><abbr title="Common Part of Commuters: parte comum entre os fluxos previstos e os observados" tabindex="0">CPC</abbr></strong>, que corresponde à parte comum entre os fluxos previstos e os observados, em que 1 indica previsão perfeita. O <strong>erro médio</strong> da demanda é medido pelo erro percentual absoluto médio ponderado (<abbr title="Erro absoluto médio ponderado: soma dos erros absolutos dividida pela soma observada" tabindex="0">WMAPE</abbr>, do inglês <em>Weighted Mean Absolute Percentage Error</em>), isto é, pela soma dos erros absolutos dividida pela soma observada. O <strong>intervalo de 80%</strong>, por fim, representa a faixa em que se espera o valor em 8 de cada 10 situações, dadas a incerteza da população e o erro observado no teste.</p>
+<p>Duas marcas acompanham os resultados. A marca <strong>PROVISÓRIO</strong> indica dependência da projeção populacional municipal provisória, a ser refeita quando houver projeção municipal por idade e sexo. A marca <strong>“suprimido”</strong> indica contagem de 1 a 4 não apresentada, ou célula ocultada para que outra não pudesse ser deduzida por diferença.</p>
 </section>
 <section id="limitacoes" class="level2">
 <h2 class="anchored" data-anchor-id="limitacoes">Limitações</h2>
@@ -479,22 +471,20 @@ experimentos naturais 2021–2025; maior é melhor
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li><strong>Projeção populacional provisória.</strong> A população municipal de 2026–2030 aplica a participação de cada município (por sexo e faixa etária) à projeção do IBGE para Mato Grosso; não desloca as coortes, e cada município herda o envelhecimento médio do estado.</li>
-<li><strong>Demanda e oferta nas sedes.</strong> Os sistemas informam o município, não o endereço; o deslocamento dentro do município conta zero, e municípios extensos têm o acesso superestimado.</li>
-<li><strong>Tempos em condições ideais.</strong> Sem balsas, estradas sazonais, transporte sanitário, regulação ou espera; algumas rotas estão em validação com a SES-MT.</li>
-<li><strong>Modelos escolhidos no próprio teste.</strong> As métricas de validação são otimistas, e os experimentos naturais são poucos e correlacionados.</li>
-<li><strong>Município de destino, não hospital.</strong> A localização é feita entre municípios; a qualidade e a segurança do serviço não entram nos modelos.</li>
-<li><strong>Parâmetros não normativos.</strong> Ocupação-alvo, tamanho do módulo de leitos, filtros de candidatos e limiares de demanda são escolhas da pesquisa, apresentadas em cada página.</li>
-<li><strong>Sem recomendação.</strong> Os cenários mostram consequências de hipóteses para a discussão com a gestão; não indicam onde abrir, habilitar ou fechar serviços.</li>
-</ul>
+<p><strong>Projeção populacional provisória.</strong> A população municipal de 2026–2030 resulta da aplicação da participação de cada município (por sexo e faixa etária) à projeção do Instituto Brasileiro de Geografia e Estatística (IBGE) para Mato Grosso; o método não desloca as coortes, de modo que cada município herda o envelhecimento médio do estado.</p>
+<p><strong>Demanda e oferta nas sedes.</strong> Os sistemas informam o município, e não o endereço; por essa razão, o deslocamento dentro do município é computado como zero, e os municípios extensos têm o acesso superestimado.</p>
+<p><strong>Tempos em condições ideais.</strong> Não se consideram balsas, estradas sazonais, transporte sanitário, regulação ou espera, e algumas rotas encontram-se em validação com a Secretaria de Estado de Saúde de Mato Grosso (SES-MT).</p>
+<p><strong>Modelos escolhidos no próprio teste.</strong> As métricas de validação são otimistas, e os experimentos naturais são poucos e correlacionados.</p>
+<p><strong>Município de destino, não hospital.</strong> A localização é feita entre municípios, e a qualidade e a segurança do serviço não são consideradas nos modelos.</p>
+<p><strong>Parâmetros não normativos.</strong> A ocupação-alvo, o tamanho do módulo de leitos, os filtros de candidatos e os limiares de demanda constituem escolhas da pesquisa, apresentadas em cada página.</p>
+<p><strong>Os cenários não constituem recomendação.</strong> Limitam-se a mostrar as consequências de hipóteses para a discussão com a gestão e não indicam onde abrir, habilitar ou fechar serviços.</p>
 </div>
 </div>
-<p>Para onde os moradores de cada município se internam, em todas as especialidades, está na seção <a href="../deslocamento/index.html">Deslocamento</a>; o quanto cada município e hospital produz com os recursos que tem, na seção <a href="../eficiencia/index.html">Eficiência</a>.</p>
+<p>Os destinos das internações dos moradores de cada município, em todas as especialidades, são apresentados na seção <a href="../deslocamento/index.html">Deslocamento</a>, e a produção de cada município e hospital em relação aos recursos de que dispõe, na seção <a href="../eficiencia/index.html">Eficiência</a>.</p>
 </section>
 <section id="arquivos" class="level2">
 <h2 class="anchored" data-anchor-id="arquivos">Arquivos</h2>
-<p>Arquivos agregados da frente de localização (CSV, UTF-8, separador vírgula, decimal ponto; células suprimidas vazias, com a coluna <code>suprimido</code>). Projeções e cenários de 2026–2030 são provisórios (coluna <code>provisorio</code>). Contagens observadas de 1 a 4 não são publicadas, nem as colunas que permitiriam estimá-las.</p>
+<p>Disponibilizam-se, a seguir, os arquivos agregados do estudo de localização de serviços, em formato CSV (UTF-8, separador vírgula e decimal ponto), com as células suprimidas vazias e assinaladas na coluna <code>suprimido</code>. As projeções e os cenários de 2026–2030 são provisórios, conforme indica a coluna <code>provisorio</code>. Ressalta-se que as contagens observadas de 1 a 4 não são publicadas, tampouco as colunas que permitiriam estimá-las.</p>
 <div class="cell">
 <div class="cell-output-display">
 <ul>
@@ -512,7 +502,7 @@ Acesso atual por região de saúde de residência e piloto
 </li>
 <li>
 <a href="../arquivos/dados/localizacao_demanda_projetada_2026_2030.csv">localizacao_demanda_projetada_2026_2030.csv</a>
- (146 KB)
+ (144 KB)
  — 
 Demanda projetada 2026–2030 (PROVISÓRIA) para MT, regiões de saúde e municípios, com intervalo de 80%
 </li>
@@ -582,19 +572,24 @@ Dicionário das colunas de todos os arquivos acima
 <div class="cell">
 <div class="cell-output-display">
 <p class="nota-fonte">
-Fontes: 
-SINASC (nascidos vivos em hospital, por município de residência da mãe, inclusive os nascidos em outros estados); SIH/SUS (internações SUS com UTI adulto tipos I a III ou SRAG/COVID-19, por município de residência, inclusive as realizadas em outros estados)
-; 
-CNES (leitos obstétricos existentes, SUS e não SUS, média mensal de 2025); CNES (leitos SUS de UTI adulto, média mensal de 2025)
-; população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024), base da projeção municipal provisória; 
-tempos rodoviários entre sedes municipais calculados com o OSRM sobre o OpenStreetMap (consulta de 08/10/2026; condições ideais de automóvel). 
-Elaboração: Projeto PPSUS-MT, frente de localização de serviços (cadeia L1–L5, 
-17/10/2026
-). 
-Definições gerais em 
+Fontes: SINASC (nascidos vivos em hospital, por município de residência da mãe, inclusive os nascidos em outros estados); SIH/SUS (internações SUS com UTI adulto tipos I a III ou SRAG/COVID-19, por município de residência, inclusive as realizadas em outros estados); CNES (leitos obstétricos existentes, SUS e não SUS, média mensal de 2025); CNES (leitos SUS de UTI adulto, média mensal de 2025); população RIPSA/SVS 2025 e projeção do IBGE para Mato Grosso (Revisão 2024), base da projeção municipal provisória; tempos rodoviários entre sedes municipais calculados com o OSRM sobre o OpenStreetMap (consulta de 08/10/2026; condições ideais de automóvel). Elaboração: Projeto PPSUS-MT, estudo de localização de serviços (cadeia L1–L5, 17/10/2026). 
+As definições gerais encontram-se em 
 <a href="../metodologia.html">Metodologia</a>.
 </p>
 </div>
+</div>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referências</h2>
+<p>Relacionam-se a seguir, segundo as normas da Associação Brasileira de Normas Técnicas (ABNT), as obras citadas nesta página e nas páginas dos pilotos; as referências dos demais métodos do Observatório encontram-se em <a href="../metodologia.html#referencias">Metodologia</a>.</p>
+<div class="referencias">
+<p>CAMERON, A. C.; TRIVEDI, P. K. <strong>Regression analysis of count data</strong>. 2. ed.&nbsp;Cambridge: Cambridge University Press, 2013. DOI: <a href="https://doi.org/10.1017/CBO9781139013567" class="uri">https://doi.org/10.1017/CBO9781139013567</a>.</p>
+<p>CHURCH, R.; REVELLE, C. The maximal covering location problem. <strong>Papers of the Regional Science Association</strong>, v. 32, n.&nbsp;1, p.&nbsp;101-118, 1974. DOI: <a href="https://doi.org/10.1007/BF01942293" class="uri">https://doi.org/10.1007/BF01942293</a>.</p>
+<p>HAKIMI, S. L. Optimum locations of switching centers and the absolute centers and medians of a graph. <strong>Operations Research</strong>, v. 12, n.&nbsp;3, p.&nbsp;450-459, 1964. DOI: <a href="https://doi.org/10.1287/opre.12.3.450" class="uri">https://doi.org/10.1287/opre.12.3.450</a>.</p>
+<p>KE, G.; MENG, Q.; FINLEY, T.; WANG, T.; CHEN, W.; MA, W.; YE, Q.; LIU, T.-Y. LightGBM: a highly efficient gradient boosting decision tree. In: CONFERENCE ON NEURAL INFORMATION PROCESSING SYSTEMS, 31., 2017, Long Beach. <strong>Advances in Neural Information Processing Systems 30</strong>. Red Hook: Curran Associates, 2017. p.&nbsp;3146-3154.</p>
+<p>LUO, W.; QI, Y. An enhanced two-step floating catchment area (E2SFCA) method for measuring spatial accessibility to primary care physicians. <strong>Health &amp; Place</strong>, v. 15, n.&nbsp;4, p.&nbsp;1100-1107, 2009. DOI: <a href="https://doi.org/10.1016/j.healthplace.2009.06.002" class="uri">https://doi.org/10.1016/j.healthplace.2009.06.002</a>.</p>
+<p>LUXEN, D.; VETTER, C. Real-time routing with OpenStreetMap data. In: ACM SIGSPATIAL INTERNATIONAL CONFERENCE ON ADVANCES IN GEOGRAPHIC INFORMATION SYSTEMS, 19., 2011, Chicago. <strong>Proceedings</strong> […]. New York: ACM, 2011. p.&nbsp;513-516. DOI: <a href="https://doi.org/10.1145/2093973.2094062" class="uri">https://doi.org/10.1145/2093973.2094062</a>.</p>
+<p>REVELLE, C. S.; SWAIN, R. W. Central facilities location. <strong>Geographical Analysis</strong>, v. 2, n.&nbsp;1, p.&nbsp;30-42, 1970. DOI: <a href="https://doi.org/10.1111/j.1538-4632.1970.tb00142.x" class="uri">https://doi.org/10.1111/j.1538-4632.1970.tb00142.x</a>.</p>
 </div>
 
 
@@ -603,69 +598,73 @@ Definições gerais em
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script>
 // Siglas explicadas ao passar o cursor (ou tocar, no celular). Aplica-se a parágrafos, listas,
-// legendas e rótulos dos cartões. A primeira ocorrência de cada sigla em cada bloco recebe <abbr title>.
+// legendas e rótulos dos cartões. A primeira ocorrência de cada sigla em cada bloco recebe <abbr title>:
+// cada trecho de texto é percorrido até o fim, e não só até a primeira sigla encontrada nele.
 (function () {
   var G = {
     "SUS": "Sistema Único de Saúde",
     "SIOPS": "Sistema de Informações sobre Orçamentos Públicos em Saúde: despesas declaradas pelos municípios (Ministério da Saúde)",
     "CNES": "Cadastro Nacional de Estabelecimentos de Saúde: estabelecimentos, leitos, equipamentos e profissionais",
     "SIA": "Sistema de Informações Ambulatoriais do SUS: procedimentos ambulatoriais aprovados",
-    "SIH": "Sistema de Informações Hospitalares do SUS: internações pagas por AIH",
+    "SIH": "Sistema de Informações Hospitalares do SUS: internações pagas por meio da AIH",
     "AIH": "Autorização de Internação Hospitalar: registro de cada internação no SUS",
     "SISAB": "Sistema de Informação em Saúde para a Atenção Básica: produção das equipes de atenção primária",
     "SI-PNI": "Sistema de Informação do Programa Nacional de Imunizações: doses de vacina aplicadas",
-    "SIM": "Sistema de Informações sobre Mortalidade: óbitos por residência",
+    "SIM": "Sistema de Informações sobre Mortalidade: óbitos segundo a residência",
     "SINASC": "Sistema de Informações sobre Nascidos Vivos",
     "APS": "Atenção Primária à Saúde (atenção básica): unidades básicas e equipes de saúde da família",
     "ESF": "Estratégia Saúde da Família",
     "eSF": "Equipe de Saúde da Família (médico, enfermeiro, técnico e agentes comunitários)",
-    "eAP": "Equipe de Atenção Primária (formato reduzido, sem agentes comunitários)",
+    "eAP": "Equipe de Atenção Primária, em formato reduzido e sem agentes comunitários",
     "eSB": "Equipe de Saúde Bucal",
     "ACS": "Agente Comunitário de Saúde (CBO 515105); não inclui os agentes de combate às endemias nem as demais ocupações da família CBO 5151",
     "CBO": "Classificação Brasileira de Ocupações: código da ocupação do profissional no CNES",
-    "FTE": "Equivalente em tempo integral: horas semanais contratadas divididas por 40",
+    "FTE": "Equivalente em tempo integral (do inglês full-time equivalent): horas semanais contratadas divididas por 40",
     "MC": "Média complexidade: procedimentos e internações de nível intermediário (SIA/SIH)",
     "AC": "Alta complexidade: procedimentos e internações de alto custo ou tecnologia (SIA/SIH)",
     "UTI": "Unidade de Terapia Intensiva",
     "CIR": "Comissão Intergestores Regional: instância das 16 regiões de saúde de Mato Grosso",
     "PDR": "Plano Diretor de Regionalização: define regiões e macrorregiões de saúde",
-    "DEA": "Análise Envoltória de Dados: compara municípios, hospitais ou regiões pelo que produzem com os recursos que usam; as melhores práticas observadas formam a fronteira de eficiência",
+    "DEA": "Análise Envoltória de Dados (do inglês Data Envelopment Analysis): compara municípios, hospitais ou regiões pelo que produzem com os recursos que utilizam; as melhores práticas observadas formam a fronteira de eficiência",
     "BCC": "Modelo DEA de Banker, Charnes e Cooper, com retornos variáveis de escala: cada unidade é comparada com unidades de porte semelhante",
-    "IC": "Intervalo de confiança de 95%: faixa de valores plausíveis do escore, estimada por reamostragem (bootstrap); quanto mais largo, mais incerta a posição",
+    "IC": "Intervalo de confiança de 95%: faixa de valores plausíveis do escore, estimada por reamostragem (bootstrap); quanto maior a amplitude do intervalo, maior a incerteza sobre a posição",
     "COSEMS-MT": "Conselho de Secretarias Municipais de Saúde de Mato Grosso",
-    "fronteira de eficiência": "Conjunto das melhores práticas observadas no ano: unidades que nenhuma outra supera produzindo mais com os mesmos recursos (escore original = 1)",
+    "fronteira de eficiência": "Conjunto das melhores práticas observadas no ano, isto é, das unidades que nenhuma outra supera produzindo mais com os mesmos recursos (escore original = 1)",
     "Fronteira (melhores práticas)": "Faixa das unidades que formam a fronteira de eficiência no ano (escore original = 1)",
-    "escore de eficiência": "Razão entre a produção observada e a que as melhores práticas comparáveis alcançariam com os mesmos recursos (0 a 1; 1 = fronteira)",
-    "Escore corrigido": "Escore de eficiência corrigido do viés da estimação por bootstrap; é a base das faixas e vem com intervalo de confiança",
-    "escore corrigido": "Escore de eficiência corrigido do viés da estimação por bootstrap; é a base das faixas e vem com intervalo de confiança",
+    "escore de eficiência": "Razão entre a produção observada e a que as melhores práticas comparáveis alcançariam com os mesmos recursos (de 0 a 1, sendo 1 = fronteira)",
+    "Escore corrigido": "Escore de eficiência corrigido do viés de estimação por bootstrap; constitui a base das faixas e é acompanhado de intervalo de confiança",
+    "escore corrigido": "Escore de eficiência corrigido do viés de estimação por bootstrap; constitui a base das faixas e é acompanhado de intervalo de confiança",
     "faixa de eficiência": "Grupo de posição no ano: fronteira ou quartil (superior, terceiro, segundo, inferior) do escore corrigido entre as unidades avaliadas; substitui o ranking pontual",
     "Faixa no estado": "Fronteira ou quartil do escore corrigido entre as unidades avaliadas no estado no ano; substitui o ranking pontual",
-    "par de referência": "Unidade da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, e as fichas mostram os 3 de maior peso",
-    "pares de referência": "Unidades da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, e as fichas mostram os 3 de maior peso",
+    "par de referência": "Unidade da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, das quais as fichas mostram as 3 de maior peso",
+    "pares de referência": "Unidades da fronteira, com registro plausível, cujas práticas compõem a meta de outra; até 5 no modelo, das quais as fichas mostram as 3 de maior peso",
     "Municípios de referência plausíveis": "Pares de referência: municípios da fronteira, com registro plausível, cujas práticas compõem a meta; o peso indica a participação de cada um",
+    "municípios de referência plausíveis": "Pares de referência: municípios da fronteira, com registro plausível, cujas práticas compõem a meta; o peso indica a participação de cada um",
+    "município de referência plausível": "Par de referência: município da fronteira, com registro plausível, cujas práticas compõem a meta; o peso indica a sua participação",
     "meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
     "Meta plena": "Valor que a unidade alcançaria se operasse como as melhores práticas comparáveis, com os mesmos recursos",
-    "meta intermediária": "Metade do caminho entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
-    "Meta intermediária": "Metade do caminho entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
-    "potencial de melhoria": "Diferença entre a meta plena e o observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
-    "Potencial de melhoria": "Diferença entre a meta plena e o observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
-    "mudança de eficiência": "Componente do Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; leitura de gestão",
-    "Mudança de eficiência": "Componente do Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; leitura de gestão",
-    "deslocamento tecnológico": "Componente do Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
-    "Deslocamento tecnológico": "Componente do Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
-    "escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças); comparar o observado com ele isola a parte atribuível à gestão",
-    "Escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças); comparar o observado com ele isola a parte atribuível à gestão",
-    "escore esperado": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância, finanças)",
-    "eficiência condicional": "Eficiência medida só entre unidades de contexto semelhante (ordem-m condicional); informação complementar, não ranking",
-    "EC": "Mudança de eficiência (índice de Malmquist): aproximação (> 1) ou afastamento (< 1) das melhores práticas entre dois anos; o site mostra a variação em % ao ano",
-    "TC": "Deslocamento das melhores práticas (deslocamento tecnológico do índice de Malmquist): movimento da própria fronteira entre dois anos; após 2022 pode refletir o crescimento do registro no CNES",
-    "MI": "Índice de Malmquist: variação da produtividade total entre dois anos (MI = EC × TC); acima de 1 = aumento",
+    "meta intermediária": "Valor situado à metade da distância entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
+    "Meta intermediária": "Valor situado à metade da distância entre o valor observado e a meta plena (limiar homologado em 08/10/2026)",
+    "potencial de melhoria": "Diferença entre a meta plena e o valor observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
+    "Potencial de melhoria": "Diferença entre a meta plena e o valor observado: aumento possível da produção ou folga de recurso que poderia ser redirecionada",
+    "mudança de eficiência": "Componente do índice de Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; componente associado à gestão",
+    "Mudança de eficiência": "Componente do índice de Malmquist que mede a aproximação (> 1) ou o afastamento (< 1) das melhores práticas entre dois anos; componente associado à gestão",
+    "deslocamento tecnológico": "Componente do índice de Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022, pode refletir o crescimento do registro no CNES",
+    "Deslocamento tecnológico": "Componente do índice de Malmquist que mede o movimento da própria fronteira entre dois anos; após 2022, pode refletir o crescimento do registro no CNES",
+    "escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância e finanças); a comparação do observado com esse valor isola a parcela atribuível à gestão",
+    "Escore esperado pelo contexto": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância e finanças); a comparação do observado com esse valor isola a parcela atribuível à gestão",
+    "escore esperado": "Escore previsto pelas condições que o gestor não controla (porte, riqueza, densidade, distância e finanças)",
+    "eficiência condicional": "Eficiência medida apenas entre unidades de contexto semelhante (ordem-m condicional); informação complementar, e não ranking",
+    "EC": "Mudança de eficiência (índice de Malmquist): aproximação (> 1) ou afastamento (< 1) das melhores práticas entre dois anos; o site apresenta a variação em % ao ano",
+    "TC": "Deslocamento das melhores práticas (deslocamento tecnológico do índice de Malmquist): movimento da própria fronteira entre dois anos; após 2022, pode refletir o crescimento do registro no CNES",
+    "MI": "Índice de Malmquist: variação da produtividade total entre dois anos (MI = EC × TC); valores acima de 1 indicam aumento",
     "APAC": "Autorização de Procedimento Ambulatorial de Alta Complexidade: registro do SIA para procedimentos como diálise, quimioterapia e radioterapia",
-    "supereficiência": "Escore DEA calculado sem a própria unidade na fronteira; acima de 1 indica o quanto a unidade supera as demais; infactível quando nenhuma outra unidade usa tão pouco de algum recurso",
-    "referência com alavancagem": "Unidade da fronteira com supereficiência muito alta (acima de 2): pesa demais na fronteira e, por isso, não é usada como par de outras",
-    "Referência com grande peso na fronteira": "Unidade da fronteira com supereficiência muito alta (acima de 2): pesa demais na fronteira e, por isso, não é usada como par de outras",
-    "diagnóstico ordem-m": "Teste de robustez: a unidade fica acima das melhores práticas de amostras de unidades comparáveis; sinal informativo, que não impede o uso como referência",
-    "ordem-m": "Fronteira parcial de ordem m: compara a unidade com amostras de m unidades comparáveis, reduzindo a influência de valores extremos",
+    "supereficiência": "Escore DEA calculado sem a própria unidade na fronteira; valores acima de 1 indicam o quanto a unidade supera as demais; é infactível quando nenhuma outra unidade utiliza tão pouco de algum recurso",
+    "referência com alavancagem": "Unidade da fronteira com supereficiência muito alta (acima de 2), que exerce peso excessivo na fronteira e, por essa razão, não é utilizada como par de outras unidades",
+    "Referência com grande peso na fronteira": "Unidade da fronteira com supereficiência muito alta (acima de 2), que exerce peso excessivo na fronteira e, por essa razão, não é utilizada como par de outras unidades",
+    "diagnóstico ordem-m": "Teste de robustez: a unidade situa-se acima das melhores práticas de amostras de unidades comparáveis; sinal informativo, que não impede o uso como referência",
+    "diagnóstico de robustez de ordem-m": "Teste de robustez: a unidade situa-se acima das melhores práticas de amostras de unidades comparáveis; sinal informativo, que não impede o uso como referência",
+    "ordem-m": "Fronteira parcial de ordem m: compara a unidade com amostras de m unidades comparáveis, o que reduz a influência de valores extremos",
     "TMI": "Taxa de mortalidade infantil: óbitos de menores de 1 ano por mil nascidos vivos",
     "PPSUS": "Programa Pesquisa para o SUS: gestão compartilhada em saúde",
     "FAPEMAT": "Fundação de Amparo à Pesquisa do Estado de Mato Grosso",
@@ -684,33 +683,43 @@ Definições gerais em
     "UFs": "Unidades da Federação (estados e Distrito Federal)",
     "UF": "Unidade da Federação (estado ou Distrito Federal)",
     "p.p.": "Pontos percentuais: diferença entre dois percentuais",
-    "WGS84": "Sistema de referência geodésico mundial usado nas malhas (latitude e longitude em graus)",
+    "WGS84": "Sistema geodésico mundial de referência (do inglês World Geodetic System) usado nas malhas, com latitude e longitude em graus",
     "EPSG:4326": "Código do sistema de coordenadas WGS84 (latitude e longitude em graus)",
-    "MASE": "Erro absoluto médio escalado: erro da previsão dividido pelo erro de uma regra ingênua; abaixo de 1, o modelo erra menos que ela",
-    "SARIMA": "Modelo estatístico de séries temporais com tendência e sazonalidade (média móvel integrada autorregressiva sazonal)",
-    "LightGBM": "Modelo de aprendizado de máquina com árvores de decisão em sequência (gradient boosting)",
-    "HGB": "Gradient boosting por histogramas: modelo de aprendizado de máquina com árvores de decisão em sequência",
-    "MLP": "Perceptron multicamadas: rede neural artificial simples",
-    "ETS": "Suavização exponencial com erro, tendência e sazonalidade (Holt-Winters)",
+    "MASE": "Erro absoluto médio escalado (do inglês Mean Absolute Scaled Error): erro da previsão dividido pelo erro de uma regra ingênua; valores abaixo de 1 indicam erro inferior ao dessa regra",
+    "SARIMA": "Modelo autorregressivo integrado de médias móveis sazonal (do inglês Seasonal Autoregressive Integrated Moving Average): modelo estatístico de séries temporais com tendência e sazonalidade",
+    "LightGBM": "Light Gradient Boosting Machine: modelo de aprendizado de máquina com árvores de decisão em sequência (gradient boosting)",
+    "HGB": "Gradient boosting baseado em histogramas (do inglês histogram-based gradient boosting): modelo de aprendizado de máquina com árvores de decisão em sequência",
+    "MLP": "Perceptron multicamadas (do inglês multilayer perceptron): rede neural artificial simples",
+    "ETS": "Suavização exponencial com erro, tendência e sazonalidade (do inglês Error, Trend, Seasonality), da família Holt-Winters",
     "SRAG": "Síndrome respiratória aguda grave",
     "SIVEP-Gripe": "Sistema de Informação de Vigilância Epidemiológica da Gripe: notificações de SRAG (Ministério da Saúde)",
     "SE": "Semana epidemiológica: semana de domingo a sábado, numerada no ano",
-    "VPP": "Valor preditivo positivo: parcela dos avisos de alerta que se confirmaram",
-    "P90": "Percentil 90: valor que só 10% das semanas de referência ultrapassaram",
-    "WMAPE": "Erro absoluto médio ponderado: soma dos erros absolutos dividida pela soma observada",
-    "CPC": "Common Part of Commuters: parte comum entre os fluxos previstos e os observados (1 = previsão perfeita)",
-    "E2SFCA": "Método de áreas de captação flutuantes em duas etapas: índice de acesso que compara leitos ao alcance com a população que disputa esses leitos",
-    "OSRM": "Open Source Routing Machine: cálculo de rotas e tempos rodoviários sobre o mapa colaborativo OpenStreetMap",
+    "VPP": "Valor preditivo positivo: proporção dos avisos de alerta que se confirmaram",
+    "P90": "Percentil 90: valor que apenas 10% das semanas de referência ultrapassaram",
+    "WMAPE": "Erro percentual absoluto médio ponderado (do inglês Weighted Mean Absolute Percentage Error): soma dos erros absolutos dividida pela soma observada",
+    "CPC": "Common Part of Commuters (parte comum dos deslocamentos): parte comum entre os fluxos previstos e os observados (1 = previsão perfeita)",
+    "E2SFCA": "Método aprimorado de áreas de captação flutuantes em duas etapas (do inglês Enhanced Two-Step Floating Catchment Area): índice de acesso que compara os leitos ao alcance com a população que disputa esses leitos",
+    "OSRM": "Open Source Routing Machine: sistema de cálculo de rotas e tempos rodoviários sobre o mapa colaborativo OpenStreetMap",
     "CNJ": "Conselho Nacional de Justiça",
     "DataJud": "Base Nacional de Dados do Poder Judiciário, mantida pelo CNJ (API pública de metadados processuais)",
     "TJMT": "Tribunal de Justiça do Estado de Mato Grosso",
     "TRF1": "Tribunal Regional Federal da 1ª Região (Justiça Federal; inclui as subseções de Mato Grosso)",
     "TPU": "Tabelas Processuais Unificadas do CNJ: códigos padronizados de classes, assuntos e movimentos",
     "SECTICS": "Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (Ministério da Saúde)",
-    "SECITECI": "Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso"
+    "SECITECI": "Secretaria de Estado de Ciência, Tecnologia e Inovação de Mato Grosso",
+    "DATASUS": "Departamento de Informação e Informática do Sistema Único de Saúde (Ministério da Saúde)",
+    "IPCA": "Índice Nacional de Preços ao Consumidor Amplo (IBGE), usado para expressar valores monetários a preços constantes",
+    "INMET": "Instituto Nacional de Meteorologia",
+    "CID-10": "Classificação Internacional de Doenças, décima revisão",
+    "API": "Interface de programação de aplicações (do inglês Application Programming Interface)",
+    "RIPSA": "Rede Interagencial de Informações para a Saúde",
+    "ODbL": "Open Database License: licença aberta de bases de dados adotada pelo OpenStreetMap",
+    "CNS": "Cartão Nacional de Saúde: identificador do usuário do SUS, ausente da AIH reduzida",
+    "ABNT": "Associação Brasileira de Normas Técnicas"
   };
   var chaves = Object.keys(G).sort(function (a, b) { return b.length - a.length; });
   var re = new RegExp("(^|[^\\wÀ-ú-])(" + chaves.map(function (k) { return k.replace(/[.*+?^${}()|[\]\\-]/g, "\\$&"); }).join("|") + ")(?![\\wÀ-ú-])");
+  var reG = new RegExp(re.source, "g");
   function marcar(el) {
     var usados = {};
     var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
@@ -722,11 +731,16 @@ Definições gerais em
     });
     var nos = []; while (w.nextNode()) nos.push(w.currentNode);
     nos.forEach(function (n) {
-      var m = n.nodeValue.match(re); if (!m || usados[m[2]]) return;
-      usados[m[2]] = true;
-      var i = m.index + m[1].length, depois = n.splitText(i); depois.splitText(m[2].length);
-      var ab = document.createElement("abbr"); ab.title = G[m[2]]; ab.tabIndex = 0; ab.textContent = m[2];
-      depois.parentNode.replaceChild(ab, depois);
+      while (n) {
+        var m, achado = null; reG.lastIndex = 0;
+        while ((m = reG.exec(n.nodeValue)) !== null) { if (!usados[m[2]]) { achado = m; break; } }
+        if (!achado) return;
+        usados[achado[2]] = true;
+        var i = achado.index + achado[1].length, depois = n.splitText(i), resto = depois.splitText(achado[2].length);
+        var ab = document.createElement("abbr"); ab.title = G[achado[2]]; ab.tabIndex = 0; ab.textContent = achado[2];
+        depois.parentNode.replaceChild(ab, depois);
+        n = resto;
+      }
     });
   }
   document.addEventListener("DOMContentLoaded", function () {
@@ -1184,9 +1198,9 @@ Definições gerais em
 <p><span class="rodape-rotulo">Financiamento</span> <img src="../assets/logos/ppsus-mt.png" class="rodape-logo img-fluid" alt="PPSUS — Programa Pesquisa para o SUS: Mato Grosso"> <img src="../assets/logos/fapemat.png" class="rodape-logo img-fluid" alt="FAPEMAT — Fundação de Amparo à Pesquisa do Estado de Mato Grosso"> <img src="../assets/logos/ses-mt.png" class="rodape-logo img-fluid" alt="SES-MT — Secretaria de Estado de Saúde · Governo de Mato Grosso"> <img src="../assets/logos/cnpq.png" class="rodape-logo img-fluid" alt="CNPq — Conselho Nacional de Desenvolvimento Científico e Tecnológico"> <img src="../assets/logos/ministerio-saude-sus.png" class="rodape-logo img-fluid" alt="SUS · Ministério da Saúde · Governo do Brasil"></p>
 </div>
 <p><span class="rodape-citacao">Projeto financiado pelo Programa Pesquisa para o SUS: gestão compartilhada em saúde (PPSUS) — Edital FAPEMAT nº 004/2025, processo FAPEMAT-PRO.0001999/2025 — com recursos da FAPEMAT, do CNPq, do Decit/SECTICS/Ministério da Saúde e da SES-MT. Execução: UNEMAT, Campus de Sinop.</span></p>
-<p><span class="rodape-versao">Versão 0.4 · atualizado em 17/10/2026 · Conteúdo sob licença CC BY 4.0, exceto os arquivos e gráficos derivados do DataJud/CNJ (uso não comercial) · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
+<p><span class="rodape-versao">Versão 0.5 · atualizado em 24/10/2026 · Conteúdo sob licença CC BY 4.0, exceto os arquivos e gráficos derivados do DataJud/CNJ (uso não comercial) · <a href="https://github.com/daniellindomar/ppsus">Código-fonte</a></span></p>
 </div>
-<div class="toc-actions"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/daniellindomar/ppsus/issues/new" class="toc-action"><i class="bi bi-github"></i>Comunicar um problema</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

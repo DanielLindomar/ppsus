@@ -32,10 +32,10 @@ posicao,coluna,descricao,unidade,fonte,bloco,indicador_site
 31,n_estab_sus,Número de estabelecimentos de saúde com atendimento SUS (média anual).,estabelecimentos,CNES,indicador do site (capacidade),n_estab_sus
 32,n_ubs,Número de unidades básicas de saúde (média anual).,unidades,CNES,indicador do site (capacidade),n_ubs
 33,n_hospitais_sus,Número de hospitais com atendimento SUS (média anual).,hospitais,CNES,indicador do site (capacidade),n_hospitais_sus
-34,n_upa,Número de UPA/pronto atendimento com atendimento SUS (média anual).,unidades,CNES,indicador do site (capacidade),n_upa
+34,n_upa,Número de unidades de pronto atendimento (UPA e pronto atendimento) com atendimento SUS (média anual).,unidades,CNES,indicador do site (capacidade),n_upa
 35,n_equipes_esf,Equipes de Saúde da Família (média anual),equipes,CNES,capacidade,
-36,n_equipes_eap,"Equipes de atenção primária (modalidade eAP), média anual.",equipes,CNES,indicador do site (capacidade),n_equipes_eap
-37,n_equipes_esb,"Equipes de saúde bucal (eSB), média anual.",equipes,CNES,indicador do site (capacidade),n_equipes_esb
+36,n_equipes_eap,Número médio anual de equipes de atenção primária na modalidade eAP.,equipes,CNES,indicador do site (capacidade),n_equipes_eap
+37,n_equipes_esb,Número médio anual de equipes de saúde bucal (eSB).,equipes,CNES,indicador do site (capacidade),n_equipes_esb
 38,sisab_atend_individual,Atendimentos individuais registrados pelas equipes de atenção básica no ano,atendimentos,SISAB,atenção básica,
 39,sisab_atend_odonto,Atendimentos odontológicos individuais registrados no ano,atendimentos,SISAB,atenção básica,
 40,sisab_procedimentos,Procedimentos registrados pelas equipes de atenção básica no ano,procedimentos,SISAB,atenção básica,
@@ -78,12 +78,12 @@ posicao,coluna,descricao,unidade,fonte,bloco,indicador_site
 77,pct_baixo_peso,Parcela dos nascidos vivos com peso inferior a 2.500 g.,% dos nascidos vivos,SINASC,indicador do site (resultados),pct_baixo_peso
 78,pct_cesarea,Parcela dos nascimentos por cesariana.,% dos nascidos vivos,SINASC,indicador do site (resultados),pct_cesarea
 79,pct_mae_adolescente,Parcela dos nascidos vivos de mães com menos de 20 anos.,% dos nascidos vivos,SINASC,indicador do site (resultados),pct_mae_adolescente
-80,desp_total_pc,"Quanto o município liquidou em saúde no ano, por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_total_pc
+80,desp_total_pc,"Despesa liquidada pelo município em saúde no ano, por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_total_pc
 81,desp_301_pc,Despesa liquidada na subfunção 301 (Atenção Básica) por habitante — igual a desp_ab_pc,R$ por habitante,SIOPS (RREO),indicador derivado,
 82,desp_302_pc,Despesa liquidada na subfunção 302 (Assistência Hospitalar e Ambulatorial) por habitante — igual a desp_mac_pc,R$ por habitante,SIOPS (RREO),indicador derivado,
 83,fte_medicos_p1000,"Médicos com atendimento SUS, em equivalentes de 40 h semanais, por mil habitantes.",FTE por mil hab.,CNES,indicador do site (capacidade),fte_medicos_p1000
-84,fte_enfermeiros_p1000,Enfermeiros com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_enfermeiros_p1000
-85,fte_acs_p1000,"Agentes comunitários de saúde (CBO 515105, FTE 40 h) por mil habitantes.",FTE por mil hab.,CNES (CBO 515105),indicador do site (capacidade),fte_acs_p1000
+84,fte_enfermeiros_p1000,"Enfermeiros com atendimento SUS, em equivalentes de 40 h semanais (FTE), por mil habitantes.",FTE por mil hab.,CNES,indicador do site (capacidade),fte_enfermeiros_p1000
+85,fte_acs_p1000,"Agentes comunitários de saúde (CBO 515105), em equivalentes de 40 h semanais (FTE), por mil habitantes.",FTE por mil hab.,CNES (CBO 515105),indicador do site (capacidade),fte_acs_p1000
 86,leitos_sus_p1000,Leitos de internação disponíveis ao SUS por mil habitantes.,leitos por mil hab.,CNES,indicador do site (capacidade),leitos_sus_p1000
 87,equipes_esf_p1000,Equipes de Saúde da Família por mil habitantes (o site publica a versão por 10 mil: equipes_esf_p10000),equipes por mil hab.,CNES,indicador derivado,
 88,atend_individual_pc,Atendimentos individuais da atenção básica por habitante no ano.,atendimentos por hab.,SISAB,indicador do site (atencao_basica),atend_individual_pc
@@ -98,10 +98,10 @@ posicao,coluna,descricao,unidade,fonte,bloco,indicador_site
 97,fte_5151_familia,"Família CBO 5151 inteira (fte_acs + fte_ace + fte_5151_outros), FTE 40 h, média anual — valor publicado como agentes comunitários de saúde até a versão 0.2 do site",FTE,CNES,capacidade,
 98,desp_ab_pc,"Despesa liquidada na subfunção Atenção Básica (301), por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_ab_pc
 99,desp_mac_pc,"Despesa liquidada na subfunção Assistência Hospitalar e Ambulatorial (302), por habitante.",R$ por habitante,SIOPS (RREO),indicador do site (financiamento),desp_mac_pc
-100,pct_recursos_proprios,Parcela da despesa em saúde paga com receitas próprias do município.,% da despesa total,SIOPS (RREO),indicador do site (financiamento),pct_recursos_proprios
+100,pct_recursos_proprios,Parcela da despesa em saúde financiada com receitas próprias do município.,% da despesa total,SIOPS (RREO),indicador do site (financiamento),pct_recursos_proprios
 101,pct_capital,Parcela da despesa em saúde destinada a investimentos.,% da despesa total,SIOPS (RREO),indicador do site (financiamento),pct_capital
-102,fte_tec_enfermagem_p1000,Técnicos de enfermagem com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_tec_enfermagem_p1000
-103,fte_dentistas_p1000,Cirurgiões-dentistas com atendimento SUS (FTE 40 h) por mil habitantes.,FTE por mil hab.,CNES,indicador do site (capacidade),fte_dentistas_p1000
+102,fte_tec_enfermagem_p1000,"Técnicos de enfermagem com atendimento SUS, em equivalentes de 40 h semanais (FTE), por mil habitantes.",FTE por mil hab.,CNES,indicador do site (capacidade),fte_tec_enfermagem_p1000
+103,fte_dentistas_p1000,"Cirurgiões-dentistas com atendimento SUS, em equivalentes de 40 h semanais (FTE), por mil habitantes.",FTE por mil hab.,CNES,indicador do site (capacidade),fte_dentistas_p1000
 104,equip_sus_p10000,Equipamentos em uso disponíveis ao SUS por 10 mil habitantes.,equipamentos por 10 mil hab.,CNES,indicador do site (capacidade),equip_sus_p10000
 105,equipes_esf_p10000,Equipes de Saúde da Família por 10 mil habitantes.,equipes por 10 mil hab.,CNES,indicador do site (capacidade),equipes_esf_p10000
 106,atend_odonto_pc,Atendimentos odontológicos individuais na atenção básica por habitante.,atendimentos por hab.,SISAB,indicador do site (atencao_basica),atend_odonto_pc
